@@ -6,13 +6,14 @@
 # Jména souborů určují, kam obrázek patří:
 #   pozadi.png        scéna obce (ořízne se na 3:4, 900 × 1200)
 #   <id cíle>.png     portrét cíle z cile.csv (ořízne se na čtverec, 320 × 320)
-#   <id karty>.png    obrázek karty z karty.csv (čtverec, 320 × 320)
+#   <id karty>.png    obrázek karty z karty.csv (čtverec, 320 × 320). Jednobarevné pozadí kolem věci
+#                     se zprůhlední (stín zůstane jako poloprůhledný), aby na barevné kartě nebyl vidět čtverec.
 #   <id cíle>_<cokoli>.png   portrét pro změněnou ikonu cíle. Když má cíl v kombinace.csv jen jednu změnu
 #                     ikony (ikona:pes:🐕💤), přiřadí se sám. Jinak nástroj vypíše řádek k ručnímu doplnění.
 # Ručně doplněné řádky v obrazky.csv zůstanou. Potřebuje Pillow (python3 -m pip install pillow).
 import csv, os, re, sys
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageDraw, ImageOps
 
 KOREN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PRIPONY = ('.png', '.jpg', '.jpeg', '.webp')
@@ -37,10 +38,50 @@ def orizni(obr, pomer):
     return obr.crop((0, (v - nova) // 2, s, (v - nova) // 2 + nova))
 
 
-def preved(zdroj, cil, rozmer):
+def zpruhledni(obr, prah=80, cisto=3):
+    # Pozadí = barva okraje obrázku. Průhledné je jen pozadí spojené s okrajem, takže světlá místa
+    # uvnitř věci zůstanou. Odstín pozadí se odečte (jako „barva do průhlednosti“ v GIMPu): stín
+    # a vyhlazené hrany jsou pak poloprůhledné a tmavé, bez krémového lemu.
+    obr = obr.convert('RGB')
+    s, v = obr.size
+    px = obr.load()
+    okraj = [px[x, y] for x in range(s) for y in (0, 1, v - 2, v - 1)] + [px[x, y] for y in range(v) for x in (0, 1, s - 2, s - 1)]
+    pozadi = tuple(sorted(p[i] for p in okraj)[len(okraj) // 2] for i in range(3))
+    rozdil = lambda p: max(abs(p[i] - pozadi[i]) for i in range(3))
+    maska = Image.new('L', (s, v))
+    mp = maska.load()
+    for y in range(v):
+        for x in range(s):
+            mp[x, y] = 255 if rozdil(px[x, y]) <= prah else 0
+    kresli = ImageDraw.Draw(maska)
+    for x, y in [(x, y) for x in range(s) for y in (0, v - 1)] + [(x, y) for y in range(v) for x in (0, s - 1)]:
+        if mp[x, y] == 255:
+            ImageDraw.floodfill(maska, (x, y), 128)
+    vysledek = Image.new('RGBA', (s, v))
+    vp = vysledek.load()
+    for y in range(v):
+        for x in range(s):
+            p = px[x, y]
+            if mp[x, y] != 128:
+                vp[x, y] = (*p, 255)
+                continue
+            if rozdil(p) <= cisto:
+                vp[x, y] = (*pozadi, 0)
+                continue
+            a = max((pozadi[i] - p[i]) / pozadi[i] if p[i] < pozadi[i] else (p[i] - pozadi[i]) / max(1, 255 - pozadi[i]) for i in range(3))
+            a = min(1.0, a)
+            barva = tuple(max(0, min(255, round((p[i] - pozadi[i]) / a + pozadi[i]))) for i in range(3))
+            vp[x, y] = (*barva, round(a * 255))
+    return vysledek
+
+
+def preved(zdroj, cil, rozmer, pruhledne=False):
     obr = ImageOps.exif_transpose(Image.open(zdroj))
     obr = obr.convert('RGBA' if 'A' in obr.getbands() else 'RGB')
     obr = orizni(obr, rozmer[0] / rozmer[1]).resize(rozmer, Image.LANCZOS)
+    # Obrázek, který už průhlednost má (třeba z ChatGPT s „transparent background“), zůstane, jak je.
+    if pruhledne and not (obr.mode == 'RGBA' and obr.getchannel('A').getextrema()[0] < 250):
+        obr = zpruhledni(obr)
     obr.save(cil, 'WEBP', quality=82, method=6)
     return os.path.getsize(cil)
 
@@ -87,7 +128,8 @@ def main():
                 radek = None
                 navrh = ' nebo '.join(sorted(zmeny.get(cil, ()))) if cil else ''
                 rucne.append(f'  {nazev}: doplň do obrazky.csv řádek cil;{cil or "<id cíle>"};{navrh or "<ikona>"};{soubor}')
-        velikost = preved(os.path.join(vstup, nazev), os.path.join(slozka, soubor), rozmer)
+        pruhledne = bool(radek) and radek['druh'] == 'karta'
+        velikost = preved(os.path.join(vstup, nazev), os.path.join(slozka, soubor), rozmer, pruhledne)
         print(f'{nazev} -> data/{obec}/{soubor} ({velikost // 1024} kB)')
         if radek:
             radek['soubor'] = soubor

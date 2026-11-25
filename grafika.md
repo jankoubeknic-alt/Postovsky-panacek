@@ -26,7 +26,7 @@ Prompty jsou anglicky, protože ChatGPT podle nich drží styl přesněji. Každ
 - Styl je vždy stejný (blok „Style“ v každém promptu).
 - Scéna je na výšku 2:3. Hra ji ořízne na 3:4, takže horních a dolních zhruba 8 % se ztratí. Rozložení budov odpovídá pozicím postav v `cile.csv` (x, y v procentech), postavy stojí v medailonech přes scénu. Ve scéně nejsou lidé ani zvířata.
 - Portrét je čtverec, hlava uprostřed, hra ho ořízne do kruhu. Pozadí je hladké, světlé (#F2F3EC, barva papíru ve hře).
-- Věc je čtverec s jedním předmětem na stejném světlém pozadí. Hra pozadí na kartě zprůhlední násobením barev.
+- Věc je čtverec s jedním předmětem na stejném světlém pozadí. Převodní nástroj pozadí kolem věci zprůhlední a stín nechá poloprůhledný. Funguje to jen s hladkým jednobarevným pozadím, proto ho prompty chtějí.
 - Žádné texty, písmena ani čísla v obrázcích. Žádné postavy, kresby ani styl z cizích her, filmů a seriálů.
 - Změněná ikona postavy (třeba spící pes) má vlastní obrázek `<id cíle>_<něco>.png`, například `pes_spi.png`.
 

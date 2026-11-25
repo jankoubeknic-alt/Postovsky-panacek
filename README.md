@@ -187,4 +187,4 @@ Obrázky jsou ve složce `data/<obec>/obrazky/` a seznam v `data/<obec>/obrazky.
 
 Kde obrázek chybí, zůstane emoji. Když cíl změní ikonu a pro novou ikonu obrázek nemá, ukáže se emoji, aby změna nezapadla. Výraz při reakci (`vyraz` v `kombinace.csv`) se u portrétu ukáže jako malý odznak vedle medailonu. Sbalená verze má obrázky v balíku obce.
 
-Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`: scénu ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.
+Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`: scénu ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, u zásilek zprůhlední jednobarevné pozadí, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.
