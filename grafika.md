@@ -27,7 +27,7 @@ Prompty pro další obce jsou přímo ve složkách `obrazky_vstup/<obec>/prompt
 
 | Obec | Složka | Obrázků | Stav |
 | --- | --- | --- | --- |
-| Hluchov | `obrazky_vstup/hluchov/` | 15 | prompty připravené |
+| Hluchov | `obrazky_vstup/hluchov/` | 15 | hotovo |
 | Krakonošov | `obrazky_vstup/krakonosov/` | 15 | prompty připravené |
 | Skákalov | `obrazky_vstup/skakalov/` | 12 | prompty připravené |
 | Myší Lhota | `obrazky_vstup/mysi/` | 12 | prompty připravené |
