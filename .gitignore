@@ -7,3 +7,5 @@ nastroje/*.log
 __pycache__/
 # Sbalená verze webu (nastroje/sbal.py)
 sbaleno/
+# Obrázky z ChatGPT před převodem (nastroje/obrazky.py)
+obrazky_vstup/

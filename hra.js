@@ -21,6 +21,8 @@
   const KLIC_TRASY = `postak:${VERZE}:trasa`;
   // Svět = co platí napříč obcemi: vlajky světa (svet:x v podmínkách a efektech) a viděné mezihry.
   const KLIC_SVETA = `postak:${VERZE}:svet`;
+  // Grafika: 'obrazky' (kreslené obrázky z obrazky.csv, kde obec nějaké má) nebo 'jednoducha' (emoji a SVG).
+  const KLIC_GRAFIKY = `postak:${VERZE}:grafika`;
   const ZVLASTNI_KARTY = new Set(['?', 'napoveda']);
   const POROVNANI = /^([a-z_][a-z0-9_]*)(>=|<=|>|<|=)(-?\d+)$/i;
   const ZMENA = /^([a-z_][a-z0-9_]*)([+\-=])(\d+)$/i;
@@ -44,6 +46,7 @@
   // Právě hraná obec
   let etapa = null;
   let cile = [], cilePodleId = {}, karty = {}, pravidla = [], objevitelna = [], vrstvy = [], tahy = [];
+  let obrazkyObce = [];
   let stav = null;
   let album = new Set();
   let vybrana = null;
@@ -53,6 +56,52 @@
   // Obrázky z balíků obcí (data/<obec>.json) mají místo cesty adresu blob:. Jinak se použije cesta, jak je.
   const obrazky = {};
   const cestaObrazku = (cesta) => obrazky[cesta] || cesta;
+  // Cesta k souboru obce s vyřešeným „..“, aby obec mohla použít obrázky jiné obce (../lhotka/obrazky/pes.webp).
+  function spojCestu(...casti) {
+    const kusy = [];
+    for (const kus of casti.join('/').split('/')) {
+      if (kus === '..') kusy.pop();
+      else if (kus && kus !== '.') kusy.push(kus);
+    }
+    return kusy.join('/');
+  }
+
+  // ---------- Kreslené obrázky (obrazky.csv ve složce obce) ----------
+  // Řádek: druh (pozadi, cil, karta) ; id ; ikona (jen u cíle: obrázek pro změněnou ikonu) ; soubor (cesta od složky obce).
+  // Kde obrázek chybí, zůstane emoji. Hráč to přepíná tlačítkem v liště.
+  const obrazkyZapnute = () => (precti(KLIC_GRAFIKY) || 'obrazky') !== 'jednoducha';
+
+  function obrazekCile(c, ikona) {
+    if (!obrazkyZapnute() || !c) return '';
+    const radky = obrazkyObce.filter((r) => r.druh === 'cil' && r.id === c.id);
+    const presny = radky.find((r) => r.ikona && r.ikona === ikona);
+    if (presny) return presny.cesta;
+    // Výchozí obrázek patří jen k výchozí ikoně. Po změně ikony (pes spí) bez vlastního obrázku zůstane emoji.
+    if (ikona && ikona !== c.ikona) return '';
+    return radky.find((r) => !r.ikona)?.cesta || '';
+  }
+
+  const obrazekKarty = (id) => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'karta' && r.id === id)?.cesta) || '';
+  const obrazekPozadi = () => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'pozadi')?.cesta) || '';
+  const ikonaKarty = (id) => obrazekKarty(id) || karty[id]?.ikona || '';
+
+  // Ikona cíle: obrázek, když ho obec má, jinak emoji (při reakci emoji výrazu).
+  const ikonaCile = (c, ikona, vyraz) => vytvorIkonu(obrazekCile(c, ikona) || vyraz || ikona, c?.jmeno);
+
+  // Výraz při reakci se k obrázku přidá jako odznak, místo aby obrázek nahradil.
+  function odznakVyrazu(c, ikona, vyraz) {
+    if (!vyraz || vyraz === ikona || !obrazekCile(c, ikona)) return null;
+    const odznak = prvek('span', 'odznak', vyraz);
+    odznak.setAttribute('aria-hidden', 'true');
+    return odznak;
+  }
+
+  function prepniGrafiku() {
+    zapis(KLIC_GRAFIKY, obrazkyZapnute() ? 'jednoducha' : 'obrazky');
+    if (!etapa) return;
+    postavNaves();
+    aktualizuj();
+  }
 
   // ---------- Pomocníci ----------
 
@@ -229,6 +278,8 @@
     const soubory = await odpoved.json();
     for (const [nazev, obsah] of Object.entries(soubory)) {
       if (nazev.endsWith('.svg')) obrazky[`${DATA}${id}/${nazev}`] = URL.createObjectURL(new Blob([obsah], { type: 'image/svg+xml' }));
+      // Kreslené obrázky jsou v balíku jako data: URL pod cestou z obrazky.csv (i ../jina_obec/…).
+      else if (obsah.startsWith?.('data:image/')) obrazky[spojCestu(DATA, id, nazev)] = obsah;
     }
     return (soubor) => (soubor in soubory ? parsujCSV(soubory[soubor]) : null);
   }
@@ -249,11 +300,12 @@
         };
       }
       // vrstvy a pravidla po každém tahu jsou nepovinné
-      const [nastaveni, c, k, p, v, t] = await Promise.all([
+      const [nastaveni, c, k, p, v, t, obr] = await Promise.all([
         tabulka('etapa.csv', true), tabulka('cile.csv', true), tabulka('karty.csv', true), tabulka('kombinace.csv', true),
-        tabulka('vrstvy.csv', false), tabulka('kazdy_tah.csv', false),
+        tabulka('vrstvy.csv', false), tabulka('kazdy_tah.csv', false), tabulka('obrazky.csv', false),
       ]);
-      mezipamet[id] = { nastaveni: Object.fromEntries(nastaveni.map((r) => [r.klic, r.hodnota])), cile: c, karty: k, pravidla: p, vrstvy: v, tahy: t };
+      const o = obr.filter((r) => r.druh && r.soubor).map((r) => ({ ...r, cesta: spojCestu(DATA, id, r.soubor) }));
+      mezipamet[id] = { nastaveni: Object.fromEntries(nastaveni.map((r) => [r.klic, r.hodnota])), cile: c, karty: k, pravidla: p, vrstvy: v, tahy: t, obrazky: o };
     }
     return mezipamet[id];
   }
@@ -484,6 +536,7 @@
   const SVG = {
     zarovka: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>',
     kniha: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>',
+    obraz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>',
     mapa: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>',
   };
 
@@ -491,6 +544,7 @@
     koren.innerHTML = `
       <header class="lista">
         <div class="lista__nazev"><b></b><span class="lista__stav" aria-live="polite"></span></div>
+        <button type="button" class="ikonka" data-akce="grafika" aria-label="Kreslené obrázky" hidden>${SVG.obraz}</button>
         <button type="button" class="ikonka" data-akce="napoveda" aria-label="Nápověda" title="Nápověda">${SVG.zarovka}</button>
         <button type="button" class="ikonka" data-akce="album" aria-label="Album objevů" title="Album objevů">${SVG.kniha}</button>
         <button type="button" class="ikonka" data-akce="trasa" aria-label="Trasa" title="Trasa">${SVG.mapa}</button>
@@ -502,6 +556,7 @@
         <div class="ruka"></div>
       </section>`;
     $('[data-akce="napoveda"]').addEventListener('click', napoveda);
+    $('[data-akce="grafika"]').addEventListener('click', prepniGrafiku);
     $('[data-akce="album"]').addEventListener('click', ukazAlbum);
     $('[data-akce="trasa"]').addEventListener('click', ukazTrasu);
   }
@@ -560,10 +615,11 @@
       const [k, v] = t.split('=');
       if (k && v) naves.style.setProperty(`--${k}`, v);
     }
-    naves.innerHTML = etapa.pozadi ? '' : kresbaVesnice();
-    if (etapa.pozadi) {
+    const pozadi = obrazekPozadi() || etapa.pozadi;
+    naves.innerHTML = pozadi ? '' : kresbaVesnice();
+    if (pozadi) {
       const img = prvek('img', 'naves__pozadi');
-      img.src = cestaObrazku(etapa.pozadi);
+      img.src = cestaObrazku(pozadi);
       img.alt = '';
       img.draggable = false;
       naves.append(img);
@@ -603,6 +659,12 @@
     const stavEl = $('.lista__stav');
     stavEl.replaceChildren();
     for (const b of koren.querySelectorAll('[data-akce="napoveda"], [data-akce="album"]')) b.disabled = !etapa;
+    const grafika = $('[data-akce="grafika"]');
+    if (grafika) {
+      grafika.hidden = !etapa || !obrazkyObce.length;
+      grafika.setAttribute('aria-pressed', String(obrazkyZapnute()));
+      grafika.title = obrazkyZapnute() ? 'Kreslené obrázky (zapnuto)' : 'Kreslené obrázky (vypnuto)';
+    }
     if (!etapa) return;
     const cil = slova(etapa.cil);
     const hotovo = cil.filter((v) => stav.vlajky.includes(v)).length;
@@ -620,7 +682,8 @@
     for (const tl of koren.querySelectorAll('.cil')) {
       const c = cilePodleId[tl.dataset.id];
       tl.hidden = !!c.skryt_kdyz && plati(c.skryt_kdyz);
-      tl.querySelector('.medailon').replaceChildren(vytvorIkonu(aktualniIkona(c), c.jmeno));
+      tl.querySelector('.medailon').replaceChildren(ikonaCile(c, aktualniIkona(c)));
+      tl.querySelector('.odznak')?.remove();
     }
     $('.naves').classList.toggle('vyber', !!vybrana);
   }
@@ -653,7 +716,8 @@
     el.setAttribute('aria-label', k.adresa ? `${k.nazev}, ${k.adresa}` : k.nazev);
     el.setAttribute('aria-pressed', String(id === vybrana));
     const hore = prvek('span', 'zasilka__hore');
-    hore.append(vytvorIkonu(k.ikona, k.nazev));
+    hore.append(vytvorIkonu(ikonaKarty(id), k.nazev));
+    if (obrazekKarty(id)) el.classList.add('zasilka--obrazek');
     if (druh === 'pribeh') hore.append(prvek('span', 'pecet'));
     else if (druh !== 'vec') hore.append(prvek('span', 'znamka'));
     el.append(hore, prvek('span', 'zasilka__nazev', k.nazev));
@@ -861,7 +925,10 @@
     if (cil) {
       const tl = $(`.cil[data-id="${CSS.escape(cil.id)}"]`);
       if (tl) {
-        tl.querySelector('.medailon').replaceChildren(vytvorIkonu(vyraz, cil.jmeno));
+        tl.querySelector('.medailon').replaceChildren(ikonaCile(cil, aktualniIkona(cil), vyraz));
+        tl.querySelector('.odznak')?.remove();
+        const odznak = odznakVyrazu(cil, aktualniIkona(cil), vyraz);
+        if (odznak) tl.append(odznak);
         tl.classList.remove('reaguje');
         void tl.offsetWidth; // restart animace
         tl.classList.add('reaguje');
@@ -875,7 +942,11 @@
     panel.tabIndex = -1;
 
     const portret = prvek('span', 'panel__portret');
-    portret.append(vytvorIkonu(vyraz, kdo));
+    if (cil) {
+      portret.append(ikonaCile(cil, aktualniIkona(cil), vyraz));
+      const odznak = odznakVyrazu(cil, aktualniIkona(cil), vyraz);
+      if (odznak) portret.append(odznak);
+    } else portret.append(vytvorIkonu(vyraz, kdo));
     panel.append(portret, prvek('span', 'panel__kdo', kdo), prvek('p', 'panel__text', text));
     for (const t of mezitim) panel.append(prvek('p', 'panel__mezitim', t));
 
@@ -885,7 +956,7 @@
       radek.append(prvek('span', 'panel__stitek', 'Do brašny'));
       for (const id of nalezene) {
         const s = prvek('span', 'panel__vec');
-        s.append(vytvorIkonu(karty[id].ikona), ` ${karty[id].nazev}`);
+        s.append(vytvorIkonu(ikonaKarty(id)), ` ${karty[id].nazev}`);
         radek.append(s);
       }
       panel.append(radek);
@@ -1225,13 +1296,13 @@
       const skupina = prvek('section', 'album__skupina');
       const hlava = prvek('div', 'album__hlava');
       const ikona = prvek('span', 'album__ikona');
-      ikona.append(vytvorIkonu(c.ikona));
+      ikona.append(ikonaCile(c, c.ikona));
       hlava.append(ikona, prvek('span', '', c.jmeno), prvek('span', 'album__pocet', `${nalezena.length}/${jeho.length}`));
       skupina.append(hlava);
       for (const p of nalezena) {
         const polozka = prvek('div', 'album__polozka');
         const karta = prvek('span', 'album__karta');
-        karta.append(vytvorIkonu(karty[p.karta]?.ikona || ''));
+        karta.append(vytvorIkonu(ikonaKarty(p.karta)));
         polozka.append(karta, prvek('span', '', p.text));
         skupina.append(polozka);
       }
@@ -1279,6 +1350,7 @@
     objevitelna = pravidla.filter(jeObjevitelne);
     vrstvy = data.vrstvy;
     tahy = data.tahy || [];
+    obrazkyObce = data.obrazky || [];
     vybrana = null;
     nactiStav(id);
     if (!stav || stav.konec) stav = novyStav();

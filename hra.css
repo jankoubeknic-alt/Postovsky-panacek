@@ -119,6 +119,12 @@ button { font: inherit; color: inherit; }
 }
 .ikonka svg { width: 22px; height: 22px; }
 .ikonka:disabled { opacity: .35; cursor: default; }
+/* Se čtvrtým tlačítkem (kreslené obrázky) se lišta na úzkém displeji zúží, aby se vešel název obce. */
+@media (max-width: 420px) {
+  .lista:has([data-akce="grafika"]:not([hidden])) { gap: 6px; }
+  .lista:has([data-akce="grafika"]:not([hidden])) .ikonka { width: 36px; }
+}
+.ikonka[aria-pressed="false"] { opacity: .6; }
 .ikonka:not(:disabled):active { background: rgba(242, 243, 236, .25); }
 
 /* ---------- Scéna ---------- */
@@ -192,6 +198,25 @@ button { font: inherit; color: inherit; }
 .medailon .emoji { font-size: 10.5cqw; line-height: 1; }
 .medailon .emoji.male { font-size: 7cqw; }
 .medailon .obrazek { width: 100%; height: 100%; object-fit: cover; }
+/* Výraz při reakci u kresleného portrétu: malý odznak vpravo nahoře u medailonu. */
+.odznak {
+  position: absolute;
+  z-index: 2;
+  top: -1.5cqw;
+  left: 50%;
+  margin-left: 4.5cqw;
+  width: 9cqw;
+  height: 9cqw;
+  display: grid;
+  place-items: center;
+  font-size: 5.5cqw;
+  line-height: 1;
+  border-radius: 50%;
+  background: var(--papir);
+  border: .6cqw solid var(--inkoust);
+  pointer-events: none;
+  animation: poskok .5s ease;
+}
 .jmenovka {
   font-family: var(--f-nadpis);
   font-weight: 500;
@@ -303,6 +328,8 @@ button { font: inherit; color: inherit; }
 .zasilka__hore { display: flex; justify-content: space-between; align-items: flex-start; }
 .zasilka .emoji { font-size: 22px; line-height: 1; }
 .zasilka .obrazek { width: 30px; height: 30px; object-fit: contain; }
+/* Kreslené věci mají světlé pozadí jako papír karty. Násobení ho zneviditelní i na tmavší kartě. */
+.zasilka--obrazek .obrazek { width: 36px; height: 36px; margin: -3px 0 -4px -3px; mix-blend-mode: multiply; }
 .znamka {
   width: 16px;
   height: 19px;
@@ -391,7 +418,10 @@ button { font: inherit; color: inherit; }
 }
 .panel__portret .emoji { font-size: 30px; line-height: 1; }
 .panel__portret .emoji.male { font-size: 20px; }
-.panel__portret .obrazek { width: 100%; height: 100%; object-fit: cover; }
+.panel__portret .obrazek { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.panel__portret:has(.odznak) { position: relative; overflow: visible; }
+.panel__portret .odznak { top: auto; left: auto; right: -8px; bottom: -6px; margin: 0; width: 24px; height: 24px; font-size: 14px; border-width: 2px; }
+.panel__vec .obrazek { width: 20px; height: 20px; object-fit: contain; vertical-align: -4px; mix-blend-mode: multiply; }
 .panel__kdo { align-self: end; font-family: var(--f-nadpis); font-weight: 700; font-size: 17px; }
 .panel__text { grid-column: 2; margin: 0; font-size: 17px; line-height: 1.42; text-wrap: pretty; }
 .panel__nove { grid-column: 1 / -1; margin: 8px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 15px; font-weight: 600; }
@@ -578,7 +608,7 @@ button { font: inherit; color: inherit; }
 .album__pocet { margin-left: auto; font-family: var(--f-razitko); font-size: 13px; font-variant-numeric: tabular-nums; }
 .album__polozka { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 8px; padding: 5px 0; font-size: 15px; line-height: 1.4; }
 .album__karta .emoji { font-size: 18px; }
-.album__karta .obrazek { width: 24px; height: 24px; object-fit: contain; }
+.album__karta .obrazek { width: 24px; height: 24px; object-fit: contain; mix-blend-mode: multiply; }
 .arch .album__zbyva { margin: 4px 0 0 36px; font-size: 14px; font-style: italic; color: var(--sediva); }
 
 /* Ladění: přidej #debug na konec adresy */

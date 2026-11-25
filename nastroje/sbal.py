@@ -1,9 +1,10 @@
 # Sbalí každou obec (všechny CSV a SVG ze složky data/<obec>/) do jednoho souboru data/<obec>.json.
+# Kreslené obrázky z obrazky.csv jdou do balíku jako data: URL pod cestou, jak je v obrazky.csv.
 # Výsledek je celý web ve složce, kterou zadáš: index.html, hra.js, hra.css, tabulky data/*.csv a balíky obcí.
 # Engine si balík načte, když složka obce chybí. Hodí se pro hostingy s limitem počtu souborů (artefakt).
 #
 #   python3 nastroje/sbal.py /cesta/k/vystupu
-import json, os, shutil, sys
+import base64, csv, json, os, shutil, sys
 
 KOREN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 vystup = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(KOREN, 'sbaleno'))
@@ -18,6 +19,29 @@ for soubor in ('index.html', 'hra.js', 'hra.css'):
 for soubor in sorted(os.listdir(os.path.join(KOREN, 'data'))):
     if soubor.endswith('.csv'):
         shutil.copy(os.path.join(KOREN, 'data', soubor), os.path.join(vystup, 'data'))
+TYPY = {'.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg'}
+
+
+def kreslene(slozka):
+    cesta = os.path.join(slozka, 'obrazky.csv')
+    if not os.path.exists(cesta):
+        return {}
+    with open(cesta, encoding='utf-8') as f:
+        radky = [r for r in f if r.strip() and not r.lstrip().startswith('#')]
+    vysledek = {}
+    for r in csv.DictReader(radky, delimiter=';'):
+        soubor = (r.get('soubor') or '').strip()
+        plna = os.path.normpath(os.path.join(slozka, soubor))
+        typ = TYPY.get(os.path.splitext(soubor)[1].lower())
+        if not soubor or not typ:
+            continue
+        if not os.path.isfile(plna):
+            sys.exit(f'{cesta}: chybí soubor {soubor}')
+        with open(plna, 'rb') as f:
+            vysledek[soubor] = f'data:{typ};base64,' + base64.b64encode(f.read()).decode('ascii')
+    return vysledek
+
+
 pocet = 0
 for obec in sorted(os.listdir(os.path.join(KOREN, 'data'))):
     slozka = os.path.join(KOREN, 'data', obec)
@@ -28,6 +52,7 @@ for obec in sorted(os.listdir(os.path.join(KOREN, 'data'))):
         if nazev.endswith(('.csv', '.svg')):
             with open(os.path.join(slozka, nazev), encoding='utf-8') as f:
                 balik[nazev] = f.read()
+    balik.update(kreslene(slozka))
     with open(os.path.join(vystup, 'data', f'{obec}.json'), 'w', encoding='utf-8') as f:
         json.dump(balik, f, ensure_ascii=False, separators=(',', ':'))
     pocet += 1

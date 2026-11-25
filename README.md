@@ -52,6 +52,7 @@ Všechno, co hráč vidí, je v tabulkách ve složce `data/`. Dají se upravova
 | `data/<obec>/kombinace.csv` | co se stane, když hráč použije kartu na cíl |
 | `data/<obec>/vrstvy.csv` | nepovinné: obrázky přes scénu, které se ukážou podle stavu hry (voda, déšť, noc) |
 | `data/<obec>/kazdy_tah.csv` | nepovinné: co se stane „mezitím“ po každém podání zásilky (podmínka, efekt, text do okénka) |
+| `data/<obec>/obrazky.csv` | nepovinné: kreslené obrázky obce (scéna, portréty, zásilky), viz „Kreslené obrázky“ |
 | `data/<obec>.json` | jen ve sbalené verzi: všechny tabulky a obrázky obce v jednom souboru. Vyrobí ho `nastroje/sbal.py` a hra ho použije, jen když složka obce chybí. Upravuj vždy tabulky, ne balík. |
 
 Popis sloupců a zápisu podmínek a efektů je přímo v hlavičce `kombinace.csv` a `etapa.csv`.
@@ -158,6 +159,7 @@ Ve složce `nastroje/` jsou pomocné skripty (potřebují Node.js, Python 3, a p
 - `nastroje/obec.py` je pomocník pro psaní tabulek obce v Pythonu.
 - `python3 nastroje/rod.py` vypíše místa v textech, která můžou určovat pohlaví hráče.
 - `python3 nastroje/sbal.py <složka>` vyrobí sbalenou verzi webu.
+- `python3 nastroje/obrazky.py <obec> <složka>` převede obrázky (třeba PNG z ChatGPT) do obce, viz „Kreslené obrázky“.
 - `hraj_obce.py` hraje proti `http://127.0.0.1:8765/`, jinou adresu nastavíš proměnnou `POSTAK_URL`.
 
 ### Nová obec
@@ -168,4 +170,21 @@ Ve složce `nastroje/` jsou pomocné skripty (potřebují Node.js, Python 3, a p
 
 ### Obrázky
 
-Kdekoli se zadává ikona nebo výraz (`ikona` v `cile.csv` a `karty.csv`, `vyraz` v `kombinace.csv`), můžeš místo emoji napsat cestu k obrázku, třeba `img/lhotka/kovar_zrudly.png`. Pozadí scény se nastavuje klíčem `pozadi` v `etapa.csv` a má poměr stran 3:4 (na výšku). Postavy je nejlepší generovat zvlášť na průhledném pozadí a ve 2–3 výrazech. Stejná postava je pak ve všech scénách stejná.
+Kdekoli se zadává ikona nebo výraz (`ikona` v `cile.csv` a `karty.csv`, `vyraz` v `kombinace.csv`), můžeš místo emoji napsat cestu k obrázku, třeba `img/lhotka/kovar_zrudly.png`. Pozadí scény se nastavuje klíčem `pozadi` v `etapa.csv` a má poměr stran 3:4 (na výšku). Takový obrázek platí napořád a nedá se vypnout.
+
+### Kreslené obrázky
+
+Obec může mít vedle emoji i kreslenou grafiku, kterou si hráč zapne nebo vypne tlačítkem s obrázkem v liště. Tlačítko je vidět jen v obci, která obrázky má. Výchozí je zapnuto, volba platí pro celou hru a přenáší se s postupem.
+
+Obrázky jsou ve složce `data/<obec>/obrazky/` a seznam v `data/<obec>/obrazky.csv`:
+
+| sloupec | význam |
+| --- | --- |
+| `druh` | `pozadi` (scéna), `cil` (portrét v medailonu) nebo `karta` (obrázek zásilky) |
+| `id` | id cíle nebo karty, u pozadí prázdné |
+| `ikona` | jen u cíle: obrázek pro změněnou ikonu (`ikona:pes:🐕💤`). Prázdné = výchozí ikona. |
+| `soubor` | cesta od složky obce, i do jiné obce (`../lhotka/obrazky/pes.webp`) |
+
+Kde obrázek chybí, zůstane emoji. Když cíl změní ikonu a pro novou ikonu obrázek nemá, ukáže se emoji, aby změna nezapadla. Výraz při reakci (`vyraz` v `kombinace.csv`) se u portrétu ukáže jako malý odznak vedle medailonu. Sbalená verze má obrázky v balíku obce.
+
+Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`: scénu ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.
