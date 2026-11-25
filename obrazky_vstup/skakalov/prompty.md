@@ -10,14 +10,14 @@ Obec je na trase 27. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 
 ## Poznámky k obci
 
-- Pes Alík a myslivec běhají po třech řadách (oves, louka, les). Generuješ jen obrázky pro první řadu (`pes1`, `mys1` a jejich změněný stav), kopie pro druhou a třetí řadu udělám sám.
-- Obyčejné dopisy dostanou obálku z Krakonošova (`dopis_uhlir.png`).
+- Pes Alík a myslivec běhají po třech řadách (oves, louka, les). Generuješ jen obrázky pro první řadu (`pes1`, `mys1` a jejich změněný stav). Druhá a třetí řada použije stejné obrázky (zapsané v `mapa.csv`).
+- Obyčejné dopisy mají obálku z Krakonošova (`dopis_uhlir.png`), už je ve složce.
 
 ## Soubory
 
 Vygeneruj (12): `pozadi.png`, `sedlak.png`, `pes1.png`, `pes1_obojek.png`, `mys1.png`, `mys1_pero.png`, `pasacek.png`, `hajny.png`, `dopis_pasacek.png`, `obojek.png`, `burt.png`, `pero.png`
 
-Doplním sám kopií, až budou hotové jejich předlohy (10): `pes2.png`, `pes3.png`, `pes2_obojek.png`, `pes3_obojek.png`, `mys2.png`, `mys3.png`, `mys2_pero.png`, `mys3_pero.png`, `dopis_sedlak.png`, `dopis_hajny.png`
+Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_sedlak.png`, `dopis_hajny.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

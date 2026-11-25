@@ -153,7 +153,7 @@ Ve složce `nastroje/` jsou pomocné skripty (potřebují Node.js, Python 3, a p
 
 - `node nastroje/over.mjs data/<obec>/` projde všechny stavy obce a vypíše chyby, zaseknuté stavy, nedosažitelné řádky a počet objevů do alba. Vlajky světa začínají prázdné. Druhý argument (`vrba_lhotka,vrba_hluchov`) je nastaví předem, třeba pro finále.
 - `node nastroje/cesta.mjs data/<obec>/` vypíše nejkratší výherní cestu.
-- `python3 nastroje/hraj_obce.py nastroje "<obec>=<Název>"` obec odehraje v headless Chromu a uloží snímky (potřebuje běžící `python3 -m http.server 8765 --bind 127.0.0.1` v kořeni projektu).
+- `python3 nastroje/hraj_obce.py nastroje "<obec>=<Název>"` obec odehraje v headless Chromu a uloží snímky (potřebuje běžící `python3 -m http.server 8765 --bind 127.0.0.1` v kořeni projektu). Na začátku obce zkontroluje jmenovky: vypíše `JMENOVKA PŘETÉKÁ` (přes okraj scény), `JMENOVKA PŘEKRÝVÁ` (dvě jmenovky přes sebe) a `JMENOVKA PŘES MEDAILON` (jmenovka zakrývá jinou postavu). Engine jmenovky u kraje sám posouvá dovnitř scény, takže přetékání by se objevit nemělo.
 - `python3 nastroje/rozlozeni.py` hledá cíle, které jsou ve scéně moc blízko sebe.
 - `nastroje/kontrola_vse.sh` projede všechny hratelné obce validátorem i Chromem.
 - `nastroje/obec.py` je pomocník pro psaní tabulek obce v Pythonu.
@@ -185,6 +185,6 @@ Obrázky jsou ve složce `data/<obec>/obrazky/` a seznam v `data/<obec>/obrazky.
 | `ikona` | jen u cíle: obrázek pro změněnou ikonu (`ikona:pes:🐕💤`). Prázdné = výchozí ikona. |
 | `soubor` | cesta od složky obce, i do jiné obce (`../lhotka/obrazky/pes.webp`) |
 
-Kde obrázek chybí, zůstane emoji. Když cíl změní ikonu a pro novou ikonu obrázek nemá, ukáže se emoji, aby změna nezapadla. Výraz při reakci (`vyraz` v `kombinace.csv`) se u portrétu ukáže jako malý odznak vedle medailonu. Sbalená verze má obrázky v balíku obce.
+Kde obrázek chybí, zůstane emoji. Když cíl změní ikonu a pro novou ikonu obrázek nemá, portrét zůstane a nová ikona se ukáže jako malý odznak u medailonu, aby změna nezapadla. Výraz při reakci (`vyraz` v `kombinace.csv`) se u portrétu ukáže jako malý odznak vedle medailonu. Sbalená verze má obrázky v balíku obce.
 
-Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`: scénu ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, u zásilek zprůhlední jednobarevné pozadí, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.
+Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`. Ve vstupní složce může být `kopie.csv` (obrázky převzaté z jiných obcí, nástroj je zkopíruje, jakmile existují) a `mapa.csv` (jeden obrázek pro víc cílů, karet nebo stavů). Nástroj scénu ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, u zásilek zprůhlední jednobarevné pozadí, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.

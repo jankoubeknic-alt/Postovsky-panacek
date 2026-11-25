@@ -23,17 +23,76 @@ Prompty jsou anglicky, protože ChatGPT podle nich drží styl přesněji. Každ
 
 ## Další obce
 
-Prompty pro další obce jsou přímo ve složkách `obrazky_vstup/<obec>/prompty.md`, obrázky se ukládají vedle nich. Git ignoruje jen obrázky, prompty se commitují.
+Každá obec má složku `obrazky_vstup/<obec>/` (id obce je v `data/etapy.csv`). Ve složce je `prompty.md` s postupem, poznámkami a prompty, obrázky se ukládají vedle. Git ignoruje jen obrázky, prompty se commitují.
 
-| Obec | Složka | Obrázků | Stav |
+Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbův dopis, úřední listina, noviny, telegram, pohlednice, balík, prsten nebo klíč se generují jednou a ostatní obce je dostanou kopií. Seznam kopií je v `kopie.csv` ve složce obce a převodní nástroj chybějící kopie doplní sám, jakmile předloha existuje. Jeden obrázek pro víc postav nebo stavů ve stejné obci (čtyři židle, políčka, světýlka) zapisuje `mapa.csv`.
+
+Čistá změna výrazu (😊, 🥰) se negeneruje. Hra nechá portrét a výraz ukáže jako odznak.
+
+| Obec | Kapitola | Ke generování | Stav |
 | --- | --- | --- | --- |
-| Hluchov | `obrazky_vstup/hluchov/` | 15 | hotovo |
-| Krakonošov | `obrazky_vstup/krakonosov/` | 15 | prompty připravené |
-| Skákalov | `obrazky_vstup/skakalov/` | 12 | prompty připravené |
-| Myší Lhota | `obrazky_vstup/mysi/` | 12 | prompty připravené |
-| Kramářov | `obrazky_vstup/kramarov/` | 15 | prompty připravené |
-
-Obrázek, který se hodí i jinde, se nekreslí znovu. Zkopíruje se do složky další obce pod jménem podle jejích dat a prompt pro něj tam není. Tak je to s Vrbovým dopisem, poutníkem (Krakonoš z finále Lhotky), obyčejnou obálkou (`dopis_uhlir.png` z Krakonošova) a se psem a myslivcem ve třech řadách Skákalova. Co se zkopírovat dá až po vygenerování předlohy, je v `prompty.md` obce vypsané zvlášť.
+| Lhotka | Léto | 16 | hotovo (prompty v této stránce) |
+| Hluchov | Léto | 15 | hotovo |
+| Krakonošov | Léto | 15 | hotovo |
+| Skákalov | Léto | 12 | hotovo |
+| Myší Lhota | Podzim | 12 | hotovo |
+| Kramářov | Podzim | 15 | hotovo |
+| Třířečí | Podzim | 12 | prompty připravené |
+| Cylindrov | Podzim | 20 | prompty připravené |
+| Spáčov pod Blaníkem | Podzim | 10 | prompty připravené |
+| Bezvětří | Podzim | 9 | prompty připravené |
+| Koláčov | Podzim | 8 | prompty připravené |
+| Mlhov | Podzim | 9 | prompty připravené |
+| Výlovice | Podzim | 13 | prompty připravené |
+| Hrad Strachov | Podzim | 12 | prompty připravené |
+| Bludičkov | Podzim | 9 | prompty připravené |
+| Martinov | Podzim | 13 | prompty připravené |
+| Faustův dům | Podzim | 10 | prompty připravené |
+| Hodinov | Podzim | 8 | prompty připravené |
+| Sněžná | Podzim | 13 | prompty připravené |
+| Barborov | Zima | 11 | prompty připravené |
+| Mikulášov | Zima | 14 | prompty připravené |
+| Lucín | Zima | 10 | prompty připravené |
+| Ježíškova Lhota | Zima | 13 | prompty připravené |
+| Václavice | Zima | 9 | prompty připravené |
+| Pozpátkov | Zima | 12 | prompty připravené |
+| Měsíčkov | Zima | 18 | prompty připravené |
+| Kozí Hřbítek | Zima | 11 | prompty připravené |
+| Trubkovice | Zima | 10 | prompty připravené |
+| Kamenice | Zima | 12 | prompty připravené |
+| Čertovina pod Kotlem | Zima | 11 | prompty připravené |
+| Kašovice | Zima | 9 | prompty připravené |
+| Hlínov | Zima | 9 | prompty připravené |
+| Maškarovice | Zima | 8 | prompty připravené |
+| Pecnov | Zima | 12 | prompty připravené |
+| Pošta o půlnoci | Zima | 12 | prompty připravené |
+| Razítkov | Jaro | 11 | prompty připravené |
+| Holubník | Jaro | 14 | prompty připravené |
+| Štolov | Jaro | 12 | prompty připravené |
+| Loutkov nad Nití | Jaro | 12 | prompty připravené |
+| Straky nad Blýskavou | Jaro | 8 | prompty připravené |
+| Lhářov | Jaro | 11 | prompty připravené |
+| Pomlázkov | Jaro | 16 | prompty připravené |
+| Brodek | Jaro | 10 | prompty připravené |
+| Štírovice | Jaro | 12 | prompty připravené |
+| Hejrupov | Jaro | 11 | prompty připravené |
+| Šnekov | Jaro | 12 | prompty připravené |
+| Floriánov | Jaro | 11 | prompty připravené |
+| Dolní Zapomněnice | Jaro | 11 | prompty připravené |
+| Jelení Hráz | Jaro | 10 | prompty připravené |
+| Jánský Brod | Jaro | 10 | prompty připravené |
+| Ťukov | Zase léto | 7 | prompty připravené |
+| Kočičí Lhota | Zase léto | 14 | prompty připravené |
+| Lázně Bílá | Zase léto | 9 | prompty připravené |
+| Nová Ves u Staré Vsi | Zase léto | 9 | prompty připravené |
+| Koníkov | Zase léto | 9 | prompty připravené |
+| Ozvěnov | Zase léto | 7 | prompty připravené |
+| Prokopov | Zase léto | 8 | prompty připravené |
+| Neumětely | Zase léto | 14 | prompty připravené |
+| Dlouhá Široká | Zase léto | 13 | prompty připravené |
+| Mňoukov | Zase léto | 10 | prompty připravené |
+| Kocourkov | Zase léto | 14 | prompty připravené |
+| Lhotka po roce | Zase léto | 4 | hotovo (prompty v této stránce) |
 
 ## Pravidla pro další obce
 

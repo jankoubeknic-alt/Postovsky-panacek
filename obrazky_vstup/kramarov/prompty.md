@@ -10,15 +10,13 @@ Obec je na trase 8. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Poznámky k obci
 
-- Obyčejné dopisy dostanou obálku z Krakonošova (`dopis_uhlir.png`) a druhý krejcar obrázek prvního.
+- Obyčejné dopisy mají obálku z Krakonošova (`dopis_uhlir.png`) a druhý krejcar obrázek prvního.
 
 ## Soubory
 
 Vygeneruj (15): `pozadi.png`, `babicka.png`, `dratenik.png`, `flasinetar.png`, `pernikar.png`, `strelnice.png`, `kramarka.png`, `kolotoc.png`, `hrncir.png`, `hrnec.png`, `krejcar.png`, `pernik.png`, `ruze.png`, `drat.png`, `hrnec_drat.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (1): `vrbuv_dopis.png`
-
-Doplním sám kopií, až budou hotové jejich předlohy (3): `dopis_flasinetar.png`, `dopis_pernikar.png`, `krejcar2.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `vrbuv_dopis.png`, `dopis_flasinetar.png`, `dopis_pernikar.png`, `krejcar2.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

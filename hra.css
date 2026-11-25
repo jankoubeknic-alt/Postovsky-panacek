@@ -217,6 +217,7 @@ button { font: inherit; color: inherit; }
   pointer-events: none;
   animation: poskok .5s ease;
 }
+.odznak.male { font-size: 3.6cqw; }
 .jmenovka {
   font-family: var(--f-nadpis);
   font-weight: 500;
@@ -229,6 +230,7 @@ button { font: inherit; color: inherit; }
   white-space: nowrap;
   box-shadow: 0 1px 0 rgba(31, 42, 48, .25);
 }
+.jmenovka--zalomit { white-space: normal; max-width: 22cqw; text-align: center; text-wrap: balance; }
 
 .naves.tahani .medailon,
 .naves.vyber .medailon { box-shadow: 0 0 0 1cqw var(--zluta), 0 1.2cqw 0 rgba(31, 42, 48, .25); }

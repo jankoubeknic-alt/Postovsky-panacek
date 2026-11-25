@@ -1,21 +1,21 @@
 # x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
 id;jmeno;ikona;x;y;skryt_kdyz
 strazny;Strážný u brány;💂;16;12;
-slepeje1;Šlépěje;👣;38;12;f1=0
-vaclav1;Kníže Václav;🤴;62;12;!v=1
+slepeje1;Šlépěje;👣;43;12;f1=0
+vaclav1;Kníže Václav;🤴;64;12;!v=1
 postak1;Ty;📮;86;12;!p=1
 kovar;Kovář;🔨;16;31;
-slepeje2;Šlépěje;👣;38;31;f2=0
-vaclav2;Kníže Václav;🤴;62;31;!v=2
+slepeje2;Šlépěje;👣;43;31;f2=0
+vaclav2;Kníže Václav;🤴;64;31;!v=2
 postak2;Ty;📮;86;31;!p=2
 vdova;Vdova Dorota;👵;16;50;
-slepeje3;Šlépěje;👣;38;50;f3=0
-vaclav3;Kníže Václav;🤴;62;50;!v=3
+slepeje3;Šlépěje;👣;43;50;f3=0
+vaclav3;Kníže Václav;🤴;64;50;!v=3
 postak3;Ty;📮;86;50;!p=3
 uhlir;Uhlíř;🧑‍🏭;16;69;
-slepeje4;Šlépěje;👣;38;69;f4=0
-vaclav4;Kníže Václav;🤴;62;69;!v=4
+slepeje4;Šlépěje;👣;43;69;f4=0
+vaclav4;Kníže Václav;🤴;64;69;!v=4
 postak4;Ty;📮;86;69;!p=4
 kaple;Kaple;⛪;16;88;
-slepeje5;Šlépěje;👣;38;88;f5=0
-vaclav5;Kníže Václav;🤴;62;88;!v=5
+slepeje5;Šlépěje;👣;43;88;f5=0
+vaclav5;Kníže Václav;🤴;64;88;!v=5

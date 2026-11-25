@@ -76,10 +76,12 @@
     const radky = obrazkyObce.filter((r) => r.druh === 'cil' && r.id === c.id);
     const presny = radky.find((r) => r.ikona && r.ikona === ikona);
     if (presny) return presny.cesta;
-    // Výchozí obrázek patří jen k výchozí ikoně. Po změně ikony (pes spí) bez vlastního obrázku zůstane emoji.
-    if (ikona && ikona !== c.ikona) return '';
     return radky.find((r) => !r.ikona)?.cesta || '';
   }
+
+  // Změněná ikona cíle (😊, 🔥…), pro kterou obec nemá vlastní obrázek: portrét zůstane a ikona se ukáže jako odznak.
+  const stavBezObrazku = (c, ikona) => !!ikona && ikona !== c.ikona && !!obrazekCile(c, ikona)
+    && !obrazkyObce.some((r) => r.druh === 'cil' && r.id === c.id && r.ikona === ikona);
 
   const obrazekKarty = (id) => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'karta' && r.id === id)?.cesta) || '';
   const obrazekPozadi = () => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'pozadi')?.cesta) || '';
@@ -88,10 +90,15 @@
   // Ikona cíle: obrázek, když ho obec má, jinak emoji (při reakci emoji výrazu).
   const ikonaCile = (c, ikona, vyraz) => vytvorIkonu(obrazekCile(c, ikona) || vyraz || ikona, c?.jmeno);
 
-  // Výraz při reakci se k obrázku přidá jako odznak, místo aby obrázek nahradil.
+  // Výraz při reakci se k obrázku přidá jako odznak, místo aby obrázek nahradil. Bez výrazu ukáže odznak změněný stav.
   function odznakVyrazu(c, ikona, vyraz) {
-    if (!vyraz || vyraz === ikona || !obrazekCile(c, ikona)) return null;
-    const odznak = prvek('span', 'odznak', vyraz);
+    if (!obrazekCile(c, ikona)) return null;
+    let znak = vyraz && vyraz !== ikona ? vyraz : stavBezObrazku(c, ikona) ? ikona : '';
+    // Složená ikona (🐕 → 🐕💤) ukáže v odznaku jen to, co přibylo.
+    if (znak !== c.ikona && znak.startsWith(c.ikona)) znak = znak.slice(c.ikona.length);
+    if (!znak) return null;
+    const odznak = prvek('span', 'odznak', znak);
+    if (pocetZnaku(znak) > 1) odznak.classList.add('male');
     odznak.setAttribute('aria-hidden', 'true');
     return odznak;
   }
@@ -557,6 +564,11 @@
       </section>`;
     $('[data-akce="napoveda"]').addEventListener('click', napoveda);
     $('[data-akce="grafika"]').addEventListener('click', prepniGrafiku);
+    // Jmenovky se srovnávají znovu při každé změně velikosti scény (otočení telefonu, okno prohlížeče).
+    if (typeof ResizeObserver !== 'undefined') new ResizeObserver(srovnejJmenovky).observe($('.naves'));
+    // Šířka jmenovek se mění, když se dotáhne písmo. To se může stát i po prvním srovnání.
+    document.fonts?.ready.then(srovnejJmenovky);
+    document.fonts?.addEventListener?.('loadingdone', srovnejJmenovky);
     $('[data-akce="album"]').addEventListener('click', ukazAlbum);
     $('[data-akce="trasa"]').addEventListener('click', ukazTrasu);
   }
@@ -646,6 +658,43 @@
     }
   }
 
+  // Jmenovky ve scéně: jmenovka u kraje, která by přetekla přes okraj, se posune dovnitř. Když pak zasahuje
+  // do jiné jmenovky nebo cizího medailonu, zkusí se zalomit na dva řádky. Zalomení zůstane, jen když překryv zmenší.
+  function srovnejJmenovky() {
+    const naves = $('.naves');
+    if (!naves) return;
+    const ramec = naves.getBoundingClientRect();
+    if (!ramec.width) return;
+    const okraj = 3;
+    const cile = [...naves.querySelectorAll('.cil:not([hidden])')].map((c) => ({ j: c.querySelector('.jmenovka'), m: c.querySelector('.medailon') }));
+    for (const { j } of cile) {
+      j.style.transform = '';
+      j.classList.remove('jmenovka--zalomit');
+    }
+    const posun = (r) => (r.left < ramec.left + okraj ? ramec.left + okraj - r.left : r.right > ramec.right - okraj ? ramec.right - okraj - r.right : 0);
+    const posunuty = (j) => {
+      const r = j.getBoundingClientRect();
+      const dx = posun(r);
+      return { left: r.left + dx, right: r.right + dx, top: r.top, bottom: r.bottom };
+    };
+    const plocha = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+    const medailony = cile.map((c) => c.m.getBoundingClientRect());
+    const jmenovky = cile.map((c) => posunuty(c.j));
+    const prekryv = (i, r) => cile.reduce((s, _, k) => (k === i ? s : s + plocha(r, jmenovky[k]) + plocha(r, medailony[k])), 0);
+    cile.forEach((c, i) => {
+      const predtim = prekryv(i, jmenovky[i]);
+      if (predtim < 2) return;
+      c.j.classList.add('jmenovka--zalomit');
+      const zalomena = posunuty(c.j);
+      if (prekryv(i, zalomena) < predtim) jmenovky[i] = zalomena;
+      else c.j.classList.remove('jmenovka--zalomit');
+    });
+    for (const { j } of cile) {
+      const dx = posun(j.getBoundingClientRect());
+      if (dx) j.style.transform = `translateX(${Math.round(dx)}px)`;
+    }
+  }
+
   // ---------- Vykreslení stavu ----------
 
   const aktualniIkona = (c) => stav.ikony[c.id] || c.ikona;
@@ -684,8 +733,11 @@
       tl.hidden = !!c.skryt_kdyz && plati(c.skryt_kdyz);
       tl.querySelector('.medailon').replaceChildren(ikonaCile(c, aktualniIkona(c)));
       tl.querySelector('.odznak')?.remove();
+      const odznak = odznakVyrazu(c, aktualniIkona(c));
+      if (odznak) tl.append(odznak);
     }
     $('.naves').classList.toggle('vyber', !!vybrana);
+    srovnejJmenovky();
   }
 
   function vykresliRuku(nove = []) {

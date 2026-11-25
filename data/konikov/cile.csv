@@ -2,8 +2,8 @@
 id;jmeno;ikona;x;y;skryt_kdyz
 koci;Na kozlíku;🏇;50;50;
 prednosta;Přednosta pošty;👨‍💼;14;18;
-babka;Babka s husou;👵;38;32;v_voze_babka nebo babka_dovezena
+babka;Babka s husou;👵;38;30;v_voze_babka nebo babka_dovezena
 hostinsky;Hostinský;🍺;86;18;
-student;Student;🧑‍🎓;62;32;v_voze_student nebo student_dovezen
+student;Student;🧑‍🎓;62;30;v_voze_student nebo student_dovezen
 mlynar;Mlynář;🧑‍🌾;84;80;
 hrabenka;Hraběnka;👸;16;80;

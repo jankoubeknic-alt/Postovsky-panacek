@@ -12,13 +12,13 @@ Obec je na trase 6. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 - Myší Lhota je pro hráče malinká, scéna je proto jako zahradní kout, kde všechno měří pár centimetrů.
 - Kocour Mikeš je zrzavý mourek. Nesmí vypadat jako žádný známý kreslený kocour.
-- Obyčejný dopis dostane obálku z Krakonošova (`dopis_uhlir.png`).
+- Obyčejný dopis má obálku z Krakonošova (`dopis_uhlir.png`), už je ve složce.
 
 ## Soubory
 
 Vygeneruj (12): `pozadi.png`, `starosta.png`, `starosta_slavi.png`, `krejcova.png`, `krejcova_vana.png`, `studna.png`, `deti.png`, `kocour.png`, `balik.png`, `dopis_kocour.png`, `dopisek.png`, `syr.png`
 
-Doplním sám kopií, až budou hotové jejich předlohy (1): `dopis.png`
+Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

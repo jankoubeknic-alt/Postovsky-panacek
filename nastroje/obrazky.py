@@ -10,8 +10,12 @@
 #                     se zprůhlední (stín zůstane jako poloprůhledný), aby na barevné kartě nebyl vidět čtverec.
 #   <id cíle>_<cokoli>.png   portrét pro změněnou ikonu cíle. Když má cíl v kombinace.csv jen jednu změnu
 #                     ikony (ikona:pes:🐕💤), přiřadí se sám. Jinak nástroj vypíše řádek k ručnímu doplnění.
+# Ve vstupní složce můžou být ještě dva seznamy (oba nepovinné, oddělené středníkem):
+#   kopie.csv  soubor;zdroj   obrázek z jiné obce (zdroj je cesta od obrazky_vstup, např. lhotka/vrbuv_dopis.png).
+#                             Nástroj ho zkopíruje, jakmile zdroj existuje.
+#   mapa.csv   soubor;druh;id;ikona   jeden obrázek pro další cíl, kartu nebo změněnou ikonu cíle.
 # Ručně doplněné řádky v obrazky.csv zůstanou. Potřebuje Pillow (python3 -m pip install pillow).
-import csv, os, re, sys
+import csv, os, re, shutil, sys
 
 from PIL import Image, ImageDraw, ImageOps
 
@@ -88,7 +92,7 @@ def preved(zdroj, cil, rozmer, pruhledne=False):
 
 def main():
     if len(sys.argv) != 3:
-        sys.exit(__doc__ or 'python3 nastroje/obrazky.py <obec> <složka s obrázky>')
+        sys.exit('python3 nastroje/obrazky.py <obec> <složka s obrázky>')
     obec, vstup = sys.argv[1], sys.argv[2]
     slozka = os.path.join(KOREN, 'data', obec)
     if not os.path.isfile(os.path.join(slozka, 'etapa.csv')):
@@ -96,9 +100,32 @@ def main():
     cile = {r['id'] for r in tabulka(os.path.join(slozka, 'cile.csv'))}
     karty = {r['id'] for r in tabulka(os.path.join(slozka, 'karty.csv'))}
     zmeny = {}
-    for r in tabulka(os.path.join(slozka, 'kombinace.csv')):
-        for m in re.finditer(r'ikona:([a-z0-9_]+):(\S+)', r.get('efekt') or ''):
-            zmeny.setdefault(m.group(1), set()).add(m.group(2))
+    for tab in ('kombinace.csv', 'kazdy_tah.csv'):
+        for r in tabulka(os.path.join(slozka, tab)):
+            for m in re.finditer(r'ikona:([a-z0-9_]+):([^\s;]+)', r.get('efekt') or ''):
+                zmeny.setdefault(m.group(1), set()).add(m.group(2))
+    bez_vs = lambda t: t.replace('\ufe0f', '')
+
+    # kopie.csv: obrázky z jiných obcí (soubor;zdroj, zdroj je cesta od složky obrazky_vstup).
+    # Chybějící kopie se doplní, jakmile zdroj existuje.
+    for r in tabulka(os.path.join(vstup, 'kopie.csv')):
+        cil_kopie = os.path.join(vstup, r['soubor'])
+        zdroj = os.path.join(vstup, '..', r['zdroj'])
+        if not os.path.exists(cil_kopie) and os.path.exists(zdroj):
+            shutil.copyfile(zdroj, cil_kopie)
+            print(f'kopie: {r["zdroj"]} -> {r["soubor"]}')
+
+    # mapa.csv: jeden obrázek pro další cíle, karty nebo stavy (soubor;druh;id;ikona).
+    mapa = {}
+    for r in tabulka(os.path.join(vstup, 'mapa.csv')):
+        ikona = r.get('ikona') or ''
+        if ikona:
+            presna = [z for z in zmeny.get(r['id'], ()) if bez_vs(z) == bez_vs(ikona)]
+            if not presna:
+                print(f'  mapa.csv: {r["id"]} nemá změnu ikony {ikona}, řádek přeskočen')
+                continue
+            ikona = presna[0]
+        mapa.setdefault(os.path.splitext(r['soubor'])[0].lower(), []).append({'druh': r['druh'], 'id': r['id'], 'ikona': ikona})
 
     os.makedirs(os.path.join(slozka, 'obrazky'), exist_ok=True)
     cesta_csv = os.path.join(slozka, 'obrazky.csv')
@@ -113,27 +140,29 @@ def main():
             continue
         jmeno = jmeno.lower()
         soubor = f'obrazky/{jmeno}.webp'
+        nove = [dict(m) for m in mapa.get(jmeno, [])]
+        rozmer = (320, 320)
         if jmeno == 'pozadi':
-            radek, rozmer = {'druh': 'pozadi', 'id': '', 'ikona': ''}, (900, 1200)
+            nove.append({'druh': 'pozadi', 'id': '', 'ikona': ''})
+            rozmer = (900, 1200)
         elif jmeno in cile:
-            radek, rozmer = {'druh': 'cil', 'id': jmeno, 'ikona': ''}, (320, 320)
+            nove.append({'druh': 'cil', 'id': jmeno, 'ikona': ''})
         elif jmeno in karty:
-            radek, rozmer = {'druh': 'karta', 'id': jmeno, 'ikona': ''}, (320, 320)
-        else:
+            nove.append({'druh': 'karta', 'id': jmeno, 'ikona': ''})
+        elif not nove:
             cil = next((c for c in sorted(cile, key=len, reverse=True) if jmeno.startswith(c + '_')), None)
-            rozmer = (320, 320)
             if cil and len(zmeny.get(cil, ())) == 1:
-                radek = {'druh': 'cil', 'id': cil, 'ikona': next(iter(zmeny[cil]))}
+                nove.append({'druh': 'cil', 'id': cil, 'ikona': next(iter(zmeny[cil]))})
             else:
-                radek = None
                 navrh = ' nebo '.join(sorted(zmeny.get(cil, ()))) if cil else ''
-                rucne.append(f'  {nazev}: doplň do obrazky.csv řádek cil;{cil or "<id cíle>"};{navrh or "<ikona>"};{soubor}')
-        pruhledne = bool(radek) and radek['druh'] == 'karta'
+                rucne.append(f'  {nazev}: doplň do mapa.csv řádek {nazev};cil;{cil or "<id cíle>"};{navrh or "<ikona>"}')
+        # Věci na kartě mají průhledné pozadí, portréty a scéna ne.
+        pruhledne = bool(nove) and all(r['druh'] == 'karta' for r in nove)
         velikost = preved(os.path.join(vstup, nazev), os.path.join(slozka, soubor), rozmer, pruhledne)
         print(f'{nazev} -> data/{obec}/{soubor} ({velikost // 1024} kB)')
-        if radek:
+        for radek in nove:
             radek['soubor'] = soubor
-            zname.setdefault(klic(radek), radek)['soubor'] = soubor
+            zname[klic(radek)] = radek
 
     poradi = {'pozadi': 0, 'cil': 1, 'karta': 2}
     with open(cesta_csv, 'w', encoding='utf-8', newline='') as f:

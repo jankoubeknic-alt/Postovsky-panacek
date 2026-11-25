@@ -24,6 +24,24 @@ for (let i = 0; i < 4 && (await js(`!!document.querySelector('.arch')`)); i++) {
 }
 await cekej(200);
 await snimek('1-start');
+// Jmenovky: nesmí přetékat přes okraj scény ani se překrývat s jinou jmenovkou nebo medailonem.
+const kontrolaJmenovek = `(() => {
+  const ramec = document.querySelector('.naves').getBoundingClientRect();
+  const cile = [...document.querySelectorAll('.cil:not([hidden])')].map((c) => ({ id: c.dataset.id, j: c.querySelector('.jmenovka').getBoundingClientRect(), m: c.querySelector('.medailon').getBoundingClientRect() }));
+  const prekryv = (a, b) => Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+  const vysledek = [];
+  for (const c of cile) {
+    if (c.j.left < ramec.left - 1 || c.j.right > ramec.right + 1) vysledek.push('JMENOVKA PŘETÉKÁ ' + c.id);
+    for (const d of cile) {
+      if (d === c) continue;
+      if (c.id < d.id && prekryv(c.j, d.j) > 4) vysledek.push('JMENOVKA PŘEKRÝVÁ ' + c.id + '+' + d.id);
+      if (prekryv(c.j, d.m) > 30) vysledek.push('JMENOVKA PŘES MEDAILON ' + c.id + '>' + d.id);
+    }
+  }
+  return vysledek.join('\\n');
+})()`;
+const jmenovky = await js(kontrolaJmenovek);
+if (jmenovky) console.log(jmenovky);
 let n = 2;
 for (const [karta, cil, foto] of kroky) {
   if (karta !== '?') await js(`document.querySelector('.zasilka[data-id="${karta}"]').click()`);
