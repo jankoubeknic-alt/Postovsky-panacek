@@ -1,0 +1,16 @@
+klic;hodnota
+datum;21. VIII.
+start;vitr plachta drak dopis
+cil;mlyn_opraven drak_doruceno dopis_doruceno vitr_vypusten
+uvod;V Bezvětří už půl roku nefouká. Mlýn stojí, prádlo neschne a drakiáda se ruší třetí rok po sobě. Obec si proto objednala vítr poštou od firmy Severák a syn. Balík tiše hučí a na víku stojí: NEOTVÍRAT UVNITŘ.|Kdo krabici otevře na špatném místě, rozfouká celou ves, i papíry z tvé brašny.
+navod;Balík s větrem otevři jen na správném místě.
+konec_nadpis;Fouká!
+konec_text;Nové lopatky mlýna se roztočily a rozdávají vítr po celé vsi, akorát tolik, aby to stačilo. Prádlo schne, draci létají a starosta si drží klobouk oběma rukama.|Brašna je prázdná. Prázdná krabice od větru visí na mlýně jako trofej.
+pozadi;data/bezvetri/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

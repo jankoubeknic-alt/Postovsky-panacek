@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Mlha 1: opar a obrysy domů, jako by tu ves skoro byla -->
+  <style>.m { animation: plyn 9s ease-in-out infinite alternate; } @keyframes plyn { to { transform: translateX(14px); } } @media (prefers-reduced-motion: reduce) { .m { animation: none; } }</style>
+  <rect width="300" height="400" fill="#E8EEF0" opacity=".45"/>
+  <g fill="none" stroke="#7F8E9A" stroke-width="1.5" opacity=".55">
+    <path d="M34 180V150L64 128L94 150V180"/><path d="M200 190V160L232 138L264 160V190"/><path d="M124 130V104L150 86L176 104V130"/>
+  </g>
+  <g class="m" fill="#FFFFFF" opacity=".5"><ellipse cx="60" cy="230" rx="80" ry="14"/><ellipse cx="230" cy="260" rx="90" ry="16"/><ellipse cx="150" cy="330" rx="120" ry="18"/></g>
+</svg>

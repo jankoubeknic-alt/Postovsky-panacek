@@ -1,0 +1,16 @@
+klic;hodnota
+datum;11. X.
+start;pohled lzice noviny pravidla
+cil;pohled_doruceno lzice_doruceno noviny_doruceno pravidla_doruceno hrnec_zastaven
+uvod;Mařenka dostala od babičky z lesa kouzelný hrnec. Stačí říct „Hrnečku, vař!“ a vaří kaši. Dnes ráno odešla Mařenka k babičce a maminka dostala hlad. Hrnec uvařil kaši. A pak další. A pak další.|Kaše teče z okna po návsi a valí se dolů do vsi. Nikdo si nepamatuje, jak se hrnec zastavuje. Každý zkouší něco jiného a hrnec poslouchá jen ta pravá slova.
+navod;Hrnec se zastaví jen správnými slovy. Každé podání přidá kaši.
+konec_nadpis;Hrnečku, dost!
+konec_text;Hrnec cvakl pokličkou a zmlkl. Honza snědl kaši z celé návsi a ještě si přidal. Pan řídící zapsal do Pravidel nový příklad: hrnec, hrneček, pátý pád hrnečku. Bručoun slezl ze střechy a hospodská Dostálová mu řekla, že už má dost.|Brašna je prázdná. Maminka ti na cestu nabrala hrnek kaše. Raději ho nevolej jménem.
+pozadi;data/kasovice/pozadi.svg
+barvy;
+pocitadla;kase=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;kase:Kaše:3
+prohra;
+prohra_text;

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Kočičí Lhoty: nahoře vlevo zahrádka s okurkami, vpravo pastvina, vlevo chaloupka pejska a kočičky,
+       uprostřed stůl na dort, vpravo plot a za ním zlý pes, dole řeznictví, pekárna a myší díra. Dort na stole je ve vrstvách. -->
+  <rect width="300" height="400" fill="#DCE8EE"/>
+  <circle cx="150" cy="30" r="14" fill="#F6E3A0"/>
+  <path d="M0 70C70 58 130 66 190 58S270 54 300 62V400H0Z" fill="#B9D29A"/>
+  <path d="M0 260C80 250 160 258 300 248V400H0Z" fill="#A9C487"/>
+  <!-- zahrádka -->
+  <rect x="14" y="58" width="80" height="34" fill="#8C6A48"/>
+  <g stroke="#5E8A3A" stroke-width="2" fill="none"><path d="M20 66h68M20 76h68M20 86h68"/></g>
+  <g fill="#6E9B4A"><ellipse cx="30" cy="66" rx="4" ry="2"/><ellipse cx="52" cy="76" rx="4" ry="2"/><ellipse cx="74" cy="86" rx="4" ry="2"/></g>
+  <!-- pastvina -->
+  <path d="M206 92h86M206 80h86" stroke="#8C6A48" stroke-width="2"/>
+  <g fill="#8C6A48"><rect x="206" y="72" width="3" height="24"/><rect x="248" y="72" width="3" height="24"/><rect x="289" y="72" width="3" height="24"/></g>
+  <!-- chaloupka -->
+  <rect x="8" y="120" width="120" height="74" fill="#E7C99A"/>
+  <path d="M0 124L68 88L136 124Z" fill="#B5573F"/>
+  <rect x="96" y="96" width="12" height="20" fill="#7A5A3A"/>
+  <rect x="58" y="150" width="20" height="44" fill="#7A5A3A"/>
+  <rect x="20" y="138" width="22" height="18" fill="#BFD9E4" stroke="#7A5A3A" stroke-width="2"/>
+  <rect x="96" y="138" width="22" height="18" fill="#BFD9E4" stroke="#7A5A3A" stroke-width="2"/>
+  <!-- stůl -->
+  <rect x="104" y="212" width="112" height="6" rx="2" fill="#8C6A48"/>
+  <g fill="#7A5A3A"><rect x="112" y="218" width="5" height="30"/><rect x="203" y="218" width="5" height="30"/></g>
+  <!-- plot a zlý pes za ním -->
+  <g fill="#C9A77A" stroke="#7A5A3A" stroke-width="1"><path d="M226 150h8v70h-8zM240 146h8v74h-8zM254 150h8v70h-8zM268 146h8v74h-8zM282 150h8v70h-8z"/></g>
+  <path d="M222 170h72M222 200h72" stroke="#7A5A3A" stroke-width="2"/>
+  <!-- řeznictví -->
+  <rect x="4" y="290" width="92" height="70" fill="#E8DCCB"/>
+  <path d="M0 294L50 270L100 294Z" fill="#8A3A2E"/>
+  <rect x="14" y="302" width="72" height="12" fill="#8A3A2E"/>
+  <text x="50" y="311" font-family="Georgia, serif" font-size="7" fill="#F4F1E8" text-anchor="middle">ŘEZNICTVÍ</text>
+  <!-- pekárna -->
+  <rect x="104" y="300" width="92" height="74" fill="#F1E3C6"/>
+  <path d="M100 304L150 280L200 304Z" fill="#C98A3A"/>
+  <rect x="114" y="312" width="72" height="12" fill="#C98A3A"/>
+  <text x="150" y="321" font-family="Georgia, serif" font-size="7" fill="#F4F1E8" text-anchor="middle">PEKÁRNA</text>
+  <!-- myší díra pod kamenem -->
+  <path d="M214 352C224 312 286 310 296 352Z" fill="#9A9488"/>
+  <path d="M244 352C246 338 262 338 264 352Z" fill="#3A332C"/>
+</svg>

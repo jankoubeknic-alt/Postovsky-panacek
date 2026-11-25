@@ -1,0 +1,60 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Mlhov: lucerna přepíná počítadlo mlha 0 → 1 → 2 → 0. Kdo je vidět při jaké mlze, určuje skryt_kdyz v cile.csv.
+karta;cil;podminka;vyraz;text;efekt
+?;lucerna;mlha>=2;🏮;Ztlumíš lucernu. Mlha se rozplyne, Mlhov zmizí a kolem je zase jen louka.;mlha=0
+?;lucerna;mlha=1;🏮;Vytáhneš knot lucerny ještě výš. Mlha zhoustne, z šedi vystoupí celá ves a ozve se kovadlina.;mlha=2
+?;lucerna;;🏮;Rozsvítíš lucernu z pytle. Louku zahalí opar a v něm se mihnou postavy, jako by se styděly.;mlha=1
+?;pastyr;!sirky_dal;👴;Pastýř Matěj si zapálí dýmku a podá ti krabičku sirek. „Vezmi si je. V mlze se oheň hodí. Děda byl pošťák a v mlze zmizel, víš? Rok 1910.“;+sirky sirky_dal
+?;pastyr;mlha=1;👴;Matěj kouká do oparu. „Vidím je jen koutkem oka. Malá holka, žena v černém… Děda vyprávěl, že v Mlhově bydlela Klára s dcerkou.“;
+?;pastyr;;👴;Pastýř Matěj pase ovce na louce za lesem. „Mlhov tu býval, říkám ti. Když je mlha, slyším kovadlinu.“;
+?;klara;;👩‍🦳;Vdova Klára stojí ve dveřích a dívá se k cestě. „Muž odjel do Ameriky za prací. Slíbil, že napíše. Čekám už… jak dlouho vlastně?“;
+?;rozarka;klara_odpocinula;👧;Rozárka se rozhlíží kolem. „Kde je máma? Šla napřed?“ Bojí se cizích lidí.;
+?;rozarka;;👧;Malá Rozárka se schovává mámě za sukni a kouká na tebe jedním okem. V husté mlze se ztratí.;
+?;kovar;kovar_ohen;🔥;Kovář buší do podkovy a výheň plane. „Teď by mi chyběla jen ta zakázka.“;
+?;kovar;;🧔;Kovář Brabec stojí u vyhaslé výhně. „Oheň mi vyhasl, když přišla ta mlha. Od té doby nemůžu nic ukovat.“;
+?;vavrinec;klara_odpocinula rozarka_odpocinula kovar_odpocinul !vnuk_dan;👻;Pošťák Vavřinec se usměje. „Všichni mají svou poštu. Zbývá poslední dopis.“ Podá ti obálku. „Pro vnuka. Napsal jsem ho, když se mi narodil syn. Vnuka jsem už nepoznal.“;+dopis_vnuk vnuk_dan
+?;vavrinec;vnuk_dan;👻;„Ten dopis je pro mého vnuka. Bydlí prý v dnešní době, bez mlhy.“;
+?;vavrinec;;👻;Pošťák Vavřinec v promáčené uniformě stojí uprostřed vsi. „Ztratil jsem pytel s poštou a pak přišla mlha. Dokud nebude všechno doručené, nemůžu odejít.“;
+napoveda;*;mlha=0 !klara_odpocinula !rozarka_odpocinula;💡;Na louce je jen pastýř. Klepni na lucernu a uvidíš víc.;
+napoveda;*;!sirky_dal;💡;Pastýř ti může něco dát. Zeptej se ho, když je opar nebo jasno.;
+napoveda;*;!klara_odpocinula !rozarka_odpocinula;💡;Rozárka se bojí cizích. Dokud je u ní máma, pohled si od tebe vezme.;
+napoveda;*;!klara_odpocinula;💡;Vdova Klára čeká na dopis z Ameriky. Je vidět v oparu i v husté mlze.;
+napoveda;*;!rozarka_odpocinula;💡;Rozárka se bez mámy bojí. Pastýř jí ale může pohled přečíst nahlas, když je opar.;
+napoveda;*;!kovar_ohen;💡;Kovář má vyhaslou výheň. Zapálíš mu ji sirkami z dnešní doby.;
+napoveda;*;!kovar_odpocinul;💡;Výheň hoří. Teď kováři dej objednávku.;
+napoveda;*;!vnuk_dan;💡;Pošťák Vavřinec v husté mlze má pro tebe poslední dopis.;
+napoveda;*;;💡;Vavřincův dopis je pro vnuka. Kdo je asi vnuk pošťáka, který zmizel v mlze?;
+dopis_klara;klara;;🥹;Klára dopis otevře a čte. „Vrátím se na jaře, Klárko.“ Usměje se, jako by na jaře právě bylo, a pomalu se rozplyne ve světle.;-dopis_klara klara_odpocinula razitko
+dopis_klara;rozarka;;👧;„To je pro mámu. Já ještě neumím číst.“;
+dopis_klara;pastyr;;👴;„Klára Novotná, Mlhov čtyři. Děda o ní vyprávěl. Čekala na muže až do konce.“;
+dopis_klara;kovar;;🧔;„Klářin muž psal? Dones jí to, chodí ke cestě každý den.“;
+dopis_klara;vavrinec;;👻;„Tenhle jsem měl doručit jako první. Je pro Kláru.“;
+pohled;rozarka;!klara_odpocinula;🥰;Rozárka vykoukne zpoza mámy. Klára jí řekne: „To je pan pošťák, neboj.“ Rozárka si vezme pohled se štěňátkem, chichotá se a spolu s ním se rozplyne do oparu jako mýdlová bublina.;-pohled rozarka_odpocinula razitko
+pohled;rozarka;;😟;Rozárka se schová. Bez mámy si od cizích nic nevezme.;
+pohled;pastyr;mlha=1 klara_odpocinula;📖;Matěj si nasadí brýle a čte pohled nahlas do oparu: „Milá Rozárko, posílám ti pejska…“ Odněkud se ozve dětský smích a pak ticho.;-pohled rozarka_odpocinula razitko
+pohled;pastyr;mlha=1;👴;„Rozárka je tady s mámou. Dej jí to sám, mámy se nebojí.“;
+pohled;pastyr;;👴;„Komu to mám číst? Na louce nikdo není. Leda v oparu.“;
+pohled;klara;;👩‍🦳;„To je pro Rozárku. Dej jí to, já jí řeknu, že jsi hodný.“;
+pohled;kovar;;🧔;„Štěňátko! To je pro Rozárku.“;
+pohled;vavrinec;;👻;„Pohled pro malou Rozárku. Ten jsem nesl v pytli nahoře.“;
+sirky;kovar;;🔥;Škrtneš sirkou a podržíš ji u výhně. Oheň z dnešní doby se chytí i ve stoleté mlze. Kovář zajásá a vezme kladivo.;-sirky kovar_ohen ikona:kovar:😄
+sirky;lucerna;;🏮;Lucerna svítí i bez sirek. Je z Mlhova.;
+sirky;klara;;👩‍🦳;„Oheň? Ten potřebuje kovář.“;
+sirky;vavrinec;;👻;„Zapal výheň u kováře. Vyhasla mu s příchodem mlhy.“;
+zakazka;kovar;kovar_ohen;😄;Kovář si přečte objednávku a za chvíli má ukované čtyři podkovy. „Hotovo, jen o sto let později.“ Opře kladivo o kovadlinu a rozplyne se v jiskrách.;-zakazka kovar_odpocinul razitko
+zakazka;kovar;;🧔;„Zakázka? Rád bych, ale výheň mi vyhasla. Bez ohně nic neukovu.“;
+zakazka;pastyr;;👴;„Objednávka podkov? Koně tu dneska nejsou. Jen ovce.“;
+zakazka;klara;;👩‍🦳;„To je pro kováře. Buší tam vzadu, když je hustá mlha.“;
+zakazka;vavrinec;;👻;„Brabcova zakázka. Ten bez ohně nic neukove.“;
+dopis_vnuk;pastyr;;😢;Matěj otevře dopis a zbledne. „Od dědy Vavřince! Mému vnukovi…“ Čte a pláče a usmívá se zároveň. V mlze za ním se Vavřinec pousměje, smekne čepici a odejde do světla.;-dopis_vnuk vnuk_doruceno vavrinec_odpocinul razitko
+dopis_vnuk;vavrinec;;👻;„Ne, ten není pro mě. Pro vnuka. Žije prý v dnešní době, za mlhou.“;
+*;lucerna;;🏮;Lucerna nic nepotřebuje. Klepni na ni a změň mlhu.;
+*;*;;🤷;Nic se nestane. Mlha mlčí.;

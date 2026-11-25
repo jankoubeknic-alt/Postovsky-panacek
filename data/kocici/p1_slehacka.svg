@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Patro dortu 1: slehacka -->
+  <rect x="112" y="192" width="96" height="14" rx="3" fill="#FBF7EE" stroke="#5A4636" stroke-width="1.2"/>
+  <path d="M112 192 Q115 188 118 192 Q121 188 124 192 Q127 188 130 192 Q133 188 136 192 Q139 188 142 192 Q145 188 148 192 Q151 188 154 192 Q157 188 160 192 Q163 188 166 192 Q169 188 172 192 Q175 188 178 192 Q181 188 184 192 Q187 188 190 192 Q193 188 196 192 Q199 188 202 192 Q205 188 208 192" fill="#FBF7EE" stroke="#D9CFC0" stroke-width="1"/>
+</svg>

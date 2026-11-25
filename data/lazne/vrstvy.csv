@@ -1,0 +1,5 @@
+# Obrázky přes pozadí scény. Vidět je každý, jehož podmínka platí (prázdná = pořád). Kreslí se v tomto pořadí.
+obrazek;podminka
+data/lazne/sepot1.svg;drby>=4
+data/lazne/sepot2.svg;drby>=7
+data/lazne/muzika.svg;noty_doruceno

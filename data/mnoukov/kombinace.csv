@@ -1,0 +1,82 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Mňoukov: s kocourem v brašně (@kocour) zvířata mluví srozumitelně, bez něj jen mňoukají a kvíkají.
+# Nenakrmený Hafan kocoura vyděsí a ten vyleze na hrušku (kocour_na_strome). Slézt se odváží, až Hafan hryže kost.
+karta;cil;podminka;vyraz;text;efekt
+?;senik;!kocour_vzat;🐈;V seně se něco pohne a vykoukne mourovatá hlava. „Pst! Neprozraď mě,“ šeptá kocour. „Jsem Fousek. Babičce zmizela pečínka a všichni myslí, že jsem ji snědl já. Nesnědl! Vezmi mě do brašny. Budu ti překládat, co říkají zvířata.“;+kocour kocour_vzat ikona:senik:🌾
+?;senik;;🌾;Seník voní létem. V seně je důlek po kocourovi.;
+?;babicka;psani_doruceno;👵;Babička houpe na klíně Fouska a u nohou jí leží Hafan. Oba předou. Tedy Fousek přede a Hafan chrápe.;
+?;babicka;;👵;Babička Fousková vyhlíží z okna. „Fousek mi snědl nedělní pečínku a utekl. Já bych mu odpustila, ale on to neví. Kdyby se tak dal přemluvit.“;
+?;kozel;@kocour noviny_doruceno priznani !psani_napsano;🐐;Mečoun si nasadí brýle. Fousek diktuje, Hafan za plotem doplňuje a kozel píše kopytem na půlku novin: Milá babičko, pečínku nesnědl Fousek. Snědl ji Hafan, protože měl hlad a smutno. Oba se omlouváme. Podpis tlapkou, packou a kopytem.;+psani psani_napsano
+?;kozel;@kocour noviny_doruceno !priznani;🐐;„Napíšu, co chceš,“ mečí kozel a Fousek překládá. „Ale babička uvěří jen pravdě. Kdo tu pečínku snědl doopravdy? Ať se přizná sám, pak to sepíšu.“;
+?;kozel;@kocour !noviny_doruceno;🐐;Fousek překládá: „Mečoun říká, že psát umí. Sežral tolik novin, že se to v něm usadilo. Jenže teď nemá papír, všechen snědl.“;
+?;kozel;@kocour;🐐;Fousek překládá: „Mečoun se ptá, jestli nemáš další noviny. Tyhle už dopsal.“;
+?;kozel;;🐐;Kozel Mečoun na tebe mečí. Mééé. Dlouze a důležitě, jako by citoval úvodník.;
+?;slepice;@kocour;🐔;„Kokodák!“ Fousek překládá: „Kropenatá říká, že v neděli viděla Hafana, jak táhl pečínku za stodolu. A že ji nikdo neposlouchá, protože je slepice.“;svedek_slepice
+?;slepice;;🐔;Slepice Kropenatá kdáká jako o život a ukazuje křídlem ke stodole. Kokodák, kokodák! Nerozumíš ani slovo.;
+?;prase;@kocour;🐷;„Kvík!“ Fousek překládá: „Kvído říká, že mu Hafan dal kůrčičku, ať mlčí. Tak mlčí. Ale prý se to s ním už nedá vydržet.“;svedek_prase
+?;prase;;🐷;Prasátko Kvído chrochtá a kvíká a mrká na tebe. Je vidět, že ví něco důležitého.;
+?;pes;@kocour pes_krmen;🐕;Hafan hryže kost a mluví s plnou pusou. Fousek opatrně překládá z brašny: „Já. Já jsem tu pečínku snědl. Babička dává Fouskovi smetanu a mně nic. Tak jsem si vzal. Je mi to líto.“;priznani ikona:pes:🥺
+?;pes;@kocour;🙀;Hafan zaštěká. Fousek vyletí z brašny jako raketa a vyšplhá až do koruny hrušky. „Já tam nejdu, dokud ten pes štěká!“;-kocour kocour_na_strome ikona:strom:🙀
+?;pes;pes_krmen;🐕;Hafan hryže kost a spokojeně mručí. Mrrr, hrrr. Co říká, nevíš.;
+?;pes;;🐕;Hafan štěká a cuká řetězem. Haf, haf! Kdo ví, jestli nadává, nebo se omlouvá.;
+?;strom;kocour_na_strome pes_krmen;🐈;Fousek vidí, že Hafan hryže kost a na nic jiného nemyslí. Opatrně sleze a skočí ti zpátky do brašny. „Ale jen proto, že má plnou pusu.“;+kocour !kocour_na_strome ikona:strom:🌳
+?;strom;kocour_na_strome;🙀;Fousek sedí v koruně hrušky a třese se. „Dolů nejdu, dokud ten pes štěká. Dej mu něco do pusy!“;
+?;strom;;🌳;Stará hruška. Na nejvyšší větvi zůstal chumáč mourovatých chlupů.;
+?;reznik;;🧔;Řezník Kotleta zkouší nůž o palec. „Tupej jak lžíce. Kdy mi konečně přijde ten brousek?“;
+napoveda;*;!kocour_vzat;💡;Zvířata tu mluví, jen jim nerozumíš. Někdo se schovává v seně.;
+napoveda;*;kocour_na_strome !pes_krmen;💡;Fousek sleze, až Hafan přestane štěkat. Co by Hafanovi zacpalo pusu? Řezník čeká na balíček.;
+napoveda;*;kocour_na_strome;💡;Hafan hryže kost. Teď se Fousek odváží slézt z hrušky.;
+napoveda;*;!svedek_slepice !svedek_prase;💡;S Fouskem v brašně se zeptej zvířat na dvoře, co viděla v neděli.;
+napoveda;*;!priznani !pes_krmen;💡;Hafan štěká a Fousek se psů bojí. Něco by Hafanovi zacpalo pusu. Řezník čeká na balíček.;
+napoveda;*;!priznani;💡;Hafan je klidný. Zeptej se ho s Fouskem v brašně.;
+napoveda;*;!noviny_doruceno;💡;Kozel Mečoun umí psát, ale nemá papír. Má předplatné novin.;
+napoveda;*;!psani_napsano;💡;Zajdi s Fouskem za kozlem, ať sepíše, co se stalo.;
+napoveda;*;!dopis_doruceno;💡;Babička čeká dopis od sestry.;
+napoveda;*;;💡;Dones babičce psaní. A nezapomeň, koho má v brašně.;
+kost;pes;;🐕;Hafan chytí kost do zubů a zalehne s ní do boudy. Je klidný jako beránek, jen občas spokojeně zavrčí.;-kost pes_krmen ikona:pes:🐕
+*;pes;@kocour !pes_krmen;🙀;Přistoupíš k Hafanovi a ten zaštěká. Fousek vyletí z brašny a vyšplhá až do koruny hrušky. „Psi! Všude psi!“;-kocour kocour_na_strome ikona:strom:🙀
+kocour;pes;pes_krmen;🐕;Fousek opatrně vykoukne z brašny. Hafan na něj zamrká a dál hryže. Poprvé v životě se nehoní.;
+noviny;pes;;🐕;Hafan po novinách chňapne a roztrhá titulní stranu. Rychle je schováš. Patří kozlovi.;
+kost;slepice;;🐔;Kropenatá se kosti lekne a uteče do kurníku.;
+kost;babicka;;👵;„Kost? Tu dej Hafanovi, chudák je pořád hladový. Nikdo mu nic nedá.“;
+kost;reznik;;🧔;„Kost je pro Hafana. Já mám kostí plnej krám.“;
+kost;kozel;;🐐;Kozel kost očichá a pohrdavě zamečí. Kosti nejí. Noviny ano.;
+kost;prase;;🐷;Kvído kost oblízne a vrátí. Je pro psa a to on pozná.;
+kocour;babicka;;🐈;Fousek se při pohledu na babičku zavrtá hlouběji do brašny. „Ne, ne. Bez psaní nejdu. Pořád si myslí, že jsem jí snědl pečínku!“;
+kocour;kozel;;🐐;Fousek s kozlem rozmlouvá, ale jen z brašny. Ven nevyleze, kozel trká.;
+kocour;slepice;;🐔;Kropenatá se před Fouskem nafoukne. „Kokodák!“ Fousek přeloží: „Ať mě ani nezkouší honit.“;
+kocour;prase;;🐷;Fousek a Kvído se pozdraví čumáky. Kamarádi z jednoho dvora.;
+kocour;strom;;🌳;Fousek se podívá na hrušku a pak na tebe. „Tam lezu, jen když mě někdo honí.“;
+kocour;reznik;;🧔;„Kocour? Ten mi bral špekáčky,“ zabručí řezník. Fousek se tváří, že neslyší.;
+kocour;senik;;🐈;„Do sena už ne. Píchá to a jsem tam sám,“ zamňouká Fousek.;
+psani;babicka;@kocour;👵;Babička čte psaní s brýlemi na špičce nosu. Pak vytáhne Fouska z brašny a přitiskne ho k sobě. „Ty můj hlupáčku. A Hafane, pojď sem taky.“ Hafan se plíží s ocasem mezi nohama a babička ho pohladí.;-psani -kocour psani_doruceno ikona:babicka:🥰 ikona:pes:🐶 razitko
+psani;pes;;🐕;Hafan psaní očichá a podepíše ho ještě jednou tlapkou. Pro jistotu.;
+psani;kozel;;🐐;Mečoun by psaní nejradši snědl. Je to přece jeho nejlepší dílo. Rychle ho schováš.;
+psani;prase;;🐷;Kvído psaní očichá a spokojeně chrochtne. Je tam všechno, co se stalo.;
+psani;slepice;;🐔;„Kokodák!“ Kropenatá je ráda, že tam je i její svědectví.;
+psani;*;;📝;„Psaní pro babičku Fouskovou? Tak jí ho dones.“;
+noviny;kozel;;🐐;Mečoun noviny chňapne. Půlku sní s chutí, druhou půlku pečlivě uhladí kopytem. Na ní se bude psát.;-noviny noviny_doruceno ikona:kozel:🤓 razitko
+noviny;babicka;;👵;„Noviny? Ty odebírá kozel. Já je čtu, až je dojí.“;
+noviny;prase;;🐷;Kvído noviny očichá. Ty jsou pro kozla, ten je předplácí.;
+noviny;slepice;;🐔;Kropenatá si na noviny sedne, jako by na nich chtěla snést vejce. Patří kozlovi.;
+noviny;reznik;;🧔;„Do novin já balím maso,“ řekne řezník. „Ale tyhle si předplácí kozel. Ať nemečí.“;
+noviny;*;;📰;„Venkovské noviny pro kozla Mečouna. Kdo jiný by je jedl.“;
+dopis_babicka;babicka;;👵;Babička si dopis přečte. „Sestra Mourová píše, že jejich kocour je doma a hodný. Ach, kdyby tu byl můj Fousek.“;-dopis_babicka dopis_doruceno razitko
+dopis_babicka;kozel;;🐐;Kozel po dopisu chňapne. Uhneš. Ten je pro babičku, ne k snědku.;
+dopis_babicka;slepice;;🐔;Kropenatá na dopis kdákne. Ten je pro babičku.;
+dopis_babicka;reznik;;🧔;„Od paní Mourové z Kocourkova? To je pro babičku Fouskovou.“;
+dopis_babicka;*;;✉️;„Dopis pro babičku Fouskovou, chalupa číslo jedna.“;
+balicek;reznik;;🧔;Řezník vybalí brousek a nabrousí nůž, až jiskří. „Konečně! Tady máš kost pro Hafana, ať mi neštěká pod oknem.“;-balicek +kost balicek_doruceno razitko
+balicek;kozel;;🐐;Mečoun balíček oťukne kopytem. Nepoživatelné.;
+balicek;pes;;🐕;Hafan balíček očichá. Voní řeznictvím. Patří řezníkovi.;
+balicek;babicka;;👵;„Brousek? Moje nože řežou dobře. Ten je pro řezníka Kotletu.“;
+balicek;*;;📦;„Brousek? Ten čeká řezník Kotleta.“;
+*;senik;;🌾;Do sena se nic nedoručuje. Leda kocouři.;
+*;strom;;🌳;Hruška nic nepřevezme. Má plno vlastních hrušek.;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Papírový drak odletěl na kopec -->
+  <path d="M96 264l10-14 10 14-10 14z" fill="#E07A3A" stroke="#7A3A1A" stroke-width="1"/>
+  <path d="M106 278q-6 10 0 18t0 18" fill="none" stroke="#7A3A1A" stroke-width="1"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Patro dortu 1: burt -->
+  <rect x="112" y="192" width="96" height="14" rx="3" fill="#B5573F" stroke="#5A4636" stroke-width="1.2"/>
+  <circle cx="120" cy="199.0" r="4" fill="#E39A84"/><circle cx="132" cy="199.0" r="4" fill="#E39A84"/><circle cx="144" cy="199.0" r="4" fill="#E39A84"/><circle cx="156" cy="199.0" r="4" fill="#E39A84"/><circle cx="168" cy="199.0" r="4" fill="#E39A84"/><circle cx="180" cy="199.0" r="4" fill="#E39A84"/><circle cx="192" cy="199.0" r="4" fill="#E39A84"/>
+</svg>

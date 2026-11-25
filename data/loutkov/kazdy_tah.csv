@@ -1,0 +1,4 @@
+# Špalíček drží ruku nahoře jen chvilku po tom, co se něco stalo. Dokud ji drží, Hoblík kývá.
+podminka;efekt;text
+kyva=1;kyva=0 ikona:hoblik:;Špalíček spustil ruku a táta Hoblík přestal kývat.
+kyva=2;kyva=1;

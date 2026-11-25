@@ -1,0 +1,11 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Hostinská je zavřená v hospodě, dokud na dveřích visí OTEVŘENO.
+id;jmeno;ikona;x;y;skryt_kdyz
+starosta;Starosta;🎩;50;24;
+kostelnik;Kostelník;🧑‍🦲;16;34;
+hospoda;Dveře hospody;🚪;84;34;hospoda_otevrena
+hostinska;Hostinská;🗣️;84;34;!hospoda_otevrena
+reznik;Řezník;🥩;20;56;
+ucitelka;Paní učitelka;👩‍🏫;80;56;
+babka;Babka;👵;26;80;
+pes;Pes Hafík;🐕;70;80;

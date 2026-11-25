@@ -1,0 +1,64 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Ozvěnov: co kdo řekne nahlas, nastaví ozvena_nova_*. Po tahu se z ní stane ozvena_* a vydrží do dalšího tahu (kazdy_tah.csv).
+# Poslouchat se chodí klepnutím (?). Rozhlédnutí, které samo něco nahlas říká, má cekej, aby se ozvěna posunula.
+karta;cil;podminka;vyraz;text;efekt
+?;ozvena;ozvena_slepice;🗣️;Paní Ozvěna opakuje: „…kdo ji vzal… vzal…“ Pak se z lomu ozve tiché kokodák. Ozvěna rychle zakašle.;slepice_stopa
+?;ozvena;ozvena_ruka;🗣️;„…ruku… ruku…“ opakuje Paní Ozvěna a vzdychne. „Mně nikdo ruku nepodá. Ani nenapíše.“;
+?;ozvena;ozvena_omluva;🗣️;„…omluvil… omluvil…“ opakuje Paní Ozvěna. „Třicet let poslouchám samé hádky. A ani jeden dopis pro mě.“;
+?;ozvena;prani_doruceno;😊;Paní Ozvěna si po sté čte svůj pohled. Když na ni zavoláš, neopakuje. Odpoví: „Dobrý den!“;
+?;ozvena;;🗣️;Paní Ozvěna sedí v lomu nad vsí a opakuje cizí slova: „…haló… haló…“ Za třicet let jí nikdo nenapsal ani řádek. Z lomu se občas ozve kokodákání.;
+?;hromadka;ozvena_omluva;😤;Ze skal se nese: „…kdyby se omluvil…“ Hromádka zrudne a zakřičí do údolí: „Já ji neukrad! Ale kdyby mi věřil, podal bych mu ruku!“ Skály to chytí a nesou dál.;hromadka_ochotny ozvena_nova_ruka cekej
+?;hromadka;hromadka_ochotny !hromada_ochotny;🧓;Hromádka si bručí pro sebe, ale hodně nahlas: „Podal bych mu ruku. Kdyby mi věřil.“ Skály poslouchají.;ozvena_nova_ruka cekej
+?;hromadka;hromada_ochotny;🧓;Hromádka kouká na protější svah. „Hromada se ptá, kdo ji vzal? Kdybych to věděl, dávno bych mu to řekl.“;
+?;hromadka;;🧓;Strýc Hromádka sype krmení do prázdného kurníku. „Kropenatá… To mi udělal Hromada. Určitě.“;
+?;hromada;ozvena_ruka;🥹;Ze skal se nese: „…podal bych mu ruku…“ Hromada si utře oko. „Že ji neukrad? Tak kdo ji vzal?!“ zakřičí do údolí.;hromada_ochotny ozvena_nova_slepice cekej
+?;hromada;hromada_ochotny;👴;Hromada přechází po dvoře a volá: „Kdo jen tu Kropenatou vzal? Kdo?“;ozvena_nova_slepice cekej
+?;hromada;pohled_doruceno;👴;Hromada si znovu čte pohled a bručí nahlas: „Pozvat Hromádku… Kdyby se aspoň omluvil za tu slepici.“ Skály poslouchají.;ozvena_nova_omluva cekej
+?;hromada;;👴;Strýc Hromada štípe dříví a kouká na protější svah. „Ten zloděj slepic tam pořád bydlí.“;
+?;hostinsky;;🧔;Hostinský U Ozvěny utírá sklenice. „Tady se nic neutají. Co řekneš nahlas, roznesou skály. Proto mluví všichni šeptem.“;
+?;deti;slepice_stopa;🧒;„Kropenatá? Tu jsme viděli v lomu! Zobe Paní Ozvěně drobky z dlaně.“;
+?;deti;;🧒;Děti na lávce křičí do údolí „Hromada je trouba!“ a skály odpovídají „…trouba… trouba…“. Válejí se smíchy.;
+napoveda;*;!pohled_doruceno;💡;Pohled z Kanady je pro strýce Hromadu. Až ho přečte, poslouchej, co řekne nahlas.;
+napoveda;*;!hromadka_ochotny;💡;Co Hromada řekne nahlas, donese ozvěna k tomu, za kým půjdeš hned potom. Klepni na Hromádku, ať to uslyší. Mezitím nic nedoručuj.;
+napoveda;*;!hromada_ochotny;💡;Hromádka odpověděl do údolí. Hned potom klepni na Hromadu, ať jeho slova uslyší.;
+napoveda;*;!noviny_doruceno;💡;Noviny patří do hospody.;
+napoveda;*;!prani_doruceno;💡;Paní Ozvěně nikdy nikdo nenapsal. Prázdný pohled od hostinského jí udělá radost.;
+napoveda;*;!krmeni_doruceno;💡;Krmení pro slepice patří Hromádkovi.;
+napoveda;*;@slepice;💡;Kropenatá je zpátky. Bratři si teď věří, tak ji jednomu z nich vrať.;
+napoveda;*;;💡;Všechno je doručeno.;
+pohled;hromada;;👴;Hromada si pohled přečte nahlas: „Dědo, vdávám se! Pozvi i strýčka Hromádku.“ Bouchne pěstí do plotu. „Hromádku? Nikdy! Leda by se omluvil za Kropenatou.“ Řekne to tak nahlas, že to skály chytí.;-pohled pohled_doruceno ozvena_nova_omluva razitko
+pohled;hromadka;;🧓;„Pro bratra? Ať si ho čte sám. Já s ním nemluvím.“;
+pohled;hostinsky;;🧔;„Z Kanady? To bude pro Hromadu, má tam vnučku.“;
+pohled;ozvena;;🗣️;„…Kanada… Kanada…“ zopakuje Paní Ozvěna toužebně.;
+pohled;deti;;🧒;„To je pro dědu Hromadu! Má vnučku v Kanadě, tam jsou medvědi!“;
+krmeni;hromadka;;🧓;Hromádka převezme pytlík. „Krmení pro Kropenatou. Objednávám ho třicet let, kdyby se vrátila.“ Postaví ho ke kurníku k dvaceti dalším.;-krmeni krmeni_doruceno razitko
+krmeni;hromada;;👴;„Krmení? Já nemám slepici. Hromádka mi ji ukrad. Nebo ztratil. Nevím.“;
+krmeni;ozvena;;🗣️;„…krmení…“ zopakuje Paní Ozvěna a z lomu se ozve nadšené kokodák. Ozvěna zčervená.;slepice_stopa
+krmeni;hostinsky;;🧔;„Pro Hromádku. Kupuje krmení třicet let, i když slepici nemá. Smutná věc.“;
+krmeni;deti;;🧒;Děti si nasypou zrní do kapes. Radši jim pytlík vezmeš.;
+noviny;hostinsky;;🧔;Hostinský noviny rozloží a pak ti podá prázdný pohled. „Napiš ho Paní Ozvěně, pošťáku. Máš krásné písmo a jí třicet let nikdo nenapsal.“;-noviny noviny_doruceno +prani razitko
+noviny;hromada;;👴;„Noviny? Ty patří do hospody. Hostinský je předčítá nahlas.“;
+noviny;hromadka;;🧓;„Noviny čtu v hospodě. Ale tam chodí Hromada, tak už nečtu.“;
+noviny;ozvena;;🗣️;„…noviny… noviny…“;
+noviny;deti;;🧒;Děti z novin hned skládají čepice. Vezmeš si je zpátky dřív, než z nich zbude lodička.;
+prani;ozvena;;😊;Paní Ozvěna pohled převrací v rukou. Poprvé neopakuje, ale odpoví: „Děkuju.“ Pak vytáhne zpoza kamene kropenatou slepici. „Přiběhla sem před třiceti lety a byla jediná, kdo se mnou mluvil. Teď mám pohled, tak ji vraťte.“;-prani prani_doruceno +slepice ikona:ozvena:😊 razitko
+prani;hromada;;👴;„Pro Ozvěnu? Té nikdo nepíše. Kdo by psal skalám?“;
+prani;hromadka;;🧓;„Napsat Ozvěně? To jsme jako kluci zkoušeli. Odepsala nám to samé.“;
+prani;hostinsky;;🧔;„Napiš jí to a dones to nahoru do lomu.“;
+prani;deti;;🧒;„Pro Ozvěnu? My jí píšeme každý den. Křídou na skálu!“;
+slepice;hromada;hromada_ochotny hromadka_ochotny;😊;„Kropenatá! Byla u Ozvěny!“ zakřičí Hromada a z protějšího svahu se ozve: „Kropenatá?!“ Bratři seběhnou k lávce a po třiceti letech si podají ruce. Kropenatá jim na lávce snese vejce.;-slepice smir ikona:hromada:😊 ikona:hromadka:😊 razitko
+slepice;hromadka;hromada_ochotny hromadka_ochotny;😊;„Kropenatá!“ zakřičí Hromádka a z protějšího svahu se ozve: „Kropenatá?!“ Bratři seběhnou k lávce a po třiceti letech si podají ruce. Kropenatá jim na lávce snese vejce.;-slepice smir ikona:hromada:😊 ikona:hromadka:😊 razitko
+slepice;hromada;;👴;Hromada slepici pohladí. „Kropenatá! Tak kdo ji vzal? Asi on.“ Vrátí ti ji. Bratři si ještě nevěří.;
+slepice;hromadka;;🧓;„Kropenatá! Ale Hromada si bude myslet, že jsem ji schovával já.“ Vrátí ti ji. Bratři si ještě nevěří.;
+slepice;ozvena;;🗣️;„…kokodák…“ zopakuje Ozvěna smutně. Slepici zpátky nechce, patří bratrům.;
+slepice;hostinsky;;🧔;„Kropenatá! Celý Ozvěnov ji třicet let hledal. Patří Hromadům.“;
+slepice;deti;;🧒;Děti slepici obstoupí a hladí ji. Kropenatá se tváří, že je to pod její úroveň.;
+*;*;;🤷;Nic se nestane. Skály mlčí.;

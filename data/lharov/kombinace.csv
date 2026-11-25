@@ -1,0 +1,78 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Lhářov: co kdo řekne, je opak pravdy. Adresy na zásilkách taky. Popisy postav a činy jsou pravdivé.
+# Výjimkou je paní učitelka: mluví pravdu, a proto o ní všichni říkají, že je největší lhářka.
+karta;cil;podminka;vyraz;text;efekt
+?;starosta;pohar_doruceno;🎩;Starosta leští pohár. „Vůbec si ho nevážím,“ prohlásí a dá mu pusu.;
+?;starosta;;🎩;Starosta stojí před obecním úřadem. Za oknem má sedm diplomů z okresní soutěže v lhaní, všechny za první místo. „Já nikdy v životě nelhal,“ řekne a mrkne.;
+?;kostelnik;hospoda_otevrena;🧑‍🦲;„V kostele máme zavřeno,“ hlásí kostelník u otevřených dveří. „Dneska tam nikdo nebyl.“ Uvnitř sedí půl vsi.;
+?;kostelnik;@cedule;🧑‍🦲;„Tu ceduli mi hlavně nevracej,“ volá kostelník. Na dveřích kostela teď nic nevisí, a tak nikdo neví, jestli je otevřeno.;
+?;kostelnik;;🧑‍🦲;Kostelník je hubený jako tyčka. „Já jsem tlustý jako sud,“ chlubí se. Na kostelních dveřích visí ZAVŘENO a uvnitř se zpívá. „Tu ceduli si rozhodně neber,“ řekne a podá ti ji.;+cedule
+?;hospoda;;🚪;Na dveřích hospody visí cedule OTEVŘENO. Dveře jsou zamčené a zevnitř se ozývá hulákání: „Je tu ticho! Nikoho nepouštím!“;
+?;hostinska;pohled_ticha_doruceno;🗣️;Hostinská si šeptem, tedy na celou ves, čte pohled ze Paříže. „Sestra píše, že jsem moc tichá!“;
+?;hostinska;;🗣️;Hostinská stojí ve dveřích a křičí tak, že se třesou okna. „Já jsem tichá jako myška! Skromná! Nikdy nekřičím!“;
+?;reznik;balik_hubeny_doruceno;🥩;Řezník má nové šle a břicho jako bubínek. „Jsou mi moc velké,“ prohlásí spokojeně.;
+?;reznik;;🥩;Řezník je kulatý jako sud a sotva prochází dveřmi. Kalhoty mu drží jen motouz. „Já jsem hubený jako lunt. Šle nepotřebuju.“;
+?;ucitelka;dopis_lhar_doruceno;👩‍🏫;Paní učitelka zapisuje do kroniky: „Dnes přišel pošťák. Doručil všechno správně.“ Je to pravda.;
+?;ucitelka;;👩‍🏫;Nová paní učitelka sedí sama na lavičce. „Dobrý den. Jsem tu od září a mluvím pravdu. Proto se mnou nikdo nemluví. Babce je devadesát osm a řezník je nejtlustší chlap v okrese.“;
+?;babka;dopis_mlada_doruceno;👵;Babka čte dopis od pravnučky už potřetí. „Nečetla jsem ho,“ řekne a utře si slzu.;
+?;babka;;👵;Babka sedí na lavičce, má vrásky jako pecka a hůl starší než kostel. „Je mi dvacet,“ hlásí. „Jsem tu ze všech nejmladší.“;
+?;pes;;🐕;Na vratech visí cedule POZOR, HODNÝ PES. Hafík cení zuby a vrčí. Když vrtí ocasem, utíkej.;
+napoveda;*;!pohled_ticha_doruceno !hospoda_otevrena;💡;Hospoda má na dveřích OTEVŘENO. V Lhářově to znamená, že je zavřeno. Jaká cedule by ji otevřela? Jedna visí na kostele.;
+napoveda;*;!dopis_lhar_doruceno;💡;Úřední dopis je pro největšího lháře. Adresy tu lžou, takže je pro toho nejpoctivějšího. Kdo jako jediný mluví pravdu? Zkus si ověřit, co kdo říká, podle toho, jak vypadá.;
+napoveda;*;!pohar_doruceno;💡;Pohár je pro nejpoctivějšího. Adresa lže, takže je pro největšího lháře v obci. Kdo má na lhaní diplomy?;
+napoveda;*;!dopis_mlada_doruceno;💡;Dopis pro nejmladší občanku. Adresa lže. Kdo je tu ze všech nejstarší?;
+napoveda;*;!balik_hubeny_doruceno;💡;Balík pro nejhubenějšího pána. Adresa lže. A šle XXXL by se hodily komu?;
+napoveda;*;!pohled_ticha_doruceno;💡;Pohled pro tichou paní. Adresa lže. Kdo je tu nejhlasitější?;
+napoveda;*;;💡;Všechno je doručeno.;
+cedule;hospoda;;🗣️;Pověsíš na dveře hospody ZAVŘENO. Dveře se rozletí a hostinská zahuláká: „Zavřeno! Nikoho nepouštím!“ Zve všechny dovnitř.;-cedule hospoda_otevrena
+cedule;kostelnik;;🧑‍🦲;„Tu si nech,“ řekne kostelník a nechá ti ji. Činy mluví jasně: nechce ji zpátky.;
+cedule;pes;;🐕;Pověsíš ceduli na vrata. Hafík ji očichá a vrčí ještě víc. Pes číst neumí, i když tvrdí opak.;
+cedule;*;;🪧;Cedule ZAVŘENO. V Lhářově s ní všechno otevřeš. Kde je zavřeno, i když tvrdí, že je otevřeno?;
+dopis_mlada;babka;;🥹;„Tohle vůbec není pro mě,“ řekne babka a dopis si přitiskne k srdci. „Nejmladší jsem tu já, ale tohle mi nepatří.“ Pak si ho celý přečte. Od pravnučky.;-dopis_mlada dopis_mlada_doruceno ikona:babka:🥹 razitko
+dopis_mlada;ucitelka;;👩‍🏫;„Mně je dvacet šest. To je pro babku, té je devadesát osm. Adresy tu lžou stejně jako lidi.“ Vrátí ti ho.;
+dopis_mlada;hostinska;;🗣️;„To je moje! Jsem nejmladší!“ zakřičí hostinská a vrátí ti ho. Činy nelžou.;
+dopis_mlada;kostelnik;;🧑‍🦲;„Moje!“ zajásá kostelník a dopis ti vrátí. „Jsem holka, nevidíš?“;
+dopis_mlada;reznik;;🥩;„Jasně, to je pro mě,“ řekne řezník a vrátí ti ho.;
+dopis_mlada;starosta;;🎩;„Pro nejmladší? To bude určitě pro mě.“ Starosta dopis vrátí a ukáže holí na babku.;
+dopis_mlada;pes;;🐕;Hafík vrtí ocasem. Rychle couvneš.;
+balik_hubeny;reznik;;🥩;„Pro nejhubenějšího? To rozhodně nejsem já,“ řekne řezník a balík ti vytrhne z ruky. Šle XXXL si hned připne. Sedí jako ulité.;-balik_hubeny balik_hubeny_doruceno ikona:reznik:😊 razitko
+balik_hubeny;kostelnik;;🧑‍🦲;„Moje! Já jsem přece ten nejhubenější!“ Kostelník si šle zkusí, spadnou mu ke kotníkům. Vrátí ti balík.;
+balik_hubeny;ucitelka;;👩‍🏫;„Adresa lže. Hubený je kostelník, takže tohle je pro nejtlustšího. To je řezník.“;
+balik_hubeny;starosta;;🎩;„Jasně, to je moje, jsem hubený jako lunt.“ Vrátí ti ho a pohladí si břicho. Menší než řezníkovo.;
+balik_hubeny;babka;;👵;„Pro hubeného pána? Já jsem chlap jako hora.“ Babka ti balík vrátí.;
+balik_hubeny;hostinska;;🗣️;„Moje! Moje!“ zařve hostinská a balík ti vrátí.;
+balik_hubeny;pes;;🐕;Hafík balík očichá, cítí z něj uzené. Vrčí. Raději jdeš.;
+pohled_ticha;hostinska;;🤫;„Tohle mi rozhodně nepatří! Já jsem moc hlasitá!“ zahřmí hostinská, pohled si strčí do zástěry a začne ho předčítat celé hospodě.;-pohled_ticha pohled_ticha_doruceno ikona:hostinska:🤫 razitko
+pohled_ticha;hospoda;;🚪;Hospoda je zamčená. Na dveřích visí OTEVŘENO.;
+pohled_ticha;ucitelka;;👩‍🏫;„Tichá a skromná? To jsem asi já, ale adresa lže. Je pro tu nejhlasitější. Hostinská je slyšet až u nás ve škole.“;
+pohled_ticha;babka;;👵;„Moje! Jsem hlučná jako trouba,“ zašeptá babka a vrátí ti pohled.;
+pohled_ticha;kostelnik;;🧑‍🦲;„To je pro mě. Já jsem paní,“ řekne kostelník a vrátí ti ho.;
+pohled_ticha;reznik;;🥩;„Moje,“ zabručí řezník a vrátí ti pohled.;
+pohled_ticha;starosta;;🎩;„Pro tichou paní? To jsem já,“ řekne starosta a vrátí ti ho. Pak ukáže palcem na hospodu.;
+pohled_ticha;pes;;🐕;Hafík vrtí ocasem. Ustoupíš.;
+dopis_lhar;ucitelka;;😮;„Pro největšího lháře? To jsem v Lhářově já. Tady každý ví, že mluvím pravdu.“ Paní učitelka dopis otevře. „Jmenování kronikářkou! Konečně bude v kronice pravda.“;-dopis_lhar dopis_lhar_doruceno ikona:ucitelka:😊 razitko
+dopis_lhar;starosta;;🎩;„Pro lháře? To vůbec není pro mě,“ řekne starosta a vrátí ti ho. Činy nelžou: nepatří mu. „Učitelka je ze všech nejhorší lhářka,“ dodá.;
+dopis_lhar;kostelnik;;🧑‍🦲;„Pro lháře? To je moje,“ řekne kostelník a vrátí ti ho. „A učitelka lže, kdykoliv otevře pusu.“;
+dopis_lhar;reznik;;🥩;„Moje. Já nikdy nelžu,“ řekne řezník a vrátí ti dopis. „Jen učitelka lže jako když tiskne.“;
+dopis_lhar;babka;;👵;„Moje,“ řekne babka a dopis ti vrátí. „Ta nová učitelka? Lže, až se hory zelenají.“;
+dopis_lhar;hostinska;;🗣️;„MOJE!“ zahuláká hostinská a dopis ti vrátí. „Učitelka je lhářka! Všichni to říkají!“;
+dopis_lhar;hospoda;;🚪;Hospoda je zamčená. Na dveřích visí OTEVŘENO.;
+dopis_lhar;pes;;🐕;Hafík úřední papíry nečte. Vrtí ocasem, což tu nevěstí nic dobrého.;
+pohar;starosta;;🏆;„Pohár pro nejpoctivějšího? To si vůbec nezasloužím,“ prohlásí starosta a pohár zvedne nad hlavu. Pak ho postaví k diplomům. Osmé první místo v lhaní.;-pohar pohar_doruceno ikona:starosta:🏆 razitko
+pohar;ucitelka;;👩‍🏫;„Poctivost? Adresa lže, takže je pro největšího lháře. Starosta má za lhaní sedm diplomů. Tohle bude osmý.“;
+pohar;kostelnik;;🧑‍🦲;„Já jsem nejpoctivější. Tedy… moje!“ Kostelník ti pohár vrátí.;
+pohar;reznik;;🥩;„Moje,“ řekne řezník a vrátí ti ho. „Starosta by ho nechtěl. Ten ještě nikdy nevyhrál.“;
+pohar;babka;;👵;„Moje,“ zašeptá babka a vrátí ti pohár. „Starosta v soutěži nikdy nebyl.“ Za oknem úřadu mu visí sedm diplomů.;
+pohar;hostinska;;🗣️;„Pohár? MŮJ!“ zakřičí hostinská a vrátí ti ho. „Starosta je poctivec!“;
+pohar;hospoda;;🚪;Hospoda je zamčená. Na dveřích visí OTEVŘENO.;
+pohar;pes;;🐕;Hafík si pohár očichá a zavrčí. Pohár mu nepatří, i kdyby tvrdil opak.;
+*;hospoda;;🚪;Hospoda je zamčená. Zevnitř se ozve: „Dále! Je otevřeno!“;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,68 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Loutkov: nitě jsou zamotané. Pekařova ruka tahá za zvon (zvon vzbudí babku a vyleká hasiče, ten spustí žebřík).
+# Babčina noha tahá za hasičův žebřík. Špalíčkova ruka tahá za Hoblíkovu hlavu (kývnutí je podpis).
+karta;cil;podminka;vyraz;text;efekt
+?;loutkar;;😴;Nahoře na lávce spí loutkář Mistr Drátek s vahadly v náručí. Chrápe, až se celá ves pohupuje. Je moc vysoko, odsud na něj nedosáhneš.;
+?;hoblik;kyva>0;🙂;Táta Hoblík kývá hlavou jako o závod. „Ano, ano,“ říká, i když se ho nikdo na nic neptá. Jeho hlava visí na Špalíčkově niti.;
+?;hoblik;;🧔;Táta Hoblík stojí rovně jako prkno. „Doporučený dopis? Převezmu, ale musím podepsat. U loutek se podepisuje kývnutím hlavy. Moje hlava visí na Špalíčkově niti. Kývnu, jen když Špalíček zvedne ruku.“;
+?;spalicek;;🙋;Špalíček stojí s rukama u těla. „Tati, a proč se nic neděje?“ Ruku zvedne, jen když se něco stane. Hoblík stojí jako prkno.;
+?;kostelnik;;🔔;Kostelník Bimbal by rád zvonil, ale provaz od zvonu má zamotaný s pekařovou rukou. „Kdykoli pekař po něčem sáhne, zvon bimbne sám,“ stěžuje si.;
+?;pekar;kvasek_doruceno;👨‍🍳;Pekař hněte těsto a pokaždé, když zvedne ruku, zvon nad vsí bimbne.;
+?;pekar;;👨‍🍳;Pekař Kynutý stojí u díže s rukama nad hlavou. „Čekám na kvásek. Ruce mám nahoře, ať náhodou nesáhnu po něčem jiném. Pokaždé, když sáhnu, zazvoní zvon.“;
+?;babka;bryle_doruceno !zebrik_nahore;👵;Babka v brýlích vykročí k oknu, aby si přečetla, co se děje. Její noha škubne za nit a hasičův žebřík vyjede až k lávce. Špalíček zvedne ruku. „Tati, a proč jede žebřík?“ Táta Hoblík kývne.;zebrik_nahore ikona:hasic:🧑‍🚒 kyva=2 ikona:hoblik:🙂
+?;babka;bryle_doruceno;👵;Babka stojí u okna v brýlích a čte si noviny. Pod ní se tyčí hasičův žebřík.;
+?;babka;babka_vzhuru;🧐;Babka Pantoflová je vzhůru a mžourá. „Kde mám brýle? Bez nich nevykročím ani k oknu.“;
+?;babka;;😴;Babka Pantoflová spí v okně a chrápe do rytmu s loutkářem. Vzbudí ji jen pořádné zvonění.;
+?;hasic;zebrik_nahore;🧑‍🚒;Hasič Stříkal drží žebřík, který vede až k lávce. „Jen ať nikdo nezvoní,“ šeptá. „Když zazvoní zvon, leknu se a pustím ho.“;
+?;hasic;;🧑‍🚒;Hasič Stříkal drží složený žebřík. „Je zamotaný s babčinou nohou. Když babka vykročí, žebřík vyjede sám. Babka ale spí.“;
+napoveda;*;!babka_vzhuru;🙋;„Tati, a proč babka spí?“ „Protože ji nikdo nevzbudil, Špalíčku. Babku vzbudí jen zvon.“ „A proč zvon nezvoní?“ „Protože provaz drží pekař.“;
+napoveda;*;!bryle_doruceno;🙋;„Tati, a proč babka nikam nejde?“ „Protože nevidí, Špalíčku. Bez brýlí nevykročí.“;
+napoveda;*;!zebrik_nahore !budik_doruceno;🙋;„Tati, a proč žebřík nestojí?“ „Protože se zvon ozval a hasič se lekl. Žebřík vyjede, až babka zase vykročí.“;
+napoveda;*;!doporuceny_doruceno;🙋;„Tati, a proč nepodepíšeš ten dopis?“ „Protože nemůžu kývnout, Špalíčku. Hlavu mi drží nit.“ „A čí nit?“ „Tvoje. Kdybys tak zvedl ruku.“;
+napoveda;*;!noty_doruceno;🙋;„Tati, a proč kostelník nezvoní?“ „Protože drží provaz, Špalíčku. Kdyby měl plné ruce, provaz by pustil.“;
+napoveda;*;!hadice_doruceno;🙋;„Tati, a proč hasič drží žebřík?“ „Protože nemá nic jiného v rukou. Ale jak dostane hadici, žebřík pustí.“;
+napoveda;*;!kvasek_doruceno;🙋;„Tati, a proč pekař nepeče?“ „Protože nemá kvásek. Ale pozor, když po něm sáhne, zazvoní zvon a hasič pustí žebřík.“;
+napoveda;*;;🙋;„Tati, a proč loutkář spí?“ „Protože ho nikdo nevzbudil, Špalíčku. Žebřík stojí. Na co čekáš?“;
+kvasek;pekar;zebrik_nahore;😱;Pekař sáhne po kvásku. Bim bam! Zvon se rozezní, hasič se lekne a pustí žebřík. Žebřík sjede dolů. Pekař kvásek aspoň chytil. Špalíček zvedne ruku. „Tati, a proč zvoní zvon?“ Táta Hoblík kývne.;-kvasek kvasek_doruceno !zebrik_nahore babka_vzhuru ikona:babka:👵 razitko kyva=2 ikona:hoblik:🙂
+kvasek;pekar;;🔔;Pekař sáhne po kvásku a bim bam! Zvon se rozezní nad celou vsí. Babka v okně se probudí a mžourá. „Kde mám brýle?“ Špalíček zvedne ruku. „Tati, a proč zvoní zvon?“ Táta Hoblík kývne.;-kvasek kvasek_doruceno babka_vzhuru ikona:babka:👵 razitko kyva=2 ikona:hoblik:🙂
+*;pekar;zebrik_nahore;😱;Pekař sáhne po zásilce, i když není jeho. Bim bam! Hasič se lekne a pustí žebřík. Pekař ruku rychle stáhne. „Promiň, to bylo zvykem.“ Špalíček zvedne ruku. „Tati, a proč zvoní zvon?“ Táta Hoblík kývne.;!zebrik_nahore kyva=2 ikona:hoblik:🙂
+*;pekar;;🔔;Pekař po zásilce sáhne, i když není jeho. Bim bam! Zvon se rozezní a babka v okně se probudí. „Promiň,“ řekne pekař. „Ruka se mi hne sama.“ Špalíček zvedne ruku. „Tati, a proč zvoní zvon?“ Táta Hoblík kývne.;babka_vzhuru ikona:babka:👵 kyva=2 ikona:hoblik:🙂
+bryle;babka;babka_vzhuru;👵;Babka si nasadí brýle a hned vidí, co se děje. Vykročí k oknu, noha škubne za nit a hasičův žebřík vyjede až k lávce. „No vida,“ řekne babka. „Dobrý žebřík.“ Špalíček zvedne ruku. „Tati, a proč jede žebřík?“ Táta Hoblík kývne.;-bryle bryle_doruceno zebrik_nahore razitko kyva=2 ikona:hoblik:🙂
+bryle;babka;;😴;Babka spí. Brýle na spícím nosu nic nevidí. Vzbudí ji jen zvon.;
+bryle;hoblik;;🧔;„Brýle? Vidím dobře. Jen nemůžu kývnout.“;
+bryle;spalicek;;🙋;„Tati, a proč brýle?“ „Protože babka nevidí, Špalíčku.“;
+doporuceny;hoblik;kyva>0;🙂;Hoblík převezme dopis a kývne hlavou. Podepsáno. „Děkuju, Špalíčku,“ řekne. „Za co?“ „Za to, že se pořád ptáš.“;-doporuceny doporuceny_doruceno razitko
+doporuceny;hoblik;;🧔;Hoblík se na dopis dívá, ale hlavou nekývne. Nemůže. Bez podpisu doporučený dopis převzít nesmí.;
+doporuceny;spalicek;;🙋;„Tati, a proč je ten dopis tvůj, a ne můj?“ ptá se Špalíček, ruce u těla.;
+kvasek;spalicek;;🙋;„Tati, a proč to bublá?“ „Protože je to kvásek, Špalíčku. Ten patří pekaři.“;
+budik;spalicek;;🙋;„Tati, a proč budík?“ „Na loutkáře, Špalíčku.“;
+kvasek;hoblik;;🧔;„Kvásek? Já jsem z lipového dřeva, nekynu.“;
+budik;hoblik;;🧔;„Budík? Já nespím. Spí loutkář.“;
+budik;loutkar;zebrik_nahore kvasek_doruceno bryle_doruceno doporuceny_doruceno;⏰;Vylezeš po žebříku na lávku a natáhneš budík. Crrrr! Mistr Drátek vyskočí a málem pustí vahadla. Pak se rozhlédne a nitě začne rozmotávat jednu po druhé.;-budik budik_doruceno rozmotano ikona:loutkar:🧑‍🎨 razitko
+budik;loutkar;zebrik_nahore;😴;Vylezeš na lávku a budík zazvoní. Mistr Drátek otevře jedno oko. „Rozmotám, až bude dole všechno doručené. Jinak bych ti někoho vytáhl uprostřed práce.“ A spí dál. Budík si vezmeš zpátky.;
+*;loutkar;;😴;Lávka je moc vysoko. Bez žebříku tam nedosáhneš.;
+noty;kostelnik;zebrik_nahore;😱;Kostelník chytí noty oběma rukama a pustí provaz. Bim bam! Zvon se rozhoupe, hasič se lekne a žebřík sjede dolů. Špalíček zvedne ruku. „Tati, a proč zvoní zvon?“ Táta Hoblík kývne.;-noty noty_doruceno !zebrik_nahore babka_vzhuru kyva=2 ikona:babka:👵 ikona:hoblik:🙂 razitko
+noty;kostelnik;;🔔;Kostelník chytí noty oběma rukama a pustí provaz. Bim bam! Zvon se rozhoupe sám od sebe. Babka v okně se probudí. Špalíček zvedne ruku. „Tati, a proč zvoní zvon?“ Táta Hoblík kývne.;-noty noty_doruceno babka_vzhuru kyva=2 ikona:babka:👵 ikona:hoblik:🙂 razitko
+hadice;hasic;zebrik_nahore;😬;Hasič chytí hadici a pustí žebřík. Žebřík sjede dolů. „Obě ruce do hadice, to je předpis,“ omlouvá se.;-hadice hadice_doruceno !zebrik_nahore razitko
+hadice;hasic;;🧑‍🚒;Hasič hadici převezme a pečlivě ji smotá. Žebřík zatím drží kolenem. „Až babka vykročí, žebřík vyjede,“ říká.;-hadice hadice_doruceno razitko
+noty;spalicek;;🙋;„Tati, a proč mají noty ocásky?“ Ruce má Špalíček u těla, táta nekývne.;
+hadice;spalicek;;🙋;„Tati, a proč je hadice dlouhá?“ „Protože hoří daleko, Špalíčku.“;
+noty;hoblik;;🧔;„Noty jsou pro kostelníka. Já zpívám jen z hlavy. Když s ní můžu hnout.“;
+noty;babka;;👵;„Noty pro kostelníka. Ať zvoní něco veselého.“;
+kvasek;kostelnik;;🔔;„Kvásek? Ten patří pekaři. Ale opatrně, ať mi nerozzvoní zvon.“;
+bryle;kostelnik;;🔔;„Brýle? Pro babku v okně. Ta ale spí, dokud nezazvoní zvon.“;
+doporuceny;kostelnik;;🔔;„Hoblíkovi. Ale ten nemůže kývnout. Špalíček mu drží hlavu na niti.“;
+budik;kostelnik;;🔔;„Budík? Já mám zvon, budík nepotřebuju. To je pro Mistra Drátka.“;
+kvasek;babka;;👵;Babka se na sklenici podívá. „To bublá jako pekař. Je to jeho.“;
+budik;hasic;;🧑‍🚒;„Budík? Nezvoň s ním tady, leknu se a pustím žebřík.“;
+bryle;hasic;;🧑‍🚒;„Brýle jsou pro babku. Až vykročí, žebřík vyjede.“;
+doporuceny;babka;;👵;„Pan Hoblík. Ten dřevěný chlapík s klukem, co se pořád ptá.“;
+*;hasic;;🧑‍🚒;Hasič má plné ruce žebříku. Nic nepřevezme.;
+*;*;;🤷;Nic se nestane. Jen kdesi cukne nit.;
+

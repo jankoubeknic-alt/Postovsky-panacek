@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Holubníku: údolí s rozvodněnou řekou, nahoře vlevo hájovna na kopci, vpravo salaš pod hřebenem, nad vsí balón. Uprostřed holubník, vlevo kostel, vpravo hostinec a řeznictví, dole babčin dvůr a mlékárna. -->
+  <rect width="300" height="400" fill="#D6E2EC"/>
+  <path d="M0 120L50 60L100 110L150 70L200 100L250 40L300 90V160H0Z" fill="#8FA88A"/>
+  <rect x="40" y="62" width="22" height="14" fill="#8A6A48"/><path d="M36 64L51 52L66 64Z" fill="#5E3A2A"/>
+  <rect x="236" y="44" width="24" height="12" fill="#C9B99A"/><path d="M232 46L248 36L264 46Z" fill="#6B5A4A"/>
+  <ellipse cx="200" cy="18" rx="14" ry="16" fill="#E0763A"/><path d="M190 32L196 44H204L210 32" stroke="#6B4A2E" stroke-width="1" fill="none"/><rect x="195" y="44" width="10" height="7" fill="#B98A4A"/>
+  <path d="M0 150H300V400H0Z" fill="#B8CC98"/>
+  <path d="M0 236C60 226 120 250 170 240S260 222 300 232V256C250 248 200 262 150 262S60 250 0 260Z" fill="#7FA9C9"/>
+  <rect x="128" y="34" width="44" height="46" fill="#C9A77A"/><path d="M122 36L150 14L178 36Z" fill="#7A5A3A"/>
+  <g fill="#3A2A1E"><rect x="136" y="46" width="8" height="8"/><rect x="156" y="46" width="8" height="8"/><rect x="136" y="62" width="8" height="8"/><rect x="156" y="62" width="8" height="8"/></g>
+  <rect x="10" y="134" width="62" height="54" fill="#E6E2D8"/><path d="M6 136L41 112L76 136Z" fill="#8A4A3A"/>
+  <rect x="218" y="146" width="76" height="52" fill="#E3CDA6"/><path d="M212 148L256 124L300 148Z" fill="#6B4A3A"/>
+  <rect x="222" y="270" width="72" height="48" fill="#E8DCCB"/><path d="M216 272L258 250L300 272Z" fill="#8A3A2E"/>
+  <rect x="8" y="282" width="80" height="44" fill="#E7C9A0"/><path d="M2 284L48 262L94 284Z" fill="#9A4A3A"/>
+  <rect x="110" y="340" width="80" height="44" fill="#F1F1EA"/><path d="M104 342L150 320L196 342Z" fill="#4A7AB9"/>
+</svg>

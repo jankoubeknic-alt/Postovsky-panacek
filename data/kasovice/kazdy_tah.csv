@@ -1,0 +1,5 @@
+# Dokud hrnec vaří, každé podání přidá kaši. Řádky jdou shora dolů, proto vyšší hladina první.
+podminka;efekt;text
+!zastaveno kase=2;kase=3;Kaše se přelila přes školní plot. Pan řídící zmizel v kaši až po brýle.
+!zastaveno kase=1;kase=2;Kaše dotekla k hospodě a zalila dveře. Hospodská Dostálová je za ní jako za zdí.
+!zastaveno kase=0;kase=1;Z okna se vyvalila další várka kaše.

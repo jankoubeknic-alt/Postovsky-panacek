@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kaše zalila dolní ves až ke dveřím hospody -->
+  <path d="M110 220C70 240 40 290 56 340C70 380 230 386 248 340C262 300 230 240 190 222Z" fill="#F0DFAE" stroke="#C9B07A" stroke-width="1.5"/>
+  <g fill="#E4CF96"><circle cx="100" cy="300" r="6"/><circle cx="190" cy="330" r="8"/><circle cx="150" cy="270" r="5"/></g>
+</svg>

@@ -1,0 +1,8 @@
+id;nazev;druh;ikona;adresa;popis
+dopis_radnice;Dopis pro starostu;dopis;✉️;Starosta, radnice Trubkovice;Z okresu. Schvalujeme potrubní poštu, pokud bude fungovat.
+dopis_hospoda;Noviny pro hostinského;dopis;📰;Hostinský, hospoda U Trubky;Večerník. Hostinský je čte štamgastům nahlas.
+dopis_skola;Balíček kříd;balik;📦;Učitel, obecná škola;Bílé křídy, sto kusů. Učitel bez nich neučí.
+dopis_fara;Dopis pro faráře;dopis;✉️;Farář, fara u kostela;Od biskupství. Věž kostela je prý nakřivo.
+zadost;Žádost o opravu věže;dopis;📜;Starosta, radnice Trubkovice;Farář žádá obec o peníze na věž. Podepsáno a orazítkováno.
+pozvanka;Pozvánka na besídku;dopis;🎟️;Hostinský, hospoda U Trubky;Školní besídka v sále hospody, v neděli odpoledne.
+patrona;Prázdná patrona;vec;🧪;;Mosazná patrona bez zásilky. Proletí potrubím a přehodí výhybky.

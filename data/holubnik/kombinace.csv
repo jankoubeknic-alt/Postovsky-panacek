@@ -1,0 +1,67 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Holubník: dopis se odešle, když holubáři dáš holuba, jehož domov odpovídá adrese. Holubi se získávají řetězy:
+# kocour odejde za mlékem a holub z hájovny slétne, hostinský vymění holuba ze salaše za klobásy, kvočna zahřeje vejce za Toulavku.
+karta;cil;podminka;vyraz;text;efekt
+dopis_balonar;holubar;!holub_balon_volny;🧓;„Do balónu? Tam doletí jen Toulavka. Ta ale sedí na vejcích.“;
+?;holubar;!holub_balon_volny;🧓;Hrdlička ukáže do holubníku. „Toulavka teď sedí na vejcích. Dokud jí je někdo nezahřeje, nehne se. A bez ní se do balónu nedostaneš.“;
+?;holubar;;🧓;Holubář Hrdlička krmí holuby. „Holub letí jen domů, pošťáku. Kdo chce na hájovnu, potřebuje holuba z hájovny. Na salaš holuba ze salaše. A do balónu Toulavku, ta se tam odstěhovala. Dej mi holuba a dopis přivážu.“;
+?;kostel;!kocour_odesel;⛪;Na kostelní střeše sedí šedý holub s jehličím v peří a třese se. Dole na něj číhá kocour Mourek. Dokud tam kocour je, holub neslétne.;
+?;kostel;!@holub_hajovna !hajny_doruceno;🕊️;Kocour je pryč. Šedý holub slétne ze střechy a sedne ti na rameno. V peří má jehličí. To bude holub z hájovny.;+holub_hajovna
+?;kostel;;⛪;Na kostelní střeše se vyhřívají vrabci.;
+?;kocour;;🐈;Kocour Mourek nespouští oči z holuba na střeše. Olizuje se. „Mňau,“ říká, a myslí tím oběd.;
+?;hostinsky;!@holub_salas !baca_doruceno;🍲;Hostinský drží bílého holuba nad hrncem. „Přiletěl mi do kuchyně. Voní sýrem, tak bude polévka se sýrovou příchutí.“ Holub se na tebe dívá prosebně.;
+?;hostinsky;;🍲;Hostinský míchá polévku. „Bez sýra ze salaše nevařím nic pořádného. Snad tu objednávku někdo doručí.“;
+?;reznik;;🧔;Řezník brousí nůž. „Bez koření klobásy nedělám. Na co bych je dělal, nechutnaly by.“;
+?;babka;!@kvocna !holub_balon_volny;👵;Babka hladí kvočnu. „Sedí na všem, co vypadá jako vejce. Na kamenech, na bramborách, jednou i na kocourovi. Vezmi si ji, jestli potřebuješ něco zahřát.“;+kvocna
+?;babka;;👵;Babka sype zrní slepicím a vypráví, jak holubi přilétají až z hor.;
+?;mlekarka;!@mleko !kocour_odesel;🥛;Mlékařka ti naleje hrnek teplého mléka. „Pro kocoura? Ten by pro mléko prodal i vlastní fousy.“;+mleko
+?;mlekarka;;🥛;Mlékařka čistí konve.;
+napoveda;*;!koreni_doruceno;💡;Řezník čeká koření.;
+napoveda;*;!@holub_hajovna !hajny_doruceno !kocour_odesel;💡;Holub z hájovny sedí na kostelní střeše, ale dole číhá kocour. Co by kocoura odlákalo?;
+napoveda;*;!@holub_salas !baca_doruceno;💡;Holub ze salaše skončí v polévce. Hostinský by ho vyměnil za něco jiného do hrnce.;
+napoveda;*;!holub_balon_volny;💡;Toulavka sedí na vejcích. Kdo by je zahřál místo ní?;
+napoveda;*;;💡;Dej holubáři holuba. Přiváže mu dopis pro místo, kde má domov.;
+koreni;reznik;;🧔;Řezník přičichne ke koření a hned míchá. Za chvíli ti podá věnec klobás. „Na ochutnání. Klobása se nejlíp pozná v polévce.“;-koreni +klobasy koreni_doruceno razitko
+klobasy;hostinsky;;🍲;Hostinský klobásy očichá a holuba pustí. „Klobásová je lepší než holubí. Na, vem si ho. Voní sýrem, bude ze salaše.“;-klobasy +holub_salas
+mleko;kocour;;🐈;Mourek ucítí mléko a na holuba okamžitě zapomene. Odnese si hrnek za stodolu.;-mleko kocour_odesel
+kvocna;holubar;;🐔;Kvočna se uvelebí na holubích vejcích a spokojeně zakvoká. Toulavka vyletí z hnízda a sedne ti na rameno. „Teď ji můžeš poslat,“ usměje se Hrdlička. „Letí domů, do balónu.“;-kvocna +holub_balon holub_balon_volny
+holub_hajovna;holubar;@dopis_hajny;🕊️;Hrdlička přiváže dopis Jehličákovi na nožku. Holub zakrouží nad vsí a letí přímo na Kopec. Za chvíli zamává hajný z okna hájovny.;-holub_hajovna -dopis_hajny hajny_doruceno razitko
+holub_salas;holubar;@dopis_baca;🕊️;Bryndza dostane na nožku objednávku a letí pod hřeben. Za hodinu se ze salaše ozve trubka. Bača objednávku přijal.;-holub_salas -dopis_baca baca_doruceno razitko
+holub_balon;holubar;@dopis_balonar;🕊️;Toulavka s telegramem vyletí k balónu a vklouzne do koše. Balonář si telegram přečte, zamává a začne vyhazovat pytle s pískem.;-holub_balon -dopis_balonar balonar_doruceno razitko
+dopis_hajny;holubar;;🧓;„Tohle tam pěšky nedoneseš a já to pošlu jen s holubem z hájovny. Dej mi ho a přivážu to.“;
+dopis_baca;holubar;;🧓;„Tohle tam pěšky nedoneseš a já to pošlu jen s holubem ze salaše. Dej mi ho a přivážu to.“;
+dopis_balonar;holubar;;🧓;„Tohle tam pěšky nedoneseš a já to pošlu jen s holubem z balónu. Dej mi ho a přivážu to.“;
+holub_salas;hostinsky;;🍲;„Zpátky do hrnce? Ne, už mám klobásy. Holuba pošli domů.“;
+holub_balon;babka;;👵;„Toulavka! Ta se mi vždycky snažila sedět na slepicích. Ať letí domů, do balónu.“;
+klobasy;kocour;;🐈;Mourek po klobáse chňapne, ale ty jsou pro hostinského. Kocour se urazí a dál hlídá holuba.;
+klobasy;reznik;;🧔;„Ty jsou pro hostinského na ochutnání. Ať mi pak objedná víc.“;
+mleko;hostinsky;;🍲;„Mléko do polévky? Na to máme smetanu. To je pro kocoura, ne?“;
+mleko;babka;;👵;„Mléko? Kocour Mourek se po něm utluče. A dokud pije, nečíhá.“;
+kvocna;kocour;;🐈;Kvočna se na kocoura posadí. Mourek vyletí jak z praku. Kvočnu radši zase vezmeš.;
+kvocna;hostinsky;;🍲;„Slepice do polévky? To ne, ta je babčina a sedí na všem.“;
+dopis_hajny;babka;;👵;„Na hájovnu? Tam se teď nedostaneš, mosty jsou pryč. Leda holubem.“;
+dopis_baca;hostinsky;;🍲;„To je moje objednávka pro baču. Pošli ji holubem ze salaše.“;
+dopis_balonar;mlekarka;;🥛;Mlékařka se podívá na nebe. „Balonář? Ten visí nad vsí týden. Dolů nesleze a nahoru nevylezeš.“;
+koreni;hostinsky;;🍲;„Koření je pro řezníka. Já bych ho stejně dal do polévky celé.“;
+holub_hajovna;babka;;👵;„Jehličák! Ten nosil Aničce psaní od táty. Ať letí domů.“;
+holub_hajovna;reznik;;🧔;„Holub? Já dělám klobásy, ne holoubata. Dej ho holubáři.“;
+holub_salas;babka;;👵;„Ten voní jako bača. Ze salaše, to se pozná na sto honů.“;
+holub_salas;mlekarka;;🥛;Mlékařka si k holubovi přičichne. „Ovčí sýr. Ten je ze salaše.“;
+holub_balon;mlekarka;;🥛;„Toulavka? Ta má hnízdo v balónu. Pořád ho obletuje.“;
+holub_balon;hostinsky;;🍲;„Holubice? Tu ne, ta je pana Hrdličky. Do hrnce dávám jen cizí holuby.“;
+dopis_hajny;mlekarka;;🥛;„Od Aničky pro tátu? Hajný je na Kopci, tam teď pěšky nedojdeš.“;
+dopis_baca;reznik;;🧔;„Objednávka sýra? Bača je pod hřebenem. Holubem, jinak to nejde.“;
+dopis_balonar;babka;;👵;„Do balónu? To bys musel mít křídla. Nebo holuba.“;
+klobasy;babka;;👵;„Klobásy? Na ty mám zuby málo. Hostinský je chtěl na polévku.“;
+kvocna;babka;;👵;„Kvočna patří na vejce. Kde nějaká jsou, tam ji dej.“;
+mleko;mlekarka;;🥛;„Mléko vracet nemusíš. Dej ho kocourovi.“;
+*;kostel;;⛪;Na střechu nic nevyhodíš. Jen by se to zkutálelo.;
+*;kocour;;🐈;Mourek to očichá a dál číhá na holuba.;
+*;*;;🤷;Nic se nestane.;

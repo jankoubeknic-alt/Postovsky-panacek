@@ -1,0 +1,6 @@
+# Co nepatří do právě vládnoucího období, se po podání zkazí.
+podminka;efekt;text
+@fialky !obdobi=2;-fialky;Fialky ti v brašně zvadly. Mimo březen nevydrží.
+@jahody !obdobi=3;-jahody;Jahody v brašně zplesnivěly nebo zmrzly. Mimo červen se nedají nosit.
+@jablka obdobi=1;-jablka;Jablka v brašně zmrzla na kámen.
+@led !obdobi=1;-led;Led ti v brašně roztál a z brašny kape.

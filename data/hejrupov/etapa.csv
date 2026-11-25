@@ -1,0 +1,16 @@
+klic;hodnota
+datum;30. IV.
+start;dopis_dedove dopis_hasici dopis_kovar dopis_kluci
+cil;dedove_doruceno hasici_doruceno kovar_doruceno kluci_doruceno maj hori
+uvod;Poslední dubnový večer se v Hejrupově staví máj a pálí čarodějnice. Máj leží na zemi, dlouhý jako kostel, a postavit ho musí všichni najednou. Dědové s ráhny, hasiči s žebříky, kovář s lanem a kluci, kteří křičí hej rup.|Jenže každý vydrží čekat jinak dlouho. Kdo se nedočká, jde domů. Pošťák nese každému z nich poštu a s poštou i zprávu, že se staví máj.
+navod;Kdo dostane poštu, přijde k máji. Čísla nahoře ukazují, jak dlouho ještě vydrží čekat.
+konec_nadpis;Máj stojí
+konec_text;Máj stojí, nejvyšší v kraji, a čarodějnice hoří, až z ní lítají jiskry. Dědové vzpomínají, hasiči hlídají a kluci budou celou noc hlídat máj, aby ho nepodřízli z Horní Lhoty.|Brašna je prázdná. Hospodská ti dala buřt opečený na čarodějnici.
+pozadi;data/hejrupov/pozadi.svg
+barvy;
+pocitadla;p1=0 p2=0 p3=0 p4=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;p1:Dědové:4 p2:Hasiči:3 p3:Kovář:2 p4:Kluci:1
+prohra;
+prohra_text;

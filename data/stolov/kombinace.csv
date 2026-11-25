@@ -1,0 +1,55 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Štolov: klec jede podle počtu zazvonění (zvon 1 až 3 = patro, 4 = povrch) po každém podání nebo po klepnutí na Jet.
+# Na trojce se dá sfouknout kahan (tma). Potmě je vidět jen permoník.
+karta;cil;podminka;vyraz;text;efekt
+dopis_permonik;stajger;;🧓;„Pro permoníka? Ten čte jen potmě. A s prázdnou za ním nechoď.“;
+dopis_permonik;rubac;;⛏️;„Permoník bydlí na trojce. Já ho za třicet let neviděl. Prý jen potmě.“;
+svacina;strojnik;;👷;„Svačina pro Jardu? Ten je na dvojce. Dvakrát zazvoň.“;
+dopis_rubac;havirka;;👩;„Franta? Ten rube na jedničce. Jednou zazvoň a jeď.“;
+varovani;stajger;;🧓;Štajger čte lísteček a zbledne. „Na dvojce? Utíkej za Jardou, honem!“;
+dopis_stajger;strojnik;;👷;„Štajger je až na trojce. Třikrát zazvoň.“;
+?;zvonec;zvon<4;🔔;Cink! Zatáhneš za provaz zvonku. Nahoře u strojníka cinkne taky.;zvon+1
+?;zvonec;;🔔;Už jsi zazvonil čtyřikrát, a to znamená nahoru na povrch. Pátý cink by strojníka jen zmátl.;
+?;jet;zvon>0;🛗;Zabouchneš dvířka klece a čekáš na strojníka.;cekej
+?;jet;;🛗;Klec nikam nejede. Nejdřív zazvoň, kam chceš.;
+?;strojnik;;👷;Strojník drží páku. „Jednou zazvoníš, jedu na jedničku. Dvakrát na dvojku, třikrát na trojku. Čtyřikrát nahoru. Víc ne, to pak nevím, co chceš.“;
+?;havirka;!@svacina !svacina_doruceno;👩;Havířka ti podá uzlík. „Svačina pro mého Jardu. Vozí vozíky na dvojce. Zas ji zapomněl.“;+svacina
+?;havirka;;👩;Havířka vyhlíží k těžní věži. „Ať se všichni vrátí v pořádku.“;
+dopis_rubac;rubac;;⛏️;Rubač si otře ruce a čte. „Dcera se učí na kloboučnici! Tak to budu mít konečně slušnou čepici.“;-dopis_rubac rubac_doruceno razitko
+?;rubac;;⛏️;Rubač buší do skály. „Na trojce je štajger. A permoník, říkají. Ale jen potmě.“;
+svacina;vozac;;🛒;Jarda rozbalí uzlík. „Chleba se sádlem! Má žena je poklad.“;-svacina svacina_doruceno razitko
+varovani;vozac;;🛒;Jarda čte kostrbaté písmo. „Strop pracuje? Od permoníka?“ Poslouchá a nad hlavou opravdu něco praská. „Chlapi, ven z dvojky! Hned!“;-varovani varovani_doruceno razitko
+?;vozac;;🛒;Jarda tlačí vozík. „Dneska tu nějak praská ve výztuži. Asi se mi to zdá.“;
+dopis_stajger;stajger;;🧓;Štajger čte hlášení. „Zkoušky stropů… na dvojce nebyly. Hm.“;-dopis_stajger stajger_doruceno razitko
+?;stajger;!@chleba !chleba_dan;🧓;Štajger ulomí kus chleba. „Na. Permoník se ukáže jen potmě a s prázdnou za ním nechoď. Sfoukni kahan.“;+chleba
+?;stajger;;🧓;„Permoník je hodný na toho, kdo je hodný na něj. A v dole se nepíská.“;
+?;kahan;tma;🪔;Rozsvítíš kahan. Chodba je zase vidět a permoník zmizel.;!tma
+?;kahan;;🌑;Sfoukneš kahan. Je tma jako v pytli. V hloubi chodby se rozsvítí dvě zelená očka.;tma
+chleba;permonik;;🧙;Položíš chleba na kámen. Drobná ruka ho vezme. „Hodný pošťák,“ zaskřípe to ze tmy.;-chleba chleba_dan
+dopis_permonik;permonik;chleba_dan;🧙;Permoník čte potmě, jako by svítilo slunce. Pak naškrábe lísteček a podá ti ho. „Pro Jardu na dvojce. Ať to přečte hned.“;-dopis_permonik permonik_doruceno +varovani razitko
+dopis_permonik;permonik;;🧙;Zelená očka se přimhouří. „S prázdnou? To se nedělá.“ Permoník couvne do tmy.;
+?;permonik;permonik_doruceno;🧙;Permoník potmě třikrát poklepe na skálu.;
+?;permonik;;🧙;Ze tmy se ozve tenký hlásek. „Kdo to sfoukl kahan? Aha, pošťák.“;
+dopis_rubac;vozac;;🛒;„Pro Frantu? Ten rube na jedničce.“;
+dopis_stajger;rubac;;⛏️;„Štajger je dole na trojce.“;
+svacina;rubac;;⛏️;„Svačina od Jardovy ženy? Jarda je na dvojce. Já mám svoji.“;
+chleba;stajger;;🧓;„Ten není pro mě. Ten je pro permoníka.“;
+chleba;vozac;;🛒;„Chleba mám od ženy. Tohle je pro permoníka, ne?“;
+varovani;rubac;;⛏️;„Na dvojce nekopejte? To je pro Jardu.“;
+napoveda;*;!rubac_doruceno;💡;Klepni na zvonek tolikrát, kolikáté patro chceš, a pak na Jet. Rubač je na jedničce.;
+napoveda;*;!svacina_doruceno;💡;Havířka nahoře má svačinu pro Jardu na dvojce.;
+napoveda;*;!chleba_dan;💡;Na trojce ti štajger dá chleba. Permoník se ukáže, když sfoukneš kahan.;
+napoveda;*;!permonik_doruceno;💡;Teď dopis pro permoníka. Pořád potmě.;
+napoveda;*;;💡;Lísteček od permoníka patří Jardovi na dvojku. Rychle.;
+*;permonik;;🧙;„To si nech. Permoník bere jen to, co se mu dává od srdce.“;
+*;zvonec;;🔔;Na zvonek se jen zvoní.;
+*;jet;;🛗;Klec veze lidi, ne poštu.;
+*;kahan;;🪔;Kahan svítí, nic víc.;
+*;*;;🤷;Nic se nestane.;

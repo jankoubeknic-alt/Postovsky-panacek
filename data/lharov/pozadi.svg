@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Lhářova: nahoře lživá cedule u silnice a obecní úřad s diplomy za lhaní, vlevo kostel, vpravo hospoda,
+       vlevo řeznictví, vpravo škola, dole babčina lavička a vrata s cedulí o hodném psovi. Cedule na dveřích jsou ve vrstvách. -->
+  <rect width="300" height="400" fill="#E6E2D2"/>
+  <path d="M0 104C60 90 120 98 170 90S260 84 300 96V170H0Z" fill="#B7BE98"/>
+  <path d="M0 166H300V400H0Z" fill="#C5CF9E"/>
+  <!-- cedule u silnice -->
+  <rect x="96" y="6" width="108" height="18" rx="2" fill="#F4F1E8" stroke="#4A3F33" stroke-width="1.5"/>
+  <text x="150" y="18" font-family="Georgia, serif" font-size="7.5" font-weight="700" letter-spacing=".8" fill="#2F3A6A" text-anchor="middle">VÍTEJTE V PRAVDÍNĚ</text>
+  <g fill="#6B6B6B"><rect x="106" y="24" width="3" height="14"/><rect x="191" y="24" width="3" height="14"/></g>
+  <!-- obecní úřad s diplomy -->
+  <rect x="104" y="44" width="92" height="76" fill="#F3EEE2"/>
+  <path d="M98 48L150 30L202 48Z" fill="#7E6A4A"/>
+  <rect x="112" y="56" width="76" height="20" fill="#C8DCE4" stroke="#7E6A4A" stroke-width="1.5"/>
+  <g fill="#F7E7B0" stroke="#C9A24A" stroke-width=".8">
+    <rect x="115" y="59" width="8" height="10"/><rect x="125" y="59" width="8" height="10"/><rect x="135" y="59" width="8" height="10"/>
+    <rect x="145" y="59" width="8" height="10"/><rect x="155" y="59" width="8" height="10"/><rect x="165" y="59" width="8" height="10"/><rect x="175" y="59" width="8" height="10"/>
+  </g>
+  <text x="150" y="86" font-family="Georgia, serif" font-size="5.5" letter-spacing="1" fill="#6E6458" text-anchor="middle">OBECNÍ ÚŘAD</text>
+  <rect x="142" y="94" width="16" height="26" rx="8" fill="#8A7A66"/>
+  <!-- kostel -->
+  <rect x="0" y="112" width="84" height="60" fill="#F2EEE4"/>
+  <path d="M-4 114L42 90L88 114Z" fill="#6E7F8C"/>
+  <rect x="8" y="68" width="22" height="46" fill="#F2EEE4"/>
+  <path d="M4 70L19 44L34 70Z" fill="#6E7F8C"/>
+  <path d="M19 34v12M15 39h8" stroke="#C9A24A" stroke-width="1.6"/>
+  <rect x="34" y="136" width="18" height="36" rx="9" fill="#7A6450"/>
+  <g fill="#F2C86A" opacity=".7"><circle cx="40" cy="128" r="1.5"/><circle cx="46" cy="124" r="1.5"/></g>
+  <!-- hospoda -->
+  <rect x="216" y="112" width="84" height="60" fill="#F0E2C8"/>
+  <path d="M210 114L258 90L306 114Z" fill="#7A3B2C"/>
+  <rect x="224" y="118" width="68" height="9" fill="#3B332E"/>
+  <text x="258" y="125" font-family="Georgia, serif" font-size="5.6" fill="#EDD9A8" text-anchor="middle">U PRAVDY</text>
+  <g fill="#9DB5C8" stroke="#7A3B2C" stroke-width="1.5"><rect x="224" y="134" width="14" height="14"/><rect x="278" y="134" width="14" height="14"/></g>
+  <rect x="248" y="136" width="20" height="36" fill="#6B4A36"/>
+  <!-- ulice -->
+  <path d="M128 400C132 320 138 220 142 120H158C162 220 168 320 174 400Z" fill="#E6D9BE"/>
+  <!-- řeznictví -->
+  <rect x="0" y="196" width="94" height="56" fill="#F4E6E0"/>
+  <path d="M-4 198L47 178L98 198Z" fill="#A04A4A"/>
+  <rect x="6" y="204" width="82" height="9" fill="#FBF8F0"/>
+  <text x="47" y="211" font-family="Georgia, serif" font-size="5.6" fill="#A04A4A" text-anchor="middle">ZELENINA – BIO</text>
+  <g fill="none" stroke="#A04A4A" stroke-width="1.6"><path d="M14 218q6 8 12 0q6 8 12 0q6 8 12 0"/></g>
+  <rect x="62" y="220" width="18" height="32" fill="#7A5A3A"/>
+  <!-- škola s lavičkou -->
+  <rect x="206" y="194" width="94" height="58" fill="#F1EAD4"/>
+  <path d="M200 196L253 176L306 196Z" fill="#6B7A5A"/>
+  <rect x="214" y="202" width="78" height="9" fill="#FBF8F0"/>
+  <text x="253" y="209" font-family="Georgia, serif" font-size="5.6" fill="#6B7A5A" text-anchor="middle">ŠKOLA – ZAVŘENO</text>
+  <g fill="#9DB5C8" stroke="#6B7A5A" stroke-width="1.5"><rect x="216" y="216" width="14" height="14"/><rect x="276" y="216" width="14" height="14"/></g>
+  <path d="M222 262h40M226 262v8M258 262v8M222 256h40" stroke="#8A6A4A" stroke-width="2.4"/>
+  <!-- babčina lavička a záhon -->
+  <path d="M40 346h70M46 346v10M104 346v10M40 338h70" stroke="#8A6A4A" stroke-width="3"/>
+  <g fill="#E07A7A"><circle cx="20" cy="372" r="3"/><circle cx="30" cy="378" r="3"/><circle cx="12" cy="380" r="3"/></g>
+  <!-- vrata s cedulí o psovi -->
+  <rect x="190" y="292" width="100" height="44" fill="#9C7A52"/>
+  <g stroke="#7A5A3A" stroke-width="2"><path d="M200 292v44M215 292v44M230 292v44M245 292v44M260 292v44M275 292v44"/></g>
+  <rect x="226" y="276" width="64" height="16" fill="#F4F1E8" stroke="#4A3F33" stroke-width="1"/>
+  <text x="258" y="286" font-family="Georgia, serif" font-size="5.6" font-weight="700" fill="#4A3F33" text-anchor="middle">POZOR, HODNÝ PES</text>
+  <ellipse cx="210" cy="342" rx="18" ry="4" fill="#A89C88" opacity=".5"/>
+  <g fill="#F2C86A"><circle cx="120" cy="372" r="3"/><circle cx="190" cy="384" r="3"/><circle cx="270" cy="370" r="3"/></g>
+</svg>

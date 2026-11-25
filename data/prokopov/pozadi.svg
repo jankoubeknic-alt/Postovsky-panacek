@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Prokopova: nahoře klášter nad řekou Sázavou, dole velké pole rozdělené na políčka, vlevo dřevěný pluh. -->
+  <rect width="300" height="400" fill="#D7E4EA"/>
+  <path d="M0 90C80 80 200 100 300 85V100H0Z" fill="#7FA9C4"/>
+  <rect x="200" y="20" width="70" height="50" fill="#E8DCC4"/><path d="M196 22l39-20 39 20z" fill="#8B4A3A"/><path d="M235 2v-8" stroke="#5A4A3A" stroke-width="2"/>
+  <rect y="160" width="300" height="240" fill="#C9B27A"/>
+  <g stroke="#A8925A" stroke-width="1"><path d="M0 230H300M0 305H300M75 160V400M150 160V400M225 160V400"/></g>
+</svg>

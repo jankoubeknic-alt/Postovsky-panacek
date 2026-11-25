@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Vrstva tmy: skoro černá scéna, jen v hloubi chodby svítí dvě drobná zelenkavá očka. -->
+  <rect width="300" height="400" fill="#0E0B0A" opacity=".88"/>
+  <g fill="#B9F28A"><circle cx="140" cy="190" r="3"/><circle cx="152" cy="190" r="3"/></g>
+</svg>

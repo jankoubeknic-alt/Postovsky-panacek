@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Kramářova: jarmark na návsi, barevné stánky s plachtami, uprostřed lípa a vzadu kolotoč s praporky. -->
+  <rect width="300" height="400" fill="#E9E2D0"/>
+  <rect y="280" width="300" height="120" fill="#C9B48A"/>
+  <g><path d="M10 120h80l-10-20H20z" fill="#D9534F"/><rect x="20" y="120" width="60" height="40" fill="#F3EAD8"/>
+  <path d="M110 120h80l-10-20h-60z" fill="#5BC0DE"/><rect x="120" y="120" width="60" height="40" fill="#F3EAD8"/>
+  <path d="M210 120h80l-10-20h-60z" fill="#F0AD4E"/><rect x="220" y="120" width="60" height="40" fill="#F3EAD8"/></g>
+  <path d="M150 300V230" stroke="#6E5A44" stroke-width="10"/><circle cx="150" cy="215" r="40" fill="#7FA866"/>
+  <g><path d="M60 330l30-40 30 40z" fill="#D9534F"/><path d="M190 330l30-40 30 40z" fill="#5BC0DE"/></g>
+</svg>

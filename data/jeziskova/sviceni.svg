@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Strom na návsi se rozsvítil, všechny dárky jsou pod stromky -->
+  <path d="M150 282l3 7h7l-6 4 3 7-7-4-7 4 3-7-6-4h7z" fill="#F2C86A"/>
+  <g fill="#F2C86A"><circle cx="138" cy="324" r="2"/><circle cx="160" cy="318" r="2"/><circle cx="130" cy="354" r="2"/><circle cx="152" cy="346" r="2"/><circle cx="172" cy="358" r="2"/></g>
+  <g fill="#E07A7A"><circle cx="146" cy="332" r="2"/><circle cx="120" cy="364" r="2"/><circle cx="180" cy="366" r="2"/></g>
+</svg>

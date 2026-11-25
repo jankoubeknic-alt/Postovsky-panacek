@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Loutkova: loutkové divadlo. Nahoře lávka s vahadly, pod ní náves jako jeviště,
+       vlevo dům Hoblíků, vpravo kostelík se zvonicí, uprostřed hasičská zbrojnice, dole pekárna a babčino okno. -->
+  <rect width="300" height="400" fill="#3A2A3E"/>
+  <path d="M0 0H300V30H0Z" fill="#6B2A3A"/>
+  <path d="M0 30Q30 50 60 30T120 30T180 30T240 30T300 30V40H0Z" fill="#8A3A4A"/>
+  <!-- lávka -->
+  <rect x="60" y="34" width="180" height="8" fill="#8A6A48"/>
+  <g fill="#6B4A2E"><rect x="96" y="28" width="30" height="5"/><rect x="174" y="28" width="30" height="5"/></g>
+  <!-- jeviště -->
+  <path d="M0 120H300V400H0Z" fill="#D8C9A2"/>
+  <path d="M0 120H300" stroke="#8A6A48" stroke-width="3"/>
+  <g stroke="#C4B48E" stroke-width="1"><path d="M0 170H300M0 230H300M0 290H300M0 350H300"/></g>
+  <!-- dům Hoblíků -->
+  <rect x="6" y="150" width="70" height="44" fill="#C9A77A"/>
+  <path d="M0 152L41 130L82 152Z" fill="#7A3A2E"/>
+  <!-- kostelík se zvonem -->
+  <rect x="226" y="146" width="66" height="48" fill="#E6E2D8"/>
+  <path d="M222 148L259 120L296 148Z" fill="#7A3A2E"/>
+  <path d="M252 128a7 7 0 0 1 14 0v6h-14Z" fill="#C9A24A"/>
+  <!-- zbrojnice -->
+  <rect x="140" y="250" width="70" height="44" fill="#B9473A"/>
+  <path d="M134 252L175 232L216 252Z" fill="#7A2A2A"/>
+  <!-- pekárna -->
+  <rect x="6" y="276" width="80" height="54" fill="#F1E3C6"/>
+  <path d="M0 278L46 256L92 278Z" fill="#C98A3A"/>
+  <!-- babčino okno -->
+  <rect x="226" y="284" width="66" height="50" fill="#E7C9A0"/>
+  <rect x="244" y="294" width="30" height="24" fill="#BFD9E4" stroke="#6B4A3A" stroke-width="2"/>
+  <!-- opona po stranách -->
+  <path d="M0 0V400C10 300 14 200 10 100C8 60 4 30 0 0Z" fill="#8A3A4A"/>
+  <path d="M300 0V400C290 300 286 200 290 100C292 60 296 30 300 0Z" fill="#8A3A4A"/>
+</svg>

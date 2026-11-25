@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kaše až ke škole, z vody kouká jen střecha -->
+  <path d="M0 250C40 220 110 230 150 236C200 226 260 196 300 214V400H0Z" fill="#F0DFAE" stroke="#C9B07A" stroke-width="1.5"/>
+  <g fill="#E4CF96"><circle cx="40" cy="300" r="7"/><circle cx="240" cy="260" r="9"/><circle cx="160" cy="360" r="8"/><circle cx="90" cy="380" r="6"/></g>
+</svg>

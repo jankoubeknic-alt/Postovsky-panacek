@@ -1,0 +1,68 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Pecnov: pec se staví ve fázích kameny, hlína, cihly, komín (počítadlo faze). Mladý pecař staví jen podle doručené rady.
+# Materiál dřív, než přijde na řadu, pec zboří a staví se od kamenů znovu.
+karta;cil;podminka;vyraz;text;efekt
+?;mlady;faze=4;🧑‍🍳;Mladý pecař sází do pece první bochníky. „Umím to! Starý by koukal.“;
+?;mlady;;🧑‍🔧;„Starý pecař není doma a já to neumím,“ přiznává mladý pecař. „Ale když mi doneseš jeho rady a materiál, postavím, co mi řekne. Jen nevím, v jakém pořadí ta psaní psal.“;
+?;pec;faze=0;🏚️;Na místě pece leží jen hromada cihel a prachu.;
+?;pec;faze=1;🏚️;Kamenný základ stojí. Co dál?;
+?;pec;faze=2;🏚️;Na kamenech je udusaný hliněný pod.;
+?;pec;faze=3;🏚️;Klenba z cihel stojí. Chybí komín.;
+?;pec;faze=4;🔥;Pec stojí celá, i s komínem. Hřeje.;
+?;lom;!@kamen;🪨;Lomař ti naloží plochý kámen. „Na základ? Ten unese i kostel.“;+kamen
+?;lom;;🪨;Kámen už neseš. Víc neuneseš.;
+?;jama;!@hlina;🟫;Nabereš mazlavou hlínu. Je jí tu na sto pecí.;+hlina
+?;jama;;🟫;Hlínu už máš. Jsi od ní až po lokty.;
+?;cihelna;!@cihly;🧱;Cihlář ti naskládá cihly. „Ještě teplé. Klenba z nich bude jako z obrázku.“;+cihly
+?;cihelna;;🧱;Cihly už máš.;
+?;klempir;!@roura;🔩;Klempíř ti podá plechovou rouru. „Komín na pec? Ten se dává až navrch.“;+roura
+?;klempir;;🔩;Klempíř ťuká kladívkem. Rouru už máš.;
+?;babicka;;👵;Babička zpívá u okna: „Pec nám spadla, pec nám spadla, kdopak nám ji postaví? Starý pecař není doma a mladý to neumí.“ Pak si povzdechne. „Bez chleba je smutno.“;
+napoveda;*;!viden_doruceno !brno_doruceno !linec_doruceno !praha_doruceno;💡;Mladý pecař potřebuje rady starého. Doruč mu psaní a přečti si, co v nich stojí.;
+napoveda;*;faze=0;💡;Na čem pec stojí? Přečti si psaní z Vídně.;
+napoveda;*;faze=1;💡;Co patří na kameny? Psaní z Brna.;
+napoveda;*;faze=2;💡;Na udusaný pod se staví klenba. Psaní z Lince.;
+napoveda;*;faze=3;💡;Komín až nakonec. Psaní z Prahy a roura od klempíře.;
+napoveda;*;;💡;Pec stojí. Babička se těší na chleba.;
+rada_viden;mlady;;🧑‍🔧;Mladý pecař čte psaní z Vídně. „Kameny jsou základ všeho. Aha!“ Psaní si připíchne na zeď.;-rada_viden viden_doruceno razitko
+rada_viden;babicka;;👵;„Psaní z Vídně? Starý pecař je na vandru. Dej to mladému, ať se učí.“;
+rada_brno;mlady;;🧑‍🔧;Mladý pecař čte psaní z Brna. „Na kameny hlína a udusat. Aha!“ Psaní si připíchne na zeď.;-rada_brno brno_doruceno razitko
+rada_brno;babicka;;👵;„Psaní z Brna? Starý pecař je na vandru. Dej to mladému, ať se učí.“;
+rada_linec;mlady;;🧑‍🔧;Mladý pecař čte psaní z Lince. „Klenba z cihel na udusaný pod. Aha!“ Psaní si připíchne na zeď.;-rada_linec linec_doruceno razitko
+rada_linec;babicka;;👵;„Psaní z Lince? Starý pecař je na vandru. Dej to mladému, ať se učí.“;
+rada_praha;mlady;;🧑‍🔧;Mladý pecař čte psaní z Prahy. „Komín až nakonec. Aha!“ Psaní si připíchne na zeď.;-rada_praha praha_doruceno razitko
+rada_praha;babicka;;👵;„Psaní z Prahy? Starý pecař je na vandru. Dej to mladému, ať se učí.“;
+kamen;mlady;faze=0 viden_doruceno;🧑‍🔧;Mladý pecař položí kameny na místo staré pece. „Základ stojí!“;-kamen faze=1
+kamen;mlady;faze=0;🤔;„S tímhle nevím, co dělat,“ krčí rameny mladý pecař. „Kdyby mi starý napsal, jak na to.“;
+kamen;mlady;;🧑‍🔧;„Tohle už v peci je.“;
+kamen;babicka;;👵;„To je na pec, ne pro mě. Dej to mladému pecaři.“;
+hlina;mlady;faze=1 brno_doruceno;🧑‍🔧;Mladý pecař rozprostře hlínu po kamenech a dusá, až se potí. „Pod je hotový.“;-hlina faze=2
+hlina;mlady;faze=1;🤔;„S tímhle nevím, co dělat,“ krčí rameny mladý pecař. „Kdyby mi starý napsal, jak na to.“;
+hlina;mlady;faze<1;💥;Mladý pecař to zkusí postavit, i když to tam ještě nepatří. Krach! Všechno se sesype. „Pec nám spadla, pec nám spadla!“ zpívá celá ves. Musí se začít od kamenů.;-hlina faze=0 ikona:pec:🏚️
+hlina;mlady;;🧑‍🔧;„Tohle už v peci je.“;
+hlina;babicka;;👵;„To je na pec, ne pro mě. Dej to mladému pecaři.“;
+cihly;mlady;faze=2 linec_doruceno;🧑‍🔧;Mladý pecař klade cihly do oblouku. Klenba drží. „Ještě komín!“;-cihly faze=3
+cihly;mlady;faze=2;🤔;„S tímhle nevím, co dělat,“ krčí rameny mladý pecař. „Kdyby mi starý napsal, jak na to.“;
+cihly;mlady;faze<2;💥;Mladý pecař to zkusí postavit, i když to tam ještě nepatří. Krach! Všechno se sesype. „Pec nám spadla, pec nám spadla!“ zpívá celá ves. Musí se začít od kamenů.;-cihly faze=0 ikona:pec:🏚️
+cihly;mlady;;🧑‍🔧;„Tohle už v peci je.“;
+cihly;babicka;;👵;„To je na pec, ne pro mě. Dej to mladému pecaři.“;
+roura;mlady;faze=3 praha_doruceno;🧑‍🔧;Mladý pecař nasadí komín. Zatopí a z komína stoupá dým. Pec stojí! Hned peče první chleba.;-roura faze=4 pec_stoji +chleba ikona:pec:🔥 razitko
+roura;mlady;faze=3;🤔;„S tímhle nevím, co dělat,“ krčí rameny mladý pecař. „Kdyby mi starý napsal, jak na to.“;
+roura;mlady;faze<3;💥;Mladý pecař to zkusí postavit, i když to tam ještě nepatří. Krach! Všechno se sesype. „Pec nám spadla, pec nám spadla!“ zpívá celá ves. Musí se začít od kamenů.;-roura faze=0 ikona:pec:🏚️
+roura;mlady;;🧑‍🔧;„Tohle už v peci je.“;
+roura;babicka;;👵;„To je na pec, ne pro mě. Dej to mladému pecaři.“;
+chleba;babicka;;😋;Babička si ukrojí krajíc a zavře oči. „Chleba z nové pece. Teď můžu zpívat, že pec stojí.“;-chleba chleba_doruceno ikona:babicka:😋 razitko
+chleba;mlady;;🧑‍🍳;„To je pro babičku, ta na něj čeká nejdéle.“;
+kamen;pec;;🏚️;Kameny na hromadu nehází. Pec staví mladý pecař.;
+*;pec;;🏚️;Pec si nic nevezme. Postaví ji mladý pecař.;
+*;lom;;🪨;V lomu se nic nedoručuje.;
+*;jama;;🟫;Do hliniště nic neházej.;
+*;cihelna;;🧱;„To není pro cihelnu.“;
+*;klempir;;🔩;„To nespravím a nepřevezmu.“;

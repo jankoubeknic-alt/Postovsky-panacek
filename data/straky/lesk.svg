@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- V hnízdě jsou tvoje věci: třpyt -->
+  <style>.t { animation: trpyt 1.2s ease-in-out infinite alternate; transform-origin: 192px 40px; } @keyframes trpyt { to { opacity: .2; transform: scale(.6); } } @media (prefers-reduced-motion: reduce) { .t { animation: none; } }</style>
+  <g class="t" fill="#F2D46A"><path d="M192 26l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></g>
+</svg>

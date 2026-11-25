@@ -1,0 +1,95 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO
+# počítadla: v efektu snih+1, snih=0 | v podmínce snih>=3
+# Sněžná: zásilky leží na pultu jako cíle, klepnutím je vezmeš (vlajka vzato_*), poštmistrovi je vrátíš.
+# Cesta nahoru po stezce přidá 3 sníh (se sněžnicemi v brašně 1), dolů 1. Lanovka jezdí, až meteorolog dostane baterie, a stojí 1.
+# Babička se přidá jen s prázdnou brašnou a jen když jezdí lanovka. Zabere celou brašnu (babička, peřina, kocour).
+karta;cil;podminka;vyraz;text;efekt
+?;stezka;nahore @babicka;👵;„Po zledovatělé stezce? To ani náhodou, hochu. Jedině lanovkou.“;
+?;stezka;nahore;🛷;Sjedeš po zadku dolů ke vsi. Je to rychlé, ale sníh mezitím padá dál.;!nahore snih+1
+?;stezka;@sneznice;🥾;Nazuješ sněžnice a vyšlapeš na hřeben skoro jako po chodníku.;nahore byl_nahore snih+1
+?;stezka;;🥶;Brodíš se sněhem po kolena. Než vylezeš na hřeben, napadne další vrstva.;nahore byl_nahore snih+3
+?;lanovka;!lanovka_jede;🚡;Kabinka lanovky visí na laně a nehýbe se. Strojník čeká, až mu meteorolog z vrcholu vysílačkou ohlásí, že nefouká.;
+?;lanovka;nahore @babicka;🚡;Babička se usadí v kabince, Mourek vykoukne z brašny a lanovka vás sveze do údolí. Babička celou cestu mává kravám, které tam nejsou.;!nahore snih+1
+?;lanovka;nahore;🚡;Nasedneš do kabinky a sjedeš dolů. Strojník ti zamává čepicí.;!nahore snih+1
+?;lanovka;;🚡;Nasedneš do kabinky a vyjedeš na hřeben. Pod tebou se ztrácí ves ve sněhu.;nahore byl_nahore snih+1
+?;posta;@babicka;🎩;Poštmistr smekne. „Paní Horáčková! Pepík na vás čeká na zastávce.“;
+?;posta;snih>=5;👨‍🦳;Poštmistr kouká z okna. „Sněží čím dál víc. Jestli máš ještě něco nahoru, pospěš si.“;
+?;posta;;👨‍🦳;Poštmistr Sedlák přikládá do kamen. „Poslední pošta před zimou, hochu. Do brašny se ti vejdou tři věci, víc ne. Co nepobereš, nech na pultu.“;
+?;t_dopis;karet<3;✉️;Vezmeš z pultu dopis pro babičku Horáčkovou.;+dopis vzato_dopis
+?;t_baterie;karet<3;🔋;Vezmeš z pultu baterie pro meteorologa. Jsou těžké jako cihla.;+baterie vzato_baterie
+?;t_noviny;karet<3;📰;Vezmeš z pultu balík novin pro chatu.;+noviny vzato_noviny
+?;t_sneznice;karet<3;🥾;Vezmeš služební sněžnice. Do kopce s nimi poletíš, ale zaberou místo.;+sneznice vzato_sneznice
+?;t_dopis;;🎒;Brašna je plná. Víc než tři věci neuneseš. Něco vrať poštmistrovi.;
+?;t_baterie;;🎒;Brašna je plná. Víc než tři věci neuneseš. Něco vrať poštmistrovi.;
+?;t_noviny;;🎒;Brašna je plná. Víc než tři věci neuneseš. Něco vrať poštmistrovi.;
+?;t_sneznice;;🎒;Brašna je plná. Víc než tři věci neuneseš. Něco vrať poštmistrovi.;
+?;vnuk;;👦;Vnuk Pepík přešlapuje na zastávce. „Babička nechce zůstat na zimu nahoře sama, jen to nepřizná. A dolů ji nikdo nedostane. Napsal jsem jí, ať přijede k nám na Vánoce.“;
+?;babka;babka_chce karet=0 lanovka_jede;🥰;Babička ti do brašny nacpe peřinu a kocoura Mourka a chytí se tě za rameno. „Tak jdeme. Lanovkou, ať Mourek nenastydne.“;+babicka +perina +mourek babka_jde
+?;babka;babka_chce lanovka_jede;👵;„Pojedu, ale bez Mourka a peřiny ani krok. A ty máš brašnu plnou. Vyprázdni ji a přijď si pro mě.“;
+?;babka;babka_chce;👵;„Pojedu, jen co pojede lanovka. Po stezce už dolů nesejdu, nohy nejsou co bývaly.“;
+?;babka;;👵;Babička Horáčková štípe dříví před chalupou na samotě. „Zimu tu přečkám sama, jako každý rok. Mám Mourka a peřinu, co víc?“ Přitom se ale kouká dolů do údolí.;
+?;meteorolog;lanovka_jede;🧑‍🔬;Meteorolog hlásí do vysílačky: „Vítr slábne, lanovka může jet. Za dvě hodiny přijde vánice.“;
+?;meteorolog;;🧑‍🔬;Meteorolog na vrcholu ťuká do mrtvé vysílačky. „Bez baterií nic nepošlu. A strojník bez mojí zprávy lanovku nepustí.“;
+?;chatar;noviny_doruceno;👨‍🍳;Chatař si čte noviny u kamen a nahlas se diví, co se loni dělo ve světě.;
+?;chatar;;👨‍🍳;Chatař zatlouká okenice. „Na zimu zavíráme. Kdybych tak měl noviny na dlouhé večery. A turisti mi tu nechali hromadu pohledů, ty musí dolů na poštu.“;
+napoveda;*;!vzato_baterie !nahore;💡;Lanovka jezdí, jen když meteorolog na vrcholu ohlásí, že nefouká. Jenže má vybitou vysílačku. Vezmi baterie hned na první cestu.;
+napoveda;*;!byl_nahore !nahore;💡;Klepnutím na zásilky na pultu je vezmeš do brašny. Pak vyraz po stezce na hřeben. Sněžnice ušetří čas, ale zaberou místo.;
+napoveda;*;nahore @baterie;💡;Baterie patří meteorologovi na vrchol. Pak se rozjede lanovka.;
+napoveda;*;nahore @noviny;💡;Noviny jsou pro chataře.;
+napoveda;*;nahore @dopis;💡;Dopis od Pepíka je pro babičku na samotě.;
+napoveda;*;@babicka nahore;💡;S babičkou po stezce nesejdeš. Sveze vás lanovka.;
+napoveda;*;@babicka;💡;Pepík čeká na zastávce.;
+napoveda;*;@pohledy !nahore;💡;Pohledy od turistů patří poštmistrovi.;
+napoveda;*;babka_chce lanovka_jede karet>0;💡;Babička půjde, jen když budeš mít prázdnou brašnu. Všechno nejdřív dones dolů nebo doruč.;
+napoveda;*;babka_chce lanovka_jede nahore;💡;Brašnu máš prázdnou. Zastav se pro babičku.;
+napoveda;*;babka_chce lanovka_jede;💡;Brašnu máš prázdnou. Vyjeď lanovkou pro babičku.;
+napoveda;*;nahore;💡;Tady nahoře už nic nevyřídíš. Sjeď dolů pro další zásilky.;
+napoveda;*;;💡;Na pultu ještě něco čeká. Vezmi to a vyraz na hřeben.;
+baterie;meteorolog;;🥳;Meteorolog nacpe baterie do vysílačky. Zapraská to a pak se ozve strojník z údolí: „Fouká slabě, lanovka pojede!“ Kabinka se rozhoupe.;-baterie baterie_doruceno lanovka_jede razitko
+baterie;chatar;;👨‍🍳;„Baterie? Já svítím petrolejkou. Tyhle chce meteorolog na vrcholu, má hluchou vysílačku.“;
+baterie;babka;;👵;„Do rádia? Já mám rádio jen Mourka. Ten mluví, když má hlad.“;
+baterie;posta;;👨‍🦳;Poštmistr dá baterie zpátky na pult. „Až si to rozmyslíš, jsou tady.“;-baterie !vzato_baterie
+baterie;vnuk;;👦;„Baterie? Ty patří meteorologovi. Bez nich nepojede lanovka a babička se dolů nedostane.“;
+noviny;chatar;;🤓;Chatař se zaraduje. „Čtení až do jara!“ A strčí ti do brašny svazek pohledů. „Tyhle vezmi dolů na poštu. Turisti psali domů a já je pořád zapomínám odnést.“;-noviny +pohledy noviny_doruceno razitko
+noviny;meteorolog;;🧑‍🔬;„Noviny? Já čtu jen oblaka. Ty jsou pro chatu.“;
+noviny;babka;;👵;„Noviny? Ty jsou pro chatu. Mně stačí, co mi řekne Mourek.“;
+noviny;posta;;👨‍🦳;Poštmistr vrátí noviny na pult.;-noviny !vzato_noviny
+noviny;vnuk;;👦;Pepík se začte do sportu. Pak si vzpomene, že nejsou jeho, a vrátí ti je.;
+dopis;babka;karet=1 lanovka_jede;🥰;Babička si dopis přečte dvakrát a utře si oči. „Vánoce u Pepíka…“ Pak ti do brašny nacpe peřinu a kocoura Mourka a chytí se tě za rameno. „Jdeme. Lanovkou, ať Mourek nenastydne.“;-dopis dopis_doruceno +babicka +perina +mourek babka_chce babka_jde razitko
+dopis;babka;lanovka_jede;🥹;Babička si dopis přečte dvakrát a utře si oči. „Vánoce u Pepíka? Pojedu! Ale bez Mourka a peřiny ani krok. Máš plnou brašnu, tak ji vyprázdni a přijď si pro mě.“;-dopis dopis_doruceno babka_chce razitko
+dopis;babka;;🥹;Babička si dopis přečte dvakrát a utře si oči. „Vánoce u Pepíka? Pojedu! Ale jedině lanovkou, po stezce už dolů nesejdu. A ta stojí.“;-dopis dopis_doruceno babka_chce razitko
+dopis;chatar;;👨‍🍳;„Pro babku Horáčkovou? Ta bydlí na samotě. Dopisy dostává jednou za rok, tak ať to stojí za to.“;
+dopis;meteorolog;;🧑‍🔬;„Pro babku ze samoty? Vidím ji dalekohledem, jak štípe dříví.“;
+dopis;posta;;👨‍🦳;Poštmistr vrátí dopis na pult.;-dopis !vzato_dopis
+dopis;vnuk;;👦;„To jsem psal já! Nes to babičce, prosím.“;
+sneznice;posta;;👨‍🦳;Poštmistr postaví sněžnice ke kamnům. „Kdybys je zase potřeboval, víš, kde jsou.“;-sneznice !vzato_sneznice
+sneznice;babka;;👵;„Sněžnice? V nich jsem chodila na tancovačky. Teď už jen lanovkou.“;
+sneznice;chatar;;👨‍🍳;„Pěkné, služební. Ale nech si je, dolů je budeš potřebovat víc než já.“;
+sneznice;meteorolog;;🧑‍🔬;„Na vrchol jsem vylezl v nich. Dolů už nepůjdu až do jara.“;
+sneznice;vnuk;;👦;„S těmi bych vylezl za babičkou sám! Ale máma mě nepustí.“;
+pohledy;posta;;👨‍🦳;Poštmistr orazítkuje svazek pohledů. „Pozdravy z hor! Odjedou prvním vlakem.“;-pohledy pohledy_doruceno razitko
+pohledy;chatar;;👨‍🍳;„Ty už nechci vidět. Patří na poštu.“;
+pohledy;babka;;👵;Babička si prohlédne pohled s chatou. „Krásná. Ale znám ji líp naživo.“;
+pohledy;meteorolog;;🧑‍🔬;Meteorolog si přečte jeden pohled. „Prý tu bylo krásné počasí. To psal někdo, kdo tu byl jen hodinu.“;
+pohledy;vnuk;;👦;„Pohledy? Ty patří na poštu. Pan Sedlák je odešle.“;
+babicka;vnuk;;🥰;Pepík babičku obejme i s peřinou. Mourek vyskočí z brašny a hned se uvelebí u kamen na poště. „Babi, Vánoce budou u nás!“;-babicka -perina -mourek babicka_dole ikona:vnuk:🥰 razitko
+babicka;posta;;🎩;Poštmistr smekne. „Paní Horáčková, babičky na pultu nenechávám. Pepík čeká na zastávce.“;
+perina;vnuk;;👦;„Peřina bez babičky? To ne. Já chci babičku i s peřinou.“;
+perina;posta;;👨‍🦳;„Peřinu tu nechat nemůžeš. Babička by mě zabila.“;
+mourek;vnuk;;😺;Mourek se nechá podrbat za ušima, ale z brašny nevyleze. Bez babičky ani krok.;
+mourek;posta;;😾;Mourek prskne na poštmistra. Na pultu by stejně sežral všechny známky.;
+*;stezka;;⛰️;Stezka nic nepotřebuje. Klepni na ni a vyraz.;
+*;lanovka;;🚡;Do kabinky se nic neposílá. Klepni na ni a sveze tě.;
+*;t_dopis;;📦;Na pult patří jen zásilky, které čekají. Vrátit něco můžeš poštmistrovi.;
+*;t_baterie;;📦;Na pult patří jen zásilky, které čekají. Vrátit něco můžeš poštmistrovi.;
+*;t_noviny;;📦;Na pult patří jen zásilky, které čekají. Vrátit něco můžeš poštmistrovi.;
+*;t_sneznice;;📦;Na pult patří jen zásilky, které čekají. Vrátit něco můžeš poštmistrovi.;
+*;*;;🤷;Nic se nestane.;

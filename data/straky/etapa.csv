@@ -1,0 +1,16 @@
+klic;hodnota
+datum;19. III.
+start;lzicky brejle dopis
+cil;lzicky_doruceno brejle_doruceno dopis_doruceno smir
+uvod;Ve Strakách nad Blýskavou mizí všechno, co se blýská: lžičky, brýle, náprstky i zvonek od kola. Sousedé se navzájem podezírají a hostinská už nenalévá učiteli. Dnes neseš náhradu: nové lžičky a nové brýle. Obojí se náramně blýská.|Každé druhé podání se něco stane. Dávej pozor, co máš v brašně.
+navod;Každé druhé podání se ve vsi něco ztratí.
+konec_nadpis;Zloděj má křídla
+konec_text;Na stole v hospodě leží všechno, co se ve Strakách za poslední rok ztratilo: lžičky, brýle, náprstky, zvonek od kola a tři prsteny. Sousedé se omluvili jeden druhému a hostinská zase nalévá učiteli. Straka sedí na věži a tváří se, že s tím nemá nic společného.|Brašna je prázdná. Raději si zkontroluj knoflíky u kabátu.
+pozadi;data/straky/pozadi.svg
+barvy;
+pocitadla;straka=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

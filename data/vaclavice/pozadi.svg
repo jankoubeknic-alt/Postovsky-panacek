@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Václavic: zimní noc, nahoře hradní brána, odtud se dolů vine zasněžená cesta kolem kovárny, chaloupky a lesa až ke kapli. Hvězdy. -->
+  <rect width="300" height="400" fill="#1F2A44"/>
+  <path d="M0 40H300V400H0Z" fill="#DDE4EC"/>
+  <path d="M60 20C150 60 40 120 150 160C250 200 60 240 150 290C230 330 120 360 150 400" stroke="#C3CCD8" stroke-width="26" fill="none"/>
+  <rect x="0" y="0" width="80" height="44" fill="#6A6A7A"/><path d="M20 44V24a14 14 0 0 1 28 0v20z" fill="#2E2A30"/>
+  <g fill="#3F6A4A"><path d="M230 250l16-40 16 40z"/><path d="M250 270l18-44 18 44z"/><path d="M200 290l14-34 14 34z"/></g>
+  <g fill="#FFFFFF"><circle cx="120" cy="12" r="1.5"/><circle cx="200" cy="20" r="1.2"/><circle cx="270" cy="10" r="1.5"/></g>
+</svg>

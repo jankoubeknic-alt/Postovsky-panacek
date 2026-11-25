@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Ozvěnova: hluboké údolí, nahoře lom se skalní stěnou, na levém svahu Hromadova chalupa,
+       na pravém Hromádkova, dole hospoda U Ozvěny a potok s lávkou. -->
+  <rect width="300" height="400" fill="#C8DCE4"/>
+  <path d="M0 60L70 20L120 50L150 30L190 50L230 18L300 60V200H0Z" fill="#9AA7A3"/>
+  <path d="M110 30L190 30L200 110L100 110Z" fill="#B8B2A6"/>
+  <g stroke="#8E877A" stroke-width="2"><path d="M120 46L130 104M150 38L148 106M178 44L172 104"/></g>
+  <path d="M0 100C40 110 70 170 90 260L0 260Z" fill="#7FA36E"/>
+  <path d="M300 100C260 110 230 170 210 260L300 260Z" fill="#7FA36E"/>
+  <path d="M0 260C60 240 100 226 150 222S240 240 300 260V400H0Z" fill="#9FBF84"/>
+  <!-- Hromadova chalupa vlevo -->
+  <rect x="14" y="150" width="70" height="46" fill="#E8DCC4"/>
+  <path d="M6 154L49 126L92 154Z" fill="#6B4A36"/>
+  <rect x="26" y="164" width="12" height="12" fill="#9DB5C8" stroke="#6B4A36" stroke-width="1.5"/>
+  <g stroke="#9C7A52" stroke-width="2"><path d="M86 196v-14M94 196v-14M102 196v-14M84 186h22"/></g>
+  <!-- Hromádkova chalupa vpravo s prázdným kurníkem -->
+  <rect x="216" y="150" width="70" height="46" fill="#E8DCC4"/>
+  <path d="M208 154L251 126L294 154Z" fill="#7A3B2C"/>
+  <rect x="262" y="164" width="12" height="12" fill="#9DB5C8" stroke="#7A3B2C" stroke-width="1.5"/>
+  <rect x="196" y="180" width="20" height="16" fill="#B08A5A"/>
+  <path d="M194 182L206 172L218 182Z" fill="#7A5A3A"/>
+  <g fill="#E6D9A8"><rect x="198" y="188" width="6" height="8"/><rect x="206" y="190" width="6" height="6"/></g>
+  <!-- hospoda U Ozvěny -->
+  <rect x="108" y="230" width="84" height="50" fill="#F0E6D0"/>
+  <path d="M100 234L150 204L200 234Z" fill="#8C4A3A"/>
+  <rect x="120" y="282" width="60" height="9" fill="#3B332E"/>
+  <text x="150" y="289" font-family="Georgia, serif" font-size="6" fill="#EDD9A8" text-anchor="middle">U OZVĚNY</text>
+  <g fill="#9DB5C8" stroke="#8C4A3A" stroke-width="1.5"><rect x="114" y="244" width="14" height="14"/><rect x="172" y="244" width="14" height="14"/></g>
+  <!-- potok a lávka -->
+  <path d="M0 320C60 310 120 330 180 318S260 312 300 320V346C250 340 190 350 130 344S40 342 0 350Z" fill="#6FA3B8"/>
+  <path d="M30 336h70" stroke="#8A6A4A" stroke-width="6"/>
+  <g stroke="#6B4A36" stroke-width="2"><path d="M34 332v-12M96 332v-12M34 322h62"/></g>
+  <g fill="none" stroke="#A9CCD8" stroke-width="1.5" opacity=".8"><path d="M150 330q8-4 16 0t16 0"/><path d="M220 326q8-4 16 0"/></g>
+  <!-- cesta a kvítí -->
+  <path d="M140 400C144 370 146 330 150 292H160C164 330 170 370 176 400Z" fill="#E4D6B6"/>
+  <g fill="#F2C86A"><circle cx="60" cy="380" r="3"/><circle cx="240" cy="372" r="3"/><circle cx="210" cy="388" r="3"/></g>
+  <g fill="#E07A7A"><circle cx="90" cy="372" r="3"/><circle cx="268" cy="384" r="3"/></g>
+</svg>

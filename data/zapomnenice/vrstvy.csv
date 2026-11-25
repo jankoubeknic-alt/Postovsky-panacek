@@ -1,0 +1,7 @@
+# Otazníky nad hlavami těch, kdo právě nevědí, kdo jsou. Při Zvonu 2/3 se zvonice chvěje.
+obrazek;podminka
+data/zapomnenice/zvoni.svg;pamet>=2
+data/zapomnenice/otaznik_zenich.svg;!zenich_vi
+data/zapomnenice/otaznik_nevesta.svg;!nevesta_vi
+data/zapomnenice/otaznik_farar.svg;!farar_vi
+data/zapomnenice/otaznik_mlynar.svg;!mlynar_vi

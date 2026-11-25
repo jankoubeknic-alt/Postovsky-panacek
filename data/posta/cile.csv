@@ -1,0 +1,13 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Ve dne jsou vidět lidé ve vsi, v noci skřítkové na poště.
+id;jmeno;ikona;x;y;skryt_kdyz
+posta;Pošta;🏤;50;16;
+pekarova;Maruška Pekařova;👩‍🍳;16;36;noc
+mlynska;Maruška od mlýna;👩;84;36;noc
+prednosta;Pan přednosta;👨‍💼;50;46;noc
+kantorova;Maruška Kantorova;👩‍🏫;16;62;noc
+hospodska;Maruška z hospody;👱‍♀️;84;62;noc
+pasacka;Maruška pasačka;👧;50;82;noc
+pecetitko;Skřítek Pečetítko;🧙;22;44;!noc
+obalka;Skřítek Obálka;🧝;50;58;!noc
+znamka;Skřítek Známka;🧚;78;44;!noc

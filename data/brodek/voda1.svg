@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Hladina 5+: řeka se rozlévá, lávka je mokrá -->
+  <path d="M0 100C60 92 120 104 180 96S260 92 300 98V272C240 278 170 266 110 274S30 270 0 276Z" fill="#4F7F8F" opacity=".5"/>
+  <g fill="none" stroke="#9BC0CA" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M60 120q10-5 20 0t20 0"/><path d="M210 180q10-5 20 0t20 0"/></g>
+</svg>

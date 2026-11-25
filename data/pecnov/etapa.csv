@@ -1,0 +1,16 @@
+klic;hodnota
+datum;20. II.
+start;rada_viden rada_brno rada_linec rada_praha
+cil;viden_doruceno brno_doruceno linec_doruceno praha_doruceno pec_stoji chleba_doruceno
+uvod;Pec nám spadla, pec nám spadla, kdopak nám ji postaví? Starý pecař není doma a mladý to neumí. V Pecnově to zpívá celá ves, protože je to pravda. Starý pecař je na vandru a z každého města poslal psaní s jednou radou.|Psaní dorazila všechna najednou a bez data. Mladý pecař staví podle toho, co mu doneseš. Když postaví něco dřív, než má, pec zase spadne.
+navod;Pec se staví odspodu. Rady ve psaních prozradí pořadí.
+konec_nadpis;Pec stojí
+konec_text;Pec stojí, hřeje a voní chlebem. Mladý pecař už umí a starý pecař se vrátil z vandru, sedl si na lavici a řekl jen: „No vida.“ Ves zpívá novou sloku, kterou si sama vymyslela: Pec nám stojí, pec nám stojí, postavil ji pošťák.|Brašna je prázdná. Dostal jsi první bochník. Ještě teplý, z nové pece.
+pozadi;data/pecnov/pozadi.svg
+barvy;
+pocitadla;faze=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;faze:Pec:4
+prohra;
+prohra_text;

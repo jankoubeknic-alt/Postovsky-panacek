@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Krakonošova: nahoře hory, vlevo chaloupka kořenářky, vpravo statek, vlevo les s houbařem,
+       vpravo milíř, uprostřed cesta s poutníkem, dole pekárna a hospoda. -->
+  <rect width="300" height="400" fill="#C9D4DC"/>
+  <path d="M0 110L60 40L110 90L170 20L230 80L300 30V140H0Z" fill="#7A8A8A"/>
+  <path d="M150 34L170 20L188 38L176 36L170 30L160 38Z" fill="#F4F6F8"/>
+  <path d="M0 130C90 120 210 126 300 118V400H0Z" fill="#9FB386"/>
+  <!-- chaloupka kořenářky -->
+  <rect x="6" y="104" width="76" height="46" fill="#C9A77A"/>
+  <path d="M0 106L44 82L88 106Z" fill="#5E7A4A"/>
+  <!-- statek -->
+  <rect x="210" y="100" width="86" height="54" fill="#E9D3A8"/>
+  <path d="M204 102L253 74L302 102Z" fill="#8A3A3A"/>
+  <path d="M210 154h86" stroke="#6B4A2E" stroke-width="3"/>
+  <!-- les -->
+  <g fill="#3F6A44"><path d="M4 230L22 172L40 230Z"/><path d="M30 234L50 166L70 234Z"/><path d="M62 230L78 180L94 230Z"/></g>
+  <!-- milíř -->
+  <path d="M214 230C220 196 270 196 278 230Z" fill="#4A4036"/>
+  <path d="M246 196c-4-10 6-14 2-24" stroke="#8A8A8A" stroke-width="3" fill="none" opacity=".7"/>
+  <!-- cesta -->
+  <path d="M120 400C130 330 160 290 150 250C144 220 160 200 170 160L186 160C176 200 166 222 172 250C182 290 160 330 176 400Z" fill="#D8C9A2"/>
+  <!-- pekárna -->
+  <rect x="6" y="310" width="90" height="64" fill="#F1E3C6"/>
+  <path d="M0 312L51 288L102 312Z" fill="#C98A3A"/>
+  <!-- hospoda -->
+  <rect x="200" y="310" width="94" height="64" fill="#E3CDA6"/>
+  <path d="M194 312L247 286L300 312Z" fill="#6B4A3A"/>
+  <text x="247" y="326" font-family="Georgia, serif" font-size="6.5" fill="#4A3A2E" text-anchor="middle">U TŘÍ PŘEVLEKŮ</text>
+</svg>

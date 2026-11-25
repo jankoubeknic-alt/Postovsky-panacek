@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zlomený žebřík leží pod domem, kominík zůstal na střeše -->
+  <g stroke="#8C7A5E" stroke-width="2.4" stroke-linecap="round"><path d="M70 176L102 170M72 184L104 178M78 175l2 8M88 173l2 8M98 171l2 8"/>
+  <path d="M84 166L76 150M92 166L86 152M78 156h10"/></g>
+  <g fill="#4A3F33" font-family="Georgia, serif" font-size="8" font-weight="700"><text x="96" y="152">křup</text></g>
+</svg>

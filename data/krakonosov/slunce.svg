@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Slunce nad vsí a malý mráček jen nad statkářovým polem -->
+  <circle cx="130" cy="60" r="18" fill="#F2D24A"/>
+  <ellipse cx="253" cy="66" rx="30" ry="12" fill="#6B7280"/>
+  <g stroke="#9DBCD0" stroke-width="1.2"><path d="M236 80l-4 10M248 80l-4 10M260 80l-4 10M272 80l-4 10"/></g>
+</svg>

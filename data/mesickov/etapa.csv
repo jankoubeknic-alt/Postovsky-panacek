@@ -1,0 +1,16 @@
+klic;hodnota
+datum;10. I.
+start;dopis_mesickum satek
+cil;satek_doruceno fialky_doruceno jahody_doruceno jablka_doruceno led_doruceno poradek
+uvod;V Měsíčkově je hluboký leden. Starostova dcera Holena si poslala dopis bratřím měsíčkům na horu. Chce fialky, jahody a jablka. Hned, teď, v lednu.|Nahoře u ohně sedí dvanáct měsíčků a vládne ten, kdo drží hůl. Komu ji dáš, ten má svůj čas, a s ním se promění celá ves. Jen pozor, co v jednom období roste, to v jiném zvadne, zmrzne nebo roztaje.
+navod;Komu z bratrů dáš hůl, ten vládne. Co patří jednomu období, v jiném nevydrží.
+konec_nadpis;Leden zase vládne
+konec_text;Hůl se vrátila Lednu a ves zase zapadala sněhem. Holena snědla jahody, rozdala jablka a fialky si dala do vázy. Poprvé v životě řekla děkuju. Maruška chodí v teplém šátku a hostinský má v ledárně led na celé léto.|Brašna je prázdná. Bratři měsíčkové ti u ohně ohřáli ruce. Bratr Duben ti pošeptal, že příště přijde dřív.
+pozadi;data/mesickov/pozadi.svg
+barvy;
+pocitadla;obdobi=1
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

@@ -1,0 +1,9 @@
+# Hromádka dřeva vrátí všechny svazky (vlajka rozloz). Při třinácti druzích je stoleček hotový.
+podminka;efekt;text
+rozloz h_dal;+svazek_hajny !h_dal;
+rozloz s_dal;+svazek_sadar !s_dal;
+rozloz ko_dal;+svazek_kosikar !ko_dal;
+rozloz kl_dal;+svazek_kolar !kl_dal;
+rozloz m_dal;+svazek_mlynar !m_dal;
+rozloz;druhy=2 !rozloz;Truhlář rozloží dříví zpátky do svazků. Zase má jen buk a dub.
+druhy=13 !stolecek;stolecek ikona:truhlar:🪑;Třináct druhů, ani o jeden víc. Truhlář sedne k ponku a stoleček je hotový dřív, než lucky obejdou ves.

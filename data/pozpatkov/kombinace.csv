@@ -1,0 +1,79 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Pozpátkov: odpověď způsobí, co se v ní píše. Kdo ji dostane, napíše otázku. Otázka pak jde tomu, kdo odpověděl.
+karta;cil;podminka;vyraz;text;efekt
+?;starosta;zadost_doruceno stiznost_doruceno zebrik_doruceno;🎩;„Nashledanou!“ zamává starosta. „Všechno je, jak bylo. Teď mi dej moje poděkování, ať konečně vím, za co jsem ti děkoval.“;
+?;starosta;;🎩;„Nashledanou!“ zahlaholí starosta místo pozdravu. „V Pozpátkově chodí odpovědi dřív než otázky. Na odpovědích není jméno, protože se ještě nikdo nezeptal. Najdi, kdo se zeptá.“ Hodiny na radnici nad ním jdou pozpátku.;
+?;kominik;zebrik_doruceno;🧑‍🏭;Kominík čistí komín zdola nahoru. Saze mu padají vzhůru. Tady je to normální.;
+?;kominik;kominik_nahore objednavka_odeslana;😰;„Už jede? Už jede žebřík?“ volá kominík ze střechy. „Odeslali ho přece dřív, než jsem si ho objednal!“;
+?;kominik;kominik_nahore;😰;Kominík sedí na střeše u komína. „Hoď tu objednávku do schránky! Jinak tu budu sedět, dokud nepřijde odpověď. A ta už přišla.“;
+?;kominik;;🧑‍🏭;Kominík Saze stojí u domu se starým žebříkem. Žebřík vrže při každém pohledu. „Vydrží ještě sto let,“ tvrdí kominík a leze nahoru pozpátku.;
+?;schranka;;📮;Poštovní schránka. Výběr: 17:00, 16:00, 15:00. Dopisy se z ní vybírají dřív, než je kdo hodí dovnitř.;
+?;marie;zadost_doruceno;💍;Marie vyšívá na kapesník monogram. Dvě písmena, ale napřed to druhé.;
+?;marie;;👩;Marie sedí u okna v přízemí a zacpává si uši. „Někdo mi pod oknem pořád troubí. Kdyby přestal, možná bych mu řekla ano.“;
+?;ucitel;zadost_doruceno;😌;Učitel uklízí trubku do pouzdra. Navždy. Ve vsi je poprvé za deset let ticho.;
+?;ucitel;;🎺;Učitel Troubil troubí pod Mariiným oknem pochod od konce. Falešně. „Jednou se jí zeptám,“ povzdychne. „Až budu vědět, že řekne ano.“;
+?;kovar;;⚒️;Kovář Buchal kove podkovu od konce: nejdřív ji zchladí, pak rozžhaví. Na Marii občas kouká přes kovadlinu. Na nic nehraje, jen buší.;
+?;vrana;stiznost_doruceno;😅;Vrána drží kozu Lízu na provaze. Koza se tváří ukřivděně, protože mrkev snědla až potom, co se za ni omluvil.;
+?;vrana;koza_u_fary;😬;Vrána kouká přes plot, jak jeho koza Líza okusuje farní mrkev. „To bude průšvih. Ale omluvu už jsem poslal, ne?“;
+?;vrana;;👨‍🌾;Sedlák Vrána drbe kozu Lízu za ušima. „Líza je hodná. Zatím nic neprovedla.“ Koza se přes plot dívá na farní zahradu.;
+?;farar;stiznost_doruceno;👴;Farář zalévá, co zbylo z mrkve. „Aspoň vím, za co se mi Vrána omlouval.“;
+?;farar;koza_u_fary;😠;Farář honí kozu po zahradě. „Moje mrkev! Ještě ráno tu byla, tedy až zítra!“;
+?;farar;;👴;Farář Pšenička pyšně zalévá mrkev. Na plotě visí chomáč kozích chlupů. „Ten tu bude až zítra,“ vysvětluje. „V Pozpátkově se chlupy objeví dřív než koza.“;
+napoveda;*;!zadost_doruceno !@zadost;💡;Marie odpověděla ano, ale ještě neví komu. Kdo se jí teprve zeptá? Prý ten, kdo jí pod oknem dělá rámus.;
+napoveda;*;@zadost;💡;Žádost o ruku je pro Marii v okně.;
+napoveda;*;!stiznost_doruceno !@stiznost;💡;Vrána se omlouvá za kozu. Komu by jeho koza mohla něco provést? Kdo má na plotě kozí chlupy dřív než kozu?;
+napoveda;*;@stiznost;💡;Stížnost doruč Vránovi.;
+napoveda;*;!zebrik_doruceno !kominik_nahore;💡;Železářství posílá nový žebřík. Kdo leze nejvýš a má ten nejstarší?;
+napoveda;*;@objednavka;💡;Objednávka patří do poštovní schránky.;
+napoveda;*;@zebrik;💡;Žebřík je pro kominíka na střeše.;
+napoveda;*;!podekovani_doruceno;💡;Každá odpověď už má svou otázku. Teď dones starostovi jeho poděkování.;
+odpoved_marie;ucitel;;😳;Učitel si přečte: „Ano, vezmu si tě. Ale jen když přestaneš troubit.“ Trubka mu vypadne z ruky. „Ona řekne ano! Tak to se jí musím zeptat!“ Sedne na obrubník a píše žádost o ruku.;-odpoved_marie +zadost ikona:ucitel:😳
+odpoved_marie;kovar;;😳;Kovář se začervená až po kovadlinu. „Ano? Mně?“ Pak dočte: „…přestaneš troubit.“ Smutně ti dopis vrátí. „Já netroubím. Já buším.“;
+odpoved_marie;marie;;👩;Marie si přečte vlastní odpověď. „To jsem psala já? Ale komu? Nikdo se mě ještě nezeptal.“ Vrátí ti ji.;
+odpoved_marie;starosta;;🎩;„Odpověď od Marie? Ženich bude ten, kdo jí troubí pod oknem. Říkám to jen tak.“;
+odpoved_marie;farar;;👴;„Ano, vezmu si tě? Já jsem farář, chlapče. Já oddávám, nežením se.“;
+odpoved_marie;vrana;;👨‍🌾;„Mě si nikdo nevezme. Mám kozu.“;
+odpoved_marie;kominik;;🧑‍🏭;„Ano? Na co ano? Já se nikoho na nic neptal.“;
+odpoved_marie;schranka;;📮;Odpověď do schránky nepatří. Tu už Marie jednou odeslala.;
+odpoved_vrana;farar;;😠;Farář si přečte omluvu. „Za kozu? Žádná koza mi nic neprovedla.“ V tu chvíli přeskočí plot Vránova koza a pustí se do farní mrkve. „Ach tak. Tak to si stěžovat musím.“ Sedne a píše stížnost.;-odpoved_vrana +stiznost koza_u_fary ikona:farar:😠
+odpoved_vrana;vrana;;👨‍🌾;Vrána si přečte vlastní omluvu. „Za kozu? Moje Líza je hodná. Zatím.“ Vrátí ti ji.;
+odpoved_vrana;kovar;;⚒️;„Koza? Mně nic nesežrala. Jen jsem ji jednou okoval.“;
+odpoved_vrana;ucitel;;🎺;„Koza? Ta mi loni sežrala noty. Ale to byla jiná koza.“;
+odpoved_vrana;marie;;👩;„Omluva za kozu? Kytky mám v okně, tam koza nedosáhne.“;
+odpoved_vrana;kominik;;🧑‍🏭;„Koza na střeše? Tu jsem tu měl jen jednou.“;
+odpoved_vrana;starosta;;🎩;„Vránova Líza chodí ke každému, kdo má mrkev. A mrkev má jen farář.“;
+odpoved_vrana;schranka;;📮;Omluva do schránky nepatří. Vrána ji už odeslal.;
+odpoved_zelezarstvi;kominik;;😰;Kominík si přečte: „Nový žebřík jsme vám odeslali.“ „Nový? Ten můj je v pořádku.“ Vyleze na střechu a žebřík pod ním křupne. „Tak to si ho objednat musím!“ Napíše objednávku a hodí ti ji ze střechy.;-odpoved_zelezarstvi +objednavka kominik_nahore ikona:kominik:😰
+odpoved_zelezarstvi;farar;;👴;„Žebřík? Na zvonici chodím po schodech.“;
+odpoved_zelezarstvi;kovar;;⚒️;„Žebřík si ukovu sám. Ze železa. Jenže by ho nikdo neunesl.“;
+odpoved_zelezarstvi;ucitel;;🎺;„Žebřík? K Marii do okna? Ta bydlí v přízemí.“;
+odpoved_zelezarstvi;vrana;;👨‍🌾;„Žebřík? Na kozu? Ta vyleze všude sama.“;
+odpoved_zelezarstvi;marie;;👩;„Na co žebřík? Bydlím v přízemí.“;
+odpoved_zelezarstvi;starosta;;🎩;„Žebřík potřebuje ten, kdo leze vysoko. Nejvýš u nás leze kominík. A jeho žebřík je starší než já.“;
+odpoved_zelezarstvi;schranka;;📮;Dodací list do schránky nepatří. Železářství ho už odeslalo.;
+zadost;marie;;💍;Marie si přečte žádost o ruku a rozzáří se. „Tak proto jsem předevčírem odpověděla ano! Teď to konečně dává smysl.“ Pod oknem je ticho. Učitel už netroubí.;-zadost zadost_doruceno ikona:marie:💍 ikona:ucitel:😌 razitko
+zadost;ucitel;;😳;„To jsem psal já. Pro Marii! Honem, ať na otázku nečeká. Odpověď má už od předevčírem.“;
+zadost;schranka;;📮;Marie bydlí přes ulici. Žádost o ruku se nosí osobně.;
+zadost;*;;🤷;„Žádost o ruku? Ta je pro Marii. Sedí v okně.“;
+stiznost;vrana;;😅;Vrána si přečte stížnost a plácne se do čela. „Tak za tohle jsem se omlouval! Konečně vím za co.“ Kozu Lízu uváže a farářovi pošle pytel mrkve. Vlastně ho poslal už včera.;-stiznost stiznost_doruceno !koza_u_fary ikona:vrana:😅 ikona:farar:👴 razitko
+stiznost;farar;;😠;„To jsem psal já. Pro Vránu. Ať ví, za co se omlouval.“;
+stiznost;schranka;;📮;Vrána bydlí hned za plotem. Stížnost mu dones rovnou.;
+stiznost;*;;🤷;„Stížnost na kozu? Ta je pro sedláka Vránu.“;
+objednavka;schranka;;📮;Hodíš objednávku do schránky. Brašna ti ve stejné chvíli ztěžkne: přibyl balík se žebříkem. Železářství ho odeslalo dřív, než sis ho objednal.;-objednavka objednavka_odeslana +zebrik
+objednavka;kominik;;😰;„Hoď ji do schránky! Žebřík už přece jede. Jen si ho musím objednat.“;
+objednavka;*;;🤷;„Objednávka pro železářství? Ta patří do schránky.“;
+zebrik;kominik;;🧑‍🏭;Opřeš nový žebřík o střechu a kominík sleze dolů. „Díky! Teď už vím, proč jsem si ho objednal.“;-zebrik zebrik_doruceno !kominik_nahore ikona:kominik:🧑‍🏭 razitko
+zebrik;*;;🤷;„Žebřík? Ten je pro kominíka. Pořád sedí na střeše.“;
+podekovani;starosta;zadost_doruceno stiznost_doruceno zebrik_doruceno;😊;Starosta si přečte poděkování, které ti napsal ráno. „Díky, pošťáku, žes nám dal všechno do pořádku.“ Rozhlédne se po vsi. „Konečně vím, za co!“;-podekovani podekovani_doruceno ikona:starosta:😊 razitko
+podekovani;starosta;;🎩;Starosta si poděkování přečte a škrábe se na hlavě. „Ještě není za co. Přines mi ho, až to bude pravda.“;
+podekovani;schranka;;📮;Poděkování je tvoje. Do schránky nepatří, leda bys ho chtěl poslat sám sobě. Včera.;
+podekovani;*;;🤷;„Od starosty? Ten ti poděkoval předem. Jako my všichni.“;
+*;*;;🤷;Nic se nestane.;

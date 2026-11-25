@@ -1,0 +1,9 @@
+# Odložené věci: počítadla odpočítávají tahy. Při 1 se stane, co se má stát, a počítadlo se vynuluje.
+podminka;efekt;text
+;cas+1;
+podpis=1;+povoleni podpis=0;Starosta konečně dopsal poslední písmeno podpisu. Povolení je hotové a máš ho v brašně.
+podpis>1;podpis-1;
+probouzeni=1;blesk_vzhuru probouzeni=0 ikona:blesk:🐌;Šnek Blesk vystrčil z ulity jedno tykadlo, pak druhé. Je vzhůru!
+probouzeni>1;probouzeni-1;
+pistole=1;pistole_dorazila pistole=0;Před poštou zastavil poštovní vůz. Startovní pistole dorazila!
+pistole>1;pistole-1;

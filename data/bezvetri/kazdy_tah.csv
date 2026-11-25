@@ -1,0 +1,5 @@
+# Vichřice: když vítr unikne na špatném místě, rozfouká papíry z brašny po vsi.
+podminka;efekt;text
+vichr @dopis;-dopis uletel_dopis;Dopis ti vyletěl z brašny a zachytil se nahoře na kostelní korouhvičce.
+vichr @drak;-drak uletel_drak;Papírový drak se utrhl a letí na kopec za vsí.
+vichr;!vichr;Vichr se prohnal vsí, strhl prádlo, klobouky i noviny a pak se schoval zpátky do krabice.

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Hromada smetí před Pavlíniným prahem -->
+  <path d="M222 178C226 160 250 156 262 166C272 158 292 164 294 180Z" fill="#8A7A5A"/>
+  <g fill="#6A5A3A"><circle cx="236" cy="172" r="3"/><circle cx="270" cy="170" r="2.5"/><rect x="250" y="162" width="8" height="4" transform="rotate(20 254 164)"/></g>
+</svg>

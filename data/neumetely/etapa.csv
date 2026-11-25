@@ -1,0 +1,16 @@
+klic;hodnota
+datum;6. VII.
+start;prosba dopis_horymir oves
+cil;prosba_dorucena horymir_doruceno svoboda horymirova_doruceno
+uvod;Vladyka Horymír z Neumětel se pohádal s havíři, kteří mu šlapali pole. Kníže ho dal zavřít na hrad a ráno má být souzen. Sedláci napsali za Horymíra prosbu a jeho žena mu píše dopis. Jenže hradní brána je zavřená a vrátný bez propustky nikoho nepustí.|Ve stáji u Horymírů stojí jeho kůň Šemík. Prý umí skočit přes cokoli. Ale poslouchá jen svého pána.
+navod;Uvnitř hradu a venku jsou jiní lidé. Šemík přeskočí hradbu, když ho někdo umí zavolat.
+konec_nadpis;Šemíkův skok
+konec_text;Horymír objel na Šemíkovi nádvoří jednou, podruhé a potřetí. Pak Šemík vzlétl přes hradbu, přeletěl skálu a dopadl do řeky. Doplaval až domů do Neumětel. Kníže se smál, až se za břicho popadal, a Horymírovi odpustil. Havíři od té doby chodí kolem polí po cestě.|Brašna je prázdná. Šemík ti na rozloučenou něco zašeptal do ucha. Bylo to „hop“. Raději jsi nikam neskočil.
+pozadi;data/neumetely/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

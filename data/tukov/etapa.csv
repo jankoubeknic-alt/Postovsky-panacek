@@ -1,0 +1,16 @@
+klic;hodnota
+datum;4. VI.
+start;roze_a roze_b kure_a kure_b kos_a kos_b
+cil;ruze_doruceno parohy_doruceno kure_doruceno kura_doruceno kos_doruceno kosik_doruceno
+uvod;Ťukovští si objednávají zboží z Prahy telegrafem. Jenže telegraf neumí háčky ani čárky. Kdo telegrafoval RŮŽE, ten napsal ROZE, a v Praze si z toho vybrali, co chtěli.|Ranním vlakem přišlo šest balíků. Na každém je jen slovo z telegramu: dvakrát ROZE, dvakrát KURE a dvakrát KOS. Komu který patří, musíš poznat sám.
+navod;Na balících jsou slova bez háčků a čárek. Co je uvnitř a kdo si to objednal?
+konec_nadpis;Háčky a čárky
+konec_text;Nevěsta má na svatbě růže a myslivec má nad dveřmi parohy. Kuchař peče kuře a koželuh vyčiní kůži kůrou. Sbormistr má kosa a houbařka koš. Telegrafistka Ťuková napsala do Prahy stížnost. Bez háčků, takže v Praze nepochopili, že je to stížnost.|Brašna je prázdná. Telegrafistka ti na rozloučenou vyťukala: DEKUJEME POSTAKU. Doufáš, že to znamená děkujeme.
+pozadi;data/tukov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

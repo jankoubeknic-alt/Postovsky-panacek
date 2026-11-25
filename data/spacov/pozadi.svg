@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Spáčova: nahoře hora Blaník se skálou a strážcem, dole ves s úřadem, statkem, domem nevěsty a hostincem. -->
+  <rect width="300" height="400" fill="#D8E0E8"/>
+  <path d="M0 200C40 120 90 60 150 50C210 60 260 120 300 200Z" fill="#7A8A6A"/>
+  <path d="M110 200C110 150 130 120 150 120C170 120 190 150 190 200Z" fill="#5A5A50"/>
+  <path d="M0 200H300V400H0Z" fill="#B8CC98"/>
+  <rect x="10" y="200" width="84" height="54" fill="#EDE6D2"/><path d="M4 202L52 178L100 202Z" fill="#8A3A3A"/>
+  <rect x="206" y="200" width="88" height="54" fill="#E3CDA6"/><path d="M200 202L250 176L300 202Z" fill="#7A5A3A"/>
+  <rect x="40" y="304" width="76" height="52" fill="#E7C9A0"/><path d="M34 306L78 282L122 306Z" fill="#9A4A3A"/>
+  <rect x="184" y="304" width="84" height="52" fill="#E8D8C0"/><path d="M178 306L226 280L274 306Z" fill="#6B4A3A"/>
+</svg>

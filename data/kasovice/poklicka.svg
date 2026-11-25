@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Hrnec je zavřený pokličkou -->
+  <path d="M130 76Q150 62 170 76Z" fill="#7A7A7A" stroke="#4A4A4A" stroke-width="1.2"/>
+  <circle cx="150" cy="66" r="3" fill="#4A4A4A"/>
+</svg>

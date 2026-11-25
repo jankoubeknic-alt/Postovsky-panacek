@@ -1,0 +1,16 @@
+klic;hodnota
+datum;13. XI.
+start;dopis_vdova stetky ucebnice dopis_domovnice
+cil;vdova_doruceno stetky_doruceno ucebnice_doruceno domovnice_doruceno tolar_doruceno
+uvod;Ve Faustově domě odnesl kdysi čert doktora Fausta stropem. Od té doby je v domě díra skrz všechna patra a nedá se zalepit. Co zedník přes den zazdí, to je ráno pryč. Schodiště zazdili, aby čert nechodil po schodech, a tak se teď v domě všechno posílá košem na provaze dírou ve stropě.|Kominík v podkroví tahá koš nahoru. Cestou jede kolem každého patra a kdo chce, ten si z něj něco vezme.
+navod;Koš jede dírou nahoru kolem všech pater. Kdo z něj co vezme?
+konec_nadpis;Díra zůstala
+konec_text;Vdova Kukaňová čte dopis od sestry už potřetí. Kominík vymetl komín a saze vzbudily studenta Mladeckého. Ten našel ve své učebnici stříbrný tolar, prý ještě Faustův. Domovnice z něj zaplatila zedníka a zedník díru zase zazdil. Ráno byla zpátky.|Brašna je prázdná. Domovnice ti dala klíč od domu. Je ti k ničemu, dveře se tu nezamykají. Díra ve stropě taky ne.
+pozadi;data/faust/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

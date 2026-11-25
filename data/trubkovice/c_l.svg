@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Šipka výhybky c_l -->
+  <path d="M220.0 210.0L212.9 230.8" stroke="#F2D24A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M210.0 239.3L205.3 228.3L220.5 233.4Z" fill="#F2D24A" stroke="#6B4A2E" stroke-width="1"/>
+</svg>

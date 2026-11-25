@@ -1,0 +1,5 @@
+# Nitě od vahadla k loutkám. Zamotané, dokud se loutkář nevzbudí. Žebřík k lávce, když je nahoře.
+obrazek;podminka
+data/loutkov/nite.svg;!rozmotano
+data/loutkov/rozmotano.svg;rozmotano
+data/loutkov/zebrik.svg;zebrik_nahore

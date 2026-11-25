@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Vrstva dolu: hnědá skála se dřevěnou výztuží chodby a kolejemi, nahoře šachta s klecí. -->
+  <rect width="300" height="400" fill="#4A3B30"/>
+  <path d="M0 120H300V340H0Z" fill="#6E5A48"/>
+  <g stroke="#9A7650" stroke-width="10"><path d="M40 120V340M150 120V340M260 120V340"/><path d="M20 125H280"/></g>
+  <g stroke="#3A3A3A" stroke-width="4"><path d="M0 330H300M0 345H300"/></g>
+  <rect x="215" y="0" width="50" height="120" fill="#2E2620"/><rect x="222" y="60" width="36" height="50" fill="none" stroke="#B0A090" stroke-width="3"/>
+</svg>

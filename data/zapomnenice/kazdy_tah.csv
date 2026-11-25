@@ -1,0 +1,8 @@
+# Po každém podání se provedou všechny řádky, jejichž podmínka platí, popořadě. text se ukáže v okénku jako „mezitím“.
+podminka;efekt;text
+;pamet+1;
+pamet>=3 !uzel_zenich;!zenich_vi;
+pamet>=3 !uzel_nevesta;!nevesta_vi;
+pamet>=3 !uzel_farar;!farar_vi;
+pamet>=3 !uzel_mlynar;!mlynar_vi;
+pamet>=3;pamet=0;Bim bam! Odbil zvon a celá ves zapomněla, co se právě dělo.

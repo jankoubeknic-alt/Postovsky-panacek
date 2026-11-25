@@ -1,0 +1,46 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Třířečí: adresy a přání jsou po hanácku, valašsku a ostravsku. Jablóška jsou brambory, ogar je kluk, bača je šéf salaše.
+karta;cil;podminka;vyraz;text;efekt
+?;hanak;!pytel_doruceno;👨‍🌾;Hanák si hladí břicho. „Dé mně jablóška, ať mám co k obědu. Ale ne ty ze stromu, ty co rostó v zemi.“;
+?;hanak;;👨‍🌾;Hanák spokojeně sedí na pytli. „Jablóška só. Na Hané sa dobře žije.“;
+?;holcicka;!kosik_doruceno;👧;Holčička se houpe na židli. „Babička mi posílá jablíčka. Červená, ze stromu.“;
+?;holcicka;;🍎;Holčička chroupe jablíčko.;
+?;hostinska;;👩‍🍳;Hostinská utírá sklenice. „Tady se mluví třemi řečmi. Hanák řekne jablóška a myslí brambory. Ostravák řekne ogar a myslí kluka. A bača je na salaši šéf, ne každý ovčák.“;
+?;ogar;!ogar_doruceno;⛑️;Mladý horník si upravuje přilbu. „Za hodinu jedu na grubu, mám ranní šichtu. Kaj je moje pošta?“;
+?;ogar;!frgal_doruceno;⛑️;„Baba z Valašska mi měla poslat frgál. Bez frgálu na šichtu nejedu.“;
+?;ogar;;⛑️;Mladý horník ukusuje frgál. „Fajne!“;
+?;havir;;👴;Starý horník kouří dýmku. „Já už na šichtu nejezdím, já už jsem v penzi. Ogar je tamten mladý, s přilbou.“;
+?;baca;!baca_doruceno;🧔;Bača se opírá o valašku. „Já som bača. Ovce hlídá Jura, ale za bryndzu odpovídám já.“;
+?;baca;;🧔;Bača počítá, kolik bryndzy prodá družstvu.;
+?;valach;!jura_doruceno;🐑;Ovčák s ovcemi se usměje. „Já su Jura, valach. Bača je tam ten s valaškou.“;
+?;valach;;🐑;Jura se dívá na kostelík na pohledu a vzdychá.;
+?;vypravci;;🚉;Výpravčí hledí na hodinky. „Vlak má zpoždění. Za tu dobu se tu všichni naučíte mluvit všema třema řečma.“;
+pytel;hanak;;🥔;Hanák rozváže pytel a rozzáří se. „Jablóška! Ty pravý, co rostó v zemi.“;-pytel pytel_doruceno ikona:hanak:🥔 razitko
+kosik;holcicka;;🍎;Holčička obejme košík. „Jablíčka od babičky!“;-kosik kosik_doruceno razitko
+frgal;ogar;;🥧;Ogar si vezme frgál a voní k němu. „Od baby! To je fajne. Teď můžu na grubu.“;-frgal frgal_doruceno razitko
+dopis_ogar;ogar;;⛑️;Mladý horník čte dopis od mámy a trochu se červená. „Ať si vezmu svetr na šichtu. Dycky to samé.“;-dopis_ogar ogar_doruceno razitko
+dopis_baca;baca;;🧔;Bača čte dopis z družstva a kývá. „Výkup bryndzy. Dobře. Aspoň sa bude co prodat.“;-dopis_baca baca_doruceno razitko
+dopis_jura;valach;;🐑;Jura otočí pohled a čte. Pak se usmívá a ovce taky. „Od frajárky!“;-dopis_jura jura_doruceno razitko
+kosik;hanak;;👨‍🌾;Hanák se podívá do košíku. „To só jablka ze stromu. Já chco jablóška, co rostó v zemi.“;
+pytel;holcicka;;👧;Holčička nahlédne do pytle. „To jsou brambory! Já chci jablíčka.“;
+frgal;havir;;👴;Starý horník se zasní. „Frgál… To je pro ogara, ne pro penzistu. Ten mladý s přilbou.“;
+dopis_ogar;havir;;👴;„Na ranní šichtu? Já už jezdím jen na ranní procházku. Ogar je ten mladý.“;
+dopis_ogar;holcicka;;👧;„Ogar je kluk. Já jsem holka!“;
+dopis_baca;valach;;🐑;„Já su jen valach, ovce pasu. Bača je tamten s valaškou.“;
+dopis_jura;baca;;🧔;„Pohled pro Juru? Ten je valach, pase ovce. Já som bača.“;
+frgal;baca;;🧔;„Frgál z Valašska poznám po vůni. Ale tenhle je pro nějakého vnuka.“;
+kosik;ogar;;⛑️;„Jablíčka? Na grubu si beru frgál, ne jablka.“;
+pytel;hostinska;;👩‍🍳;„Brambory bych brala, ale tyhle si objednal Hanák. Ten jim říká jablóška.“;
+napoveda;*;!pytel_doruceno;💡;Na Hané se bramborám říká jablóška. Jablka ze stromu chce někdo jiný.;
+napoveda;*;!ogar_doruceno nebo !frgal_doruceno;💡;Ogar je po ostravsku kluk. Na šichtu jede mladý horník, ne ten v penzi.;
+napoveda;*;;💡;Bača je hlavní na salaši. Ovce pase valach Jura.;
+*;vypravci;;🚉;„Já mám na starosti vlaky, ne poštu.“;
+*;hostinska;;👩‍🍳;„To není pro mě. Zeptej se, kdo co chce. Ale poslouchej pořádně.“;
+*;*;;🤷;„Cože? To není pro mě.“;

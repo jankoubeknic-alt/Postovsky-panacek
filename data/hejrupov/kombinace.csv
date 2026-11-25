@@ -1,0 +1,57 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Hejrupov: kdo dostane poštu nebo koho zavoláš, přijde k máji a čeká p1 až p4 podání (4, 3, 2, 1).
+# Když čekají všichni naráz, máj se postaví. Volat se dají i znovu, ale každé zavolání je tah.
+karta;cil;podminka;vyraz;text;efekt
+dopis_dedove;kluci;;👦;„Penze? To by bylo bonbonů! Ale je pro dědu Vávru.“;
+dopis_kluci;dedove;;👴;„Tramvaj! Za nás jezdila po Praze koňka. To je pro kluky.“;
+dopis_kovar;hasici;;🧑‍🚒;„Mříž? My hasíme, nekujeme. Kovář je u brodu.“;
+dopis_hasici;kovar;;🔨;„Soutěž v útoku? Já útočím jen na železo. To je pro hasiče.“;
+carodejnice;maj;;🌲;Na máj se věší věnec a stužky. Čarodějnice patří na hranici.;
+carodejnice;kluci;;👦;„Už je hotová! Teď hurá na hranici.“;
+carodejnice;hospodska;;👩‍🍳;Hospodská se zasměje. „Ten šátek je můj! No, ať hoří.“;
+slama;sedlak;;👨‍🌾;„Slámu mi nevracej. Ať z ní kluci udělají babu.“;
+slama;hranice;;🪵;Holá sláma shoří za vteřinu. Kluci z ní udělají čarodějnici.;
+dopis_dedove;dedove;;👴;Dědové si sednou pod máj. „My počkáme. My máme času dost.“ Dopis si strčí za košili.;-dopis_dedove dedove_doruceno p1=4 razitko
+?;dedove;maj;👴;Dědové se dívají na máj a jsou na něj pyšní.;
+?;dedove;p1>0;👴;Dědové čekají u máje. Ještě to chvíli vydrží.;
+?;dedove;dedove_doruceno;👴;Zavoláš na ně a dědové se vrátí k máji.;p1=4 cekej
+?;dedove;;👴;Dědové sedí na lavičce. „Máj? Až přijde penze, přijdem i my.“;
+?;maj;!maj p1=0 dedove_doruceno;🌲;Máj leží na zemi. Chybí u něj dědové.;
+dopis_hasici;hasici;;🧑‍🚒;Hasiči se chopí ráhna. „Chvilku počkáme, ale ve tři máme cvičení.“ Dopis si strčí za košili.;-dopis_hasici hasici_doruceno p2=3 razitko
+?;hasici;maj;🧑‍🚒;Hasiči se dívají na máj a jsou na něj pyšní.;
+?;hasici;p2>0;🧑‍🚒;Hasiči čekají u máje. Ještě to chvíli vydrží.;
+?;hasici;hasici_doruceno;🧑‍🚒;Zavoláš na ně a hasiči se vrátí k máji.;p2=3 cekej
+?;hasici;;🧑‍🚒;Hasiči leští stříkačku. „Pošta? Až přijde pošta, přijdem.“;
+?;maj;!maj p2=0 hasici_doruceno;🌲;Máj leží na zemi. Chybí u něj hasiči.;
+dopis_kovar;kovar;;🔨;Kovář si plivne do dlaní. „Pospěš si. V kovárně mi chladne železo.“ Dopis si strčí za košili.;-dopis_kovar kovar_doruceno p3=2 razitko
+?;kovar;maj;🔨;Kovář se dívá na máj. „Lano držel kovář. To si pamatujte.“;
+?;kovar;p3>0;🔨;Kovář čeká u máje a přešlapuje.;
+?;kovar;kovar_doruceno;🔨;Zavoláš na kováře a ten se vrátí k máji.;p3=2 cekej
+?;kovar;;🔨;Kovář buší do železa. „Až dostanu objednávku, vím, na čem jsem. Pak přijdu.“;
+?;maj;!maj p3=0 kovar_doruceno;🌲;Máj leží na zemi. Chybí u něj kovář.;
+dopis_kluci;kluci;;👦;Kluci přiběhnou k máji. „Ale rychle! Za chvíli nás to nebude bavit.“ Dopis si strčí za košili.;-dopis_kluci kluci_doruceno p4=1 razitko
+?;kluci;maj;👦;Kluci se dívají na máj a jsou na něj pyšní.;
+?;kluci;kluci_doruceno;👦;Zavoláš na ně a kluci se vrátí k máji.;p4=1 cekej
+?;kluci;;👦;Kluci se honí po návsi. „Máj? To je nuda. Leda by přišel pohled.“;
+?;maj;!maj p4=0 kluci_doruceno;🌲;Máj leží na zemi. Chybí u něj kluci.;
+?;maj;maj;🎄;Máj stojí, na špičce věnec a stužky. Kluci ho budou celou noc hlídat.;
+?;maj;;🌲;Máj leží na zemi. Postaví se, jen když budou tlačit všichni naráz.;
+?;sedlak;!@slama !@carodejnice !hori;👨‍🌾;Sedlák ti podá otep slámy. „Na čarodějnici. Ať je to letos pořádná baba.“;+slama
+?;sedlak;;👨‍🌾;Sedlák se opírá o vidle. „Až bude máj stát, zapálí se hranice.“;
+slama;kluci;;👦;Kluci ze slámy udělají čarodějnici, dají jí koště a babiččin šátek. „Hotovo! Upálit!“;-slama +carodejnice
+carodejnice;hranice;maj;🔥;Posadíš čarodějnici na hranici a hasiči škrtnou. Hranice vzplane a čarodějnice letí v jiskrách nad ves.;-carodejnice hori ikona:hranice:🔥 razitko
+carodejnice;hranice;;🪵;Hasiči zavrtí hlavou. „Nejdřív máj. Pak oheň. Tak je to odjakživa.“;
+?;hranice;;🪵;Hranice dříví čeká na čarodějnici.;
+?;hospodska;;👩‍🍳;Hospodská nese pivo k máji. „Dědové vydrží čekat nejdýl, kluci skoro vůbec. Koho zavoláš první, ten bude čekat nejdýl.“;
+napoveda;*;!maj;💡;Všichni čtyři musí čekat u máje naráz. Začni tím, kdo vydrží nejdýl, a skonči netrpělivými kluky.;
+napoveda;*;;💡;Kluci udělají čarodějnici ze slámy od sedláka. Pak patří na hranici.;
+*;maj;;🌲;Máj se nestaví poštou, ale lidmi.;
+slama;*;;🌾;Ze slámy umí čarodějnici udělat kluci.;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Prohlídka s turisty, místnost 1 -->
+  <rect x="116" y="188" width="68" height="10" rx="2" fill="#F4F1E4"/>
+  <text x="150" y="195.4" font-family="Georgia, serif" font-size="6.4" font-weight="700" fill="#7A2A2A" text-anchor="middle">PROHLÍDKA</text>
+  <circle cx="126" cy="202" r="4" fill="#E0763A"/><rect x="122" y="206" width="8" height="12" rx="2" fill="#E0763A"/><circle cx="138" cy="202" r="4" fill="#4A7AC9"/><rect x="134" y="206" width="8" height="12" rx="2" fill="#4A7AC9"/><circle cx="150" cy="202" r="4" fill="#E0C24A"/><rect x="146" y="206" width="8" height="12" rx="2" fill="#E0C24A"/><circle cx="162" cy="202" r="4" fill="#5EA05A"/><rect x="158" y="206" width="8" height="12" rx="2" fill="#5EA05A"/><circle cx="174" cy="202" r="4" fill="#C94A7A"/><rect x="170" y="206" width="8" height="12" rx="2" fill="#C94A7A"/>
+</svg>

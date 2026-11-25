@@ -1,0 +1,10 @@
+# Dostavník jede dokola: 1 pošta, 2 hostinec, 3 mlýn, 4 zámek. Cestující vystupují sami na své zastávce.
+podminka;efekt;text
+stanice=4;stanice=0;
+stanice<4;stanice+1;
+v_voze_babka stanice=3;!v_voze_babka babka_dovezena mista-2 ikona:mlynar:🤗;U mlýna vystoupila babka s husou. Mlynář objímá maminku, husa štípe mlynáře.
+v_voze_student stanice=4;!v_voze_student student_dovezen mista-1;U zámku vystoupil student a uklonil se až k zemi. Hraběnka ho čekala.
+stanice=1;;Dostavník zastavil u pošty.
+stanice=2;;Dostavník zastavil u hostince U Podkovy.
+stanice=3;;Dostavník zastavil u mlýna.
+stanice=4;;Dostavník zastavil u zámku.

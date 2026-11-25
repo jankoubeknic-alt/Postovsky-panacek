@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Pozpátkova: uprostřed radnice s hodinami, které jdou pozpátku, vlevo nahoře kominíkův dům,
+       vpravo dům s Mariiným oknem v přízemí, vlevo kovárna, dole Vránův dvůr a farní zahrada s mrkví. Žebřík a koza jsou ve vrstvách. -->
+  <rect width="300" height="400" fill="#E3DDEB"/>
+  <path d="M0 120C60 104 110 112 160 104S250 96 300 110V180H0Z" fill="#B3B6C9"/>
+  <path d="M0 172H300V400H0Z" fill="#BFCF9F"/>
+  <!-- kominíkův dům -->
+  <rect x="4" y="104" width="92" height="68" fill="#EDE2CB"/>
+  <path d="M-4 108L50 78L104 108Z" fill="#6B5A7A"/>
+  <rect x="38" y="64" width="12" height="26" fill="#8C5A3A"/>
+  <rect x="36" y="62" width="16" height="4" fill="#5E3E2A"/>
+  <g fill="#9DB5C8" stroke="#6B5A7A" stroke-width="1.5"><rect x="16" y="120" width="16" height="16"/><rect x="64" y="120" width="16" height="16"/></g>
+  <rect x="40" y="140" width="16" height="32" fill="#7A5A3A"/>
+  <!-- radnice s hodinami -->
+  <rect x="112" y="58" width="76" height="88" fill="#F3EEE2"/>
+  <path d="M106 62L150 30L194 62Z" fill="#8A4B3E"/>
+  <circle cx="150" cy="78" r="14" fill="#FBF8F0" stroke="#4A3F33" stroke-width="2"/>
+  <g font-family="Georgia, serif" font-size="5" fill="#4A3F33" text-anchor="middle"><text x="150" y="70">XII</text><text x="141" y="80">III</text><text x="159" y="80">IX</text><text x="150" y="89">VI</text></g>
+  <path d="M150 78L150 69M150 78L144 82" stroke="#4A3F33" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M168 66a20 20 0 0 0-10-6" fill="none" stroke="#C9A24A" stroke-width="1.5"/>
+  <path d="M156 58l3 2-3 2" fill="none" stroke="#C9A24A" stroke-width="1.5"/>
+  <text x="150" y="104" font-family="Georgia, serif" font-size="6" letter-spacing="1" fill="#6E6458" text-anchor="middle">VOKTÁPZOP</text>
+  <g fill="#9DB5C8" stroke="#8A4B3E" stroke-width="1.5"><rect x="122" y="112" width="12" height="14"/><rect x="166" y="112" width="12" height="14"/></g>
+  <rect x="142" y="118" width="16" height="28" rx="8" fill="#8A7A66"/>
+  <!-- poštovní schránka na sloupku -->
+  <rect x="109" y="186" width="4" height="22" fill="#6B4A36"/>
+  <rect x="103" y="172" width="16" height="16" rx="3" fill="#E2A03A" stroke="#9C6A22" stroke-width="1"/>
+  <!-- Mariin dům, okno v přízemí -->
+  <rect x="212" y="104" width="88" height="70" fill="#F2E6E0"/>
+  <path d="M204 108L256 80L308 108Z" fill="#9A5A6A"/>
+  <rect x="242" y="134" width="22" height="22" fill="#C8DCE4" stroke="#9A5A6A" stroke-width="2"/>
+  <path d="M253 134v22M242 145h22" stroke="#9A5A6A" stroke-width="1.2"/>
+  <g fill="#E07A9A"><circle cx="246" cy="158" r="2.5"/><circle cx="252" cy="158" r="2.5"/><circle cx="258" cy="158" r="2.5"/></g>
+  <rect x="280" y="140" width="14" height="34" fill="#7A5A3A"/>
+  <!-- ulice -->
+  <path d="M130 400C134 320 140 230 144 172H162C166 230 172 320 178 400Z" fill="#E6D9BE"/>
+  <!-- kovárna s kovadlinou -->
+  <rect x="0" y="202" width="80" height="56" fill="#D9CDB8"/>
+  <path d="M-6 206L40 182L86 206Z" fill="#4E4A48"/>
+  <rect x="10" y="218" width="28" height="40" fill="#3B332E"/>
+  <circle cx="24" cy="236" r="6" fill="#E8833A" opacity=".8"/>
+  <path d="M50 246h22l-4 6h-14zM56 252h10v6h-10z" fill="#4A4A4E"/>
+  <!-- plot mezi Vránovým dvorem a farní zahradou -->
+  <g stroke="#C9B28A" stroke-width="3">
+    <path d="M0 290H128M184 290H300M150 296V372"/>
+    <path d="M10 282v16M26 282v16M42 282v16M58 282v16M74 282v16M90 282v16M106 282v16M122 282v16"/>
+    <path d="M190 282v16M206 282v16M222 282v16M238 282v16M254 282v16M270 282v16M286 282v16"/>
+  </g>
+  <!-- Vránův chlév -->
+  <rect x="8" y="306" width="54" height="38" fill="#C9A77A"/>
+  <path d="M2 308L35 290L68 308Z" fill="#8C5A3A"/>
+  <rect x="26" y="322" width="16" height="22" fill="#6B4A36"/>
+  <!-- farní zahrada s mrkví a farou -->
+  <rect x="236" y="306" width="60" height="40" fill="#F2EEE4"/>
+  <path d="M230 308L266 290L302 308Z" fill="#6E7F8C"/>
+  <g fill="#E8833A"><path d="M178 334l3 8 3-8zM194 334l3 8 3-8zM210 334l3 8 3-8zM178 352l3 8 3-8zM194 352l3 8 3-8zM210 352l3 8 3-8z"/></g>
+  <g fill="#5E8A4E"><path d="M178 334l3-6 3 6zM194 334l3-6 3 6zM210 334l3-6 3 6zM178 352l3-6 3 6zM194 352l3-6 3 6zM210 352l3-6 3 6z"/></g>
+  <path d="M152 296l6 3-6 3" fill="#FBF8F0" opacity=".9"/>
+  <g fill="#F2C86A"><circle cx="40" cy="384" r="3"/><circle cx="250" cy="388" r="3"/><circle cx="110" cy="376" r="3"/></g>
+</svg>

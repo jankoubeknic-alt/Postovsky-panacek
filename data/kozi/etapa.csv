@@ -1,0 +1,16 @@
+klic;hodnota
+datum;18. IX.
+start;listek_s listek_b plakat faktura
+cil;plakat_doruceno faktura_doruceno volby
+uvod;Na Kozím Hřbítku je už osm let starostkou koza Róza a nikdo si nestěžuje. Letos proti ní kandiduje kozel Bořek a slibuje každému pytel jetele. Volí se poštou: v brašně máš lístky pro sedláka a babku a jednu podezřelou fakturu.|Pozor, kozy žerou papír. A Bořek se od volební urny nehne ani na krok.
+navod;Kozy žerou papír. Bořek hlídá urnu.
+konec_nadpis;Róza zůstává
+konec_text;Komise sečetla hlasy a starostkou zůstává koza Róza. Zápis podepsala kopýtkem a hned ho snědla, ale to se na Kozím Hřbítku počítá jako razítko. Bořek dostal zelí a slíbil, že příští rok bude kandidovat poctivě.|Brašna je prázdná. Volební heslo Rózy platí dál: Nic se nezmění.
+pozadi;data/kozi/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

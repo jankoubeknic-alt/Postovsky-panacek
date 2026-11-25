@@ -1,0 +1,70 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Zapomněnice: vlajky *_vi (kdo ví, kdo je) maže zvon po každém třetím podání (kazdy_tah.csv). Vlajky uzel_* je chrání natrvalo.
+karta;cil;podminka;vyraz;text;efekt
+?;zvon;pamet>=2;🔔;Počkáš pod zvonicí. Zvoník už drží provaz v ruce a zhluboka se nadechne…;cekej
+?;zvon;;🔔;Posadíš se pod zvonici a chvíli počkáš. Zvon tu odbíjí pokaždé, když se ve vsi něco stane potřetí.;cekej
+?;mlynar;mlynar_vi;😳;Mlynář si oprašuje ruce od mouky a stydí se. „Já kázal? Hlavně to neříkej faráři.“;
+?;mlynar;;🧔;Muž na kazatelně káže prázdnému kostelu o tom, jak se správně mele žito. Ruce má od mouky až po lokty.;
+?;farar;farar_vi;😇;Farář si v mlýně obléká kleriku a hledá v kapse prstýnky.;
+?;farar;;👴;Muž ve mlýně sype obilí a pokaždé, když kýchne, řekne „Dominus vobiscum“. Na krku mu visí růženec.;
+?;zenich;zenich_vi;🤵;Vašek si upravuje motýlka. „Bára! Beru si Báru! Ve tři!“;
+?;zenich;;🤵;Muž ve svátečním saku bloudí po návsi. „Proč mám na sobě motýlka? Jdu snad na pohřeb?“;
+?;nevesta;nevesta_vi;👰;Bára se točí v závoji před výlohou. „Dneska se vdávám!“;
+?;nevesta;zavoj_doruceno;👰;Dívka v závoji věší prádlo a diví se, proč má na hlavě záclonu.;
+?;nevesta;;👩;Bára věší prádlo a pobrukuje si svatební pochod. Neví proč.;
+?;babka;dopis_doruceno;👵;Babka si čte dopis od sestry a upíjí slivovici. „Já nezapomínám, chlapče. Vodu z naší studny jsem nepila čtyřicet let.“;
+?;babka;;👵;Babka Kořenářka sedí u studny a nalévá lidem vodu. Sama ji nepije. „Já si pamatuju všechno. Třeba že mi dneska neseš dopis.“;
+napoveda;*;!dopis_doruceno;💡;Babka u studny jako jediná nezapomíná. Dones jí dopis, má pro tebe něco užitečného.;
+napoveda;*;!zavoj_doruceno;💡;Závoj patří nevěstě Báře. Možná si vzpomene, proč ho má nosit.;
+napoveda;*;@kapesnik;💡;Kapesník s uzlíkem podrží paměť jednomu člověku natrvalo. Dej ho ženichovi, nevěstě, nebo faráři.;
+napoveda;*;;💡;Na svatbu musí ženich, nevěsta i farář vědět, kdo jsou, a to všichni najednou. Oznámení připomene ženicha i nevěstu, cedulka faráře. Pak dej faráři prstýnky. Skutečný farář je ten s růžencem. Všechno stihni mezi dvěma údery zvonu, na zvonici se dá počkat.;
+zavoj;nevesta;;👰;Bára balík rozbalí a závoj si nasadí. Podívá se do výlohy a vykřikne: „Svatba! Vždyť já se dneska vdávám!“;-zavoj zavoj_doruceno nevesta_vi ikona:nevesta:👰 razitko
+zavoj;zenich;;🤵;Vašek si zkusí závoj na hlavu. „Sluší mi. Ale asi to není pro mě.“;
+zavoj;farar;;👴;„Krajka? Na pytel od mouky je moc jemná.“;
+zavoj;mlynar;;🧔;Muž na kazatelně závoj slavnostně požehná. „Ať ti dobře mele.“;
+zavoj;babka;;👵;„Pro Báru, ty trdlo. Věší prádlo uprostřed návsi.“;
+prsteny;farar;farar_vi zenich_vi nevesta_vi;💒;Farář si oblékne kleriku, Vašek s Bárou přiběhnou a před kostelem zazní trojí ano. Prstýnky sedí. Zvon odbije až potom a všichni zapomenou všechno kromě toho, že jsou svoji.;-prsteny -oznameni -cedulka_farar -cedulka_mlynar prsteny_doruceno svatba razitko
+prsteny;farar;farar_vi;😇;„Prstýnky! Oddám je rád. Ale kde jsou ženich a nevěsta? A vědí vůbec, že se berou?“;
+prsteny;farar;;👴;Muž od mouky si prstýnky prohlédne. „Na mlýnský kámen jsou moc malé.“ A vrátí ti je.;
+prsteny;mlynar;;🧔;Muž na kazatelně zvedne prstýnky nad hlavu a spustí: „Bereš si tuhle mouku…“ Radši mu je seber.;
+prsteny;zenich;zenich_vi;🤵;„Prstýnky dává farář, ne já! Ale už se těším.“;
+prsteny;zenich;;🤵;„Prstýnky? Pro koho? Já se snad žením?“;
+prsteny;nevesta;;👩;„Nádherné. Ale ty se dávají v kostele, ne u prádla.“;
+prsteny;babka;;👵;„Ty patří faráři. Ale který z nich je teď farář, to ví jen pánbůh a já.“;
+oznameni;zenich;;🤵;Vašek se podívá na fotku a rozzáří se. „Bára! Beru si Báru! Ve tři!“;zenich_vi
+oznameni;nevesta;;👰;Bára se podívá na fotku. „To jsem já! A Vašek! My se bereme!“;nevesta_vi
+oznameni;farar;;👴;„Bereme se ve tři? A kdo je oddá?“ Muž od mouky se zamyšleně poškrábe na tonzuře.;
+oznameni;mlynar;;🧔;„Svatba? Tu bych odkázal. Totiž kázal.“ Mouka mu padá z rukávů.;
+oznameni;babka;;👵;„Ve tři. Do té doby to všichni ještě stokrát zapomenou. Ale na to já mám lék.“;
+oznameni;zvon;;🔔;Přišpendlíš oznámení na zvonici. Vítr ho za chvíli odfoukne zpátky k tobě.;
+dopis;babka;;👵;Babka dopis přečte a usměje se. „Sestra píše, že taky na nic nezapomněla.“ Podá ti kapesník s uzlíkem. „Komu ho dáš, ten nezapomene. Mám jen jeden.“;-dopis dopis_doruceno +kapesnik razitko
+dopis;zenich;;🤵;„Pro babku Kořenářku. Sedí u studny. Myslím. Nebo jsem to zapomněl?“;
+dopis;nevesta;;👩;„Babka je u studny. Tam je vždycky. To si pamatuje celá ves.“;
+dopis;farar;;👴;Muž od mouky obálku posype moukou a požehná jí. Pak ti ji vrátí.;
+dopis;mlynar;;🧔;„Pro babku? Ta jediná ví, kdo jsem. Ale neřekne mi to.“;
+cedulka_farar;farar;;😇;Muž od mouky si cedulku pověsí na krk a přečte si ji. „Farář! Já jsem farář! Co dělám ve mlýně?“ Pak ti ji vrátí: „Podrž ji, při oblékání překáží.“;farar_vi
+cedulka_farar;mlynar;;🧔;Muž na kazatelně si cedulku pověsí na krk. „Farář. To sedí!“ A káže ještě hlasitěji. Jenže má mouku až za ušima. Radši si cedulku vezmeš zpátky.;
+cedulka_farar;babka;;👵;„Cedulka FARÁŘ. Patří tomu, kdo kýchá latinsky.“;
+cedulka_mlynar;mlynar;;😳;Muž na kazatelně si přečte cedulku MLYNÁŘ a zčervená. „Já tady kážu? Já mám mlít!“ Seběhne z kazatelny, ale v půli cesty zapomene, kam běží.;mlynar_vi
+cedulka_mlynar;farar;;👴;„Mlynář? No jasně, vždyť držím pytel.“ Muž od mouky mele dál, ještě spokojeněji. Tohle nepomohlo.;
+cedulka_mlynar;babka;;👵;„MLYNÁŘ. Patří tomu, kdo má mouku až za ušima. Ten teď stojí v kostele.“;
+kapesnik;zenich;;🤵;Vašek si kapesník s uzlíkem strčí do náprsní kapsy. „Teď už nezapomenu. Beru si Báru! Pamatuju si všechno!“;-kapesnik uzel_zenich zenich_vi
+kapesnik;nevesta;;👰;Bára si kapesník uváže na zápěstí. „Nezapomenu, že se vdávám. Ani kdyby zvonilo celý den.“;-kapesnik uzel_nevesta nevesta_vi
+kapesnik;farar;;😇;Muž od mouky si kapesník zastrčí za opasek a najednou ví všechno. Je farář a ve tři oddává.;-kapesnik uzel_farar farar_vi
+kapesnik;mlynar;;🧔;Mlynář kapesník odmítne. „Já zapomínám rád. Aspoň nevím, kolik mi kdo dluží.“;
+kapesnik;babka;;👵;„Ten není pro mě, já nezapomínám. Dej ho někomu, kdo musí ve tři něco slíbit.“;
+*;zvon;;🔔;Zvon nic nepotřebuje, jen čas. Chvíli pod ním počkáš.;
+*;babka;;👵;„To není pro mě, chlapče. Já si pamatuju, co je moje.“;
+*;zenich;;🤵;„Tohle je moje? Nepamatuju si. Asi ne.“;
+*;nevesta;;👩;„Pro mě? Nevím. Dneska nevím vůbec nic.“;
+*;farar;;👴;Muž od mouky to posype moukou a vrátí ti to.;
+*;mlynar;;🧔;Muž na kazatelně tomu požehná a vrátí ti to.;
+*;*;;🤷;Nic se nestane.;

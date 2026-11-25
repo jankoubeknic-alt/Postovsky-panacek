@@ -1,0 +1,53 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Kramářov: výměnný řetěz na jarmarku. Dráteník potřebuje drát a perník. Drát dá kramářka za růži ze střelnice a každá věc stojí krejcar, druhý krejcar dá flašinetář za válce z Vídně.
+karta;cil;podminka;vyraz;text;efekt
+hrnec;babicka;;👵;Babička vezme hrnec a hned ho otočí. „Prasklý! Takový nechci. Dej ho dráteníkovi, ten sešije cokoli.“;
+hrnec_drat;babicka;;👵;Babička obdivuje drátovaný hrnec. „Jako košíček! A drží líp než nový. Tak to je dárek.“;-hrnec_drat hrnec_doruceno razitko
+?;babicka;;👵;„Loni jsem si koupila hrnec a teprve teď mi ho vezou. A rozbitý. To je pošta.“;
+hrnec;dratenik;drat_ma najedeny;🧰;Dráteník ovine hrnec drátem jako košíček, ťuk sem, ťuk tam. „Hotovo. Teď vydrží sto let.“;-hrnec +hrnec_drat
+hrnec;dratenik;drat_ma;🧰;Dráteník se podívá na hrnec a žaludek mu zakručí. „S prázdným břichem drátovat nebudu. Kus perníku by bodl.“;
+hrnec;dratenik;;🧰;Dráteník rozhodí rukama. „Hrnec bych sešil, ale drát mi došel. Kramářka věší stužky na drátě, ta by měla.“;
+drat;dratenik;;🧰;Dráteník smotá drát a usměje se. „S tímhle sešiju i rozbitý měsíc.“;-drat drat_ma
+pernik;dratenik;;🧰;Dráteník spořádá perník na dvě kousnutí. „Hned je svět veselejší.“;-pernik najedeny
+?;dratenik;;🧰;„Dráty, drátky, dratě! Kdo co má rozbitého, sem s tím!“ Pak tišeji: „Jen mi došel drát. A mám hlad.“;
+dopis_flasinetar;flasinetar;;🎶;Flašinetář vybalí z obálky nové válce s písničkami z Vídně. Zasune je do flašinetu a zatočí klikou. Lidi se sbíhají, tleskají a do klobouku cinkají krejcary. Jeden ti dá. „Za poštu.“;-dopis_flasinetar flasinetar_doruceno +krejcar2 razitko
+?;flasinetar;flasinetar_doruceno;🎶;Flašinetář točí klikou a hraje písničku z Vídně.;
+?;flasinetar;;🎶;Flašinetář točí klikou a hraje pořád tu samou písničku. Lidi chodí kolem. „Kdyby přišly ty nové válce z Vídně…“;
+krejcar;flasinetar;;🎶;„Díky, ale nech si ho. Pošťáci mají hubené kapsy.“;
+krejcar2;flasinetar;;🎶;„Díky, ale nech si ho. Pošťáci mají hubené kapsy.“;
+dopis_pernikar;pernikar;;🍪;Perníkář čte objednávku. „Srdce s nápisem na svatbu! To bude krása.“;-dopis_pernikar pernikar_doruceno razitko
+krejcar;pernikar;najedeny nebo @pernik;🍪;„Jeden perník ti stačí. Krejcar si schovej na něco jiného.“;
+krejcar2;pernikar;najedeny nebo @pernik;🍪;„Jeden perník ti stačí. Krejcar si schovej na něco jiného.“;
+krejcar;pernikar;;🍪;Perníkář ti za krejcar podá voňavý perník.;-krejcar +pernik
+krejcar2;pernikar;;🍪;Perníkář ti za krejcar podá voňavý perník.;-krejcar2 +pernik
+?;pernikar;;🍪;„Perník za krejcar! Srdce na objednávku!“;
+krejcar;strelnice;drat_ma nebo @drat nebo @ruze;🎯;„Růži už máš. Druhou ti nedám, ať mají i ostatní.“;
+krejcar2;strelnice;drat_ma nebo @drat nebo @ruze;🎯;„Růži už máš. Druhou ti nedám, ať mají i ostatní.“;
+krejcar;strelnice;;🎯;Za krejcar dostaneš jednu ránu. Míříš, ozve se lup a papírová růže je tvoje.;-krejcar +ruze
+krejcar2;strelnice;;🎯;Za krejcar dostaneš jednu ránu. Míříš, ozve se lup a papírová růže je tvoje.;-krejcar2 +ruze
+?;strelnice;;🎯;Na střelnici visí papírové růže. „Rána za krejcar! Každá trefa růže!“;
+ruze;kramarka;;🎀;Kramářka se rozzáří. „Papírová růže! Tu jsem vždycky chtěla, ale sama nestřílím.“ Odmotá ti kus drátu, na kterém visí stužky.;-ruze +drat
+krejcar;kramarka;;🎀;„Drát neprodávám, na tom mi visí stužky. Ale za růži ze střelnice bych ti kus dala.“;
+krejcar2;kramarka;;🎀;„Drát neprodávám, na tom mi visí stužky. Ale za růži ze střelnice bych ti kus dala.“;
+?;kramarka;;🎀;Kramářka rovná stužky na drátě. „Stužky, krajky, pentle! Kdyby mi někdo vystřelil růži…“;
+?;kolotoc;;🎠;Kolotoč se točí a děti výskají. Na projížďku nemáš čas.;
+krejcar;kolotoc;;🎠;„Jedna jízda za krejcar!“ Rozmyslíš si to. Krejcar se bude hodit jinde.;
+krejcar2;kolotoc;;🎠;„Jedna jízda za krejcar!“ Rozmyslíš si to. Krejcar se bude hodit jinde.;
+?;hrncir;;🏺;Hrnčíř ukazuje nové hrnce. „Nový hrnec za tři krejcary! Ale proč kupovat, když dráteník sešije starý?“;
+hrnec;hrncir;;🏺;„Tenhle je můj, loňský! Praskl? Tak to ho dej dráteníkovi, já nové za staré neměním.“;
+krejcar;hrncir;;🏺;„Za jeden krejcar nedám ani poklici.“;
+krejcar2;hrncir;;🏺;„Za jeden krejcar nedám ani poklici.“;
+pernik;babicka;;👵;„Perník? Ten dej někomu, kdo má hlad.“;
+ruze;babicka;;👵;„To je hezké, ale já chci hrnec.“;
+drat;kramarka;;🎀;„Ten už je tvůj. Na stužky mám dost.“;
+napoveda;*;!drat_ma;💡;Dráteníkovi došel drát. Kramářka ho má, ale chce papírovou růži ze střelnice.;
+napoveda;*;!najedeny;💡;Dráteník má hlad. Perníkář prodává perník za krejcar. Druhý krejcar ti dá flašinetář, až bude mít nové válce.;
+napoveda;*;;💡;Teď dráteník sešije hrnec. Pak patří babičce.;
+*;*;;🤷;Nic se nestane.;

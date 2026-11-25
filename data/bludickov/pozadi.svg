@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Bludičkova: večerní slatě, tmavé tůně a trsy trávy, uprostřed stará vrba nad tůní, vzadu na obzoru světlo samoty. -->
+  <rect width="300" height="400" fill="#2F3A4A"/>
+  <rect y="150" width="300" height="250" fill="#4A5A3E"/>
+  <g fill="#2A3A3A"><ellipse cx="60" cy="230" rx="50" ry="14"/><ellipse cx="200" cy="270" rx="70" ry="16"/><ellipse cx="120" cy="320" rx="60" ry="12"/></g>
+  <g stroke="#7A8A5A" stroke-width="2"><path d="M30 200l4-14M36 200l-2-16M250 220l3-14M256 220l-3-12M150 360l3-14M158 360l-2-12"/></g>
+  <path d="M150 260C140 220 160 200 150 170" stroke="#5A4A3A" stroke-width="10" fill="none"/>
+  <g fill="#6E7E4A"><circle cx="135" cy="168" r="22"/><circle cx="165" cy="172" r="20"/></g>
+  <rect x="180" y="120" width="30" height="20" fill="#3A3028"/><rect x="190" y="126" width="8" height="8" fill="#F5D58A"/>
+</svg>

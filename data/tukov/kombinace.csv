@@ -1,0 +1,50 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Ťukov: telegraf neumí háčky a čárky. Balíky jsou označené slovem z telegramu (ROZE, KURE, KOS) a každé slovo má dva adresáty.
+# Kdo co objednal, prozradí lidé, co je uvnitř, prozradí popis balíku.
+karta;cil;podminka;vyraz;text;efekt
+?;telegrafistka;;👩‍💼;Telegrafistka Ťuková ťuká klíčem. „Telegraf zná jen písmena, háčky a čárky nezná. Kdo chce RŮŽE, napíše ROZE. Kdo chce ROŽE, napíše taky ROZE. A v Praze pak hádají.“;
+?;nevesta;;👰;Nevěsta točí závojem. „Telegrafovala jsem do Prahy: POSLETE ROZE NA SVATBU. Celý kostel bude vonět.“;
+?;myslivec;;🧔;Myslivec ukazuje na prázdný hák nad dveřmi hájovny. „Telegrafoval jsem: POSLETE ROZE NA ZED. Pořádné jelení. Na Hané se tomu říká rože.“;
+?;kuchar;;👨‍🍳;Zámecký kuchař brousí nůž. „Telegrafoval jsem: DODEJTE KURE K OBEDU. Pan hrabě chce pečínku.“;
+?;kozeluh;;🧑‍🔧;Koželuh máchá kůže v potoce. „Telegrafoval jsem: POSLETE KURE NA VYCINENI. Dubová kůra dělá kůži měkkou a hnědou.“;
+?;sbormistr;;🎼;Sbormistr ladí ladičku. „Telegrafoval jsem: POSLETE KOS DO SBORU. Ať se děti učí zpívat od mistra.“;
+?;houbarka;;🍄;Houbařka sedí na pařezu u lesa a kolem ní rostou hřiby. „Telegrafovala jsem: POSLETE KOS NA HOUBY. Holýma rukama je neodnesu.“;
+roze_a;nevesta;;💐;Nevěsta rozbalí balík a vyjekne. „Růže! Červené růže!“ Celý kostel voní.;-roze_a ruze_doruceno ikona:nevesta:💐 razitko
+roze_b;myslivec;;🦌;Myslivec rozbalí balík a vytáhne jelení parohy. „Rože! Šestnácterák!“ Hned je pověsí nad dveře.;-roze_b parohy_doruceno ikona:myslivec:🦌 razitko
+kure_a;kuchar;;🐥;Kuchař otevře krabici a vykoukne živé kuře. „Kuře… živé. To jsem nechtěl takhle čerstvé.“ Kuře si sedne na plotnu, ta naštěstí nehřeje. Pan hrabě ho prohlásil za zámecké kuře.;-kure_a kure_doruceno ikona:kuchar:🐥 razitko
+kure_b;kozeluh;;🪵;Koželuh rozbalí papír a přičichne. „Kůra! Dubová kůra, přesně jak má být.“ Hned ji sype do kádě.;-kure_b kura_doruceno ikona:kozeluh:🪵 razitko
+kos_a;sbormistr;;🐦;Sbormistr otevře klec a kos zazpívá stupnici. Děti ze sboru ztichnou úžasem. „To je kos! Mistr zpěvu!“;-kos_a kos_doruceno ikona:sbormistr:🐦 razitko
+kos_b;houbarka;;🧺;Houbařka si koš navlékne na ruku a hned do něj skládá hřiby. „Koš! S háčkem! Konečně.“;-kos_b kosik_doruceno ikona:houbarka:🧺 razitko
+roze_b;nevesta;;😱;Nevěsta balík rozbalí a uskočí. „Parohy?! Na svatbu? To má být nějaký vtip?“ Balík ti rychle vrátí.;
+roze_a;myslivec;;🧔;Myslivec rozbalí růže a zčervená. „Růže? Na zeď? Já chtěl rože. S háčkem! Tedy bez háčku. Tedy… jelení!“;
+kure_b;kuchar;;👨‍🍳;Kuchař rozbalí kůru a zamračí se. „Kůra? Mám pánu hraběti péct kůru? Já chtěl KUŘE, s kroužkem nad ničím!“;
+kure_a;kozeluh;;🧑‍🔧;Z krabice vykoukne kuře. Koželuh se ho lekne. „Kuře? Tím kůži nevyčiním. Já chtěl kůru!“;
+kos_b;sbormistr;;🎼;Sbormistr vybalí koš a zkusí na něj zahrát. Nic. „Koš nezpívá. Já chtěl kosa!“;
+kos_a;houbarka;;🍄;Z balíku zazpívá kos. Houbařka se zasměje. „Do kosa hřiby nenasbírám. Já chtěla koš!“;
+roze_a;houbarka;;🍄;„Píchá to. Houby nepíchají. To nebude pro mě.“;
+roze_b;kozeluh;;🧑‍🔧;„Parohy? Kůže z jelena už mám. Parohy patří myslivci.“;
+kure_a;nevesta;;👰;„Kuře na svatbě? Do kostela? To radši ne.“;
+kure_b;houbarka;;🍄;„Kůra? Toho je v lese dost. To si objednal někdo, kdo s ní něco dělá.“;
+kos_a;nevesta;;👰;„Kos? Na svatbu by se hodil, zpívá krásně. Ale to jsem neobjednávala.“;
+kos_b;kuchar;;👨‍🍳;„Koš? Na brambory mám tři. Tohle jsem neobjednával.“;
+roze_b;sbormistr;;🎼;„Parohy? Na ty se troubí, ne zpívá.“;
+kure_b;myslivec;;🧔;„Kůra? Té mám v lese plno. Chtěl jsem rože na zeď.“;
+kure_a;sbormistr;;🎼;Kuře v krabici zapípá falešně. „To ne. Já chtěl zpěváka.“;
+roze_a;kuchar;;👨‍🍳;„Růže? Do omáčky? Pan hrabě by se divil.“;
+kos_b;kozeluh;;🧑‍🔧;„Koš? Na kůru by se hodil. Ale kůru nemám a koš jsem neobjednával.“;
+kos_a;myslivec;;🧔;„Kos? Toho slyším v lese každé ráno. Ten pro mě není.“;
+roze_a;telegrafistka;;👩‍💼;„ROZE? To jsem odťukávala já. Komu to patří, nevím, telegraf nezná háčky. Zeptej se, kdo co objednával, a podívej se, co je v balíku.“;
+roze_b;telegrafistka;;👩‍💼;„ROZE? To jsem odťukávala já. Komu to patří, nevím, telegraf nezná háčky. Zeptej se, kdo co objednával, a podívej se, co je v balíku.“;
+kure_a;telegrafistka;;👩‍💼;„KURE? To jsem odťukávala já. Komu to patří, nevím, telegraf nezná háčky. Zeptej se, kdo co objednával, a podívej se, co je v balíku.“;
+kure_b;telegrafistka;;👩‍💼;„KURE? To jsem odťukávala já. Komu to patří, nevím, telegraf nezná háčky. Zeptej se, kdo co objednával, a podívej se, co je v balíku.“;
+kos_a;telegrafistka;;👩‍💼;„KOS? To jsem odťukávala já. Komu to patří, nevím, telegraf nezná háčky. Zeptej se, kdo co objednával, a podívej se, co je v balíku.“;
+kos_b;telegrafistka;;👩‍💼;„KOS? To jsem odťukávala já. Komu to patří, nevím, telegraf nezná háčky. Zeptej se, kdo co objednával, a podívej se, co je v balíku.“;
+napoveda;*;;💡;Každé slovo z telegramu má dva významy. Zeptej se lidí, co si objednali a k čemu. Pak si přečti popis balíků: co píchá, co pípá, co voní lesem.;
+*;*;;🤷;„Tohle jsem neobjednával,“ řekne a vrátí ti balík.;

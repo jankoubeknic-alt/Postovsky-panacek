@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Jaro: louka plná fialek, svěží tráva -->
+  <path d="M0 124H300V400H0Z" fill="#B9D89A" opacity=".55"/>
+  <g fill="#8A5AC9"><circle cx="230" cy="190" r="2.5"/><circle cx="246" cy="182" r="2.5"/><circle cx="260" cy="196" r="2.5"/><circle cx="276" cy="186" r="2.5"/><circle cx="238" cy="204" r="2.5"/><circle cx="268" cy="206" r="2.5"/></g>
+  <g fill="#F4E9F2"><circle cx="233" cy="222" r="3"/><circle cx="269" cy="226" r="3"/></g>
+</svg>

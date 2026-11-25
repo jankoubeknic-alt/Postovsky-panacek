@@ -1,0 +1,66 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Spáčov pod Blaníkem: skála se otevře v nejhorší chvíli, když jsou doručené všechny tři špatné zprávy (počítadlo bida=3).
+# Prosba dětí pak vzbudí rytíře a ti dají listiny, které špatné zprávy napraví.
+karta;cil;podminka;vyraz;text;efekt
+?;strazce;otevreno;⚔️;Strážce stojí u otevřené skály a smeká. „Teď je nejhůř. Teď se smí. Jdi dovnitř, pošťáku.“;
+?;strazce;bida=2;🛡️;Strážce se podívá na ves. „Už je to zlé. Ale nejhorší chvíle to ještě není. Rytíři by se na mě zlobili.“;
+?;strazce;bida=1;🛡️;Strážce pokrčí rameny. „Trochu zlé. Ale nejhorší chvíle? To vypadá jinak.“;
+?;strazce;;🛡️;Starý strážce opřený o halapartnu. „Rytíře smím pustit k probuzení jen v nejhorší chvíli. A dneska je, chlapče, docela obyčejné úterý.“;
+?;rytiri;rytiri_vzhuru;🐴;Rytíři sedlají koně. Svatý Václav si prohlíží ves z výšky. „Opravdu nejhorší chvíle?“ diví se.;
+?;rytiri;;😴;V hoře spí rytíři s hlavami na sedlech. Koně spí vestoje. Uprostřed spí svatý Václav a v ruce drží kopí s praporcem.;
+?;deti;;🧒;Děti stojí u skály. „Napsaly jsme rytířům, ať přijedou. Ale strážce prý pustí poštu, jen když bude nejhůř. Kdy bude nejhůř, pošťáku?“;
+?;starosta;dan_vyresena;🎩;Starosta počítá pokladnu. Je plná a ještě přetéká.;
+?;starosta;vymer_doruceno;😱;Starosta běhá po návsi s výměrem v ruce. „Deset let daní! Ves je na mizině!“;
+?;starosta;;🎩;Starosta si spokojeně hoví na lavičce. „U nás je klid. Nic se neděje. Jen ať to tak zůstane.“;
+?;sedlak;uroda_vyresena;👨‍🌾;Sedlák se dívá, jak rytíři orají. „Takovou brázdu jsem nikdy neviděl.“;
+?;sedlak;kroupy_doruceno;😭;Sedlák pláče nad polem. „Kroupy jako vejce! Všechno je zbité!“;
+?;sedlak;;👨‍🌾;Sedlák kouká na pole. „Letos bude úroda. Pokud nic nepřijde.“;
+?;nevesta;svatba_zachranena;👰;Nevěsta drží ženicha za ruku. Ženich se pořád ohlíží po rytířích.;
+?;nevesta;zruseni_doruceno;😭;Nevěsta pláče do závoje. „On se bojí! Svatbu zrušil!“;
+?;nevesta;;👰;Nevěsta zkouší závoj. „Svatba je v sobotu. Ženich mi slíbil, že napíše.“;
+?;hostinsky;;🍺;Hostinský točí pivo. „Ve Spáčově se nic neděje. Rytíři spí, my taky.“;
+napoveda;*;!otevreno;💡;Strážce pustí poštu do hory jen v nejhorší chvíli. Ve Spáčově je ale dobře. Špatné zprávy se nosí nerady, ale v brašně jich máš hned několik.;
+napoveda;*;!rytiri_vzhuru;💡;Skála je otevřená. Dones rytířům prosbu dětí.;
+napoveda;*;;💡;Rytíři ti dali listiny. Rozdej je těm, komu jsi nosil špatné zprávy.;
+vymer;starosta;;😱;Starosta si výměr přečte a sesype se na lavičku. „Deset let daní! Pokladna je prázdná!“ Ve vsi začíná být zle.;-vymer vymer_doruceno bida+1 ikona:starosta:😱 razitko
+kroupy;sedlak;;😭;Sedlák si hlášení přečte a podívá se na pole. Celé je zbité. „Kroupy… všechno je pryč.“ Ves je čím dál smutnější.;-kroupy kroupy_doruceno bida+1 ikona:sedlak:😭 razitko
+zruseni;nevesta;;😭;Nevěsta dopis přečte a rozpláče se. „Bojí se! Svatba se ruší!“ Celý Spáčov smutní s ní.;-zruseni zruseni_doruceno bida+1 ikona:nevesta:😭 razitko
+pohled;hostinsky;;🍺;Hostinský si pohled přečte a zasměje se. „Voda teplá, jídlo studené. To je švagr celej.“ Nic zlého se nestalo.;-pohled pohled_doruceno razitko
+prosba;rytiri;;⚔️;Položíš prosbu dětí svatému Václavovi na kolena. Václav otevře oči. „Nejhorší chvíle?“ Rytíři vstanou, koně zařehtají. Václav ti podá tři listiny. „Tohle rozdej. My jedeme.“;-prosba rytiri_vzhuru +listina_dan +listina_uroda +listina_svatba ikona:rytiri:🏇 razitko
+prosba;strazce;;🛡️;„Prosba dětí? Krásná,“ usměje se strážce. „Ale do hory ji pustím jen v nejhorší chvíli. Zatím je ve vsi dobře.“;
+prosba;deti;;🧒;„To je naše prosba! Dones ji rytířům, až bude nejhůř.“;
+listina_dan;starosta;;🤑;Starosta si přečte listinu a obrátí se k Blaníku. Z hory vyjíždí rytíř s truhlou. „Daně zaplaceny!“ jásá starosta.;-listina_dan dan_vyresena bida-1 ikona:starosta:🤑 razitko
+listina_uroda;sedlak;;😊;Sedlák čte a nevěří. Na pole vjíždějí rytíři s pluhy. „Zasejeme znovu, ještě to stihne dozrát!“;-listina_uroda uroda_vyresena bida-1 ikona:sedlak:😊 razitko
+listina_svatba;nevesta;;💒;Za nevěstou se ozve dusot. Dva rytíři vedou ženicha, bledého jako stěna. „Už se nebojím,“ šeptá ženich. „Rytířů se bojím víc.“;-listina_svatba svatba_zachranena bida-1 ikona:nevesta:💒 razitko
+vymer;hostinsky;;🍺;„Daně? To ne. To je pro starostu. Mně stačí, že platím pivo.“;
+kroupy;starosta;;🎩;„Kroupy? To je pro sedláka. Já mám jen úřad a ten kroupy nepotlučou.“;
+zruseni;hostinsky;;🍺;„Ženich ruší svatbu? Kdo jí to poví? Já ne.“ Dopis ti vrátí.;
+vymer;strazce;;🛡️;„Výměr? To není pro rytíře. Rytíři daně neplatí, rytíři spí.“;
+kroupy;deti;;🧒;„Kroupy? To bude sedlák smutný.“;
+zruseni;deti;;🧒;„Ženich je zbabělec!“ volají děti. „To patří nevěstě, ale bude plakat.“;
+pohled;strazce;;🛡️;„Pohled z lázní? Tím rytíře nevzbudíš. To je pro hostinského.“;
+listina_dan;sedlak;;👨‍🌾;„Daně? To je starostova starost.“;
+listina_uroda;starosta;;🎩;„Pole? To patří sedlákovi.“;
+listina_svatba;hostinsky;;🍺;„Svatba bude? Tak to natočím!“ Listinu ti vrátí. Patří nevěstě.;
+pohled;starosta;;🎩;„Z lázní? Já do lázní nejezdím. To je od švagra hostinského.“;
+vymer;sedlak;;👨‍🌾;„Daně? Já platím desátek a dost. To je pro starostu.“;
+vymer;nevesta;;👰;„Výměr? Ve svatební týden? Odnes to starostovi.“;
+kroupy;nevesta;;👰;„Kroupy? Na svatbu? Ať to slyší sedlák, ne já.“;
+kroupy;hostinsky;;🍺;„Kroupy? To je pro sedláka. U mě padá jen pěna.“;
+zruseni;starosta;;🎩;„Svatba se ruší? To není úřední věc. To patří nevěstě.“;
+zruseni;sedlak;;👨‍🌾;„Ženich utekl? Chudák holka. Ale nesu to já? Ne, ty.“;
+pohled;nevesta;;👰;„Z lázní? Tam pojedeme na svatební cestu. Je to pro hostinského.“;
+pohled;deti;;🧒;„Pohled! Ukaž! Lázně! To je pro hostinského.“;
+listina_dan;nevesta;;👰;„Daně? To je pro starostu, ne pro nevěstu.“;
+listina_uroda;nevesta;;👰;„Orat? Já se budu vdávat, ne orat.“;
+prosba;starosta;;🎩;„Prosba pro rytíře? Ať spí, je klid. Nebuď je zbytečně.“;
+*;deti;;🧒;Děti zavrtí hlavou. To není pro ně.;
+*;rytiri;;😴;Rytíři spí dál. Tohle je nevzbudí.;
+*;*;;🤷;Nic se nestane.;

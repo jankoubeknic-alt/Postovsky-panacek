@@ -1,0 +1,9 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# pokoj = kde je právě prohlídka: 1 nádvoří, 2 rytířský sál, 3 kaple, 4 sklep.
+id;jmeno;ikona;x;y;skryt_kdyz
+bilapani;Bílá paní;👻;22;22;pokoj=2
+rytir;Bezhlavý rytíř;🛡️;78;22;pokoj=3
+kastelan;Kastelán Klíčník;🧔;50;48;
+kocour;Kocour Šmouha;🐈‍⬛;18;56;
+sova;Sova Hůhů;🦉;82;52;
+kostlivec;Kostlivec;💀;26;84;pokoj=4

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- V urně už jsou hlasy: cedulka na stole -->
+  <rect x="126" y="206" width="48" height="14" rx="2" fill="#FFFDF4" stroke="#3B5E8C" stroke-width="1"/>
+  <text x="150" y="216" font-family="Georgia, serif" font-size="7" fill="#3B5E8C" text-anchor="middle">hlasuje se</text>
+</svg>

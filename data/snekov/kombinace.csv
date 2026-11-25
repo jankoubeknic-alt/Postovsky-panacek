@@ -1,0 +1,54 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Šnekov: efekt podpis=3 nebo probouzeni=3 spustí odpočet v kazdy_tah.csv. Lavička (cekej) nechá čas běžet. Čas do poledne je počítadlo cas.
+karta;cil;podminka;vyraz;text;efekt
+?;lavicka;;🪑;Sedneš si na lavičku a chvíli počkáš. Ve Šnekově je to nejoblíbenější činnost.;cekej
+?;starosta;podpis>0;✍️;Starosta Loudal podepisuje. Zrovna dokončil L a pečlivě si prohlíží, jestli se povedlo.;
+?;starosta;;👴;Starosta Loudal sedí na radnici nad prázdným stolem. „Žádost? Žádnou nemám. Kdyby přišla, začnu podepisovat hned. Tedy brzy. Tedy časem.“;
+?;postmistr;pistole_dorazila !pistole_vydana;📦;Poštmistr pomalu, přepomalu vyndá z vozu balík. „Startovní pistole. Podepiš převzetí. Nespěchej.“;+pistole pistole_vydana
+?;postmistr;pistole_vydana;👨‍🦳;„Pistoli jsem ti dal. Teď si dám zasloužený odpočinek. Do čtvrtka.“;
+?;postmistr;;👨‍🦳;Poštmistr kouká z okna na silnici. „Pistole je na cestě. Vůz jede, když se mu chce. Počkej, to chce trpělivost.“;
+?;rozhodci;;🧑‍⚖️;Rozhodčí stojí u startovní čáry se stopkami. „Bez povolení, přihlášky a pistole se nestartuje. A šampion musí být vzhůru, samozřejmě.“;
+?;trenerka;blesk_vzhuru;👩;Trenérka Hlemýžďová masíruje Bleskovi ulitu. „Je ve formě! Letos to dá pod tři hodiny.“;
+?;trenerka;probouzeni>0;👩;„Už se probouzí. U šneků to chvíli trvá. Přesně tak dlouho, jak je potřeba.“;
+?;trenerka;;👩;Trenérka Hlemýžďová ťuká na ulitu. „Blesk zimoval a nechce se mu ven. Probudí ho jen čerstvý salát. A pak chvíli počkat.“;
+?;blesk;blesk_vzhuru;🐌;Šnek Blesk vystrčil tykadla a rozhlíží se po trati. Ví, že je šampion.;
+?;blesk;;🐚;Ulita na trávníku. Zevnitř se ozývá tiché chrápání.;
+napoveda;*;!podpis_zacal;💡;Starosta podepisuje dlouho. Dej mu žádost co nejdřív.;
+napoveda;*;!probouzeni_zacalo;💡;Blesk spí. Salát ho probudí, ale potrvá to. Dej mu ho brzy.;
+napoveda;*;!prihlaska_doruceno;💡;Přihláška patří rozhodčímu.;
+napoveda;*;@povoleni;💡;Povolení je hotové. Dones ho rozhodčímu.;
+napoveda;*;pistole_dorazila !pistole_vydana;💡;Pistole dorazila. Vyzvedni si ji na poště.;
+napoveda;*;@pistole blesk_vzhuru povoleni_doruceno prihlaska_doruceno;💡;Všechno je připravené. Dej rozhodčímu pistoli!;
+napoveda;*;;💡;Teď se musí čekat. Na lavičce čas uběhne.;
+zadost;starosta;;✍️;Starosta si žádost přečte, nasadí brýle, sundá brýle, nasadí jiné brýle a začne podepisovat. „L… o…“ Tohle bude trvat.;-zadost podpis=3 podpis_zacal
+zadost;postmistr;;👨‍🦳;„Žádost? To patří starostovi. Na radnici. Pospěš si, on pak podepisuje do večera.“;
+zadost;rozhodci;;🧑‍⚖️;„Nepodepsaná? To nemůžu přijmout. Starosta to musí podepsat.“;
+zadost;trenerka;;👩;„Na radnici, rychle! Loni dopisoval podpis až do září.“;
+zadost;blesk;;🐚;Ulita žádost nepřijme. Chrápe dál.;
+salat;blesk;;🥬;Položíš salát k ulitě. Zevnitř se ozve čenichání. Probouzení začalo, ale šneci se neprobouzejí hned.;-salat probouzeni=3 probouzeni_zacalo razitko
+salat;trenerka;;👩;„Salát! Dej ho rovnou Bleskovi k ulitě. Probudí se na vůni.“;
+salat;starosta;;👴;„Salát? Ten já nejím. Mám slabý žaludek a silnou trpělivost.“;
+salat;postmistr;;👨‍🦳;„Salát z Itálie? Přišel před třemi týdny. To byl rychlý spoj.“;
+salat;rozhodci;;🧑‍⚖️;„Salát není přihláška. To je jídlo pro závodníka.“;
+prihlaska;rozhodci;;🧑‍⚖️;Rozhodčí si přihlášku pomalu přečte. „Blesk. Loňský čas tři čtyřicet. Přijato.“;-prihlaska prihlaska_doruceno razitko
+prihlaska;trenerka;;👩;„To už jsem vyplnila. Teď ji dones rozhodčímu.“;
+prihlaska;starosta;;👴;„Přihláška? Tu nepodepisuju, to dělá rozhodčí. Díky bohu.“;
+prihlaska;blesk;;🐚;Ulita přihlášku ignoruje.;
+povoleni;rozhodci;;🧑‍⚖️;Rozhodčí si prohlédne podpis přes půl stránky. „Pěkný. Platí.“;-povoleni povoleni_doruceno razitko
+povoleni;starosta;;👴;„Ten podpis se mi povedl, viď? Teď s tím k rozhodčímu.“;
+povoleni;trenerka;;👩;„Povolení! Rychle k rozhodčímu.“;
+pistole;rozhodci;povoleni_doruceno prihlaska_doruceno blesk_vzhuru;🏁;Rozhodčí zvedne pistoli. „Připravit… pozor… teď!“ Bum! Šnek Blesk vyrazí plnou rychlostí, tedy jeden centimetr za minutu. Diváci šílí.;-pistole pistole_doruceno zavod razitko
+pistole;rozhodci;povoleni_doruceno prihlaska_doruceno;🧑‍⚖️;„Pistole tu je, ale šampion spí. Na spícího šneka se nestřílí.“ Vrátí ti ji.;
+pistole;rozhodci;;🧑‍⚖️;„Pistole! Ale nemám ještě všechny papíry. Bez povolení a přihlášky se nestřílí.“ Vrátí ti ji.;
+pistole;trenerka;;👩;„Na mě nemiř! Dej to rozhodčímu.“;
+pistole;blesk;;🐌;Mířit na šneka? Ten se lekne a zaleze zpátky do ulity na týden. Radši ne.;
+*;lavicka;;🪑;Lavička nic nepotřebuje. Klepni na ni a počkej.;
+*;*;;🤷;Nic se nestane. Čas ale běží.;

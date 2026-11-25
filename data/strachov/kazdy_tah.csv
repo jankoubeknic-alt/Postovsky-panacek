@@ -1,0 +1,10 @@
+# Prohlídka se po každém podání posune: 1 nádvoří, 2 rytířský sál, 3 kaple, 4 sklep a zase nádvoří.
+# Když jsou strašidla pozvaná a prohlídka vejde do sálu, začne strašení.
+podminka;efekt;text
+pokoj=4;pokoj=0;
+pokoj<4;pokoj+1;
+pokoj=1;;Prohlídka se vrátila na nádvoří.
+pokoj=2 !pozvani;;Prohlídka vešla do rytířského sálu. Bílá paní se schovala za závěs.
+pokoj=3;;Prohlídka je v kapli. Rytíř se schoval za oltář.
+pokoj=4;;Prohlídka sestoupila do sklepa. Kostlivec zalezl do sudu.
+pozvani pokoj=2 !straseni;straseni;Prohlídka vešla do rytířského sálu a v tu ránu zhasla světla. Strašidla začala strašit.

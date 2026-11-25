@@ -1,0 +1,13 @@
+# Voda teče po každém podání odspodu: otevřené stavidlo (o1 až o3) pustí jednu míru do rybníka pod ním. Plný rybník (3) další vodu nesnese a prázdný bez lovu je prohra.
+podminka;efekt;text
+o3 h3>0;h3-1;
+o2 h2>0 h3=3;katastrofa;Prostřední rybník pouští vodu do plného dolního. Hráz dolního rybníka praskla!
+o2 h2>0;h2-1 h3+1;
+o1 h1>0 h2=3;katastrofa;Horní rybník pouští vodu do plného prostředního. Hráz praskla!
+o1 h1>0;h1-1 h2+1;
+h1=0 !lov1;katastrofa;Horní rybník vyschl dřív, než se v něm lovilo. Ryby leží v bahně.
+o1 h1=1 !lov1;;Horní rybník je na lovišti. Teď, nebo nikdy!
+h2=0 !lov2;katastrofa;Prostřední rybník vyschl dřív, než se v něm lovilo. Ryby leží v bahně.
+o2 h2=1 !lov2;;Prostřední rybník je na lovišti. Teď, nebo nikdy!
+h3=0 !lov3;katastrofa;Dolní rybník vyschl dřív, než se v něm lovilo. Ryby leží v bahně.
+o3 h3=1 !lov3;;Dolní rybník je na lovišti. Teď, nebo nikdy!

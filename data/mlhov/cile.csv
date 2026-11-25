@@ -1,0 +1,9 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Mlha 0 = louka a pastýř, 1 = opar a plaší Mlhovští, 2 = hustá mlha a celá ves z roku 1910.
+id;jmeno;ikona;x;y;skryt_kdyz
+vavrinec;Pošťák Vavřinec;👻;50;20;mlha<2 nebo vavrinec_odpocinul
+klara;Vdova Klára;👩‍🦳;22;36;mlha<1 nebo klara_odpocinula
+kovar;Kovář Brabec;🧔;78;38;mlha<2 nebo kovar_odpocinul
+rozarka;Rozárka;👧;52;52;mlha=0 nebo mlha=2 nebo rozarka_odpocinula
+pastyr;Pastýř Matěj;👴;22;66;mlha=2
+lucerna;Lucerna;🏮;50;84;

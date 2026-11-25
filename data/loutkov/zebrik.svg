@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Hasičský žebřík vytažený až k lávce -->
+  <g stroke="#C9A24A" stroke-width="2.5"><path d="M168 200L142 44M184 200L158 44"/></g>
+  <g stroke="#C9A24A" stroke-width="1.8"><path d="M165 182h16M161 158h16M157 134h16M153 110h16M149 86h16M145 62h16"/></g>
+</svg>

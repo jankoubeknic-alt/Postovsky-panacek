@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Mňoukova: dvůr u Fousků. Nahoře vlevo chalupa, vpravo seník, uprostřed dvorek s kozlem,
+       vlevo kurník, vpravo chlívek, uprostřed psí bouda, dole řeznictví a hruška. -->
+  <rect width="300" height="400" fill="#E4E9E2"/>
+  <path d="M0 110C90 100 200 108 300 98V400H0Z" fill="#C4CF9E"/>
+  <path d="M60 140C110 132 190 134 240 142C250 200 240 280 230 300C180 310 120 310 70 300C60 260 54 200 60 140Z" fill="#D8C9A2"/>
+  <!-- chalupa -->
+  <rect x="8" y="40" width="104" height="64" fill="#EAD7B0"/>
+  <path d="M0 44L60 10L120 44Z" fill="#9A4A3A"/>
+  <rect x="44" y="66" width="22" height="38" fill="#6B4A3A"/>
+  <rect x="78" y="58" width="22" height="18" fill="#BFD9E4" stroke="#6B4A3A" stroke-width="2"/>
+  <!-- seník -->
+  <rect x="196" y="44" width="96" height="60" fill="#B9895A"/>
+  <path d="M188 48L244 16L300 48Z" fill="#7A5A3A"/>
+  <path d="M206 104C210 80 240 72 280 104Z" fill="#E6CC7A"/>
+  <!-- kurník -->
+  <rect x="4" y="196" width="72" height="46" fill="#C9A77A"/>
+  <path d="M0 198L40 176L80 198Z" fill="#7A5A3A"/>
+  <rect x="30" y="220" width="14" height="22" fill="#5A3A2A"/>
+  <!-- chlívek -->
+  <rect x="224" y="196" width="72" height="46" fill="#C9A77A"/>
+  <path d="M220 198L260 176L300 198Z" fill="#7A5A3A"/>
+  <path d="M232 242h56" stroke="#7A5A3A" stroke-width="3"/>
+  <!-- psí bouda -->
+  <rect x="124" y="226" width="52" height="40" fill="#A97A4E"/>
+  <path d="M118 228L150 206L182 228Z" fill="#7A3A2E"/>
+  <path d="M140 266v-18a10 10 0 0 1 20 0v18Z" fill="#3A2A1E"/>
+  <path d="M176 254C190 260 196 270 200 280" stroke="#6B6B6B" stroke-width="2" fill="none" stroke-dasharray="3 2"/>
+  <!-- řeznictví -->
+  <rect x="4" y="304" width="96" height="70" fill="#E8DCCB"/>
+  <path d="M0 308L52 284L104 308Z" fill="#8A3A2E"/>
+  <rect x="14" y="316" width="76" height="12" fill="#8A3A2E"/>
+  <text x="52" y="325" font-family="Georgia, serif" font-size="7" fill="#F4F1E8" text-anchor="middle">ŘEZNICTVÍ</text>
+  <!-- hruška -->
+  <rect x="240" y="300" width="12" height="70" fill="#6B4A2E"/>
+  <circle cx="246" cy="290" r="40" fill="#7FA35A"/>
+  <g fill="#D9C24A"><circle cx="228" cy="296" r="4"/><circle cx="262" cy="280" r="4"/><circle cx="250" cy="304" r="4"/></g>
+</svg>

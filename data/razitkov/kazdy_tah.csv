@@ -1,0 +1,4 @@
+# Polední přestávka: řízky pošlou paní Razítkovou na oběd. Oběd trvá tři podání, mezitím okénko 1 zastupuje pan Kulatý.
+podminka;efekt;text
+obed=1;obed=0 ikona:okenko1: ikona:okenko2:;Paní Razítková se vrátila z oběda a utírá si pusu. Pan Kulatý se přesunul zpátky na okénko dvě.
+obed>1;obed-1;

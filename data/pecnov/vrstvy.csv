@@ -1,0 +1,6 @@
+# Pec podle počítadla faze: 1 kameny, 2 pod, 3 klenba, 4 komín.
+obrazek;podminka
+data/pecnov/pec1.svg;faze>=1
+data/pecnov/pec2.svg;faze>=2
+data/pecnov/pec3.svg;faze>=3
+data/pecnov/pec4.svg;faze>=4

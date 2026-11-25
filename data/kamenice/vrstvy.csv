@@ -1,0 +1,4 @@
+# Obrázky přes pozadí scény. Vidět je každý, jehož podmínka platí (prázdná = pořád). Kreslí se v tomto pořadí.
+obrazek;podminka
+data/kamenice/noc.svg;noc
+data/kamenice/muzika.svg;noc harmonika_doruceno

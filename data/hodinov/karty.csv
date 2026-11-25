@@ -1,0 +1,7 @@
+id;nazev;druh;ikona;adresa;popis
+dopis_hospodsky;Dopis pro hospodského;dopis;✉️;Hospoda U Rohu, Hodinov;Z pivovaru. Nový ceník od Nového roku.
+dopis_marka;Dopis pro Mařku;dopis;💌;Mařka Kubátová, pod lípou;Od Pepy z vojny. Psáno opatrně, s ozdobným M.
+dopis_pani;Dopis pro Bílou paní;dopis;📜;Bílá paní, hodinovská zřícenina, o půlnoci;Pečeť s erbem. Z hradu Strachova, od tamějšího strašidla.
+dopis_pekar;Dopis pro pekaře;dopis;✉️;Pekař, Hodinov;Od mlynáře. Mouka přijede v sobotu.
+koralka;Placatka kořalky;vec;🍶;;Od hospodského. Prý pro ponocného, ať se zahřeje.
+prsten;Starý prsten;vec;💍;;Zlatý prstýnek s kamínkem. Bílá paní ho našla v hradním příkopu.

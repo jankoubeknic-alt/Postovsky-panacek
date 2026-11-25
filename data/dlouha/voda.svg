@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Rybník plný vody, uprostřed ostrůvek -->
+  <ellipse cx="180" cy="300" rx="100" ry="46" fill="#6F9DC0"/>
+  <path d="M110 290c10-5 20-5 30 0M200 320c10-5 20-5 30 0M220 280c10-5 20-5 30 0" stroke="#D8E8F2" stroke-width="1.5" fill="none"/>
+  <ellipse cx="180" cy="300" rx="24" ry="12" fill="#8AA25A"/>
+</svg>

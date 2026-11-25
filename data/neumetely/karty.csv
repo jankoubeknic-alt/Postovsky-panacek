@@ -1,0 +1,7 @@
+id;nazev;druh;ikona;adresa;popis
+prosba;Prosba sedláků;dopis;📜;Kníže, hrad nad řekou;Podepsalo ji třicet sedláků křížkem. Horymír chránil naše pole.
+dopis_horymir;Dopis od ženy;dopis;💌;Horymír, hradní věž;Od Horymírové. Na konci je dopsáno: Pozdravuj Šemíka.
+oves;Pytlík ovsa;vec;🌾;;Ovsa na jedno krmení. Koně ho mají raději než cukr.
+semik;Šemík;vec;🐎;;Bílý kůň s černou hřívou. Nese tě, kam řekneš, a přeskočí cokoli.
+propustka;Propustka;dopis;🎫;;S knížecí pečetí. Vrátný musí otevřít.
+dopis_domu;Vzkaz pro Horymírovou;dopis;✉️;Horymírová, dvůr v Neumětelích;Horymír píše z hradu: Jestli se nevrátím, Šemík ví, co dělat.

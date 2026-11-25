@@ -1,0 +1,6 @@
+# Ves podle období: 1 zima, 2 jaro, 3 léto, 4 podzim.
+obrazek;podminka
+data/mesickov/zima.svg;obdobi=1
+data/mesickov/jaro.svg;obdobi=2
+data/mesickov/leto.svg;obdobi=3
+data/mesickov/podzim.svg;obdobi=4

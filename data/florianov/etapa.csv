@@ -1,0 +1,16 @@
+klic;hodnota
+datum;4. V.
+start;dopis_starosta
+cil;uhaseno starosta_doruceno
+uvod;Na svatého Floriána, patrona hasičů, slaví ve Floriánově celý sbor v hospodě. A zrovna teď chytla kovárna. Vítr fouká od kovárny k truhlárně, od truhlárny k chalupě Vávrových, kde spí babička, a dál k faře.|Zbrojnice se stříkačkou je zamčená a klíč má starosta. Pošťák nese starostovi dopis. U studny je vědro.
+navod;Oheň přeskočí po každém tahu na další dům po větru. Mokrý dům nechytne, ale brzy oschne. Chalupa Vávrových shořet nesmí.
+konec_nadpis;Uhašeno
+konec_text;Hasiči rozvinuli hadice a za chvíli z kovárny zbylo jen kouřící spáleniště a mokrá kovadlina. Chalupa Vávrových stojí, babička se ani neprobudila. Hasiči se vrátili do hospody slavit svatého Floriána, teď už s opravdovým důvodem.|Brašna je prázdná a pošťák je mokrý od hlavy k patě. Velitel ti připnul čestný odznak.
+pozadi;data/florianov/pozadi.svg
+barvy;
+pocitadla;o1=1 o2=0 o3=0 o4=0 m2=0 m3=0 m4=0 hasi=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;hasi:Hasiči:2
+prohra;o3=1
+prohra_text;Oheň přeskočil na chalupu Vávrových. Babičku vynesli sousedé v peřině, ale chalupa lehla popelem.|Zkus to znovu. Vědro oheň zdrží a hasiči potřebují klíč i poplach.

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Před poštou stojí poštovní vůz -->
+  <rect x="226" y="164" width="44" height="22" rx="3" fill="#E2B23A" stroke="#7A5A1A" stroke-width="1.5"/>
+  <text x="248" y="179" font-family="Georgia, serif" font-size="6" fill="#3B2A1E" text-anchor="middle">POŠTA</text>
+  <g fill="#3B332E"><circle cx="234" cy="190" r="5"/><circle cx="262" cy="190" r="5"/></g>
+  <path d="M226 180h-14" stroke="#7A5A1A" stroke-width="2"/>
+  <path d="M196 188q4-12 14-8 8 4 0 10z" fill="#C9A06A" stroke="#7A5A3A"/>
+</svg>

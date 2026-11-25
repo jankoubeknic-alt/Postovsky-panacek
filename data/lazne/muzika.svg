@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Koncert: noty stoupají z altánu -->
+  <style>
+    .nota { animation: stoupa 3s ease-in infinite; }
+    .n2 { animation-delay: -1s; } .n3 { animation-delay: -2s; }
+    @keyframes stoupa { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translate(6px, -40px); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .nota { animation: none; opacity: .9; } }
+  </style>
+  <defs>
+    <g id="n" fill="#3D4FA0" stroke="#3D4FA0">
+      <ellipse cx="0" cy="0" rx="4" ry="3" transform="rotate(-20)" stroke="none"/>
+      <path d="M3.4 -1V-13l5 3" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <g transform="translate(200 160)"><use class="nota" href="#n"/></g>
+  <g transform="translate(276 156)"><use class="nota n2" href="#n"/></g>
+  <g transform="translate(212 140)"><use class="nota n3" href="#n"/></g>
+  <g transform="translate(270 136)"><use class="nota" href="#n" style="animation-delay:-.5s"/></g>
+</svg>

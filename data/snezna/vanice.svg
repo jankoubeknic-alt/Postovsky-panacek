@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Sníh 5+: vánice, hustší a větší vločky šikmo, bílý opar -->
+  <style>
+    .vanice { animation: fouka 2.4s linear infinite; }
+    @keyframes fouka { from { transform: translate(-40px, -40px); } to { transform: translate(0, 0); } }
+    @media (prefers-reduced-motion: reduce) { .vanice { animation: none; } }
+  </style>
+  <defs>
+    <pattern id="h" width="40" height="40" patternUnits="userSpaceOnUse">
+      <g fill="#FFFFFF" opacity=".8"><circle cx="6" cy="8" r="2"/><circle cx="26" cy="18" r="1.6"/><circle cx="14" cy="32" r="2.2"/><circle cx="34" cy="36" r="1.4"/></g>
+    </pattern>
+  </defs>
+  <rect width="300" height="400" fill="#FFFFFF" opacity=".28"/>
+  <rect class="vanice" x="0" y="0" width="340" height="440" fill="url(#h)"/>
+</svg>

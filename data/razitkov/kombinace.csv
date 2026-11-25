@@ -1,0 +1,94 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu obed=4, obed-1 | v podmínce obed>0, obed=0
+# Razítkov: okénko 1 chce potvrzení z okénka 2 a okénko 2 chce povolení z okénka 1. Během oběda sedí pan Kulatý na obou.
+karta;cil;podminka;vyraz;text;efekt
+?;okenko1;obed>0 !povoleni_vydano;👨‍💼;Na okénku jedna teď sedí pan Kulatý. „Zastupuju. Povolení k doručování? Na to potřebuju potvrzení z okénka dvě. Okénko dvě jsem ale já.“ Chvíli přemýšlí. „A já sám sobě věřím.“ Bum, bum. Dvě razítka a máš povolení.;+povoleni povoleni_vydano
+?;okenko1;obed>0;👨‍💼;Pan Kulatý zastupuje a luští křížovku. „Úřední pečeť, šest písmen? Matriku dělá jen paní Razítková. Počkejte, až se naobědvá.“;
+?;okenko1;povoleni_vydano;👩‍💼;Paní Razítková ťuká razítkem do polštářku. „Povolení máte? Výborně. Podatelna, matrika, razítka. Co si přejete?“;
+?;okenko1;;👩‍💼;Okénko 1, podatelna a matrika. Paní Razítková ani nezvedne hlavu. „Povolení k doručování vydám. Doložte potvrzení z okénka dvě, že jste opravdu pošťák.“ Na stole jí kručí v břiše. Od rána nejedla.;
+?;okenko2;obed>0;🪟;Okénko dvě je prázdné. Na sklíčku visí cedulka: ZASTUPUJE OKÉNKO JEDNA.;
+?;okenko2;povoleni_vydano;👨‍💼;Pan Kulatý si fouká na razítko. „Povolení máte, tak jste pošťák. Potvrzení už nepotřebujete. Ale kdybyste chtěl, vydám.“;
+?;okenko2;;👨‍💼;Okénko 2, ověřování. Pan Kulatý se usměje. „Potvrzení, že jste pošťák? Vydám. Doložte povolení k doručování z okénka jedna. Jinak nevím, že doručujete.“;
+?;maminka;obed=0 !@rizky !povoleni_vydano rizky_dala;👵;„Jarmilka zase nic nesnědla? Tady máš další,“ povzdychne maminka a podá ti nový ešus. „Ať jí nevychladnou.“;+rizky
+?;maminka;obed=0 !@rizky !povoleni_vydano;👵;Maminka paní Razítkové drží ešus s řízky. „Moje Jarmilka na úřadě zase nejí. Nesla bych jí je, ale do úřadu se smí jen s pořadovým číslem.“ Podá ti ešus. „Jídlo není pošta, na to povolení nepotřebuješ.“;+rizky rizky_dala
+?;maminka;obed>0;👵;Maminka nakukuje do okna úřadu. „Jí! Konečně jí! Dívej, i ubrousek si dala.“;
+?;maminka;;👵;Maminka paní Razítkové plete na lavičce před úřadem. Lavičku má povolenou. „Jarmilka se najedla, tak je spokojená. Úředně spokojená.“;
+?;starosta;ministerstvo_razitko;🎩;Starosta stojí v pozoru. „Orazítkované? Tak mi ho dejte. Ale nejdřív doručte všechno ostatní, ať je to ještě po starém.“;
+?;starosta;;🎩;Starosta Pečeť nosí na řetízku tři razítka. „U nás je pořádek,“ chlubí se. „Bez razítka ani ránu.“;
+?;lavicka;@povoleni;🪑;Povolení k sezení nemáš, ale povolení k doručování vypadá dost úředně. Sedneš si a chvíli počkáš.;cekej
+?;lavicka;;🪑;Na lavičce visí cedule: SEZENÍ POUZE S POVOLENÍM. Stojíš vedle ní.;
+?;babka;potvrzeni_doruceno;🧓;Babka si nese z pošty důchod. „Mám to černé na bílém. Žiju! Jdu si koupit koblihu.“;
+?;babka;@zadost;🧓;„Žádost dones na matriku, chlapče. Okénko jedna. Já tam nedojdu, mám nohy na úřad moc staré.“;
+?;babka;;🧓;Babka Kalinová sedí u plotu a vyhlíží pošťáka. „Čekám na výměr důchodu. Říkali, že mi ho doručí, až bude pošťák mít povolení.“;
+?;pes;znamka_doruceno;🐕;Azor hrdě nosí známku na obojku. Úředně štěkne.;
+?;pes;;🐕;Pes Azor leží u vrat. V obecní evidenci je vedený jako kočka, protože mu chybí psí známka. Zkouší mňoukat, aby měl klid.;
+napoveda;*;!povoleni_vydano obed>0;💡;Pan Kulatý teď sedí na okénku jedna i dvě zároveň. Zeptej se ho na povolení, než se paní Razítková naobědvá.;
+napoveda;*;!povoleni_vydano @rizky;💡;Paní Razítková od rána nejedla. Dones jí řízky. Kdo ji na obědě zastoupí?;
+napoveda;*;!povoleni_vydano;💡;Okénko jedna chce potvrzení z okénka dvě a okénko dvě chce povolení z okénka jedna. Tak se to nikdy nehne. Co kdyby jedno okénko obsadil úředník z druhého? Maminka paní Razítkové má něco k jídlu.;
+napoveda;*;@duchod;💡;Teď už smíš doručovat. Výměr důchodu je pro babku Kalinovou.;
+napoveda;*;@zadost obed>0;💡;Matriku dělá jen paní Razítková. Počkej, až se vrátí z oběda. Na lavičce se dá posedět.;
+napoveda;*;@zadost;💡;Žádost o potvrzení o žití patří na matriku, okénko jedna.;
+napoveda;*;@potvrzeni;💡;Potvrzení o žití dones babce.;
+napoveda;*;!znamka_doruceno;💡;Psí známka je pro Azora.;
+napoveda;*;!ministerstvo_precteno;💡;Dopis z ministerstva je pro starostu.;
+napoveda;*;!ministerstvo_razitko;💡;Zrušení razítek bez razítka neplatí. Kdo v Razítkově razítkuje? Okénko jedna.;
+napoveda;*;;💡;Všechno ostatní je doručeno. Dones starostovi orazítkovaný dopis z ministerstva.;
+rizky;okenko1;;😋;Paní Razítková ucítí řízky a rozzáří se. „Od maminky!“ Vyvěsí ceduli POLEDNÍ PŘESTÁVKA a jde jíst. Na okénko jedna si přesedne pan Kulatý. „Zastupuju,“ oznámí.;-rizky obed=4 ikona:okenko1:👨‍💼 ikona:okenko2:🪟
+rizky;okenko2;;👨‍💼;Pan Kulatý se olízne. „Řízky od maminky? Ty jsou pro Jarmilu na jedničce. Já mám chleba se sádlem.“;
+rizky;maminka;;👵;„To jsou pro Jarmilku! Nes jí je, ať jí nevychladnou.“;
+rizky;pes;;🐕;Azor po řízcích skočí. Uhneš. Úředně je to kočka, ale skáče jako pes.;
+rizky;babka;;🧓;„Voní, ale ty jsou pro paní Razítkovou. Ta od rána nejedla, vidím ji z okna.“;
+rizky;starosta;;🎩;„Řízky na úřad? Úředníci jedí jen o polední přestávce. Kterou si ale musí dát sami.“;
+rizky;lavicka;;🪑;Ešus na lavičku? Bez povolení se tu nesedí ani ešusy.;
+duchod;babka;@povoleni;🧓;Babka si přečte výměr důchodu. „Vyplatíme, jakmile doložíte, že žijete.“ Rozčílí se: „Vždyť žiju!“ Pak napíše žádost o potvrzení o žití a podá ti ji. „Dones to na matriku.“;-duchod +zadost duchod_precten
+duchod;pes;;🐕;Azor obálku očichá. Důchod nepobírá, v evidenci je kočka a kočky do důchodu nechodí.;
+duchod;starosta;;🎩;„Výměr důchodu? Já jsem teprve v půlce volebního období. To je pro babku Kalinovou.“;
+duchod;okenko1;;👩‍💼;„Výměry se doručují do vlastních rukou. Babka Kalinová, číslo dvanáct.“;
+duchod;maminka;;👵;„Důchod? Ten já beru v řízcích. Tohle je pro Kalinovou.“;
+zadost;okenko1;obed>0;👨‍💼;Pan Kulatý žádost odsune. „Matrika? To smí jen paní Razítková. Je na obědě.“;
+zadost;starosta;;🎩;„Žádost o potvrzení o žití? To vyřizuje matrika. Okénko jedna. Já jen razítkuju razítka.“;
+zadost;maminka;;👵;„Matrika je u Jarmilky, okénko jedna. Ta ti potvrdí cokoli, když je najedená.“;
+zadost;okenko1;;👩‍💼;Paní Razítková si žádost prohlédne. „Psáno dnes, vlastní rukou, s kaňkou. Kdo dělá kaňky, ten žije.“ Bum! Potvrzení o žití.;-zadost +potvrzeni
+zadost;okenko2;;👨‍💼;„Ověřuju podpisy, ne živé lidi. Matrika je okénko jedna.“;
+zadost;babka;;🧓;„To je moje žádost. Dones ji na matriku, ať mi potvrdí, že žiju.“;
+potvrzeni;babka;@povoleni;🥳;Babka si potvrzení přitiskne k srdci. „Úředně žiju! Teď mi důchod vyplatí.“ Zatancuje u plotu, i s holí.;-potvrzeni potvrzeni_doruceno ikona:babka:🥳 razitko
+potvrzeni;okenko1;;👩‍💼;„Potvrzení je pro paní Kalinovou. Já už vím, že žije. Mám to černé na bílém.“;
+potvrzeni;okenko2;;👨‍💼;„Mám ověřit, že babka žije? To ať se ověří sama. Stačí, když mi zamává.“;
+potvrzeni;starosta;;🎩;„Úředně žije? Výborně. Doručte jí to, ať to ví i ona.“;
+potvrzeni;pes;;🐕;Azor potvrzení očichá a kýchne. Razítkový inkoust nemá rád.;
+znamka;pes;@povoleni;🐕;Připneš Azorovi známku na obojek. Azor poprvé v životě úředně štěkne. Do teď byl v evidenci vedený jako kočka.;-znamka znamka_doruceno ikona:pes:🐶 razitko
+znamka;okenko2;;👨‍💼;„Psí známka? Tu nemusím ověřovat. Pes se ověří sám, až zaštěká.“;
+znamka;babka;;🧓;„Známka? Na dopis je moc těžká. Ta je pro Azora, chudák je úředně kočka.“;
+znamka;starosta;;🎩;„Psí známka? Já nosím razítka, ne známky. Ta je pro Azora.“;
+znamka;maminka;;👵;„To je pro Azora. Mňouká už třetí rok, aby ho nechali na pokoji.“;
+znamka;okenko1;;👩‍💼;„Psí známky nevydáváme, my je jen evidujeme. Doručte ji psovi.“;
+ministerstvo;starosta;@povoleni ministerstvo_razitko potvrzeni_doruceno znamka_doruceno;🎉;Starosta přečte orazítkované zrušení razítek. „Ode dneška se v Razítkově razítkovat nemusí!“ Celá ves jásá. Povolení k doručování ti starosta vezme a slavnostně ho zarámuje.;-ministerstvo -povoleni ministerstvo_doruceno ikona:starosta:🎉 razitko
+ministerstvo;starosta;@povoleni ministerstvo_razitko;🎩;„Orazítkované, výborně. Ale ještě máš v brašně úřední věci. Ty doruč nejdřív, ještě podle starých pravidel. Pak mi to dej.“;
+ministerstvo;starosta;@povoleni;😱;Starosta dopis otevře a zbledne. „Ruší se povinnost razítek. Ale tohle nemá razítko! Bez razítka to neplatí!“ Vrátí ti ho. „Ať to orazítkují na úřadě.“;ministerstvo_precteno
+ministerstvo;okenko1;ministerstvo_precteno obed>0;👨‍💼;„Razítko podatelny smí dát jen paní Razítková. A ta je na obědě.“;
+ministerstvo;okenko1;ministerstvo_precteno;👩‍💼;Paní Razítková si přečte, co ruší. Chvíli mlčí. Pak vezme razítko a s velkou úctou ho otiskne. Naposledy. „Přijato.“;ministerstvo_razitko
+ministerstvo;okenko1;;👩‍💼;„Dopis pro starostu? Doručte mu ho. Úřad se do cizí pošty nedívá.“;
+ministerstvo;okenko2;;👨‍💼;„Ověřuju podpisy, ne ministerstva. Ministerstvo se ověřuje samo.“;
+ministerstvo;babka;;🧓;„Z ministerstva? To je pro starostu. Mně píše jen okres.“;
+ministerstvo;pes;;🐕;Azor vrčí na státní znak na obálce.;
+ministerstvo;maminka;;👵;„Ministerstvo? To dej starostovi, ať má radost. Nebo strach.“;
+povoleni;okenko1;;👩‍💼;„Povolení máte, to je dobře. Nechte si ho. Bez něj vám tu nikdo nic nepřevezme.“;
+povoleni;okenko2;;👨‍💼;„Moje razítko. Hezky se mi povedlo.“;
+povoleni;lavicka;;🪑;Položíš povolení na lavičku. Lavička nic nenamítá. Klepni na ni, jestli si chceš sednout.;
+povoleni;*;;🪪;Ukážeš povolení k doručování. „Pěkné razítko,“ řeknou všichni a nic víc.;
+*;babka;!@povoleni;🧓;„Bez povolení k doručování to nesmím převzít, chlapče. Já bych ráda, ale Razítkov je Razítkov.“;
+*;pes;!@povoleni;🐕;Azor ani nezvedne hlavu. I pes v Razítkově ví, že bez povolení se nepřebírá.;
+*;starosta;!@povoleni;🎩;„Bez povolení k doručování? To nemůžu převzít, to by bylo protiprávní. Zajděte na okénko jedna.“;
+*;okenko2;;👨‍💼;„Tohle ověřovat nebudu.“;
+*;maminka;;👵;„To není pro mě. Já mám jen řízky.“;
+*;pes;;🐕;Azor očichá zásilku a zamňouká. Není to pro něj.;
+*;lavicka;;🪑;Na lavičku se nic odkládat nesmí. Bez povolení.;
+*;*;;🤷;Nic se nestane.;

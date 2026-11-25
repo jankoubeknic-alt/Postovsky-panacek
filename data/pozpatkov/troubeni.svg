@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Falešné tóny od učitelovy trubky stoupají k Mariinu oknu -->
+  <g fill="#4A3F33" opacity=".75">
+    <circle cx="216" cy="184" r="3"/><path d="M219 184V172h1.5v12z"/>
+    <circle cx="228" cy="168" r="3"/><path d="M231 168V156h1.5v12z"/>
+    <circle cx="236" cy="152" r="3"/><path d="M239 152V140h1.5v12z"/>
+  </g>
+</svg>

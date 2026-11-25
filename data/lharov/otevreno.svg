@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Na zamčených dveřích hospody visí OTEVŘENO -->
+  <rect x="242" y="146" width="32" height="10" rx="1.5" fill="#F4F1E8" stroke="#2F6A3A" stroke-width="1"/>
+  <text x="258" y="153.5" font-family="Georgia, serif" font-size="5.4" font-weight="700" fill="#2F6A3A" text-anchor="middle">OTEVŘENO</text>
+</svg>

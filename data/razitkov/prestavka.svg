@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Na okénku 1 visí cedule POLEDNÍ PŘESTÁVKA, okénko 2 je prázdné -->
+  <path d="M70 74l20-10 20 10" fill="none" stroke="#4A3F33" stroke-width="1"/>
+  <rect x="62" y="76" width="56" height="18" rx="2" fill="#F4F1E8" stroke="#A04A4A" stroke-width="1.5"/>
+  <text x="90" y="84" font-family="Georgia, serif" font-size="5.4" font-weight="700" fill="#A04A4A" text-anchor="middle">POLEDNÍ</text>
+  <text x="90" y="91" font-family="Georgia, serif" font-size="5.4" font-weight="700" fill="#A04A4A" text-anchor="middle">PŘESTÁVKA</text>
+  <rect x="182" y="96" width="56" height="12" fill="#F4F1E8" opacity=".9"/>
+  <text x="210" y="104" font-family="Georgia, serif" font-size="4.6" fill="#4A3F33" text-anchor="middle">ZASTUPUJE OKÉNKO 1</text>
+</svg>

@@ -1,0 +1,10 @@
+# Spánek posune den: čtvrtek, pátek, sobota, pondělí a po pondělí zase čtvrtek o rok později. Přes noc uschnou kraslice.
+podminka;efekt;text
+noc den=4;den=0;Velikonoce skončily. Rok uteče jako voda a je tu zase Zelený čtvrtek.
+noc den<4;den+1;
+noc den=1;;Je Zelený čtvrtek. Zvony ještě visí na věži, večer odletí do Říma.
+noc den=2;;Je Velký pátek. Zvony jsou v Římě a ves je tichá. Dnes se z domu nic nedává.
+noc den=3;;Je Bílá sobota. Hrkači chodí pro vajíčka a večer se vrátí zvony.
+noc den=4;;Je Velikonoční pondělí. Zvony zvoní a kluci chystají pomlázky.
+noc @kraslice_mokre;-kraslice_mokre +kraslice;Kraslice přes noc uschly.
+noc;!noc;

@@ -1,0 +1,70 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Martinov: voják na bílém koni rozetne mečem plášť a pecen napůl (dvě různé karty). Půlky se dávají potřebným, husa se nepůlí.
+karta;cil;podminka;vyraz;text;efekt
+plast;vojak;;⚔️;Voják na bílém koni vytáhne meč a jedním švihem rozetne tvůj plášť napůl. „Tak se to dělá. Půlka tobě, půlka tomu, kdo mrzne.“;-plast +plast_a +plast_b
+pecen;vojak;;⚔️;Voják položí pecen na sedlo a rozkrojí ho mečem na dvě stejné půlky.;-pecen +pecen_a +pecen_b
+husa;vojak;;🐴;Voják zavrtí hlavou. „Husu napůl? Ta je pro pana faráře, celá. A na svátek se husa nepůlí, ta se jí.“;
+plast_a;vojak;;🐴;„Půlku znovu napůl? Čtvrtka pláště nikoho nezahřeje a čtvrtka pecnu nikoho nenasytí.“;
+plast_b;vojak;;🐴;„Půlku znovu napůl? Čtvrtka pláště nikoho nezahřeje a čtvrtka pecnu nikoho nenasytí.“;
+pecen_a;vojak;;🐴;„Půlku znovu napůl? Čtvrtka pláště nikoho nezahřeje a čtvrtka pecnu nikoho nenasytí.“;
+pecen_b;vojak;;🐴;„Půlku znovu napůl? Čtvrtka pláště nikoho nezahřeje a čtvrtka pecnu nikoho nenasytí.“;
+dopis_hospodsky;vojak;;🐴;„Dopisy nekrájím.“;
+?;vojak;;🐴;Voják na bílém koni se dívá k nebi. „Až budou všichni v Martinově zahřátí a nasycení, přijde sníh. Tak to bývá.“;
+plast_a;zebrak;zebrak_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima.“;
+plast_a;zebrak;;🧣;Žebrák se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_a zebrak_ok razitko
+plast_b;zebrak;zebrak_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima.“;
+plast_b;zebrak;;🧣;Žebrák se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_b zebrak_ok razitko
+plast;zebrak;;🧥;„Celý plášť? To je moc, pošťáku. Ty bys pak zmrzl a já bych se styděl. Půlka by stačila.“;
+pecen_a;zebrak;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
+pecen_b;zebrak;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
+pecen;zebrak;;😊;„Celý pecen? Ten je pro chudé, rozdělte. Mně je hlavně zima.“;
+?;zebrak;zebrak_ok;😊;Žebrák je spokojený.;
+plast_a;babka;babka_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima.“;
+plast_a;babka;;🧣;Babka se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_a babka_ok razitko
+plast_b;babka;babka_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima.“;
+plast_b;babka;;🧣;Babka se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_b babka_ok razitko
+plast;babka;;🧥;„Celý plášť? To je moc, pošťáku. Ty bys pak zmrzl a já bych se styděl. Půlka by stačila.“;
+pecen_a;babka;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
+pecen_b;babka;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
+pecen;babka;;😊;„Celý pecen? Ten je pro chudé, rozdělte. Mně je hlavně zima.“;
+?;babka;babka_ok;😊;Babka je spokojená.;
+pecen_a;honzik;honzik_ok;🍞;„Já už mám. Dej to druhému.“;
+pecen_a;honzik;;🍞;Honzík se zakousne do půlky pecnu a rozzáří se.;-pecen_a honzik_ok razitko
+pecen_b;honzik;honzik_ok;🍞;„Já už mám. Dej to druhému.“;
+pecen_b;honzik;;🍞;Honzík se zakousne do půlky pecnu a rozzáří se.;-pecen_b honzik_ok razitko
+pecen;honzik;;🍞;Honzík se podívá na celý pecen a pak na Aničku. „Celý? A co ten druhý?“;
+plast_a;honzik;;🧒;„Mně není zima, já mám hlad.“;
+plast_b;honzik;;🧒;„Mně není zima, já mám hlad.“;
+?;honzik;honzik_ok;😊;Honzík je spokojený.;
+pecen_a;anicka;anicka_ok;🍞;„Já už mám. Dej to druhému.“;
+pecen_a;anicka;;🍞;Anička se zakousne do půlky pecnu a rozzáří se.;-pecen_a anicka_ok razitko
+pecen_b;anicka;anicka_ok;🍞;„Já už mám. Dej to druhému.“;
+pecen_b;anicka;;🍞;Anička se zakousne do půlky pecnu a rozzáří se.;-pecen_b anicka_ok razitko
+pecen;anicka;;🍞;Anička se podívá na celý pecen a pak na Honzíka. „Celý? A co ten druhý?“;
+plast_a;anicka;;🧒;„Mně není zima, já mám hlad.“;
+plast_b;anicka;;🧒;„Mně není zima, já mám hlad.“;
+?;anicka;anicka_ok;😊;Anička je spokojená.;
+?;zebrak;;🧎;Žebrák se třese u brány. „Zima, pane. Jen kdybych měl něco přes ramena.“;
+?;babka;;👵;Babka Kmochová fouká do dlaní. „Dříví došlo a kabát mi sežraly moli.“;
+?;honzik;;👦;Honzík drží Aničku za ruku. „Máme hlad. Oba.“;
+?;anicka;;👧;Anička se dívá na pecen v tvé brašně. „Ten voní…“;
+husa;farar;;⛪;Pan farář rozbalí husu. „Svatomartinská! Celá, jak má být. Tu rozdělím na faře mezi chudé, tak se to dělá.“;-husa husa_doruceno razitko
+?;farar;;⛪;„Svatý Martin byl voják. Rozťal plášť napůl a půlku dal žebrákovi. A přišel sníh.“;
+husa;honzik;;👦;Honzík polkne. „To je husa pro pana faráře, na adrese to stojí.“;
+husa;anicka;;👧;„To je pro pana faráře. Ten ji pak rozdělí. Říkal to.“;
+dopis_hospodsky;hospodsky;;🍷;Hospodský čte. „V jedenáct jedenáct se otevírá svatomartinské. Tak to se zas bude zpívat.“;-dopis_hospodsky hospodsky_doruceno razitko
+?;hospodsky;;🍷;„Na Martina mladé víno a husa. A kdo nemá ani na chleba, tomu aspoň přeju.“;
+?;pekar;;🥖;„Pecen pro chudé jsem dal tobě. Rozděl ho, jak uznáš. Nůž ale nemám, ten mám v krámě.“;
+pecen;pekar;;🥖;„Ten už je tvůj. Rozděl ho. Ten voják u brány má meč, ten krájí rovně.“;
+napoveda;*;@plast;💡;Celý plášť nikdo nevezme. Voják u brány ho umí rozetnout napůl.;
+napoveda;*;@pecen;💡;Pecen je pro chudé, rozdělte. Dva sirotci, dvě půlky.;
+napoveda;*;;💡;Husa patří celá panu farářovi a dopis hospodskému.;
+*;pekar;;🥖;„Já jen peču.“;
+*;*;;🤷;Nic se nestane.;

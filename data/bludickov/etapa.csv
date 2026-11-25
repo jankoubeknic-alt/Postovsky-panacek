@@ -1,0 +1,16 @@
+klic;hodnota
+datum;2. XI.
+start;dopis_hajna dopis_korenarka dopis_hastrman
+cil;hajna_doruceno korenarka_doruceno hastrman_doruceno dusicka_volna
+uvod;Za Bludičkovem jsou slatě a přes ně vede jediná pevná stezka k samotě, kde bydlí hajná a stará kořenářka. Večer nad slatěmi tančí bludičky a lákají pocestné do bahna. Jen jedno světlo je opravdové: lucerna hajné, která svítí z okna samoty a nehne se.|Kdo zapadne, toho vytáhne hastrman Šplíchal. Za odměnu si nechá, co mu padne do ruky, a schová to do hrnku pod pokličku. Pod jednou pokličkou už prý dlouho sedí dušička starého pošťáka.
+navod;Klepnutím na světlo za ním půjdeš. Bludičky po každém tahu přeskočí jinam, lucerna stojí.
+konec_nadpis;Dušička je volná
+konec_text;Hajná a kořenářka mají poštu a hastrman psaní od bratrance z Vltavy. Pod poslední pokličkou se zablesklo a dušička starého pošťáka vyletěla nad slatě. Prý se ještě otočila a zamávala čepicí.|Brašna je prázdná a nohy mokré. Kořenářka ti dala sáček mateřídoušky na nachlazení.
+pozadi;data/bludickov/pozadi.svg
+barvy;
+pocitadla;b=1 kouri=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

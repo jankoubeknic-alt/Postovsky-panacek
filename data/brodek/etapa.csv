@@ -1,0 +1,17 @@
+klic;hodnota
+datum;3. IV.
+start;telegram dopis holinky psani
+cil;telegram_doruceno dopis_doruceno holinky_doruceno psani_doruceno
+uvod;V Brodku prší už týden a Lučina stoupá. Každá zásilka, kterou někomu podáš, tě zdrží a voda mezitím vystoupá o kus výš. Rozhlížet se můžeš zadarmo.|Až voda zaplaví lávku, na druhý břeh se dostaneš jen po vodě.
+navod;Každé podání zásilky zvedne hladinu. Rozhlížení je zadarmo.
+konec_nadpis;Brodek je v suchu
+konec_text;Vodník si psaní čte už podesáté a Lučina se uklidnila. Děti jsou doma, rybář má suché nohy a mlynář přísahá, že stavidlo bude mazat každé jaro.|Z mraků vykouklo slunce. Brašna je prázdná.
+pozadi;data/brodek/pozadi.svg
+barvy;
+# Hladina začíná na 2, každé podání zásilky ji zvedne o 1, dokud vodník nedostane psaní.
+pocitadla;voda=2
+kazdy_tah;voda+1
+kazdy_tah_kdyz;!vodnik_stastny
+ukazatele;voda:Hladina:12
+prohra;voda>=12
+prohra_text;Lučina se vylila z břehů a odnesla lávku, poštovní schránku i mlynářovy slepice.|Zkus to znovu. Každé podání zásilky tě zdrží, tak dobře rozmýšlej, komu co dáš.

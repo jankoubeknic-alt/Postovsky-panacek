@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Náhon plný vody, mlýnské kolo se točí -->
+  <path d="M190 236C200 228 214 226 230 232" stroke="#6F9DC0" stroke-width="6" fill="none"/>
+  <g stroke="#6F9DC0" stroke-width="1.5" fill="none"><path d="M200 214c4 4 4 8 0 12M228 214c-4 4-4 8 0 12"/></g>
+</svg>

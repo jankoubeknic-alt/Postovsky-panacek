@@ -1,0 +1,11 @@
+# Kolikrát se zazvoní, na to patro klec sjede (4 = povrch). Mimo trojku se kahan zase rozsvítí.
+podminka;efekt;text
+zvon=1 patro=1;zvon=0;Strojník zazvoní nazpátek. Klec už tam stojí.
+zvon=1;zvon=0 patro=1;Lano se rozjede a klec sjede na jedničku.
+zvon=2 patro=2;zvon=0;Strojník zazvoní nazpátek. Klec už tam stojí.
+zvon=2;zvon=0 patro=2;Lano se rozjede a klec sjede na dvojku.
+zvon=3 patro=3;zvon=0;Strojník zazvoní nazpátek. Klec už tam stojí.
+zvon=3;zvon=0 patro=3;Lano se rozjede a klec sjede na trojku.
+zvon=4 patro=0;zvon=0;Strojník zazvoní nazpátek. Klec už tam stojí.
+zvon=4;zvon=0 patro=0;Lano se rozjede a klec vyjede nahoru na povrch.
+tma !patro=3;!tma;

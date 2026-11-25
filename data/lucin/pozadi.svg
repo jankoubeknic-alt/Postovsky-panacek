@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Lucína: krátký prosincový den, šedé nebe, zasněžená náves s truhlářskou dílnou a kostelem, za okny světla. Vpravo bílé postavy luck s dlouhými zobáky. -->
+  <rect width="300" height="400" fill="#A9B3C1"/>
+  <rect y="230" width="300" height="170" fill="#E9EDF2"/>
+  <rect x="20" y="120" width="80" height="70" fill="#A98B6A"/><path d="M14 122l46-32 46 32z" fill="#6E3A2E"/><rect x="45" y="140" width="16" height="14" fill="#F5D58A"/>
+  <rect x="200" y="90" width="50" height="100" fill="#D8D0C0"/><path d="M196 92l29-40 29 40z" fill="#6E3A2E"/>
+  <g fill="#FFFFFF" opacity=".9"><path d="M120 230q10-50 20 0z"/><path d="M150 230q10-56 20 0z"/></g>
+  <g fill="#E0B040"><path d="M128 190l-14 4 14 2z"/><path d="M158 184l-14 4 14 2z"/></g>
+</svg>

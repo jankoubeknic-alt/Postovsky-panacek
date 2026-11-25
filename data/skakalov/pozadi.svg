@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Skákalova: tři pruhy krajiny nad sebou, nahoře oves, uprostřed zelená louka, dole les. Pes a myslivec v nich běhají dokola. -->
+  <rect width="300" height="400" fill="#DDE6EC"/>
+  <rect y="40" width="300" height="100" fill="#E3C873"/><g stroke="#B99A3E" stroke-width="1.2"><path d="M20 140v-30M40 140v-34M60 140v-28M100 140v-32M140 140v-30M180 140v-34M220 140v-28M260 140v-32M290 140v-30"/></g>
+  <rect y="150" width="300" height="100" fill="#8DC26A"/><g fill="#F4F1E4"><circle cx="120" cy="190" r="2"/><circle cx="200" cy="220" r="2"/><circle cx="260" cy="180" r="2"/></g>
+  <rect y="260" width="300" height="140" fill="#4E7A4A"/><g fill="#3F6A44"><path d="M110 330L130 270L150 330Z"/><path d="M190 340L210 280L230 340Z"/><path d="M250 330L268 280L286 330Z"/></g>
+  <g font-family="Georgia, serif" font-size="8" font-weight="700" fill="#4A3A2E" opacity=".7"><text x="290" y="56" text-anchor="end">OVES</text><text x="290" y="166" text-anchor="end">LOUKA</text><text x="290" y="276" text-anchor="end" fill="#E8F0E0">LES</text></g>
+  <path d="M150 140C120 150 180 150 150 160M150 250C120 260 180 260 150 270" stroke="#7A5A3A" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+</svg>

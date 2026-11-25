@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Koláčova: světnice, vlevo kachlová kamna, vpravo okno, uprostřed dlouhý stůl s bílým ubrusem a mísou koláčů. -->
+  <rect width="300" height="400" fill="#E9DCC3"/>
+  <rect y="300" width="300" height="100" fill="#B08A62"/>
+  <rect x="0" y="120" width="34" height="180" fill="#7FA6A0" stroke="#4E6E6A" stroke-width="2"/><g stroke="#4E6E6A" stroke-width="1"><path d="M0 150H34M0 180H34M0 210H34M0 240H34M0 270H34"/></g>
+  <rect x="262" y="110" width="38" height="60" fill="#BFD9EE" stroke="#6E5A44" stroke-width="3"/><path d="M281 110V170M262 140H300" stroke="#6E5A44" stroke-width="2"/>
+  <rect x="20" y="230" width="260" height="20" fill="#F7F4EC" stroke="#B9A88C"/>
+  <ellipse cx="150" cy="232" rx="34" ry="8" fill="#C98E4A"/><g fill="#F3E3B0"><circle cx="135" cy="229" r="5"/><circle cx="150" cy="227" r="5"/><circle cx="165" cy="229" r="5"/></g>
+</svg>

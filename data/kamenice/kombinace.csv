@@ -1,0 +1,91 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle (ikona:cil: vrátí původní) | razitko ukáže razítko DORUČENO
+# Kamenice: den a noc přepíná klepnutí na věžní hodiny (vlajka noc). Rozhlédnutí s efektem je zadarmo jako každé jiné.
+karta;cil;podminka;vyraz;text;efekt
+?;hodiny;!noc;🌙;Sedneš si na schody pod věží a počkáš, až hodiny odbijí desátou. Kamenice zhasíná, nad šachtou se rozsvítí lampa a z hospody U Kahanu je slyšet halas.;noc byl_v_noci ikona:hodiny:🌙 ikona:kocka:👀
+?;hodiny;denni_smena;☀️;Hodiny odbijí šestou. Z šachty vyjíždí noční směna, tentokrát bez Franty. Ten se poprvé po letech probudil s kohouty.;!noc ikona:hodiny: ikona:kocka:
+?;hodiny;;☀️;Hodiny odbijí šestou. Z šachty vyjíždí noční směna, trafika otevírá okénko a na ředitelství se rozsvítí kancelář.;!noc ikona:hodiny: ikona:kocka:
+?;reditel;kometa_doruceno;😊;Ředitel Hronek se usmívá do spisů. Když si myslí, že se nikdo nedívá, nakreslí na okraj hvězdičku s ocáskem.;
+?;reditel;;🥱;Ředitel dolu Hronek sedí u okna kanceláře a zívá, až mu cvakají zuby. Na stole má studenou kávu a mapu… hvězdné oblohy?;
+?;hvezdar;kometa_doruceno;🔭;Ředitel… totiž muž s dalekohledem si na střeše pobrukuje a do mapy oblohy kreslí svou kometu.;
+?;hvezdar;;🔭;Na střeše ředitelství sedí muž v županu a čepici s bambulí. Kouká dalekohledem do nebe a občas si něco zapíše do sešitu.;
+?;franta;zadost_napsana;👷;Franta přešlapuje u šachty a kouká k zhasnuté trafice. „Už to ředitel podepsal?“;
+?;franta;;👷;Horník Franta čeká u šachty na klec, která ho sveze do dolu. Občas se ohlédne k zhasnuté trafice a povzdychne si.;
+?;hostinsky;harmonika_doruceno;🎶;Vávra hraje na novou harmoniku a horníci u výčepu zpívají, až se třesou půllitry.;
+?;hostinsky;;🧔;Hostinský Vávra utírá půllitry. „Horníci po šichtě chtějí zpívat, ale moje stará harmonika praskla. Nová už měla dávno přijít poštou.“;
+?;marie;denni_smena;😊;Marie se upravuje v okénku trafiky. „Prý je Franta od dneška na denní! Myslíš, že se přijde podívat?“;
+?;marie;;👩;Trafikantka Marie prodává noviny a sirky. „Franta? Toho vídám jen ráno z okénka. On jde ze šachty spát a já otvírám. Zamává mi a je pryč.“;
+?;okno;zadost_napsana;😴;Za okenicemi někdo chrápe a ze spaní mumlá: „Denní… denní…“;
+?;okno;;😴;Za zavřenými okenicemi někdo chrápe. Na dveřích visí cedulka: JSEM Z NOČNÍ. NEBUDIT!;
+?;franta_den;;🙂;Franta stojí před domkem v nedělním saku a mžourá do slunce. „Máš ten prsten? Dneska to Marii řeknu. Za světla!“;
+?;kocka;noc;👀;Ze tmy na tebe svítí dvě zelené oči. Uhlíčka v noci hlídá ulici líp než noční hlídač.;
+?;kocka;;🐈‍⬛;Černá kočka Uhlíčka se vyhřívá na jediném slunném kameni v Kamenici. V noci by sis jí ani nevšiml.;
+napoveda;*;!byl_v_noci !uredni_doruceno;💡;Úřední dopis patří řediteli dolu. V kanceláři sedí jen ve dne.;
+napoveda;*;!byl_v_noci;💡;Někteří lidé v Kamenici jsou vzhůru jen v noci. Klepni na věžní hodiny a počkej, až se setmí.;
+napoveda;*;!noc !uredni_doruceno;💡;Úřední dopis patří řediteli dolu. V kanceláři sedí jen ve dne.;
+napoveda;*;!noc @zadost kometa_doruceno;💡;Ředitel má konečně dobrou náladu. Dej mu Frantovu žádost.;
+napoveda;*;!noc @zadost;💡;Ředitel je ve dne nevyspalý a nic nepodepíše. Co ho asi v noci drží vzhůru? Podívej se po setmění na střechu ředitelství.;
+napoveda;*;!noc denni_smena;💡;Franta je na denní a před domem čeká na prsten.;
+napoveda;*;!noc;💡;Ve dne teď nic dalšího nevyřídíš. Klepni na hodiny a počkej do noci.;
+napoveda;*;!harmonika_doruceno;💡;Harmonika patří do hospody U Kahanu. Ta má otevřeno jen v noci.;
+napoveda;*;!kometa_doruceno;💡;Dopis z hvězdárny je pro objevitele komety. Kdo v noci sedí na střeše a kouká do nebe?;
+napoveda;*;!zadost_napsana;💡;Balíček ze zlatnictví je pro horníka Frantu. Ve dne spí, ale v noci ho potkáš u šachty.;
+napoveda;*;denni_smena;💡;Franta je teď na denní a v noci spí. Počkej do rána.;
+napoveda;*;;💡;V noci teď nic dalšího nevyřídíš. Klepni na hodiny a počkej do rána.;
+uredni;reditel;kometa_doruceno;😊;Ředitel otevře obálku s razítkem báňského úřadu. „Úřad mi povoluje přeložit jednoho horníka z noční na denní. Dobrá zpráva! Dneska je vůbec dobrý den.“;-uredni uredni_doruceno razitko
+uredni;reditel;;🧐;Ředitel otevře obálku s razítkem báňského úřadu a zívne. „Úřad mi povoluje přeložit jednoho horníka z noční na denní. Hm. Kdo by chtěl na denní? A kdo by mu to podepisoval…“;-uredni uredni_doruceno razitko
+uredni;hvezdar;;🤫;Muž s dalekohledem po obálce natáhne ruku a hned ji stáhne. „Úřední pošta patří řediteli. Ten sedí ve dne v kanceláři. Já jsem tu jen… hvězdář.“;
+uredni;franta;;👷;„Báňský úřad? To je pro ředitele. Ten sedí v kanceláři ve dne, když já spím.“;
+uredni;hostinsky;;🧔;„Úřady v noci spí. Ředitel taky. Aspoň to všem tvrdí.“ Vávra mrkne ke střeše ředitelství.;
+uredni;marie;;👩;„Pro pana ředitele? Sedí naproti v kanceláři. Nevyspalý jako vždycky.“;
+uredni;okno;;😠;Zaklepeš. Okenice se rozletí a vykoukne rozcuchaný horník. „Úřední? To je pro ředitele, ne pro mě! Jsem z noční!“ Okenice zase bouchne.;
+uredni;kocka;;🐈‍⬛;Uhlíčka si na úřední obálku lehne. Asi chce taky razítko.;
+kometa;hvezdar;;🤩;Muž s dalekohledem roztrhne obálku a vyskočí radostí, až mu spadne čepice. Je to ředitel Hronek v županu! „Kometa ponese moje jméno! Kometa Hronek!“ Pak si všimne, že tu nejsi sám. „O tom ani muk. Ve dne jsem ředitel.“;-kometa kometa_doruceno ikona:reditel:😊 razitko
+kometa;reditel;;😳;Ředitel se na obálku podívá a zčervená až po pleš. „Kometa? Já? Já v noci spím, jako každý slušný člověk!“ Zívne a dopis ti rychle vrátí.;
+kometa;franta;;👷;„Na nebe? Když jdu na šichtu, vidím na střeše ředitelství chlapa s dalekohledem. Každou noc. Zkus to tam.“;
+kometa;hostinsky;;🧔;„Na nebe tady koukají jen horníci, když vyfárají. A pak ten podivín na střeše ředitelství.“;
+kometa;marie;;👩;„Kdo kouká na nebe? Já počítám drobné. Ale večer, když zavírám, někdo svítí na střeše ředitelství.“;
+kometa;okno;;😠;Okenice se rozletí. „Hvězdy? Ty jsou v noci! Ve dne se spí!“ Bouch.;
+kometa;kocka;;🐈‍⬛;Uhlíčka obálku očichá a pak upře oči na střechu ředitelství.;
+harmonika;hostinsky;;🥳;Vávra roztrhne papír a vytáhne novou harmoniku. Hned spustí a horníci u výčepu se přidají. Celá Kamenice zpívá hornickou až do rána.;-harmonika harmonika_doruceno razitko
+harmonika;reditel;;🧐;„Muzika? V pracovní době? Hospoda je otevřená v noci. Tam s tím běž.“;
+harmonika;hvezdar;;🤫;„Psst! Muzika plaší komety.“;
+harmonika;franta;;😄;„Pro Vávru! Konečně bude po šichtě muzika. Hospoda je hned tady, svítí se tam.“;
+harmonika;marie;;👩;„To bude pro Vávru do hospody. Otvírá, až se setmí.“;
+harmonika;okno;;😠;Okenice se rozletí. „Muzika? Ve dne? Já spím!“ Bouch.;
+harmonika;franta_den;;🙂;„Harmonika? To nes Vávrovi. Já mám dneska v hlavě jinou muziku.“;
+harmonika;kocka;;😾;Uhlíčka strčí čumák do měchu. Harmonika zavrní jako kočka, které někdo šlápl na ocas. Tedy jako Uhlíčka.;
+balicek;franta;;😍;Franta balíček otevře a rozzáří se. Prsten! „Pro Marii. Jenže kdy jí ho dám? Když jdu ze šachty, ona otvírá trafiku. Když jde spát, já fárám.“ Na koleni načmárá žádost. „Dej ji řediteli, ať mě přeloží na denní. A prsten mi zatím pohlídej, v dole by se ztratil.“;-balicek +prsten +zadost zadost_napsana
+balicek;reditel;;🧐;„Zlatnictví? To je pro Bártu z noční. Ve dne spí, takže nebuď.“;
+balicek;hvezdar;;🔭;„Zlatnictví? Já sbírám jen hvězdy. Tohle patří Bártovi, támhle u šachty.“;
+balicek;hostinsky;;🧔;„Pro Frantu? Ten je dneska na šichtě. Stojí u šachty, než ho sveze klec.“;
+balicek;marie;;😊;Marie si přečte adresu. „Pro Frantu? Ze zlatnictví?“ Zčervená a rychle ti balíček vrátí. „Franta je z noční a ve dne spí. Večer ho potkáš u šachty.“;
+balicek;okno;;😱;Zaklepeš. Okenice se rozletí a vykoukne rozcuchaný horník. Uvidí razítko zlatnictví a hned je vzhůru. „Tady ne! Marie by to viděla z trafiky! Přines to večer k šachtě.“ Okenice bouchne.;
+balicek;kocka;;🐈‍⬛;Uhlíčka do balíčku drcne tlapkou. Uvnitř něco cinkne.;
+prsten;franta_den;;💍;Franta si prsten vezme a přejde náměstí k trafice. Před celou frontou na noviny poklekne. Marie upustí krabičku sirek a řekne ano. Ředitel tleská z okna kanceláře.;-prsten prsten_doruceno zasnuby ikona:marie:🥰 ikona:franta_den:😍 razitko
+prsten;franta;;👷;„Ještě ne. Pohlídej mi ho, dokud nebudu na denní. V dole by se ztratil.“;
+prsten;marie;;😳;Marie uvidí prsten a zčervená až po uši. „Ten mi musí dát Franta sám. A na kolenou!“;
+prsten;okno;;😴;Za okenicemi se ozve ze spaní: „Marie… denní… prsten…“ Franta spí a usmívá se.;
+prsten;reditel;;🧐;„Prsten? To není moje starost. Moje starost je důl.“ Ale zvědavě se za ním ohlédne.;
+prsten;hvezdar;;🔭;„Prsten jako Saturn! Tenhle ale nepatří do nebe.“;
+prsten;hostinsky;;🧔;„Pro Marii, co? Celá Kamenice ví, že se ti dva mají rádi. Jen oni se nikdy nepotkají.“;
+prsten;kocka;;😼;Uhlíčka sleduje, jak se prsten blyští. Radši ho schováš, než si ho odnese.;
+zadost;reditel;kometa_doruceno uredni_doruceno;😊;Ředitel si žádost přečte a usměje se. „Bárta na denní? Proč ne! Báňský úřad to dovolil a já mám dneska tak dobrou náladu, že bych podepsal i kometě občanku.“ Razítko, podpis, hotovo.;-zadost denni_smena
+zadost;reditel;uredni_doruceno;🥱;„Báňský úřad mi dovolil jednoho přeložit, to ano. Ale já jsem nevyspalý a nevyspalý nic nepodepisuju.“ Zívne a žádost ti vrátí.;
+zadost;reditel;kometa_doruceno;😊;„Rád bych, chlapče. Ale bez svolení báňského úřadu nesmím nikoho přeložit. Nepřišlo mi náhodou něco úředního?“;
+zadost;reditel;;😠;„Na denní? Není místo, není svolení a já nemám náladu!“ Zívne tak, že mu cvaknou zuby.;
+zadost;hvezdar;;🔭;„Žádosti vyřizuje ředitel. Ve dne. V kanceláři. Teď jsou hvězdy.“;
+zadost;franta;;👷;„Nes ji řediteli. Ve dne sedí v kanceláři. Podepsal jsem ji třikrát, pro jistotu.“;
+zadost;hostinsky;;🧔;„Já jsem hostinský, ne ředitel. I když se u mě vyřídí víc věcí než na ředitelství.“;
+zadost;marie;;🥹;Marie si žádost přečte přes tvé rameno. „František Bárta… na denní?“ Oči jí zazáří. „Ať ji pan ředitel podepíše. Prosím!“;
+zadost;okno;;😠;Okenice se rozletí. „Tu už jsem ti dal! Nes ji řediteli! A nech mě spát!“ Bouch.;
+zadost;kocka;;🐈‍⬛;Uhlíčka žádost očichá a kýchne. Je cítit uhlím.;
+*;hodiny;;🕰️;Věžní hodiny nic nepotřebují. Ukazují čas, a to je práce na celý den. I na celou noc.;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,54 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Faustův dům: schody jsou zazděné a zásilky do pater jezdí košem dírou ve stropě. Kdo z koše co vezme, rozhoduje pořadí pater:
+# student v 1. patře bere jen svoje a jen vzhůru, zvědavá vdova ve 2. patře vytáhne všechno, pokud zrovna nečte (počítadlo cte), kominík nahoře bere jen svoje.
+karta;cil;podminka;vyraz;text;efekt
+dopis_domovnice;kos;;👵;Vdova Kukaňová upomínku zastaví a přečte. „Kdo neplatí nájem? Já ne!“ Pošle ji dolů. Domovnice je v přízemí, to se dá dojít.;
+?;kominik;stetky_doruceno;🧑‍🏭;Kominík vymetá komín a zpívá. Saze padají dírou až do přízemí.;
+?;kominik;;🧑‍🏭;Kominík nahoře drží provaz. „Pošli to košem, vytáhnu. Ale co jede kolem paní Kukaňové, to si ona prohlédne. Je zvědavá jako straka.“;
+?;vdova;cte>0;📖;Vdova Kukaňová čte dopis od sestry. Dvanáct stran. Na díru ani nepohlédne.;
+?;vdova;;👵;Vdova Kukaňová má hlavu vystrčenou do díry. Co jede kolem, to vytáhne, prohlédne a pošle dolů. „Jen se dívám,“ říká.;
+?;student;student_vzhuru;🧑‍🎓;Student Mladecký sedí u stolu a kýchá saze. „Čekám učebnici. Pošli ji košem, chytím ji.“;
+?;student;;😴;Student Mladecký spí s hlavou na stole. Spí už třetí den. Koš jede kolem něj a on nic.;
+?;kos;;🧺;Koš na provaze visí v díře. Co do něj dáš, vytáhne kominík nahoru. Cestou jede kolem prvního a druhého patra.;
+?;domovnice;vdova_doruceno cte=0 !stetky_doruceno;👩‍🦳;Domovnice zavolá do díry: „Paní Kukaňová, víte, co jsem slyšela o paní z prvního patra?“ Vdova se celá rozzáří a zaleze k oknu poslouchat. Chvíli bude zaměstnaná.;cte=2 ikona:vdova:👂
+?;domovnice;;👩‍🦳;Domovnice zametá přízemí. „Schody jsme zazdili kvůli čertovi. Teď se všechno nosí košem. Do patra nesmíš, i kdybys chtěl.“;
+?;zednik;;👷;Zedník míchá maltu. „Díru zazdím každý večer. Ráno je zase pryč. Čert si ji asi hlídá.“;
+napoveda;*;!vdova_doruceno;💡;Vdova Kukaňová si prohlédne všechno, co jede kolem. Kdyby měla co číst, nevyhlížela by.;
+napoveda;*;!stetky_doruceno;💡;Kominík je až nahoře. Pošli mu štětky, dokud vdova čte.;
+napoveda;*;!ucebnice_doruceno;💡;Student je vzhůru. Učebnice jede košem a on ji chytí.;
+napoveda;*;;💡;Doruč, co zbývá. Domovnice je v přízemí, tam se dá dojít.;
+dopis_vdova;vdova;;👵;Vdova natahuje ruku z díry. „Pro mě? Pošli to košem, ze schodů je zeď.“;
+stetky;kominik;;🧑‍🏭;„Štětky? Hoď je do koše, vytáhnu si je. A pozor na paní Kukaňovou.“;
+ucebnice;student;;😴;Student spí s hlavou na stole a nedosáhneš na něj. Schody jsou zazděné. Jen košem.;
+tolar;student;;🧑‍🎓;„Tolar je pro domovnici. Na nájem. Já mám latinu.“;
+dopis_domovnice;vdova;;👵;„Upomínka? Na nájem? To je pro domovnici dole. Ale stejně mi ji ukaž.“;
+tolar;vdova;;👵;Vdova se natahuje po tolaru z díry. Nedosáhne. Tolar patří domovnici.;
+dopis_vdova;kominik;;🧑‍🏭;„Dopis pro paní Kukaňovou? Košem. Ona si ho vytáhne sama, neboj.“;
+stetky;student;;😴;Student spí. Štětky pro kominíka by ho nevzbudily. Saze možná.;
+dopis_vdova;kos;;📖;Koš jede nahoru. Vdova Kukaňová ho zastaví, vytáhne dopis od sestry a rozzáří se. „Dvanáct stran!“ Zaleze do pokoje a čte.;-dopis_vdova vdova_doruceno cte=3 ikona:vdova:📖 razitko
+stetky;kos;cte>0;🧑‍🏭;Koš projede kolem čtoucí vdovy až do podkroví. Kominík vytáhne štětky a hned vymetá komín. Saze se valí dírou dolů a v prvním patře se ozve: „Apčí! Kdo to… já spím? Už nespím!“;-stetky stetky_doruceno student_vzhuru ikona:student:🧑‍🎓 razitko
+stetky;kos;;👵;Koš jede nahoru. Ve druhém patře z něj vdova Kukaňová vytáhne štětky. „Á, kominík má nové štětky. Pěkné.“ Prohlédne si je a vrátí je košem dolů.;
+ucebnice;kos;student_vzhuru;🧑‍🎓;Koš zastaví v prvním patře. Student chytí učebnici a otevře ji. Z ní vypadne stříbrný tolar. „Na nájem,“ zasměje se student, přiváže k němu lísteček a hodí ho dírou dolů.;-ucebnice +tolar ucebnice_doruceno razitko
+ucebnice;kos;cte>0;🧑‍🏭;Koš projede kolem spícího studenta i čtoucí vdovy až ke kominíkovi. „Latina? To není pro mě,“ zasměje se a pošle koš zpátky dolů.;
+ucebnice;kos;;👵;Koš projede kolem spícího studenta. Ve druhém patře si učebnici vytáhne vdova. „Latina! Hrůza.“ Pošle ji dolů.;
+tolar;kos;;👵;Tolar zacinká v koši. Vdova ho vylovila dřív, než jsi mrkl. „Faustův tolar? Krásný.“ A hodí ho dolů. Tolar patří domovnici.;
+dopis_domovnice;domovnice;;👩‍🦳;Domovnice čte upomínku a vzdychne. „Nájem. Kdo ho má platit, když nikdo nemůže po schodech?“;-dopis_domovnice domovnice_doruceno razitko
+tolar;domovnice;;👩‍🦳;Domovnice tolar potěžká. „Faustův tolar a lísteček Na nájem. Hodný student.“ Zaplatí zedníka, aby díru zase zazdil. Do rána.;-tolar tolar_doruceno ikona:zednik:🧱 razitko
+tolar;zednik;;👷;„Tolar? Ten patří domovnici, ta platí. Já jen zdím.“;
+dopis_vdova;domovnice;;👩‍🦳;„Pro paní Kukaňovou? Ta je ve druhém patře. Pošli to košem, ona si to vytáhne. Ona si vytáhne všechno.“;
+stetky;domovnice;;👩‍🦳;„Štětky pro kominíka? Ten je až nahoře. Košem, a dej pozor na paní Kukaňovou.“;
+ucebnice;domovnice;;👩‍🦳;„Učebnice pro studenta? Ten spí třetí den. Kdo ho vzbudí?“;
+ucebnice;zednik;;👷;„Latina? Tu umím jen na náhrobky.“;
+stetky;zednik;;👷;„Štětky? Já mám zednickou lžíci. Tohle je pro kominíka.“;
+dopis_vdova;zednik;;👷;„Paní Kukaňová? Ta všechno vidí. Pošli jí to a bude chvíli klid.“;
+dopis_domovnice;zednik;;👷;„Upomínka? Na nájem? To je pro domovnici. Já jsem tu jen zedník.“;
+*;kominik;;🪜;Je to v podkroví a schody jsou zazděné. Nahoru jen košem.;
+*;vdova;;🪜;Je to ve druhém patře a schody jsou zazděné. Nahoru jen košem.;
+*;student;;🪜;Je to v prvním patře a schody jsou zazděné. Nahoru jen košem.;

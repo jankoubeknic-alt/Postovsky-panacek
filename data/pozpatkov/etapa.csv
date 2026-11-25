@@ -1,0 +1,16 @@
+klic;hodnota
+datum;31. XII.
+start;odpoved_marie odpoved_vrana odpoved_zelezarstvi podekovani
+cil;zadost_doruceno stiznost_doruceno zebrik_doruceno podekovani_doruceno
+uvod;V Pozpátkově běží čas obráceně. Lidé se vítají slovem nashledanou, obědvají od moučníku a odpovědi chodí dřív než dopisy, na které odpovídají. V brašně máš tři odpovědi bez jména adresáta, protože otázku ještě nikdo nepoložil.|Najdi, kdo se na kterou odpověď zeptá. Jakmile ji dostane, napíše otázku a tu pak doručíš. A starosta ti už ráno poděkoval za to, co teprve uděláš.
+navod;Odpověď dej tomu, kdo se teprve zeptá.
+konec_nadpis;Hotovo už včera
+konec_text;Učitel se zeptal a Marie odpověděla ano už předevčírem. Vrána se omluvil dřív, než koza něco provedla, a kominík slezl po žebříku, který si objednal až nahoře. V Pozpátkově je zase všechno v pořádku, jen obráceně.|Brašna je prázdná. Na rozloučenou ti celá ves zavolala „Dobrý den!“ a tvůj příchod tu prý oslaví zítra.
+pozadi;data/pozpatkov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

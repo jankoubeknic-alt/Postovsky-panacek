@@ -1,0 +1,16 @@
+klic;hodnota
+datum;3. III.
+start;duchod znamka ministerstvo
+cil;potvrzeni_doruceno znamka_doruceno ministerstvo_doruceno
+uvod;Razítkov je nejúřednější obec v okrese. Bez razítka se tu nesmí nic, ani sedět na lavičce. Pošťák tu může doručovat jen s Povolením k doručování z okénka číslo jedna.|Na úřadě jsou dvě okénka a jedno potřebuje papír z druhého. Pozor na polední přestávku: kdo jde na oběd, toho někdo zastupuje.
+navod;Bez povolení se nedoručuje. Okénka si navzájem chtějí papíry.
+konec_nadpis;Poslední razítko
+konec_text;Starosta přečetl orazítkované zrušení razítek a Razítkov oslavoval do rána. Paní Razítková věnovala svoje razítko obecnímu muzeu. Babka má důchod, Azor je úředně pes a pan Kulatý sám sobě potvrdil, že má volno.|Brašna je prázdná. Povolení k doručování ti starosta zarámoval. Bez razítka, takže neplatí.
+pozadi;data/razitkov/pozadi.svg
+barvy;
+pocitadla;obed=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

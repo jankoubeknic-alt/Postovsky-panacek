@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Léto: slunce, zralé obilí a jahody v lese -->
+  <circle cx="262" cy="40" r="16" fill="#F2D24A"/>
+  <path d="M0 124H300V400H0Z" fill="#D9D07A" opacity=".35"/>
+  <g fill="#D93A3A"><circle cx="24" cy="262" r="2.5"/><circle cx="52" cy="266" r="2.5"/><circle cx="80" cy="262" r="2.5"/></g>
+</svg>

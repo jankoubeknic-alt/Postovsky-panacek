@@ -1,0 +1,19 @@
+# Po každém tahu ponocný vytroubí další hodinu (h 0 až 7 = devátá až čtvrtá). Po kořalce se splete a vrátí se o dvě hodiny zpátky.
+podminka;efekt;text
+opily h=0;h=0 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila devátá hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+opily h=1;h=0 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila devátá hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+opily h=2;h=0 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila devátá hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+opily h=3;h=1 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila desátá hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+opily h=4;h=2 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila jedenáctá hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+opily h=5;h=3 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila dvanáctá, půlnoc! Hospodáři, hospodyně, opatrujte oheň a světlo!“ Ves mu věří.
+opily h=6;h=4 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila jedna hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+opily h=7;h=5 !opily troubeno;Ponocný si přihne z placatky, zamotá se a zatroubí: „Odbila druhá hodina! Opatrujte oheň a světlo!“ Ves mu věří.
+h=0 !troubeno;h=1 troubeno;Ponocný troubí na roh: „Odbila desátá hodina! Opatrujte oheň a světlo!“
+h=1 !troubeno;h=2 troubeno;Ponocný troubí na roh: „Odbila jedenáctá hodina! Opatrujte oheň a světlo!“
+h=2 !troubeno;h=3 troubeno;Ponocný troubí na roh: „Odbila dvanáctá, půlnoc! Hospodáři, hospodyně, opatrujte oheň a světlo!“
+h=3 !troubeno;h=4 troubeno;Ponocný troubí na roh: „Odbila jedna hodina! Opatrujte oheň a světlo!“
+h=4 !troubeno;h=5 troubeno;Ponocný troubí na roh: „Odbila druhá hodina! Opatrujte oheň a světlo!“
+h=5 !troubeno;h=6 troubeno;Ponocný troubí na roh: „Odbila třetí hodina! Opatrujte oheň a světlo!“
+h=6 !troubeno;h=7 troubeno;Ponocný troubí na roh: „Odbila čtvrtá hodina! Opatrujte oheň a světlo!“
+h=7 !troubeno;h=8 troubeno;Ponocný troubí na roh: „Odbila čtvrtá a svítá!“
+troubeno;!troubeno;

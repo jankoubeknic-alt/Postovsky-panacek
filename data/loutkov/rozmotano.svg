@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Rozmotané nitě: každá loutka visí na své vlastní -->
+  <g stroke="#F4F1E4" stroke-width=".8" fill="none" opacity=".8">
+    <path d="M100 32L48 110M110 32L114 110M120 32L48 220M180 32L252 110M190 32L174 200M200 32L252 230"/>
+  </g>
+</svg>

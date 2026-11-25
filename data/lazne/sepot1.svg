@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Drby 4+: po lázních se šušká -->
+  <style>
+    .b { animation: sept 2.6s ease-in-out infinite; }
+    .b2 { animation-delay: -.9s; } .b3 { animation-delay: -1.7s; }
+    @keyframes sept { 50% { opacity: .55; } }
+    @media (prefers-reduced-motion: reduce) { .b { animation: none; } }
+  </style>
+  <g font-family="Georgia, serif" font-style="italic" font-size="8" fill="#5B4A6E" text-anchor="middle">
+    <g class="b"><path d="M98 180h34a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-22l-6 6v-6h-6a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="115" y="193">pst!</text></g>
+    <g class="b b2"><path d="M180 140h40a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-6v6l-6-6h-28a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="200" y="153">slyšela?</text></g>
+    <g class="b b3"><path d="M186 262h36a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-24l-6 6v-6h-6a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="204" y="275">šu-šu</text></g>
+  </g>
+</svg>

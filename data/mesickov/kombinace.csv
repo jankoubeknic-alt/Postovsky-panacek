@@ -1,0 +1,106 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Měsíčkov: počítadlo obdobi (1 zima, 2 jaro, 3 léto, 4 podzim) mění bratr, kterému dáš hůl. Vládnoucí bratr hůl vrátí, když na něj klepneš.
+# Fialky, jahody, jablka a led se mimo své období zkazí (kazdy_tah.csv). Led na léto se musí v zimě uložit do ledárny.
+karta;cil;podminka;vyraz;text;efekt
+?;leden;!hul_dana;❄️;U ohně sedí dvanáct bratrů měsíčků. Na nejvyšším kameni sedí Leden s holí v ruce. „Kdo jsi a co neseš?“ zahřmí.;
+?;leden;obdobi=1 hul_dana !@hul;❄️;Leden je stařec s bílým vousem až k pasu. Teď vládne on. „Chceš hůl? Na, ať ji dáš, komu je třeba,“ řekne a podá ti ji.;+hul
+?;leden;obdobi=1;❄️;Leden je stařec s bílým vousem až k pasu. Teď vládne on, i když hůl držíš ty.;
+?;leden;;❄️;Leden je stařec s bílým vousem až k pasu. Sedí u ohně a čeká, až na něj přijde řada.;
+?;brezen;obdobi=2 hul_dana !@hul;🌱;Březen je mladík s pupenem za kloboukem. Teď vládne on. „Chceš hůl? Na, ať ji dáš, komu je třeba,“ řekne a podá ti ji.;+hul
+?;brezen;obdobi=2;🌱;Březen je mladík s pupenem za kloboukem. Teď vládne on, i když hůl držíš ty.;
+?;brezen;;🌱;Březen je mladík s pupenem za kloboukem. Sedí u ohně a čeká, až na něj přijde řada.;
+?;cerven;obdobi=3 hul_dana !@hul;☀️;Červen je opálený chasník s klasem v zubech. Teď vládne on. „Chceš hůl? Na, ať ji dáš, komu je třeba,“ řekne a podá ti ji.;+hul
+?;cerven;obdobi=3;☀️;Červen je opálený chasník s klasem v zubech. Teď vládne on, i když hůl držíš ty.;
+?;cerven;;☀️;Červen je opálený chasník s klasem v zubech. Sedí u ohně a čeká, až na něj přijde řada.;
+?;zari;obdobi=4 hul_dana !@hul;🍂;Září je vousáč v kabátě barvy listí. Teď vládne on. „Chceš hůl? Na, ať ji dáš, komu je třeba,“ řekne a podá ti ji.;+hul
+?;zari;obdobi=4;🍂;Září je vousáč v kabátě barvy listí. Teď vládne on, i když hůl držíš ty.;
+?;zari;;🍂;Září je vousáč v kabátě barvy listí. Sedí u ohně a čeká, až na něj přijde řada.;
+hul;leden;satek_doruceno fialky_doruceno jahody_doruceno jablka_doruceno led_doruceno;❄️;Podáš hůl Lednu. Stařec se usměje do vousů. „Pořádek musí být. Každý v pravý čas.“ Zafouká a ves zapadá sněhem. Rybník zamrzne. Bratři si u ohně přisednou a zahřejí se.;-hul obdobi=1 poradek razitko
+hul;leden;obdobi=1;❄️;„Vždyť vládnu,“ diví se Leden. „Komu jinému ji dáš?“;
+hul;leden;;❄️;Podáš hůl. Leden se zvedne, mávne holí a celá ves se promění. Zafouká a ves zapadá sněhem. Rybník zamrzne.;-hul obdobi=1
+hul;brezen;obdobi=2;🌱;„Vždyť vládnu,“ diví se Březen. „Komu jinému ji dáš?“;
+hul;brezen;;🌱;Podáš hůl. Březen se zvedne, mávne holí a celá ves se promění. Sníh roztaje a na louce vykvetou fialky.;-hul obdobi=2
+hul;cerven;obdobi=3;☀️;„Vždyť vládnu,“ diví se Červen. „Komu jinému ji dáš?“;
+hul;cerven;;☀️;Podáš hůl. Červen se zvedne, mávne holí a celá ves se promění. Slunce pálí, obilí zraje a v lese se červenají jahody.;-hul obdobi=3
+hul;zari;obdobi=4;🍂;„Vždyť vládnu,“ diví se Září. „Komu jinému ji dáš?“;
+hul;zari;;🍂;Podáš hůl. Září se zvedne, mávne holí a celá ves se promění. Listí zrzaví a v sadu dozrávají jablka.;-hul obdobi=4
+dopis_mesickum;leden;;😠;Leden si dopis přečte a vousy se mu naježí. „Fialky v lednu? Jahody? Jablka? Ta holka neví, co je pořádek.“ Pak se zasměje. „Ale ty za to nemůžeš, pošťáku. Tumáš hůl. Komu ji dáš, ten bude vládnout. Jen ji pak vrať.“;-dopis_mesickum +hul hul_dana razitko
+dopis_mesickum;holena;;👸;„Můj dopis? Ten patří na horu bratřím. Co tu s ním děláš?“;
+dopis_mesickum;maruska;;👧;„Holena psala bratřím? Ach jo. Dones jim ho, ale buď zdvořilý. Leden je přísný.“;
+dopis_mesickum;*;;✉️;Dopis je pro bratry měsíčky. Předat se musí tomu, kdo právě vládne. Teď je leden.;
+fialky;leden;;❄️;„Fialky? U mě by zmrzly,“ zabručí Leden. „Ty patří Holeně, ať si je užije, dokud kvetou.“;
+jahody;cerven;;☀️;„Moje jahody,“ usměje se Červen. „Dones je, komu patří, než se zkazí.“;
+jablka;zari;;🍂;„Moje jablka. Vydrží dlouho, jen do mrazu s nimi nechoď.“;
+led;cerven;;☀️;„Led? U mě roztaje dřív, než řekneš švec. Pospěš si za hostinským.“;
+satek;leden;;❄️;„Šátek? Ten patří Marušce. Ta zebe nejvíc, chudinka.“;
+fialky;brezen;;🌱;„Moje fialky. V březnu vydrží, jinak zvadnou.“;
+*;leden;;❄️;Leden zavrtí hlavou. „Měsíčkové nic nepotřebují. Jen hůl a pořádek.“;
+*;brezen;;🌱;Březen zavrtí hlavou. „Měsíčkové nic nepotřebují. Jen hůl a pořádek.“;
+*;cerven;;☀️;Červen zavrtí hlavou. „Měsíčkové nic nepotřebují. Jen hůl a pořádek.“;
+*;zari;;🍂;Září zavrtí hlavou. „Měsíčkové nic nepotřebují. Jen hůl a pořádek.“;
+?;holena;;👸;Holena stojí na zápraží v kožichu a dupe. „Kde jsou moje fialky? Jahody? Jablka? Napsala jsem to snad jasně!“;
+?;maruska;satek_doruceno;👧;Maruška v teplém šátku. „Bratři měsíčkové jsou hodní,“ šeptá. „Ale nikdy nespěchají. Každá věc má svůj čas a mimo něj nevydrží.“;
+?;maruska;;👧;Maruška se třese zimou. „Bratři měsíčkové sedí nahoře u ohně. Komu dáš hůl, ten vládne. Ale každá věc má svůj čas. Led v létě roztaje, jestli ho neuschováš do ledárny.“;
+?;louka;obdobi=2 !@fialky;💜;Louka je modrá od fialek. Natrháš kytičku.;+fialky
+?;louka;obdobi=2;💜;Louka voní fialkami. Kytičku už máš.;
+?;louka;obdobi=1;🌾;Louka je pod sněhem. Žádné fialky, jen zajíc.;
+?;louka;obdobi=3;🌾;Tráva po kolena a sekáči. Fialky odkvetly.;
+?;louka;;🌾;Louka hnědne. Fialky jsou dávno pryč.;
+?;les;obdobi=3 !@jahody;🍓;Na pasece jsou jahody, sladké a teplé od slunce. Nasbíráš košík.;+jahody
+?;les;obdobi=3;🍓;Les voní jahodami. Košík už máš.;
+?;les;obdobi=1;🌲;Les je zasněžený. Jahody pod sněhem nerostou.;
+?;les;;🌲;Les šumí. Jahody tu teď nejsou.;
+?;sad;obdobi=4 !@jablka;🍎;Jabloně se prohýbají pod jablky. Natrháš plnou zástěru.;+jablka
+?;sad;obdobi=4;🍎;V sadu voní jablka. Už nějaká máš.;
+?;sad;obdobi=2;🌳;Jabloně kvetou. Jablka budou až v září.;
+?;sad;;🌳;Jabloně jsou holé nebo zelené. Jablka zatím nejsou.;
+?;rybnik;obdobi=1 !@led;🧊;Rybník je zamrzlý na metr. Vysekáš kus ledu.;+led
+?;rybnik;obdobi=1;🧊;Rybník je zamrzlý. Kus ledu už máš.;
+?;rybnik;;🌊;Rybník je bez ledu. Kapři se vyhřívají u hladiny.;
+?;ledarna;led_ulozen obdobi>1 !@led !led_doruceno;🧊;V ledárně je chladno jako v lednu. Vytáhneš kus uloženého ledu. Pospěš si, venku roztaje.;+led
+?;ledarna;led_ulozen;🏚️;Ledárna je zasypaná pilinami. Pod nimi leží led.;
+?;ledarna;;🏚️;Ledárna hostinského. V zimě se do ní pod piliny ukládá led na léto. Teď je prázdná.;
+?;hostinsky;led_doruceno;🍺;Hostinský točí ledové pivo a celá ves se ho chodí napít.;
+?;hostinsky;obdobi=3;🥵;Hostinský se potí. „Pivo je teplé jako polívka. Kdybych měl kus ledu!“;
+?;hostinsky;;🍺;„V létě budu potřebovat led,“ stěžuje si hostinský. „Ledárnu mám, ale nemám ji čím naplnit.“;
+napoveda;*;hul_dana !led_ulozen;💡;Led roztaje mimo zimu. Uschovej ho v zimě do ledárny, v létě se bude hodit.;
+napoveda;*;!hul_dana;💡;Dopis bratřím měsíčkům patří tomu, kdo vládne. Teď je leden.;
+napoveda;*;!fialky_doruceno;💡;Fialky kvetou v březnu. Dej hůl Březnu.;
+napoveda;*;!jahody_doruceno;💡;Jahody zrají v červnu.;
+napoveda;*;!led_doruceno;💡;Hostinský potřebuje led v létě. V ledárně ho máš uložený.;
+napoveda;*;!jablka_doruceno;💡;Jablka dozrávají v září. Vydrží dlouho, jen mráz ne.;
+napoveda;*;!satek_doruceno;💡;Šátek je pro Marušku.;
+napoveda;*;;💡;Všechno je doručené. Vrať hůl Lednu.;
+fialky;holena;;👸;Holena si fialky přičichne. „Fialky v lednu? No… dobře. Teda v březnu. To je jedno.“ Dá si je za ucho.;-fialky fialky_doruceno razitko
+jahody;holena;;👸;Holena jahody sní všechny najednou. „Tak vidíš, že to šlo,“ řekne s pusou od jahod.;-jahody jahody_doruceno razitko
+jablka;holena;;👸;Holena si vezme jablko a zakousne se. Pak jedno podá Marušce. Sama se diví, co to dělá.;-jablka jablka_doruceno razitko
+fialky;maruska;;👧;„Fialky jsou pro Holenu,“ usměje se Maruška. „Ale děkuju, voní jako jaro.“;
+jahody;maruska;;👧;Maruška si vezme jednu jahodu a zbytek vrátí. „Ostatní jsou pro Holenu. Jinak bude křičet.“;
+jablka;hostinsky;;🍺;„Jablka? Z těch bych udělal mošt. Ale objednala je Holena.“;
+jahody;hostinsky;;🍺;„Jahody k pivu? To ne. Holena je chtěla.“;
+led;hostinsky;obdobi=3;😎;Hostinský hodí led do sudu a za chvíli točí pivo studené jako studánka. „Pošťáku, ty jsi poklad!“;-led led_doruceno ikona:hostinsky:😎 razitko
+led;hostinsky;;🍺;„Led?“ hostinský mávne rukou. „Teď ho nepotřebuju. Až v létě, až bude pivo teplé jako polívka.“;
+led;ledarna;obdobi=1;🧊;Uložíš led do ledárny a zasypeš ho pilinami. Tady vydrží až do léta.;-led led_ulozen ikona:ledarna:🧊
+led;ledarna;;🏚️;Led vrátíš do ledárny. Až budeš chtít, zase si ho vezmi.;-led
+led;holena;;👸;„Led? Ten jsem si nepřála. Chci fialky, jahody a jablka!“;
+satek;maruska;;👧;Maruška se zabalí do šátku a přestane se třást. „Od kmotry! Teď vydržím i leden.“;-satek satek_doruceno ikona:maruska:🧣 razitko
+satek;holena;;👸;„Šátek? Mám kožich. To je pro Marušku, ta chodí v hadrech.“;
+hul;holena;;👸;Holena po holi chňapne. „Já budu vládnout!“ Bratři na hoře zahřmí a hůl ti sama vklouzne zpátky do ruky.;
+hul;maruska;;👧;„Hůl? Tu dej některému z bratrů. Já bych nevěděla, které období vybrat.“;
+satek;hostinsky;;🍺;„Šátek? Pro Marušku. Ta by ho potřebovala už v listopadu.“;
+hul;ledarna;;🏚️;Hůl do ledárny nepatří. Tam patří led. Hůl patří bratřím.;
+fialky;hostinsky;;🍺;„Fialky do hospody? Holena by se zlobila. To jsou její.“;
+jablka;maruska;;👧;„Jablka jsou pro Holenu. Ale kdyby jedno zbylo…“ Maruška se usměje.;
+led;maruska;;👧;Maruška se ledu lekne. „Studí! Ten je pro hostinského, ne?“;
+hul;*;;🪄;Hůl patří bratřím měsíčkům nahoře u ohně.;
+*;louka;;🌾;Na louce se nic nedoručuje.;
+*;les;;🌲;Les nic nepřevezme.;
+*;sad;;🌳;Jabloně nic nepřevezmou.;
+*;rybnik;;🌊;Do rybníka nic házet nebudeš.;
+*;*;;🤷;Nic se nestane.;

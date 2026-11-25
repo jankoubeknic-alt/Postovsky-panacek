@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Nádvoří hradu zevnitř -->
+  <rect width="300" height="400" fill="#B9B0A0"/>
+  <rect x="20" y="20" width="260" height="120" fill="#8A8478"/><rect x="200" y="0" width="60" height="150" fill="#7A746A"/>
+  <rect x="216" y="30" width="12" height="18" fill="#2E2A24"/>
+  <rect x="0" y="300" width="300" height="100" fill="#6F9DC0"/><path d="M0 290L80 250H220L300 290V300H0Z" fill="#8A847A"/>
+  <rect x="200" y="200" width="80" height="80" fill="#8A847A"/><path d="M220 280v-46a20 20 0 0 1 40 0v46Z" fill="#3A2A1E"/>
+</svg>

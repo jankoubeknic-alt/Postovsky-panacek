@@ -1,0 +1,85 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Koláčov: zasedací pořádek. Jmenovky na židlích drží počítadla z1 až z4 (1 děda, 2 teta, 3 strýc, 4 kmotr).
+# Hospodyně zkontroluje přání hostů: děda u kamen, teta ne u okna, teta ne vedle strýce, kmotr ne vedle dědy. Jediné řešení: děda, teta, kmotr, strýc.
+karta;cil;podminka;vyraz;text;efekt
+jm_deda;zidle1;z1=0;👴;Položíš jmenovku na židli u kamen. Děda si sedne a rovná si knír.;-jm_deda z1=1 ikona:zidle1:👴
+?;zidle1;z1=1 !hostina;🪑;Děda zase vstane a jmenovku ti vrátí.;+jm_deda z1=0 ikona:zidle1:🪑
+jm_teta;zidle1;z1=0;👵;Položíš jmenovku na židli u kamen. Teta Bára si sedne a urovná si zástěru.;-jm_teta z1=2 ikona:zidle1:👵
+?;zidle1;z1=2 !hostina;🪑;Teta Bára zase vstane a jmenovku ti vrátí.;+jm_teta z1=0 ikona:zidle1:🪑
+dopis_teta;zidle1;z1=2;👵;Teta Bára roztrhne obálku a vytáhne fotku vnoučete. „Celý dědeček!“ Fotka obejde celý stůl.;-dopis_teta dopis_teta_doruceno razitko
+jm_stryc;zidle1;z1=0;🧔;Položíš jmenovku na židli u kamen. Strýc Lojza si sedne a hned se natahuje po koláči.;-jm_stryc z1=3 ikona:zidle1:🧔
+?;zidle1;z1=3 !hostina;🪑;Strýc Lojza zase vstane a jmenovku ti vrátí.;+jm_stryc z1=0 ikona:zidle1:🪑
+jm_kmotr;zidle1;z1=0;🎩;Položíš jmenovku na židli u kamen. Kmotr Vavřinec si sedne a vytáhne karty.;-jm_kmotr z1=4 ikona:zidle1:🎩
+?;zidle1;z1=4 !hostina;🪑;Kmotr Vavřinec zase vstane a jmenovku ti vrátí.;+jm_kmotr z1=0 ikona:zidle1:🪑
+dopis_kmotr;zidle1;z1=4;🎩;Kmotr otevře obálku. „Vyhrál jsem! Dvacet korun!“ Za ty koupí koláče pro všechny. Stejně je to posvícení.;-dopis_kmotr dopis_kmotr_doruceno razitko
+?;zidle1;hostina;🍰;U stolu se jí koláče.;
+?;zidle1;;🪑;Prázdná židle. Je u kamen, hřeje do zad.;
+jm_deda;zidle2;z2=0;👴;Položíš jmenovku na židli. Děda si sedne a rovná si knír.;-jm_deda z2=1 ikona:zidle2:👴
+?;zidle2;z2=1 !hostina;🪑;Děda zase vstane a jmenovku ti vrátí.;+jm_deda z2=0 ikona:zidle2:🪑
+jm_teta;zidle2;z2=0;👵;Položíš jmenovku na židli. Teta Bára si sedne a urovná si zástěru.;-jm_teta z2=2 ikona:zidle2:👵
+?;zidle2;z2=2 !hostina;🪑;Teta Bára zase vstane a jmenovku ti vrátí.;+jm_teta z2=0 ikona:zidle2:🪑
+dopis_teta;zidle2;z2=2;👵;Teta Bára roztrhne obálku a vytáhne fotku vnoučete. „Celý dědeček!“ Fotka obejde celý stůl.;-dopis_teta dopis_teta_doruceno razitko
+jm_stryc;zidle2;z2=0;🧔;Položíš jmenovku na židli. Strýc Lojza si sedne a hned se natahuje po koláči.;-jm_stryc z2=3 ikona:zidle2:🧔
+?;zidle2;z2=3 !hostina;🪑;Strýc Lojza zase vstane a jmenovku ti vrátí.;+jm_stryc z2=0 ikona:zidle2:🪑
+jm_kmotr;zidle2;z2=0;🎩;Položíš jmenovku na židli. Kmotr Vavřinec si sedne a vytáhne karty.;-jm_kmotr z2=4 ikona:zidle2:🎩
+?;zidle2;z2=4 !hostina;🪑;Kmotr Vavřinec zase vstane a jmenovku ti vrátí.;+jm_kmotr z2=0 ikona:zidle2:🪑
+dopis_kmotr;zidle2;z2=4;🎩;Kmotr otevře obálku. „Vyhrál jsem! Dvacet korun!“ Za ty koupí koláče pro všechny. Stejně je to posvícení.;-dopis_kmotr dopis_kmotr_doruceno razitko
+?;zidle2;hostina;🍰;U stolu se jí koláče.;
+?;zidle2;;🪑;Prázdná židle. Je uprostřed stolu.;
+jm_deda;zidle3;z3=0;👴;Položíš jmenovku na židli. Děda si sedne a rovná si knír.;-jm_deda z3=1 ikona:zidle3:👴
+?;zidle3;z3=1 !hostina;🪑;Děda zase vstane a jmenovku ti vrátí.;+jm_deda z3=0 ikona:zidle3:🪑
+jm_teta;zidle3;z3=0;👵;Položíš jmenovku na židli. Teta Bára si sedne a urovná si zástěru.;-jm_teta z3=2 ikona:zidle3:👵
+?;zidle3;z3=2 !hostina;🪑;Teta Bára zase vstane a jmenovku ti vrátí.;+jm_teta z3=0 ikona:zidle3:🪑
+dopis_teta;zidle3;z3=2;👵;Teta Bára roztrhne obálku a vytáhne fotku vnoučete. „Celý dědeček!“ Fotka obejde celý stůl.;-dopis_teta dopis_teta_doruceno razitko
+jm_stryc;zidle3;z3=0;🧔;Položíš jmenovku na židli. Strýc Lojza si sedne a hned se natahuje po koláči.;-jm_stryc z3=3 ikona:zidle3:🧔
+?;zidle3;z3=3 !hostina;🪑;Strýc Lojza zase vstane a jmenovku ti vrátí.;+jm_stryc z3=0 ikona:zidle3:🪑
+jm_kmotr;zidle3;z3=0;🎩;Položíš jmenovku na židli. Kmotr Vavřinec si sedne a vytáhne karty.;-jm_kmotr z3=4 ikona:zidle3:🎩
+?;zidle3;z3=4 !hostina;🪑;Kmotr Vavřinec zase vstane a jmenovku ti vrátí.;+jm_kmotr z3=0 ikona:zidle3:🪑
+dopis_kmotr;zidle3;z3=4;🎩;Kmotr otevře obálku. „Vyhrál jsem! Dvacet korun!“ Za ty koupí koláče pro všechny. Stejně je to posvícení.;-dopis_kmotr dopis_kmotr_doruceno razitko
+?;zidle3;hostina;🍰;U stolu se jí koláče.;
+?;zidle3;;🪑;Prázdná židle. Je uprostřed stolu.;
+jm_deda;zidle4;z4=0;👴;Položíš jmenovku na židli u okna. Děda si sedne a rovná si knír.;-jm_deda z4=1 ikona:zidle4:👴
+?;zidle4;z4=1 !hostina;🪑;Děda zase vstane a jmenovku ti vrátí.;+jm_deda z4=0 ikona:zidle4:🪑
+jm_teta;zidle4;z4=0;👵;Položíš jmenovku na židli u okna. Teta Bára si sedne a urovná si zástěru.;-jm_teta z4=2 ikona:zidle4:👵
+?;zidle4;z4=2 !hostina;🪑;Teta Bára zase vstane a jmenovku ti vrátí.;+jm_teta z4=0 ikona:zidle4:🪑
+dopis_teta;zidle4;z4=2;👵;Teta Bára roztrhne obálku a vytáhne fotku vnoučete. „Celý dědeček!“ Fotka obejde celý stůl.;-dopis_teta dopis_teta_doruceno razitko
+jm_stryc;zidle4;z4=0;🧔;Položíš jmenovku na židli u okna. Strýc Lojza si sedne a hned se natahuje po koláči.;-jm_stryc z4=3 ikona:zidle4:🧔
+?;zidle4;z4=3 !hostina;🪑;Strýc Lojza zase vstane a jmenovku ti vrátí.;+jm_stryc z4=0 ikona:zidle4:🪑
+jm_kmotr;zidle4;z4=0;🎩;Položíš jmenovku na židli u okna. Kmotr Vavřinec si sedne a vytáhne karty.;-jm_kmotr z4=4 ikona:zidle4:🎩
+?;zidle4;z4=4 !hostina;🪑;Kmotr Vavřinec zase vstane a jmenovku ti vrátí.;+jm_kmotr z4=0 ikona:zidle4:🪑
+dopis_kmotr;zidle4;z4=4;🎩;Kmotr otevře obálku. „Vyhrál jsem! Dvacet korun!“ Za ty koupí koláče pro všechny. Stejně je to posvícení.;-dopis_kmotr dopis_kmotr_doruceno razitko
+?;zidle4;hostina;🍰;U stolu se jí koláče.;
+?;zidle4;;🪑;Prázdná židle. Je u okna, trochu tam táhne.;
+?;deda;;👴;Děda se opírá o hůl. „Já sedávám u kamen. Šedesát let. Jinde mi je zima.“;
+jm_deda;deda;;👴;„Jmenovku dej na židli, já si pak sednu.“;
+?;teta;;👵;Teta Bára si utírá čelo. „U okna nesedím, tam táhne. A k Lojzovi mě nesaďte. Pohádali jsme se o mez.“;
+dopis_teta;teta;;👵;Teta Bára roztrhne obálku a vytáhne fotku vnoučete. „Celý dědeček!“;-dopis_teta dopis_teta_doruceno razitko
+jm_teta;teta;;👵;„Jmenovku dej na židli, já si pak sednu.“;
+?;stryc;;🧔;Strýc Lojza krčí rameny. „Mně je jedno, kde sedím. Hlavně ne vedle Báry. Kvůli té mezi.“;
+jm_stryc;stryc;;🧔;„Jmenovku dej na židli, já si pak sednu.“;
+?;kmotr;;🎩;Kmotr Vavřinec míchá karty. „Vedle dědy ne. Šidí v kartách a pak se zlobí, když prohraje.“;
+dopis_kmotr;kmotr;;🎩;Kmotr otevře obálku. „Vyhrál jsem! Dvacet korun!“;-dopis_kmotr dopis_kmotr_doruceno razitko
+jm_kmotr;kmotr;;🎩;„Jmenovku dej na židli, já si pak sednu.“;
+?;hospodyne;hostina;👩‍🍳;Hospodyně nosí koláče. „Tvarohové, povidlové, makové. Kdo chce ještě?“;
+?;hospodyne;z1>0 z2>0 z3>0 z4>0 !z1=1;👴;Hospodyně přinese koláče, ale děda stojí u stolu a třese se. „Já chci ke kamnům! Šedesát let sedím u kamen!“;
+?;hospodyne;z1>0 z2>0 z3>0 z4>0 z1=1 z2=4;🃏;Sotva hospodyně položí koláče, kmotr a děda se pohádají nad kartami. „Šidíš!“ „Ty šidíš!“ Hospodyně koláče zase odnese.;
+?;hospodyne;z1>0 z2>0 z3>0 z4>0 z4=2;🥶;Teta Bára u okna kýchá. „Tady táhne! Já to říkala.“ Hospodyně koláče zase odnese.;
+?;hospodyne;z1>0 z2>0 z3>0 z4>0 z2=2 z3=3;😠;Teta Bára a strýc Lojza sedí vedle sebe. Za chvíli se hádají o mez a strýc bouchne do stolu, až koláče poskočí. Hospodyně je zase odnese.;
+?;hospodyne;z1>0 z2>0 z3>0 z4>0 z2=3 z3=2;😠;Teta Bára a strýc Lojza sedí vedle sebe. Za chvíli se hádají o mez a strýc bouchne do stolu, až koláče poskočí. Hospodyně je zase odnese.;
+?;hospodyne;z1>0 z2>0 z3>0 z4>0;🍰;Hospodyně přinese mísu koláčů a postaví ji doprostřed stolu. Nikdo se nehádá. Děda hřeje záda, kmotr rozdává karty a strýc Lojza ani neví, co je to mez.;hostina ikona:hospodyne:🍰
+?;hospodyne;;👩‍🍳;Hospodyně vytahuje plech z trouby. „Rozesaď je, ať se u stolu nepohádají. Já musím ke koláčům. Až budou sedět, zavolej.“;
+napoveda;*;!hostina;💡;Klepni na každého hosta, ať ti řekne, kde nechce sedět. Pak to poskládej jako hádanku.;
+napoveda;*;;💡;Teta Bára a kmotr ještě čekají na poštu.;
+*;zidle1;z1>0;🪑;Židle je obsazená. Klepnutím na ni host vstane.;
+*;zidle2;z2>0;🪑;Židle je obsazená. Klepnutím na ni host vstane.;
+*;zidle3;z3>0;🪑;Židle je obsazená. Klepnutím na ni host vstane.;
+*;zidle4;z4>0;🪑;Židle je obsazená. Klepnutím na ni host vstane.;
+*;hospodyne;;👩‍🍳;„To je pro hosty. Já mám ruce od mouky.“;
+*;*;;🤷;Nic se nestane.;

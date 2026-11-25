@@ -1,0 +1,16 @@
+klic;hodnota
+datum;31. X.
+start;duchod_l duchod_b prihlaska
+cil;duchod_l_doruceno duchod_b_doruceno prihlaska_doruceno vcelar
+uvod;Čertovina pod Kotlem je ves vysloužilých čertů. Pekelná penzijní správa jim posílá důchody v sirných obálkách a vyplácí je v uhlí. Uprostřed návsi stojí obecní kotel. Když vystydne, čertům ztuhnou kopyta a celá ves zkamení zimou.|Kotel s každým podáním trochu vychladne. Přikládej uhlím, které ti čerti dají za doručený důchod.
+navod;Kotel s každým podáním stydne. Přikládej uhlím.
+konec_nadpis;Čert včelařem
+konec_text;Bonifác dostal doporučení od anděla a včelařský spolek ho přijal. Včely si na síru zvykly rychleji než andělé. Lucifer starší vyhrál v mariáši, Bertička plete svetr pro kotel a v Čertovině je teplo jako v pekle.|Brašna je prázdná. První sklenice čertova medu je prý pro tebe.
+pozadi;data/certovina/pozadi.svg
+barvy;
+pocitadla;kotel=4
+kazdy_tah;kotel-1
+kazdy_tah_kdyz;
+ukazatele;kotel:Kotel:8
+prohra;kotel<=0
+prohra_text;Kotel vystydl. Čertům ztuhla kopyta, ocasy jim zamrzly v pozoru a celá Čertovina zkameněla zimou až do jara.|Zkus to znovu. Uhlí, které dostaneš za důchody, házej do kotle včas.

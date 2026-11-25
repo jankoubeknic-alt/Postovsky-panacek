@@ -1,0 +1,9 @@
+id;nazev;druh;ikona;adresa;popis
+dopis_truhlar;Zakázka pro truhláře;dopis;✉️;Truhlář, dílna u kostela;Od pana řídícího učitele. Luciin stoleček do Vánoc.
+dopis_mlynar;Dopis pro mlynáře;dopis;✉️;Mlynář, Lucín;Z cechu. Nový mlýnský kámen je na cestě.
+dopis_kolar;Dopis pro koláře;dopis;✉️;Kolář, Lucín;Objednávka čtyř kol na bryčku.
+svazek_hajny;Svazek od hajného;vec;🌲;;Smrk, jedle, borovice a buk.
+svazek_sadar;Svazek od sadaře;vec;🍒;;Třešeň, švestka, hruška a jabloň.
+svazek_kosikar;Svazek od košíkáře;vec;🧺;;Vrba a líska.
+svazek_kolar;Svazek od koláře;vec;🛞;;Jasan, dub a javor.
+svazek_mlynar;Svazek od mlynáře;vec;⚙️;;Olše, lípa, javor a bříza.

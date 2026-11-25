@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Koza Líza přeskočila plot a žere farní mrkev -->
+  <g transform="translate(200 340)"><ellipse cx="0" cy="0" rx="14" ry="8" fill="#F4F1E8" stroke="#A89C88" stroke-width="1"/>
+  <circle cx="-13" cy="-3" r="5" fill="#F4F1E8" stroke="#A89C88" stroke-width="1"/>
+  <path d="M-12-8l2-5M-16-8l-1-5" stroke="#8A7A66" stroke-width="1.4"/>
+  <path d="M-19 0l-5 3" stroke="#E8833A" stroke-width="2.4"/>
+  <path d="M-8 7v8M-2 7v8M5 7v8M10 7v8" stroke="#8A7A66" stroke-width="2"/></g>
+</svg>

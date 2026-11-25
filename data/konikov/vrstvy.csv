@@ -1,0 +1,6 @@
+# Dostavník na zastávce podle počítadla stanice.
+obrazek;podminka
+data/konikov/vuz1.svg;stanice=1
+data/konikov/vuz2.svg;stanice=2
+data/konikov/vuz3.svg;stanice=3
+data/konikov/vuz4.svg;stanice=4

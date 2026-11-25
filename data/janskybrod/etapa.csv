@@ -1,0 +1,16 @@
+klic;hodnota
+datum;16. V.
+start;dopis_prevoznik dopis_dcera
+cil;dv koza_predana farar_doruceno prevoznik_doruceno dcera_doruceno
+uvod;Na svatého Jana Nepomuckého vzala velká voda most. Zbyl jen pilíř se sochou svatého Jana a pěti hvězdami nad hlavou. Na tomhle břehu čeká drbna Hyková, která chce za dcerou, koza pro sedláka z druhého břehu a dopis s pečetí pro pana faráře.|Převozníkova loďka uveze pošťáka a jen jednoho dalšího. Jenže drbna každý dopis, se kterým zůstane sama, otevře a přečte. A koza každý papír, se kterým zůstane sama, sežere.
+navod;Klepnutím na drbnu, kozu nebo dopis je převezeš s sebou. Klepnutím na loďku pojedeš sám.
+konec_nadpis;Tajemství zůstalo tajemstvím
+konec_text;Drbna je u dcery a pořád neví, co bylo v dopise. Koza okusuje sedlákovu trávu a pan farář si přečetl list s neporušenou pečetí. Svatý Jan na pilíři se prý maličko usmál.|Brašna je prázdná. Převozník ti slíbil, že až postaví nový most, první půjdeš přes něj ty.
+pozadi;data/janskybrod/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;precteno nebo snezeno
+prohra_text;Listovní tajemství je pryč. Buď drbna dopis přečetla a do večera to věděla celá ves, nebo ho koza sežrala i s pečetí.|Zkus to znovu. Dopis nesmí zůstat sám ani s drbnou, ani s kozou.

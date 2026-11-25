@@ -1,0 +1,16 @@
+klic;hodnota
+datum;4. VII.
+start;dopis_prokop dopis_sedlak
+cil;o00 o01 o02 o10 o11 o12 o13 o20 o21 o23 prokop_doruceno sedlak_doruceno
+uvod;Pod Sázavou mají pole a nemají koně. Jenže v Prokopově straší čert a opat Prokop si s čerty umí poradit. Říká se, že jednoho už kdysi zapřáhl do pluhu.|Čert v pluhu ale táhne jen rovně a zastaví se teprve na kraji pole, u kamene nebo u brázdy, kterou už zoral. Přes zoranou brázdu nejde, to by si spálil kopyta. Pole se musí zorat celé.
+navod;Šipkami pošleš čerta s pluhem jedním směrem. Táhne, dokud nenarazí. Když se zasekne, Prokop začne znovu.
+konec_nadpis;Zoráno
+konec_text;Pole je zorané do posledního kousku a čert si v chomoutu otírá čelo. Prokop ho pustí, čert zmizí v oblaku síry a sedlák už rozhazuje obilí. Brázdě, kterou čert vyoral nejhlouběji, se odedávna říká čertova.|Brašna je prázdná. Prokop ti požehnal a sedlák slíbil první pecen z nové úrody.
+pozadi;data/prokopov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

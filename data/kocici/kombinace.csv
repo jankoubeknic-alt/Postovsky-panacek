@@ -1,0 +1,86 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# počítadla: v efektu patro=1, patro+1 | v podmínce patro=3, !p1=1
+# Kočičí Lhota: dort se staví po patrech (p1 spodek, p2 prostředek, p3 vršek). Pejsek jí odspodu, kočička olizuje vršek, prostředek je pro hosta.
+# Přísady: 1 buřt, 2 šlehačka, 3 rohlík, 4 okurka, 5 sýr. Správně je buřt, rohlík, šlehačka. Nepozvaný zlý pes hotový dort ukradne.
+karta;cil;podminka;vyraz;text;efekt
+?;dort;patro=3 p1=1 p2=3 p3=2 pozvan;🎂;Zlý pes si sedne ke stolu a slušně si uváže ubrousek. Pejsek se zakousne do buřtového spodku, kočička slízne šlehačkový vršek a zlý pes opatrně ochutná prostředek. „Rohlík,“ zamručí. „Bříško nebolí.“ Pak se poprvé v životě usměje. Všechno nejlepší k svátku!;dort_snezen ikona:dort:🍽️ ikona:zlypes:🐕 razitko
+?;dort;patro=3 !p3=2;😾;Kočička olízne vršek dortu a otřese se, až jí naskáčou chlupy. „Fuj! Navrch patří to, co mám nejradši. Já přece olizuju jen vršek!“ Pejsek dort smutně rozebere a těsto zamíchají znovu.;patro=0 p1=0 p2=0 p3=0 ikona:dort:🥣
+?;dort;patro=3 !p1=1;🐶;Pejsek začne jako vždycky odspodu, jako když hrabe díru. Zarazí se. „Tohle dole nechci. Dole má být to, co mám nejradši já!“ Dort rozeberou a těsto zamíchají znovu.;patro=0 p1=0 p2=0 p3=0 ikona:dort:🥣
+?;dort;patro=3 !p2=3;🤢;Zlý pes kousne doprostřed a chytí se za bříško. „Au! Po tomhle mě bolí bříško. Pan doktor mi dovolil jen suchý rohlík!“ Dort rozeberou a těsto zamíchají znovu.;patro=0 p1=0 p2=0 p3=0 ikona:dort:🥣
+?;dort;patro=0;🥣;Mísa s těstem. „Dort se dělá tak, že se do něj dá všechno, co má člověk nejradši,“ vysvětluje pejsek. „Odspodu nahoru,“ dodá kočička.;
+?;dort;patro=1;🥣;Dort má zatím jen spodní patro. Pejsek ho hlídá a olizuje se.;
+?;dort;;🥣;Dort má spodek a prostředek. Ještě vršek a bude hotový.;
+?;pejsek;!pece;🐶;„Zítra máme svátek,“ vrtí ocasem pejsek. „Upečeme dort, ale nemáme mouku. Pošťáku, nevezeš nám ji?“;
+?;pejsek;;🐶;Pejsek čmuchá kolem mísy. „Já jím dort vždycky odspodu, jako když hrabu díru. A ze všeho nejradši mám buřty.“;
+?;kocicka;!pece;🐱;„Mňau, mouka ještě nepřišla,“ povzdychne kočička. „A bez mouky dort neupečeš, i kdyby ses rozkrájel.“;
+?;kocicka;;🐱;Kočička si olizuje packu. „Já z dortu olizuju jen vršek. Spodek je pro pejska. A nejradši mám šlehačku.“;
+?;zlypes;pozvan;🐕;„Přijdu,“ zamručí zlý pes. „Ale mě po všem bolí bříško. Pan doktor mi dovolil jen suchý rohlík. Tak mi dejte prostředek.“;
+?;zlypes;;🐺;Zlý pes kouká přes plot a slintá. „Grrr. Mě nikdo nikdy nikam nepozve. Tak si vždycky něco vezmu sám.“;
+?;krava;dopis_doruceno !@slehacka;🐄;„Bú! Telátko se má dobře,“ září Stračena. „Na oslavu ti dám hrnek šlehačky. Na dort.“;+slehacka
+?;krava;dopis_doruceno;🐄;Stračena přežvykuje a mlsně se usmívá. Šlehačku už máš v brašně.;
+?;krava;;🐄;Kravička Stračena smutně bučí. Telátko odjelo na výstavu do Prahy a nenapsalo. Šlehačku z ní teď nikdo nedostane.;
+?;zahradnik;!@okurka;👨‍🌾;„Do dortu patří okurka!“ prohlásí zahradník Okurka. „Do všeho patří okurka. Tumáš.“;+okurka
+?;zahradnik;;👨‍🌾;„Okurku už máš. Nezapomeň ji dát do dortu,“ připomíná zahradník.;
+?;reznik;!@burt;🧔;„Na svátek buřt,“ řekne řezník Buřtík a podá ti špekáček. „Pejsek se po nich může utlouct.“;+burt
+?;reznik;;🧔;Řezník brousí nůž. „Buřt už máš. Víc jich nedám, ať pejskovi nezbaští celou výlohu.“;
+?;pekarka;!@rohlik;👩‍🍳;„Čerstvé jsou rozebrané,“ omlouvá se pekařka. „Mám jen suchý rohlík ze včerejška. Na dort se nehodí, ale bříško po něm nebolí.“;+rohlik
+?;pekarka;;👩‍🍳;Pekařka vymetá z pece popel. Rohlík už máš.;
+?;myska;!@syr;🐭;„Do dortu nejdu!“ vypískne myška, když uslyší, co kočička ráda. „Dám vám radši sýr. Jen mě tam nedávejte.“;+syr
+?;myska;;🐭;Myška kouká z díry a třese se. „Sýr máte, tak mě nechte.“;
+napoveda;*;!pece;💡;Pejsek a kočička čekají na mouku.;
+napoveda;*;!dopis_doruceno;💡;Kravička Stračena čeká na dopis od telátka. Pak bude mít šlehačku.;
+napoveda;*;!pozvan;💡;Kdo by mohl ukrást hotový dort? Pozvi ho dřív, než bude dort hotový.;
+napoveda;*;patro=0;💡;Dort se staví odspodu. Pejsek jí odspodu, kočička olizuje vršek a prostředek dostane host. Zeptej se každého, co má nejradši.;
+napoveda;*;;💡;Až bude dort mít tři patra, klepni na něj a podávej. Spodek pro pejska, prostředek pro hosta, vršek pro kočičku.;
+burt;dort;patro=0;🥣;Pejsek nakrájí buřt na kolečka a skládá je dospod. Voní to jako pouť.;-burt p1=1 patro=1
+burt;dort;patro=1;🥣;Pejsek nakrájí buřt na kolečka a skládá je doprostřed. Voní to jako pouť.;-burt p2=1 patro=2
+burt;dort;patro=2;🎂;Pejsek nakrájí buřt na kolečka a skládá je navrch. Voní to jako pouť. Dort je hotový. Klepni na něj a podávej.;-burt p3=1 patro=3 ikona:dort:🎂
+burt;dort;;🎂;Dort má tři patra a je vysoký jako komín. Víc se nevejde. Klepni na něj a podávej.;
+slehacka;dort;patro=0;🥣;Kočička natře šlehačku dospod. Trochu jí zůstane na fousech.;-slehacka p1=2 patro=1
+slehacka;dort;patro=1;🥣;Kočička natře šlehačku doprostřed. Trochu jí zůstane na fousech.;-slehacka p2=2 patro=2
+slehacka;dort;patro=2;🎂;Kočička natře šlehačku navrch. Trochu jí zůstane na fousech. Dort je hotový. Klepni na něj a podávej.;-slehacka p3=2 patro=3 ikona:dort:🎂
+slehacka;dort;;🎂;Dort má tři patra a je vysoký jako komín. Víc se nevejde. Klepni na něj a podávej.;
+rohlik;dort;patro=0;🥣;Suchý rohlík zachrastí a rozdrobí se dospod. Pejsek nakrčí čumák, kočička taky.;-rohlik p1=3 patro=1
+rohlik;dort;patro=1;🥣;Suchý rohlík zachrastí a rozdrobí se doprostřed. Pejsek nakrčí čumák, kočička taky.;-rohlik p2=3 patro=2
+rohlik;dort;patro=2;🎂;Suchý rohlík zachrastí a rozdrobí se navrch. Pejsek nakrčí čumák, kočička taky. Dort je hotový. Klepni na něj a podávej.;-rohlik p3=3 patro=3 ikona:dort:🎂
+rohlik;dort;;🎂;Dort má tři patra a je vysoký jako komín. Víc se nevejde. Klepni na něj a podávej.;
+okurka;dort;patro=0;🥣;Okurka křupne a položí se dospod. Zahradník by měl radost.;-okurka p1=4 patro=1
+okurka;dort;patro=1;🥣;Okurka křupne a položí se doprostřed. Zahradník by měl radost.;-okurka p2=4 patro=2
+okurka;dort;patro=2;🎂;Okurka křupne a položí se navrch. Zahradník by měl radost. Dort je hotový. Klepni na něj a podávej.;-okurka p3=4 patro=3 ikona:dort:🎂
+okurka;dort;;🎂;Dort má tři patra a je vysoký jako komín. Víc se nevejde. Klepni na něj a podávej.;
+syr;dort;patro=0;🥣;Sýr se rozteče dospod. Z myší díry se ozve úlevné pípnutí.;-syr p1=5 patro=1
+syr;dort;patro=1;🥣;Sýr se rozteče doprostřed. Z myší díry se ozve úlevné pípnutí.;-syr p2=5 patro=2
+syr;dort;patro=2;🎂;Sýr se rozteče navrch. Z myší díry se ozve úlevné pípnutí. Dort je hotový. Klepni na něj a podávej.;-syr p3=5 patro=3 ikona:dort:🎂
+syr;dort;;🎂;Dort má tři patra a je vysoký jako komín. Víc se nevejde. Klepni na něj a podávej.;
+mouka;pejsek;;🐶;Pejsek radostí přeskočí stoličku. „Mouka! Teď upečeme dort ze všeho, co máme nejradši.“ Kočička už nese mísu.;-mouka pece mouka_doruceno razitko
+mouka;kocicka;;🐱;Kočička převezme mouku a pečlivě ji prosije. „Konečně! Dort se dělá tak, že se do něj dá všechno nejlepší. Odspodu nahoru.“;-mouka pece mouka_doruceno razitko
+mouka;pekarka;;👩‍🍳;„Mouku mám vlastní,“ usměje se pekařka. „Tahle je pro pejska a kočičku.“;
+mouka;*;;🌾;„Mouka? Ta je pro pejska a kočičku do chaloupky.“;
+pozvanka;zlypes;;🐕;Zlý pes si pozvánku přečte třikrát. Pak si utře oko. „Mě? Na svátek? Tak to přijdu. A nic neukradnu, čestné psí.“;-pozvanka pozvan pozvanka_doruceno ikona:zlypes:🐕 razitko
+pozvanka;pejsek;;🐶;„Pozvánku jsme psali pro zlého psa,“ vysvětluje pejsek. „Aby nemusel krást. Dones mu ji za plot.“;
+pozvanka;kocicka;;🐱;„To je pro zlého psa za plotem. Když přijde jako host, nebude nám dort krást.“;
+pozvanka;*;;💌;„Pozvánka? Ta je pro zlého psa za plotem. Já bych tam nešel, kouše.“;
+dopis_krava;krava;;🐄;Stračena dopis přežvýká, přečte a zase přežvýká. „Telátko vyhrálo modrou stužku! Bú!“ Radostí jí naběhne vemínko.;-dopis_krava dopis_doruceno ikona:krava:🐮 razitko
+dopis_krava;*;;✉️;„Od telátka z Prahy? To je pro Stračenu na pastvině.“;
+burt;pejsek;;🐶;Pejsek se po buřtu olízne až za ušima. „Ne, ne, ten nesním. Ten je do dortu. Dospod, kde ho najdu.“;
+burt;zlypes;;🐺;Zlý pes po buřtu chňapne a pak couvne. „Ne. Po buřtu mě bolí bříško.“;
+burt;kocicka;;🐱;„Buřty má rád pejsek,“ řekne kočička. „A pejsek jí odspodu.“;
+slehacka;kocicka;;🐱;Kočička šlehačku mlsně očichá. „Ještě ne. Tu dáme do dortu. Navrch, ať ji můžu olizovat.“;
+slehacka;zlypes;;🐺;„Šlehačku? Ta je těžká na bříško,“ zavrčí zlý pes. „Tu ať si slízne kočička.“;
+slehacka;krava;;🐄;„Tu jsem ti dala na dort,“ bučí Stračena. „Zpátky ji nechci, mám jí plné vemínko.“;
+rohlik;zlypes;pozvan;🐕;„Rohlík!“ zlý pes se rozzáří. „Ale nedávej mi ho takhle. Dejte ho do dortu, já si vezmu prostředek.“;
+rohlik;zlypes;;🐺;Zlý pes rohlík očichá a zamručí. „Proč mi to dáváš? Mě nikdo nikam nezve.“;
+rohlik;pejsek;;🐶;„Suchý rohlík? To je jídlo pro psy s bolavým bříškem,“ řekne pejsek. „Já mám bříško zdravé.“;
+okurka;kocicka;;🐱;Kočička se na okurku zatváří, jako by spolkla citron. „Okurku do dortu? To by vymyslel jen zahradník.“;
+okurka;zahradnik;;👨‍🌾;„Nevracej ji, dej ji do dortu!“ rozčiluje se zahradník. „Okurka patří do všeho.“;
+syr;myska;;🐭;„Nechci ho zpátky, chci, abys mě nedal do dortu!“ pípne myška a zaleze.;
+syr;kocicka;;🐱;„Sýr? Já bych radši tu myšku,“ zavrní kočička. Z díry se ozve vyděšené pípnutí.;
+*;zlypes;;🐺;Zlý pes očichá zásilku a zavrčí. Tohle nechce.;
+*;myska;;🐭;Myška zmizí v díře, jen se za ní zaprášilo.;
+*;*;;🤷;Nic se nestane.;

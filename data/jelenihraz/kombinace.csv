@@ -1,0 +1,58 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Jelení Hráz: balík spuštěný u hráze pluje po každém podání o stanici níž. Kdo dostal avízo, čeká na břehu a vyloví všechno, co jde kolem.
+# Cizí balík vrátí klepnutím. Co nikdo nechytí, skončí u vořaře na jezu.
+karta;cil;podminka;vyraz;text;efekt
+list;hraz;;🌊;Spustíš pilový list do kanálu u hráze. Chytí ho proud a plave mezi poleny dolů.;-list l=1
+?;pl_list2;;🪚;Pilový list pluje kanálem mezi poleny.;
+?;pl_list3;;🪚;Pilový list pluje kanálem mezi poleny.;
+?;pl_list4;;🪚;Pilový list pluje kanálem mezi poleny.;
+?;hajna;l=13;👩‍🌾;Hajná ti podá pilový list. „To není moje. Plavalo to kolem, tak jsem to vylovila.“;+list l=0
+?;hospodsky;l=14;🍺;Hospodský ti podá pilový list. „To není moje. Plavalo to kolem, tak jsem to vylovil.“;+list l=0
+?;vorar;l=15;🧔;Vorař Toník ti podá pilový list. „Plavalo to až k jezu. Pošli to znova a pořádně.“;+list l=0
+list;pilar;;🪚;„To nahoru po svahu nikdo neunese. Pošli to kanálem, já to vylovím.“;
+truhla;hraz;;🌊;Spustíš truhlu s výbavou do kanálu u hráze. Chytí ho proud a plave mezi poleny dolů.;-truhla t=1
+?;pl_truhla2;;🧳;Truhla s výbavou pluje kanálem mezi poleny.;
+?;pl_truhla3;;🧳;Truhla s výbavou pluje kanálem mezi poleny.;
+?;pl_truhla4;;🧳;Truhla s výbavou pluje kanálem mezi poleny.;
+?;pilar;t=12;🪚;Pilař ti podá truhlu s výbavou. „To není moje. Plavalo to kolem, tak jsem to vylovil.“;+truhla t=0
+?;hospodsky;t=14;🍺;Hospodský ti podá truhlu s výbavou. „To není moje. Plavalo to kolem, tak jsem to vylovil.“;+truhla t=0
+?;vorar;t=15;🧔;Vorař Toník ti podá truhlu s výbavou. „Plavalo to až k jezu. Pošli to znova a pořádně.“;+truhla t=0
+truhla;hajna;;👩‍🌾;„To nahoru po svahu nikdo neunese. Pošli to kanálem, já to vylovím.“;
+sud;hraz;;🌊;Spustíš sud piva do kanálu u hráze. Chytí ho proud a plave mezi poleny dolů.;-sud s=1
+?;pl_sud2;;🛢️;Sud piva pluje kanálem mezi poleny.;
+?;pl_sud3;;🛢️;Sud piva pluje kanálem mezi poleny.;
+?;pl_sud4;;🛢️;Sud piva pluje kanálem mezi poleny.;
+?;pilar;s=12;🪚;Pilař ti podá sud piva. „To není moje. Plavalo to kolem, tak jsem to vylovil.“;+sud s=0
+?;hajna;s=13;👩‍🌾;Hajná ti podá sud piva. „To není moje. Plavalo to kolem, tak jsem to vylovila.“;+sud s=0
+?;vorar;s=15;🧔;Vorař Toník ti podá sud piva. „Plavalo to až k jezu. Pošli to znova a pořádně.“;+sud s=0
+sud;hospodsky;;🍺;„To nahoru po svahu nikdo neunese. Pošli to kanálem, já to vylovím.“;
+avizo_pila;pilar;;🪚;Pilař si přečte avízo, vezme bidlo a postaví se na břeh. „Tak co mi to plave?“;-avizo_pila avizo_pila_doruceno ceka_pila razitko
+?;pilar;ceka_pila;🪚;Pilař stojí na břehu s bidlem a loví všechno, co plave kolem.;
+?;pilar;;🪚;Pilař stojí u pily s tupým listem. „Nový list prý přijde. Ale kdy?“;
+avizo_pila;hajna;;👩‍🌾;„To avízo je pro někoho jiného. Já bych pak lovil cizí věci.“;
+avizo_pila;hospodsky;;🍺;„To avízo je pro někoho jiného. Já bych pak lovil cizí věci.“;
+avizo_hajovna;hajna;;👩‍🌾;Hajná si přečte avízo, vezme bidlo a postaví se na břeh. „Tak co mi to plave?“;-avizo_hajovna avizo_hajovna_doruceno ceka_hajovna razitko
+?;hajna;ceka_hajovna;👩‍🌾;Hajná stojí na břehu s bidlem a loví všechno, co plave kolem.;
+?;hajna;;👩‍🌾;Hajná věší prádlo. „Dceři se blíží svatba a výbava nikde.“;
+avizo_hajovna;pilar;;🪚;„To avízo je pro někoho jiného. Já bych pak lovil cizí věci.“;
+avizo_hajovna;hospodsky;;🍺;„To avízo je pro někoho jiného. Já bych pak lovil cizí věci.“;
+avizo_ves;hospodsky;;🍺;Hospodský si přečte avízo, vezme bidlo a postaví se na břeh. „Tak co mi to plave?“;-avizo_ves avizo_ves_doruceno ceka_ves razitko
+?;hospodsky;ceka_ves;🍺;Hospodský stojí na břehu s bidlem a loví všechno, co plave kolem.;
+?;hospodsky;;🍺;Hospodský zívá u prázdného výčepu. „Bez sudu je hospoda jen světnice.“;
+avizo_ves;pilar;;🪚;„To avízo je pro někoho jiného. Já bych pak lovil cizí věci.“;
+avizo_ves;hajna;;👩‍🌾;„To avízo je pro někoho jiného. Já bych pak lovil cizí věci.“;
+?;hraz;;🌊;Hrázný otevírá stavidlo. „Co dáš do kanálu, to popluje dolů. Pila, hájovna, ves a nakonec jez.“;
+?;kanal;;🪵;Chvíli se díváš, jak plave dříví.;cekej
+?;vorar;;🧔;Vorař Toník stojí u jezu. „Co nikdo nechytí, to chytím já. Na mně to končí.“;
+napoveda;*;!sud_doruceno !truhla_doruceno !list_doruceno;💡;Kdo čeká na břehu, vyloví i cizí balík. Nejdřív pošli to, co plave nejdál, a horní adresáty ať zatím nečekají.;
+napoveda;*;;💡;Avízo dej až ve chvíli, kdy kolem nepoplave nic cizího. Klepnutím na kanál necháš uběhnout chvilku.;
+*;vorar;;🧔;„Já jsem až dole. Pošli to kanálem.“;
+*;kanal;;🪵;Do kanálu se balíky dávají nahoře u hráze.;
+*;*;;🤷;Nic se nestane.;

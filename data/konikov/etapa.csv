@@ -1,0 +1,16 @@
+klic;hodnota
+datum;12. V.
+start;dopis_hrabenka balik_mlynar noviny_hostinsky
+cil;noviny_doruceno balik_doruceno mouka_doruceno dopis_doruceno odpoved_doruceno babka_dovezena student_dovezen
+uvod;V Koníkově jezdí poštovní dostavník pořád dokola: pošta, hostinec, mlýn, zámek a zase pošta. Postilion Trouba onemocněl a ty ho dnes zastupuješ. Na kozlíku, s trubkou a s jízdním řádem.|Dostavník stojí na každé zastávce jen chvilku. Co doručíš, to stihneš, a pak se jede dál. Cestující nastupují, kde stojí, a ve voze jsou jen dvě místa.
+navod;Každé podání posune dostavník na další zastávku. Doručit jde jen tam, kde zrovna stojíš.
+konec_nadpis;Konečná
+konec_text;Hraběnka má dopis, mouku na dort i nového vychovatele. Babka s husou je u syna ve mlýně a hostinský čte noviny nahlas celé hospodě. Postilion Trouba se uzdravil a říká, že tak přesný jízdní řád Koníkov nepamatuje.|Brašna je prázdná. Koně dostali oves a ty dostal trubku na památku. Doma do ní nefoukej, sousedi by čekali dostavník.
+pozadi;data/konikov/pozadi.svg
+barvy;
+pocitadla;stanice=1 mista=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

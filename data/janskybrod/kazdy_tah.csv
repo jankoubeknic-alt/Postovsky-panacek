@@ -1,0 +1,6 @@
+# Kdo zůstane s dopisem bez pošťáka, ten ho přečte (drbna) nebo sežere (koza). Vlajky pv, dv, kv, lv znamenají, že je pošťák, drbna, koza a dopis na druhém břehu.
+podminka;efekt;text
+dv lv !pv;precteno;Drbna zůstala s dopisem sama. Pečeť povolila skoro sama od sebe a drbna čte…
+!dv !lv pv;precteno;Drbna zůstala s dopisem sama. Pečeť povolila skoro sama od sebe a drbna čte…
+kv lv !pv;snezeno;Koza zůstala s dopisem sama. Mlask, mlask. I s pečetí.
+!kv !lv pv;snezeno;Koza zůstala s dopisem sama. Mlask, mlask. I s pečetí.

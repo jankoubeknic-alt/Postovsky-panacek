@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Nové Vsi u Staré Vsi: přes celou náves vede bílá čára. Nahoře na čáře hrušeň, uprostřed celnice
+       se závorou, vlevo úřad a chalupa Nové Vsi (modré střechy), vpravo úřad a chalupa Staré Vsi (červené střechy). -->
+  <rect width="300" height="400" fill="#D6E6EA"/>
+  <path d="M0 120C80 104 220 108 300 118V400H0Z" fill="#B6D29E"/>
+  <!-- hrušeň na čáře -->
+  <rect x="146" y="70" width="8" height="40" fill="#7A5A3A"/>
+  <circle cx="150" cy="58" r="30" fill="#6E9A4E"/>
+  <g fill="#D9C24A"><circle cx="138" cy="50" r="3.5"/><circle cx="160" cy="44" r="3.5"/><circle cx="146" cy="70" r="3.5"/><circle cx="164" cy="64" r="3.5"/></g>
+  <!-- Nová Ves vlevo: modré střechy -->
+  <rect x="6" y="104" width="92" height="56" fill="#F0EAD8"/>
+  <path d="M0 108L52 80L104 108Z" fill="#4A6A9C"/>
+  <rect x="44" y="134" width="16" height="26" fill="#6B4A36"/>
+  <rect x="6" y="250" width="88" height="56" fill="#F0EAD8"/>
+  <path d="M0 254L50 226L100 254Z" fill="#4A6A9C"/>
+  <g fill="#9DB5C8" stroke="#4A6A9C" stroke-width="1.5"><rect x="14" y="118" width="14" height="14"/><rect x="76" y="118" width="14" height="14"/><rect x="14" y="264" width="14" height="14"/></g>
+  <!-- Stará Ves vpravo: červené střechy -->
+  <rect x="202" y="104" width="92" height="56" fill="#F0EAD8"/>
+  <path d="M196 108L248 80L300 108Z" fill="#9C4A3A"/>
+  <rect x="240" y="134" width="16" height="26" fill="#6B4A36"/>
+  <rect x="206" y="250" width="88" height="56" fill="#F0EAD8"/>
+  <path d="M200 254L250 226L300 254Z" fill="#9C4A3A"/>
+  <g fill="#9DB5C8" stroke="#9C4A3A" stroke-width="1.5"><rect x="210" y="118" width="14" height="14"/><rect x="272" y="118" width="14" height="14"/><rect x="272" y="264" width="14" height="14"/></g>
+  <!-- bílá čára a celnice -->
+  <path d="M150 92V400" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="14 6"/>
+  <rect x="122" y="196" width="56" height="34" fill="#E8DCC0" stroke="#7A6A5A" stroke-width="1.5"/>
+  <path d="M118 198L150 180L182 198Z" fill="#7A6A5A"/>
+  <path d="M90 238H210" stroke="#B5402F" stroke-width="5" stroke-dasharray="10 8"/>
+  <circle cx="90" cy="238" r="4" fill="#4A3F33"/>
+  <!-- cedule -->
+  <rect x="24" y="190" width="56" height="12" fill="#FFFFFF" stroke="#4A6A9C"/>
+  <text x="52" y="199" font-family="Georgia, serif" font-size="6" fill="#4A6A9C" text-anchor="middle">NOVÁ VES</text>
+  <rect x="220" y="190" width="56" height="12" fill="#FFFFFF" stroke="#9C4A3A"/>
+  <text x="248" y="199" font-family="Georgia, serif" font-size="6" fill="#9C4A3A" text-anchor="middle">STARÁ VES</text>
+  <g fill="#E07A7A"><circle cx="40" cy="370" r="3"/><circle cx="260" cy="376" r="3"/></g>
+  <g fill="#F2C86A"><circle cx="70" cy="384" r="3"/><circle cx="230" cy="364" r="3"/></g>
+</svg>

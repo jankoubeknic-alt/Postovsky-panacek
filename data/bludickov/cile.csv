@@ -1,0 +1,15 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+id;jmeno;ikona;x;y;skryt_kdyz
+svetlo1;Světýlko;✨;14;28;pres nebo b=2
+svetlo2;Světýlko;✨;38;28;pres nebo b=3
+svetlo3;Světýlko;✨;62;28;pres
+svetlo4;Světýlko;✨;86;28;pres nebo b=1
+hastrman;Hastrman Šplíchal;🐸;16;58;pres
+vrba;Stará vrba;🌳;50;58;pres
+hrnek_dusicka;Hrnek s pokličkou;🫖;30;84;pres nebo dusicka_volna
+hrnek_hajna;Hrnek s pokličkou;🫖;50;84;pres nebo !hrnek_hajna
+hrnek_korenarka;Hrnek s pokličkou;🫖;70;84;pres nebo !hrnek_korenarka
+hrnek_hastrman;Hrnek s pokličkou;🫖;90;84;pres nebo !hrnek_hastrman
+hajna;Hajná s lucernou;👩‍🌾;28;44;!pres
+korenarka;Kořenářka;👵;72;44;!pres
+zpet;Cesta zpátky;🏮;50;78;!pres

@@ -1,0 +1,13 @@
+# Kdo hasí (hasi 2 a 1), uhasí všechno. Oheň (o1 až o4) přeskočí po každém tahu na další dům po větru, mokrý dům (m2 až m4) nechytne. Mokro vydrží tři tahy. Zpracovává se zprava, aby oheň nepřeskočil dva domy naráz.
+podminka;efekt;text
+hasi=1;hasi=0 o1=0 o2=0 o3=0 o4=0 uhaseno ikona:kovarna:💨 ikona:truhlarna:🪚;Hasiči rozvinou hadice a hasí. Voda syčí, kouř se valí. Oheň je pryč!
+hasi=2;hasi=1;Hasiči táhnou stříkačku k rybníku a pumpují.
+m4>0;m4-1;
+m3>0;m3-1;
+m2>0;m2-1;
+o3=1 o4=0 m4>0 !uhaseno;;Plameny olizují mokrou faru. Nechytla.
+o3=1 o4=0 m4=0 !uhaseno;o4=1 ikona:fara:🔥;Vítr přenesl jiskry a chytla fara!
+o2=1 o3=0 m3>0 !uhaseno;;Plameny olizují mokré trámy. Chalupa Vávrových nechytla.
+o2=1 o3=0 m3=0 !uhaseno;o3=1 ikona:chalupa:🔥;Vítr přenesl jiskry a chalupa Vávrových chytla!
+o1=1 o2=0 m2>0 !uhaseno;;Plameny olizují mokré trámy. Truhlárna nechytla.
+o1=1 o2=0 m2=0 !uhaseno;o2=1 ikona:truhlarna:🔥;Vítr přenesl jiskry a truhlárna chytla!

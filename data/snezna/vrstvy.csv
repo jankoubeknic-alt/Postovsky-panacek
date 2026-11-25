@@ -1,0 +1,6 @@
+# Obrázky přes pozadí scény. Vidět je každý, jehož podmínka platí (prázdná = pořád). Kreslí se v tomto pořadí.
+# hreben.svg je celá druhá scéna: zakryje údolí, když je pošťák nahoře.
+obrazek;podminka
+data/snezna/hreben.svg;nahore
+data/snezna/snezeni.svg;
+data/snezna/vanice.svg;snih>=5

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Brodku: nahoře druhý břeh se školou, uprostřed Lučina s lávkou, dole mlýn a hospoda -->
+  <rect width="300" height="400" fill="#8F9EA6"/>
+  <path d="M0 40C50 18 90 30 140 36S240 14 300 30V120H0Z" fill="#5F7468"/>
+  <path d="M0 58C80 50 220 52 300 56V120H0Z" fill="#7E9774"/>
+  <g fill="#46604F"><circle cx="30" cy="58" r="18"/><circle cx="60" cy="66" r="13"/><circle cx="262" cy="56" r="17"/><circle cx="286" cy="68" r="12"/></g>
+  <rect x="104" y="40" width="92" height="56" fill="#E9E4D6"/>
+  <path d="M96 42L150 12L204 42Z" fill="#6E4B3A"/>
+  <rect x="144" y="4" width="12" height="14" fill="#6E4B3A"/>
+  <path d="M141 6L150 -4L159 6Z" fill="#6E4B3A"/>
+  <path d="M0 108C60 100 120 112 180 104S260 100 300 106V264C240 270 170 258 110 266S30 262 0 268Z" fill="#4F7F8F"/>
+  <g fill="none" stroke="#86AEBA" stroke-width="2" stroke-linecap="round" opacity=".8">
+    <path d="M14 140q10-5 20 0t20 0"/><path d="M196 130q10-5 20 0t20 0"/><path d="M30 246q10-5 20 0t20 0"/>
+    <path d="M200 250q10-5 20 0t20 0"/><path d="M106 166q8-4 16 0"/><path d="M174 150q8-4 16 0"/>
+  </g>
+  <g stroke="#3E5A3E" stroke-width="2.5" stroke-linecap="round"><path d="M264 238V198"/><path d="M272 242V206"/><path d="M182 240V210"/></g>
+  <ellipse cx="222" cy="232" rx="30" ry="8" fill="#6F7B78"/>
+  <path d="M44 208H124L112 224H56Z" fill="#6B4F35"/>
+  <rect x="139" y="96" width="22" height="176" fill="#8A6A4A"/>
+  <path d="M139 110H161M139 124H161M139 138H161M139 152H161M139 166H161M139 180H161M139 194H161M139 208H161M139 222H161M139 236H161M139 250H161M139 264H161" stroke="#6B4F35" stroke-width="1.5"/>
+  <path d="M137 96V272M163 96V272" stroke="#5A4230" stroke-width="2.5"/>
+  <path d="M0 262C40 256 110 264 170 258S260 254 300 260V400H0Z" fill="#7A8B5E"/>
+  <path d="M138 400C142 340 152 300 146 268H156C162 300 158 340 164 400Z" fill="#A89272"/>
+  <circle cx="14" cy="276" r="24" fill="none" stroke="#6B4F35" stroke-width="5"/>
+  <path d="M14 252V300M-10 276H38M-3 259L31 293M31 259L-3 293" stroke="#6B4F35" stroke-width="3"/>
+  <rect x="24" y="262" width="80" height="62" fill="#DCD3C0"/>
+  <path d="M16 264L64 232L112 264Z" fill="#5A4A3E"/>
+  <rect x="196" y="256" width="80" height="62" fill="#E6DCC8"/>
+  <path d="M188 258L236 226L284 258Z" fill="#8C3B2E"/>
+  <rect x="252" y="234" width="10" height="16" fill="#5A4A3E"/>
+  <g fill="#B9A27A"><rect x="194" y="320" width="20" height="10" rx="5"/><rect x="214" y="322" width="20" height="10" rx="5"/><rect x="234" y="320" width="20" height="10" rx="5"/><rect x="254" y="322" width="20" height="10" rx="5"/><rect x="204" y="312" width="20" height="10" rx="5"/><rect x="244" y="312" width="20" height="10" rx="5"/></g>
+  <ellipse cx="150" cy="366" rx="46" ry="10" fill="#6F93A0"/>
+  <g fill="#3F5641"><circle cx="292" cy="382" r="20"/><circle cx="8" cy="374" r="18"/></g>
+</svg>

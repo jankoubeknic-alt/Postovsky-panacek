@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Jelení Hráze: nahoře jezero s hrází, odtud se klikatí úzký kanál s plovoucími poleny dolů přes pilu, hájovnu a ves až k jezu. Smrkový les po stranách. -->
+  <rect width="300" height="400" fill="#DCE8E4"/>
+  <ellipse cx="200" cy="40" rx="110" ry="36" fill="#7FA9C4"/>
+  <path d="M110 60C150 110 180 150 150 190C120 230 170 270 150 310C140 340 160 370 150 400" stroke="#7FA9C4" stroke-width="16" fill="none"/>
+  <g stroke="#8B6A4A" stroke-width="5" stroke-linecap="round"><path d="M140 120l14 6M165 200l12-8M150 280l14 4M148 350l12-6"/></g>
+  <g fill="#3F6A4A"><path d="M240 140l18 50h-36z"/><path d="M270 220l16 44h-32z"/><path d="M230 300l18 50h-36z"/><path d="M260 360l14 40h-28z"/></g>
+  <rect x="96" y="58" width="40" height="8" fill="#8B6A4A"/>
+  <path d="M120 386h60" stroke="#6E5A44" stroke-width="4"/>
+</svg>

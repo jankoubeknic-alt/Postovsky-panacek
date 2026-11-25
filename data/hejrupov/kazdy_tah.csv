@@ -1,0 +1,11 @@
+# Kdo čeká u máje, vydrží jen pár podání (p1 až p4). Když čekají všichni naráz, máj se postaví.
+podminka;efekt;text
+p1>0 p2>0 p3>0 p4>0 !maj;maj ikona:maj:🎄 p1=0 p2=0 p3=0 p4=0;Hej rup! Dědové tlačí ráhny, hasiči žebříky, kovář táhne lano a kluci křičí. Máj se zvedne a stojí. Celá ves tleská.
+p1=1 !maj;p1=0;Dědové to vzdali a šli domů.
+p1>1 !maj;p1-1;
+p2=1 !maj;p2=0;Hasiči to vzdali a šli domů.
+p2>1 !maj;p2-1;
+p3=1 !maj;p3=0;Kovář to vzdali a šli domů.
+p3>1 !maj;p3-1;
+p4=1 !maj;p4=0;Kluci to vzdali a šli domů.
+p4>1 !maj;p4-1;

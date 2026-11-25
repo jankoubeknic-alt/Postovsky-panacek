@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Otazník nad hlavou: zenich právě neví, kdo je -->
+  <style>.o { animation: kyv 2.4s ease-in-out infinite; transform-origin: 90px 226px; } @keyframes kyv { 50% { transform: rotate(10deg); } } @media (prefers-reduced-motion: reduce) { .o { animation: none; } }</style>
+  <g class="o"><circle cx="90" cy="226" r="10" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1.5"/><text x="90" y="231" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#5B4A6E" text-anchor="middle">?</text></g>
+</svg>

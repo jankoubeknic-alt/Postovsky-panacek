@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Noc: ztmavení celé scény, hvězdy, měsíc, kometa a rozsvícená okna. Souřadnice oken odpovídají pozadi.svg. -->
+  <defs>
+    <radialGradient id="zar">
+      <stop offset="0" stop-color="#FFD98A" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#FFD98A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ohon" cx="1" cy="1" r="1">
+      <stop offset="0" stop-color="#F6F1DC" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#F6F1DC" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="srpek">
+      <circle cx="191" cy="24" r="10" fill="#fff"/>
+      <circle cx="196" cy="20" r="9" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="300" height="400" fill="#0E1730" opacity=".66"/>
+
+  <g fill="#F6F1DC">
+    <circle cx="10" cy="10" r="1"/><circle cx="26" cy="46" r="1.2"/><circle cx="52" cy="10" r=".9"/><circle cx="14" cy="72" r=".9"/>
+    <circle cx="108" cy="16" r="1.1"/><circle cx="120" cy="60" r=".8"/><circle cx="186" cy="54" r="1"/><circle cx="200" cy="80" r=".8"/>
+    <circle cx="272" cy="8" r="1.1"/><circle cx="270" cy="62" r=".9"/><circle cx="214" cy="8" r=".8"/><circle cx="62" cy="66" r=".8"/>
+    <circle cx="96" cy="62" r=".9"/><circle cx="36" cy="26" r=".7"/>
+  </g>
+  <rect width="300" height="400" fill="#F4ECD0" mask="url(#srpek)"/>
+
+  <!-- kometa, na kterou míří dalekohled -->
+  <path d="M84 40L38 12L42 22Z" fill="url(#ohon)"/>
+  <circle cx="84" cy="40" r="6" fill="url(#zar)"/>
+  <circle cx="84" cy="40" r="2.4" fill="#FFFBEA"/>
+
+  <!-- světla -->
+  <g fill="#F4C866">
+    <rect x="108" y="208" width="16" height="16"/><rect x="176" y="208" width="16" height="16"/>
+    <rect x="270" y="166" width="10" height="14"/>
+    <rect x="124" y="248" width="8" height="7"/>
+    <path d="M199 218h4l1 8h-6z"/>
+    <circle cx="214" cy="40" r="2.2"/><circle cx="262" cy="40" r="2.2"/>
+    <circle cx="12" cy="140" r="1.3"/><circle cx="40" cy="143" r="1.3"/><circle cx="188" cy="141" r="1.3"/><circle cx="204" cy="138" r="1.3"/><circle cx="278" cy="143" r="1.3"/>
+  </g>
+  <circle cx="118" cy="98" r="2" fill="#E0503C"/>
+  <circle cx="118" cy="98" r="7" fill="url(#zar)" opacity=".6"/>
+  <circle cx="128" cy="252" r="34" fill="url(#zar)"/>
+  <circle cx="201" cy="222" r="14" fill="url(#zar)"/>
+  <circle cx="116" cy="216" r="16" fill="url(#zar)" opacity=".6"/>
+  <circle cx="184" cy="216" r="16" fill="url(#zar)" opacity=".6"/>
+  <circle cx="238" cy="40" r="26" fill="url(#zar)" opacity=".55"/>
+  <ellipse cx="128" cy="332" rx="36" ry="9" fill="#FFD98A" opacity=".18"/>
+</svg>

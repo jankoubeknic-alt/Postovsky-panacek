@@ -1,0 +1,6 @@
+# Ozvěna vydrží jen do dalšího podání: nejdřív umlkne stará, pak se z „nové“ stane aktuální.
+podminka;efekt;text
+;!ozvena_omluva !ozvena_ruka !ozvena_slepice;
+ozvena_nova_omluva;ozvena_omluva !ozvena_nova_omluva;Skály opakují: „…kdyby se omluvil… omluvil… luvil…“
+ozvena_nova_ruka;ozvena_ruka !ozvena_nova_ruka;Skály opakují: „…podal bych mu ruku… ruku… uku…“
+ozvena_nova_slepice;ozvena_slepice !ozvena_nova_slepice;Skály opakují: „…kdo ji vzal… vzal… zal…“

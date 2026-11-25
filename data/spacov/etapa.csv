@@ -1,0 +1,16 @@
+klic;hodnota
+datum;28. IX.
+start;vymer kroupy zruseni pohled prosba
+cil;vymer_doruceno kroupy_doruceno zruseni_doruceno pohled_doruceno rytiri_vzhuru dan_vyresena uroda_vyresena svatba_zachranena
+uvod;Ve Spáčově pod Blaníkem každé dítě ví, že v hoře spí rytíři. Probudí se a pomůžou, až bude nejhůř. Děti napsaly rytířům prosbu, ať se vzbudí. Jenže starý strážce u skály ji pustí dovnitř jen v té nejhorší chvíli.|V brašně máš i tři špatné zprávy. Nikdo je nechce nosit. Tady je ale nosit musíš.
+navod;Skála se otevře jen v nejhorší chvíli. Špatné zprávy se nosí nerady.
+konec_nadpis;Rytíři vyjeli
+konec_text;Svatý Václav s rytíři vyjel z Blaníku, rozhlédl se a řekl: „Tohle že je nejhorší chvíle?“ Pak zaplatili daň z pokladu hory, zorali krupobitím zbité pole a ženicha přivedli k oltáři. Večer se vrátili do hory a usnuli. Prý zase na pár set let.|Brašna je prázdná. Strážce ti dal podkovu z Blaníku pro štěstí. Je obrovská a těžká a nosíš ji radši na krku.
+pozadi;data/spacov/pozadi.svg
+barvy;
+pocitadla;bida=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;bida:Bída:3
+prohra;
+prohra_text;

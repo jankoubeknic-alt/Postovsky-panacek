@@ -1,0 +1,17 @@
+# Balíky plavou po kanálu: počítadla l, t, s (1 hráz, 2 pila, 3 hájovna, 4 ves, 5 jez). Kdo čeká na břehu (vlajka ceka_*), vyloví všechno, co jde kolem. 9 = doručeno, 12 až 14 = vylovil cizí, 15 = má vorař.
+podminka;efekt;text
+l>0 l<5;l+1;
+t>0 t<5;t+1;
+s>0 s<5;s+1;
+l=2 ceka_pila;l=9 !ceka_pila list_doruceno ikona:pilar:🪚;Pilař stojí na břehu s bidlem a vyloví pilový list. Jeho zásilka! Doplula.
+l=3 ceka_hajovna;l=13;Hajná stojí na břehu s bidlem a vyloví pilový list. Není to její, ale z vody to nepustí.
+l=4 ceka_ves;l=14;Hospodský stojí na břehu s bidlem a vyloví pilový list. Není to jeho, ale z vody to nepustí.
+l=5;l=15;Vorař Toník u jezu vyloví pilový list, který nikdo nechytil.
+t=2 ceka_pila;t=12;Pilař stojí na břehu s bidlem a vyloví truhlu s výbavou. Není to jeho, ale z vody to nepustí.
+t=3 ceka_hajovna;t=9 !ceka_hajovna truhla_doruceno ikona:hajna:🧳;Hajná stojí na břehu s bidlem a vyloví truhlu s výbavou. Doplula!
+t=4 ceka_ves;t=14;Hospodský stojí na břehu s bidlem a vyloví truhlu s výbavou. Není to jeho, ale z vody to nepustí.
+t=5;t=15;Vorař Toník u jezu vyloví truhlu, kterou nikdo nechytil.
+s=2 ceka_pila;s=12;Pilař stojí na břehu s bidlem a vyloví sud piva. Není to jeho, ale z vody to nepustí.
+s=3 ceka_hajovna;s=13;Hajná stojí na břehu s bidlem a vyloví sud piva. Není to její, ale z vody to nepustí.
+s=4 ceka_ves;s=9 !ceka_ves sud_doruceno ikona:hospodsky:🛢️;Hospodský stojí na břehu s bidlem a vyloví sud piva. Jeho zásilka! Doplula.
+s=5;s=15;Vorař Toník u jezu vyloví sud piva, který nikdo nechytil.

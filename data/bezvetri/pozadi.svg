@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Bezvětří: uprostřed kostel s korouhvičkou, vpravo na kopci větrný mlýn s děravými lopatkami,
+       vlevo obecní úřad, uprostřed šňůra s mokrým prádlem, vlevo dole kopec drakiády. Všude bezvětří: kouř stoupá rovně. -->
+  <rect width="300" height="400" fill="#E6E2C8"/>
+  <path d="M0 130C60 110 120 124 180 112S260 100 300 116V400H0Z" fill="#C9C58E"/>
+  <path d="M200 120C230 70 270 60 300 64V140H200Z" fill="#B6B27A"/>
+  <!-- kostel s korouhvičkou -->
+  <rect x="124" y="56" width="28" height="110" fill="#F0E8D4"/>
+  <path d="M120 58L138 26L156 58Z" fill="#6B5A4A"/>
+  <path d="M138 26V8" stroke="#4A3F33" stroke-width="2"/>
+  <path d="M132 10h12l-4 4h-8z" fill="#D9A93A"/>
+  <rect x="152" y="110" width="50" height="56" fill="#F0E8D4"/>
+  <path d="M148 112L177 92L206 112Z" fill="#6B5A4A"/>
+  <!-- mlýn na kopci -->
+  <path d="M226 126L232 70H256L262 126Z" fill="#D8C7A6"/>
+  <path d="M228 72L244 54L260 72Z" fill="#7A5A3A"/>
+  <g stroke="#6B4A36" stroke-width="3" stroke-linecap="round"><path d="M244 62L214 34M244 62L276 36M244 62L216 92M244 62L274 90"/></g>
+  <g fill="none" stroke="#9C8A6A" stroke-width="1" stroke-dasharray="3 3"><path d="M220 42l10 10M268 44l-8 10M222 84l8-8M268 82l-8-8"/></g>
+  <circle cx="244" cy="62" r="4" fill="#5A4636"/>
+  <!-- obecní úřad -->
+  <rect x="6" y="122" width="86" height="58" fill="#EDE3CC"/>
+  <path d="M0 126L49 100L98 126Z" fill="#8C4A3A"/>
+  <rect x="34" y="156" width="20" height="24" fill="#6B4A36"/>
+  <text x="49" y="148" font-family="Georgia, serif" font-size="6" fill="#4A3F33" text-anchor="middle">OBECNÍ ÚŘAD</text>
+  <rect x="60" y="100" width="7" height="16" fill="#7A6A5A"/>
+  <path d="M63 98V70" stroke="#C9C5BC" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  <!-- šňůra s mokrým prádlem -->
+  <path d="M96 210Q156 226 216 210" fill="none" stroke="#7A6A5A" stroke-width="1.5"/>
+  <g stroke="#9C7A52" stroke-width="3"><path d="M96 210v60M216 210v60"/></g>
+  <g stroke="#7A6A5A" stroke-width="1"><rect x="106" y="214" width="14" height="22" fill="#C6DDF4"/><rect x="188" y="214" width="14" height="22" fill="#F4C6C6"/></g>
+  <g fill="#6FA3B8"><circle cx="113" cy="242" r="1.5"/><circle cx="195" cy="242" r="1.5"/><circle cx="113" cy="250" r="1.2"/></g>
+  <!-- cesta a kopec drakiády -->
+  <path d="M140 400C146 340 150 290 156 250H170C172 290 184 340 196 400Z" fill="#E4D6B6"/>
+  <path d="M0 300C40 280 90 290 120 320V400H0Z" fill="#B6B27A"/>
+  <path d="M30 300V270" stroke="#9C7A52" stroke-width="2"/>
+  <path d="M24 270h12l-6-8z" fill="#E07A3A"/>
+  <g fill="#E07A7A"><circle cx="240" cy="360" r="3"/><circle cx="270" cy="380" r="3"/></g>
+  <g fill="#F2C86A"><circle cx="220" cy="384" r="3"/><circle cx="256" cy="344" r="3"/></g>
+</svg>

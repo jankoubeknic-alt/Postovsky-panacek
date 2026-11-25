@@ -1,0 +1,42 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Hodinov: čas dělá ponocný (h 0 až 7, devátá až čtvrtá). Každý je venku jen v určitou hodinu. Po kořalce ponocný zatroubí o dvě hodiny zpátky a ves mu věří.
+karta;cil;podminka;vyraz;text;efekt
+dopis_pekar;ponocny;;📯;„Pekaře budím ve dvě. Do té doby spí a dopis by mu ležel u dveří.“;
+prsten;ponocny;;📯;„Prsten? To není pro ponocného. Pod lípou čeká jedna, co na prsten čeká.“;
+koralka;pani;;👻;„Duchové nepijí. Dej to ponocnému, ten ji ocení.“;
+dopis_marka;hospodsky;;🍺;„Od Pepy? Mařka chodí pod lípu v jedenáct. To už mám zavřeno.“;
+dopis_hospodsky;ponocny;;📯;„Hospodský zavírá po desáté. Pospěš si.“;
+dopis_hospodsky;hospodsky;;🍺;Hospodský čte ceník z pivovaru a vzdychá. „Zase dráž. No co, aspoň mám co říkat štamgastům.“;-dopis_hospodsky hospodsky_doruceno razitko
+?;hospodsky;!@koralka !koralka_vzata;🍺;Hospodský ti strčí placatku. „Pro ponocného, ať se zahřeje. Ale opatrně. Když si cvrnkne, plete hodiny. A celá ves se řídí podle něj.“;+koralka koralka_vzata
+?;hospodsky;;🍺;„Po desáté zavírám. Ponocný zatroubí desátou a já zhasnu. Tak to je.“;
+?;ponocny;;📯;Ponocný se opírá o halapartnu. „Co zatroubím, to platí. Mařka chodí pod lípu v jedenáct, Bílá paní je venku jen o půlnoci a pekař vstává ve dvě. Hodiny? Ty máme v kostele rozbité od války.“;
+koralka;ponocny;;📯;Ponocný si vezme placatku. „No, na zahřátí…“;-koralka opily
+dopis_marka;marka;;💌;Mařka čte dopis od Pepy a usmívá se. Pak posmutní. „Pepa si mě vezme, až bude mít prsten. Jenže na prsten nemá. A to se čeká.“;-dopis_marka marka_doruceno razitko
+prsten;marka;marka_doruceno;💍;Mařka se dívá na prsten a pak se rozpláče radostí. „Od Bílé paní? Tak to je znamení! Napíšu Pepovi, že prsten už máme.“;-prsten zasnuby razitko
+prsten;marka;;💍;„Prsten? Od koho? Bez psaní od Pepy si ho nevezmu.“;
+?;marka;;👩;Mařka čeká pod lípou. „Pepa píše vždycky tak, aby dopis přišel na jedenáctou.“;
+dopis_pani;pani;;👻;Bílá paní otevře pečeť a čte. „Od kolegyně ze Strachova! Turisté, strašení, samé novoty.“ Pak ti podá starý prsten. „Našla jsem ho v příkopu. Dej ho někomu, kdo ho potřebuje víc než já.“;-dopis_pani pani_doruceno +prsten razitko
+?;pani;;👻;Bílá paní se vznáší nad cestou. „Jen o půlnoci. Ani o minutu dřív, ani později. Tak to máme v předpisech.“;
+dopis_pekar;pekar;;🥖;Pekař čte od mlynáře. „Mouka v sobotu. Tak to ještě vystačím.“;-dopis_pekar pekar_doruceno razitko
+?;pekar;;🥖;Pekař hněte těsto. „Ve dvě vstávám, ve čtyři mám rohlíky. Ponocný mi je budík.“;
+?;lavicka;;🪑;Sedneš si na lavičku a posloucháš noc.;cekej
+prsten;pani;;👻;„Ten už je tvůj. Dej ho někomu, kdo ho potřebuje.“;
+koralka;hospodsky;;🍺;„To je pro ponocného. Já mám svoje.“;
+dopis_marka;pani;;👻;Bílá paní se usměje. „Milostný dopis? Ten patří Mařce. Pod lípou, v jedenáct.“;
+dopis_pani;marka;;👩;Mařka ucukne. „Pro Bílou paní? Ta chodí o půlnoci. Já tu být nechci.“;
+dopis_pekar;hospodsky;;🍺;„Pekař vstává ve dvě. Teď spí jako dudek.“;
+koralka;pekar;;🥖;„Kořalku? Ve dvě ráno? To ne. Dej ji ponocnému, tomu je zima.“;
+napoveda;*;!@koralka !koralka_vzata;💡;Hospodský po desáté zavře. Má něco pro ponocného.;
+napoveda;*;!pani_doruceno;💡;Mařka je pod lípou v jedenáct, Bílá paní jen o půlnoci.;
+napoveda;*;!zasnuby;💡;Prsten od Bílé paní patří Mařce, jenže ta je venku jen v jedenáct. Ponocný po kořalce vrátí čas o dvě hodiny.;
+napoveda;*;;💡;Pekař vstává ve dvě.;
+*;lavicka;;🪑;Na lavičku se nic neodkládá.;
+*;ponocny;;📯;„Já pošty nedostávám. Já jen troubím.“;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,17 @@
+klic;hodnota
+datum;9. V.
+start;zavoj prsteny oznameni dopis cedulka_farar cedulka_mlynar
+cil;zavoj_doruceno dopis_doruceno svatba
+uvod;Obecní studna v Dolní Zapomněnici má zvláštní vodu a nikdo tu nic nepamatuje dlouho. Lidé nosí na krku cedulky se jménem, jenže v noci je vítr přeházel. Ve tři má být svatba. Ženich zapomněl, koho si bere, a mlynář s farářem si vyměnili řemeslo.|Pokaždé, když se ve vsi něco stane třikrát, odbije zvon a všichni zapomenou, co se právě dělo. Doručené zůstává doručené.
+navod;Po každém třetím podání odbije zvon a všichni zapomenou.
+konec_nadpis;Ano, ano a ještě jednou ano
+konec_text;Farář oddal Vaška s Bárou dřív, než zvon stihl odbít. Novomanželé si slib zapsali na ruku, pro jistotu. Mlynář se vrátil k mouce a babka u studny připíjí slivovicí, protože ta se nezapomíná.|Brašna je prázdná. Na tuhle svatbu si Zapomněnice vzpomene ještě za sto let. Nebo aspoň do večera.
+pozadi;data/zapomnenice/pozadi.svg
+barvy;
+# Paměť: kazdy_tah.csv po každém podání přičte 1 k počítadlu pamet. Při 3 odbije zvon a smaže vlajky *_vi.
+pocitadla;pamet=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;pamet:Zvon:3
+prohra;
+prohra_text;

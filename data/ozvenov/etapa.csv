@@ -1,0 +1,16 @@
+klic;hodnota
+datum;2. VII.
+start;pohled krmeni noviny
+cil;pohled_doruceno krmeni_doruceno noviny_doruceno prani_doruceno smir
+uvod;Ozvěnov leží v hlubokém údolí a skály tu vracejí každé slovo. Bratři Hromada a Hromádka bydlí každý na jednom svahu a třicet let spolu nepromluvili. Pohádali se kvůli slepici Kropenaté, která jednoho dne zmizela.|Co kdo řekne nahlas, to ozvěna donese k tomu, za kým půjdeš hned potom. Když ho poslouchat půjdeš, klepni na něj. Jakmile mezitím podáš zásilku někomu jinému, ozvěna utichne.
+navod;Ozvěna donese slova k tomu, ke komu půjdeš hned potom.
+konec_nadpis;Kropenatá je doma
+konec_text;Bratři se sešli na lávce uprostřed údolí a podali si ruce. Kropenatá snesla vejce ze samé radosti. Paní Ozvěna dostala první pohled v životě a teď místo opakování odpovídá.|Brašna je prázdná. Z údolí se nese smích a skály ho vracejí dvakrát.
+pozadi;data/ozvenov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

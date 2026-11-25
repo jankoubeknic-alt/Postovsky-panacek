@@ -1,0 +1,9 @@
+# Po každém tahu uběhnou dny. Barborka roste (ra, rb, rk), jen když je ve vodě a v teple. Ve čtyřech kvete.
+podminka;efekt;text
+den<11;den+1;
+anca_ma ra<4;ra+1;
+ra=4 !kvete_anca;kvete_anca ikona:anca:🌸;Ančina barborka rozkvetla! Bílé kvítky voní jako jaro.
+bara_ma vaza_bara rb<4;rb+1;
+rb=4 !kvete_bara;kvete_bara ikona:bara:🌸;Bářina barborka rozkvetla! Bílé kvítky voní jako jaro.
+kaca_ma teplo_kaca rk<4;rk+1;
+rk=4 !kvete_kaca;kvete_kaca ikona:kaca:🌸;Kačina barborka rozkvetla! Bílé kvítky voní jako jaro.

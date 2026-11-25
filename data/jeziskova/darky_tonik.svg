@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Dárky pod stromečkem, vidět oknem -->
+  <rect x="79" y="253" width="10" height="8" fill="#C2564A" stroke="#F4E9C4" stroke-width=".8"/>
+  <rect x="91" y="255" width="10" height="6" fill="#3F6AA6" stroke="#F4E9C4" stroke-width=".8"/>
+  <path d="M84 253v8M96 255v6" stroke="#F2C86A" stroke-width="1.2"/>
+</svg>

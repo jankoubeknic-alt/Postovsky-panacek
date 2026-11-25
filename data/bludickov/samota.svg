@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Vrstva samoty: teplá světnice na samotě, kachlová kamna, na okně lucerna a svazky sušených bylin u stropu. -->
+  <rect width="300" height="400" fill="#D9C4A0"/>
+  <rect y="300" width="300" height="100" fill="#9A7A5A"/>
+  <rect x="200" y="90" width="60" height="70" fill="#2F3A4A" stroke="#6E4E34" stroke-width="5"/><circle cx="230" cy="140" r="8" fill="#F5C04A"/>
+  <g stroke="#6A7A3A" stroke-width="3"><path d="M40 20v40M60 20v34M80 20v44M100 20v30"/></g>
+  <rect x="20" y="180" width="60" height="120" fill="#7FA6A0"/>
+</svg>

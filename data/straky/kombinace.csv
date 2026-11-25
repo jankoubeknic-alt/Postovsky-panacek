@@ -1,0 +1,48 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Straky: krádeže řídí kazdy_tah.csv (počítadlo straka). Žebřík na věž sundá hnízdo a vrátí ukradené.
+karta;cil;podminka;vyraz;text;efekt
+?;vez;hnizdo_dole;⛪;Na věži už žádné hnízdo není. Jen straka sedí na kříži a uraženě kráká.;
+?;vez;;⛪;Kostelní věž. Úplně nahoře, za ciferníkem, je velké hnízdo. Když na něj zasvítí slunce, něco se v něm zablýskne.;
+?;kostelnik;;🧓;Kostelník zametá před kostelem. „Ztratil se mi klíč od fary. To bude hostinská, ta má ráda všechno, co se leskne.“;
+?;hostinska;smir;😊;Hostinská nalévá učiteli a omlouvá se mu už potřetí.;
+?;hostinska;;👩‍🦰;Hostinská leští sklenice. „Lžičky mi zmizely přímo ze stolu. Byl tu jen učitel. Ten má pořád hlad po stříbře.“;
+?;ucitel;;👨‍🏫;Pan učitel mžourá do sešitů. „Brýle mi zmizely z katedry, když jsem větral. Ve škole byl jen kostelník.“;
+?;straka;;🐦;Straka sedí na plotě a dívá se ti do brašny. Hlavu nakloní, jako by počítala.;
+napoveda;*;!dopis_doruceno;💡;Dopis z biskupství je pro kostelníka. Možná ti za něj něco půjčí.;
+napoveda;*;ukradeno_lzicky !hnizdo_dole;💡;Kdo ti vzal lžičky? Podívej se na věž, co se tam blýská. Bez žebříku tam nevylezeš.;
+napoveda;*;ukradeno_brejle !hnizdo_dole;💡;Kdo ti vzal brýle? Podívej se na věž, co se tam blýská. Bez žebříku tam nevylezeš.;
+napoveda;*;@lzicky;💡;Lžičky jsou pro hostinskou. Doruč je, dokud je máš.;
+napoveda;*;@brejle;💡;Brýle jsou pro pana učitele. Doruč je, dokud je máš.;
+napoveda;*;!hnizdo_dole;💡;Na věži je hnízdo a něco se v něm blýská. S žebříkem od kostelníka se tam dostaneš.;
+napoveda;*;@poklad;💡;Lesklé věci z hnízda patří celé vsi. Dones je do hospody, kde se všichni hádají.;
+napoveda;*;;💡;Všechno je doručeno.;
+lzicky;hostinska;;😍;Hostinská rozbalí lžičky a zkusí, jestli se v nich vidí. „Nové! Ale ty staré mi stejně vzal učitel.“;-lzicky lzicky_doruceno razitko
+lzicky;ucitel;;👨‍🏫;„Lžičky? Nejsou moje. Ale hostinská si myslí, že jsem jí ty staré vzal já.“;
+lzicky;kostelnik;;🧓;„Pro hostinskou. Ta ráda všechno, co se leskne.“;
+lzicky;straka;;🐦;Straka natáhne krk a zobákem chňapne. Ucukneš tak tak.;
+lzicky;vez;;⛪;Lžičky nahoru na věž? To by někdo moc rád.;
+brejle;ucitel;;🤓;Pan učitel si nasadí nové brýle a poprvé za měsíc vidí tabuli. „Ty staré mi vzal kostelník. Určitě.“;-brejle brejle_doruceno razitko
+brejle;hostinska;;👩‍🦰;„Brýle pro učitele? Ať si koupí ještě jedny, aby viděl, co krade.“;
+brejle;kostelnik;;🧓;„Pro učitele. Ať si na ně dává pozor, tady se ztrácí všechno.“;
+brejle;straka;;🐦;Straka se k brýlím nakloní a kráká, jako by se smála. Radši si je schováš.;
+brejle;vez;;⛪;Brýle na věž? Ani hodiny na věži nejsou krátkozraké.;
+dopis;kostelnik;;😵‍💫;Kostelník přečte dopis z biskupství a zbledne. „Vyčistit věž? Já mám závrať už na schodech!“ Podá ti žebřík. „Vylez tam ty. Prosím.“;-dopis dopis_doruceno +zebrik razitko
+dopis;hostinska;;👩‍🦰;„Z biskupství? To bude pro kostelníka. Ať se jde vyzpovídat z mého klíče.“;
+dopis;ucitel;;👨‍🏫;„Pro kostelníka. Ten je na faře, když zrovna nekrade.“;
+dopis;straka;;🐦;Straka dopis očichá a nechá ho být. Nelesklý papír ji nezajímá.;
+zebrik;vez;;🪜;Opřeš žebřík o věž a vyšplháš až k hnízdu. Je plné lesklých věcí: náprstky, zvonek od kola, tři prsteny, klíč od fary. Straka kolem tebe krouží a nadává. Hnízdo opatrně sundáš.;-zebrik +poklad hnizdo_dole ikona:straka:😤
+zebrik;kostelnik;;🧓;„Ne, ne, já nahoru nepolezu. Opři ho o věž.“;
+zebrik;straka;;🐦;Straka si sedne na žebřík a čeká, co bude.;
+poklad;hostinska;;😳;Vysypeš lesklé věci na stůl v hospodě. Hostinská pozná svou lžičku, učitel brýle, kostelník klíč od fary. Chvíli je ticho a pak se všichni začnou jeden druhému omlouvat. Straka na věži uraženě kráká.;-poklad smir razitko
+poklad;ucitel;;👨‍🏫;„Moje staré brýle! Ale tohle by měli vidět všichni. Hlavně hostinská.“;
+poklad;kostelnik;;🧓;„Můj klíč! Tak to byla straka? Musím se omluvit hostinské. A hostinská učiteli. Dones to do hospody, ať to vidí všichni.“;
+poklad;straka;;😤;Straka po lesklých věcech skočí. Udržíš je jen tak tak.;
+*;*;;🤷;Nic se nestane.;

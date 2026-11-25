@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Šnekova: vlevo radnice s hodinami, které mají jen hodinovou ručičku, vpravo pošta,
+       uprostřed startovní čára závodní dráhy, dole trenérčin trávník s ulitou a lavička. Domy mají spirály jako ulity. -->
+  <rect width="300" height="400" fill="#E2ECD8"/>
+  <path d="M0 120C80 104 220 110 300 116V400H0Z" fill="#BCD69E"/>
+  <!-- radnice -->
+  <rect x="10" y="64" width="92" height="88" fill="#EADFC6"/>
+  <path d="M4 68L56 34L108 68Z" fill="#8C6A4A"/>
+  <circle cx="56" cy="54" r="10" fill="#FFFDF4" stroke="#4A3F33" stroke-width="1.5"/>
+  <path d="M56 54L56 47" stroke="#4A3F33" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 140a14 14 0 1 1 8 0" fill="none" stroke="#C9B08A" stroke-width="2"/>
+  <rect x="46" y="124" width="20" height="28" fill="#6B4A36"/>
+  <!-- pošta -->
+  <rect x="198" y="64" width="92" height="88" fill="#F2E6C6"/>
+  <path d="M192 68L244 34L296 68Z" fill="#B5402F"/>
+  <rect x="212" y="80" width="64" height="12" fill="#E2B23A"/>
+  <text x="244" y="89" font-family="Georgia, serif" font-size="7" letter-spacing="2" fill="#3B2A1E" text-anchor="middle">POŠTA</text>
+  <path d="M268 140a14 14 0 1 1 8 0" fill="none" stroke="#C9B08A" stroke-width="2"/>
+  <rect x="234" y="124" width="20" height="28" fill="#6B4A36"/>
+  <!-- závodní dráha a start -->
+  <path d="M120 400L132 150H168L180 400Z" fill="#E8DCC0"/>
+  <path d="M132 150L120 400M168 150L180 400" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M128 230H172" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="4 4"/>
+  <g stroke="#7A6A5A" stroke-width="2"><path d="M116 236V196M184 236V196"/></g>
+  <path d="M116 196h-14l4 6-4 6h14M184 196h14l-4 6 4 6h-14" fill="#E07A3A"/>
+  <path d="M116 200Q150 186 184 200" fill="none" stroke="#7A6A5A" stroke-width="1"/>
+  <g fill="#F2C86A"><path d="M126 196l4 6 4-6z"/><path d="M146 192l4 6 4-6z"/><path d="M166 196l4 6 4-6z"/></g>
+  <!-- trenérčin trávník -->
+  <ellipse cx="66" cy="300" rx="50" ry="14" fill="#A8CC82"/>
+  <!-- lavička -->
+  <rect x="210" y="300" width="70" height="5" fill="#8A6A4A"/>
+  <rect x="210" y="292" width="70" height="4" fill="#8A6A4A"/>
+  <g fill="#5A4636"><rect x="214" y="305" width="4" height="12"/><rect x="272" y="305" width="4" height="12"/></g>
+  <!-- cedule -->
+  <rect x="104" y="356" width="92" height="16" fill="#FFFDF4" stroke="#7A6A5A"/>
+  <text x="150" y="367" font-family="Georgia, serif" font-size="7" fill="#4A3F33" text-anchor="middle">MAX. RYCHLOST 1 cm/min</text>
+  <g fill="#E07A7A"><circle cx="30" cy="370" r="3"/><circle cx="270" cy="380" r="3"/></g>
+</svg>

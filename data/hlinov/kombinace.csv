@@ -1,0 +1,64 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Hlínov: Golem se šémem plní lísteček NOS VODU nebo NOS DŘÍVÍ a po každém podání přinese jedno vědro nebo otýpku (kazdy_tah.csv).
+# DOST musí přijít přesně při třech vědrech nebo dvou otýpkách, jinak se přeteklé vylije a nosí se znovu.
+karta;cil;podminka;vyraz;text;efekt
+sem;rabi;lazen_hotova pec_hotova;🧔;Vyndáš Golemovi šém a podáš ho rabimu. Golem se zastaví v půli kroku a sedne si ke zdi. Hotovo.;-sem !zivy sem_vracen ikona:golem:🗿 razitko
+?;rabi;sem_vracen;🧔;Rabi uložil šém do knihy. „Golem si odpočine. Kdo moc nosí, ten se taky jednou rozsype.“;
+?;rabi;rabi_doruceno;🧔;„Golem udělá, co mu napíšeš,“ říká rabi. „Ale počítej. Golem počítat neumí, jen nosit. Až bude hotovo, vrať mi šém.“;
+?;rabi;;🧔;Rabi Löw čte u okna. „Čekám psaní z Prahy. A Golem zatím spí. Je to jen hromada hlíny, dokud nemá v ústech šém.“;
+?;golem;ukol_voda;🗿;Golem dupe ke studni a zpátky. Nosí vodu. Nemyslí, nepočítá, jen nosí.;
+?;golem;ukol_drevo;🗿;Golem nosí otýpky z dřevníku do pece. Jednu za druhou.;
+?;golem;zivy;🗿;Golem stojí a čeká. Oči mu svítí. Udělá, co mu napíšeš.;
+?;golem;;🗿;U zdi sedí obr z hlíny. Nehýbe se. Ústa má pootevřená, jako by na něco čekal.;
+?;lazebnik;lazen_hotova;🛁;Lazebník se koupe v kádi plné po okraj. „Ani o kapku víc!“;
+?;lazebnik;;🛁;Lazebník ukazuje na kád. „Tři vědra a je plná. Čtvrté přeteče a mám vytopenou lázeň.“;
+?;pekar;pec_hotova;👨‍🍳;Pekař sází chleby do pece. Hřeje přesně, jak má.;
+?;pekar;;👨‍🍳;Pekař stojí u studené pece. „Dvě otýpky a dost. Třetí a pec se zahltí a začne čadit.“;
+?;studna;;🪣;Studna je hluboká. Golem z ní nosí vodu po vědrech.;
+?;drevnik;;🪵;Dřevník plný otýpek. Golem jich unese jen jednu najednou.;
+napoveda;*;!rabi_doruceno;💡;Rabi čeká psaní z Prahy. Pak ti dá šém a lístečky.;
+napoveda;*;!zivy;💡;Golem ožije, když mu dáš do úst šém.;
+napoveda;*;!lazen_hotova;💡;Golem nosí po každém podání jedno vědro. Kád pojme tři. Mezitím můžeš doručovat. Lísteček DOST dej Golemovi, až budou v kádi přesně tři vědra.;
+napoveda;*;!pec_hotova;💡;Pec pojme dvě otýpky. Počítej podání a pak řekni dost.;
+napoveda;*;;💡;Vrať rabimu šém. A doruč, co zbývá v brašně.;
+dopis_rabi;rabi;;🧔;Rabi si dopis přečte a přikývne. „Golem pomůže. Tady máš šém a lístečky. Ale pamatuj: Golem nepřestane sám.“;-dopis_rabi +sem +nos_vodu +nos_drevo +dost rabi_doruceno razitko
+sem;golem;!zivy;✨;Vložíš Golemovi šém do úst. Hlína se pohne, oči se rozsvítí. Golem vstane a čeká, co mu napíšeš.;zivy ikona:golem:🧌
+sem;rabi;;🧔;„Šém mi vrať, až bude hotovo. Lázeň i pec.“;
+nos_vodu;golem;zivy !ukol_voda;🧌;Golem si přečte NOS VODU, popadne vědro a dupe ke studni. Co dělal předtím, to nechá být.;ukol_voda !ukol_drevo
+nos_vodu;golem;zivy;🧌;Golem už tohle dělá. Nosí dál.;
+nos_vodu;golem;;🗿;Hliněný obr se ani nehne. Bez šému nic nepřečte.;
+nos_drevo;golem;zivy !ukol_drevo;🧌;Golem si přečte NOS DŘÍVÍ a dupe k dřevníku. Co dělal předtím, to nechá být.;ukol_drevo !ukol_voda
+nos_drevo;golem;zivy;🧌;Golem už tohle dělá. Nosí dál.;
+nos_drevo;golem;;🗿;Hliněný obr se ani nehne. Bez šému nic nepřečte.;
+dost;golem;ukol_voda voda=3;🛁;Golem si přečte DOST a postaví vědro na zem. V kádi jsou přesně tři vědra, plno po okraj. Lazebník jásá.;!ukol_voda lazen_hotova ikona:lazebnik:😌 razitko
+dost;golem;ukol_drevo drevo=2;🔥;Golem přestane. V peci jsou přesně dvě otýpky a hoří krásně. Pekař sází chleby.;!ukol_drevo pec_hotova ikona:pekar:😊 razitko
+dost;golem;ukol_voda;🛁;Golem přestane nosit. Kád ale ještě není plná. Lazebník se ptá, kdy to bude.;!ukol_voda
+dost;golem;ukol_drevo;👨‍🍳;Golem přestane. Jenže dříví je v peci málo. Pekař se mračí.;!ukol_drevo
+dost;golem;;🧌;Golem si přečte DOST a nehne se. On už nic nedělá.;
+pohled_lazebnik;lazebnik;;🛁;Lazebník si prohlíží pramen na pohledu. „Ten stříká až ke střeše. U nás by mi stačila plná kád.“;-pohled_lazebnik lazebnik_doruceno razitko
+noviny_pekar;pekar;;👨‍🍳;Pekař čte titulek nahlas: „Kolik dříví do pece? Méně, než si myslíte.“ Zvedne prst. „Dvě otýpky!“;-noviny_pekar pekar_doruceno razitko
+pohled_lazebnik;golem;;🧌;Golem si pohled prohlédne a nic. Golem čte jen lístečky od rabiho.;
+noviny_pekar;golem;;🧌;Golem noviny drží vzhůru nohama. Nečte. Jen nosí.;
+dopis_rabi;golem;;🗿;Golem dopis nepřevezme. Kdyby ho převzal, nosil by ho do smrti.;
+pohled_lazebnik;pekar;;👨‍🍳;„Karlovy Vary? To je pro lazebníka, já mám jen pec.“;
+noviny_pekar;lazebnik;;🛁;„Pekařské listy? Mýdlo se z nich nevyrábí. Pro pekaře.“;
+nos_vodu;lazebnik;;🛁;„Lísteček patří Golemovi. Já vodu nosit nebudu, mám záda.“;
+nos_drevo;pekar;;👨‍🍳;„Dej to Golemovi. Já dříví nosím celý život.“;
+dost;rabi;;🧔;„DOST patří Golemovi. Mně stačí, když to řekneš nahlas.“;
+nos_vodu;rabi;;🧔;„Lísteček patří Golemovi do úst. Ne mně.“;
+sem;lazebnik;;🛁;„Šém? Toho se nedotknu. To patří Golemovi a rabimu.“;
+nos_drevo;lazebnik;;🛁;„Dříví? Do lázně? Já tu mám vodu, ne pec.“;
+nos_vodu;pekar;;👨‍🍳;„Vodu do pece? Proboha ne. To dej Golemovi a pošli ho k lazebníkovi.“;
+dost;lazebnik;;🛁;„Dost? To řekni Golemovi, až budou v kádi tři vědra. Ani o jedno víc.“;
+dost;pekar;;👨‍🍳;„Dost řekni Golemovi při dvou otýpkách. Já to vím, on ne.“;
+sem;pekar;;👨‍🍳;„Šém? Ten patří Golemovi do úst. Já bych se ho bál.“;
+*;studna;;🪣;Do studny nic házet nebudeš. Golem by to vylovil a nosil.;
+*;drevnik;;🪵;Do dřevníku se nic nedoručuje.;
+*;*;;🤷;Nic se nestane. Ale čas běží a Golem nosí.;

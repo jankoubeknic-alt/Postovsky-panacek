@@ -1,0 +1,70 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO
+# počítadla: v efektu drby+1, drby-3, drby=0 | v podmínce drby>=3, drby<2
+# Lázně: drby přidává jen ten, kdo neumí mlčet. Paní radová +2 (anonym +3), kapelník a plukovník +1. Lékařka, pokojská a pramen mlčí.
+# Stopy: stopa_inkoust (pokojská), stopa_fialka (lékařka), stopa_dama (kapelník nebo plukovník, nepovinná). Se znalostí stop si při rozhlédnutí všimneš víc.
+karta;cil;podminka;vyraz;text;efekt
+?;radova;stopa_inkoust stopa_fialka;😳;Paní radová voní fialkami na tři kroky a na prstech má zelené skvrny od inkoustu. Když si všimne, kam se díváš, rychle si natáhne rukavičky.;
+?;radova;stopa_fialka;👒;Paní radová voní na tři kroky. Fialková kolínská z kolonády, to je její vůně.;
+?;radova;stopa_inkoust;👒;Paní radová si v altánu píše pohledy. Pero si prý nechává plnit v hotelové psárně, jako všichni hosté.;
+?;radova;;👒;Paní radová Šmídová stojí pod kolonádou a vypráví, jaký dostala anonym. Už podesáté a pokaždé je to delší. Kolem ní je cítit sladká kolínská.;
+?;plukovnik;stopa_fialka;🧓;Plukovník kouří doutník za doutníkem. Voní jako udírna, rozhodně ne jako fialky.;
+?;plukovnik;stopa_inkoust;🧓;Plukovník píše na lavičce stížnost. Zeleným inkoustem z hotelové psárny, a má jím umazané prsty.;
+?;plukovnik;;🧓;Plukovník v. v. Hrubý píše na lavičce stížnost na lázeňskou dechovku. Už čtvrtou tento týden. Celé lázně si myslí, že anonymy píše on.;
+?;lekarka;stopa_fialka;👩‍⚕️;Na okně ordinace kvetou fialky. Paní doktorka ale ví nejlíp, že kytka voní jinak než kolínská. A recepty píše fialovým inkoustem.;
+?;lekarka;;👩‍⚕️;MUDr. Vlková předepisuje pramen třikrát denně. Je diskrétní jako hrob: co jí ukážeš, to dál nejde.;
+?;kapelnik;noty_doruceno;🎶;Orchestr hraje novou polku tak nahlas, že u pramene není slyšet jediné šuškání.;
+?;kapelnik;;🎻;Kapelník Pivoňka v altánu přehrává pořád stejná čísla. Nové noty nejdou a hosté si při koncertu radši šuškají.;
+?;pokojska;pohled_doruceno;🥰;Anička si čte pohled od Toníka a usmívá se do prachovky.;
+?;pokojska;;🧹;Pokojská Anička utírá lavičky na kolonádě a tiše si zpívá. Vidí všechno, ale nikdy nic neřekne.;
+?;pramen;drby>=6;⛲;U pramene se šušká víc, než se pije. Každý hrnek má dneska příchuť drbů.;
+?;pramen;;⛲;Pramen Bílá. Voda chutná po železe a hosté u ní probírají všechno, co se stalo i nestalo.;
+napoveda;*;drby>=6 !noty_doruceno;💡;Drbů je hodně. Hlasitá muzika přehluší každé šuškání a kapelník čeká na nové noty.;
+napoveda;*;!stopa_inkoust !stopa_fialka;💡;Obálka bez odesílatele je anonym. Kdo ho napsal? Ukaž ho lidem, kteří umějí mlčet. Paní radová mezi ně nepatří.;
+napoveda;*;!stopa_inkoust;💡;Anonym je psaný zeleným inkoustem. Kdo v lázních ví, kde se takový inkoust bere? Někdo, kdo každé ráno plní kalamáře.;
+napoveda;*;!stopa_fialka;💡;Papír je cítit něčím sladkým. Kdo vůni pozná a nic nevyzvoní? Paní doktorka.;
+napoveda;*;!odhaleno;💡;Teď víš, co hledat. Rozhlédni se po hostech: kdo píše zeleným inkoustem a voní fialkami? Tomu anonym vrať.;
+napoveda;*;!pohled_doruceno;💡;Pohled z Ameriky je pro pokojskou Aničku.;
+napoveda;*;!medaile_doruceno;💡;Balíček s pečetí ministerstva je pro plukovníka.;
+napoveda;*;!noty_doruceno;💡;Noty patří kapelníkovi do altánu.;
+napoveda;*;;💡;Všechno je doručeno.;
+anonym;radova;stopa_inkoust stopa_fialka;😶;Podáš paní radové anonym a řekneš jen: „Zelený inkoust a fialky.“ Radová zbledne, pak zčervená. „No dobře! Psala jsem je já. I sobě! Když se tu nic neděje, nemám o čem mluvit…“ Slíbí, že už nenapíše ani řádek, a lázně si oddychnou.;-anonym odhaleno drby=0 ikona:radova:😶 razitko
+anonym;radova;stopa_inkoust;👒;„Zelený inkoust? Ten má v psárně každý host! Třeba plukovník, ten píše stížnosti od rána do večera!“ Paní radová to hned běží vyprávět k prameni.;drby+2
+anonym;radova;stopa_fialka;👒;„Fialky? Ty voní i z ordinace paní doktorky! Já bych se tam podívala!“ A už to běží vyprávět k prameni.;drby+2
+anonym;radova;;😱;Paní radová obálku roztrhne a začne číst nahlas na celou kolonádu. „Zase! Někdo mě pronásleduje!“ Pak ti anonym strčí zpátky. „Na četnictvo s tím!“;drby+3
+anonym;plukovnik;stopa_inkoust;😤;„Zelený inkoust? Ano, píšu jím. Stížnosti! Pod každou se podepíšu, a to třikrát. Anonymy píšou zbabělci!“ Ohradí se tak nahlas, že se otočí půl kolonády.;drby+1
+anonym;plukovnik;;😤;„Mě podezíráte?! Plukovníka Hrubého?!“ Křičí tak, že ho slyší až u pramene.;drby+2
+anonym;lekarka;!stopa_fialka;👩‍⚕️;Paní doktorka k obálce přičichne. „Fialky. Ale ne kytka, kolínská. Fialková voda, prodává se tady na kolonádě.“ Pak ti anonym vrátí. „A já nic neviděla.“;stopa_fialka
+anonym;lekarka;;👩‍⚕️;„Víc vám neřeknu. Lékařské tajemství. I když tohle žádný lékař nepsal, to písmo je moc čitelné.“;
+anonym;pokojska;!stopa_inkoust;🧹;Anička se podívá na písmo a ztiší hlas. „Zelený inkoust? Ten je jen v psárně hotelu. Každé ráno plním kalamáře pro hosty.“ A rychle se zase pustí do utírání.;stopa_inkoust
+anonym;pokojska;;🧹;„Víc nevím, prosím. Zelený inkoust je v psárně, pro hosty.“;
+anonym;kapelnik;!stopa_dama;🎻;Kapelník si anonym přečte a hvízdne. „Takové kudrlinky dělá jen dáma. Chlap by to tak nezdobil.“ Do večera to ví celý orchestr.;stopa_dama drby+1
+anonym;kapelnik;;🎻;„Zase anonym? To už ví celý orchestr. Pikolista to vykládá na kolonádě.“;drby+1
+anonym;pramen;;⛲;Utopit anonym v prameni? Lákavé. Jenže pošta se neutápí, pošta se doručuje.;
+noty;kapelnik;;🎶;Kapelník roztrhne balík. Nová polka! Orchestr ji hned spustí a hraje tak nahlas, že u pramene neuslyšíš jediné šuškání.;-noty noty_doruceno drby-3 ikona:kapelnik:🎶 razitko
+noty;radova;;👒;Paní radová noty prolistuje. „Pro Pivoňku? Ten hraje tak falešně, že by mu je měl někdo schovat.“ A jde to říct k prameni.;drby+2
+noty;plukovnik;;😤;„Noty? Já poslouchám jen vojenské pochody. Tohle je pro toho dirigenta v altánu.“ Řekne to nahlas a celá lavička přikyvuje.;drby+1
+noty;lekarka;;👩‍⚕️;„Muzika je dobrá pro srdce. Tahle ale patří do altánu, ne do ordinace.“;
+noty;pokojska;;🧹;„To bude pro pana kapelníka. Hraje v altánu.“;
+noty;pramen;;⛲;Noty by se v prameni rozpily. A polka by byla mokrá.;
+medaile;plukovnik;!stopa_dama;🎖️;Plukovník balíček rozbalí. Medaile za zásluhy! Postaví se do pozoru a celá kolonáda tleská. Pak ti tiše řekne: „Za tohle vám něco povím. Dnes v šest ráno házela do schránky dopis dáma v závoji. Víc jsem neviděl, bez brýlí jsem slepý jak patrona.“;-medaile medaile_doruceno stopa_dama ikona:plukovnik:🎖️ razitko
+medaile;plukovnik;;🎖️;Plukovník balíček rozbalí. Medaile za zásluhy! Postaví se do pozoru a celá kolonáda tleská. „Dáma v závoji, říkám vám. Hledejte dámu!“;-medaile medaile_doruceno ikona:plukovnik:🎖️ razitko
+medaile;radova;;👒;Paní radová balíček potěžká. „Z ministerstva? Pro plukovníka? To se musí každý dozvědět!“;drby+2
+medaile;kapelnik;;🎻;„Pro plukovníka? Snad to není stížnost na nás. Hoši, hrajte tišeji!“ Celý orchestr si začne šuškat.;drby+1
+medaile;lekarka;;👩‍⚕️;„To je pro pana plukovníka. Má slabé srdce, tak mu to předejte opatrně.“;
+medaile;pokojska;;🧹;„To bude pro pana plukovníka. Sedí na lavičce a píše stížnost.“;
+medaile;pramen;;⛲;Pramen medaile nepotřebuje. Má jich z výstav víc než plukovník.;
+pohled;pokojska;;🥰;Anička pohled přečte a rozzáří se. „Od Toníka! Z Ameriky! Na jaře se vrací!“ Obejme tě i s brašnou.;-pohled pohled_doruceno ikona:pokojska:🥰 razitko
+pohled;radova;;😲;Paní radová pohled přečte dřív, než ho stihneš vzít zpátky. „Anička má ženicha v Americe! To musí vědět všichni!“;drby+2
+pohled;kapelnik;;🎻;„Z Ameriky? Tam se hraje jazz!“ Pohled ukáže celému orchestru.;drby+1
+pohled;plukovnik;;😤;„Amerika! Tam nemají pořádnou armádu!“ Řekne to tak nahlas, že se otočí půl kolonády.;drby+1
+pohled;lekarka;;👩‍⚕️;Paní doktorka pohled otočí obrázkem nahoru, aby nečetla text. „Pro Aničku. Utírá lavičky na kolonádě.“;
+pohled;pramen;;⛲;Pohled s mrakodrapy u pramene Bílá. Svět je malý.;
+*;*;;🤷;Nic se nestane.;

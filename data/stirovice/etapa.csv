@@ -1,0 +1,16 @@
+klic;hodnota
+datum;24. IV.
+start;dopis_babicka
+cil;prsten_doruceno klic_doruceno provazek_doruceno dymka_doruceno babicka_doruceno
+uvod;Na svatého Jiří vylézají hadi a štíři. Ve Štírovicích to platí doslova: u cesty leží osm kamenů a pod každým něco přezimovalo. Pod dvěma užovky, pod dvěma štíři, pod dvěma ještěrky a pod dvěma ropuchy.|Zvířátka vylezou, jen když najdou svého parťáka. Pak se odplazí a pod kameny se objeví, co tam přes zimu zapadlo. A ve vsi toho přes zimu dost chybí.
+navod;Odvaluj kameny po dvou. Když jsou pod oběma stejná zvířátka, vylezou a nechají tam, co hlídala. Jinak zalezou zpátky, tak si pamatuj, kde co bylo.
+konec_nadpis;Hadi a štíři vylezli
+konec_text;Všechna zvířátka se vyhřívají na jarním sluníčku a ves má zpátky, co jí přes zimu zapadlo. Kostel je odemčený, babička nosí prstýnek a nad Štírovicemi letí Jiříkův drak.|Brašna je prázdná. Jiřík tvrdí, že je rytíř a drak je jeho. Nikdo mu to nevyvrací.
+pozadi;data/stirovice/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

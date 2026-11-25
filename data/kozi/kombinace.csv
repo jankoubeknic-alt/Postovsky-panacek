@@ -1,0 +1,76 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Kozí Hřbítek: kozy papír ochutnají, ale nic nesnědí natrvalo (hra se nesmí zaseknout). Jedinou výjimkou je faktura, až ji sedlák uvidí.
+karta;cil;podminka;vyraz;text;efekt
+?;ucitel;secteno;👨‍🏫;„Zápis jsem ti dal. Ať ho starostka podepíše, než ho sní.“;
+?;ucitel;hlas_s_urna hlas_b_urna;👨‍🏫;Předseda komise vysype urnu na stůl a počítá. „Róza dva, Bořek nula. Teď to musí podepsat starostka.“ Podá ti zápis.;+zapis secteno
+?;ucitel;;👨‍🏫;Předseda komise sedí ve škole u prázdné urny. „Volí se poštou, ale zatím nikdo nevolil. Sedlák prý drží s Bořkem a babka ani neví, že jsou volby.“;
+?;roza;;🐐;Starostka Róza přežvykuje pod úřední vývěskou. Za osm let ve funkci snědla tři vývěsky a jedno usnesení. Jinak úřaduje bezchybně.;
+?;borek;borek_zere;😋;Bořek chroupe zelí a na urnu úplně zapomněl.;
+?;borek;;🐏;Kozel Bořek stojí na bedně vedle urny a mečí sliby: „Jetel pro všechny!“ Kdo přijde k urně, tomu očichá kapsy.;
+?;urna;borek_zere;🗳️;Urna je volná. Bořek se cpe zelím.;
+?;urna;;🗳️;Volební urna. Na víku jsou otisky kozích zubů.;
+?;sedlak;sedlak_vi;😠;Sedlák Kmoch zatíná pěsti. „Můj vlastní jetel mi sliboval! Z mého pole!“;
+?;sedlak;;👨‍🌾;Sedlák Kmoch okopává zelí. „Volím Bořka. Slíbil mi pytel jetele. Divné je, že mi z pole zrovna zmizelo třicet pytlů.“;
+?;babka;babka_vi;👵;Babka Vrbová si prohlíží leták. „Koza Róza. Ta mi loni snědla záclony. Ale aspoň poctivě.“;
+?;babka;;👵;Babka Vrbová sedí na lavičce a plete. „Cože? Volby? Za mých časů se volili lidi!“;
+napoveda;*;!sedlak_vi;💡;Sedlák volí Bořka kvůli jeteli. Neměl by vidět, za co ten jetel Bořek ještě nezaplatil? Fakturu Bořkovi zatím nedávej, sní ji.;
+napoveda;*;!plakat_doruceno;💡;Babka ani neví, koho volit. Doruč jí leták.;
+napoveda;*;!hlas_s_urna @listek_s;💡;Sedlák už ví, jak to s jetelem bylo. Dej mu volební lístek.;
+napoveda;*;!hlas_b_urna @listek_b;💡;Babka už ví, kdo kandiduje. Dej jí volební lístek.;
+napoveda;*;!borek_zere;💡;Bořek nepustí nikoho k urně. Co by kozel radši žral než papír? Sedlák má na poli zelí.;
+napoveda;*;@hlas_s;💡;Sedlákův hlas patří do urny.;
+napoveda;*;@hlas_b;💡;Babčin hlas patří do urny.;
+napoveda;*;!secteno;💡;Oba hlasy jsou v urně. Řekni předsedovi komise, ať sečte.;
+napoveda;*;@zapis;💡;Zápis musí podepsat starostka Róza.;
+napoveda;*;!faktura_doruceno;💡;Faktura patří Bořkovi. Teď už ji klidně může sníst.;
+napoveda;*;;💡;Všechno je doručeno.;
+faktura;sedlak;;😠;Sedlák si přečte fakturu a zrudne. „Třicet pytlů jetele z mého pole, nezaplaceno! On mi sliboval můj vlastní jetel!“ Utrhne hlávku zelí a strčí ti ji. „Dej to Bořkovi. Ať má co žrát místo mého jetele.“;sedlak_vi +zeli
+faktura;borek;sedlak_vi;😋;Bořek fakturu popadne a sní, než ji stihneš podat pořádně. Pozdě, sedlák už ví, co v ní stálo.;-faktura faktura_doruceno razitko
+faktura;borek;;🐏;Bořek po faktuře chňapne tak rychle, že ji stěží uhájíš. Co v ní asi je, že ji tak chce sníst, než ji někdo přečte?;
+faktura;roza;;🐐;Róza fakturu ochutná a vrátí. „Méé.“ Úřední pošta pro kandidáty ji nezajímá.;
+faktura;ucitel;;👨‍🏫;„Faktura za jetel z Kmochova pole? To by měl vidět hlavně pan Kmoch.“;
+faktura;babka;;👵;„Cože? Jetel? Já mám jetel na zahrádce, kdo by ho kupoval?“;
+faktura;urna;;🗳️;Faktura do urny nepatří. To by byl hlas pro družstvo.;
+listek_s;sedlak;sedlak_vi;✍️;Sedlák lístek popadne a zakroužkuje Rózu, až propíchne papír. „Tumáš. Ať ví, že poctivá koza je lepší než zlodějský kozel.“;-listek_s +hlas_s
+listek_s;sedlak;;👨‍🌾;Sedlák lístek obrací v ruce. „Bořek mi slíbil jetel. Ale počkej, ještě si to rozmyslím.“ Vrátí ti ho nevyplněný.;
+listek_b;babka;babka_vi;✍️;Babka zakroužkuje Rózu a namaluje k tomu kytičku. „Záclony mi snědla, ale za to se aspoň omluvila.“;-listek_b +hlas_b
+listek_b;babka;;👵;„Cože? Koho mám volit? Kozu? Nebo kozla? Nikoho z nich neznám, chlapče.“;
+plakat;babka;;🤓;Babka si leták přidrží u nosu. „Róza: Nic se nezmění. Bořek: Jetel pro všechny. No, já mám ráda, když se nic nemění.“;-plakat plakat_doruceno babka_vi razitko
+plakat;sedlak;;👨‍🌾;„Jetel pro všechny! Hm. A odkud ho asi vezme?“;
+plakat;borek;;🐏;Bořek si leták prohlédne, snědne roh s Rózou a zbytek ti vrátí.;
+plakat;roza;;🐐;Róza snědne roh s Bořkem a zbytek ti spokojeně vrátí.;
+plakat;ucitel;;👨‍🏫;„Leták je pro babku Vrbovou. Jinak neví, že jsou volby.“;
+zeli;borek;;😋;Bořek uvidí zelí, seskočí z bedny a zaboří do něj hlavu. Na urnu úplně zapomene.;-zeli borek_zere ikona:borek:😋
+zeli;roza;;🐐;Róza zelí odmítne. „Méé.“ Úplatky od pošty nebere.;
+zeli;ucitel;;👨‍🏫;„Zelí? To pro Bořka. Jinak tu urnu nikdo neodevzdá.“;
+zeli;urna;;🗳️;Zelí do urny? To by byl hlas pro kozla, a navíc neplatný.;
+hlas_s;urna;borek_zere;🗳️;Sedlákův lístek zapadne do urny. Bořek ani nezvedne hlavu od zelí.;-hlas_s hlas_s_urna
+hlas_b;urna;borek_zere;🗳️;Babčin lístek s kytičkou zapadne do urny.;-hlas_b hlas_b_urna
+hlas_s;urna;;🐏;Sotva se přiblížíš k urně, Bořek seskočí z bedny a chňapne po lístku. Uhneš jen tak tak.;
+hlas_b;urna;;🐏;Bořek se postaví mezi tebe a urnu a vycení zuby. Lístek s kytičkou mu voní.;
+hlas_s;borek;;🐏;Bořek lístek očichá a zatváří se jako kozel, který ví, koho sedlák volil. Radši si ho vezmeš zpátky.;
+hlas_b;borek;;🐏;Bořek po lístku chňapne. Kytička mu chutná. Lístek zachráníš, jen trochu okousaný.;
+hlas_s;ucitel;;👨‍🏫;„Do urny, prosím. Do rukou komise se nevolí.“;
+hlas_b;ucitel;;👨‍🏫;„Do urny, prosím. Do rukou komise se nevolí.“;
+zapis;roza;;🐐;Róza zápis pozorně přečte, otiskne do něj kopýtko a pak ho sní. Na Kozím Hřbítku to platí jako razítko.;-zapis volby ikona:roza:😌 razitko
+zapis;borek;;🐏;Bořek by zápis rád snědl, ale to by bylo podpisem neplatné. Uhneš.;
+zapis;ucitel;;👨‍🏫;„Podepsat ho musí starostka. Pak ho stejně sní.“;
+listek_s;roza;;🐐;Róza lístek ochutná a vrátí. Volit za jiné by bylo neslušné.;
+listek_b;roza;;🐐;Róza lístek ochutná a vrátí. Volit za jiné by bylo neslušné.;
+listek_s;borek;;🐏;Bořek lístek popadne a začne kroužkovat sám sebe kopytem. Vytrhneš mu ho.;
+listek_b;borek;;🐏;Bořek lístek popadne a začne kroužkovat sám sebe kopytem. Vytrhneš mu ho.;
+*;roza;;🐐;Róza to ochutná a vrátí. „Méé.“;
+*;borek;;🐏;Bořek to očichá a mečí: „Jetel pro všechny!“;
+*;urna;;🗳️;Do urny patří jen vyplněné lístky.;
+*;ucitel;;👨‍🏫;„Komise přijímá jen hlasy v urně.“;
+*;sedlak;;👨‍🌾;„Tohle mi k ničemu není. Já potřebuju jetel.“;
+*;babka;;👵;„Cože? Nerozumím. Mluv nahlas!“;
+*;*;;🤷;Nic se nestane.;

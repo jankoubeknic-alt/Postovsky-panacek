@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Strak nad Blýskavou: uprostřed kostelní věž s hnízdem vedle ciferníku, vlevo fara,
+       vpravo hospoda U Blýskavé, vlevo dole škola, dole třpytivý potok Blýskava a plot, na kterém sedává straka. -->
+  <rect width="300" height="400" fill="#DCE8EE"/>
+  <path d="M0 130C80 116 220 120 300 128V400H0Z" fill="#B9D3A2"/>
+  <!-- kostel s věží a hnízdem -->
+  <rect x="134" y="22" width="32" height="150" fill="#EFE6D2"/>
+  <path d="M130 24L150 -6L170 24Z" fill="#5E6E76"/>
+  <circle cx="150" cy="44" r="9" fill="#FFFDF4" stroke="#4A3F33" stroke-width="1.5"/>
+  <path d="M180 44q12-10 24 0q-12 8-24 0z" fill="#7A5A3A"/>
+  <g stroke="#5A4030" stroke-width="1"><path d="M182 44l20 -2M184 40l16 6M186 46l14 -6"/></g>
+  <path d="M166 40h14" stroke="#9C8A6A" stroke-width="2"/>
+  <rect x="104" y="120" width="92" height="52" fill="#EFE6D2"/>
+  <path d="M98 124L150 98L202 124Z" fill="#5E6E76"/>
+  <!-- fara vlevo -->
+  <rect x="6" y="122" width="76" height="52" fill="#F2ECDD"/>
+  <path d="M0 126L44 100L88 126Z" fill="#8C4A3A"/>
+  <rect x="34" y="150" width="16" height="24" fill="#6B4A36"/>
+  <!-- hospoda vpravo -->
+  <rect x="216" y="122" width="80" height="52" fill="#F2E6CC"/>
+  <path d="M210 126L256 98L302 126Z" fill="#7A3B2C"/>
+  <rect x="226" y="176" width="60" height="9" fill="#3B332E"/>
+  <text x="256" y="183" font-family="Georgia, serif" font-size="5.5" fill="#EDD9A8" text-anchor="middle">U BLÝSKAVÉ</text>
+  <!-- škola vlevo dole -->
+  <rect x="6" y="250" width="84" height="54" fill="#F0E2C4"/>
+  <path d="M0 254L48 228L96 254Z" fill="#9C4A34"/>
+  <g fill="#9DB5C8" stroke="#FFFFFF" stroke-width="1.5"><rect x="14" y="264" width="14" height="16"/><rect x="68" y="264" width="14" height="16"/></g>
+  <!-- cesta -->
+  <path d="M136 400C140 340 144 260 148 172H160C162 260 170 340 182 400Z" fill="#E4D6B6"/>
+  <!-- plot vpravo dole -->
+  <g stroke="#9C7A52" stroke-width="3"><path d="M200 330V300M220 330V300M240 330V300M260 330V300M280 330V300M196 308H300M196 322H300"/></g>
+  <!-- potok Blýskava -->
+  <path d="M0 350C60 340 120 360 180 348S260 340 300 350V372C250 366 190 378 130 370S40 368 0 378Z" fill="#7FB3C9"/>
+  <g fill="#FFFFFF"><path d="M40 356l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/><path d="M200 352l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/><path d="M120 362l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z"/></g>
+</svg>

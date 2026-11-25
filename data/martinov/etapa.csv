@@ -1,0 +1,16 @@
+klic;hodnota
+datum;11. XI.
+start;plast pecen husa dopis_hospodsky
+cil;zebrak_ok babka_ok honzik_ok anicka_ok husa_doruceno hospodsky_doruceno
+uvod;Na svatého Martina má do Martinova přijet Martin na bílém koni a s ním první sníh. Zatím je jen zima. U brány se třese žebrák, babka Kmochová nemá čím topit a sirotci Honzík a Anička mají hlad. Pošťák veze husu pro faráře, pecen od pekaře „pro chudé, rozdělte“ a sám má na sobě teplý pošťácký plášť.|U brány stojí voják na bílém koni s mečem. Říká se, že kdysi rozťal svůj plášť napůl.
+navod;Co se dá rozdělit, rozdělí voják mečem. Půlka půlky už nikoho nezahřeje ani nenasytí.
+konec_nadpis;Martin přijel na bílém koni
+konec_text;Žebrák a babka mají každý půlku pošťáckého pláště, sirotci každý půlku pecnu a pan farář celou husu. Voják na bílém koni se usmál, pobídl koně a nad Martinovem začal padat první sníh.|Pošťák je bez pláště, ale zima mu není. Hospodský mu nalil svatomartinského vína a babka slíbila ušít z půlky pláště rukávník.
+pozadi;data/martinov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

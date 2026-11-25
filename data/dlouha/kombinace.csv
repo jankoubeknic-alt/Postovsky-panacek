@@ -1,0 +1,79 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Dlouhá Široká: pomocníci Dlouhý, Široký a Bystrozraký jsou karty, které se nespotřebují. Dlouhý dosáhne nahoru i dolů,
+# Široký vypije rybník (pak je plný, dokud vodu nevypustí do náhonu), Bystrozraký vidí skrz tmu a co upřeně sleduje, to praskne.
+karta;cil;podminka;vyraz;text;efekt
+?;les;!@dlouhy;🦒;Mezi stromy leží kmen. Kmen se pohne a vstane. Je to chlapík dlouhý jako jedle. „Jsem Dlouhý,“ řekne odněkud shora. „Kam potřebuješ dosáhnout? Půjdu s tebou.“;+dlouhy ikona:les:🌲
+?;les;;🌲;Les je tichý. Na pasece zůstal otisk po dlouhém chlapíkovi.;
+?;rybnik;!@siroky;🫃;Na břehu rybníka leží chlapík široký jako stodola. „Já jsem Široký,“ zafuní. „Vypiju, co chceš. Rybník? Klidně. Jen to pak musím někam vypustit.“ Zvedne se a jde s tebou.;+siroky
+?;rybnik;;🌊;Rybník je hluboký a široký. Uprostřed na ostrůvku stojí chýše poustevníka. Lodička žádná, lávka žádná.;
+?;kopec;!@bystrozraky;🥽;Na kopci sedí chlapík s očima zavázanýma šátkem. „Jsem Bystrozraký. Vidím na sto mil, skrz zdi i skrz tmu,“ řekne. „Oči nosím zavázané, protože co upřeně sleduju, to praskne.“ Sejde s tebou dolů.;+bystrozraky ikona:kopec:⛰️
+?;kopec;;⛰️;Kopec nad vsí. Je odtud vidět všechno, kdo má na to oči.;
+?;vez;zvonik_doruceno;🔔;Zvoník zvoní poledne, i když je teprve deset. Je šťastný. Psala mu sestra.;
+?;vez;;🔔;Zvoník volá z okna nahoře na věži. „Zamkl jsem se, aby mě nikdo nerušil, a klíč mi vypadl! Kdyby tak někdo dosáhl až sem.“;
+?;studna;prsten_viden;🪣;Studna je hluboká a temná. Někde na dně leží prsten, Bystrozraký ti přesně ukázal kde. Rukou tam nedosáhneš.;
+?;studna;;🪣;Studna je tak hluboká a temná, že nevidíš dno. Kdesi dole prý leží nevěstin prsten.;
+?;nevesta;prsten_doruceno;👰;Liduška si prohlíží prsten na prstě a ženich si prohlíží Lidušku. Svatba bude v sobotu.;
+?;nevesta;;👰;Nevěsta Liduška pláče u studny. „Nesla jsem vodu a snubní prsten mi sklouzl do studny. Je tak hluboká, že nevidím dno. Svatba bude v sobotu!“;
+?;mlyn;mlyn_bezi;🏚️;Mlýnské kolo klape a mlynář si zpívá. Náhon je plný vody z rybníka.;
+?;mlyn;balvan_pryc;🏚️;Mlynář stojí u kola. „Náhon vyschl. Kdyby tak někdo přinesl vodu. Hodně vody. Rybník vody.“;
+?;mlyn;;🏚️;Mlýn je za balvanem, který včera spadl na cestu. Mlynář na tebe mává zpoza něj. „Nemůžu ven a ty nemůžeš dovnitř.“;
+?;poustevnik;poustevnik_doruceno;🧙‍♂️;Poustevník čte o tichu a je tiše.;
+?;poustevnik;;🧙‍♂️;Po bahnitém dně rybníka dojdeš k ostrůvku. Poustevník vykoukne z chýše. „Návštěva? Po čtyřiceti letech?“;
+?;kamen;;🪨;Přes cestu k mlýnu leží balvan velký jako vůz. Neodvalí ho deset koní.;
+napoveda;*;!@dlouhy;💡;Sám to nezvládneš. V lese, u rybníka a na kopci čekají pomocníci.;
+napoveda;*;!@siroky;💡;U rybníka se válí někdo široký.;
+napoveda;*;!@bystrozraky;💡;Na kopci sedí někdo se zavázanýma očima.;
+napoveda;*;!zvonik_doruceno;💡;Zvoník je moc vysoko. Kdo dosáhne nahoru?;
+napoveda;*;!prsten_viden;💡;Studna je temná. Kdo vidí i ve tmě?;
+napoveda;*;!prsten_doruceno;💡;Prsten je vidět, ale je moc hluboko. Kdo dosáhne dolů? A komu patří?;
+napoveda;*;!rybnik_vypity;💡;Na ostrůvek nevede cesta. Kdo by vypil celý rybník?;
+napoveda;*;!poustevnik_doruceno;💡;Rybník je vypitý. K poustevníkovi dojdeš po dně.;
+napoveda;*;!balvan_pryc;💡;Balvan neodvalí ani koně. Ale co upřeně sleduje Bystrozraký, to praskne.;
+napoveda;*;!mlynar_doruceno;💡;Cesta k mlýnu je volná. Mlynář čeká dopis.;
+napoveda;*;;💡;Mlýn potřebuje vodu. Široký má v sobě celý rybník.;
+dlouhy;vez;@dopis_zvonik;🦒;Dlouhý se natáhne až k oknu věže a podá zvoníkovi dopis. Zvoník radostí zazvoní. Pak Dlouhý ještě sebere klíč z trávy a podá mu ho taky.;-dopis_zvonik zvonik_doruceno ikona:vez:🛎️ razitko
+dlouhy;vez;;🦒;Dlouhý se natáhne k oknu věže a zvoník mu zamává. „Máš pro mě něco?“ Zatím ne.;
+dlouhy;studna;prsten_viden !prsten_vytazen;🦒;Dlouhý strčí ruku do studny, natahuje se a natahuje, až zmizí po rameno. „Mám ho!“ Vytáhne prsten celý od bahna.;+prsten prsten_vytazen
+dlouhy;studna;prsten_vytazen;🦒;Dlouhý se nakloní nad studnu. „Už tam nic není, jen žába.“;
+dlouhy;studna;;🦒;Dlouhý strčí ruku do studny a šmátrá ve tmě. „Je tu bahno, kámen, žába… Kde přesně? Nic nevidím.“;
+dlouhy;rybnik;;🦒;Dlouhý se natáhne přes rybník k ostrůvku. Poustevník se lekne a zabouchne dveře. „Kdo to je, ten dlouhán?“ Takhle ne.;
+dlouhy;kamen;;🦒;Dlouhý přeleze balvan jedním krokem. Ty ale ne. A balvan zůstal, kde byl.;
+dlouhy;kopec;;🦒;Dlouhý se natáhne až nad kopec. „Odtud je vidět až do Prahy. Skoro.“;
+dlouhy;nevesta;;👰;Dlouhý se k nevěstě sehne. „Prsten je ve studni? Najdi mi ho a já ho vytáhnu.“;
+dlouhy;mlyn;;🦒;Dlouhý nakoukne do mlýna přes střechu. „Kolo stojí, náhon je suchý.“;
+siroky;rybnik;;🫃;Široký si lehne k rybníku, otevře pusu a pije. Pije a pije, až je rybník suchý a Široký kulatý jako sud. K ostrůvku se teď dá dojít po dně.;rybnik_vypity siroky_plny ikona:poustevnik:🧙‍♂️
+siroky;mlyn;siroky_plny balvan_pryc;🫃;Široký si stoupne k náhonu a vypustí celý rybník. Voda se vyřítí do žlabu a mlýnské kolo se roztočí. Mlynář tančí. Široký je zase štíhlý. Tedy široký.;!siroky_plny mlyn_bezi ikona:mlyn:🎡 razitko
+siroky;mlyn;siroky_plny;🫃;Široký by vodu do náhonu vypustil, ale k mlýnu se přes balvan nedostane.;
+siroky;mlyn;;🫃;„Vodu do náhonu?“ ptá se Široký. „Rád, ale nejdřív ji musím někde vypít.“;
+siroky;studna;;🫃;Široký se nakloní nad studnu. „Ta je úzká, já se do ní nevejdu. A je v ní málo vody, nestojí za to.“;
+siroky;kamen;;🫃;Široký se o balvan opře. Balvan se ani nehne. Široký taky ne.;
+siroky;nevesta;;👰;Široký se uculí. „Svatba? Tam vypiju všechno, co bude.“ Nevěsta se zatváří vyděšeně.;
+siroky;vez;;🫃;Široký se postaví pod věž. Je široký, ne dlouhý. Nedosáhne.;
+siroky;poustevnik;;🫃;„Rybník vrátím, až ho budu potřebovat jinde,“ slíbí Široký poustevníkovi.;
+bystrozraky;studna;;🥽;Bystrozraký si odhrne šátek a podívá se do studny. „Na dně, pod třetím kamenem zleva, leží prsten.“ Voda ve studni praskne jako led. Pak zase splyne.;prsten_viden
+bystrozraky;kamen;;🥽;Bystrozraký sundá šátek a upřeně se na balvan zadívá. Prásk! Balvan se rozpadne na štěrk. Cesta k mlýnu je volná.;balvan_pryc
+bystrozraky;vez;;🥽;Bystrozraký se podívá na věž, ale jen kousíčkem oka. „Klíč leží v trávě pod oknem. Ale nahoru nedosáhnu.“;
+bystrozraky;rybnik;;🥽;Bystrozraký pohlédne na rybník. „Na dně je hrnec, bota a kapr Václav. Ale jak se dostat na ostrůvek, to nevidím.“;
+bystrozraky;nevesta;;🥽;Bystrozraký se na nevěstu upřeně podívá. Prásk! Prasknou jí korále. Nevěsta vykřikne a Bystrozraký si rychle zaváže oči.;
+bystrozraky;mlyn;;🥽;Bystrozraký pohlédne k mlýnu. „Mlynář si zpívá u prázdného náhonu.“;
+bystrozraky;kopec;;🥽;Bystrozraký se ohlédne na kopec, kde seděl. „Tam jsem se nudil. Tady je to lepší.“;
+bystrozraky;les;;🥽;Bystrozraký pohlédne do lesa. Prásk, prásk! Praskne pár šišek. „Promiňte,“ řekne lesu.;
+*;kamen;;🪨;Balvan nic nepřevezme. Je to balvan.;
+*;studna;;🪣;Do studny se nic nehází. Už tam leží prsten.;
+prsten;nevesta;;👰;Liduška si prsten umyje v potoce a navlékne. Svítí jako sluníčko. „Svatba bude! A vy tři jste pozvaní,“ řekne pomocníkům. Široký se olízne.;-prsten prsten_doruceno ikona:nevesta:💍 razitko
+prsten;*;;💍;„Prsten? Ten patří nevěstě Lidušce, té, co pláče u studny.“;
+balik_poustevnik;poustevnik;;🧙‍♂️;Poustevník převezme knihy o tichu. „Krásné. Čtyřicet let jsem čekal, až někdo připluje. Nikdo nepřiplul. Vy jste přišel pěšky po dně.“;-balik_poustevnik poustevnik_doruceno razitko
+balik_poustevnik;rybnik;;🌊;Balík hodit na ostrůvek nejde. Spadl by do vody a knihy o tichu by zbublaly.;
+balik_poustevnik;*;;📦;„Knihy o tichu? To je pro poustevníka na ostrůvku. Jak se tam dostaneš, nevím.“;
+dopis_zvonik;vez;;🔔;Dopis hodíš k oknu věže. Nedoletí. Zvoník smutně mává.;
+dopis_zvonik;*;;✉️;„Dopis pro zvoníka? Ten je zamčený nahoře na věži.“;
+dopis_mlynar;mlyn;balvan_pryc;🏚️;Mlynář dopis přečte a zasměje se. „Strýc píše, že mi pošle mouku, kdyby mlýn nemlel. Ať pošle radši vodu.“;-dopis_mlynar mlynar_doruceno razitko
+dopis_mlynar;mlyn;;🏚️;Mlynář na dopis kouká zpoza balvanu. Podat ho přes balvan nejde.;
+dopis_mlynar;*;;✉️;„Pro mlynáře? Ten je za balvanem.“;
+*;*;;🤷;Nic se nestane.;

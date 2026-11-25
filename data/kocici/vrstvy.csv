@@ -1,0 +1,18 @@
+# Dort na stole roste po patrech. Počítadlo p1 je spodní patro, p2 prostřední, p3 vrchní: 1 buřt, 2 šlehačka, 3 rohlík, 4 okurka, 5 sýr.
+obrazek;podminka
+data/kocici/talir.svg;pece
+data/kocici/p1_burt.svg;p1=1
+data/kocici/p1_slehacka.svg;p1=2
+data/kocici/p1_rohlik.svg;p1=3
+data/kocici/p1_okurka.svg;p1=4
+data/kocici/p1_syr.svg;p1=5
+data/kocici/p2_burt.svg;p2=1
+data/kocici/p2_slehacka.svg;p2=2
+data/kocici/p2_rohlik.svg;p2=3
+data/kocici/p2_okurka.svg;p2=4
+data/kocici/p2_syr.svg;p2=5
+data/kocici/p3_burt.svg;p3=1
+data/kocici/p3_slehacka.svg;p3=2
+data/kocici/p3_rohlik.svg;p3=3
+data/kocici/p3_okurka.svg;p3=4
+data/kocici/p3_syr.svg;p3=5

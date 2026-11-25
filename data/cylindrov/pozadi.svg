@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Cylindrova: nahoře kouzelníkův vůz s pódiem, vlevo kostel, vpravo komín s kominíkem,
+       uprostřed náves s cylindrem, vlevo babiččina chalupa s květinami, vpravo studna, dole psí bouda a potok bez lávky. -->
+  <rect width="300" height="400" fill="#E9E1EE"/>
+  <path d="M0 100C80 92 220 98 300 90V400H0Z" fill="#BFCDA0"/>
+  <!-- vůz a pódium -->
+  <rect x="96" y="30" width="108" height="56" rx="6" fill="#6B3A6B"/>
+  <path d="M96 30Q150 6 204 30Z" fill="#8A4A8A"/>
+  <g fill="#F2D86A"><circle cx="112" cy="44" r="2"/><circle cx="140" cy="38" r="2"/><circle cx="172" cy="40" r="2"/><circle cx="190" cy="48" r="2"/></g>
+  <g fill="#3A2A2A"><circle cx="114" cy="90" r="9"/><circle cx="186" cy="90" r="9"/></g>
+  <!-- kostel -->
+  <rect x="10" y="72" width="70" height="60" fill="#E6E2D8"/>
+  <path d="M6 74L45 50L84 74Z" fill="#8A4A3A"/>
+  <rect x="38" y="24" width="14" height="50" fill="#E6E2D8"/>
+  <path d="M35 26L45 8L55 26Z" fill="#8A4A3A"/>
+  <!-- střecha s komínem -->
+  <path d="M218 132L258 92L298 132Z" fill="#9A4A3A"/>
+  <rect x="268" y="80" width="14" height="30" fill="#7A3A2E"/>
+  <!-- náves -->
+  <ellipse cx="150" cy="196" rx="86" ry="30" fill="#D8C9A2"/>
+  <!-- babiččina chalupa -->
+  <rect x="4" y="226" width="84" height="54" fill="#E7C9A0"/>
+  <path d="M0 230L46 204L92 230Z" fill="#9A4A3A"/>
+  <rect x="24" y="242" width="24" height="18" fill="#BFD9E4" stroke="#6B4A3A" stroke-width="2"/>
+  <g fill="#E04A5A"><circle cx="28" cy="240" r="3"/><circle cx="36" cy="238" r="3"/><circle cx="44" cy="240" r="3"/></g>
+  <!-- studna -->
+  <rect x="234" y="250" width="40" height="22" fill="#9A9488"/>
+  <path d="M230 236h48M238 236v14M270 236v14" stroke="#6B4A2E" stroke-width="3"/>
+  <!-- psí bouda -->
+  <rect x="40" y="340" width="48" height="36" fill="#A97A4E"/>
+  <path d="M34 342L64 322L94 342Z" fill="#7A3A2E"/>
+  <path d="M56 376v-16a8 8 0 0 1 16 0v16Z" fill="#3A2A1E"/>
+  <!-- potok bez lávky -->
+  <path d="M170 400C186 360 214 344 246 340S292 330 300 316V400Z" fill="#7FA9C9"/>
+  <path d="M184 380c10-6 20-6 30 0M222 360c10-6 20-6 30 0" stroke="#D8E8F2" stroke-width="1.5" fill="none"/>
+  <g fill="#8A6A48"><rect x="200" y="338" width="4" height="14" transform="rotate(-20 202 345)"/><rect x="262" y="320" width="4" height="14" transform="rotate(15 264 327)"/></g>
+</svg>

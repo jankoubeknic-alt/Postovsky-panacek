@@ -1,0 +1,98 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Prokopov: čert v pluhu táhne rovně, dokud nenarazí na kraj, kámen nebo zoranou brázdu (vlajky o00 až o23, poloha r a c).
+# Pole se musí zorat celé. Prokop klepnutím začne znovu.
+karta;cil;podminka;vyraz;text;efekt
+dopis_sedlak;kamen03;;🪨;Pod kamenem pošta nebydlí. Sedlák stojí nahoře u pole.;
+dopis_prokop;kamen03;;🪨;Kámen biskupovy listy nečte.;
+dopis_sedlak;kamen22;;🪨;Tenhle kámen leží v poli od potopy světa. Pošta mu nepomůže.;
+dopis_prokop;kamen22;;🪨;Kámen biskupovy listy nečte.;
+dopis_sedlak;nahoru;;⬆️;Šipky jsou pro čerta, ne pro poštu.;
+?;nahoru;r=0 c=0 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;dolu;r=0 c=0 zaprazeno !o10 !o20;😈;Čert se opře do chomoutu a táhne. Pluh projede 2 políčka a zastaví se na kraji pole.;o10 o20 r=2 c=0 ikona:p00:🟫 ikona:p10:🟫 ikona:p20:😈
+?;doleva;r=0 c=0 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doprava;r=0 c=0 zaprazeno !o01 !o02;😈;Čert se opře do chomoutu a táhne. Pluh projede 2 políčka a zastaví se u kamene.;o01 o02 r=0 c=2 ikona:p00:🟫 ikona:p01:🟫 ikona:p02:😈
+?;nahoru;r=0 c=1 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;dolu;r=0 c=1 zaprazeno o11;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;doleva;r=0 c=1 zaprazeno o00;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;doprava;r=0 c=1 zaprazeno !o02;😈;Čert se opře do chomoutu a táhne. Pluh projede jedno políčko a zastaví se u kamene.;o02 r=0 c=2 ikona:p01:🟫 ikona:p02:😈
+?;nahoru;r=0 c=2 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;dolu;r=0 c=2 zaprazeno !o12;😈;Čert se opře do chomoutu a táhne. Pluh projede jedno políčko a zastaví se u kamene.;o12 r=1 c=2 ikona:p02:🟫 ikona:p12:😈
+?;doleva;r=0 c=2 zaprazeno o01;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;doprava;r=0 c=2 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;nahoru;r=1 c=0 zaprazeno o00;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;dolu;r=1 c=0 zaprazeno !o20;😈;Čert se opře do chomoutu a táhne. Pluh projede jedno políčko a zastaví se na kraji pole.;o20 r=2 c=0 ikona:p10:🟫 ikona:p20:😈
+?;doleva;r=1 c=0 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doprava;r=1 c=0 zaprazeno o11;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;nahoru;r=1 c=2 zaprazeno o02;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;dolu;r=1 c=2 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doleva;r=1 c=2 zaprazeno o11;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;doleva;r=1 c=2 zaprazeno !o11 !o10;😈;Čert se opře do chomoutu a táhne. Pluh projede 2 políčka a zastaví se na kraji pole.;o11 o10 r=1 c=0 ikona:p12:🟫 ikona:p11:🟫 ikona:p10:😈
+?;doprava;r=1 c=2 zaprazeno !o13;😈;Čert se opře do chomoutu a táhne. Pluh projede jedno políčko a zastaví se na kraji pole.;o13 r=1 c=3 ikona:p12:🟫 ikona:p13:😈
+?;nahoru;r=1 c=3 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;dolu;r=1 c=3 zaprazeno !o23;😈;Čert se opře do chomoutu a táhne. Pluh projede jedno políčko a zastaví se na kraji pole.;o23 r=2 c=3 ikona:p13:🟫 ikona:p23:😈
+?;doleva;r=1 c=3 zaprazeno o12;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;doprava;r=1 c=3 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;nahoru;r=2 c=0 zaprazeno o10;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;dolu;r=2 c=0 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doleva;r=2 c=0 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doprava;r=2 c=0 zaprazeno !o21;😈;Čert se opře do chomoutu a táhne. Pluh projede jedno políčko a zastaví se u kamene.;o21 r=2 c=1 ikona:p20:🟫 ikona:p21:😈
+?;nahoru;r=2 c=1 zaprazeno o11;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;nahoru;r=2 c=1 zaprazeno !o11 !o01;😈;Čert se opře do chomoutu a táhne. Pluh projede 2 políčka a zastaví se na kraji pole.;o11 o01 r=0 c=1 ikona:p21:🟫 ikona:p11:🟫 ikona:p01:😈
+?;dolu;r=2 c=1 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doleva;r=2 c=1 zaprazeno o20;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;doprava;r=2 c=1 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;nahoru;r=2 c=3 zaprazeno o13;😈;Čert zafuní a nehne se. Hned vedle je zoraná brázda a přes tu nepůjde.;
+?;dolu;r=2 c=3 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doleva;r=2 c=3 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;doprava;r=2 c=3 zaprazeno;😈;Čert se opře do chomoutu a ani se nehne. Tam už je kraj pole nebo kámen.;
+?;prokop;zaprazeno;🧔;Prokop pokřižuje pole a čert, chtě nechtě, ho zase uhrabe. „Znovu a s rozmyslem. Čert táhne rovně, dokud nenarazí.“;!o01 !o02 !o10 !o11 !o12 !o13 !o20 !o21 !o23 o00 r=0 c=0 ikona:p01:🌾 ikona:p02:🌾 ikona:p10:🌾 ikona:p11:🌾 ikona:p12:🌾 ikona:p13:🌾 ikona:p20:🌾 ikona:p21:🌾 ikona:p23:🌾 ikona:p00:😈
+?;prokop;;🧔;Opat Prokop se opírá o berlu. „Čerta zapřáhnu rád. Ale nejdřív, co mi píše biskup?“;
+dopis_prokop;prokop;;🧔;Prokop čte biskupův list. „Mám prý pomoci lidem pod klášterem. Tak jo.“ Udělá berlou kříž a čert, chtě nechtě, vleze do chomoutu.;-dopis_prokop prokop_doruceno zaprazeno o00 r=0 c=0 razitko
+?;cert;zaprazeno;😈;Čert funí v chomoutu. „Tohle mi v pekle nikdo neuvěří. Orat! Já!“;
+?;cert;;😈;Čert se šklebí z remízku a hází po lidech hroudy. „Mě nikdo nezapřáhne!“;
+dopis_sedlak;sedlak;;👨‍🌾;Sedlák čte od syna. „Na žně se vrátí! Tak to ať je co žnout.“;-dopis_sedlak sedlak_doruceno razitko
+?;sedlak;;👨‍🌾;Sedlák drží pytel obilí. „Pole zorat, a celé. Jinak zasít nemůžu.“;
+?;p00;r=0 c=0 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p00;o00;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p00;;🌾;Nezorané strniště.;
+?;p01;r=0 c=1 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p01;o01;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p01;;🌾;Nezorané strniště.;
+?;p02;r=0 c=2 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p02;o02;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p02;;🌾;Nezorané strniště.;
+?;p10;r=1 c=0 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p10;o10;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p10;;🌾;Nezorané strniště.;
+?;p11;o11;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p11;;🌾;Nezorané strniště.;
+?;p12;r=1 c=2 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p12;o12;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p12;;🌾;Nezorané strniště.;
+?;p13;r=1 c=3 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p13;o13;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p13;;🌾;Nezorané strniště.;
+?;p20;r=2 c=0 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p20;o20;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p20;;🌾;Nezorané strniště.;
+?;p21;r=2 c=1 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p21;o21;🟫;Zoraná brázda. Přes tu čert nepůjde.;
+?;p21;;🌾;Nezorané strniště.;
+?;p23;r=2 c=3 zaprazeno;😈;Tady stojí čert s pluhem.;
+?;p23;;🌾;Nezorané strniště.;
+?;kamen03;;🪨;Velký kámen v poli. Ten neodvalí ani čert.;
+?;kamen22;;🪨;Velký kámen v poli. Ten neodvalí ani čert.;
+dopis_sedlak;cert;;😈;„Pošta pro čerta? Leda z pekla.“;
+dopis_prokop;cert;;😈;Čert ucukne před pečetí s křížem. „Fuj! Dej to opatovi!“;
+dopis_prokop;sedlak;;👨‍🌾;„Pro opata? Ten stojí tamhle s berlou.“;
+dopis_sedlak;prokop;;🧔;„To je pro sedláka Holuba. Ten čeká na zorané pole.“;
+napoveda;*;!zaprazeno;💡;Prokop zapřáhne čerta, až dostane list od biskupa.;
+napoveda;*;;💡;Čert táhne rovně, dokud nenarazí na kraj, kámen nebo zoranou brázdu. Pole musí být zorané celé. Začni podél kraje a do kouta pod kamenem nechoď jako první.;
+*;*;;🤷;Nic se nestane.;

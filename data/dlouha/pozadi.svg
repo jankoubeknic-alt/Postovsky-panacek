@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Dlouhé Široké: vpravo nahoře vysoká věž, vlevo les, uprostřed kopec,
+       vlevo studna, uprostřed nevěstin dům, vpravo mlýn se suchým náhonem, dole rybník s ostrůvkem a cesta s balvanem. -->
+  <rect width="300" height="400" fill="#DDE8EE"/>
+  <path d="M90 110L150 40L210 110Z" fill="#A9BE8A"/>
+  <path d="M0 110C80 100 220 104 300 96V400H0Z" fill="#BFD09A"/>
+  <!-- les -->
+  <g fill="#4E7A4A"><path d="M10 100L26 52L42 100Z"/><path d="M34 104L52 46L70 104Z"/><path d="M60 100L74 60L88 100Z"/></g>
+  <!-- věž -->
+  <rect x="236" y="20" width="34" height="150" fill="#E6E2D8" stroke="#8A8274" stroke-width="1.5"/>
+  <path d="M230 22L253 0L276 22Z" fill="#8A4A3A"/>
+  <rect x="246" y="34" width="14" height="16" fill="#3A3A3A"/>
+  <rect x="246" y="140" width="14" height="30" fill="#5A3A2A"/>
+  <!-- studna -->
+  <rect x="26" y="196" width="40" height="22" fill="#9A9488"/>
+  <path d="M22 182h48M30 182v14M62 182v14" stroke="#6B4A2E" stroke-width="3"/>
+  <!-- nevěstin dům -->
+  <rect x="88" y="168" width="70" height="52" fill="#EAD7B0"/>
+  <path d="M82 170L123 146L164 170Z" fill="#B5573F"/>
+  <rect x="112" y="190" width="18" height="30" fill="#6B4A3A"/>
+  <!-- mlýn a náhon -->
+  <rect x="216" y="160" width="76" height="56" fill="#C9A77A"/>
+  <path d="M210 162L254 134L298 162Z" fill="#7A5A3A"/>
+  <circle cx="214" cy="200" r="18" fill="none" stroke="#6B4A2E" stroke-width="3"/>
+  <path d="M214 182v36M196 200h36" stroke="#6B4A2E" stroke-width="2"/>
+  <path d="M190 236C200 228 214 226 230 232" stroke="#A08A6A" stroke-width="6" fill="none"/>
+  <!-- cesta -->
+  <path d="M0 330C40 320 80 330 110 360L120 400H60C50 370 30 350 0 350Z" fill="#D8C9A2"/>
+  <!-- dno rybníka -->
+  <ellipse cx="180" cy="300" rx="100" ry="46" fill="#B9A27A"/>
+  <ellipse cx="180" cy="300" rx="24" ry="12" fill="#8AA25A"/>
+</svg>

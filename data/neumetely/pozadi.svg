@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Neumětel: vlevo Horymírův dvůr, uprostřed stáj, vpravo hradní brána. Uprostřed hradba, dole pole a důl havířů. -->
+  <rect width="300" height="400" fill="#DDE6EC"/>
+  <path d="M0 120H300V400H0Z" fill="#B8CC98"/>
+  <rect x="6" y="46" width="88" height="56" fill="#E3CDA6"/><path d="M0 48L50 22L100 48Z" fill="#8A4A3A"/>
+  <rect x="112" y="78" width="76" height="46" fill="#B9895A"/><path d="M106 80L150 56L194 80Z" fill="#7A5A3A"/>
+  <rect x="210" y="20" width="84" height="90" fill="#9A948A"/><path d="M232 110v-40a20 20 0 0 1 40 0v40Z" fill="#3A2A1E"/>
+  <g fill="#9A948A"><rect x="210" y="10" width="14" height="12"/><rect x="236" y="10" width="14" height="12"/><rect x="262" y="10" width="14" height="12"/><rect x="280" y="10" width="14" height="12"/></g>
+  <rect x="0" y="200" width="300" height="40" fill="#9A948A"/><g fill="#8A847A"><rect x="0" y="190" width="20" height="12"/><rect x="40" y="190" width="20" height="12"/><rect x="80" y="190" width="20" height="12"/><rect x="200" y="190" width="20" height="12"/><rect x="240" y="190" width="20" height="12"/><rect x="280" y="190" width="20" height="12"/></g>
+  <g stroke="#8AA05A" stroke-width="2"><path d="M10 300h120M10 320h120M10 340h120"/></g>
+  <path d="M200 360L230 300L260 360Z" fill="#6B655A"/><rect x="224" y="334" width="12" height="26" fill="#2E2A24"/>
+</svg>

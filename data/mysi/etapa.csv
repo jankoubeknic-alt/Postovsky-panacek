@@ -1,0 +1,16 @@
+klic;hodnota
+datum;6. IX.
+start;balik dopis dopis_kocour
+cil;balik_doruceno dopis_doruceno kocour_odesel pout
+uvod;Myší Lhota je nejmenší ves v okrese. Domy jsou velké jako krabice od bot, radnice jako dóza na cukr a starostou je myš. Zítra má být Sýrová pouť, ale obří sýr spadl do studny a za vsí číhá kocour.|Pro myši jsi obr. Dokud nebudeš chodit tiše, každým podáním něco rozšlápneš. A tvoje dopisy jsou větší než jejich domy.
+navod;Dokud nechodíš tiše, každé podání něco rozšlápne.
+konec_nadpis;Sýrová pouť
+konec_text;Na návsi se točí sýrový kolotoč a myši tančí kolem sýra velkého jako jejich radnice. Kocour Mikeš leží doma u smetany a starosta Pištík ti připíná metál velký jako špendlíková hlavička.|Brašna je prázdná. Odcházíš po špičkách, ať ti to vydrží.
+pozadi;data/mysi/pozadi.svg
+barvy;
+pocitadla;skody=0
+kazdy_tah;skody+1
+kazdy_tah_kdyz;!navleky
+ukazatele;skody:Škody:6
+prohra;skody>=6
+prohra_text;Rozšlápl jsi plot, dva domy a půl náměstí. Myši se schovaly do děr a pouť se nekoná.|Zkus to znovu. Nejdřív se nauč chodit potichu.

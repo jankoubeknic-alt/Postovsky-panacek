@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Čertoviny pod Kotlem: sopečné kopce, vpravo nahoře plot a zelená louka sousední farnosti,
+       vlevo Luciferova chalupa, uprostřed obecní kotel, vpravo Bertiččina chalupa s levandulí, dole Bonifácův úl. -->
+  <rect width="300" height="400" fill="#E8C9A8"/>
+  <path d="M0 110L40 70L80 100L120 60L170 96L200 76V200H0Z" fill="#9C5A44"/>
+  <path d="M120 60l6-10 6 10z" fill="#E07A3A"/>
+  <path d="M200 0H300V120H200Z" fill="#CFE6F0"/>
+  <path d="M200 90C230 80 270 84 300 78V130H200Z" fill="#9CCB7E"/>
+  <circle cx="276" cy="24" r="12" fill="#FFF3C4" opacity=".9"/>
+  <g stroke="#FFFFFF" stroke-width="3"><path d="M200 140V40M214 140V60M228 140V60M242 140V60M256 140V60M270 140V60M284 140V60M298 140V60M200 70H300M200 110H300"/></g>
+  <rect x="216" y="96" width="70" height="14" fill="#FFFFFF" stroke="#C9BFA6"/>
+  <text x="251" y="106" font-family="Georgia, serif" font-size="6" fill="#4A6A8A" text-anchor="middle">NEBESKÁ LHOTA</text>
+  <path d="M0 150C70 130 140 140 200 136S260 144 300 150V400H0Z" fill="#B97A5A"/>
+  <path d="M0 220C80 206 220 210 300 220V400H0Z" fill="#A86A4E"/>
+  <!-- Luciferova chalupa -->
+  <rect x="8" y="104" width="80" height="54" fill="#5E3A30"/>
+  <path d="M0 108L48 78L96 108Z" fill="#2E1E1A"/>
+  <path d="M30 80q-6-14 2-22M66 80q6-14-2-22" fill="none" stroke="#2E1E1A" stroke-width="4" stroke-linecap="round"/>
+  <rect x="58" y="118" width="14" height="14" fill="#F2A23A"/>
+  <rect x="88" y="140" width="22" height="14" fill="#6B4A36"/>
+  <g fill="#FFFDF4"><rect x="92" y="136" width="6" height="8"/><rect x="100" y="137" width="6" height="8"/></g>
+  <!-- obecní kotel -->
+  <path d="M112 236L122 186H178L188 236Z" fill="#3B332E"/>
+  <ellipse cx="150" cy="186" rx="30" ry="7" fill="#5E5650"/>
+  <path d="M116 244L150 210L184 244" fill="none" stroke="#2E2B29" stroke-width="4"/>
+  <g fill="#E0503C"><path d="M126 248q6-16 12 0z"/><path d="M144 250q6-20 12 0z"/><path d="M162 248q6-16 12 0z"/></g>
+  <!-- Bertiččina chalupa s levandulí -->
+  <rect x="212" y="168" width="80" height="52" fill="#7A4A3E"/>
+  <path d="M204 172L252 142L300 172Z" fill="#3B2622"/>
+  <rect x="226" y="182" width="16" height="14" fill="#F2A23A"/>
+  <rect x="224" y="196" width="20" height="5" fill="#6B4A36"/>
+  <g fill="#9A7AC8"><circle cx="228" cy="193" r="2"/><circle cx="233" cy="191" r="2"/><circle cx="238" cy="193" r="2"/><circle cx="214" cy="226" r="2.5"/><circle cx="222" cy="228" r="2.5"/><circle cx="282" cy="226" r="2.5"/><circle cx="290" cy="228" r="2.5"/></g>
+  <!-- kovárna a Bonifácův úl -->
+  <rect x="4" y="252" width="66" height="50" fill="#6B4A3E"/>
+  <path d="M0 256L37 232L74 256Z" fill="#2E1E1A"/>
+  <rect x="80" y="292" width="24" height="22" fill="#D8A84A" stroke="#7A5A3A" stroke-width="1.5"/>
+  <path d="M78 294L92 282L106 294Z" fill="#9C7A3A"/>
+  <path d="M80 300h24M80 306h24" stroke="#9C7A3A" stroke-width="1"/>
+  <!-- kameny a sirné páry -->
+  <g fill="#8C5A44"><ellipse cx="200" cy="300" rx="14" ry="6"/><ellipse cx="260" cy="340" rx="18" ry="7"/><ellipse cx="40" cy="360" rx="16" ry="6"/></g>
+  <g fill="#F2E6A8" opacity=".5"><circle cx="186" cy="356" r="6"/><circle cx="194" cy="346" r="5"/><circle cx="120" cy="380" r="5"/></g>
+</svg>

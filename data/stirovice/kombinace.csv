@@ -1,0 +1,118 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Štírovice: pexeso z kamenů. Odvalený kámen drží počítadlo a (1 až 8). Druhý kámen se stejným zvířátkem uvolní pár (hotovo_*) a věc pod ním, jinak se oba položí zpátky.
+karta;cil;podminka;vyraz;text;efekt
+?;k1;a=1;🦂;Tenhle kámen už máš odvalený. Pod ním je štír.;
+?;k1;a=0;🦂;Odvalíš kámen. Pod ním se vyhřívá štír. Necháš ho odvalený a hledáš parťáka.;a=1 ikona:k1:🦂
+?;k1;a=2;🦂;Pod kamenem je štír. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k2:🪨
+?;k1;a=3;🦂;Pod kamenem je štír. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k3:🪨
+?;k1;a=4;🦂;Pod kamenem je štír. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k4:🪨
+?;k1;a=5;🦂;Pod kamenem je štír. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k5:🪨
+?;k1;a=6;🦂;Pod kamenem je taky štír! Obě se pozdraví a odplazí se do trávy. Pod nimi leží klíč od kostela.;a=0 hotovo_stir +klic razitko
+?;k1;a=7;🦂;Pod kamenem je štír. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k7:🪨
+?;k1;a=8;🦂;Pod kamenem je štír. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k8:🪨
+?;k2;a=2;🐍;Tenhle kámen už máš odvalený. Pod ním je užovka.;
+?;k2;a=0;🐍;Odvalíš kámen. Pod ním se vyhřívá užovka. Necháš ho odvalený a hledáš parťáka.;a=2 ikona:k2:🐍
+?;k2;a=1;🐍;Pod kamenem je užovka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k1:🪨
+?;k2;a=3;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k3:🪨
+?;k2;a=4;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k4:🪨
+?;k2;a=5;🐍;Pod kamenem je taky užovka! Obě se pozdraví a odplazí se do trávy. Pod nimi leží babiččin prstýnek.;a=0 hotovo_uzovka +prsten razitko
+?;k2;a=6;🐍;Pod kamenem je užovka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k6:🪨
+?;k2;a=7;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k7:🪨
+?;k2;a=8;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k8:🪨
+?;k3;a=3;🐸;Tenhle kámen už máš odvalený. Pod ním je ropucha.;
+?;k3;a=0;🐸;Odvalíš kámen. Pod ním se vyhřívá ropucha. Necháš ho odvalený a hledáš parťáka.;a=3 ikona:k3:🐸
+?;k3;a=1;🐸;Pod kamenem je ropucha. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k1:🪨
+?;k3;a=2;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k2:🪨
+?;k3;a=4;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k4:🪨
+?;k3;a=5;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k5:🪨
+?;k3;a=6;🐸;Pod kamenem je ropucha. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k6:🪨
+?;k3;a=7;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k7:🪨
+?;k3;a=8;🐸;Pod kamenem je taky ropucha! Obě se pozdraví a odplazí se do trávy. Pod nimi leží hajného dýmka.;a=0 hotovo_ropucha +dymka razitko
+?;k4;a=4;🦎;Tenhle kámen už máš odvalený. Pod ním je ještěrka.;
+?;k4;a=0;🦎;Odvalíš kámen. Pod ním se vyhřívá ještěrka. Necháš ho odvalený a hledáš parťáka.;a=4 ikona:k4:🦎
+?;k4;a=1;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k1:🪨
+?;k4;a=2;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k2:🪨
+?;k4;a=3;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k3:🪨
+?;k4;a=5;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k5:🪨
+?;k4;a=6;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k6:🪨
+?;k4;a=7;🦎;Pod kamenem je taky ještěrka! Obě se pozdraví a odplazí se do trávy. Pod nimi leží provázek od draka.;a=0 hotovo_jesterka +provazek razitko
+?;k4;a=8;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k8:🪨
+?;k5;a=5;🐍;Tenhle kámen už máš odvalený. Pod ním je užovka.;
+?;k5;a=0;🐍;Odvalíš kámen. Pod ním se vyhřívá užovka. Necháš ho odvalený a hledáš parťáka.;a=5 ikona:k5:🐍
+?;k5;a=1;🐍;Pod kamenem je užovka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k1:🪨
+?;k5;a=2;🐍;Pod kamenem je taky užovka! Obě se pozdraví a odplazí se do trávy. Pod nimi leží babiččin prstýnek.;a=0 hotovo_uzovka +prsten razitko
+?;k5;a=3;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k3:🪨
+?;k5;a=4;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k4:🪨
+?;k5;a=6;🐍;Pod kamenem je užovka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k6:🪨
+?;k5;a=7;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k7:🪨
+?;k5;a=8;🐍;Pod kamenem je užovka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k8:🪨
+?;k6;a=6;🦂;Tenhle kámen už máš odvalený. Pod ním je štír.;
+?;k6;a=0;🦂;Odvalíš kámen. Pod ním se vyhřívá štír. Necháš ho odvalený a hledáš parťáka.;a=6 ikona:k6:🦂
+?;k6;a=1;🦂;Pod kamenem je taky štír! Obě se pozdraví a odplazí se do trávy. Pod nimi leží klíč od kostela.;a=0 hotovo_stir +klic razitko
+?;k6;a=2;🦂;Pod kamenem je štír. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k2:🪨
+?;k6;a=3;🦂;Pod kamenem je štír. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k3:🪨
+?;k6;a=4;🦂;Pod kamenem je štír. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k4:🪨
+?;k6;a=5;🦂;Pod kamenem je štír. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k5:🪨
+?;k6;a=7;🦂;Pod kamenem je štír. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k7:🪨
+?;k6;a=8;🦂;Pod kamenem je štír. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k8:🪨
+?;k7;a=7;🦎;Tenhle kámen už máš odvalený. Pod ním je ještěrka.;
+?;k7;a=0;🦎;Odvalíš kámen. Pod ním se vyhřívá ještěrka. Necháš ho odvalený a hledáš parťáka.;a=7 ikona:k7:🦎
+?;k7;a=1;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k1:🪨
+?;k7;a=2;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k2:🪨
+?;k7;a=3;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k3:🪨
+?;k7;a=4;🦎;Pod kamenem je taky ještěrka! Obě se pozdraví a odplazí se do trávy. Pod nimi leží provázek od draka.;a=0 hotovo_jesterka +provazek razitko
+?;k7;a=5;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k5:🪨
+?;k7;a=6;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k6:🪨
+?;k7;a=8;🦎;Pod kamenem je ještěrka. Pod tím prvním ale byla ropucha a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k8:🪨
+?;k8;a=8;🐸;Tenhle kámen už máš odvalený. Pod ním je ropucha.;
+?;k8;a=0;🐸;Odvalíš kámen. Pod ním se vyhřívá ropucha. Necháš ho odvalený a hledáš parťáka.;a=8 ikona:k8:🐸
+?;k8;a=1;🐸;Pod kamenem je ropucha. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k1:🪨
+?;k8;a=2;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k2:🪨
+?;k8;a=3;🐸;Pod kamenem je taky ropucha! Obě se pozdraví a odplazí se do trávy. Pod nimi leží hajného dýmka.;a=0 hotovo_ropucha +dymka razitko
+?;k8;a=4;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k4:🪨
+?;k8;a=5;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla užovka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k5:🪨
+?;k8;a=6;🐸;Pod kamenem je ropucha. Pod tím prvním ale byl štír a ti spolu nekamarádí. Oba zalezou a ty kameny položíš zpátky.;a=0 ikona:k6:🪨
+?;k8;a=7;🐸;Pod kamenem je ropucha. Pod tím prvním ale byla ještěrka a ti spolu nekamarádí. Obě zvířátka zalezou a ty kameny položíš zpátky.;a=0 ikona:k7:🪨
+prsten;babicka;;💍;Babička si navlékne prstýnek a slzy jí tečou. „Ztratila jsem ho loni na podzim u cesty. A ono ho hlídaly užovky!“;-prsten prsten_doruceno razitko
+prsten;kostelnik;;🤔;„To není klíč. Já hledám klíč od kostela.“;
+prsten;jirik;;🤔;„To není provázek! Bez provázku drak neletí.“;
+prsten;hajny;;🤔;„To není dýmka. Já hledám dýmku.“;
+klic;kostelnik;;🗝️;Kostelník políbí klíč. „Celou zimu jsme lezli do kostela oknem!“;-klic klic_doruceno razitko
+klic;babicka;;🤔;„To není moje. Já hledám prstýnek.“;
+klic;jirik;;🤔;„To není provázek! Bez provázku drak neletí.“;
+klic;hajny;;🤔;„To není dýmka. Já hledám dýmku.“;
+provazek;jirik;;🧵;Jiřík přiváže provázek k drakovi a za chvíli je drak nad lípou. „Já jsem Jiří a tohle je můj drak! Zkrocený!“;-provazek provazek_doruceno razitko
+provazek;babicka;;🤔;„To není moje. Já hledám prstýnek.“;
+provazek;kostelnik;;🤔;„To není klíč. Já hledám klíč od kostela.“;
+provazek;hajny;;🤔;„To není dýmka. Já hledám dýmku.“;
+dymka;hajny;;🪈;Hajný si hned nacpe dýmku. „Pod kamenem u ropuch? No jo, tam jsem si sedal.“;-dymka dymka_doruceno razitko
+dymka;babicka;;🤔;„To není moje. Já hledám prstýnek.“;
+dymka;kostelnik;;🤔;„To není klíč. Já hledám klíč od kostela.“;
+dymka;jirik;;🤔;„To není provázek! Bez provázku drak neletí.“;
+dopis_babicka;babicka;;👵;Babička čte od vnučky. „Vdávat! A já nemám prstýnek, abych jí ho dala.“;-dopis_babicka babicka_doruceno razitko
+?;babicka;prsten_doruceno;👵;Babička se dívá na prstýnek. „Ten dám vnučce na svatbu.“;
+?;babicka;;👵;„Loni na podzim jsem u cesty ztratila prstýnek. Někde pod kamenem bude.“;
+?;kostelnik;;⛪;„Klíč od kostela mi vypadl, když jsem šel k Jiříkovým. Celou zimu lezeme oknem.“;
+?;jirik;provazek_doruceno;🪁;Jiřík pouští draka. „Já jsem rytíř Jiří a drak je můj!“;
+?;jirik;;👦;„Já jsem Jiří a tohle je můj drak. Jenže mu někdo vzal provázek. Asi ho odfoukl vítr pod kameny.“;
+?;hajny;;🧔;„Na Jiřího vylézají hadi a štíři. Ale jen když najdou parťáka. Samotní se bojí.“;
+dopis_babicka;jirik;;👦;„To je pro babičku. Ta hledá prstýnek.“;
+dopis_babicka;hajny;;🧔;„To je pro babičku Jirouškovou. Bydlí u cesty.“;
+napoveda;*;!hotovo_uzovka nebo !hotovo_stir nebo !hotovo_jesterka nebo !hotovo_ropucha;💡;Odvaluj kameny po dvou a pamatuj si, co pod kterým bylo. Stejná zvířátka vylezou spolu.;
+napoveda;*;;💡;Každá věc patří někomu ve vsi. Zeptej se, kdo co ztratil.;
+*;k1;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k2;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k3;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k4;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k5;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k6;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k7;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;k8;;🪨;Pod kámen se nic neschovává. Spíš se pod ním hledá.;
+*;*;;🤷;Nic se nestane.;

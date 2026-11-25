@@ -1,0 +1,16 @@
+klic;hodnota
+datum;5. XII.
+start;dopis_franta dopis_anicka dopis_pepik
+cil;franta_ok anicka_ok pepik_ok mama_franta_doruceno mama_anicka_doruceno mama_pepik_doruceno
+uvod;Pátého prosince večer chodí po Mikulášově Mikuláš, čert a anděl. Dárky od rodičů nese anděl v nůši a vytahuje je shora. Co se do nůše dá poslední, vyjde první.|Maminky čekají na poštu a dárky ještě nemají předané. Až družina vyrazí, zastaví se u každého domu jen jednou a pak se vrátí na faru.
+navod;Anděl vytahuje dárky z nůše odshora. Zjisti, kudy družina chodí, a nůši naplň obráceně.
+konec_nadpis;Mikuláš byl
+konec_text;Franta dostal koníka, Anička panenku a Pepík sáňky. Čert zahrozil jen naoko a anděl všem rozdal jablíčka. Strejda Vašek si v hospodě sundal rohy a nikdo se nedivil.|Brašna je prázdná. Anděl ti dal perníkovou hvězdu, protože pošťák byl letos hodný.
+pozadi;data/mikulasov/pozadi.svg
+barvy;
+pocitadla;dum=0 top=0 s1=0 s2=0 s3=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;top:Nůše:3
+prohra;
+prohra_text;

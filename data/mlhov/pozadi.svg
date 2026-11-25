@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Mlhova bez mlhy: prázdná louka za lesem, kamenný kříž, ovce a cesta, která nikam nevede. -->
+  <rect width="300" height="400" fill="#C9D3D0"/>
+  <path d="M0 120C40 100 90 110 140 96S240 92 300 104V170H0Z" fill="#5E7A62"/>
+  <g fill="#4E6A52"><path d="M10 120l12-34 12 34z"/><path d="M40 112l10-28 10 28z"/><path d="M250 110l12-34 12 34z"/><path d="M276 116l10-28 10 28z"/><path d="M200 106l10-26 10 26z"/></g>
+  <path d="M0 150C80 140 200 144 300 150V400H0Z" fill="#A8BC96"/>
+  <path d="M150 400C150 330 160 260 168 170H178C176 260 182 330 196 400Z" fill="#C9BFA2" opacity=".7"/>
+  <!-- kamenný kříž -->
+  <rect x="108" y="196" width="8" height="40" fill="#8C8A84"/>
+  <rect x="98" y="206" width="28" height="7" fill="#8C8A84"/>
+  <text x="112" y="248" font-family="Georgia, serif" font-size="6" fill="#5E5A54" text-anchor="middle">1910</text>
+  <!-- ovce -->
+  <g fill="#F4F2EC" stroke="#8C8A84" stroke-width=".8"><ellipse cx="236" cy="300" rx="12" ry="7"/><ellipse cx="266" cy="320" rx="11" ry="6"/><ellipse cx="90" cy="330" rx="11" ry="6"/></g>
+  <g fill="#4A4542"><circle cx="247" cy="298" r="3"/><circle cx="276" cy="318" r="3"/><circle cx="100" cy="328" r="3"/></g>
+  <!-- základy zmizelých domů v trávě -->
+  <g fill="none" stroke="#8FA07E" stroke-width="2" stroke-dasharray="4 3"><rect x="34" y="150" width="60" height="30"/><rect x="200" y="160" width="64" height="30"/><rect x="124" y="104" width="52" height="26"/></g>
+  <g fill="#E8E2A8"><circle cx="40" cy="380" r="2.5"/><circle cx="220" cy="370" r="2.5"/><circle cx="260" cy="388" r="2.5"/><circle cx="70" cy="362" r="2.5"/></g>
+</svg>

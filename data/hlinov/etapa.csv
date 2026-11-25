@@ -1,0 +1,16 @@
+klic;hodnota
+datum;8. IV.
+start;dopis_rabi pohled_lazebnik noviny_pekar
+cil;rabi_doruceno lazebnik_doruceno pekar_doruceno lazen_hotova pec_hotova sem_vracen
+uvod;V Hlínově žije rabi Löw a s ním Golem, obr z hlíny. Když mu rabi vloží do úst šém, lísteček se svatým jménem, Golem ožije a pracuje. Dělá přesně, co se mu řekne. A nepřestane, dokud mu někdo neřekne dost.|Lazebník potřebuje napustit kád a pekař zatopit v peci. Golem nosí pořád, i když už je plno. Co přeteče, to se vylije a nosí se znovu.
+navod;Golem nosí po každém podání. Řekni mu dost přesně ve chvíli, kdy je plno.
+konec_nadpis;Šém je zpátky
+konec_text;Kád je plná přesně po okraj a pec hřeje tak akorát. Rabi vyndal Golemovi šém z úst a Golem se posadil ke zdi, jako by byl jen hromada hlíny. Do příštího týdne. Lazebník ho vyčistil kartáčem a pekař mu dal upečenou hliněnou bábovku z formičky.|Brašna je prázdná. Rabi ti požehnal na cestu. A dal ti radu: kdo nosí, má vědět, kdy přestat.
+pozadi;data/hlinov/pozadi.svg
+barvy;
+pocitadla;voda=0 drevo=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;voda:Kád:4 drevo:Pec:3
+prohra;
+prohra_text;

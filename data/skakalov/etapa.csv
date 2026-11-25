@@ -1,0 +1,16 @@
+klic;hodnota
+datum;14. VIII.
+start;dopis_sedlak dopis_pasacek dopis_hajny obojek
+cil;sedlak_doruceno pasacek_doruceno hajny_doruceno obojek_doruceno pero_doruceno
+uvod;Skákal pes přes oves, přes zelenou louku, šel za ním myslivec, péro na klobouku. Jenže myslivcovi péro na klobouku chybí. Pes Alík mu ho vytrhl a utíká s ním dokola. Přes oves, přes louku, přes les a zase přes oves.|Myslivec za ním běží, ale pořád o krok pozadu. Pes nezastaví, dokud mu něco nebude vonět víc než péro.
+navod;Pes běží dokola po každém podání: oves, louka, les. Nastraž mu něco tam, kam doběhne.
+konec_nadpis;Péro na klobouku
+konec_text;Alík sedí s novým obojkem a jmenovkou a myslivec má péro zpátky na klobouku. Celá ves zpívá písničku tak, jak má být. Alík ale dál skáče přes oves. Prý z radosti.|Brašna je prázdná. Myslivec ti za klobouk zastrčil jedno pírko navíc. Abys taky byl z písničky.
+pozadi;data/skakalov/pozadi.svg
+barvy;
+pocitadla;pes=1 m=3
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

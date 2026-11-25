@@ -1,0 +1,57 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Mikulášov: anděl vytahuje balíky z nůše shora (zásobník s1 až s3, top je počet). Družina jde od nejmenšího dítěte k největšímu.
+# Špatný balík se vrátí do nůše a dítě dostane uhlí. Anděl umí nůši vysypat a dá se plnit znovu.
+karta;cil;podminka;vyraz;text;efekt
+?;farar;;⛪;Pan farář si nasazuje Mikulášovi mitru. „Chodíme od nejmenších dětí k největším. Malé usínají brzo a velké vydrží.“;
+?;mikulas;top=0;🎅;Mikuláš se opírá o berlu. „Bez dárků nevyrazím. Anděl má nůši prázdnou.“;
+?;mikulas;;🎅;Mikuláš zvedne berlu. „Vyrážíme!“ Čert zařinčí řetězem a anděl si hodí nůši na záda. Jdeš s nimi.;jde cekej
+?;andel;top=0;👼;Anděl ukáže prázdnou nůši. „Dárky dávám dovnitř, jak přijdou. A vytahuju je shora, jinak to nejde.“;
+?;andel;;👼;Anděl vysype nůši. „Jestli to chceš poskládat jinak, tak znova.“;vyndat cekej
+balik_franta;andel;top=0;👼;Anděl položí dřevěný koník do nůše na dno. Co je navrchu, vytáhne první.;-balik_franta s1=1 top=1
+balik_franta;andel;top=1;👼;Anděl položí dřevěný koník do nůše navrch. Co je navrchu, vytáhne první.;-balik_franta s2=1 top=2
+balik_franta;andel;top=2;👼;Anděl položí dřevěný koník do nůše navrch. Co je navrchu, vytáhne první.;-balik_franta s3=1 top=3
+balik_franta;mikulas;;🎅;„Dárky nosí anděl v nůši. Já nesu jen berlu a knihu hříchů.“;
+balik_franta;franta;;👶;Maminka ti balík rychle sebere. „Ne! To musí přinést Mikuláš!“ A vrátí ti ho za zády.;
+dopis_franta;mama_franta;;👩;Maminka si přečte lístek. „Dárek je hotový. Tady je, předej ho prosím andělovi.“ Podá ti balík v hnědém papíře.;-dopis_franta mama_franta_doruceno +balik_franta razitko
+?;mama_franta;mama_franta_doruceno;👩;Maminka vyhlíží z okna, jestli už jde Mikuláš.;
+?;mama_franta;;👩;Maminka čeká na lístek z obchodu.;
+?;franta;franta_ok;🐴;Frantík se nemůže nabažit dárku.;
+?;franta;;👶;Frantovi jsou tři roky. Schovává se za mámu a šeptá: „Já už umím básničku. Ale jen kousek.“;
+?;druzina1;;😈;Čert ti zařinčí řetězem nad hlavou. Jdeš s družinou dál.;cekej
+balik_anicka;andel;top=0;👼;Anděl položí panenka do nůše na dno. Co je navrchu, vytáhne první.;-balik_anicka s1=2 top=1
+balik_anicka;andel;top=1;👼;Anděl položí panenka do nůše navrch. Co je navrchu, vytáhne první.;-balik_anicka s2=2 top=2
+balik_anicka;andel;top=2;👼;Anděl položí panenka do nůše navrch. Co je navrchu, vytáhne první.;-balik_anicka s3=2 top=3
+balik_anicka;mikulas;;🎅;„Dárky nosí anděl v nůši. Já nesu jen berlu a knihu hříchů.“;
+balik_anicka;anicka;;👧;Maminka ti balík rychle sebere. „Ne! To musí přinést Mikuláš!“ A vrátí ti ho za zády.;
+dopis_anicka;mama_anicka;;👩;Maminka si přečte lístek. „Dárek je hotový. Tady je, předej ho prosím andělovi.“ Podá ti balík v hnědém papíře.;-dopis_anicka mama_anicka_doruceno +balik_anicka razitko
+?;mama_anicka;mama_anicka_doruceno;👩;Maminka vyhlíží z okna, jestli už jde Mikuláš.;
+?;mama_anicka;;👩;Maminka čeká na lístek z obchodu.;
+?;anicka;anicka_ok;🪆;Anička se nemůže nabažit dárku.;
+?;anicka;;👧;Aničce je pět. „Já se čerta nebojím. Jenom trošičku. A půjdu spát až po Mikulášovi!“;
+?;druzina2;;😈;Čert ti zařinčí řetězem nad hlavou. Jdeš s družinou dál.;cekej
+balik_pepik;andel;top=0;👼;Anděl položí sáňky do nůše na dno. Co je navrchu, vytáhne první.;-balik_pepik s1=3 top=1
+balik_pepik;andel;top=1;👼;Anděl položí sáňky do nůše navrch. Co je navrchu, vytáhne první.;-balik_pepik s2=3 top=2
+balik_pepik;andel;top=2;👼;Anděl položí sáňky do nůše navrch. Co je navrchu, vytáhne první.;-balik_pepik s3=3 top=3
+balik_pepik;mikulas;;🎅;„Dárky nosí anděl v nůši. Já nesu jen berlu a knihu hříchů.“;
+balik_pepik;pepik;;👦;Maminka ti balík rychle sebere. „Ne! To musí přinést Mikuláš!“ A vrátí ti ho za zády.;
+dopis_pepik;mama_pepik;;👩;Maminka si přečte lístek. „Dárek je hotový. Tady je, předej ho prosím andělovi.“ Podá ti balík v hnědém papíře.;-dopis_pepik mama_pepik_doruceno +balik_pepik razitko
+?;mama_pepik;mama_pepik_doruceno;👩;Maminka vyhlíží z okna, jestli už jde Mikuláš.;
+?;mama_pepik;;👩;Maminka čeká na lístek z obchodu.;
+?;pepik;pepik_ok;🛷;Pepík se nemůže nabažit dárku.;
+?;pepik;;👦;Pepíkovi je sedm a tváří se drsně. „Čert je strejda Vašek. Ale kdyby náhodou nebyl, byl jsem hodnej.“;
+dopis_franta;mama_anicka;;👩;„To je pro jinou mámu. Já čekám lístek pro svoje dítě.“;
+dopis_franta;mama_pepik;;👩;„To je pro jinou mámu. Já čekám lístek pro svoje dítě.“;
+dopis_anicka;mama_franta;;👩;„To je pro jinou mámu. Já čekám lístek pro svoje dítě.“;
+dopis_anicka;mama_pepik;;👩;„To je pro jinou mámu. Já čekám lístek pro svoje dítě.“;
+dopis_pepik;mama_franta;;👩;„To je pro jinou mámu. Já čekám lístek pro svoje dítě.“;
+dopis_pepik;mama_anicka;;👩;„To je pro jinou mámu. Já čekám lístek pro svoje dítě.“;
+napoveda;*;!mama_franta_doruceno nebo !mama_anicka_doruceno nebo !mama_pepik_doruceno;💡;Maminky ti dají dárky, až dostanou poštu.;
+napoveda;*;;💡;Družina chodí od nejmenšího dítěte k největšímu. Do nůše tedy dej nejdřív dárek pro nejstaršího a navrch pro nejmenšího.;
+*;*;;🤷;Nic se nestane.;

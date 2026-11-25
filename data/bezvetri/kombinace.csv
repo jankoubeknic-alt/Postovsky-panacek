@@ -1,0 +1,52 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Bezvětří: vlajka vichr spustí v kazdy_tah.csv rozfoukání papírů. Uletěné papíry se sbírají klepnutím na místo, kam doletěly.
+karta;cil;podminka;vyraz;text;efekt
+?;kohout;uletel_dopis;🐓;Na korouhvičce se třepetá tvůj dopis. Vylezeš po hromosvodu a sundáš ho.;+dopis !uletel_dopis
+?;kohout;vitr_vypusten;🐓;Korouhvička se točí jako o závod.;
+?;kohout;;🐓;Kostelní korouhvička se půl roku nepohnula. Kohout na ní zobákem ukazuje k mlýnu, jako by věděl, odkud by mělo foukat.;
+?;mlynar;mlyn_opraven;👨‍🌾;Mlynář Lopatka stojí u mlýna s novými lopatkami a olizuje prst, jestli už nefouká.;
+?;mlynar;;👨‍🌾;Mlynář Lopatka sedí pod mlýnem s lopatkami děravými jako řešeto. „I kdyby foukalo, tyhle by vítr nechytily. Chtělo by to nové plátno.“;
+?;starosta;;🎩;Starosta si přidržuje klobouk, i když nefouká. Ze zvyku. „Vítr jsem objednal já! Ale kam s ním, to už nevím. Hlavně ne u mě v kanceláři.“;
+?;pradlena;vichr_byl;👩‍🦰;Pradlena Máňa sbírá prádlo po celé vsi. „Tolik větru najednou! Takhle jsem to nemyslela.“;
+?;pradlena;;👩‍🦰;Pradlena Máňa věší prádlo už potřetí. „Neschne. Ani tričko. Kdyby tak aspoň trochu foukalo.“;
+?;deti;uletel_drak;🧒;Děti drží tvého papírového draka. „Přiletěl sám! Ale je tvůj, má na sobě adresu.“ Podají ti ho.;+drak !uletel_drak
+?;deti;drak_doruceno;🧒;Děti drží draka nad hlavou a čekají na vítr.;
+?;deti;;🧒;Děti sedí na kopci za vsí. „Drakiáda se zase ruší. Nefouká a draka nemáme.“;
+napoveda;*;uletel_dopis;💡;Vichr ti odnesl dopis. Visí na korouhvičce, klepni na ni.;
+napoveda;*;uletel_drak;💡;Vichr odnesl papírového draka na kopec. Děti ho chytily.;
+napoveda;*;!mlyn_opraven;💡;Vítr chce každý, ale chytit ho umí jen mlýn. Ten má ale děravé lopatky. Mlynář čeká na plátno.;
+napoveda;*;!drak_doruceno;💡;Papírový drak je pro děti na kopci.;
+napoveda;*;!dopis_doruceno;💡;Dopis z prádelny je pro pradlenu Máňu.;
+napoveda;*;!povoleni;💡;Vítr je úřední zásilka pro obec. Mlynář ho bez starostova podpisu neotevře.;
+napoveda;*;;💡;Mlýn je opravený a starosta podepsal. Otevři vítr u mlýna.;
+vitr;mlynar;mlyn_opraven povoleni;🌬️;Mlynář krabici opatrně pootevře proti lopatkám. Vítr se do nich opře, mlýn se roztočí a rozdává ho po vsi tak akorát. Prádlo se zatřepetá, draci vzlétnou a starosta se chytí klobouku.;-vitr vitr_vypusten ikona:mlynar:😄 razitko
+vitr;mlynar;mlyn_opraven;👨‍🌾;„Úřední vítr bez starostova podpisu neotvírám. Kdo by to pak platil?“;
+vitr;mlynar;;😱;Mlynář krabici otevře, vítr se opře do děravých lopatek a proletí jimi jako cedníkem. Celá ves se rozfouká.;vichr vichr_byl
+vitr;starosta;;🎩;Starosta balík podepíše na víku: Otevřít u mlýna. „Ale opatrně! A tady v kanceláři ani nápad.“;povoleni
+vitr;pradlena;;😱;„Vítr! Na prádlo!“ Máňa krabici otevře dřív, než ji zastavíš. Prádlo, kolíčky i šňůra vyletí do nebe a celá ves se rozfouká.;vichr vichr_byl
+vitr;deti;;😱;Děti krabici otevřou, než se naděješ. „Na draky!“ Vítr je smete z kopce a rozfouká celou ves.;vichr vichr_byl
+vitr;kohout;;😵;Pootevřeš krabici pod korouhvičkou. Kohout se roztočí jako vrtule a vichr se prožene vsí.;vichr vichr_byl
+plachta;mlynar;;😄;Mlynář rozbalí plátno a hned šije. Za chvíli má mlýn nové lopatky, napjaté jako buben. „Teď by stačilo, aby foukalo.“;-plachta mlyn_opraven razitko
+plachta;pradlena;;👩‍🦰;„Plátno? Na prádlo moc tvrdé. To je pro mlynáře na lopatky.“;
+plachta;starosta;;🎩;„Plátno pro mlýn? Schvaluji. Obec ho ale neplatí.“;
+plachta;deti;;🧒;„Z toho by byl obří drak!“ Plátno ti radši vezmeš.;
+plachta;kohout;;🐓;Plátno přes korouhvičku? Kohout by se urazil.;
+drak;deti;;🥳;Děti rozbalí papírového draka a výskají. „Teď jen vítr!“;-drak drak_doruceno razitko
+drak;mlynar;;👨‍🌾;„Drak? Ten patří dětem na kopec. Já pouštím jen mlýn.“;
+drak;pradlena;;👩‍🦰;„Pro děti na kopec. Já mám draka dost doma.“;
+drak;starosta;;🎩;„Drakiádu jsem zrušil. Zase. Ale drak dětem patří.“;
+drak;kohout;;🐓;Draka na korouhvičku? Kohout by s ním odletěl.;
+dopis;pradlena;;😤;Máňa dopis přečte. „Prádlo vrací, protože je mokré! Jak by nebylo, když nefouká!“ Dopis zmačká a hodí do koše.;-dopis dopis_doruceno razitko
+dopis;starosta;;🎩;„Pro Máňu. Je u šňůry. Jako vždycky.“;
+dopis;mlynar;;👨‍🌾;„Pro pradlenu? Ta stejně čeká na vítr jako my všichni.“;
+dopis;deti;;🧒;„Teta Máňa věší prádlo. Pořád.“;
+dopis;kohout;;🐓;Kohout dopis nepřijme. Je jen plechový.;
+*;*;;🤷;Nic se nestane. Nefouká.;

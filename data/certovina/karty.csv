@@ -1,0 +1,10 @@
+id;nazev;druh;ikona;adresa;popis
+duchod_l;Penzijní obálka;dopis;✉️;Lucifer starší, čp. 666;Sirná obálka z Pekelné penzijní správy. Hřeje do dlaní a trochu kouří.
+duchod_b;Penzijní obálka;dopis;✉️;Čertice Bertička, U Kotle 2;Sirná obálka z Pekelné penzijní správy. Voní levandulí. Bertička si ji prý nechává posílat navoněnou.
+prihlaska;Dopis;dopis;🐝;Čert Bonifác, za kovárnou;Od Včelařského spolku Nebeská Lhota. Na obálce je nakreslená včelka a svatozář.
+uhli1;Uhlí;vec;🪨;Do kotle;Kus uhlí od Lucifera staršího. Důchod v pekle se vyplácí v uhlí.
+uhli2;Uhlí;vec;🪨;Do kotle;Kus uhlí od Bertičky. Je zabalené v krajkovém ubrousku.
+uhli3;Uhlí;vec;🪨;Do kotle;Kus uhlí od Bonifáce. Má ho za odměnu, že ještě nikoho neodnesl do pekla.
+zadost;Žádost;dopis;📜;Anděl Gabriela, hranice farnosti;Bonifácova žádost o doporučení. Je psaná krásně, ale smrdí sírou na sto honů.
+zadost_v;Navoněná žádost;dopis;💜;Anděl Gabriela, hranice farnosti;Bonifácova žádost, teď provoněná levandulí. Síru už skoro necítíš.
+doporuceni;Doporučení;dopis;🕊️;Čert Bonifác;Andělské doporučení: Tento čert je hodný. Skoro. Podepsáno pérem z křídla.

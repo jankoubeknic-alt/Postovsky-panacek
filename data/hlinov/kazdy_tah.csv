@@ -1,0 +1,6 @@
+# Golem nosí po každém podání. Kád pojme tři vědra, pec dvě otýpky. Co je navíc, to se vylije nebo vyhází a nosí se znovu.
+podminka;efekt;text
+ukol_voda;voda+1;Golem přinesl vědro vody a vylil ho do kádě.
+ukol_voda voda=4;voda=0;Kád přetekla! Lazebník vylil vodu, nadává a Golem nosí zase od začátku.
+ukol_drevo;drevo+1;Golem přinesl otýpku dříví a hodil ji do pece.
+ukol_drevo drevo=3;drevo=0;Pec se zahltila a čadí. Pekař dříví vyházel a Golem nosí znovu.

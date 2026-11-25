@@ -1,0 +1,6 @@
+# Kaše na návsi podle počítadla kase, poklička po zastavení hrnce.
+obrazek;podminka
+data/kasovice/kase1.svg;kase>=1
+data/kasovice/kase2.svg;kase>=2
+data/kasovice/kase3.svg;kase>=3
+data/kasovice/poklicka.svg;zastaveno

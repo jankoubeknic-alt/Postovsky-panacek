@@ -1,0 +1,33 @@
+# Družina obchází domy v pořadí dum 1 až 3 (Franta, Anička, Pepík). Nůše je zásobník: s1 je dno, top je počet balíků a vytahuje se shora.
+podminka;efekt;text
+jde;dum+1;
+jde dum=1 franta_ok;tedka;Družina projde kolem domu, kde už nadělovali.
+jde dum=2 anicka_ok;tedka;Družina projde kolem domu, kde už nadělovali.
+jde dum=3 pepik_ok;tedka;Družina projde kolem domu, kde už nadělovali.
+jde dum=1 !tedka top=1 s1=1;s1=0 top=0 franta_ok tedka ikona:franta:🐴;Družina zaklepe u domu, kde bydlí Frantík. Anděl sáhne do nůše a vytáhne dřevěný koník. Přesně pro Frantu. Čert jen naoko zahrozí.
+jde dum=1 !tedka top=2 s2=1;s2=0 top=1 franta_ok tedka ikona:franta:🐴;Družina zaklepe u domu, kde bydlí Frantík. Anděl sáhne do nůše a vytáhne dřevěný koník. Přesně pro Frantu. Čert jen naoko zahrozí.
+jde dum=1 !tedka top=3 s3=1;s3=0 top=2 franta_ok tedka ikona:franta:🐴;Družina zaklepe u domu, kde bydlí Frantík. Anděl sáhne do nůše a vytáhne dřevěný koník. Přesně pro Frantu. Čert jen naoko zahrozí.
+jde dum=1 !tedka top=0;tedka;Družina zaklepe u domu, kde bydlí Frantík. Anděl sáhne do nůše a ta je prázdná. Čert nadělí uhlí a Frantík pláče.
+jde dum=1 !tedka;tedka;Družina zaklepe u domu, kde bydlí Frantík. Anděl vytáhne balík, ale je pro jiné dítě. Čert ho hodí zpátky do nůše a nadělí uhlí. Frantík pláče.
+jde dum=2 !tedka top=1 s1=2;s1=0 top=0 anicka_ok tedka ikona:anicka:🪆;Družina zaklepe u domu, kde bydlí Anička. Anděl sáhne do nůše a vytáhne panenka. Přesně pro Aničku. Čert jen naoko zahrozí.
+jde dum=2 !tedka top=2 s2=2;s2=0 top=1 anicka_ok tedka ikona:anicka:🪆;Družina zaklepe u domu, kde bydlí Anička. Anděl sáhne do nůše a vytáhne panenka. Přesně pro Aničku. Čert jen naoko zahrozí.
+jde dum=2 !tedka top=3 s3=2;s3=0 top=2 anicka_ok tedka ikona:anicka:🪆;Družina zaklepe u domu, kde bydlí Anička. Anděl sáhne do nůše a vytáhne panenka. Přesně pro Aničku. Čert jen naoko zahrozí.
+jde dum=2 !tedka top=0;tedka;Družina zaklepe u domu, kde bydlí Anička. Anděl sáhne do nůše a ta je prázdná. Čert nadělí uhlí a Anička pláče.
+jde dum=2 !tedka;tedka;Družina zaklepe u domu, kde bydlí Anička. Anděl vytáhne balík, ale je pro jiné dítě. Čert ho hodí zpátky do nůše a nadělí uhlí. Anička pláče.
+jde dum=3 !tedka top=1 s1=3;s1=0 top=0 pepik_ok tedka ikona:pepik:🛷;Družina zaklepe u domu, kde bydlí Pepík. Anděl sáhne do nůše a vytáhne sáňky. Přesně pro Pepíka. Čert jen naoko zahrozí.
+jde dum=3 !tedka top=2 s2=3;s2=0 top=1 pepik_ok tedka ikona:pepik:🛷;Družina zaklepe u domu, kde bydlí Pepík. Anděl sáhne do nůše a vytáhne sáňky. Přesně pro Pepíka. Čert jen naoko zahrozí.
+jde dum=3 !tedka top=3 s3=3;s3=0 top=2 pepik_ok tedka ikona:pepik:🛷;Družina zaklepe u domu, kde bydlí Pepík. Anděl sáhne do nůše a vytáhne sáňky. Přesně pro Pepíka. Čert jen naoko zahrozí.
+jde dum=3 !tedka top=0;tedka;Družina zaklepe u domu, kde bydlí Pepík. Anděl sáhne do nůše a ta je prázdná. Čert nadělí uhlí a Pepík pláče.
+jde dum=3 !tedka;tedka;Družina zaklepe u domu, kde bydlí Pepík. Anděl vytáhne balík, ale je pro jiné dítě. Čert ho hodí zpátky do nůše a nadělí uhlí. Pepík pláče.
+jde dum=3;dum=0 !jde;Družina obešla ves a vrací se na faru.
+tedka;!tedka;
+vyndat s1=1;+balik_franta s1=0;
+vyndat s1=2;+balik_anicka s1=0;
+vyndat s1=3;+balik_pepik s1=0;
+vyndat s2=1;+balik_franta s2=0;
+vyndat s2=2;+balik_anicka s2=0;
+vyndat s2=3;+balik_pepik s2=0;
+vyndat s3=1;+balik_franta s3=0;
+vyndat s3=2;+balik_anicka s3=0;
+vyndat s3=3;+balik_pepik s3=0;
+vyndat;top=0 !vyndat;Anděl vysype nůši a balíky ti vrátí.

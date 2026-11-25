@@ -1,0 +1,16 @@
+klic;hodnota
+datum;19. IX.
+start;hulka
+cil;hulka_doruceno svice_doruceno nitka_doruceno mydlo_doruceno mic_doruceno most_postaven predstaveni
+uvod;Do Cylindrova přijel kouzelník Pokustón s večerním představením. Cestou mu z vozu vypadl cylindr a s ním oba králíci, Čáry a Máry. Klobouk teď leží uprostřed návsi a králíci v něm čarují sami.|Co do klobouku spadne, vyleze ven jako rým. A kouzelník nemůže začít. Nemá hůlku, nemá dobrovolníka z publika a publikum z druhého břehu nemá jak přejít potok, protože povodeň vzala lávku.
+navod;Co dáš do klobouku, vyleze jako rým. Někdy je potřeba dvakrát.
+konec_nadpis;Čáry máry, potlesk!
+konec_text;Pokustón mávl hůlkou a z cylindru vyletělo sto holubic, pak duha a nakonec Čáry a Máry s poklonou. Dobrovolník z publika zmizel a objevil se na druhém břehu. Tonda a pes chytali míč do tmy, farář svítil svící a kominík byl poprvé po letech čistý.|Brašna je prázdná. Kouzelník ti na rozloučenou zamával hůlkou. Pro jistotu jsi brašnu do klobouku nestrkal.
+pozadi;data/cylindrov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

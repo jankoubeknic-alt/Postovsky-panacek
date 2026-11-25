@@ -1,0 +1,50 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Myší Lhota: dokud hráč nemá vlajku navleky, každé podání přidá škodu (kazdy_tah v etapa.csv). Velké věci na myších místech škodí navíc.
+karta;cil;podminka;vyraz;text;efekt
+?;starosta;syr_doruceno;🐭;Starosta Pištík obchází sýr a nemůže se ho nabažit. „Pouť bude, jen co zmizí ten kocour!“;
+?;starosta;;🐭;Starosta Pištík ti piští k botě: „Pane obře, pouť visí na vlásku! Nemáme povolení, sýr je ve studni a za plotem číhá kocour.“;
+?;krejcova;navleky;🐁;Švadlenka Myška se koupe v náprstku a zpívá si.;
+?;krejcova;;🐁;Švadlenka Myška šije na šicím stroji z krabičky od sirek. „Kdybych měla pořádnou vanu, ušila bych ti cokoli.“;
+?;studna;syr_venku;🪣;Studna je prázdná. Sýr už máš v brašně.;
+?;studna;;🧀;Nakloníš se nad studnu. Na dně se leskne obří sýrové kolo. Myši ho nevytáhnou ani všechny dohromady, ale ty ho podebereš dvěma prsty.;+syr syr_venku
+?;deti;kocour_odesel;🐀;Myšata běhají po celé návsi. Kocour je pryč!;
+?;deti;;🐀;Myšata se schovávají v díře pod plotem. „Kocour! Za plotem je kocour!“;
+?;kocour;;🐈;Kocour Mikeš leží za plotem a olizuje se. Na myši se dívá jako na jídelní lístek. Na tebe jako na někoho, kdo by mohl mít smetanu.;
+napoveda;*;!navleky;💡;Jsi obr a každým podáním něco rozšlápneš. Švadlenka by ti ušila něco na tichou chůzi, kdyby měla vanu. Nemáš pro ni náhodou balík?;
+napoveda;*;@dopis;💡;Tvoje obálka je větší než radnice. Švadlenka ji přešije na myší velikost.;
+napoveda;*;@dopisek;💡;Myší dopis patří starostovi.;
+napoveda;*;!syr_venku;💡;Sýr leží na dně studny. Myši ho nevytáhnou, ale ty jsi obr.;
+napoveda;*;!kocour_odesel;💡;Kocour je velký jako ty pro myši, takže tvůj dopis mu velikostí sedí.;
+napoveda;*;@syr;💡;Sýr patří na pouť. Dones ho starostovi.;
+napoveda;*;;💡;Všechno je doručeno.;
+balik;krejcova;;🛁;Rozbalíš náprstek a postavíš ho před Myšku. „Vana! Konečně!“ Než se vykoupe, ušije ti z plsti návleky na boty. Teď chodíš tiše jako myš.;-balik balik_doruceno navleky ikona:krejcova:🛁 razitko
+balik;starosta;;😱;Položíš balík před radnici a ta se skoro celá schová v jeho stínu. „To je pro švadlenku!“ piští starosta. Při couvání jsi šlápl na plot.;skody+1
+balik;deti;;🐀;Myšata se na balík vyšplhají jako na horu. Opatrně je setřeseš.;
+balik;kocour;;🐈;Kocour balík očichá. Náprstek? Ten nežere.;
+dopis;krejcova;;✂️;Švadlenka Myška obálku rozstříhá, přešije a přeloží. Za chvíli z ní je dopis velký jako poštovní známka.;-dopis +dopisek
+dopis;starosta;;😱;Položíš obálku na radnici. Obálka je větší než radnice a ta se pod ní prohne. Starosta vyleze z komína a piští.;skody+2
+dopis;deti;;🐀;Myšata se pod obálku schovají jako pod stan.;
+dopis;kocour;;🐈;„Pro myšího starostu? Rád mu to donesu.“ Kocour se olizuje. Radši ne.;
+dopisek;starosta;;🐭;Starosta Pištík si myší dopis přečte lupou. „Povolení Sýrové pouti! Teď ještě sýr a hlavně žádný kocour!“;-dopisek dopis_doruceno razitko
+dopisek;krejcova;;🐁;„Už je přešitý. Teď ho dones starostovi.“;
+dopisek;kocour;;🐈;Kocour se na drobný dopis podívá a nepozná, jestli to není myš.;
+dopis_kocour;kocour;;😻;Kocour Mikeš si přečte dopis od paní Novákové. „Smetana!“ Vyskočí, protáhne se a odběhne domů, ani se neohlédne. Za plotem se ozve myší jásot.;-dopis_kocour kocour_odesel razitko
+dopis_kocour;starosta;;😱;Dopis pro kocoura? Starosta zbledne až po ocas.;
+dopis_kocour;deti;;🐀;Myšata utečou do díry, jen co uvidí slovo KOCOUR.;
+dopis_kocour;krejcova;;🐁;„Pro kocoura? To mu dej ty, obře. Já se k plotu nepřiblížím.“;
+syr;starosta;kocour_odesel;🥳;Položíš sýr doprostřed návsi. Starosta zapíská na píšťalku a ze všech děr vyběhnou myši. Sýrová pouť začíná!;-syr syr_doruceno pout ikona:starosta:🥳 razitko
+syr;starosta;;🐭;Položíš sýr doprostřed návsi. „Sýr! Ale pouť nebude, dokud za plotem číhá kocour.“ Sýr ti dá schovat zpátky.;syr_doruceno
+syr;kocour;;🐈;Kocour sýr očichá a ohrne nos. Smetana by to být musela.;
+syr;deti;;🐀;Myšata se do sýra zakousnou. Radši jim ho vezmeš, než z něj zbude ementál.;
+syr;krejcova;;🐁;„Sýr patří na náves, ke starostovi.“;
+syr;studna;;🧀;Vrátit sýr do studny? Myši by se zbláznily.;
+*;studna;;🪣;Do studny nic neházej. Myši z ní pijí.;
+*;*;;🤷;Nic se nestane.;

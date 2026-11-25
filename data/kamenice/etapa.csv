@@ -1,0 +1,16 @@
+klic;hodnota
+datum;26. XI.
+start;uredni kometa harmonika balicek
+cil;uredni_doruceno kometa_doruceno harmonika_doruceno prsten_doruceno
+uvod;V Kamenici onemocněl noční doručovatel, a tak dnes roznášíš ve dne i v noci. V hornickém městě žije každý jindy. Kdo dělá na noční, ten ve dne spí, a kdo sedí ve dne v kanceláři, ten v noci… kdo ví.|Když klepneš na věžní hodiny, počkáš do noci, nebo do rána. Čekání nic nestojí.
+navod;Klepnutím na věžní hodiny přepneš den a noc.
+konec_nadpis;Zasnoubení v Kamenici
+konec_text;Franta je od pondělí na denní a s Marií se poprvé potkali za světla. Ředitel Hronek se v kanceláři usmívá a v noci kreslí mapu své komety. Vávra hraje v hospodě na novou harmoniku a kočka Uhlíčka spí na sluníčku.|Brašna je prázdná. Zdař Bůh, pošťáku.
+pozadi;data/kamenice/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

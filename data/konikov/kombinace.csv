@@ -1,0 +1,69 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Koníkov: dostavník jede dokola (počítadlo stanice 1 až 4) a každé podání ho posune o zastávku. Doručit jde jen na zastávce, kde stojí.
+# Ve voze jsou dvě místa (počítadlo mista). Babka s husou potřebují obě, student nastoupí, jen když je volno. Cestující vystoupí sami (kazdy_tah.csv).
+karta;cil;podminka;vyraz;text;efekt
+*;prednosta;!stanice=1;🏇;Tahle zastávka je u pošty a dostavník tam zrovna nestojí. Doručit se dá jen tam, kde zastavíš.;
+*;babka;!stanice=1;🏇;Tahle zastávka je u pošty a dostavník tam zrovna nestojí. Doručit se dá jen tam, kde zastavíš.;
+*;hostinsky;!stanice=2;🏇;Tahle zastávka je u hostince a dostavník tam zrovna nestojí. Doručit se dá jen tam, kde zastavíš.;
+*;student;!stanice=2;🏇;Tahle zastávka je u hostince a dostavník tam zrovna nestojí. Doručit se dá jen tam, kde zastavíš.;
+*;mlynar;!stanice=3;🏇;Tahle zastávka je u mlýna a dostavník tam zrovna nestojí. Doručit se dá jen tam, kde zastavíš.;
+*;hrabenka;!stanice=4;🏇;Tahle zastávka je u zámku a dostavník tam zrovna nestojí. Doručit se dá jen tam, kde zastavíš.;
+?;koci;;📯;Zatroubíš na trubku, práskneš bičem a dostavník jede na další zastávku. Jízdní řád je jízdní řád.;cekej
+?;prednosta;stanice=1;👨‍💼;„Jízdní řád znáte,“ říká přednosta. „Pošta, hostinec, mlýn, zámek. Na každé zastávce jedna zásilka, pak se jede. A ve voze jsou dvě místa.“;
+?;prednosta;;👨‍💼;Přednosta mává od pošty kapesníkem.;
+?;babka;stanice=1 mista=0;🪿;Babka nastoupí s husou v náručí. „Husa má vlastní místo, zaplatila jsem za ni,“ prohlásí. Husa sedí jako dáma. Vůz je plný. „Do mlýna, ke klukovi!“;v_voze_babka mista=2
+?;babka;;👵;Babka s husou čeká u pošty. Chce do mlýna za synem.;
+?;student;stanice=2 mista<2;🧑‍🎓;Student si sedne do vozu a nasadí brýle. „Na zámek, prosím. Jsem nový vychovatel mladého hraběte.“;v_voze_student mista+1
+?;student;stanice=2;🧑‍🎓;Student nahlédne do vozu a uskočí. „S husou nejedu! A beztak je plno. Počkám na další objížďku.“;
+?;student;;🧑‍🎓;Student s kufrem čeká před hostincem. Chce na zámek.;
+?;hostinsky;;🍺;Hostinský stojí ve dveřích. „Bez novin se v hospodě mlčí. A mlčící hospoda je smutná hospoda.“;
+?;mlynar;babka_dovezena;🤗;Mlynář s maminkou sedí na lavičce. Husa hlídá splav.;
+?;mlynar;;🧑‍🌾;Mlynář stojí u splavu. „Čekám nové síto. A maminku s husou, slíbila, že přijede.“;
+?;hrabenka;dopis_doruceno;👸;Hraběnka čte dopis znovu a znovu. „Nový vychovatel už je na cestě. A dort upeču, jen co budu mít mouku.“;
+?;hrabenka;;👸;Hraběnka vyhlíží ze zámecké brány. „Čekám dopis z Vídně. A mouku z mlýna, chci péct dort.“;
+napoveda;*;!noviny_doruceno;💡;Každá zásilka posune dostavník o zastávku. Plánuj, co doručíš kde. Noviny jsou pro hostinský.;
+napoveda;*;!balik_doruceno;💡;Síto je pro mlynáře. Až ho dostane, bude mít mouku pro zámek, kam se jede hned potom.;
+napoveda;*;!mouka_doruceno;💡;Mouka patří hraběnce na zámek.;
+napoveda;*;!babka_dovezena !v_voze_babka;💡;Babka s husou chtějí do mlýna. Potřebují dvě volná místa. Nastoupí u pošty.;
+napoveda;*;!student_dovezen !v_voze_student;💡;Student chce na zámek. Nastoupí u hostince, jen když je volno a ve voze není husa.;
+napoveda;*;!dopis_doruceno;💡;Dopis z Vídně je pro hraběnku.;
+napoveda;*;!odpoved_doruceno;💡;Psaní ze zámku patří přednostovi na poštu.;
+napoveda;*;;💡;Když nemáš co doručit, zatroubí a jeď dál.;
+noviny_hostinsky;hostinsky;;🍺;Hostinský noviny rozloží a začne číst nahlas. „Ve Vídni prší!“ Hospoda zajásá, konečně je o čem mluvit.;-noviny_hostinsky noviny_doruceno razitko
+balik_mlynar;mlynar;;🧑‍🌾;Mlynář nasadí nové síto a mouka se sype jako sníh. „Tady, pytel pro hraběnku. Na zámek jedeš teď, ne?“;-balik_mlynar +mouka balik_doruceno razitko
+mouka;hrabenka;;👸;Hraběnka pytel mouky přivítá jako vzácnou návštěvu. „Ještě teplá od kamene! Dort bude.“;-mouka mouka_doruceno razitko
+dopis_hrabenka;hrabenka;;👸;Hraběnka zlomí pečeť. „Nový vychovatel! Konečně.“ Hned napíše odpověď na poštu. „Objednávám dostavník na neděli. Celý.“;-dopis_hrabenka +odpoved dopis_doruceno razitko
+odpoved;prednosta;;👨‍💼;Přednosta psaní přečte a zbledne. „Celý dostavník? Jen pro hraběnku a koně? To bude neděle!“ Zapíše si to do jízdního řádu.;-odpoved odpoved_doruceno razitko
+mouka;mlynar;;🧑‍🌾;„Mouku jsem ti dal pro zámek. Já mám mouky plný mlýn.“;
+mouka;hostinsky;;🍺;„Mouka? Já peču jen topinky. To je pro hraběnku.“;
+dopis_hrabenka;student;;🧑‍🎓;„Pro hraběnku? Asi je o mně,“ zčervená student. „Ale cizí dopisy nečtu.“;
+dopis_hrabenka;prednosta;;👨‍💼;„Z Vídně, na zámek. Dostavník tam jede jako čtvrtý.“;
+noviny_hostinsky;student;;🧑‍🎓;Student noviny prolistuje. „Zajímavé. Ale patří hostinskému.“;
+noviny_hostinsky;babka;;👵;„Noviny? Já neumím číst, umí husa,“ směje se babka. „Ty patří do hospody.“;
+balik_mlynar;babka;;👵;„Síto pro mého kluka! Ale já ho nepovezu, já vezu husu. Dovez mu ho ty.“;
+balik_mlynar;hostinsky;;🍺;„Síto? Já přes něj nanejvýš cedím pivo. To je pro mlynáře.“;
+odpoved;hrabenka;;👸;„To jsem psala já, pro přednostu na poštu.“;
+odpoved;babka;;👵;„Ze zámku? To dej přednostovi. Já se zámkům vyhýbám, mají moc schodů.“;
+noviny_hostinsky;mlynar;;🧑‍🌾;„Noviny? Ve mlýně je takový rámus, že bych je stejně neslyšel. To je do hospody.“;
+mouka;babka;;👵;„Mouka od mého kluka! Ale ta je pro hraběnku. Já peču z vlastní.“;
+mouka;prednosta;;👨‍💼;„Mouka na poštu? Ta patří na zámek. Já balím jen balíky.“;
+mouka;student;;🧑‍🎓;„Mouka? Já jsem vychovatel, ne pekař.“;
+dopis_hrabenka;hostinsky;;🍺;„Z Vídně? To bych nahlas nečetl, to je pro hraběnku.“;
+dopis_hrabenka;mlynar;;🧑‍🌾;„Hraběnce? Do zámku jedeš hned odsud. Vezmi s sebou mouku, jestli máš.“;
+dopis_hrabenka;babka;;👵;„Z Vídně? Tam jsem byla jednou, husa se ztratila. To je pro hraběnku.“;
+noviny_hostinsky;prednosta;;👨‍💼;„Noviny už mám přečtené. Tyhle jsou pro hostinského.“;
+noviny_hostinsky;hrabenka;;👸;„Pražské noviny? My odebíráme vídeňské. To je pro hostinec.“;
+balik_mlynar;prednosta;;👨‍💼;„Síto pro mlynáře. Mlýn je třetí zastávka.“;
+balik_mlynar;student;;🧑‍🎓;Student balík potěžká. „Hedvábné síto? Pro mlynáře, píše se tam.“;
+balik_mlynar;hrabenka;;👸;„Síto? Ať ho dostane mlynář, ať mám mouku.“;
+odpoved;hostinsky;;🍺;„Ze zámku? Ať si to přečte přednosta. Já čtu jen noviny.“;
+odpoved;student;;🧑‍🎓;„To psala hraběnka? Krásný rukopis. Patří na poštu.“;
+odpoved;mlynar;;🧑‍🌾;„Psaní ze zámku pro přednostu? Pošta je první zastávka.“;
+*;*;;🤷;Tohle tady nikdo nechce. Ale dostavník se pohnul.;

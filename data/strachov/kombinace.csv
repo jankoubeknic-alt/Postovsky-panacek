@@ -1,0 +1,70 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Hrad Strachov: prohlídka (počítadlo pokoj) obchází hrad a strašidlo v její místnosti je schované. Až jsou všechna strašidla připravená,
+# kastelán je pozve do sálu (pozvani). Strašení začne, jakmile prohlídka vejde do sálu.
+karta;cil;podminka;vyraz;text;efekt
+?;kastelan;pozvani;🧔;Kastelán si mne ruce. „Strašidla čekají v sále. Jakmile tam prohlídka vejde, začne to. Sova ti řekne, jak dlouho to potrvá.“;
+?;kastelan;urad_doruceno belidlo_doruceno teta_doruceno retezy_doruceno hracka_doruceno;🧔;Kastelán svolá strašidla. „Dámy a pánové, totiž strašidla. Dnes večer se nebudete schovávat. Až prohlídka vejde do rytířského sálu, strašte, co to dá!“ Bílá paní zčervená, kostlivec zachrastí a rytíř kývne hlavou, kterou drží v podpaží.;pozvani ikona:kastelan:😃
+?;kastelan;urad_doruceno;🧔;„Potřebujeme strašení,“ opakuje kastelán. „Bílá paní musí zářit, rytíř mít hlavu a číst poštu, kostlivec chrastit. Pak je svolám. A Šmouha ať má svou hračku, jinak by se pletl pod nohy.“;
+?;kastelan;;🧔;Kastelán Klíčník přešlapuje u brány. „Turisté odcházejí zklamaní,“ povzdechne. „Na hradě straší, a oni nic nevidí. Strašidla se stydí. Čekám dopis z úřadu, snad mi nezavřou hrad.“;
+?;kocour;hracka_doruceno;🐈‍⬛;Šmouha honí plyšovou myš po nádvoří a vůbec si nevšímá strašidel.;
+?;kocour;!@hlava !teta_doruceno;🐈‍⬛;Šmouha koulí po nádvoří něco kulatého v přilbě. Je to rytířova hlava! Šmouha ji nepustí. Je to jeho nejlepší hračka.;
+?;sova;pokoj=1;🦉;„Hú, hú,“ houká Hůhů. „Prohlídka je na nádvoří. Další bude sál, pak kaple, pak sklep. Chceš počkat?“ Sova zavře jedno oko a čas plyne.;cekej
+?;sova;pokoj=2;🦉;„Hú, hú. Prohlídka je v sále, Bílá paní se schovala. Další bude kaple.“ Sova zamhouří oko a chvíli se počká.;cekej
+?;sova;pokoj=3;🦉;„Hú, hú. Prohlídka je v kapli a rytíř za oltářem. Pak půjdou do sklepa.“ Počkáte spolu.;cekej
+?;sova;;🦉;„Hú, hú. Prohlídka je ve sklepě, kostlivec je v sudu. Pak se vrátí na nádvoří.“ Sova zamhouří oko a chvilku se počká.;cekej
+?;bilapani;belidlo_doruceno;👻;Bílá paní září jako měsíc v úplňku. „Konečně jsem zase bílá. Ale strašit? Já se stydím.“;
+?;bilapani;;👻;Bílá paní je spíš šedivá. „Moje prostěradlo zašedlo,“ šeptá. „Takhle se nikomu neukážu. Čekám prášek na praní.“;
+?;rytir;teta_doruceno;🛡️;Rytíř si hlavu nasazuje a zase sundává. „Teta píše, že ve Skotsku se straší každý večer. Zkusím to taky.“;
+?;rytir;hlava_vracena;🛡️;Rytíř má hlavu zpátky a rozhlíží se. „Čekám dopis od tety ze Skotska. Teď ho konečně přečtu.“;
+?;rytir;;🛡️;Bezhlavý rytíř tápe po kapli. „Kde mám hlavu? Bez ní nepřečtu ani dopis od tety. Naposledy jsem ji viděl, jak se kutálí na nádvoří.“;
+?;kostlivec;retezy_doruceno;💀;Kostlivec chrastí novými řetězy, až to v klenbách duní. Je spokojený, chudák kostnatý.;
+?;kostlivec;;💀;Kostlivec smutně třese starými řetězy. Ani nezaskřípou. „Takhle nikoho nevyděsím. Čekám balík.“;
+napoveda;*;!urad_doruceno;💡;Kastelán čeká dopis z úřadu.;
+napoveda;*;!hlava_vracena !@hlava;💡;Rytíř hledá hlavu. Někdo si s ní hraje na nádvoří. Dal by ji za lepší hračku.;
+napoveda;*;!belidlo_doruceno;💡;Bílá paní čeká prášek na praní. Prohlídka ji v sále vyruší, tak počkej, až půjdou jinam.;
+napoveda;*;!hlava_vracena;💡;Rytíř je v kapli. Hlavu mu vrať, až tam nebude prohlídka.;
+napoveda;*;!teta_doruceno;💡;Rytíř s hlavou už dopis od tety přečte.;
+napoveda;*;!retezy_doruceno;💡;Kostlivec ve sklepě čeká řetězy. Prohlídka ho vyruší.;
+napoveda;*;!pozvani;💡;Strašidla jsou připravená. Kastelán je může svolat.;
+napoveda;*;;💡;Strašidla čekají v sále. Až tam prohlídka vejde, začne strašení. Sova ti pomůže počkat.;
+hracka;kocour;;🐈‍⬛;Šmouha uvidí plyšovou myš a pustí rytířovu hlavu. Hlava se zakutálí k tobě. „Dobrý den,“ řekne hlava. „Vezmete mě do kaple?“;-hracka +hlava hracka_doruceno ikona:kocour:🐈 razitko
+hracka;kastelan;;🧔;„Hračku jsem objednal pro Šmoušu. Dej mu ji, ať má zábavu.“;
+hracka;sova;;🦉;„Hú! Myš!“ Sova se po hračce vrhne a pak se zastydí. „Plyšová. Ta je pro kocoura.“;
+hlava;rytir;;🛡️;Rytíř si nasadí hlavu, zatočí s ní, až zaskřípe, a mrkne. „Konečně zase vidím!“;-hlava hlava_vracena ikona:rytir:⚔️
+hlava;kocour;;🐈‍⬛;Šmouha po hlavě skočí. Uhneš. Patří rytíři, ne kocourovi.;
+hlava;kastelan;;🧔;„Hlava? Ta patří rytíři v kapli. Pozor, kouše.“ Hlava se urazí.;
+hlava;bilapani;;👻;„Pane rytíři!“ vyjekne Bílá paní a zčervená. „Vaše hlava je v kapli. Totiž tělo.“;
+hlava;kostlivec;;💀;Kostlivec hlavu potěžká. „Já mám hlavu taky, ale bez masa. Tahle patří rytíři.“;
+hlava;sova;;🦉;Sova a hlava se na sebe dlouze dívají. „Hú?“ „Dobrý den,“ řekne hlava. Patří rytíři do kaple.;
+retezy;sova;;🦉;„Hú, to bude rachotu,“ těší se sova. „Řetězy patří kostlivci do sklepa.“;
+dopis_urad;sova;;🦉;„Hú. Úřad. To nevěstí nic dobrého. Pro kastelána.“;
+belidlo;kocour;;🐈‍⬛;Šmouha krabici s bělidlem očichá a kýchne.;
+dopis_teta;kocour;;🐈‍⬛;Šmouha si na dopis lehne. Musíš ho vytáhnout zpod kocoura. Je pro rytíře.;
+*;sova;;🦉;Hůhů zakroutí hlavou. „Mně nic nedoručuj, já jen hlídám čas.“;
+*;kocour;;🐈‍⬛;Šmouha to očichá a odejde. Nezajímá ho to.;
+dopis_urad;bilapani;;👻;„Z úřadu? To nás chtějí vystěhovat?“ Bílá paní zbledne, i když už bledá je. „Dej to kastelánovi.“;
+dopis_urad;rytir;;🛡️;Rytíř úřední dopis ohmatá. „Pečeť! To je pro pana kastelána. Úřady nečtu, ani s hlavou.“;
+dopis_urad;kostlivec;;💀;„Úřad? Ten mě pamatuje, jak jsem ještě měl maso,“ zachrastí kostlivec. „Dej to kastelánovi.“;
+belidlo;rytir;;🛡️;„Bělidlo? Moje brnění se leští, ne pere. To je pro Bílou paní.“;
+belidlo;kastelan;;🧔;„Bělidlo pro Bílou paní, ať zase září. Dones jí ho do sálu, až tam nebudou turisti.“;
+dopis_teta;bilapani;;👻;„Ze Skotska? Tam mají strašidla tak krásná,“ zasní se Bílá paní. „Je to pro pana rytíře.“;
+dopis_teta;kastelan;;🧔;„Teta ze Skotska? Rytíř bude rád. Jen ať si nejdřív najde hlavu.“;
+dopis_teta;kostlivec;;💀;„Teta? Já mám jen tetanus,“ zasměje se kostlivec. „Je to pro rytíře.“;
+retezy;rytir;;🛡️;„Řetězy? To je pro kostlivce. Já chrastím brněním.“;
+retezy;bilapani;;👻;„Řetězy? Ty patří do sklepa. Já jen tiše vlaju.“;
+retezy;kastelan;;🧔;„Nové řetězy pro kostlivce! Konečně bude slyšet až do vsi.“;
+hracka;rytir;;🛡️;„Myš? Na co mi je? Nemám čím ji sledovat,“ povzdechne rytíř. „Kocour má moji hlavu.“;
+hracka;kostlivec;;💀;Kostlivec se myši lekne a zachrastí, až mu spadne čelist.;
+dopis_urad;kastelan;;😱;Kastelán dopis otevře a zbledne. „Pokud se návštěvnost nezvýší, hrad zavřou!“ Pak se mu rozzáří oči. „Musíme strašit. Pořádně, aby se o tom psalo v novinách.“;-dopis_urad urad_doruceno razitko
+belidlo;bilapani;;✨;Bílá paní prostěradlo vypere v měsíčním světle. Zazáří tak, že v sále není potřeba svíčka. „Jsem zase bílá!“;-belidlo belidlo_doruceno ikona:bilapani:✨ razitko
+belidlo;kostlivec;;💀;„Bělidlo? Já mám kosti bílé dost,“ zachrastí kostlivec. „To je pro Bílou paní.“;
+dopis_teta;rytir;hlava_vracena;⚔️;Rytíř si dopis přečte a nadšeně si sundá hlavu, aby ji mohl zvednout k nebi. „Teta píše, že ve Skotsku straší každý večer a turisté za to platí! Zkusíme to taky.“;-dopis_teta teta_doruceno razitko
+dopis_teta;rytir;;🛡️;Rytíř dopis nahmatá, ale nepřečte. „Nemám čím. Hlava se mi někam zakutálela.“;
+retezy;kostlivec;;💀;Kostlivec si řetězy navlékne a zachrastí. Klenba se otřese a sudy poskočí. „To je ono!“ zaraduje se. Zuby mu cvakají radostí.;-retezy retezy_doruceno ikona:kostlivec:☠️ razitko
+hracka;bilapani;;👻;„Myška!“ vyjekne Bílá paní a vyletí ke stropu. Hračka je pro kocoura.;

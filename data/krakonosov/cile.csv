@@ -1,0 +1,10 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# k = za koho je Krakonoš právě převlečený: 1 houbař, 2 uhlíř, 3 poutník.
+id;jmeno;ikona;x;y;skryt_kdyz
+babka;Babka kořenářka;👵;16;20;
+statkar;Statkář Šrajtofle;🤑;84;20;
+houbar;Houbař;🧺;16;46;
+uhlir;Uhlíř;🧑‍🏭;84;46;
+poutnik;Poutník;🚶;50;62;bourka>0
+pekar;Pekař;🥖;24;84;
+hospoda;Hospoda;🍺;76;84;

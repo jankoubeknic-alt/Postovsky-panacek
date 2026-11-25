@@ -1,0 +1,48 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Barborov: barborky rostou po každém tahu, jen když jsou ve vodě a v teple (ra, rb, rk). Ve čtyřech kvetou. Do Štědrého dne je jedenáct tahů.
+karta;cil;podminka;vyraz;text;efekt
+vetev_anca;anca;;👩;Anča postaví větvičku do džbánku s vodou ke kamnům. „Teplo a voda, to je celé tajemství.“;-vetev_anca anca_ma razitko
+vetev_anca;bara;;👧;„Tahle je pro Anču. Každá musí mít svoji, jinak se to nepočítá.“;
+vetev_anca;kaca;;👱‍♀️;„Tahle je pro Anču. Každá musí mít svoji, jinak se to nepočítá.“;
+?;anca;kvete_anca;🌸;Anča se dívá na rozkvetlou barborku a červená se.;
+vetev_bara;bara;;👧;Bára si vezme větvičku a rozhlíží se. „Nemám do čeho ji dát. Do hrnku od mléka nedám, to by maminka spráskla ruce.“;-vetev_bara bara_ma razitko
+vetev_bara;anca;;👩;„Tahle je pro Báru. Každá musí mít svoji, jinak se to nepočítá.“;
+vetev_bara;kaca;;👱‍♀️;„Tahle je pro Báru. Každá musí mít svoji, jinak se to nepočítá.“;
+?;bara;kvete_bara;🌸;Bára se dívá na rozkvetlou barborku a červená se.;
+vetev_kaca;kaca;;👱‍♀️;Káča postaví větvičku do sklenice. „Jenže v mé světničce je zima jako venku. Kamna mám, ale dříví žádné.“;-vetev_kaca kaca_ma razitko
+vetev_kaca;anca;;👩;„Tahle je pro Káču. Každá musí mít svoji, jinak se to nepočítá.“;
+vetev_kaca;bara;;👧;„Tahle je pro Káču. Každá musí mít svoji, jinak se to nepočítá.“;
+?;kaca;kvete_kaca;🌸;Kača se dívá na rozkvetlou barborku a červená se.;
+?;anca;anca_ma;👩;Anča hlídá džbánek u kamen. „Roste! Je vidět pupeny.“;
+?;anca;;👩;Anča vyhlíží. „Dědeček slíbil barborku. Džbánek u kamen už mám nachystaný.“;
+vaza;bara;;👧;Bára dá do džbánku vodu a postaví ho na okno nad kamna. „Teď už to půjde.“;-vaza vaza_bara
+?;bara;bara_ma vaza_bara;👧;Bára počítá pupeny.;
+?;bara;bara_ma;👧;„Kdybych měla džbánek. Hrnčíř jich má plnou dílnu, ale jen pro platící.“;
+?;bara;;👧;„U nás doma je teplo, kamna jedou pořád. Jen džbánek žádný.“;
+drivi;kaca;;👱‍♀️;Káča přiloží do kamínek a podkrovní světnička se zahřeje. „Konečně! A barborka taky.“;-drivi teplo_kaca
+?;kaca;kaca_ma teplo_kaca;👱‍♀️;Káča sedí u teplých kamínek a hlídá barborku.;
+?;kaca;;👱‍♀️;„V podkroví mi mrznou i myšlenky. Hajný by měl dříví.“;
+dopis_hrncir;hrncir;;🏺;Hrnčíř čte objednávku a mne si ruce. „Dvacet hrnků! Na, tady máš džbánek za poštu.“;-dopis_hrncir hrncir_doruceno +vaza razitko
+?;hrncir;;🏺;„Džbánky prodávám, nedávám. Leda by mi někdo přinesl dobrou zprávu.“;
+?;hajny;!@drivi !teplo_kaca;🪓;Hajný ti naloží náruč bukového dříví. „Pro Káču do podkroví? Ta tam mrzne celou zimu.“;+drivi
+?;hajny;;🪓;Hajný štípe dříví. „Barborky se řežou na Barboru. Kvetou jen v teple.“;
+?;kamna;;🔥;Chvíli se ohříváš u kamen a čekáš.;cekej
+?;kostel;;⛪;Na oltáři stojí svatá Barbora s věží v ruce. Je patronkou horníků a všech, kdo pracují v nebezpečí. Pod oltářem kvete loňská barborka. Ze sušených květů.;
+drivi;anca;;👩;„U nás je teplo dost. Dříví by potřebovala Káča.“;
+drivi;bara;;👧;„Kamna jedou pořád. Spíš by se hodil džbánek.“;
+vaza;anca;;👩;„Džbánek mám. Bára žádný nemá.“;
+vaza;kaca;;👱‍♀️;„Sklenici mám. Horší je ta zima.“;
+napoveda;*;!anca_ma;💡;Anča má všechno připravené. Její barborka může začít růst hned.;
+napoveda;*;!vaza_bara;💡;Bára nemá džbánek. Hrnčíř ho dá za dobrou zprávu.;
+napoveda;*;!teplo_kaca;💡;Káča má zimu. Hajný má dříví.;
+napoveda;*;;💡;Teď už jen čekat. Barborka kvete po čtyřech pochůzkách ve vodě a v teple.;
+*;kamna;;🔥;Kamna si nic nevezmou.;
+*;kostel;;⛪;V kostelíku je ticho. Pošta sem nejde.;
+*;*;;🤷;Nic se nestane.;

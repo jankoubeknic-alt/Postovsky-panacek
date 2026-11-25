@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Noc na poště: ves je temná, uprostřed je vnitřek pošty s lampou a stolem plným dopisů -->
+  <rect width="300" height="400" fill="#1E2436" opacity=".88"/>
+  <g fill="#F4E9C4"><circle cx="30" cy="30" r="1.2"/><circle cx="80" cy="14" r="1"/><circle cx="230" cy="22" r="1.3"/><circle cx="280" cy="40" r="1"/></g>
+  <rect x="100" y="20" width="100" height="64" fill="#F2D86A" opacity=".5"/>
+  <rect x="30" y="110" width="240" height="200" rx="8" fill="#4A3E36" stroke="#2A221C" stroke-width="3"/>
+  <circle cx="150" cy="130" r="22" fill="#F2D86A" opacity=".25"/>
+  <path d="M150 112v8M140 122h20l-4 10h-12Z" fill="#F2D86A" stroke="#8A6A2E" stroke-width="1"/>
+  <rect x="60" y="220" width="180" height="12" fill="#8A6A48"/>
+  <g fill="#F4F1E4" stroke="#8A8274" stroke-width=".8"><rect x="80" y="210" width="14" height="10" transform="rotate(-12 87 215)"/><rect x="104" y="212" width="14" height="10" transform="rotate(8 111 217)"/><rect x="176" y="210" width="14" height="10" transform="rotate(-6 183 215)"/><rect x="202" y="212" width="14" height="10" transform="rotate(14 209 217)"/></g>
+  <g fill="#6B4A2E"><rect x="70" y="232" width="6" height="40"/><rect x="224" y="232" width="6" height="40"/></g>
+</svg>

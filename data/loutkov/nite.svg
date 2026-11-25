@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zamotané nitě: od vahadel k loutkám a navíc spojky mezi pekařem a zvonem, babkou a žebříkem, Špalíčkem a Hoblíkem -->
+  <g stroke="#F4F1E4" stroke-width=".8" fill="none" opacity=".8">
+    <path d="M100 32L48 110M110 32L114 110M120 32L48 220M180 32L252 110M190 32L174 200M200 32L252 230"/>
+    <path d="M48 230C120 210 200 160 252 120" stroke-dasharray="4 2"/>
+    <path d="M252 240C230 220 200 210 176 214" stroke-dasharray="4 2"/>
+    <path d="M114 116C96 100 70 100 50 112" stroke-dasharray="4 2"/>
+  </g>
+</svg>

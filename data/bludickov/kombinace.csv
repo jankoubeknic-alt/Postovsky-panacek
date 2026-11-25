@@ -1,0 +1,65 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Bludičkov: bludičky přeskakují mezi místy 1, 2 a 4 (počítadlo b), lucerna stojí na místě 3. Kdo jde za bludičkou, toho vytáhne hastrman a schová mu dopis do hrnku.
+# Hrnky se dají otevřít, jen když hastrman kouří kořenářčin tabák (kouri). Pod jednou pokličkou je dušička starého pošťáka.
+karta;cil;podminka;vyraz;text;efekt
+tabak;hajna;;👩‍🌾;„Fuj, to je kořenářčino listí. Na hastrmana prý platí.“;
+tabak;vrba;;🌳;Na větvi visí hastrmanova dýmka. Nacpat by si ji měl ale on sám.;
+dopis_hastrman;korenarka;;👵;„Hastrmanovi? Ten sedí na vrbě u tůně. Pozdravuj ho.“;
+tabak;hrnek_dusicka;;🫖;Do hrnku se nic nedává. Spíš by se z něj mělo něco dostat.;
+dopis_hastrman;hrnek_dusicka;;🫖;Psaní do hrnku nepatří. Hastrman by si ho nechal.;
+tabak;zpet;;🏮;Listí je pro hastrmana. Ten je na druhé straně slatí.;
+?;svetlo3;;🏮;Jdeš za světlem, které se nehne. Je to lucerna v okně samoty. Stezka pod nohama drží a za chvíli klepeš na dveře hajné.;pres cekej
+?;svetlo1;@dopis_hajna;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro hajnou. Strčí ho do hrnku pod pokličku.;-dopis_hajna hrnek_hajna cekej
+?;svetlo1;@dopis_korenarka;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro kořenářku. Strčí ho do hrnku pod pokličku.;-dopis_korenarka hrnek_korenarka cekej
+?;svetlo1;@dopis_hastrman;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro hastrmana. Strčí ho do hrnku pod pokličku.;-dopis_hastrman hrnek_hastrman cekej
+?;svetlo1;;🫧;Jdeš za světýlkem a zapadneš do bahna. Hastrman tě vytáhne, prohrábne brašnu a nic v ní nenajde. „Škoda,“ zabručí.;cekej
+?;svetlo2;@dopis_hajna;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro hajnou. Strčí ho do hrnku pod pokličku.;-dopis_hajna hrnek_hajna cekej
+?;svetlo2;@dopis_korenarka;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro kořenářku. Strčí ho do hrnku pod pokličku.;-dopis_korenarka hrnek_korenarka cekej
+?;svetlo2;@dopis_hastrman;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro hastrmana. Strčí ho do hrnku pod pokličku.;-dopis_hastrman hrnek_hastrman cekej
+?;svetlo2;;🫧;Jdeš za světýlkem a zapadneš do bahna. Hastrman tě vytáhne, prohrábne brašnu a nic v ní nenajde. „Škoda,“ zabručí.;cekej
+?;svetlo4;@dopis_hajna;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro hajnou. Strčí ho do hrnku pod pokličku.;-dopis_hajna hrnek_hajna cekej
+?;svetlo4;@dopis_korenarka;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro kořenářku. Strčí ho do hrnku pod pokličku.;-dopis_korenarka hrnek_korenarka cekej
+?;svetlo4;@dopis_hastrman;🫧;Jdeš za světýlkem. Pod nohama čvachtá, pak to zamlaská a jsi v bahně po pás. Zelená ruka tě vytáhne za límec. „Za vytažení se platí,“ řekne hastrman a z brašny ti vytáhne dopis pro hastrmana. Strčí ho do hrnku pod pokličku.;-dopis_hastrman hrnek_hastrman cekej
+?;svetlo4;;🫧;Jdeš za světýlkem a zapadneš do bahna. Hastrman tě vytáhne, prohrábne brašnu a nic v ní nenajde. „Škoda,“ zabručí.;cekej
+?;hastrman;kouri>0;🐸;Hastrman sedí na vrbě, kouří a kouká na měsíc. Na hrnky se nedívá.;
+?;hastrman;;🐸;Hastrman Šplíchal si ždímá šos. „Bludičky jsou moje holky. Koho přivedou, toho vytáhnu. A něco si nechám, to dá rozum.“;
+tabak;hastrman;;🐸;Hastrman čichne k listí a rozzáří se. Nacpe si dýmku, vyleze na vrbu a kouří. Na hrnky teď chvíli nekouká.;-tabak kouri=3
+dopis_hastrman;hastrman;;🐸;Hastrman otevře mokrou obálku. „Od bratrance z Vltavy! Pod jezem prý mají nový mlýn a kapry jako prasata.“ Má radost, až mu kape ze šosu.;-dopis_hastrman hastrman_doruceno razitko
+?;vrba;;🌳;Stará vrba nad tůní. Kořeny má v bahně a na větvi visí hastrmanova dýmka.;
+?;hrnek_dusicka;kouri>0;🫧;Zvedneš pokličku. Z hrnku vyletí bublinka, zatřpytí se a vznese se nad slatě. Dušička starého pošťáka je volná!;dusicka_volna razitko
+?;hrnek_dusicka;;🐸;Sáhneš po pokličce a hastrman tě plácne mokrou rukou přes prsty. „Co je v hrnku, je hastrmanovo!“;
+?;hrnek_hajna;kouri>0;🫖;Zvedneš pokličku a vytáhneš svůj dopis pro hajnou. Je trochu vlhký, ale čitelný.;+dopis_hajna !hrnek_hajna
+?;hrnek_hajna;;🐸;Hastrman tě plácne mokrou rukou přes prsty. „Co je v hrnku, je hastrmanovo!“;
+?;hrnek_korenarka;kouri>0;🫖;Zvedneš pokličku a vytáhneš svůj dopis pro kořenářku. Je trochu vlhký, ale čitelný.;+dopis_korenarka !hrnek_korenarka
+?;hrnek_korenarka;;🐸;Hastrman tě plácne mokrou rukou přes prsty. „Co je v hrnku, je hastrmanovo!“;
+?;hrnek_hastrman;kouri>0;🫖;Zvedneš pokličku a vytáhneš svůj dopis pro hastrmana. Je trochu vlhký, ale čitelný.;+dopis_hastrman !hrnek_hastrman
+?;hrnek_hastrman;;🐸;Hastrman tě plácne mokrou rukou přes prsty. „Co je v hrnku, je hastrmanovo!“;
+dopis_hajna;hajna;;👩‍🌾;Hajná čte přídělový lístek. „Dříví na zimu! Aspoň nebudu topit rašelinou.“;-dopis_hajna hajna_doruceno razitko
+?;hajna;;👩‍🌾;Hajná rovná knot v lucerně. „Lucerna svítí z okna každý večer. Bludičky přeskakujou, ta moje stojí. Podle toho se pozná.“;
+dopis_korenarka;korenarka;;👵;Kořenářka čte objednávku od lékárníka. „Heřmánek a mateřídouška. To mám, toho je plná půda.“;-dopis_korenarka korenarka_doruceno razitko
+?;korenarka;!@tabak;👵;Kořenářka ti podá hrst sušeného listí. „Na hastrmana. Když kouří, nehlídá. Pod jednou pokličkou má dušičku, už léta. Mohl bys ji pustit.“;+tabak
+?;korenarka;;👵;Kořenářka věší byliny. „Hastrman není zlý, jen lakomý.“;
+?;zpet;;🏮;Hajná tě s lucernou doprovodí přes slatě zpátky na kraj vsi.;!pres cekej
+tabak;korenarka;;👵;„To je pro hastrmana, ne pro mě. Já nekouřím.“;
+dopis_hastrman;hajna;;👩‍🌾;„Pro hastrmana? Ten sedí na vrbě u tůně. Na druhé straně slatí.“;
+dopis_hajna;korenarka;;👵;„To je pro hajnou. Sedí u lucerny.“;
+dopis_korenarka;hajna;;👩‍🌾;„Pro kořenářku. To je ta s bylinkami.“;
+dopis_hajna;hastrman;;🐸;„Hajná? Ta bydlí na samotě. Jdi za lucernou, ne za holkama.“;
+dopis_korenarka;hastrman;;🐸;„Kořenářka bydlí na samotě. Ta mi dává tabák, když je hodná.“;
+napoveda;*;!pres !hajna_doruceno;💡;Sleduj světla. Bludičky po každém tahu přeskočí, lucerna hajné zůstane na místě.;
+napoveda;*;!@tabak !dusicka_volna;💡;Kořenářka na samotě má něco, co hastrmana zaměstná.;
+napoveda;*;;💡;Když hastrman kouří, nehlídá hrnky. Pod pokličkami je, co ti vzal, a dušička starého pošťáka.;
+*;zpet;;🏮;Nejdřív to dej někomu na samotě.;
+*;vrba;;🌳;Vrba to nepotřebuje.;
+*;svetlo1;;✨;Světýlku se nic nedává. Za světlem se jde.;
+*;svetlo2;;✨;Světýlku se nic nedává. Za světlem se jde.;
+*;svetlo3;;✨;Světýlku se nic nedává. Za světlem se jde.;
+*;svetlo4;;✨;Světýlku se nic nedává. Za světlem se jde.;
+*;*;;🤷;Nic se nestane.;

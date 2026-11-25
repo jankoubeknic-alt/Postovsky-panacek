@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Mlha 2: hustá mlha a celý Mlhov z roku 1910, namodralý a tichý -->
+  <style>.m { animation: plyn 11s ease-in-out infinite alternate; } @keyframes plyn { to { transform: translateX(-16px); } } @media (prefers-reduced-motion: reduce) { .m { animation: none; } }</style>
+  <rect width="300" height="400" fill="#DDE5EA" opacity=".55"/>
+  <g fill="#B9C6D2" stroke="#8C9CAC" stroke-width="1.5" opacity=".9">
+    <path d="M34 182V150L64 126L94 150V182Z"/><path d="M200 192V160L232 136L264 160V192Z"/><path d="M118 132V100L150 78L182 100V132Z"/>
+  </g>
+  <g fill="#F2E3A8" opacity=".85"><rect x="44" y="156" width="10" height="10"/><rect x="74" y="156" width="10" height="10"/><rect x="212" y="166" width="10" height="10"/><rect x="138" y="106" width="10" height="10"/></g>
+  <path d="M244 192v-20h14v20" fill="#7A6A5A" opacity=".6"/>
+  <text x="150" y="146" font-family="Georgia, serif" font-size="6" fill="#5E6E7A" text-anchor="middle" opacity=".9">C. K. POŠTA MLHOV</text>
+  <g class="m" fill="#FFFFFF" opacity=".6"><ellipse cx="80" cy="220" rx="110" ry="18"/><ellipse cx="240" cy="280" rx="100" ry="16"/><ellipse cx="140" cy="360" rx="140" ry="22"/><ellipse cx="150" cy="60" rx="140" ry="20"/></g>
+</svg>

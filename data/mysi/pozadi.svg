@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Myší Lhoty z pohledu obra: radnice z dózy na cukr, domky z krabic od bot, švadlenčina dílna
+       z krabičky od sirek, studna z hrnku, za laťkovým plotem kocour. Dole kraj pošťákovy obří boty. -->
+  <rect width="300" height="400" fill="#D9E8DC"/>
+  <path d="M0 150C80 140 220 144 300 150V400H0Z" fill="#B9D3A2"/>
+  <g fill="#9CBF86"><path d="M0 150l6-22 6 22zM20 150l5-16 5 16zM270 150l6-24 6 24zM290 150l5-14 5 14z"/></g>
+  <!-- radnice z dózy na cukr -->
+  <rect x="122" y="58" width="56" height="56" rx="8" fill="#F4F2EC" stroke="#9C9A94" stroke-width="1.5"/>
+  <rect x="118" y="50" width="64" height="10" rx="4" fill="#C9C5BC"/>
+  <circle cx="150" cy="46" r="5" fill="#C9C5BC"/>
+  <text x="150" y="122" font-family="Georgia, serif" font-size="6" fill="#6B6B6B" text-anchor="middle">CUKR · RADNICE</text>
+  <!-- domky z krabic od bot -->
+  <rect x="8" y="94" width="60" height="30" fill="#C98A5A"/>
+  <rect x="8" y="88" width="62" height="8" fill="#B07A4A"/>
+  <rect x="232" y="96" width="60" height="30" fill="#7A9CC9"/>
+  <rect x="230" y="90" width="64" height="8" fill="#6A8AB9"/>
+  <g fill="#FFFDF4"><rect x="20" y="102" width="6" height="6"/><rect x="50" y="102" width="6" height="6"/><rect x="246" y="104" width="6" height="6"/><rect x="274" y="104" width="6" height="6"/></g>
+  <!-- dílna z krabičky od sirek -->
+  <rect x="26" y="210" width="40" height="24" fill="#E2B23A" stroke="#9C6A22" stroke-width="1"/>
+  <rect x="26" y="218" width="40" height="8" fill="#B5402F"/>
+  <!-- studna z hrnku -->
+  <path d="M220 206h40l-4 34h-32z" fill="#F4F2EC" stroke="#4A6A9C" stroke-width="2"/>
+  <path d="M260 214q12 2 10 12t-12 8" fill="none" stroke="#4A6A9C" stroke-width="2"/>
+  <ellipse cx="240" cy="206" rx="20" ry="4" fill="#6FA3B8"/>
+  <!-- náves a myší díry -->
+  <ellipse cx="150" cy="260" rx="70" ry="20" fill="#E4D6B6"/>
+  <g fill="#3B332E"><path d="M10 296a10 10 0 0 1 20 0z"/><path d="M120 330a8 8 0 0 1 16 0z"/><path d="M180 310a7 7 0 0 1 14 0z"/></g>
+  <!-- laťkový plot a za ním kraj kočičího světa -->
+  <g fill="#E8DCC0" stroke="#9C8A6A" stroke-width="1"><rect x="196" y="282" width="10" height="70"/><rect x="212" y="282" width="10" height="70"/><rect x="228" y="282" width="10" height="70"/><rect x="244" y="282" width="10" height="70"/><rect x="260" y="282" width="10" height="70"/><rect x="276" y="282" width="10" height="70"/><rect x="292" y="282" width="10" height="70"/></g>
+  <path d="M190 300H300M190 336H300" stroke="#9C8A6A" stroke-width="3"/>
+  <!-- obří bota pošťáka -->
+  <path d="M-10 400C-10 370 20 356 70 360S130 380 132 400Z" fill="#3B332E"/>
+  <path d="M10 372q30-8 60-4" fill="none" stroke="#5E5650" stroke-width="2"/>
+</svg>

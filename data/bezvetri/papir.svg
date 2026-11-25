@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Dopis uvízl na korouhvičce -->
+  <rect x="160" y="18" width="18" height="12" fill="#FFFDF4" stroke="#5B4A6E" stroke-width="1" transform="rotate(14 169 24)"/>
+  <path d="M160 18l9 7 9-5" fill="none" stroke="#5B4A6E" stroke-width=".8" transform="rotate(14 169 24)"/>
+</svg>

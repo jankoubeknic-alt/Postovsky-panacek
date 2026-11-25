@@ -1,0 +1,9 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Vlevo je Nová Ves, vpravo Stará Ves. Vlajka vpravo = pošťák je na straně Staré Vsi.
+id;jmeno;ikona;x;y;skryt_kdyz
+hruska;Hrušeň na čáře;🍐;50;16;
+novy;Starosta Nové Vsi;🧑‍💼;20;36;
+stary;Starosta Staré Vsi;👴;80;36;
+celnik;Celník;👮;50;54;
+maruska;Maruška;👩;20;72;
+tonda;Tonda;👨;80;72;

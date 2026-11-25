@@ -1,0 +1,76 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Kašovice: slova jsou karty. Hrnec se zastaví, jen když ho hráč nejdřív osloví „Hrnečku!“ (vlajka osloven) a pak mu řekne „Dost!“.
+# Honza s lžící sní kaši (kase=0), aby byla vidět hospoda a škola.
+karta;cil;podminka;vyraz;text;efekt
+?;hrnec;zastaveno;🍲;Hrnec stojí na okně pod pokličkou a tiše odpočívá. Kaši už nevaří ani na požádání.;
+?;hrnec;osloven;🍲;Hrnec nadzvedl pokličku a poslouchá. Čeká, co mu řekneš.;
+?;hrnec;;🍲;Hrnec stojí na okně a bublá. Kaše z něj teče jako z kopce. Na volání nereaguje, jen spokojeně mlaská.;
+?;maminka;!@var;👩;Maminka sedí na lavici obalená kaší. „Řekla jsem mu: Hrníčku, vař! A on vaří. Jak se zastavuje, ví jen Mařenka a babička.“ Zopakuje ti obě slova, ať je máš.;+var +hrnicku
+?;maminka;pohled_doruceno;👩;„Mařenka píše, že mu babička říká zdrobněle, ale správně,“ přemýšlí maminka. „Já myslela, že hrníček je zdrobněle. A když už má kaše dost… co tím myslela?“;
+?;maminka;;👩;„Mařenka je u babičky v lese,“ povzdechne maminka. „Snad mi napíše, jak se ten hrnec zastavuje.“;
+?;honza;lzice_doruceno kase>0;😋;Honza nabírá obří lžící a kaše mizí. Za chvíli je náves čistá až k hospodě. „Ještě přidat?“;kase=0
+?;honza;lzice_doruceno;🧑;Honza drží obří lžíci a vyhlíží, kdy přiteče další kaše.;
+?;honza;;🧑;Honza stojí u kaše a polyká sliny. „Snědl bych ji všechnu. Ale nemám čím. Lžíci jsem si objednal z katalogu a pořád nejde.“;
+?;brucoun;!@hrnci;👴;Sedlák Bručoun utekl před kaší na střechu stodoly. „Řval jsem na něj celé dopoledne: Hrnci, stačí! Hrnci, stačí! A nic.“;+hrnci +staci
+?;brucoun;;👴;„Hrnci, stačí!“ hulákne Bručoun ze střechy. Hrnec nic. „Vidíš? Hluchej.“;
+?;ucitel;!@prestan;👨‍🏫;Pan řídící si otírá brýle od kaše. „Zkoušel jsem: Přestaň! Jako na Honzu u oběda. Nezabralo to.“;+prestan
+?;ucitel;pravidla_doruceno;👨‍🏫;Pan řídící listuje v Pravidlech. „Dejte mi jakékoli slovo a já vám řeknu, jak se píše správně.“;
+?;ucitel;;👨‍🏫;„Kdybych měl Pravidla, opravil bych celou ves,“ povzdechne pan řídící. „Ale pošta je ještě nedonesla.“;
+?;hospodska;!@dost;👩‍🦰;„Ještě jedno?“ volá Bručoun ze střechy. Hospodská Dostálová se opře v bok. „Už dost, Bručoune!“ To slovo si zapíšeš.;+dost
+?;hospodska;;👩‍🦰;Hospodská utírá půllitry. „Kdo má dost, ten má dost. To říkám já, to říkala babička Mařenky a to říkala i moje máma.“;
+napoveda;*;!zastaveno !lzice_doruceno kase>=2;💡;Kaše zavalila dolní ves. Kdo by ji mohl sníst? Honza čeká na lžíci.;
+napoveda;*;!zastaveno !pohled_doruceno;💡;Mařenka maminku poslala pohled. Možná v něm stojí, jak hrnec zastavit.;
+napoveda;*;!zastaveno !@hrnecku !pravidla_doruceno;💡;Hrnec chce zdrobněle, ale správně. Kdo ve vsi ví, jak se co správně řekne? Bez Pravidel to ale neví jistě.;
+napoveda;*;!zastaveno !@hrnecku;💡;Dej panu řídícímu oslovení hrnce, ať ho opraví podle Pravidel.;
+napoveda;*;!zastaveno !@dost;💡;„A když už má kaše dost…“ Kdo ve vsi říká to slovo nejčastěji?;
+napoveda;*;!zastaveno;💡;Nejdřív hrnec osloví, pak mu řekni, co babička. Dvě slova po sobě: Hrnečku! a Dost!;
+napoveda;*;!lzice_doruceno;💡;Lžíce je pro Honzu.;
+napoveda;*;!noviny_doruceno;💡;Hostinské listy jsou pro hospodskou. Pokud je hospoda pod kaší, ať Honza jí.;
+napoveda;*;;💡;Doruč, co zbývá v brašně.;
+dost;hrnec;osloven;🤐;„Hrnečku… dost!“ Hrnec cvakne pokličkou a zmlkne. Poslední kapka kaše skápne z okna. Celá ves si oddechne. Slova už nepotřebuješ, vyhodíš lístky.;zastaveno hrnec_zastaven ikona:hrnec:🫕 razitko -var -hrnicku -hrnci -hrnecku -staci -prestan -dost
+dost;hrnec;;🍲;„Dost!“ Hrnec bublá dál. Neví, že mluvíš na něj. Nejdřív ho musíš oslovit.;
+hrnecku;hrnec;;👂;„Hrnečku!“ Hrnec zpozorní a cvakne pokličkou. Poslouchá. Teď mu řekni, co má udělat.;osloven
+hrnicku;hrnec;;😤;„Hrníčku?“ Hrnec se načepýří. „Já nejsem hrníček! Hrníček má ouško a pije se z něj kakao. Já jsem hrnec. Babička mi říká zdrobněle, ale správně.“ A vaří dál.;!osloven
+hrnci;hrnec;;😡;„HRNCI?!“ Hrnec se urazí a začne vařit dvakrát rychleji. Kaše vyšplouchne až ke škole.;!osloven kase=3
+var;hrnec;;🥳;„Vař?“ Hrnec radostně zabublá a vyvalí takovou várku, že kaše dosáhne až ke školnímu plotu.;!osloven kase=3
+staci;hrnec;osloven;😏;„Stačí?“ Hrnec se zachichotá. „Kaše nikdy nestačí. Babička říká jiné slovo. Krátké, to, co se říká v hospodě.“ A vaří dál.;!osloven
+staci;hrnec;;🍲;„Stačí!“ Hrnec ani nenadzvedne pokličku. Neoslovil jsi ho.;
+prestan;hrnec;osloven;😒;„Přestaň?“ Hrnec uraženě bublá. „Tak se mluví na zlobivé děti, ne na hrnce. Babička mi říká jiné slovo.“;!osloven
+prestan;hrnec;;🍲;„Přestaň!“ Hrnec bublá dál. Kdo by to byl, kdo na něj volá?;
+hrnicku;ucitel;pravidla_doruceno;👨‍🏫;Pan řídící nalistuje Pravidla. „Hrníček je od hrnku. Od hrnce je hrneček. A pátý pád? Hrnečku! Výborně, jednička.“ Opraví ti lístek.;-hrnicku +hrnecku
+hrnicku;ucitel;;👨‍🏫;„Hrníčku? Hm. Něco mi na tom nesedí. Bez Pravidel si netroufnu. Zrovna mi je veze pošta.“;
+hrnci;ucitel;pravidla_doruceno;👨‍🏫;„Hrnci. Pátý pád, gramaticky správně, ale hrubě. Kdo chce, aby ho hrnec poslechl, řekne mu zdrobněle: hrnečku.“ Opraví ti lístek.;-hrnci +hrnecku
+hrnci;ucitel;;👨‍🏫;„Hrnci, pátý pád. Snad správně. Ale bez Pravidel bych za to nedal ruku do ohně. Ani do kaše.“;
+hrnecku;ucitel;;👨‍🏫;„Hrnečku. Zdrobnělina od hrnce, pátý pád. Správně a hezky. S tím bych šel k hrnci.“;
+var;ucitel;;👨‍🏫;„Vař. Rozkazovací způsob od slovesa vařit. Správně. Bohužel.“;
+dost;ucitel;;👨‍🏫;„Dost. Příslovce. Krátké a jasné. To by mohlo zabrat.“;
+staci;ucitel;;👨‍🏫;„Stačí. Sloveso, třetí osoba. Na hrnec moc zdvořilé.“;
+prestan;ucitel;;👨‍🏫;„Přestaň? To je moje slovo, to říkám Honzovi. Na hrnec nezabralo.“;
+var;maminka;;👩;„Vař, vař. To jsem řekla já. A teď máme kaši až po komín.“;
+dost;maminka;;👩;„Dost? Dost! To je ono! Tak to říkala babička. Jen nevím, jak na hrnec zavolat, aby věděl, že mluvím na něj.“;
+hrnicku;maminka;;👩;„Hrníčku, tak mu říkám já. Ale nějak ho to nebere.“;
+hrnecku;maminka;;👩;„Hrnečku… to zní jako od babičky,“ rozzáří se maminka.;
+hrnci;brucoun;;👴;„Hrnci! Tak se na něj musí, zhurta,“ hulákne Bručoun. Hrnec dál vaří.;
+dost;brucoun;;👴;„Dost? Mně nikdy nic není dost,“ zabručí Bručoun. „Ani kaše.“;
+staci;brucoun;;👴;„Stačí! Stačí! Hrnci, stačí!“ Bručoun ochraptěl a hrnec vaří dál.;
+dost;hospodska;;👩‍🦰;„Moje slovo,“ přikývne hospodská. „Ale musíš vědět, komu ho říkáš. Já ho říkám vždycky Bručounovi.“;
+hrnci;hospodska;;👩‍🦰;„Hrnci? Tak mluví jen Bručoun. Hrnec je slušnej, s tím se musí hezky.“;
+prestan;honza;;🧑;Honza přestane žvýkat. Pak zase začne. „Na mě to říká pan řídící. Na hrnec ne.“;
+var;honza;;😋;„Vař!“ zajásá Honza. „Ještě, ještě!“ Kdo jiný by se radoval.;
+*;hrnec;;🍲;Hrnec bublá. Věci ho nezajímají, poslouchá jen slova.;
+pohled;maminka;;👩;Maminka čte nahlas: „Mami, nezapomeň, babička mu říká hezky zdrobněle, ale správně, jak nás učí pan řídící. A když už má kaše dost…“ Dál je pohled umazaný od kaše.;-pohled pohled_doruceno razitko
+pohled;*;;🏞️;„Pohled od Mařenky? To je pro maminku.“;
+lzice;honza;;😋;Honza rozbalí obří lžíci a hned se pustí do kaše. Mlask, mlask. Náves je za chvíli čistá.;-lzice lzice_doruceno kase=0 ikona:honza:😋 razitko
+lzice;*;;🥄;„Obří lžíce? To si objednal Honza. Kdo jiný.“;
+noviny;hospodska;;👩‍🦰;Hospodská si listy založí pod pult. „Jak poznat, že má host dost? To já poznám i bez novin.“;-noviny noviny_doruceno razitko
+noviny;*;;📰;„Hostinské listy patří do hospody U Hrnce.“;
+pravidla;ucitel;;👨‍🏫;Pan řídící obejme Pravidla jako starého přítele. „Teď mi dejte jakékoli slovo a opravím vám ho.“;-pravidla pravidla_doruceno ikona:ucitel:🧐 razitko
+pravidla;brucoun;;👴;„Pravidla? Já žádný pravidla nedodržuju,“ zabručí Bručoun ze střechy.;
+pravidla;*;;📕;„Pravidla pravopisu patří panu řídícímu do školy.“;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,6 @@
+id;nazev;druh;ikona;adresa;popis
+povoleni;Povolení k obchůzce;dopis;📜;Strakáč, vůdce průvodu;S razítkem obecního úřadu. Bez něj se průvod nesmí nikde zastavit.
+dopis_kovar;Dopis pro kováře;dopis;✉️;Pan kovář;Z banky. Připomínka splátky za novou kovadlinu.
+dopis_mlynar;Dopis pro mlynáře;dopis;✉️;Pan mlynář;Od vodoprávního úřadu. Jez prý musí být o píď nižší.
+dopis_pekar;Dopis pro pekaře;dopis;✉️;Pan pekař;Od tchyně. Přijede na celý půst.
+dopis_ucitel;Dopis pro pana učitele;dopis;✉️;Pan řídící učitel;Ze školního inspektorátu. Inspekce přijede ve čtvrtek.

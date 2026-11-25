@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Martinova: listopadová ves u městské brány, holé stromy, šedé nebe a blátivá cesta. -->
+  <rect width="300" height="400" fill="#B9C0C6"/>
+  <rect y="250" width="300" height="150" fill="#8A7E66"/>
+  <rect x="110" y="70" width="80" height="120" fill="#9A8A74"/><path d="M130 190V130a20 20 0 0 1 40 0v60z" fill="#4A3A2E"/>
+  <g stroke="#5A4A3A" stroke-width="4"><path d="M30 250V170M30 190l-14-16M30 200l14-18M270 250V180M270 200l-14-14M270 210l12-16"/></g>
+  <g fill="#7A6A5A"><rect x="20" y="300" width="50" height="40"/><rect x="230" y="300" width="50" height="40"/></g>
+</svg>

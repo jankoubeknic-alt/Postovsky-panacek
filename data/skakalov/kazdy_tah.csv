@@ -1,0 +1,16 @@
+# Myslivec doběhne tam, kde byl pes, a pes poskočí o kus dál: oves, louka, les a zase oves. Nastražený buřt psa zastaví.
+podminka;efekt;text
+!chycen pes=1;m=1;
+!chycen pes=2;m=2;
+!chycen pes=3;m=3;
+!chycen pes=3;pes=0;
+!chycen pes<3;pes+1;
+!chycen pes=1 navnada1;chycen !navnada1;Alík přiskočil k ovsu, ucítil buřt a sedl si. Žere a péro pustil do trávy.
+!chycen pes=2 navnada2;chycen !navnada2;Alík přiběhl na louku, ucítil buřt a zastavil se. Žere a péro pustil.
+!chycen pes=3 navnada3;chycen !navnada3;Alík vběhl do lesa, ucítil buřt a sedl si. Žere a péro pustil do mechu.
+!chycen pes=1;;Alík skočil přes oves. Myslivec funí za ním.
+!chycen pes=2;;Alík skáče přes zelenou louku. Myslivec za ním.
+!chycen pes=3;;Alík zmizel v lese. Myslivec za ním.
+chycen !m_dobehl pes=1;m=1 m_dobehl;Myslivec doběhl k Alíkovi a padl do trávy.
+chycen !m_dobehl pes=2;m=2 m_dobehl;Myslivec doběhl k Alíkovi a padl do trávy.
+chycen !m_dobehl pes=3;m=3 m_dobehl;Myslivec doběhl k Alíkovi a opřel se o strom.

@@ -1,0 +1,43 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Floriánov: požár přeskakuje po větru o dům za tah (o1 až o4). Mokrý dům (m2 až m4) tři tahy nechytne. Hasiči potřebují poplach a klíč a hasí dva tahy po odemčení.
+karta;cil;podminka;vyraz;text;efekt
+?;studna;!@vedro;🪣;Natočíš plné vědro studené vody.;+vedro
+?;studna;;🪣;Vědro už máš plné.;
+vedro;kovarna;;💨;Chrstneš vodu do plamenů kovárny. Zasyčí to, ale oheň je moc velký. Na tohle je potřeba stříkačka.;-vedro
+?;kovarna;;🔥;Kovárna hoří jako pochodeň. Vítr nese jiskry doprava.;
+vedro;truhlarna;o2=1;🔥;Chrstneš vodu do plamenů. Je to kapka v moři. Tohle uhasí jen stříkačka.;-vedro
+vedro;truhlarna;;💧;Polevíš truhlárnu vodou. Trámy jsou mokré a chvíli nechytnou.;-vedro m2=3 ikona:truhlarna:💧
+?;truhlarna;o2=1;🔥;Truhlárna hoří!;
+?;truhlarna;m2>0;💧;Truhlárna je mokrá od vody. Zatím drží.;
+?;truhlarna;;🪚;Truhlárna je plná suchých prken. Ta by chytla raz dva.;
+vedro;chalupa;;💧;Polevíš chalupu vodou. Trámy jsou mokré a chvíli nechytnou.;-vedro m3=3 ikona:chalupa:💧
+?;chalupa;m3>0;💧;Chalupa Vávrových je mokrá od vody. Zatím drží.;
+?;chalupa;;🏡;Z chalupy Vávrových se ozývá chrápání. Babička spí jako dudek.;
+vedro;fara;;💧;Polevíš faru vodou. Trámy jsou mokré a chvíli nechytnou.;-vedro m4=3 ikona:fara:💧
+?;fara;m4>0;💧;Fara je mokrá od vody. Zatím drží.;
+?;fara;;⛪;Na faře je klid. Pan farář je v hospodě s hasiči.;
+?;zvonice;poplach;🔔;Zvon už bije na poplach.;
+?;zvonice;;🔔;Rozhoupeš zvon na poplach. Z hospody se vyhrnou hasiči v uniformách a s pivem v ruce. Velitel křičí: „Zbrojnice je zamčená! Kdo má klíč?“;poplach
+?;florian;;🗿;Pod sochou svatého Floriána klečí sousedka a modlí se: „Svatý Floriáne, ochraňuj náš dům, zapal jiný.“ Pak si uvědomí, co řekla, a zčervená.;
+dopis_starosta;starosta;;🎩;Starosta čte, že dotace na stříkačku nebude. Pak zvedne hlavu a vidí kouř. „Hoří? Proboha! Tady je klíč od zbrojnice, utíkej!“;-dopis_starosta starosta_doruceno +klic razitko
+?;starosta;starosta_doruceno;🎩;Starosta běhá s kbelíkem sem a tam.;
+?;starosta;;🎩;Starosta se dívá na kouř. „Hoří? Klíč od zbrojnice mám u sebe, ale nejdřív pošta, ta je úřední!“;
+klic;velitel;;🧑‍🚒;Velitel odemkne zbrojnici. „Stříkačku ven! K rybníku! Hadice!“ Hasiči vyrazí.;-klic hasi=2
+?;velitel;hasi>0;🧑‍🚒;Velitel řve rozkazy. Hasiči pumpují.;
+?;velitel;;🧑‍🚒;„Zbrojnice je zamčená a klíč má starosta! Bez stříkačky jsme jen chlapi s pivem.“;
+klic;starosta;;🎩;„Ten je pro hasiče! Utíkej!“;
+vedro;florian;;🗿;Socha svatého Floriána drží vlastní věderko a hasí kamenný domek. Tvoje voda se jinde hodí víc.;
+vedro;velitel;;🧑‍🚒;„Vědrem to neuhasíš. Potřebujeme stříkačku a ta je zamčená.“;
+vedro;starosta;;🎩;„Vodu na domy, ne na starostu!“;
+dopis_starosta;velitel;;🧑‍🚒;„Pro starostu? Ten má klíč! Utíkej za ním!“;
+napoveda;*;!poplach;💡;Hasiči jsou v hospodě. Zvon na zvonici je vyburcuje.;
+napoveda;*;!starosta_doruceno;💡;Klíč od zbrojnice má starosta. Nejdřív chce poštu.;
+napoveda;*;;💡;Když oheň míří na další dům, polij ho vodou. Mokrý dům chvíli nechytne.;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,64 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Nová Ves: vlajka vpravo říká, na které straně čáry pošťák je. Celník převádí přes čáru (napeti+1). Řádky „přes čáru“ jsou nahoře, aby chytily všechno.
+karta;cil;podminka;vyraz;text;efekt
+?;celnik;vpravo;👮;Celník zvedne závoru a ty přejdeš zpátky do Nové Vsi. Z oken Staré Vsi se za tebou dívají přimhouřené oči.;!vpravo napeti+1
+?;celnik;;👮;Celník si prohlédne tvou brašnu, zvedne závoru a pustí tě do Staré Vsi. Z oken Nové Vsi se za tebou dívají přimhouřené oči.;vpravo napeti+1
+?;stary;!vpravo;👴;Starosta Staré Vsi stojí za čárou s rukama za zády. Přes čáru s tebou mluvit nebude.;
+?;tonda;!vpravo;👨;Tonda ti z druhé strany čáry mává a ukazuje na Marušku.;
+?;novy;vpravo;🧑‍💼;Starosta Nové Vsi stojí za čárou a dělá, že tě nevidí.;
+?;maruska;vpravo;👩;Maruška ti z druhé strany čáry posílá vzdušné polibky pro Tondu.;
+?;hruska;hruska_spolecna;🍐;Hrušeň na čáře se prohýbá pod hruškami. Poprvé za sto let je sklidí obě strany spolu.;
+?;hruska;;🍐;Hrušeň roste přesně na čáře. Hrušky z ní padají na obě strany a nikdo je nesbírá, aby si to druzí nevyložili špatně.;
+?;novy;hruska_spolecna;🧑‍💼;Starosta Nové Vsi si mne ruce. „Půl hrušně je naše. Ta lepší půlka.“;
+?;novy;;🧑‍💼;Starosta Nové Vsi měří čáru pravítkem. „Hrušeň stojí o dva centimetry víc u nás. To ví každý.“;
+?;stary;hruska_spolecna;👴;Starosta Staré Vsi si mne ruce. „Půl hrušně je naše. Ta sladší půlka.“;
+?;stary;;👴;Starosta Staré Vsi natírá svou půlku plotu. „Hrušeň zasadil můj děda. Na naší straně. Čára se posunula.“;
+?;maruska;;👩;Maruška sedí na své straně čáry a vyšívá ubrus pro dva. „Táta Tondu nesnáší. Kvůli hrušce!“;
+?;tonda;;👨;Tonda sedí na své straně čáry a ladí harmoniku. „Táta říká, že si nevezmu nikoho odtamtud. Kvůli hrušce!“;
+napoveda;*;napeti>=4;💡;Napětí je vysoko. Přes čáru už choď jen tehdy, když musíš.;
+napoveda;*;!katastr_n;💡;Rozhodnutí o hrušni musí orazítkovat oba starostové. Začni u starosty Nové Vsi, jsi na jeho straně.;
+napoveda;*;!hruska_spolecna;💡;Starosta Nové Vsi razítko dal. Teď dones rozhodnutí přes čáru starostovi Staré Vsi. Celník tě pustí.;
+napoveda;*;!pozvanka_n_doruceno !pozvanka_s_doruceno;💡;Hrušeň je společná. Teď už starostové svatební oznámení přijmou. Rozmysli si, ať nemusíš přes čáru zbytečně.;
+napoveda;*;!pozvanka_n_doruceno;💡;Oznámení pro starostu Nové Vsi ještě čeká.;
+napoveda;*;!pozvanka_s_doruceno;💡;Oznámení pro starostu Staré Vsi ještě čeká.;
+napoveda;*;;💡;Celník si už deset let přeje přetřít čáru. Dej mu barvu.;
+*;stary;!vpravo;👴;Podat něco přes čáru? Celník zapíská a ty ucukneš.;
+*;tonda;!vpravo;👨;Podat něco přes čáru? Celník zapíská a ty ucukneš.;
+*;novy;vpravo;🧑‍💼;Podat něco přes čáru? Celník zapíská a ty ucukneš.;
+*;maruska;vpravo;👩;Podat něco přes čáru? Celník zapíská a ty ucukneš.;
+katastr;novy;katastr_s;🥳;Starosta Nové Vsi si přečte rozhodnutí. „Hrušeň patří oběma obcím napůl. A Starý už to orazítkoval?“ Bouchne razítkem. „Tak ať je po sporu. Ale tu lepší půlku chci já.“;-katastr katastr_n hruska_spolecna razitko
+katastr;novy;katastr_n;🧑‍💼;„Já už jsem razítkoval. Teď ať si to přečte ten za čárou.“;
+katastr;novy;;🧑‍💼;Starosta Nové Vsi rozhodnutí přečte dvakrát. „Napůl? No dobrá. Ale jen když to podepíše i ten za čárou.“ Bouchne razítkem a vrátí ti ho.;katastr_n
+katastr;stary;katastr_n;🥳;Starosta Staré Vsi si přečte rozhodnutí a vidí razítko z Nové Vsi. „Napůl? On to podepsal? Tak já taky. Ale tu sladší půlku chci já.“;-katastr katastr_s hruska_spolecna razitko
+katastr;stary;katastr_s;👴;„Já už jsem razítkoval. Teď ať si to přečte ten za čárou.“;
+katastr;stary;;👴;Starosta Staré Vsi rozhodnutí přečte a zamračí se. „Napůl? Jen když to podepíše i ten za čárou.“ Bouchne razítkem a vrátí ti ho.;katastr_s
+katastr;celnik;;👮;„Rozhodnutí o hrušni? To musí orazítkovat oba starostové. Já jen hlídám čáru.“;
+katastr;maruska;;👩;„O hrušni! Dej to tátovi. Prosím, ať to podepíše.“;
+katastr;tonda;;👨;„O hrušni! Dej to tátovi. Prosím, ať to podepíše.“;
+katastr;hruska;;🍐;Hrušeň rozhodnutí nepřečte. Ale jedna hruška ti spadne na hlavu, jako by souhlasila.;
+pozvanka_n;novy;hruska_spolecna;🥹;Starosta Nové Vsi si přečte oznámení a utře si oko. „Moje Maruška a Tonda odtamtud. No co, hrušeň je teď společná, tak ať je i svatba.“;-pozvanka_n pozvanka_n_doruceno ikona:novy:😊 razitko
+pozvanka_n;novy;;😠;„Svatba s někým odtamtud? Dokud stojí ta hrušeň na čáře, nikdy!“ Křičí to tak, že to slyší i za čárou.;napeti+1
+pozvanka_s;stary;hruska_spolecna;🥹;Starosta Staré Vsi si přečte oznámení a zatahá se za knír. „Tonda a Maruška odtamtud. No co, když je hrušeň napůl, ať je napůl i rodina.“;-pozvanka_s pozvanka_s_doruceno ikona:stary:😊 razitko
+pozvanka_s;stary;;😠;„Můj Tonda a někdo odtamtud? Dokud se nevyřeší hrušeň, nikdy!“ Křičí to tak, že to slyší i za čárou.;napeti+1
+pozvanka_n;stary;;😠;„Oznámení pro toho tam? Ukazuj mi to tady, a vypukne válka!“;napeti+2
+pozvanka_s;novy;;😠;„Oznámení pro toho tam? Ukazuj mi to tady, a vypukne válka!“;napeti+2
+pozvanka_n;maruska;;👩;„To je pro tátu. Já vím, že se beru!“;
+pozvanka_s;maruska;;👩;„To je pro Tondova tátu. Ten je za čárou.“;
+pozvanka_n;tonda;;👨;„To je pro Maruščina tátu. Ten je za čárou.“;
+pozvanka_s;tonda;;👨;„To je pro tátu. Ať se nezlobí!“;
+pozvanka_n;celnik;;👮;„Svatební oznámení? To já nedoručuju. Já jen hlídám.“;
+pozvanka_s;celnik;;👮;„Svatební oznámení? To já nedoručuju. Já jen hlídám.“;
+barva;celnik;pozvanka_n_doruceno pozvanka_s_doruceno;🥳;Celník otevře kbelík, vezme štětku a přetře čáru na zeleno. Po sto letech není poznat, kde končí Nová Ves a začíná Stará. Závoru odnese do kůlny.;-barva cara_zrusena razitko
+barva;celnik;;👮;„Zelená barva! Deset let na ni čekám. Ale přetřít čáru můžu, až budou souhlasit oba starostové.“;
+barva;novy;;🧑‍💼;„Barva? Na čáru? Ještě ne!“;
+barva;stary;;👴;„Barva? Na čáru? Ještě ne!“;
+barva;hruska;;🍐;Natřít hrušeň na zeleno? Je zelená dost.;
+*;*;;🤷;Nic se nestane.;

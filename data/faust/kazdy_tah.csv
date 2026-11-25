@@ -1,0 +1,4 @@
+# Vdova čte dopis od sestry tři podání a mezitím z díry nevyhlíží.
+podminka;efekt;text
+cte=1;cte=0;Vdova dočetla dopis od sestry a zase vystrčila hlavu do díry.
+cte>1;cte-1;

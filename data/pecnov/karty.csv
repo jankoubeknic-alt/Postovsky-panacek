@@ -1,0 +1,10 @@
+id;nazev;druh;ikona;adresa;popis
+rada_viden;Psaní z Vídně;dopis;✉️;Mladý pecař, Pecnov;Od starého pecaře: Každá pec stojí na kamenech. Bez nich je všechno ostatní k ničemu.
+rada_brno;Psaní z Brna;dopis;✉️;Mladý pecař, Pecnov;Od starého pecaře: Na kameny se dává hlína a pořádně se udusá. To je pod pece.
+rada_linec;Psaní z Lince;dopis;✉️;Mladý pecař, Pecnov;Od starého pecaře: Klenba z cihel. Ale jen na udusaném podu, jinak se propadne.
+rada_praha;Psaní z Prahy;dopis;✉️;Mladý pecař, Pecnov;Od starého pecaře: Komín až nakonec. Na hotovou klenbu, ať do ní neprší.
+kamen;Kameny;vec;🪨;;Plochý lomový kámen. Těžký.
+hlina;Hlína;vec;🟫;;Mazlavá žlutá hlína. Dusá se dřevěnou paličkou.
+cihly;Cihly;vec;🧱;;Pálené cihly, ještě teplé z cihelny.
+roura;Komínová roura;vec;🔩;;Plechová roura od klempíře.
+chleba;První chleba;vec;🍞;Babička, Pecnov;Upečený v nové peci. Kůrka křupe.

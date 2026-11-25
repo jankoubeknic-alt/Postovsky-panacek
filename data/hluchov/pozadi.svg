@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Hluchova: nahoře tabule s přepisem telegramu, vlevo pošta s telefonním drátem, vpravo hospoda,
+       uprostřed ulice s ploty, vlevo dílna švadleny, vpravo kostelík, dole posed a babiččina chalupa. -->
+  <rect width="300" height="400" fill="#DCE7E4"/>
+  <path d="M0 110C50 92 100 100 150 94S250 86 300 100V180H0Z" fill="#A9C1A2"/>
+  <path d="M0 130C70 118 130 124 190 118S270 114 300 122V180H0Z" fill="#94B08C"/>
+  <path d="M0 160H300V400H0Z" fill="#B9CC9C"/>
+  <!-- tabule na dvou sloupcích -->
+  <g fill="#7A5A3A"><rect x="72" y="80" width="6" height="34"/><rect x="222" y="80" width="6" height="34"/></g>
+  <rect x="56" y="12" width="188" height="74" rx="3" fill="#8A6440"/>
+  <rect x="61" y="17" width="178" height="64" fill="#2F4A3E"/>
+  <text x="150" y="28" font-family="Georgia, serif" font-size="6.5" letter-spacing="1.5" fill="#BFD0C6" text-anchor="middle">TELEGRAM PRO SLYŠELOVOU – PŘEPIS</text>
+  <path d="M70 31H230" stroke="#4E6A5D" stroke-width="1"/>
+  <rect x="200" y="80" width="18" height="3" fill="#EDE8D8"/>
+  <!-- pošta s telefonním sloupem -->
+  <rect x="0" y="122" width="78" height="50" fill="#F1E6CC"/>
+  <path d="M-6 126L39 98L84 126Z" fill="#9A4B36"/>
+  <rect x="10" y="132" width="44" height="9" fill="#E2A03A"/>
+  <text x="32" y="139" font-family="Georgia, serif" font-size="6" fill="#4A2E10" text-anchor="middle">POŠTA</text>
+  <g fill="#9DB5C8" stroke="#9A4B36" stroke-width="1.5"><rect x="12" y="148" width="14" height="14"/><rect x="40" y="148" width="14" height="14"/></g>
+  <path d="M92 172V104M86 108H98" stroke="#6B4A36" stroke-width="3"/>
+  <path d="M60 112Q76 118 92 108Q150 132 300 116" fill="none" stroke="#4A3F33" stroke-width="1"/>
+  <!-- hospoda U Hlučných -->
+  <rect x="222" y="122" width="78" height="50" fill="#F0E2C8"/>
+  <path d="M216 126L261 98L306 126Z" fill="#7A3B2C"/>
+  <rect x="230" y="132" width="62" height="9" fill="#3B332E"/>
+  <text x="261" y="139" font-family="Georgia, serif" font-size="5.6" fill="#EDD9A8" text-anchor="middle">U HLUČNÝCH</text>
+  <g fill="#E8C877"><path d="M236 146h10v4h-10zM276 146h10v4h-10z"/></g>
+  <g fill="#9DB5C8" stroke="#7A3B2C" stroke-width="1.5"><rect x="234" y="150" width="14" height="14"/><rect x="274" y="150" width="14" height="14"/></g>
+  <!-- ulice -->
+  <path d="M126 400C130 330 136 250 140 172H160C164 250 170 330 176 400Z" fill="#E4D6B6"/>
+  <!-- ploty přes celou ves -->
+  <g stroke="#C9B28A" stroke-width="3">
+    <path d="M0 196H126M174 196H300"/>
+    <path d="M6 186v18M18 186v18M30 186v18M42 186v18M54 186v18M66 186v18M78 186v18M90 186v18M102 186v18M114 186v18"/>
+    <path d="M186 186v18M198 186v18M210 186v18M222 186v18M234 186v18M246 186v18M258 186v18M270 186v18M282 186v18M294 186v18"/>
+    <path d="M126 186v20M174 186v20"/>
+    <path d="M0 266H120M180 266H300"/>
+    <path d="M8 256v18M22 256v18M36 256v18M50 256v18M64 256v18M78 256v18M92 256v18M106 256v18"/>
+    <path d="M194 256v18M208 256v18M222 256v18M236 256v18M250 256v18M264 256v18M278 256v18M292 256v18"/>
+  </g>
+  <!-- dílna švadleny s figurínou ve výloze -->
+  <rect x="0" y="206" width="84" height="48" fill="#EFE3D2"/>
+  <path d="M-4 210L42 188L88 210Z" fill="#8A6A8E"/>
+  <rect x="44" y="216" width="30" height="26" fill="#C8DCE4" stroke="#8A6A8E" stroke-width="1.5"/>
+  <path d="M59 220a4 4 0 1 1 0 .1M53 226h12l3 14h-18z" fill="#FBF8F1" stroke="#C9C1AE" stroke-width=".8"/>
+  <!-- kostelík -->
+  <rect x="226" y="214" width="74" height="42" fill="#F2EEE4"/>
+  <path d="M222 216L263 196L304 216Z" fill="#6E7F8C"/>
+  <rect x="270" y="168" width="20" height="48" fill="#F2EEE4"/>
+  <path d="M266 170L280 146L294 170Z" fill="#6E7F8C"/>
+  <path d="M280 138v10M276 142h8" stroke="#C9A24A" stroke-width="1.6"/>
+  <circle cx="280" cy="184" r="5" fill="#C9A24A"/>
+  <rect x="236" y="230" width="12" height="20" rx="6" fill="#8A7A66"/>
+  <!-- posed na návsi -->
+  <g stroke="#7A5A3A" stroke-width="3"><path d="M222 352L232 296M262 352L252 296M226 330H258"/></g>
+  <rect x="224" y="282" width="36" height="18" fill="#9C7A52"/>
+  <path d="M220 284L242 270L264 284Z" fill="#6B4A36"/>
+  <!-- rybník s kachnami -->
+  <ellipse cx="248" cy="380" rx="50" ry="14" fill="#8DB6C2"/>
+  <g fill="#F2EEE4"><ellipse cx="232" cy="378" rx="5" ry="3"/><ellipse cx="258" cy="382" rx="5" ry="3"/></g>
+  <!-- babiččina chalupa s komínem -->
+  <rect x="8" y="296" width="96" height="50" fill="#F2E8D2"/>
+  <path d="M0 300L56 270L112 300Z" fill="#8C5A3A"/>
+  <rect x="80" y="268" width="10" height="20" fill="#8C5A3A"/>
+  <g fill="#9DB5C8" stroke="#8C5A3A" stroke-width="1.5"><rect x="20" y="308" width="16" height="16"/><rect x="74" y="308" width="16" height="16"/></g>
+  <rect x="46" y="314" width="16" height="32" fill="#7A5A3A"/>
+  <g fill="#E07A7A"><circle cx="24" cy="328" r="2.5"/><circle cx="30" cy="328" r="2.5"/><circle cx="80" cy="328" r="2.5"/><circle cx="86" cy="328" r="2.5"/></g>
+  <g fill="#F2C86A"><circle cx="120" cy="372" r="3"/><circle cx="190" cy="352" r="3"/><circle cx="40" cy="380" r="3"/></g>
+</svg>

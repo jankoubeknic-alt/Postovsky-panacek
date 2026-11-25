@@ -1,0 +1,6 @@
+# Krakonoš se po každém podání převleče: 1 houbař, 2 uhlíř, 3 poutník a zase houbař. Bouřka po hrubosti chvíli trvá.
+podminka;efekt;text
+k=3;k=0;
+k<3;k+1;
+bourka=1;bourka=0;Bouřka se přehnala přes hory. Na cestě se zase objevil poutník.
+bourka>1;bourka-1;Pořád hřmí a leje.

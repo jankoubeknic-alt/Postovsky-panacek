@@ -1,0 +1,65 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Pomlázkov: počítadlo den (1 čtvrtek, 2 pátek, 3 sobota, 4 pondělí) posouvá klepnutí na postel. Po pondělí je zase čtvrtek.
+# Každý den dovoluje něco jiného: pohled ze Říma jen v pátek a sobotu, vajíčka jen v sobotu, v pátek se nic nedává, koleda v pondělí.
+karta;cil;podminka;vyraz;text;efekt
+pomlazka;devcata;!den=4;👧;Děvčata utečou až za stodolu. „Ještě není pondělí! A šlehat má kluk, ne pošťák.“;
+kraslice;kluci;;👦;„Kraslice se nedávají, ty se vykoledují! Dej je děvčatům.“;
+vajicka;hospodyne;;👩‍🌾;„Vajíček mám dost. Ty patří babičce na barvení.“;
+pohled_rim;deda;;👴;Děda si prohlédne kopuli. „Zvony píšou? To za mých časů nedělaly.“;
+rehtacka;devcata;;👧;„Hrkat chodí kluci. My budeme koledu čekat.“;
+slupky;hospodyne;;👩‍🌾;„Slupky ti nepotřebuju zpátky. Nes je babičce.“;
+prouti;kluci;;👦;„Proutí neumíme splést. Děda umí z osmi.“;
+?;spani;;🛏️;Jdeš spát. Ráno je zase o den víc.;noc cekej
+pohled_rim;kostelnik;den=1;⛪;Kostelník se podívá na věž. „Zvony tam přece visí. Odletí až večer. Ten pohled je nějak brzo.“;
+pohled_rim;kostelnik;den=4;⛪;„V sobotu jsme zpátky? Vždyť už jsou doma a zvoní. Tohle přišlo pozdě. Nech si ho na příští rok.“;
+pohled_rim;kostelnik;;⛪;Kostelník čte pohled a culí se. „Doletěly v pořádku! Tak to jsem rád.“ Pohled si připíchne na dveře sakristie.;-pohled_rim pohled_doruceno razitko
+?;kostelnik;den=1;⛪;Kostelník naposledy zvoní. „Dneska večer odletí zvony do Říma. Do soboty bude ticho.“;
+?;kostelnik;den=4;🔔;Kostelník zvoní, až se věž třese. „Jsou zpátky!“;
+?;kostelnik;;⛪;Kostelník sedí pod prázdnou věží. „Zvony jsou v Římě. Kdyby aspoň napsaly.“;
+rehtacka;kluci;den=4;👦;„Dneska zvoní zvony. Řehtačka by byla k smíchu.“;
+rehtacka;kluci;;👦;Kluci popadnou řehtačku a hrkají po vsi. „Hrkáme, hrkáme, zvony nám odletěly!“;-rehtacka hrkaji
+pomlazka;kluci;;👦;Kluci pomlázku schovají za dveře. „Na pondělí! To bude koleda.“;-pomlazka pomlazka_u_kluku
+?;kluci;koleda;👦;Kluci počítají kraslice. „Hody, hody, doprovody!“;
+?;kluci;den=4 pomlazka_u_kluku kraslice_u_devcat;🎋;Kluci vyrazí s pomlázkou ke děvčatům. „Hody, hody, doprovody, dejte vejce malovaný!“ Děvčata ječí a dávají kraslice.;koleda
+?;kluci;den=4 pomlazka_u_kluku;👦;Kluci stojí s pomlázkou u děvčat. „Kraslice nemaj. Nemaj co dát. Tak co s tím?“;
+?;kluci;den=4;👦;„Pondělí, a my nemáme pomlázku! Děda by uměl, ale potřebuje proutí.“;
+?;kluci;den=3 hrkaji !vajicka_vybrana;👦;Kluci hrkají od stavení ke stavení a hospodyně jim dávají vajíčka za hrkání. Půlku ti dají. „Ať je babička obarví pro děvčata!“;+vajicka vajicka_vybrana
+?;kluci;hrkaji !vajicka_vybrana;👦;„Hrkáme! A v sobotu se za hrkání vybírají vajíčka.“;
+?;kluci;hrkaji;👦;Kluci hrkají, až se psi schovávají.;
+?;kluci;;👦;„Zvony odletí a my nemáme řehtačku. Děda by ji udělal.“;
+kraslice_mokre;devcata;;👧;„Jsou mokré, rozmažou se nám. Ať přes noc uschnou.“;
+kraslice;devcata;;👧;Děvčata kraslice schovají do košíku. „Na pondělí pro kluky. Ať nám to šlehání stojí za to.“;-kraslice kraslice_u_devcat
+?;devcata;koleda;👧;Děvčata si zavazují pentle, které jim kluci uvázali na pomlázku.;
+?;devcata;den=4 pomlazka_u_kluku kraslice_u_devcat;🎋;Děvčata vyhlédnou a už jsou tu kluci s pomlázkou. Ječí, utíkají a pak rozdají kraslice.;koleda
+?;devcata;kraslice_u_devcat;👧;Děvčata hlídají košík s kraslicemi. „Až v pondělí!“;
+?;devcata;;👧;„Na pondělí nemáme kraslice. Babička umí barvit, ale chce vajíčka a slupky.“;
+?;deda;!@rehtacka !hrkaji;👴;Děda vytáhne z kůlny řehtačku. „Dělal jsem ji ještě tátovi. Ať kluci hrkají, když zvony odletí.“;+rehtacka
+?;deda;;👴;„Pomlázku splete každý, ale z osmi prutů jen já. Přines proutí z vrby.“;
+prouti;deda;;👴;Děda splete z osmi prutů pomlázku a uváže na ni mašli. „Pro kluky. Ať šlehají zlehka.“;-prouti +pomlazka
+?;vrba;!@prouti !@pomlazka !pomlazka_u_kluku;🌿;Nařežeš osm pružných vrbových prutů.;+prouti
+?;vrba;;🌿;Vrba u potoka raší kočičky.;
+dopis_hospodyne;hospodyne;;👩‍🌾;Hospodyně čte recept na mazanec. „S mandlemi! To zkusím.“;-dopis_hospodyne hospodyne_doruceno razitko
+?;hospodyne;den=2;👩‍🌾;„Na Velký pátek se z domu nic nedává. Ani slupky. Přijď zítra.“;
+?;hospodyne;!@slupky !slupky_u_babicky !kraslice_hotove;👩‍🌾;Hospodyně ti dá hrst cibulových slupek. „Na barvení. Zrovna jsem krájela na mazanec.“;+slupky
+?;hospodyne;;👩‍🌾;Hospodyně peče. „Mazanec musí být hotový do soboty.“;
+slupky;babicka;vajicka_u_babicky;👵;Babička vaří vajíčka ve slupkách a pak do nich vyškrábe vzorky. Ještě musí přes noc uschnout.;-slupky +kraslice_mokre kraslice_hotove
+slupky;babicka;;👵;„Slupky mám. Ještě vajíčka. Ty se v sobotu vyhrkají.“;-slupky slupky_u_babicky
+vajicka;babicka;slupky_u_babicky;👵;Babička vaří vajíčka ve slupkách a pak do nich vyškrábe vzorky. Ještě musí přes noc uschnout.;-vajicka +kraslice_mokre kraslice_hotove
+vajicka;babicka;;👵;„Vajíčka mám. Ještě cibulové slupky, ty má hospodyně.“;-vajicka vajicka_u_babicky
+?;babicka;;👵;„Barvím ve slupkách jako za mlada. Přines vajíčka a slupky.“;
+napoveda;*;!hrkaji;💡;Kluci potřebují řehtačku, než se vrátí zvony. Děda ji má v kůlně.;
+napoveda;*;!pohled_doruceno den=1;💡;Pohled od zvonů dává smysl, až když zvony odletí. Vyspi se.;
+napoveda;*;!vajicka_vybrana;💡;Vajíčka se vyhrkají v sobotu. Do té doby se dá splést pomlázka a sehnat slupky.;
+napoveda;*;;💡;Kraslice musí uschnout přes noc. V pondělí je potřeba pomlázka u kluků a kraslice u děvčat.;
+*;spani;;🛏️;Tohle se dá dělat i ve spánku, ale lepší je dát to někomu.;
+*;kostelnik;;⛪;„Tohle do kostela nepatří.“;
+*;kluci;;👦;„Co s tím? My chceme hrkat a koledovat.“;
+*;devcata;;👧;„To nechceme.“;
+*;*;;🤷;Nic se nestane.;

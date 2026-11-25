@@ -1,0 +1,12 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Dítě a jeho stromeček stojí na stejném místě. Když dítě odejde nebo usne, místo něj je vidět stromeček.
+id;jmeno;ikona;x;y;skryt_kdyz
+pepik;Pepík v okně;👦;18;30;pepik_venku
+strom_pepik;Stromeček u Pepíků;🎄;18;30;!pepik_venku
+anca;Anča pod stromkem;👧;82;30;anca_v_kostele
+strom_anca;Stromeček u Anči;🎄;82;30;!anca_v_kostele
+pernikar;Perníkář;🧑‍🍳;82;56;
+tonik;Toník u pasti;🧒;30;58;tonik_spi
+strom_tonik;Stromeček u Toníka;🎄;30;58;!tonik_spi
+babicka;Babička Toníka;👵;56;66;
+strom;Strom na návsi;🌲;50;86;

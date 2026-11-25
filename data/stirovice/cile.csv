@@ -1,0 +1,14 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+id;jmeno;ikona;x;y;skryt_kdyz
+babicka;Babička;👵;14;14;
+kostelnik;Kostelník;⛪;38;14;
+jirik;Jiřík s drakem;👦;62;14;
+hajny;Hajný;🧔;86;14;
+k1;Kámen;🪨;14;50;hotovo_stir
+k2;Kámen;🪨;38;50;hotovo_uzovka
+k3;Kámen;🪨;62;50;hotovo_ropucha
+k4;Kámen;🪨;86;50;hotovo_jesterka
+k5;Kámen;🪨;14;70;hotovo_uzovka
+k6;Kámen;🪨;38;70;hotovo_stir
+k7;Kámen;🪨;62;70;hotovo_jesterka
+k8;Kámen;🪨;86;70;hotovo_ropucha

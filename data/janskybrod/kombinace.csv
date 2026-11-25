@@ -1,0 +1,45 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Jánský Brod: převážení loďkou jako vlk, koza a zelí. Dopis (lv) nesmí zůstat bez pošťáka s drbnou (přečte ho) ani s kozou (sežere ho).
+karta;cil;podminka;vyraz;text;efekt
+?;drbna_L;!pv;🛶;Posadíš drbnu do loďky a odrazíš od břehu. Za chvíli jste oba na druhém břehu.;pv dv cekej
+?;drbna_L;;👵;Drbna Hyková je na druhém břehu. Nejdřív se pro ni musíš vrátit.;
+?;drbna_P;pv;🛶;Posadíš drbnu do loďky a převezeš ji zpátky.;!pv !dv cekej
+?;drbna_P;;👵;Drbna Hyková je na druhém břehu.;
+?;koza_L;!pv;🛶;Posadíš kozu do loďky a odrazíš od břehu. Za chvíli jste oba na druhém břehu.;pv kv cekej
+?;koza_L;;🐐;Koza je na druhém břehu. Nejdřív se pro ni musíš vrátit.;
+?;koza_P;pv;🛶;Posadíš kozu do loďky a převezeš ji zpátky.;!pv !kv cekej
+?;koza_P;;🐐;Koza je na druhém břehu.;
+?;pecet_L;!pv;🛶;Vezmeš zapečetěný dopis do loďky a převezeš ho na druhý břeh.;pv lv cekej
+?;pecet_L;;📜;Dopis leží na druhém břehu. Nejdřív se pro něj musíš vrátit.;
+?;pecet_P;pv;🛶;Vezmeš dopis do loďky a převezeš ho zpátky.;!pv !lv cekej
+?;pecet_P;;📜;Dopis leží na druhém břehu.;
+?;lod_L;;🛶;Odrazíš s prázdnou loďkou a převesluješ na druhý břeh. Jen ty a voda.;pv cekej
+?;lod_P;;🛶;Vesluješ s prázdnou loďkou zpátky.;!pv cekej
+?;socha;;🗿;Svatý Jan Nepomucký stojí na pilíři strženého mostu a nad hlavou má pět hvězd. Je patronem mostů a tajemství. Prý dohlíží, aby nikdo nečetl, co mu nepatří.;
+?;prevoznik;;🧑‍🦯;Převozník si ovazuje nohu. „Loďka unese tebe a jednoho dalšího. Víc ne, to by se potopila. A pozor na Hykovou, ta přečte i mapu na zdi.“;
+dopis_prevoznik;prevoznik;;🧑‍🦯;Převozník čte z úřadu. „Most se postaví znovu! A do té doby si půjčuj loďku, jak potřebuješ.“;-dopis_prevoznik prevoznik_doruceno razitko
+?;farar;pv dv kv lv !farar_doruceno;⛪;Zvedneš dopis z břehu a podáš ho panu faráři. Pečeť je neporušená. „Díky. Tohle bylo psáno jen pro mě.“;farar_doruceno razitko
+?;farar;farar_doruceno;⛪;Pan farář čte list u okna. Co v něm je, se nikdo nedozví.;
+?;farar;;⛪;„Čekám dopis s pečetí. Doufám, že ho nikdo neotevře.“;
+?;sedlak;kv pv !koza_predana;🐐;Sedlák si odvede kozu na pastvu. „Ta mi bude dojit!“;koza_predana razitko
+?;sedlak;koza_predana;👨‍🌾;Sedlák spokojeně kouká na kozu.;
+?;sedlak;;👨‍🌾;Sedlák volá přes vodu: „Kozu sem! Ale pozor, ta sežere i noviny.“;
+dopis_dcera;dcera;pv;👩;Hykovic Marie si prohlíží pohled s Karlovým mostem. „To je přesně ta socha, co máme na pilíři!“;-dopis_dcera dcera_doruceno razitko
+dopis_dcera;dcera;;👩;Marie je na druhém břehu. Musíš se tam převézt.;
+?;dcera;;👩;Hykovic Marie objímá matku. „Mami, a nečetla jsi zase cizí psaní?“;
+dopis_dcera;drbna_L;;👵;Drbna natáhne ruku. „Pro mou Márinku? Dej, já jí ho předám.“ Rychle ho schováš. To by si ho přečetla cestou.;
+dopis_dcera;drbna_P;;👵;Drbna natáhne ruku. „Pro mou Márinku? Dej, já jí ho předám.“ Rychle ho schováš.;
+dopis_prevoznik;drbna_L;;👵;„Z úřadu? Co v tom stojí? No řekni!“ Neřekneš. Listovní tajemství.;
+dopis_prevoznik;koza_L;;🐐;Koza po obálce chňapne. Ucukneš právě včas.;
+dopis_dcera;koza_P;;🐐;Koza po pohledu chňapne. Ucukneš právě včas.;
+dopis_prevoznik;socha;;🗿;Svatý Jan mlčí. Dopis patří převozníkovi.;
+dopis_dcera;farar;;⛪;„To je pro Hykovic Marii. Ta bydlí na tomhle břehu.“;
+napoveda;*;;💡;Dopis nesmí zůstat sám s drbnou ani s kozou. Drbna s kozou spolu ale vydrží. Někdy je potřeba něco převézt zpátky.;
+*;*;;🤷;Nic se nestane.;

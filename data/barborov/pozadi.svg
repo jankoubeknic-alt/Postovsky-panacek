@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Barborova: zasněžená ves na začátku prosince, tři chalupy s okny, třešňový sad s holými stromy a malý kostelík. -->
+  <rect width="300" height="400" fill="#C9D3DE"/>
+  <rect y="260" width="300" height="140" fill="#EEF1F4"/>
+  <g fill="#A98B6A"><rect x="20" y="130" width="60" height="50"/><rect x="120" y="120" width="60" height="60"/><rect x="220" y="110" width="60" height="70"/></g>
+  <g fill="#7A3E2E"><path d="M14 132l36-28 36 28z"/><path d="M114 122l36-30 36 30z"/><path d="M214 112l36-32 36 32z"/></g>
+  <g fill="#F5D58A"><rect x="42" y="145" width="14" height="12"/><rect x="142" y="140" width="14" height="12"/><rect x="242" y="130" width="14" height="12"/></g>
+  <g stroke="#6A5040" stroke-width="3"><path d="M40 300v-40l-10-12M40 270l10-14M100 310v-36l-8-10M100 284l10-12M200 300v-40l-10-10M200 272l12-12"/></g>
+</svg>

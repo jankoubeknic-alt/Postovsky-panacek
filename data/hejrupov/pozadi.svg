@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Hejrupova: večerní náves, uprostřed na zemi dlouhý máj s věncem a stužkami, za ním hranice dříví na čarodějnice. Nebe se barví do oranžova. -->
+  <defs><linearGradient id="n" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E7FB0"/><stop offset=".6" stop-color="#F2B880"/></linearGradient></defs>
+  <rect width="300" height="400" fill="url(#n)"/>
+  <rect y="230" width="300" height="170" fill="#7FA866"/>
+  <path d="M0 250C80 238 200 262 300 244V400H0Z" fill="#6E995A"/>
+  <path d="M40 150L260 140" stroke="#9A7650" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#3F7A4A"><path d="M240 120l30 20-30 20z"/></g>
+  <g stroke-width="2"><path d="M200 142l-6 20" stroke="#D9534F"/><path d="M210 141l-4 22" stroke="#5BC0DE"/><path d="M220 141l-2 20" stroke="#F0AD4E"/></g>
+  <circle cx="200" cy="142" r="8" fill="none" stroke="#3F7A4A" stroke-width="3"/>
+  <g fill="#8B6A4A"><path d="M130 250L150 205L170 250Z"/></g>
+</svg>

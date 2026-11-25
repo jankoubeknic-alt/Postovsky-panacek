@@ -1,0 +1,11 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+id;jmeno;ikona;x;y;skryt_kdyz
+kovarna;Kovárna;🏚️;14;24;
+truhlarna;Truhlárna;🪚;38;24;
+chalupa;Chalupa Vávrových;🏡;62;24;
+fara;Fara;⛪;86;24;
+studna;Studna;🪣;16;54;
+zvonice;Zvonice;🔔;50;54;
+florian;Socha sv. Floriána;🗿;84;54;
+starosta;Starosta;🎩;30;82;
+velitel;Velitel hasičů;🧑‍🚒;70;82;!poplach

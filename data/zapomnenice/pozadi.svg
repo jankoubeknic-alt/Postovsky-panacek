@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Dolní Zapomněnice: uprostřed zvonice, vlevo kostel, vpravo větrný mlýn,
+       dole náves se šňůrou na prádlo a studna. Na plotě visí lístečky, kdo kde bydlí. -->
+  <rect width="300" height="400" fill="#CFE3EA"/>
+  <path d="M0 120C60 100 120 112 180 104S260 96 300 108V200H0Z" fill="#A9C79A"/>
+  <path d="M0 150C80 136 200 146 300 140V400H0Z" fill="#B9D3A2"/>
+  <!-- zvonice -->
+  <rect x="136" y="30" width="28" height="120" fill="#E8DFCB"/>
+  <path d="M130 32L150 4L170 32Z" fill="#7A4A3A"/>
+  <rect x="140" y="40" width="20" height="26" fill="#5A4636"/>
+  <path d="M143 60q7-16 14 0z" fill="#D9A93A"/>
+  <!-- kostel -->
+  <rect x="14" y="110" width="104" height="70" fill="#F2ECDD"/>
+  <path d="M6 114L66 78L126 114Z" fill="#8C4A3A"/>
+  <path d="M52 180v-30a14 14 0 0 1 28 0v30z" fill="#6B4A36"/>
+  <g fill="#9DB5C8" stroke="#C9BFA6" stroke-width="1.5"><path d="M24 132v-8a6 6 0 0 1 12 0v8z"/><path d="M96 132v-8a6 6 0 0 1 12 0v8z"/></g>
+  <!-- mlýn -->
+  <path d="M212 180L220 110H248L256 180Z" fill="#D8C7A6"/>
+  <path d="M214 112L234 92L254 112Z" fill="#7A5A3A"/>
+  <g stroke="#6B4A36" stroke-width="4" stroke-linecap="round"><path d="M234 100L200 62M234 100L272 66M234 100L198 132M234 100L270 136"/></g>
+  <g fill="#F4EEE0" stroke="#6B4A36" stroke-width="1"><path d="M210 74l-10 10 12 12 8-8z"/><path d="M262 72l12 10-12 12-8-8z"/></g>
+  <circle cx="234" cy="100" r="5" fill="#5A4636"/>
+  <rect x="226" y="156" width="16" height="24" fill="#6B4A36"/>
+  <g fill="#F4EEE0"><rect x="250" y="166" width="12" height="14"/><rect x="262" y="170" width="10" height="10"/></g>
+  <!-- cesta a náves -->
+  <path d="M120 400C130 320 140 260 150 200H170C170 260 190 330 210 400Z" fill="#E4D6B6"/>
+  <path d="M0 214C60 206 120 210 150 204S250 200 300 210" fill="none" stroke="#E4D6B6" stroke-width="12"/>
+  <!-- plot s lístečky -->
+  <g stroke="#9C7A52" stroke-width="3"><path d="M8 236V214M28 236V214M48 236V214M68 236V214M88 236V214"/><path d="M4 220H92M4 230H92"/></g>
+  <g fill="#FFFDF4" stroke="#C9BFA6" stroke-width=".8"><rect x="14" y="216" width="10" height="8" transform="rotate(-8 19 220)"/><rect x="52" y="218" width="10" height="8" transform="rotate(6 57 222)"/><rect x="74" y="214" width="10" height="8" transform="rotate(-4 79 218)"/></g>
+  <!-- šňůra s prádlem -->
+  <path d="M92 236Q150 258 208 236" fill="none" stroke="#7A6A5A" stroke-width="1.5"/>
+  <g stroke="#7A6A5A" stroke-width="1"><rect x="104" y="240" width="12" height="16" fill="#F4C6C6"/><rect x="128" y="246" width="16" height="12" fill="#FFFFFF"/><rect x="176" y="244" width="12" height="16" fill="#C6DDF4"/></g>
+  <g stroke="#9C7A52" stroke-width="3"><path d="M92 236v60M208 236v60"/></g>
+  <!-- studna -->
+  <ellipse cx="240" cy="310" rx="30" ry="9" fill="#8C8A84"/>
+  <rect x="210" y="290" width="60" height="20" fill="#A8A49A"/>
+  <ellipse cx="240" cy="290" rx="30" ry="8" fill="#5E6E76"/>
+  <path d="M214 290V252M266 290V252M208 256L240 236L272 256Z" stroke="#6B4A36" stroke-width="3" fill="#8C4A3A"/>
+  <!-- girlanda ke svatbě -->
+  <path d="M0 196Q40 210 80 196T160 196T240 196T300 196" fill="none" stroke="#7A6A5A" stroke-width="1"/>
+  <g fill="#E07A7A"><path d="M18 200l4 8 4-8z"/><path d="M58 202l4 8 4-8z"/><path d="M98 200l4 8 4-8z"/><path d="M178 200l4 8 4-8z"/><path d="M258 200l4 8 4-8z"/></g>
+  <g fill="#F2C86A"><path d="M38 204l4 8 4-8z"/><path d="M118 204l4 8 4-8z"/><path d="M218 204l4 8 4-8z"/><path d="M278 202l4 8 4-8z"/></g>
+  <g fill="#E07A7A"><circle cx="30" cy="370" r="3"/><circle cx="270" cy="372" r="3"/><circle cx="60" cy="384" r="3"/></g>
+  <g fill="#F2C86A"><circle cx="40" cy="378" r="3"/><circle cx="258" cy="382" r="3"/></g>
+</svg>

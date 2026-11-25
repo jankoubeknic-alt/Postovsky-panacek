@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Výlovic: tři rybníky stupňovitě pod sebou zleva nahoře doprava dolů, mezi nimi hráze s duby a stavidly, dole řeka a ves. -->
+  <rect width="300" height="400" fill="#E4E6D8"/>
+  <ellipse cx="70" cy="80" rx="62" ry="34" fill="#7FA6B8"/>
+  <ellipse cx="150" cy="170" rx="66" ry="36" fill="#7FA6B8"/>
+  <ellipse cx="235" cy="260" rx="62" ry="34" fill="#7FA6B8"/>
+  <g stroke="#8B7A5A" stroke-width="8" stroke-linecap="round"><path d="M80 116L118 136M160 208L200 228"/></g>
+  <g fill="#6A8A4A"><circle cx="120" cy="120" r="12"/><circle cx="205" cy="212" r="12"/><circle cx="40" cy="140" r="14"/></g>
+  <path d="M250 296C260 330 220 360 260 400" stroke="#7FA6B8" stroke-width="10" fill="none"/>
+  <g fill="#B08C6A"><rect x="30" y="350" width="40" height="30"/><rect x="120" y="355" width="36" height="26"/></g>
+</svg>

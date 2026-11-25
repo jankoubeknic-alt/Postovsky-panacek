@@ -1,0 +1,16 @@
+klic;hodnota
+datum;2. V.
+start;noviny dopis_babicka balicek
+cil;noviny_doruceno dopis_doruceno balicek_doruceno psani_doruceno
+uvod;V Mňoukově mluví zvířata. Jenže lidi jim nerozumějí a myslí si, že jen mňoukají, bučí a kvíkají. Kocour Fousek utekl babičce Fouskové z domu. V neděli zmizela z kuchyně pečínka a všichni ukazují na něj.|Pošťák rozumí jenom lidem. Zvířatům porozumí, jen když mu bude překládat někdo, kdo umí obojí. Třeba kocour.
+navod;S kocourem v brašně rozumíš zvířatům. Kocour se bojí psů.
+konec_nadpis;Fousek je doma
+konec_text;Babička si psaní přečetla dvakrát. Pak pohladila Fouska, a protože byla hodná, pohladila i Hafana. Od neděle dostávají smetanu oba, každý do své misky. Kozel Mečoun si objednal další noviny, prý na psaní pamětí.|Brašna je prázdná. Fousek tě vyprovodil až k cestě a zamňoukal. Teď už bez překladu nevíš, jestli říkal děkuju, nebo ať zase přijdeš.
+pozadi;data/mnoukov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

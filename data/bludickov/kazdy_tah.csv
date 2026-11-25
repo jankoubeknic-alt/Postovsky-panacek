@@ -1,0 +1,6 @@
+# Bludičky přeskakují po každém tahu (počítadlo b, místa 1, 2 a 4). Lucerna na místě 3 svítí pořád. Hastrman kouří dvě podání.
+podminka;efekt;text
+b=3;b=0;
+b<3;b+1;
+kouri=1;kouri=0;Hastrman dokouřil, vyklepal dýmku a zase hlídá hrnky.
+kouri>1;kouri-1;

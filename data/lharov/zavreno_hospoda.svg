@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Hospoda je dokořán a na dveřích visí ZAVŘENO -->
+  <rect x="248" y="136" width="20" height="36" fill="#F2C86A" opacity=".85"/>
+  <path d="M268 136l10 4v36l-10-4z" fill="#6B4A36"/>
+  <rect x="240" y="124" width="32" height="10" rx="1.5" fill="#F4F1E8" stroke="#A04A4A" stroke-width="1"/>
+  <text x="256" y="131.5" font-family="Georgia, serif" font-size="5.4" font-weight="700" fill="#A04A4A" text-anchor="middle">ZAVŘENO</text>
+</svg>

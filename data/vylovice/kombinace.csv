@@ -1,0 +1,53 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Výlovice: tři rybníky nad sebou (h1 až h3). Otevřené stavidlo pustí po každém podání jednu míru dolů. Do plného rybníka voda nesmí a rybník bez lovu nesmí vyschnout.
+# Síť loví jen při vodě na jedné.
+karta;cil;podminka;vyraz;text;efekt
+?;horni;lov1 o1;🌊;Zavřeš stavidlo. Horní rybník už je vylovený.;!o1 ikona:horni:🐟
+?;horni;lov1;🌊;Otevřeš stavidlo. Horní rybník je vylovený a může vytéct.;o1 ikona:horni:🌊
+?;horni;o1;💧;Zavřeš stavidlo horního rybníka. Voda přestane téct.;!o1 ikona:horni:💧
+?;horni;;🌊;Otevřeš stavidlo horního rybníka. Voda bude po každém podání odtékat do prostředního.;o1 ikona:horni:🌊
+sit;horni;lov1;🐟;Horní rybník už je vylovený.;
+sit;horni;h1=1;🥅;Rybáři roztáhnou síť na lovišti a táhnou. V síti se mrská lín a spousta dalších. Horní rybník je vylovený!;+lin lov1 razitko
+sit;horni;;🌊;Je tu moc vody. Ryby utečou do hloubky a síť vytáhne jen bláto. Lovit se dá, až bude voda na jedné.;
+?;prostredni;lov2 o2;🌊;Zavřeš stavidlo. Prostřední rybník už je vylovený.;!o2 ikona:prostredni:🐟
+?;prostredni;lov2;🌊;Otevřeš stavidlo. Prostřední rybník je vylovený a může vytéct.;o2 ikona:prostredni:🌊
+?;prostredni;o2;💧;Zavřeš stavidlo prostředního rybníka. Voda přestane téct.;!o2 ikona:prostredni:💧
+?;prostredni;;🌊;Otevřeš stavidlo prostředního rybníka. Voda bude po každém podání odtékat do dolního.;o2 ikona:prostredni:🌊
+sit;prostredni;lov2;🐟;Prostřední rybník už je vylovený.;
+sit;prostredni;h2=1;🥅;Rybáři roztáhnou síť na lovišti a táhnou. V síti se mrská štika a spousta dalších. Prostřední rybník je vylovený!;+stika lov2 razitko
+sit;prostredni;;🌊;Je tu moc vody. Ryby utečou do hloubky a síť vytáhne jen bláto. Lovit se dá, až bude voda na jedné.;
+?;dolni;lov3 o3;🌊;Zavřeš stavidlo. Dolní rybník už je vylovený.;!o3 ikona:dolni:🐟
+?;dolni;lov3;🌊;Otevřeš stavidlo. Dolní rybník je vylovený a může vytéct.;o3 ikona:dolni:🌊
+?;dolni;o3;💧;Zavřeš stavidlo dolního rybníka. Voda přestane téct.;!o3 ikona:dolni:💧
+?;dolni;;🌊;Otevřeš stavidlo dolního rybníka. Voda bude po každém podání odtékat do řeky.;o3 ikona:dolni:🌊
+sit;dolni;lov3;🐟;Dolní rybník už je vylovený.;
+sit;dolni;h3=1;🥅;Rybáři roztáhnou síť na lovišti a táhnou. V síti se mrská kapr a spousta dalších. Dolní rybník je vylovený!;+kapr lov3 razitko
+sit;dolni;;🌊;Je tu moc vody. Ryby utečou do hloubky a síť vytáhne jen bláto. Lovit se dá, až bude voda na jedné.;
+kapr;kupec;;🧑‍💼;Kupec potěžká kapra. „Šupináč! Takových bych bral vůz.“;-kapr kapr_doruceno razitko
+stika;hospodsky;;🍺;Hospodský drží štiku za ocas. „Štika na másle! Dneska bude plno.“;-stika stika_doruceno razitko
+lin;farar;;⛪;Pan farář se usměje. „Lín na pátek. Biskupství bude spokojené.“;-lin lin_doruceno razitko
+dopis_kupec;kupec;;🧑‍💼;Kupec čte objednávku. „Kapry na Vánoce. Tak to budu potřebovat aspoň jednoho na ochutnání.“;-dopis_kupec kupec_doruceno razitko
+dopis_farar;farar;;⛪;Pan farář čte dopis z biskupství. „Pátek je postní. To se hodí, že je výlov.“;-dopis_farar farar_doruceno razitko
+?;porybny;;🎣;Porybný ukazuje na rybníky. „Vodu pouštěj odspodu, jinak praskne hráz. A lov, až je voda na jedné. Moc vody a ryby utečou, žádná voda a leží v bahně.“;
+?;kupec;;🧑‍💼;Kupec čeká na hrázi s káděmi. „Kapři jsou v dolním rybníku. Ty nejlepší.“;
+?;hospodsky;;🍺;„Štika je v prostředním. Ta se drží v hloubce.“;
+?;farar;;⛪;„Líni se drží nahoře, v horním rybníku.“;
+?;cekat;;🕰️;Chvíli čekáš na hrázi a díváš se na vodu.;cekej
+sit;porybny;;🎣;„Síť si nech, dokud se loví. Rybáři jdou s tebou.“;
+kapr;hospodsky;;🍺;„Kapra? Já chci štiku na másle.“;
+kapr;farar;;⛪;„Kapr je pro kupce. Já bych prosil lína.“;
+stika;kupec;;🧑‍💼;„Štika? Ta by mi v kádi sežrala kapry.“;
+lin;kupec;;🧑‍💼;„Lín je pro pana faráře na pátek.“;
+napoveda;*;!lov3;💡;Začni dolním rybníkem, ten teče do řeky. Až bude voda na jedné, zavři stavidlo a dej rybníku síť.;
+napoveda;*;!lov2;💡;Prostřední rybník může téct jen do dolního, který má volno. Lov zase při vodě na jedné.;
+napoveda;*;!lov1;💡;Horní rybník teče do prostředního. Ať má prostřední místo.;
+napoveda;*;;💡;Ryby a dopisy patří kupci, hospodskému a panu faráři.;
+*;cekat;;🕰️;Tohle se dá dát někomu.;
+*;*;;🤷;Nic se nestane.;

@@ -1,0 +1,8 @@
+# Straka krade každé druhé podání jednu lesklou věc, dokud je hnízdo na věži. Po slezení z věže vrátí hnízdo ukradené věci.
+podminka;efekt;text
+hnizdo_dole ukradeno_lzicky;+lzicky !ukradeno_lzicky;V hnízdě byly i tvoje lžičky.
+hnizdo_dole ukradeno_brejle;+brejle !ukradeno_brejle;V hnízdě byly i tvoje brýle.
+!hnizdo_dole;straka+1;
+straka>=2 @lzicky !hnizdo_dole;-lzicky ukradeno_lzicky straka=0;Fííí! Něco černobílého ti prolétlo kolem hlavy. Lžičky z brašny jsou pryč!
+straka>=2 @brejle !hnizdo_dole;-brejle ukradeno_brejle straka=0;Fííí! Něco černobílého ti prolétlo kolem hlavy. Brýle z brašny jsou pryč!
+straka>=2;straka=0;

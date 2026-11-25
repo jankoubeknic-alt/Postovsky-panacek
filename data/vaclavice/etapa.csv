@@ -1,0 +1,16 @@
+klic;hodnota
+datum;26. XII.
+start;dopis_strazny dopis_kovar dopis_vdova dopis_uhlir
+cil;strazny_doruceno kovar_doruceno vdova_doruceno uhlir_doruceno u_kaple
+uvod;Je mrazivá noc po Vánocích a z hradu vyšel kníže Václav. Na zádech nese dříví pro chudé: pro vdovu Dorotu a pro uhlíře v lese. Cesta vede od brány přes kovárnu až ke kapli a sníh je po kolena.|Pošťák má poštu na stejnou cestu. Říká se, že kdo šlape do Václavových šlépějí, tomu nemrznou nohy. Šlépěje jsou teplé, ale vítr je brzy zafouká.
+navod;Klepnutím na místo tam dojdeš, ale jen po šlépějích. Po každém tahu Václav popojde. Kde šlépěje zmizí, mrznou nohy.
+konec_nadpis;Teplé šlépěje
+konec_text;U kaple se kníže Václav otočí a usměje se. „Šel jsi v mých šlépějích, viď?“ Vdova má dříví i dopis, uhlíř taky a ves spí. Ráno všichni najdou ve sněhu dvoje stopy, velké a pošťácké, a sníh kolem nich je roztátý.|Brašna je prázdná. Nohy máš teplé, i když nevíš proč.
+pozadi;data/vaclavice/pozadi.svg
+barvy;
+pocitadla;v=1 p=1 f1=4 f2=0 f3=0 f4=0 f5=0 zima=0 pauza=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;zima:Zima:3
+prohra;zima>=3
+prohra_text;Šlépěje zavál sníh a pošťák zůstal stát v závěji. Nohy mu zmrzly tak, že musel domů a pošta počká do jara.|Zkus to znovu. Drž se šlépějí. Kde Václav šel před chvílí, tam je teplo.

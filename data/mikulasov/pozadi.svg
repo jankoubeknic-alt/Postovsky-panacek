@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Mikulášova: zimní večer, nahoře fara s rozsvíceným oknem, pod ní tři domky nad sebou podél zasněžené cesty. Padá sníh. -->
+  <rect width="300" height="400" fill="#2E3A5C"/>
+  <path d="M0 90H300V400H0Z" fill="#E8EDF3"/>
+  <path d="M150 90C120 150 190 200 140 260C110 300 170 340 150 400" stroke="#C9D3DE" stroke-width="22" fill="none"/>
+  <g fill="#9A7E62" stroke="#5A4634" stroke-width="2"><rect x="110" y="40" width="80" height="45"/></g><path d="M104 42L150 12L196 42Z" fill="#6A3A2E"/><rect x="142" y="55" width="16" height="16" fill="#F5D58A"/>
+  <g fill="#B08C6A" stroke="#5A4634" stroke-width="1.5"><rect x="10" y="155" width="20" height="22"/><rect x="10" y="243" width="20" height="22"/><rect x="10" y="331" width="20" height="22"/></g>
+  <g fill="#F5D58A"><rect x="16" y="161" width="8" height="8"/><rect x="16" y="249" width="8" height="8"/><rect x="16" y="337" width="8" height="8"/></g>
+  <g fill="#FFFFFF" opacity=".8"><circle cx="40" cy="30" r="1.5"/><circle cx="90" cy="60" r="1.2"/><circle cx="230" cy="40" r="1.6"/><circle cx="270" cy="70" r="1.2"/><circle cx="200" cy="20" r="1"/></g>
+</svg>

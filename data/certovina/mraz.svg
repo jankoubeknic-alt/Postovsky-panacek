@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kotel 2 a míň: Čertovina namodrale mrzne, ze střech visí rampouchy -->
+  <rect width="300" height="400" fill="#7FB3D9" opacity=".28"/>
+  <g fill="#E6F4FF" stroke="#9CC4E4" stroke-width=".8">
+    <path d="M6 108l4 14 4-14z"/><path d="M24 98l3 12 3-12z"/><path d="M70 98l4 16 4-16z"/><path d="M90 108l3 10 3-10z"/>
+    <path d="M208 172l4 14 4-14z"/><path d="M240 152l3 12 3-12z"/><path d="M284 164l4 16 4-16z"/>
+    <path d="M4 256l3 12 3-12z"/><path d="M60 248l4 14 4-14z"/>
+  </g>
+  <g fill="#FFFFFF" opacity=".7"><circle cx="150" cy="180" r="3"/><circle cx="40" cy="200" r="2"/><circle cx="260" cy="260" r="2"/><circle cx="100" cy="330" r="2"/><circle cx="210" cy="370" r="2"/></g>
+</svg>

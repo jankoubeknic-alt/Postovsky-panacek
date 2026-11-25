@@ -1,0 +1,9 @@
+id;nazev;druh;ikona;adresa;popis
+odpoved_marie;Odpověď;dopis;💌;Pro toho, kdo se zeptá;„Ano, vezmu si tě. Ale jen když přestaneš pod mým oknem troubit. Marie.“
+odpoved_vrana;Omluva;dopis;✉️;Pro toho, kdo si bude stěžovat;„Omlouvám se za tu kozu. Už ji budu hlídat. Sedlák Vrána.“
+odpoved_zelezarstvi;Dodací list;dopis;🧾;Pro toho, kdo si objedná;„Děkujeme za objednávku. Nový žebřík jsme vám už odeslali. Železářství Brod.“
+podekovani;Poděkování;pohled;🙏;Pro pošťáka;„Díky, pošťáku, žes nám dal všechno do pořádku. Starosta.“ Napsáno dnes ráno, dřív než jsi přišel.
+zadost;Žádost o ruku;dopis;💍;Slečna Marie, přízemí vpravo;„Marie, vezmeš si mě? Slibuju, že přestanu troubit. Učitel Troubil.“
+stiznost;Stížnost;dopis;📝;Sedlák Vrána;„Vaše koza mi sežrala mrkev. Celou. Farář Pšenička.“
+objednavka;Objednávka;dopis;📝;Železářství Brod;„Objednávám jeden žebřík. Spěchá! Kominík Saze, momentálně na střeše.“
+zebrik;Žebřík;balik;🪜;Kominík Saze;Odesláno dřív, než si ho kdo objednal. Železářství Brod dodává do Pozpátkova vždycky předem.

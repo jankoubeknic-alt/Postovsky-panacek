@@ -1,0 +1,14 @@
+# Přepis telegramu na tabuli: tři řádky podle počítadel kdo, kdy a s.
+obrazek;podminka
+data/hluchov/kdo0.svg;kdo=0
+data/hluchov/kdo1.svg;kdo=1
+data/hluchov/kdo2.svg;kdo=2
+data/hluchov/kdo3.svg;kdo=3
+data/hluchov/kdy0.svg;kdy=0
+data/hluchov/kdy1.svg;kdy=1
+data/hluchov/kdy2.svg;kdy=2
+data/hluchov/kdy3.svg;kdy=3
+data/hluchov/s0.svg;s=0
+data/hluchov/s1.svg;s=1
+data/hluchov/s2.svg;s=2
+data/hluchov/vune.svg;telegram_doruceno

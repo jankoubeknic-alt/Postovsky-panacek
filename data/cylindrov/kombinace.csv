@@ -1,0 +1,83 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Cylindrov: co spadne do cylindru, vyleze jako rým. Dvojice: lžíce-svíce, kytka-nitka, křídlo-mýdlo, klíč-míč, hůlka-půlka.
+# Kost, host a most jdou dokola: z kosti je host, z hosta most, z mostu zase kost.
+karta;cil;podminka;vyraz;text;efekt
+?;klobouk;;🐇;Z cylindru koukají dva králíci. „Já jsem Čáry,“ řekne jeden. „A já Máry,“ řekne druhý. „Co do klobouku spadne, to vyleze jako rým,“ řeknou spolu. „Čáry máry, z klíče míč!“;
+?;kouzelnik;predstaveni;🧙;Pokustón balí vůz a pobrukuje si. Čáry a Máry sedí v cylindru, kde mají být.;
+?;kouzelnik;hulka_doruceno dobrovolnik most_postaven;✨;Pokustón vystoupí na pódium. Publikum z obou břehů tleská, dobrovolník stojí vedle. Mávnutí hůlkou a z cylindru vyletí holubice, duha a nakonec Čáry a Máry s poklonou. Ovace!;predstaveni ikona:kouzelnik:🎉 ikona:klobouk:🎩 razitko
+?;kouzelnik;hulka_doruceno dobrovolnik;🧙;„Hůlku mám, dobrovolníka mám,“ počítá Pokustón. „Ale půlka vsi je za potokem a lávku vzala voda. Kdo by tak přestavěl most?“;
+?;kouzelnik;hulka_doruceno most_postaven;🧙;„Hůlku mám, publikum přichází po mostě,“ mne si ruce Pokustón. „Chybí mi jen dobrovolník. Kouzelník bez dobrovolníka je jen pán v klobouku.“;
+?;kouzelnik;hulka_doruceno;🧙;„Hůlku mám,“ říká Pokustón. „Ještě dobrovolníka z publika a samotné publikum. Polovina vsi je za potokem a lávku vzala povodeň.“;
+?;kouzelnik;;🧙;„Ztratil jsem cylindr, Čáry i Máry,“ naříká kouzelník. „A nová hůlka mi pořád nepřišla. Pozor na cylindr, kluci se v něm rýmují.“;
+?;farar;svice_doruceno;⛪;Farář zapálil svíci a v kostele je světlo. Lžíci ani nepostrádá.;
+?;farar;!@lzice;⛪;„Svíce mi došly,“ povzdechne farář. „Mám tu jen lžíci od polévky. Vezmi si ji, aspoň mi tu nebude ležet.“;+lzice
+?;farar;;⛪;„Bez svíce nebude večerní,“ říká farář. „Lžíci už máš, víc věcí nemám.“;
+?;kominik;mydlo_doruceno;🧑‍🏭;Kominík je čistý a cizí lidi ho ve vsi nepoznávají.;
+?;kominik;!@kridlo;🧑‍🏭;„Zase jsem černej až za ušima,“ povzdechne kominík. „Mýdlo nemám, jen husí křídlo na saze. Na, třeba se ti bude hodit.“;+kridlo
+?;kominik;;🧑‍🏭;Kominík sedí na střeše a čeká na zázrak. Křídlo už máš.;
+?;babicka;nitka_doruceno;👵;Babička šije kouzelníkovi nový plášť. Hvězdičky má vyšité červenou nití.;
+?;babicka;!@kytka;👵;„Kytek mám plné okno,“ říká babička. „Ale nitku ani jednu. Vezmi si tulipán, ať ti udělá radost.“;+kytka
+?;babicka;;👵;Babička navléká jehlu. Bez nitě. „Kytku už máš, víc jich nedám, potřebuju nitku.“;
+?;tonda;mic_doruceno;👦;Tonda hází míč a Punťa ho aportuje. Pak Punťa zahrabe míč a vyhrabe kost.;
+?;tonda;!@klic;👦;„Našel jsem ve studni klíč,“ říká Tonda. „Od ničeho. Radši bych měl míč. Klíč si vezmi.“;+klic
+?;tonda;;👦;Tonda kope do kamínku. „Klíč máš ty. Míč nemá nikdo.“;
+?;pes;mic_doruceno !@kost;🐕;Punťa přiběhne s míčem a pustí ho. Pak zahrabe a zase vyhrabe. Místo míče ti donese kost. Má jich zahrabaných plnou zahradu.;+kost
+?;pes;mic_doruceno;🐕;Punťa honí míč s Tondou. Kost už ti donesl.;
+?;pes;;🐕;Punťa leží u boudy a kouká na Tondu. Kdyby tak měli míč, honili by ho spolu.;
+?;potok;most_postaven;🌉;Po kamenném mostě chodí lidé z druhého břehu. Na představení.;
+?;potok;;🌊;Potok se valí. Lávku vzala povodeň a půlka vsi stojí na druhém břehu. Rádi by šli na představení.;
+napoveda;*;!@hulka !hulka_doruceno @pulka;💡;Půlka hůlky? To se rýmuje. Dej ji do klobouku ještě jednou.;
+napoveda;*;!hulka_doruceno;💡;Hůlka je pro kouzelníka. Do klobouku ji raději nedávej.;
+napoveda;*;!svice_doruceno;💡;Farář chce svíci a má lžíci. Na co se rýmuje lžíce?;
+napoveda;*;!nitka_doruceno;💡;Babička chce nitku a má kytku. Zkus klobouk.;
+napoveda;*;!mydlo_doruceno;💡;Kominík chce mýdlo a má křídlo. Čáry máry.;
+napoveda;*;!mic_doruceno;💡;Tonda chce míč a má klíč.;
+napoveda;*;!dobrovolnik;💡;Kouzelník potřebuje dobrovolníka z publika. Kost se rýmuje na host.;
+napoveda;*;!most_postaven;💡;Potřebuješ most. Na co se rýmuje host? A kde vzít hosta?;
+napoveda;*;;💡;Všechno je připravené. Klepni na kouzelníka.;
+kost;klobouk;;🐇;Kost spadne do klobouku. „Čáry máry, z kosti host!“ Z cylindru vyleze pán v buřince a zdvořile smekne. „Dobrý večer, kde je představení?“;-kost +host
+host;klobouk;;🐇;Host se ukloní a vleze do klobouku. „Čáry máry, z hosta most!“ Z cylindru vyjede malý kamenný most. Host se objeví na druhém břehu a mává.;-host +most
+most;klobouk;;🐇;„Čáry máry, z mostu kost!“ Most zmizí a z klobouku vypadne kost. Punťa zbystří.;-most +kost
+klic;klobouk;;🐇;„Čáry máry, z klíče míč!“ Z cylindru vyskočí kožený míč a odrazí se až ke komínu.;-klic +mic
+mic;klobouk;;🐇;„Čáry máry, z míče klíč!“ Míč zmizí a v klobouku cinkne rezavý klíč.;-mic +klic
+lzice;klobouk;;🐇;„Čáry máry, ze lžíce svíce!“ Z klobouku vyjede bílá svíce a sama se zapálí.;-lzice +svice
+svice;klobouk;;🐇;„Čáry máry, ze svíce lžíce!“ Svíce zhasne a z klobouku vypadne lžíce.;-svice +lzice
+kytka;klobouk;;🐇;„Čáry máry, z kytky nitka!“ Z cylindru se odvine cívka červené nitě.;-kytka +nitka
+nitka;klobouk;;🐇;„Čáry máry, z nitky kytka!“ Nit se smotá do tulipánu.;-nitka +kytka
+kridlo;klobouk;;🐇;„Čáry máry, z křídla mýdlo!“ Z klobouku vyletí bublina a za ní voňavé mýdlo.;-kridlo +mydlo
+mydlo;klobouk;;🐇;„Čáry máry, z mýdla křídlo!“ Mýdlo zmizí a z klobouku vypadne husí křídlo. Saze z něj práší.;-mydlo +kridlo
+hulka;klobouk;;🐇;„Čáry máry, z hůlky půlka!“ Z klobouku vypadne přesně půlka hůlky. Druhá půlka zůstala v rýmu.;-hulka +pulka
+pulka;klobouk;;🐇;„Čáry máry, z půlky hůlka!“ Půlka hůlky si v klobouku dorostla. Je zase celá.;-pulka +hulka
+hulka;kouzelnik;;🧙;Pokustón rozbalí novou hůlku a mávne. Nic se nestane. „Bez cylindru, Čáryho a Máryho je to jen klacík. Ale je nádherná!“;-hulka hulka_doruceno ikona:kouzelnik:🪄 razitko
+pulka;kouzelnik;;🧙;„Půlka hůlky? S tou zvládnu tak půl kouzla,“ zděsí se Pokustón. „Kde je zbytek? Nedal jsi ji náhodou do cylindru?“;
+host;kouzelnik;hulka_doruceno;🧙;Host vystoupí na pódium. „Dobrovolník z publika!“ zajásá Pokustón. „Výborně. Pane, stoupněte si sem a nic nedělejte. Jen se tvařte překvapeně.“;-host dobrovolnik razitko
+host;kouzelnik;;🧙;„Dobrovolník? Krásný,“ řekne Pokustón. „Ale bez hůlky ho nemám čím začarovat. Ať počká.“;
+host;farar;;⛪;Host se farářovi ukloní. „Představení je u vozu, pane,“ ukáže mu farář.;
+host;potok;;🌊;Host se podívá na rozvodněný potok. „Přes to? Bez mostu ne.“;
+svice;farar;;⛪;Farář zapálí svíci a sepne ruce. „Zázrak! Nebo rým. V Cylindrově je to totéž.“;-svice svice_doruceno ikona:farar:🕯️ razitko
+lzice;farar;;⛪;„Lžíce? Tu jsem ti dal. Na mši potřebuju svíci, ne polévku.“;
+nitka;babicka;;👵;Babička navlékne nit a hned začne šít. „Ušiju kouzelníkovi plášť s hvězdičkami. Ten jeho je samá díra.“;-nitka nitka_doruceno ikona:babicka:🧵 razitko
+kytka;babicka;;👵;„Kytku mám, chci nitku,“ usměje se babička. „Kytka se rýmuje, ale nešije.“;
+mydlo;kominik;;🧑‍🏭;Kominík se umyje v potoce. Vyleze z něj světlovlasý mladík, kterého nikdo ve vsi nezná. „To jsem já!“ směje se.;-mydlo mydlo_doruceno ikona:kominik:😁 razitko
+kridlo;kominik;;🧑‍🏭;„Křídlo mám dost, chci mýdlo,“ řekne kominík. „Křídlo jen víc maže.“;
+mic;tonda;;👦;Tonda kopne do míče a Punťa vystřelí za ním. Hrají si spolu po celé návsi.;-mic mic_doruceno ikona:tonda:⚽ razitko
+mic;pes;;🐕;Punťa míč chytí a přinese ho Tondovi. „Hraj se mnou!“ štěká. Tonda si míč vezme a hrají spolu.;-mic mic_doruceno ikona:tonda:⚽ razitko
+klic;tonda;;👦;„Klíč? Ten jsem ti dal. Já chci míč.“;
+kost;pes;;🐕;Punťa kost vezme, zahrabe ji a zase ti přinese jinou. Je to jeho hra.;
+kost;kouzelnik;;🧙;„Kost? Já potřebuju dobrovolníka,“ řekne Pokustón. „Co takhle dát ji do cylindru?“;
+most;potok;;🌉;Postavíš most přes potok. Drží jako přibitý. Po mostě se hned valí lidé z druhého břehu. Na představení.;-most most_postaven razitko
+most;kouzelnik;;🧙;„Most? Ten patří přes potok, ne na pódium.“;
+svice;babicka;;👵;„Svíce? Při té bych šila, kdybych měla čím. Ale ta je pro faráře, chudák sedí potmě.“;
+nitka;kominik;;🧑‍🏭;„Nit? Tou si saze nesmeju. Ta je pro babičku.“;
+mydlo;babicka;;👵;„Mýdlo mám. Kominík nemá. Podívej se na něj.“;
+klic;kouzelnik;;🧙;„Klíč? Od vozu mám vlastní. A tenhle je rezavý. Co z něj udělají Čáry a Máry?“;
+kytka;farar;;⛪;„Tulipán na oltář? Hezké. Ale potřebuju svíci. A tulipán je babiččin.“;
+*;potok;;🌊;Potok to odnese. Přes vodu se dá jen po mostě.;
+*;kouzelnik;;🧙;„To mi nepomůže. Potřebuju hůlku, dobrovolníka a publikum.“;
+*;*;;🤷;Nic se nestane. Ani rým.;

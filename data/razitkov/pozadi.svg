@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Razítkova: nahoře úřad se dvěma okénky, před ním lavička s cedulí, vlevo maminka, vpravo starosta,
+       dole babčina chalupa a Azorova bouda s nápisem KOČKA. Cedule polední přestávky je ve vrstvě. -->
+  <rect width="300" height="400" fill="#E4E6E0"/>
+  <path d="M0 150H300V400H0Z" fill="#C3CBA6"/>
+  <!-- úřad -->
+  <rect x="20" y="40" width="260" height="120" fill="#EDE7D6"/>
+  <path d="M12 44L150 12L288 44Z" fill="#7B6A5A"/>
+  <rect x="104" y="48" width="92" height="12" fill="#3B4A5A"/>
+  <text x="150" y="57" font-family="Georgia, serif" font-size="7" letter-spacing="1.5" fill="#E8E2CF" text-anchor="middle">OBECNÍ ÚŘAD</text>
+  <g fill="#D7CFBA"><rect x="20" y="66" width="260" height="4"/></g>
+  <!-- okénko 1 -->
+  <rect x="56" y="74" width="68" height="52" fill="#C8DCE4" stroke="#7B6A5A" stroke-width="2.5"/>
+  <rect x="62" y="110" width="56" height="14" fill="#B79C76"/>
+  <circle cx="90" cy="132" r="9" fill="#F4F1E8" stroke="#7B6A5A" stroke-width="1.5"/>
+  <text x="90" y="135.5" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#3B4A5A" text-anchor="middle">1</text>
+  <!-- okénko 2 -->
+  <rect x="176" y="74" width="68" height="52" fill="#C8DCE4" stroke="#7B6A5A" stroke-width="2.5"/>
+  <rect x="182" y="110" width="56" height="14" fill="#B79C76"/>
+  <circle cx="210" cy="132" r="9" fill="#F4F1E8" stroke="#7B6A5A" stroke-width="1.5"/>
+  <text x="210" y="135.5" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#3B4A5A" text-anchor="middle">2</text>
+  <!-- šipky jedna na druhou -->
+  <g fill="none" stroke="#A04A4A" stroke-width="1.6"><path d="M128 92Q150 82 172 92"/><path d="M172 104Q150 114 128 104"/></g>
+  <g fill="#A04A4A"><path d="M172 92l-6-4 1 6zM128 104l6 4-1-6z"/></g>
+  <rect x="140" y="128" width="20" height="32" fill="#7A5A3A"/>
+  <!-- schody -->
+  <g fill="#D7CFBA"><rect x="132" y="160" width="36" height="5"/><rect x="128" y="165" width="44" height="5"/></g>
+  <!-- cesta -->
+  <path d="M128 170H172L196 400H104Z" fill="#E6DCC4"/>
+  <!-- lavička s cedulí -->
+  <path d="M126 248h48M130 248v10M170 248v10M126 240h48" stroke="#8A6A4A" stroke-width="3"/>
+  <rect x="138" y="214" width="24" height="16" fill="#F4F1E8" stroke="#4A3F33" stroke-width="1"/>
+  <path d="M150 230v10" stroke="#6B6B6B" stroke-width="2"/>
+  <text x="150" y="221" font-family="Georgia, serif" font-size="4" font-weight="700" fill="#4A3F33" text-anchor="middle">SEZENÍ</text>
+  <text x="150" y="227" font-family="Georgia, serif" font-size="3.4" fill="#4A3F33" text-anchor="middle">S POVOLENÍM</text>
+  <!-- maminčin domek -->
+  <rect x="0" y="178" width="70" height="44" fill="#F2E6D6"/>
+  <path d="M-6 182L35 160L76 182Z" fill="#9A5A3A"/>
+  <rect x="12" y="192" width="14" height="14" fill="#9DB5C8" stroke="#9A5A3A" stroke-width="1.5"/>
+  <!-- obecní vývěska u starosty -->
+  <rect x="236" y="176" width="58" height="40" fill="#8A6440"/>
+  <rect x="240" y="180" width="50" height="32" fill="#F4F1E8"/>
+  <g fill="#C2564A"><circle cx="250" cy="190" r="4" opacity=".7"/><circle cx="270" cy="198" r="4" opacity=".7"/><circle cx="282" cy="186" r="4" opacity=".7"/></g>
+  <g fill="#7A5A3A"><rect x="246" y="216" width="4" height="20"/><rect x="280" y="216" width="4" height="20"/></g>
+  <!-- babčina chalupa -->
+  <rect x="6" y="292" width="96" height="52" fill="#F2E8D2"/>
+  <path d="M-2 296L54 266L110 296Z" fill="#8C5A3A"/>
+  <g fill="#9DB5C8" stroke="#8C5A3A" stroke-width="1.5"><rect x="18" y="306" width="16" height="16"/><rect x="72" y="306" width="16" height="16"/></g>
+  <rect x="46" y="312" width="16" height="32" fill="#7A5A3A"/>
+  <text x="54" y="290" font-family="Georgia, serif" font-size="5" fill="#4A3F33" text-anchor="middle">č. 12</text>
+  <!-- Azorova bouda -->
+  <rect x="236" y="320" width="48" height="32" fill="#B08A5A"/>
+  <path d="M230 322L260 300L290 322Z" fill="#7A5A3A"/>
+  <path d="M252 352v-16a8 8 0 0 1 16 0v16z" fill="#4A3628"/>
+  <rect x="242" y="324" width="36" height="9" fill="#F4F1E8"/>
+  <text x="260" y="330.6" font-family="Georgia, serif" font-size="5" font-weight="700" fill="#4A3F33" text-anchor="middle">KOČKA č. 7</text>
+  <g fill="#F2C86A"><circle cx="120" cy="372" r="3"/><circle cx="210" cy="384" r="3"/><circle cx="36" cy="380" r="3"/></g>
+</svg>

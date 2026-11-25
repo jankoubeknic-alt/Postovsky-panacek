@@ -1,0 +1,8 @@
+# Šipky na výhybkách: A nahoře (vlajka a_r), B vlevo (b_r), C vpravo (c_r). Bez vlajky ukazují doleva.
+obrazek;podminka
+data/trubkovice/a_l.svg;!a_r
+data/trubkovice/a_r.svg;a_r
+data/trubkovice/b_l.svg;!b_r
+data/trubkovice/b_r.svg;b_r
+data/trubkovice/c_l.svg;!c_r
+data/trubkovice/c_r.svg;c_r

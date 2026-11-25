@@ -1,0 +1,72 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# Čertovina: kotel stydne o 1 po každém podání (kazdy_tah v etapa.csv). Uhlí přidá 4, maximum je 8, při 0 hráč prohraje.
+karta;cil;podminka;vyraz;text;efekt
+?;kotel;kotel<=2;🥶;Kotel sotva doutná. Čerti kolem něj podupávají a z nosů jim visí rampouchy.;
+?;kotel;kotel>=6;🔥;Kotel bublá a čerti kolem něj spokojeně vrní jako kočky.;
+?;kotel;;🔥;Obecní kotel na návsi. Čerti se u něj ohřívají a vzpomínají na staré časy, kdy v něm vařili hříšníky. Teď v něm vaří gulášovku.;
+?;lucifer;duchod_l_doruceno;😈;Lucifer starší hraje mariáš sám se sebou a prohrává. „Aspoň že ten důchod chodí včas.“;
+?;lucifer;;😈;Lucifer starší sedí před chalupou a hraje mariáš sám se sebou. „Kde je ten důchod? V pekle to dřív chodilo včas!“;
+?;bertka;duchod_b_doruceno;👵;Bertička plete svetr na kotel a tiše si zpívá. Na okně jí voní levandule.;
+?;bertka;;👵;Čertice Bertička plete u okna, kde jí kvete levandule. „Síru už nemůžu cítit, chlapče. Všechno si navoním.“;
+?;bonifac;vcelar;🐝;Bonifác staví úl a včely mu sedají na rohy jako na květiny.;
+?;bonifac;prihlaska_doruceno;👹;Bonifác přešlapuje. „Andělé nechodí do Čertoviny. Prý tu smrdí síra. A bez doporučení mě do spolku nevezmou.“;
+?;bonifac;;👹;Čert Bonifác si za kovárnou staví úl z prken. „Chci chovat včely. Ostatní čerti se mi smějí, že med není dost pekelný.“;
+?;andel;;👼;Anděl Gabriela stojí na hranici farnosti Nebeská Lhota a drží se za nos. „Dál ani krok. Tady to smrdí sírou.“;
+napoveda;*;kotel<=2 @uhli1;💡;Kotel skoro vystydl. Hoď do něj uhlí!;
+napoveda;*;kotel<=2 @uhli2;💡;Kotel skoro vystydl. Hoď do něj uhlí!;
+napoveda;*;kotel<=2 @uhli3;💡;Kotel skoro vystydl. Hoď do něj uhlí!;
+napoveda;*;!duchod_l_doruceno;💡;Čerti platí za doručený důchod uhlím. Lucifer starší čeká na svoji obálku.;
+napoveda;*;!duchod_b_doruceno;💡;Bertička taky čeká na důchod.;
+napoveda;*;!prihlaska_doruceno;💡;Dopis od včelařského spolku je pro Bonifáce.;
+napoveda;*;@zadost;💡;Anděl síru nesnese. Kdo v Čertovině všechno navoní?;
+napoveda;*;@zadost_v;💡;Žádost voní levandulí. Teď ji anděl přečte.;
+napoveda;*;@doporuceni;💡;Doporučení patří Bonifácovi.;
+napoveda;*;;💡;Hlídej kotel a přikládej.;
+duchod_l;lucifer;;😈;Lucifer starší obálku roztrhne zuby. „Konečně! Tady máš spropitné.“ Podá ti kus uhlí. „V pekle se platí uhlím, peníze hoří.“;-duchod_l duchod_l_doruceno +uhli1 razitko
+duchod_b;bertka;;👵;Bertička obálku přičichne a usměje se. „Levandulová, jak jsem chtěla.“ Do ubrousku ti zabalí kus uhlí. „Na kotel, ať nám nezmrznou kopyta.“;-duchod_b duchod_b_doruceno +uhli2 razitko
+duchod_l;bertka;;👵;„To je Luciferova. Ta moje voní levandulí.“;
+duchod_b;lucifer;;😈;Lucifer k obálce přičichne a kýchne. „Levandule? Fuj. To je pro Bertičku.“;
+duchod_l;bonifac;;👹;„Důchod? Já ještě nejsem v penzi. Teda jsem, ale nechci.“;
+duchod_b;bonifac;;👹;„To je pro Bertičku. Voní jako její záclony.“;
+duchod_l;andel;;👼;Anděl ucukne. „Sirná obálka? Ani se jí nedotknu.“;
+duchod_b;andel;;👼;Anděl k obálce opatrně přičichne. „Levandule… a pod ní síra. Ne, děkuji.“;
+duchod_l;kotel;;🔥;Hodit důchod do kotle? Lucifer by tě do něj hodil hned za ním.;
+duchod_b;kotel;;🔥;Obálka by v kotli shořela i s Bertiččiným důchodem.;
+prihlaska;bonifac;;🥹;Bonifác dopis přečte a rozzáří se. „Přijmou mě! Ale jen s doporučením od anděla.“ Hned napíše žádost, nejkrásnějším písmem, jaké čert dokáže. Podá ti ji i s kusem uhlí. „Za doručení. Nes to andělovi, prosím.“;-prihlaska prihlaska_doruceno +zadost +uhli3 razitko
+prihlaska;lucifer;;😈;„Včelařský spolek? Čert a včely? Cha!“ Lucifer se směje, až mu sklouzne rohatá čepice.;
+prihlaska;bertka;;👵;„Pro Bonifáce. Ten náš blázen chce chovat včely. Já mu fandím.“;
+prihlaska;andel;;👼;„Z Nebeské Lhoty? To je od nás. Ale adresát je čert, tak mu to dones ty.“;
+prihlaska;kotel;;🔥;Včelařský dopis do kotle? Včely by se urazily.;
+zadost;andel;;🤢;Anděl si žádost podrží daleko od nosu. „Fuj, síra! Tohle nepřečtu, i kdyby to psal svatý Petr.“ Vrátí ti ji dvěma prsty.;
+zadost;bertka;;👵;Bertička žádost položí na okno mezi levanduli a pak ji ještě pokropí voňavkou. „Tak, teď voní jako louka. Anděl to přečte.“;-zadost +zadost_v
+zadost;lucifer;;😈;„Žádost andělovi? Ha! Ten ji ani nepřečte, smrdí jako my.“;
+zadost;bonifac;;👹;„Nes to andělovi. Já se k hranici nesmím ani přiblížit.“;
+zadost;kotel;;🔥;Spálit Bonifácovu žádost? To by byl opravdu čertovský kousek.;
+zadost_v;andel;;😇;Anděl k žádosti přičichne. „Levandule!“ Přečte ji a usměje se. „Čert, co chce chovat včely? To je tak hloupé, že to musí být upřímné.“ Vytrhne si pírko z křídla a podepíše doporučení.;-zadost_v +doporuceni
+zadost_v;bertka;;👵;„Ještě víc voňavky? Pak by z toho anděl kýchal.“;
+zadost_v;bonifac;;👹;„Voní to! Nes to andělovi, dokud to drží.“;
+zadost_v;lucifer;;😈;Lucifer přičichne a kýchne. „Levandule! Fuj! Nes to pryč!“;
+doporuceni;bonifac;;🐝;Bonifác doporučení přečte a rozpláče se radostí. Slzy mu na rozpáleném čele syčí. „Jsem včelař!“ Z lesa hned přiletí roj a usadí se mu v úlu. Zbylé uhlí přihodíš na oslavu do kotle.;-doporuceni -uhli1 -uhli2 -uhli3 vcelar ikona:bonifac:🐝 razitko
+doporuceni;lucifer;;😈;„Doporučení od anděla? Pro čerta? Svět se zbláznil.“ Ale trochu se usměje.;
+doporuceni;bertka;;👵;„To je pro Bonifáce! Utíkej, nebo se mu rozpustí úl.“;
+doporuceni;andel;;👼;„To už je podepsané. Dones to Bonifácovi.“;
+uhli1;kotel;;🔥;Hodíš uhlí do kotle. Zasyčí to, vyšlehne plamen a čertům roztají rampouchy.;-uhli1 kotel+4
+uhli2;kotel;;🔥;Hodíš uhlí i s ubrouskem do kotle. Kotel se rozhoří a voní krajkou.;-uhli2 kotel+4
+uhli3;kotel;;🔥;Hodíš Bonifácovo uhlí do kotle. Kotel spokojeně zabublá.;-uhli3 kotel+4
+uhli1;lucifer;;😈;„Spropitné se nevrací! To by bylo neslušné i v pekle.“;
+uhli2;bertka;;👵;„To je pro kotel, chlapče, ne pro mě.“;
+uhli3;bonifac;;👹;„To je pro kotel. Já už si za kovárnou topím úlem. Ne, to ne!“;
+uhli1;andel;;👼;Anděl couvne. „Uhlí? Tím se v pekle topí pod kotlem. Odnes to.“;
+uhli2;andel;;👼;Anděl couvne. „Uhlí? Odnes to.“;
+uhli3;andel;;👼;Anděl couvne. „Uhlí? Odnes to.“;
+*;kotel;;🔥;Do kotle patří uhlí. Nic jiného.;
+*;andel;;👼;Anděl si drží nos. „Ze Čertoviny nic nepřijímám.“;
+*;*;;🤷;Nic se nestane. Kotel mezitím stydne.;

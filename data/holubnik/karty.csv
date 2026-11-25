@@ -1,0 +1,11 @@
+id;nazev;druh;ikona;adresa;popis
+dopis_hajny;Dopis pro hajného;dopis;✉️;Hajný, hájovna na Kopci;Od dcery Aničky. Na hájovnu se teď pěšky nedostaneš.
+dopis_baca;Objednávka sýra;dopis;🧾;Bača, salaš pod hřebenem;Hostinský objednává dvacet hrudek sýra. Na salaš se teď nedá dojít.
+dopis_balonar;Telegram pro balonáře;dopis;🎈;Balonář, koš balónu nad vsí;Z Prahy. Balonář visí nad vsí už týden a čeká, kam ho pošlou.
+koreni;Koření pro řezníka;balik;🧂;Řezník, Holubník č. 4;Majoránka, pepř a kmín. Řezník bez něj nedělá klobásy.
+klobasy;Klobásy;vec;🌭;;Čerstvé klobásy od řezníka. Voní na celou ves.
+mleko;Hrnek mléka;vec;🥛;;Teplé mléko od mlékařky. Kocouři pro ně udělají cokoli.
+kvocna;Kvočna;vec;🐔;;Babčina slepice. Sedí na čemkoli, co vypadá jako vejce.
+holub_hajovna;Holub Jehličák;vec;🕊️;;Šedý holub, v peří má jehličí. Doma je na hájovně na Kopci.
+holub_salas;Holub Bryndza;vec;🕊️;;Bílý holub, voní ovčím sýrem. Doma je na salaši.
+holub_balon;Holubice Toulavka;vec;🕊️;;Holubice pana Hrdličky. Odstěhovala se do koše balónu a tam má teď domov.

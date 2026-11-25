@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Drby 7+: šušká se všude, i v hotelových oknech -->
+  <style>
+    .b { animation: sept 2.2s ease-in-out infinite; }
+    .b2 { animation-delay: -.6s; } .b3 { animation-delay: -1.2s; } .b4 { animation-delay: -1.7s; }
+    @keyframes sept { 50% { opacity: .5; } }
+    @media (prefers-reduced-motion: reduce) { .b { animation: none; } }
+  </style>
+  <rect width="300" height="400" fill="#7B5BA6" opacity=".08"/>
+  <g font-family="Georgia, serif" font-style="italic" font-size="8" fill="#5B4A6E" text-anchor="middle">
+    <g class="b"><path d="M14 150h40a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-26l-6 6v-6h-8a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="34" y="163">to je skandál</text></g>
+    <g class="b b2"><path d="M238 82h44a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-8v6l-6-6h-30a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="260" y="95">a pošťák!</text></g>
+    <g class="b b3"><path d="M96 300h30a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-20l-6 6v-6h-4a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="111" y="313">pst!</text></g>
+    <g class="b b4"><path d="M190 352h44a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-30l-6 6v-6h-8a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z" fill="#FFFFFF" stroke="#5B4A6E" stroke-width="1"/><text x="212" y="365">čte cizí psaní</text></g>
+  </g>
+</svg>

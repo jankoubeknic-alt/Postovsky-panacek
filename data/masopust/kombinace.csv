@@ -1,0 +1,71 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Masopust: kdo je pod kterou maskou, se pozná z chování masek a z řečí hospodské a babičky.
+# Dopis špatné masce se přečte nahlas a přidá ostudu. Tři ostudy jsou prohra.
+karta;cil;podminka;vyraz;text;efekt
+?;medved;!stoji;🤡;Medvěd s průvodem tančí dál. Strakáč práská bičem: „Bez povolení se nezastavujem!“;
+?;medved;mlynar_doruceno;🎭;Medvěd ti zamává. Dopis má schovaný pod maskou.;
+?;medved;;🎭;Medvěd tancuje s hospodskou a mručí. Kde se jí dotkne tlapou, zůstane na zástěře bílý otisk. Mouka.;
+dopis_kovar;medved;!stoji;🤡;Medvěd protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_kovar;medved;;😂;Medvěd roztrhne obálku a čte nahlas: „Vážený pane kováři, připomínáme splátku za kovadlinu…“ Kovadlina je tedy na dluh. Celá ves se chechtá. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_mlynar;medved;!stoji;🤡;Medvěd protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_mlynar;medved;;🎭;Medvěd si dopis vezme, nahlédne do něj a beze slova ho schová pod masku. Trefa. Nikdo nic nepoznal.;-dopis_mlynar mlynar_doruceno razitko
+dopis_pekar;medved;!stoji;🤡;Medvěd protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_pekar;medved;;😂;Medvěd roztrhne obálku a čte nahlas: „Milý zeti, přijedu na celý půst…“ Celá ves ví, že k pekaři jede tchyně. Někdo v průvodu zasténá. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_ucitel;medved;!stoji;🤡;Medvěd protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_ucitel;medved;;😂;Medvěd roztrhne obálku a čte nahlas: „Inspekce přijede ve čtvrtek…“ Děti výskají a pan řídící někde pod maskou zbledne. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+povoleni;medved;;🎭;Medvěd ukáže bičem na strakáče. Ten vede průvod.;
+?;kobyla;!stoji;🤡;Kobyla s průvodem tančí dál. Strakáč práská bičem: „Bez povolení se nezastavujem!“;
+?;kobyla;kovar_doruceno;🎭;Kobyla ti zamává. Dopis má schovaný pod maskou.;
+?;kobyla;;🎭;Kobyla kope do zmrzlé cesty a pod kopyty jí jiskří. Má na nich pravé podkovy, pěkně přibité.;
+dopis_kovar;kobyla;!stoji;🤡;Kobyla protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_kovar;kobyla;;🎭;Kobyla si dopis vezme, nahlédne do něj a beze slova ho schová pod masku. Trefa. Nikdo nic nepoznal.;-dopis_kovar kovar_doruceno razitko
+dopis_mlynar;kobyla;!stoji;🤡;Kobyla protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_mlynar;kobyla;;😂;Kobyla roztrhne obálku a čte nahlas: „Jez musí být o píď nižší…“ Sedláci pod mlýnem jásají a mlynář někde v průvodu skřípe zuby. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_pekar;kobyla;!stoji;🤡;Kobyla protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_pekar;kobyla;;😂;Kobyla roztrhne obálku a čte nahlas: „Milý zeti, přijedu na celý půst…“ Celá ves ví, že k pekaři jede tchyně. Někdo v průvodu zasténá. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_ucitel;kobyla;!stoji;🤡;Kobyla protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_ucitel;kobyla;;😂;Kobyla roztrhne obálku a čte nahlas: „Inspekce přijede ve čtvrtek…“ Děti výskají a pan řídící někde pod maskou zbledne. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+povoleni;kobyla;;🎭;Kobyla ukáže bičem na strakáče. Ten vede průvod.;
+?;kominik;!stoji;🤡;Kominík s průvodem tančí dál. Strakáč práská bičem: „Bez povolení se nezastavujem!“;
+?;kominik;pekar_doruceno;🎭;Kominík ti zamává. Dopis má schovaný pod maskou.;
+?;kominik;;🎭;Kominík maže děvčatům tváře sazemi. Ruce má černé, ale za nehty mu zůstala mouka.;
+dopis_kovar;kominik;!stoji;🤡;Kominík protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_kovar;kominik;;😂;Kominík roztrhne obálku a čte nahlas: „Vážený pane kováři, připomínáme splátku za kovadlinu…“ Kovadlina je tedy na dluh. Celá ves se chechtá. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_mlynar;kominik;!stoji;🤡;Kominík protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_mlynar;kominik;;😂;Kominík roztrhne obálku a čte nahlas: „Jez musí být o píď nižší…“ Sedláci pod mlýnem jásají a mlynář někde v průvodu skřípe zuby. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_pekar;kominik;!stoji;🤡;Kominík protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_pekar;kominik;;🎭;Kominík si dopis vezme, nahlédne do něj a beze slova ho schová pod masku. Trefa. Nikdo nic nepoznal.;-dopis_pekar pekar_doruceno razitko
+dopis_ucitel;kominik;!stoji;🤡;Kominík protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_ucitel;kominik;;😂;Kominík roztrhne obálku a čte nahlas: „Inspekce přijede ve čtvrtek…“ Děti výskají a pan řídící někde pod maskou zbledne. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+povoleni;kominik;;🎭;Kominík ukáže bičem na strakáče. Ten vede průvod.;
+?;turek;!stoji;🤡;Turek s průvodem tančí dál. Strakáč práská bičem: „Bez povolení se nezastavujem!“;
+?;turek;ucitel_doruceno;🎭;Turek ti zamává. Dopis má schovaný pod maskou.;
+?;turek;;🎭;Turek má na šavli napíchnutou slaninu. Když kominík řekne „my sme“, Turek ho opraví: „Jsme. My jsme.“;
+dopis_kovar;turek;!stoji;🤡;Turek protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_kovar;turek;;😂;Turek roztrhne obálku a čte nahlas: „Vážený pane kováři, připomínáme splátku za kovadlinu…“ Kovadlina je tedy na dluh. Celá ves se chechtá. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_mlynar;turek;!stoji;🤡;Turek protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_mlynar;turek;;😂;Turek roztrhne obálku a čte nahlas: „Jez musí být o píď nižší…“ Sedláci pod mlýnem jásají a mlynář někde v průvodu skřípe zuby. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_pekar;turek;!stoji;🤡;Turek protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_pekar;turek;;😂;Turek roztrhne obálku a čte nahlas: „Milý zeti, přijedu na celý půst…“ Celá ves ví, že k pekaři jede tchyně. Někdo v průvodu zasténá. Pak ti dopis vrátí. „To není pro mě.“;ostuda+1
+dopis_ucitel;turek;!stoji;🤡;Turek protančí kolem a dopis ani nevidí. Průvod se bez povolení nezastaví.;
+dopis_ucitel;turek;;🎭;Turek si dopis vezme, nahlédne do něj a beze slova ho schová pod masku. Trefa. Nikdo nic nepoznal.;-dopis_ucitel ucitel_doruceno razitko
+povoleni;turek;;🎭;Turek ukáže bičem na strakáče. Ten vede průvod.;
+?;strakac;!stoji;🤡;Strakáč práská bičem a vede průvod dál. „Bez povolení se nezastavujem! Kdo nemá papír, nemá masopust!“;
+?;strakac;;🤡;Strakáč drží průvod na návsi. „Stojíme, ale jen chvilku. O půlnoci se pochovává basa.“;
+povoleni;strakac;;🤡;Strakáč si přečte povolení, plácne bičem a průvod se zastaví. „Masopust je povolen! Kdo má co pro masky, ať jde teď.“;-povoleni povoleni_doruceno stoji razitko
+?;hospodska;!medved_tip;👩‍🍳;Hospodská si oprašuje zástěru. „Ten medvěd mi celý večer šlapal po nohou. Pekař to nebude, ten tancuje jako pírko. To vím z posvícení.“;medved_tip
+?;hospodska;;👩‍🍳;Hospodská nalévá svařák. „Kovář chodí každý rok za kobylu. Říká, že ji aspoň nemusí kovat.“;
+?;babicka;;👵;Babička kouká z okna. „Pan řídící je jediný, kdo opravuje i v masce. A mlynář s pekařem jsou od mouky oba, toho se nechytej.“;
+napoveda;*;!stoji;💡;Průvod se nikde nezastaví, dokud strakáč nedostane povolení.;
+napoveda;*;!medved_tip;💡;Kobyla má podkovy a Turek opravuje češtinu. Medvěd i kominík mají mouku. Zeptej se hospodské, se kterým z nich tancovala.;
+napoveda;*;;💡;Kobyla je kovář, Turek pan učitel. Medvěd šlape po nohou, takže pekař to není.;
+*;hospodska;;👩‍🍳;„Ten je pro někoho v průvodu. Já pod masky nevidím, jen jim nalévám.“;
+*;babicka;;👵;„To není pro mě. Já jsem ráda za okny, venku je zima.“;
+*;*;;🤷;Nic se nestane.;

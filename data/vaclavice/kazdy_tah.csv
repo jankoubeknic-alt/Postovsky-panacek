@@ -1,0 +1,21 @@
+# Václav jde po každém tahu o místo dál (v), u vdovy a uhlíře se zdrží (pauza). Šlépěje na místě (f1 až f5) vydrží čtyři tahy. Pošťák na místě bez šlépějí mrzne.
+podminka;efekt;text
+f1>0;f1-1;
+f2>0;f2-1;
+f3>0;f3-1;
+f4>0;f4-1;
+f5>0;f5-1;
+pauza>0 v=3 !krok;pauza=0 f3=4 krok;Kníže Václav skládá vdově dříví ke dveřím. Chvíli postojí.
+pauza>0 v=4 !krok;pauza=0 f4=4 krok;Kníže Václav nechává uhlíři otep dříví u milíře.
+v=5 !krok;f5=4 krok;
+v=1 !krok;v=2 f2=4 krok;Kníže Václav vyjde z brány a brodí se sněhem ke kovárně.
+v=2 !krok;v=3 f3=4 pauza=1 krok;Kníže Václav jde od kovárny k chaloupce vdovy Doroty.
+v=3 !krok;v=4 f4=4 pauza=1 krok;Kníže Václav jde dál do lesa k uhlíři.
+v=4 !krok;v=5 f5=4 krok;Kníže Václav došel ke kapli a klečí ve sněhu.
+krok;!krok;
+p=1 f1=0;zima+1;Stojíš ve sněhu, kde už nejsou šlépěje. Mrznou ti nohy.
+p=2 f2=0;zima+1;Stojíš ve sněhu, kde už nejsou šlépěje. Mrznou ti nohy.
+p=3 f3=0;zima+1;Stojíš ve sněhu, kde už nejsou šlépěje. Mrznou ti nohy.
+p=4 f4=0;zima+1;Stojíš ve sněhu, kde už nejsou šlépěje. Mrznou ti nohy.
+p=5 f5=0;zima+1;Stojíš ve sněhu, kde už nejsou šlépěje. Mrznou ti nohy.
+p=5;u_kaple;

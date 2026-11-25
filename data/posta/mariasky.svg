@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Na stole leží mariášky místo dopisů -->
+  <g stroke="#8A2A2A" stroke-width=".8"><rect x="130" y="208" width="10" height="14" rx="1" fill="#F4F1E4" transform="rotate(-10 135 215)"/><rect x="144" y="208" width="10" height="14" rx="1" fill="#F4F1E4"/><rect x="158" y="208" width="10" height="14" rx="1" fill="#F4F1E4" transform="rotate(10 163 215)"/></g>
+  <g fill="#C93A3A"><circle cx="135" cy="215" r="2"/><circle cx="149" cy="215" r="2"/><circle cx="163" cy="215" r="2"/></g>
+</svg>

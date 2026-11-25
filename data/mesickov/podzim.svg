@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Podzim: zrzavé listí a jablka na stromech -->
+  <path d="M0 124H300V400H0Z" fill="#C99A5A" opacity=".35"/>
+  <circle cx="233" cy="222" r="16" fill="#C9763A"/><circle cx="269" cy="226" r="14" fill="#C98A3A"/>
+  <g fill="#D93A3A"><circle cx="226" cy="218" r="3"/><circle cx="240" cy="226" r="3"/><circle cx="264" cy="222" r="3"/><circle cx="274" cy="230" r="3"/></g>
+  <g fill="#B9673A"><circle cx="120" cy="300" r="2"/><circle cx="200" cy="310" r="2"/><circle cx="60" cy="290" r="2"/></g>
+</svg>

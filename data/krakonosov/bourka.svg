@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Bouřka: černé mraky, blesk a déšť přes celou ves -->
+  <rect width="300" height="400" fill="#2E3446" opacity=".35"/>
+  <g fill="#4A5060"><ellipse cx="70" cy="40" rx="70" ry="26"/><ellipse cx="170" cy="30" rx="80" ry="28"/><ellipse cx="260" cy="44" rx="60" ry="24"/></g>
+  <path d="M170 56L156 92H168L152 130L184 82H170L182 56Z" fill="#F2D24A"/>
+  <g stroke="#9DBCD0" stroke-width="1.2" opacity=".8"><path d="M30 80l-8 20M60 120l-8 20M100 90l-8 20M140 150l-8 20M200 110l-8 20M240 160l-8 20M270 100l-8 20M90 200l-8 20M220 240l-8 20M40 280l-8 20M160 300l-8 20M260 330l-8 20"/></g>
+</svg>

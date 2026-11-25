@@ -1,0 +1,18 @@
+klic;hodnota
+datum;30. XI.
+start;
+cil;baterie_doruceno noviny_doruceno pohledy_doruceno babicka_dole
+uvod;Ve Sněžné je dnes poslední pošta před zimou. Zítra zavřou průsmyk a hřeben nad vsí bude odříznutý až do jara. Zásilky na hřeben čekají na pultu u poštmistra.|Do brašny se vejdou jen tři věci. Klepnutím na zásilku na pultu ji vezmeš, poštmistrovi ji zase vrátíš. Každá cesta nahoru nebo dolů trvá a mezitím napadne další sníh.
+navod;Do brašny se vejdou tři věci. Každá cesta na hřeben a zpátky přidá sníh.
+konec_nadpis;Vánoce budou dole
+konec_text;Babička Horáčková sedí u kamen na poště a Mourek jí přede na klíně. Meteorolog hlásí vysílačkou první vánici, chatař si čte noviny a pohledy od turistů už jedou vlakem do světa.|Průsmyk se zavírá. Brašna je prázdná. Šťastnou cestu, pošťáku.
+pozadi;data/snezna/pozadi.svg
+barvy;
+# Brašna pojme jen tři věci. V podmínkách jde použít karet<3 (v brašně je místo) nebo karet=0 (brašna je prázdná).
+brasna;3
+pocitadla;snih=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;snih:Sníh:10
+prohra;snih>=10
+prohra_text;Sníh zasypal stezku i lanovku a průsmyk se zavřel dřív, než jsi stihl všechno doručit. Hřeben zůstane bez pošty až do jara.|Zkus to znovu. Rozmysli si, co si vezmeš na kterou cestu.

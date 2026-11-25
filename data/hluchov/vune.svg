@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Z babiččina komína stoupá vůně koláčů -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity=".85">
+    <path d="M85 262q-6-8 0-16t0-16"/><path d="M95 258q-6-8 0-16t0-16"/>
+  </g>
+  <g fill="#E9B65A"><circle cx="110" cy="236" r="4"/><circle cx="70" cy="226" r="3.5"/></g>
+</svg>

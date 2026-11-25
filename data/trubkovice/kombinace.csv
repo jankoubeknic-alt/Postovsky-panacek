@@ -1,0 +1,58 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Trubkovice: patrona letí podle šipek na výhybkách A, B, C a po průletu je přehodí (A vždy, B nebo C podle cesty).
+# Cíle se opakují v pořadí radnice, hospoda, škola, fara. Špatná zásilka se vrátí, prázdná patrona jen přehodí výhybky.
+karta;cil;podminka;vyraz;text;efekt
+dopis_radnice;vhoz;!a_r !b_r;🎩;Patrona žuchne do koše na radnici. Starosta čte: Schvalujeme, pokud bude fungovat. „Funguje!“ zajásá.;-dopis_radnice radnice_doruceno a_r b_r razitko
+dopis_radnice;vhoz;!a_r b_r;↩️;Patrona zasviští potrubím a vyletí do školy. Učitel se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r !b_r
+dopis_radnice;vhoz;a_r !c_r;↩️;Patrona zasviští potrubím a vyletí do hospody. Hostinský se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r c_r
+dopis_radnice;vhoz;a_r c_r;↩️;Patrona zasviští potrubím a vyletí na faru. Farář se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r !c_r
+dopis_hospoda;vhoz;!a_r !b_r;↩️;Patrona zasviští potrubím a vyletí na radnici. Starosta se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r b_r
+dopis_hospoda;vhoz;!a_r b_r;↩️;Patrona zasviští potrubím a vyletí do školy. Učitel se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r !b_r
+dopis_hospoda;vhoz;a_r !c_r;🍺;Patrona vyletí z trubky za výčepem. Hostinský rozloží večerník a čte nahlas. Hospoda ztichne.;-dopis_hospoda hospoda_doruceno !a_r c_r razitko
+dopis_hospoda;vhoz;a_r c_r;↩️;Patrona zasviští potrubím a vyletí na faru. Farář se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r !c_r
+dopis_skola;vhoz;!a_r !b_r;↩️;Patrona zasviští potrubím a vyletí na radnici. Starosta se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r b_r
+dopis_skola;vhoz;!a_r b_r;👨‍🏫;Patrona vyletí ve třídě a děti zajásají. Učitel vytáhne křídy a napíše na tabuli: POTRUBÍ. Pak napíše besídkovou pozvánku a pošle ji potrubím zpátky na poštu.;-dopis_skola +pozvanka skola_doruceno a_r !b_r razitko
+dopis_skola;vhoz;a_r !c_r;↩️;Patrona zasviští potrubím a vyletí do hospody. Hostinský se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r c_r
+dopis_skola;vhoz;a_r c_r;↩️;Patrona zasviští potrubím a vyletí na faru. Farář se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r !c_r
+dopis_fara;vhoz;!a_r !b_r;↩️;Patrona zasviští potrubím a vyletí na radnici. Starosta se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r b_r
+dopis_fara;vhoz;!a_r b_r;↩️;Patrona zasviští potrubím a vyletí do školy. Učitel se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r !b_r
+dopis_fara;vhoz;a_r !c_r;↩️;Patrona zasviští potrubím a vyletí do hospody. Hostinský se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r c_r
+dopis_fara;vhoz;a_r c_r;⛪;Patrona přistane farářovi v sakristii. Farář si přečte, že věž je nakřivo, a hned napíše žádost na radnici. Patrona s žádostí se vrátí na poštu.;-dopis_fara +zadost fara_doruceno !a_r !c_r razitko
+zadost;vhoz;!a_r !b_r;🎩;Starosta si přečte žádost o věž a orazítkuje ji. „Schváleno. Potrubí je zázrak.“;-zadost zadost_doruceno a_r b_r razitko
+zadost;vhoz;!a_r b_r;↩️;Patrona zasviští potrubím a vyletí do školy. Učitel se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r !b_r
+zadost;vhoz;a_r !c_r;↩️;Patrona zasviští potrubím a vyletí do hospody. Hostinský se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r c_r
+zadost;vhoz;a_r c_r;↩️;Patrona zasviští potrubím a vyletí na faru. Farář se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r !c_r
+pozvanka;vhoz;!a_r !b_r;↩️;Patrona zasviští potrubím a vyletí na radnici. Starosta se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r b_r
+pozvanka;vhoz;!a_r b_r;↩️;Patrona zasviští potrubím a vyletí do školy. Učitel se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;a_r !b_r
+pozvanka;vhoz;a_r !c_r;🍺;Hostinský si pozvánku připíchne nad výčep. „Besídka v sále? Napeču koláče.“;-pozvanka pozvanka_doruceno !a_r c_r razitko
+pozvanka;vhoz;a_r c_r;↩️;Patrona zasviští potrubím a vyletí na faru. Farář se podívá na adresu, zavrtí hlavou a pošle ji zpátky. Výhybky se mezitím přehodily.;!a_r !c_r
+patrona;vhoz;!a_r !b_r;💨;Prázdná patrona zasviští potrubím a vyletí na radnici. Starosta ji pošle zpátky. Výhybky se přehodily.;a_r b_r
+patrona;vhoz;!a_r b_r;💨;Prázdná patrona zasviští potrubím a vyletí do školy. Učitel ji pošle zpátky. Výhybky se přehodily.;a_r !b_r
+patrona;vhoz;a_r !c_r;💨;Prázdná patrona zasviští potrubím a vyletí do hospody. Hostinský ji pošle zpátky. Výhybky se přehodily.;!a_r c_r
+patrona;vhoz;a_r c_r;💨;Prázdná patrona zasviští potrubím a vyletí na faru. Farář ji pošle zpátky. Výhybky se přehodily.;!a_r !c_r
+?;strojnik;;👷;Strojník Vzduchal si utírá ruce. „Výhybky se po každé patroně přehodí. Áčko pošle jednu doleva, další doprava. Béčko a céčko taky, ale jen když patrona letí přes ně. Šipky ukazují, kam poletí příští.“;
+?;vhoz;!a_r !b_r;📮;Šipky ukazují: A doleva, B doleva. Příští patrona poletí na radnici.;
+?;vhoz;!a_r b_r;📮;Šipky ukazují: A doleva, B doprava. Příští patrona poletí do školy.;
+?;vhoz;a_r !c_r;📮;Šipky ukazují: A doprava, C doleva. Příští patrona poletí do hospody.;
+?;vhoz;;📮;Šipky ukazují: A doprava, C doprava. Příští patrona poletí na faru.;
+?;radnice;;🎩;Starosta stojí u koše na patrony. „Pěšky se nedoručuje! Všechno potrubím. Čekám dopis z okresu a žádost od faráře.“;
+?;skola;;👨‍🏫;Učitel stojí u tabule bez křídy. „Až mi přijdou křídy, pošlu pozvánku na besídku do hospody. Potrubím, samozřejmě.“;
+?;hospoda;;🍺;Hostinský leští půllitry. „Čekám večerník a pozvánku na besídku. Trubka je za výčepem.“;
+?;fara;;⛪;Farář se dívá na nakřivo stojící věž. „Čekám dopis z biskupství. A pak budu psát na radnici.“;
+napoveda;*;!radnice_doruceno !hospoda_doruceno !skola_doruceno !fara_doruceno;💡;Klepni na vhoz, kam poletí příští patrona. Pošli tam zásilku, která tam patří. Pořadí cílů se opakuje: radnice, hospoda, škola, fara.;
+napoveda;*;!zadost_doruceno !@zadost;💡;Farář napíše žádost na radnici, až dostane dopis.;
+napoveda;*;!pozvanka_doruceno !@pozvanka;💡;Učitel pošle pozvánku do hospody, až dostane křídy.;
+napoveda;*;;💡;Když příští patrona poletí jinam, než potřebuješ, pošli prázdnou patronu. Výhybky se přehodí.;
+*;radnice;;🙅;„Pěšky? To starosta zakázal,“ řekne starosta. „Všechno potrubím. Vhoz je na poště.“;
+*;skola;;🙅;„Pěšky? To starosta zakázal,“ řekne učitel. „Všechno potrubím. Vhoz je na poště.“;
+*;hospoda;;🙅;„Pěšky? To starosta zakázal,“ řekne hostinský. „Všechno potrubím. Vhoz je na poště.“;
+*;fara;;🙅;„Pěšky? To starosta zakázal,“ řekne farář. „Všechno potrubím. Vhoz je na poště.“;
+*;strojnik;;👷;„Mně nic, já jen mažu výhybky. Hoď to do vhozu.“;
+*;*;;🤷;Nic se nestane.;

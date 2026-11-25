@@ -1,0 +1,16 @@
+klic;hodnota
+datum;13. XII.
+start;dopis_truhlar dopis_mlynar dopis_kolar
+cil;stolecek truhlar_doruceno mlynar_doruceno kolar_doruceno
+uvod;Lucie noci upije a dne nepřidá. Na svatou Lucii obcházejí Lucín bílé lucky s dlouhým zobákem a husím křídlem a dívají se, kdo přede, když se nemá. Truhlář má od pana řídícího zakázku: Luciin stoleček.|Ten se dělá z dřeva přesně třinácti druhů. Ani o jeden víc, ani o jeden míň. Truhlář má buk a dub, zbytek musí dát dohromady lidé ze vsi. Jenže každý dá celý svazek a ve svazcích se druhy opakují.
+navod;Dávej truhláři svazky dřeva. Počítají se jen druhy, které ještě nemá. Hromádka dřeva vrátí všechny svazky zpátky.
+konec_nadpis;Luciin stoleček
+konec_text;Truhlář stloukl stoleček ze třinácti druhů dřeva bez jediného hřebíku. Pan řídící si na něj o půlnoční stoupne a prý uvidí všechny čarodějnice v kraji. Lucky se podívaly, pokývaly zobáky a odešly dál po vsi.|Brašna je prázdná. Truhlář ti z odřezků udělal malou lžičku. Ze tří druhů dřeva, pro štěstí.
+pozadi;data/lucin/pozadi.svg
+barvy;
+pocitadla;druhy=2
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;druhy:Dřeva:13
+prohra;
+prohra_text;

@@ -1,0 +1,69 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Pošta o půlnoci (podle Pošťácké pohádky Karla Čapka): klepnutí na poštu přepíná den a noc. Skřítkové hmatem poznají, co je v dopise bez adresy.
+# Stopy: šofér, který ji vídá z autobusu v okně u silnice (stopa_silnice), modré oči (stopa_oci), zpívá (stopa_zpev). Sedí jen na Marušku z hospody.
+karta;cil;podminka;vyraz;text;efekt
+?;posta;noc;🌅;Svítá. Skřítkové zalezou do schránek, do razítek a pod pult. Odemkneš poštu a jdeš roznášet.;!noc
+?;posta;!prednosta_doruceno;🏤;Pošta se zamyká v šest. Bez svolení pana přednosty tu přes noc nikdo nezůstane. Pan přednosta čeká dopis z ředitelství.;
+?;posta;;🌙;Schováš se na poště za pult a čekáš. Odbije půlnoc. Ze schránek, z razítek a ze škvíry pod pultem vylezou poštovní skřítkové. Sednou si ke stolu a rozdají si dopisy jako karty.;noc
+?;pecetitko;!dopis_nalezen;🧙;Skřítek Pečetítko vytáhne z balíčku obálku a hned ji pustí. „Au, pálí! Tenhle nemá adresu ani známku. A hřeje jako kamna. Vezmi si ho, pošťáku, ať se nespálíme. Kdyby sis nevěděl rady, dej nám ho osahat.“;+dopis_bez_adresy dopis_nalezen
+?;pecetitko;karty_doruceno;🧙;Pečetítko vynese trumfa. „Mariáš je mariáš,“ zachichotá se. „Dopisy už nechceme ani vidět. Jen přičichnout.“;
+?;pecetitko;;🧙;Pečetítko míchá dopisy. „Dopis po dopisu, karta po kartě. Nemáme mariášky, tak hrajeme s tím, co je.“;
+?;obalka;karty_doruceno;🧝;Obálka bere štych za štychem. „Mariášky jsou lepší než dopisy. Neztrácejí se.“;
+?;obalka;;🧝;Skřítek Obálka drží v ruce vějíř dopisů. „Tenhle studí, to bude upomínka. Tenhle šimrá, to píše vnouček babičce.“ Pozná všechno jen hmatem.;
+?;znamka;karty_doruceno;🧚;Známka si prozpěvuje u mariáše. Je šťastná.;
+?;znamka;;🧚;Skřítek Známka přikládá dopisy k uchu. „V každém dopise něco zní. Ve veselém písnička, ve smutném déšť.“;
+dopis_bez_adresy;pecetitko;;🧙;Pečetítko dopis opatrně ohmatá. „Hřeje, to je láska. A voní benzínem a olejem. Psal ho šofér, ten, co jezdí autobusem po silnici. Píše, že ji vídá z kabiny v okně u silnice.“;stopa_silnice
+dopis_bez_adresy;obalka;;🧝;Obálka dopisem zašustí u ucha. „Šustí to modře. Píše se v něm o modrých očích. Pořád dokola, modré oči, modré oči.“;stopa_oci
+dopis_bez_adresy;znamka;;🧚;Známka si dopis přiloží k uchu a rozzáří se. „Je v něm písnička! Píše, že ji slyší zpívat, když jede kolem. Ona zpívá a on troubí.“;stopa_zpev
+karty_mariasove;pecetitko;;🃏;Skřítkové rozbalí mariášky a zajásají. „Konečně pořádné karty!“ Dopisy uklidí do přihrádek, každý na své místo. Odteď se na poště v Poštovicích nic neztratí.;-karty_mariasove karty_doruceno razitko
+karty_mariasove;obalka;;🃏;Skřítkové rozbalí mariášky a zajásají. „Konečně pořádné karty!“ Dopisy uklidí do přihrádek, každý na své místo. Odteď se na poště v Poštovicích nic neztratí.;-karty_mariasove karty_doruceno razitko
+karty_mariasove;znamka;;🃏;Skřítkové rozbalí mariášky a zajásají. „Konečně pořádné karty!“ Dopisy uklidí do přihrádek, každý na své místo. Odteď se na poště v Poštovicích nic neztratí.;-karty_mariasove karty_doruceno razitko
+pohled_pasacka;znamka;;🧚;Známka si pohled přiloží k uchu. „Zní z něj trubka, to je z vojny. Pro pasačku.“;
+?;prednosta;prednosta_doruceno;👨‍💼;„Tak co, pošťáku, kdo nám v noci krade dopisy?“ ptá se přednosta. „Zůstaň tu přes noc, klíče máš.“;
+?;prednosta;;👨‍💼;Pan přednosta si utírá pot. „Ředitelství mi píše a já se bojím otevřít. Prý se nám v noci ztrácejí dopisy.“;
+?;pekarova;;👩‍🍳;Maruška Pekařova vytahuje chleba z pece a zpívá si. Oči má hnědé jako kůrka. Okno pekárny vede přímo na silnici.;
+?;mlynska;;👩;Maruška od mlýna má oči modré jako řeka. Nezpívá, protože mlýn klape tak, že by ji nikdo neslyšel. Okno má k řece.;
+?;kantorova;;👩‍🏫;Maruška Kantorova zpívá ve sboru a má oči modré jako pomněnky. Bydlí ve škole a okno má do školní zahrady. Ze silnice není vidět.;
+?;hospodska;laska_doruceno;👱‍♀️;Maruška z hospody stojí v okně u silnice a vyhlíží autobus.;
+?;hospodska;;👱‍♀️;Maruška z hospody myje sklenice a zpívá. Oči má modré jako nebe. Okno hospody vede na silnici, kudy jezdí autobus.;
+?;pasacka;;👧;Maruška pasačka zpívá husám na pastvině. Oči má hnědé. Bydlí v chalupě za vsí, kam silnice nevede.;
+napoveda;*;!prednosta_doruceno;💡;Pan přednosta čeká dopis z ředitelství. Bez jeho svolení na poště přes noc nezůstaneš.;
+napoveda;*;!dopis_nalezen;💡;Zůstaň na poště přes noc. Klepni na poštu.;
+napoveda;*;!stopa_silnice nebo !stopa_oci nebo !stopa_zpev;💡;Dopis bez adresy nikdo nepřečte. Ale skřítkové poznají hmatem, co v něm stojí. Dej ho každému z nich.;
+napoveda;*;!laska_doruceno;💡;Šofér ji vídá v okně u silnice, má modré oči a zpívá. Ve vsi je pět Marušek. Která je to?;
+napoveda;*;!karty_doruceno;💡;Mariášky jsou pro skřítky. Jsou vidět jen v noci.;
+napoveda;*;!pasacka_doruceno;💡;Pohled z vojny je pro Marušku pasačku.;
+dopis_bez_adresy;hospodska;stopa_silnice stopa_oci stopa_zpev;🥰;Řekneš Marušce, co víš. Od šoféra z autobusu, o modrých očích, o písničce v okně. Maruška zčervená až po uši a dopis si přitiskne k srdci. „Franta! To je Franta z autobusu. Já myslela, že si mě nevšímá.“;-dopis_bez_adresy laska_doruceno ikona:hospodska:🥰 razitko
+dopis_bez_adresy;hospodska;;👱‍♀️;„Pro mě? Od koho? Bez adresy přece nevím, jestli je opravdu pro mě,“ zaváhá Maruška. „Co v něm stojí? To nevíš? Tak mi ho nedávej.“;
+dopis_bez_adresy;pekarova;;👩‍🍳;Maruška Pekařova dopis potěžká. „Kdo mi to píše? Ale ne, ten není pro mě. Já mám oči hnědé a šoféři mi z autobusu nemávají.“;
+dopis_bez_adresy;mlynska;;👩;„Pro mě?“ Maruška od mlýna se zasměje. „Já nezpívám. A z okna vidím jen řeku.“;
+dopis_bez_adresy;kantorova;;👩‍🏫;„Zpívám a oči mám modré,“ přemýšlí Maruška Kantorova. „Ale moje okno je do zahrady. Ze silnice mě nikdo nevidí.“;
+dopis_bez_adresy;pasacka;;👧;„Já? Já bydlím za vsí, kam autobus nejezdí. A oči mám hnědé.“;
+dopis_bez_adresy;prednosta;;👨‍💼;„Dopis bez adresy a bez známky?“ zděsí se přednosta. „To se doručit nedá! Leda by věděl, co v něm stojí.“;
+dopis_bez_adresy;posta;;🏤;Dopis bez adresy do schránky hodit nejde. Ten se musí doručit. Jen komu?;
+*;posta;;🏤;Do schránky? Poštu přece doručuješ, ne podáváš.;
+dopis_prednosta;prednosta;;👨‍💼;Přednosta dopis otevře a čte. „Ztrácejí se dopisy v nočních hodinách… Hm. Pošťáku, máš ode mě svolení. Zůstaň tu přes noc a zjisti, kdo to dělá.“;-dopis_prednosta prednosta_doruceno razitko
+dopis_prednosta;hospodska;;👱‍♀️;„Z ředitelství? To dej přednostovi. Já dostávám jen účty za pivo.“;
+dopis_prednosta;mlynska;;👩;„Ředitelství pošt? Snad nám nezavřou poštu. Dones to panu přednostovi.“;
+dopis_prednosta;pasacka;;👧;„Úřední psaní? Tomu nerozumím. Pan přednosta jo.“;
+dopis_prednosta;*;;📜;„Z ředitelství pošt? To je pro pana přednostu.“;
+pohled_pasacka;pasacka;;👧;Pasačka si pohled prohlédne a zapiští. „Od bratra! Je zdravý a vrátí se na žně!“ Zazpívá husám tak hlasitě, že se rozletí.;-pohled_pasacka pasacka_doruceno ikona:pasacka:🥳 razitko
+pohled_pasacka;pekarova;;👩‍🍳;„Z vojny? Mně nikdo z vojny nepíše. To bude pro pasačku, ta má bratra u dragounů.“;
+pohled_pasacka;kantorova;;👩‍🏫;„Pozdrav z Terezína? To píše bratr Marušky pasačky. Já bratra nemám.“;
+pohled_pasacka;hospodska;;👱‍♀️;„Pozdrav z vojny? Ten bude pro pasačku. Její bratr se chodil k nám chlubit uniformou.“;
+pohled_pasacka;mlynska;;👩;„Z vojny? Pro pasačku za vsí. Já mám jen tatínka a mlýn.“;
+pohled_pasacka;pecetitko;;🧙;Pečetítko pohled osahá. „Voní kasárnou a stýskáním. Pro pasačku.“;
+pohled_pasacka;obalka;;🧝;Obálka pohledem zašustí. „Šustí zeleně, to je od vojáka. Pro Marušku pasačku.“;
+pohled_pasacka;*;;🏞️;„Pohled z vojny? Pro Marušku pasačku, za vsí na pastvině.“;
+karty_mariasove;prednosta;;👨‍💼;„Mariášky? Já nehraju. Kdo by na poště hrál karty?“ Přednosta nic netuší.;
+karty_mariasove;hospodska;;👱‍♀️;„Mariášky? U nás v hospodě se hraje každý večer. Ale tyhle jsou pro skřítky? Kdo jsou skřítci?“;
+karty_mariasove;pekarova;;👩‍🍳;„Karty? Já peču, nehraju.“;
+karty_mariasove;kantorova;;👩‍🏫;„Karty do školy nesmí,“ řekne Maruška Kantorova přísně. „Na adrese stojí skřítci. O půlnoci.“;
+karty_mariasove;pasacka;;👧;„Mariášky? S husami se hrát nedá.“;
+karty_mariasove;mlynska;;👩;„Na poště? O půlnoci? Tatínek říkal, že na poště v noci straší.“;

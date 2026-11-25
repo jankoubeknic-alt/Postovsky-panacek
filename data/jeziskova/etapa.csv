@@ -1,0 +1,16 @@
+klic;hodnota
+datum;24. XII.
+start;darek_pepik darek_anca darek_tonik staniol kridla pohadky
+cil;darek_pepik_doruceno darek_anca_doruceno darek_tonik_doruceno zazvoneno
+uvod;V Ježíškově Lhotě nosí dárky pošťák. Rodiče mu je ráno dají na poště a on je musí do večera tajně dostat pod stromečky. Letos se ale tři děti rozhodly, že Ježíška chytí při činu.|Pepík, Anča a Toník hlídají svoje stromečky. Dárek nesmí vidět ani jeden z nich. Až budou všechny dárky pod stromky, zazvoň zvonečkem u stromu na návsi.
+navod;Dárek pod stromek jen tehdy, když dítě nekouká. Nakonec zazvoň.
+konec_nadpis;Cink!
+konec_text;Zazvonil zvoneček a děti se rozběhly ke stromkům. Pepík našel sáňky, Anča pastelky a Toník dřevěného koníka. Všichni tři tvrdí, že Ježíška málem viděli. Toník prý zahlédl brašnu.|Brašna je prázdná. Na poště na tebe čeká talíř cukroví a babička Toníka ti poslala pohlednici. Prý od Ježíška.
+pozadi;data/jeziskova/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Po dešti: teplé světlo shora a slunce v rohu -->
+  <defs>
+    <linearGradient id="svetlo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6D86B" stop-opacity=".55"/>
+      <stop offset=".4" stop-color="#F6D86B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#svetlo)"/>
+  <circle cx="254" cy="22" r="16" fill="#F6D86B"/>
+</svg>

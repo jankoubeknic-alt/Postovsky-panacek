@@ -1,0 +1,16 @@
+klic;hodnota
+datum;1. IV.
+start;dopis_mlada balik_hubeny pohled_ticha dopis_lhar pohar
+cil;dopis_mlada_doruceno balik_hubeny_doruceno pohled_ticha_doruceno dopis_lhar_doruceno pohar_doruceno
+uvod;Na ceduli u silnice stojí VÍTEJTE V PRAVDÍNĚ. Je to Lhářov. Tady lže každý, a to vždycky. Lžou i cedule a lžou i adresy, protože kdo sem píše, ten zvyk zná a adresuje naopak.|Pravdu tu mluví jen činy. Komu dáš zásilku, ten řekne, že není jeho. Když si ji přesto nechá, byla jeho. A když se ti s ní chlubí, že je jeho, a pak ti ji vrátí, patří někomu jinému.
+navod;Všichni lžou, i adresy. Pravdu mluví jen činy.
+konec_nadpis;Nevítejte v Lhářově
+konec_text;Babka dostala dopis od pravnučky a tvrdí, že ho nečetla. Čte ho potřetí. Řezník má ve skříni nové šle, hostinská mlčí jako zařezaná, tedy křičí, a starosta se za svůj pohár stydí tak, že ho vystavil do okna. Paní učitelka je nová kronikářka. Poprvé v dějinách bude v kronice Lhářova pravda.|Brašna je prázdná. Lhářovští ti na rozloučenou mávají a volají: „Už sem nikdy nejezdi!“ Myslí to moc hezky.
+pozadi;data/lharov/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

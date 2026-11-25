@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Floriánova: řada domů na návsi pod modrým májovým nebem, uprostřed studna a zvonice, vpravo socha svatého Floriána s věderkem. Šipka větru zleva doprava. -->
+  <rect width="300" height="400" fill="#CFE0EC"/>
+  <rect y="150" width="300" height="250" fill="#9CBF7A"/>
+  <g fill="#B08C6A"><rect x="10" y="80" width="50" height="40"/><rect x="85" y="80" width="50" height="40"/><rect x="160" y="80" width="50" height="40"/><rect x="235" y="70" width="50" height="50"/></g>
+  <g fill="#7A3E2E"><path d="M5 82l30-24 30 24z"/><path d="M80 82l30-24 30 24z"/><path d="M155 82l30-24 30 24z"/><path d="M230 72l30-26 30 26z"/></g>
+  <path d="M20 40h240" stroke="#7A8A9A" stroke-width="3" stroke-dasharray="8 6"/><path d="M258 34l10 6-10 6z" fill="#7A8A9A"/>
+  <text x="150" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#5A6A7A">VÍTR</text>
+</svg>

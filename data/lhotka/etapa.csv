@@ -1,0 +1,27 @@
+klic;hodnota
+datum;14. VIII.
+start;dopis balik pohled brile
+cil;dopis_doruceno brile_doruceno pohled_doruceno balik_doruceno
+uvod;Zítra je v Lhotce pouť a v brašně ti zbyly čtyři zásilky. Doruč je ještě dnes, ať může starosta ráno přestřihnout pásku.|Zásilku doručíš tak, že ji přetáhneš na adresáta. Můžeš ji taky vybrat klepnutím a pak klepnout na postavu. Když klepneš na postavu bez zásilky, rozhlédneš se.
+navod;Přetáhni zásilku na adresáta. Klepnutím na postavu se rozhlédneš.
+konec_nadpis;Pouť může začít!
+konec_text;Starosta přestřihl pásku novými nůžkami. Kovář tančí s pekařkou, babka v brýlích předčítá pohlednici celé vsi a Punťa snědl tři koláče.|Brašna je prázdná. Dobrá práce, pošťáku.
+# Nepovinné klíče pro jiné obce:
+# pozadi: obrázek scény (img/brodek.webp). Bez něj se kreslí zástupná vesnice.
+# barvy: přebarvení zástupné scény, např. nebe=#9FB3BF louka=#6F8A72
+# pocitadla: počáteční hodnoty počítadel, např. voda=2
+# kazdy_tah: efekt po každém podání karty, např. voda+1 / kazdy_tah_kdyz: jen když platí podmínka, např. !vodnik_stastny
+# vrstvy: obrázky přes scénu podle stavu hry patří do souboru vrstvy.csv ve složce obce (viz Brodek a Kamenice)
+# den a noc: rozhlédnutí (?) na cíl může mít efekt, v Kamenici tak věžní hodiny přepínají vlajku noc
+# brasna: kolik věcí se vejde do brašny, např. 3. V podmínkách pak funguje karet<3 nebo karet=0 (viz Sněžná)
+# ukazatele: počítadla v liště jako id:Název:maximum, např. voda:Hladina:8 (název bez mezer)
+# kazdy_tah.csv ve složce obce: víc pravidel „po každém tahu“ s podmínkou, efektem a textem (viz Šnekov). Efekt cekej nechá uběhnout tah.
+# prohra: podmínka prohry, např. voda>=8 / prohra_text: co se stalo
+pozadi;
+barvy;
+kazdy_tah;
+pocitadla;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

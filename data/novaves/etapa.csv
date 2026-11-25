@@ -1,0 +1,16 @@
+klic;hodnota
+datum;14. VI.
+start;katastr pozvanka_n pozvanka_s barva
+cil;hruska_spolecna pozvanka_n_doruceno pozvanka_s_doruceno cara_zrusena
+uvod;Od roku 1921 vede přes náves bílá čára. Tehdy se ves pohádala o hrušeň, která rostla přesně na hranici. Od té doby má Nová Ves svého starostu, Stará Ves taky a celník na čáře hlídá, kdo kam chodí. Teď si chce syn starého starosty vzít dceru nového.|Začínáš na straně Nové Vsi. Přes čáru tě pustí celník, ale každé přejití sleduje celá ves z oken a napětí roste. Pošta z druhé strany starosty rozčílí.
+navod;Přes čáru tě pustí celník. Každé přejití zvýší napětí.
+konec_nadpis;Čára je pryč
+konec_text;Celník čáru přetřel na zeleno a pod společnou hrušní se slavila svatba Tondy a Marušky. Oba starostové seděli u jednoho stolu a hádali se jen o to, čí je hruškovice lepší.|Brašna je prázdná. Obec se po sto letech jmenuje zase jen Ves.
+pozadi;data/novaves/pozadi.svg
+barvy;
+pocitadla;napeti=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;napeti:Napětí:6
+prohra;napeti>=6
+prohra_text;Napětí bylo k nevydržení. Z obou stran čáry začaly létat hrušky a z koulovačky se stala válka. Svatba se odkládá na neurčito.|Zkus to znovu. Přes čáru choď jen tehdy, když musíš.

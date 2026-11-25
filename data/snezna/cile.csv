@@ -1,0 +1,14 @@
+# x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Sněžná má dvě místa: údolí s poštou a hřeben. Na hřebenu platí vlajka nahore a přes scénu se ukáže vrstva hreben.svg.
+id;jmeno;ikona;x;y;skryt_kdyz
+posta;Poštmistr Sedlák;👨‍🦳;50;20;nahore
+t_dopis;Dopis;✉️;18;50;nahore nebo vzato_dopis
+t_baterie;Baterie;🔋;39;50;nahore nebo vzato_baterie
+t_noviny;Noviny;📰;61;50;nahore nebo vzato_noviny
+t_sneznice;Sněžnice;🥾;82;50;nahore nebo vzato_sneznice
+vnuk;Vnuk Pepík;👦;50;80;nahore
+babka;Babička Horáčková;👵;24;30;!nahore nebo babka_jde
+meteorolog;Meteorolog;🧑‍🔬;76;18;!nahore
+chatar;Chatař;👨‍🍳;60;56;!nahore
+stezka;Stezka;⛰️;16;82;
+lanovka;Lanovka;🚡;84;80;

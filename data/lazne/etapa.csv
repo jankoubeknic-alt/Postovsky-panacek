@@ -1,0 +1,17 @@
+klic;hodnota
+datum;12. VI.
+start;anonym noty medaile pohled
+cil;pohled_doruceno medaile_doruceno noty_doruceno odhaleno
+uvod;Do Lázní Bílá chodí hostům anonymy. Kdo nějaký dostane, mluví o něm celý den, a kolonáda je plná drbů. V brašně máš další obálku bez odesílatele.|Dávej pozor, komu co ukážeš. Kdo neumí mlčet, roznese, co viděl. Když drby přerostou přes hlavu, budou si na tebe stěžovat na poště. Rozhlížet se můžeš zadarmo.
+navod;Kdo uvidí cizí dopis, může ho roznést. Rozhlížet se můžeš zadarmo.
+konec_nadpis;Lázně si oddychly
+konec_text;Paní radová Šmídová přiznala, že anonymy psala sama, a dokonce i sobě, aby měla o čem mluvit. Za trest musí týden mlčet, i u pramene. Plukovník nosí medaili, orchestr hraje novou polku a Anička si pořád dokola čte pohled od Toníka.|Brašna je prázdná. Na kolonádě je zase slyšet jen muzika a šplouchání pramene.
+pozadi;data/lazne/pozadi.svg
+barvy;
+# Drby přibývají, jen když zásilku uvidí někdo, kdo neumí mlčet. Při 10 hráč prohraje.
+pocitadla;drby=0
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;drby:Drby:10
+prohra;drby>=10
+prohra_text;Drby se rozletěly po celých lázních. Na kolonádě se šušká, že pošťák čte cizí dopisy, a ředitel lázní si na tebe stěžoval na poště.|Zkus to znovu. Dopisy ukazuj jen těm, kdo umějí mlčet.

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Hlínova: úzké uličky, vlevo nahoře rabiho dům, vpravo lázně s kádí, uprostřed Golem, vlevo studna, vpravo pekárna s pecí, dole dřevník. -->
+  <rect width="300" height="400" fill="#D9D2C2"/>
+  <path d="M0 0H300V400H0Z" fill="#CFC6B2"/>
+  <rect x="4" y="30" width="96" height="70" fill="#B9A27A"/><path d="M0 34L52 8L104 34Z" fill="#6B4A3A"/>
+  <rect x="200" y="40" width="96" height="70" fill="#E6E2D8"/><path d="M196 44L248 18L300 44Z" fill="#5A6A7A"/>
+  <ellipse cx="248" cy="100" rx="30" ry="10" fill="#8A6A48"/><rect x="218" y="84" width="60" height="16" fill="#8A6A48"/>
+  <rect x="200" y="200" width="96" height="70" fill="#F1E3C6"/><path d="M196 204L248 178L300 204Z" fill="#C98A3A"/>
+  <path d="M228 262a20 20 0 0 1 40 0Z" fill="#3A2A1E"/>
+  <rect x="34" y="236" width="40" height="22" fill="#9A9488"/><path d="M30 222h48M38 222v14M70 222v14" stroke="#6B4A2E" stroke-width="3"/>
+  <g fill="#8A6A48"><rect x="110" y="330" width="80" height="10"/><rect x="110" y="342" width="80" height="10"/><rect x="110" y="354" width="80" height="10"/></g>
+</svg>

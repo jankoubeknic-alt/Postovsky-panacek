@@ -1,0 +1,9 @@
+# Výstupy testovacích nástrojů
+nastroje/hra_*/
+nastroje/souhrn_*.png
+nastroje/prehled*.png
+nastroje/kontrola_*.log
+nastroje/*.log
+__pycache__/
+# Sbalená verze webu (nastroje/sbal.py)
+sbaleno/

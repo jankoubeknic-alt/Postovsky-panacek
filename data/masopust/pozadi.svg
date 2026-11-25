@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Maškarovic: zasněžená náves, hospoda s praporky, vpředu cesta, kudy jde průvod. -->
+  <rect width="300" height="400" fill="#D9E2EA"/>
+  <rect y="250" width="300" height="150" fill="#F1F3F5"/>
+  <path d="M0 300C80 285 220 315 300 296V400H0Z" fill="#E2E6EA"/>
+  <g fill="#B98C5E" stroke="#6E4E34" stroke-width="2"><rect x="30" y="170" width="90" height="70"/><rect x="190" y="180" width="80" height="60"/></g>
+  <g fill="#8B4A3A"><path d="M22 172L75 130L128 172Z"/><path d="M182 182L230 145L278 182Z"/></g>
+  <g fill="#F1F3F5"><path d="M30 166L75 132L120 166Z" opacity=".7"/></g>
+  <path d="M0 110Q150 140 300 105" stroke="#7A5A3A" stroke-width="1.2" fill="none"/>
+  <g><path d="M30 116l6 12 6-11Z" fill="#D9534F"/><path d="M70 122l6 12 6-11Z" fill="#F0AD4E"/><path d="M110 127l6 12 6-11Z" fill="#5BC0DE"/><path d="M150 129l6 12 6-11Z" fill="#5CB85C"/><path d="M190 127l6 12 6-11Z" fill="#D9534F"/><path d="M230 121l6 12 6-11Z" fill="#F0AD4E"/><path d="M270 113l6 12 6-11Z" fill="#5BC0DE"/></g>
+  <text x="75" y="210" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#4A3A2E">HOSPODA</text>
+</svg>

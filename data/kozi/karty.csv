@@ -1,0 +1,9 @@
+id;nazev;druh;ikona;adresa;popis
+listek_s;Volební lístek;dopis;🗒️;Sedlák Kmoch, statek;Hlasovací lístek se dvěma jmény: Róza a Bořek. Zakroužkovat jedno.
+listek_b;Volební lístek;dopis;🗒️;Babka Vrbová, chaloupka u potoka;Hlasovací lístek se dvěma jmény: Róza a Bořek. Babka prý neslyší, ani když se křičí.
+plakat;Leták;pohled;📣;Babka Vrbová (pro všechny voliče);Volební leták Rózy: VOLTE RÓZU. NIC SE NEZMĚNÍ. A Bořkův: JETEL PRO VŠECHNY!
+faktura;Faktura;dopis;🧾;Kozel Bořek, kandidát;Z hospodářského družstva: 30 pytlů jetele, odebráno z pole pana Kmocha, NEZAPLACENO. Bořek by ji asi rád snědl.
+zeli;Hlávka zelí;vec;🥬;Pro Bořka, ať má co žrát;Sedlákovo zelí. Tvrdé, kulaté a pro kozla neodolatelné.
+hlas_s;Vyplněný lístek;dopis;✅;Do volební urny;Sedlákův hlas. Zakroužkováno tak silně, že je lístek proražený.
+hlas_b;Vyplněný lístek;dopis;✅;Do volební urny;Babčin hlas. Zakroužkováno jméno a ještě nakreslená kytička.
+zapis;Zápis o volbách;dopis;📜;Starostka Róza, k podpisu;Komise sečetla hlasy. Chybí jen podpis starostky.

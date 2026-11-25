@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Déšť: vzor kapek se posouvá o jednu periodu dolů, takže smyčka nemá švy -->
+  <style>
+    .kapky { animation: pad .55s linear infinite; }
+    @keyframes pad { from { transform: translateY(-40px); } to { transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) { .kapky { animation: none; } }
+  </style>
+  <defs>
+    <pattern id="kapka" width="30" height="40" patternUnits="userSpaceOnUse">
+      <path d="M7 2l-3 10M21 20l-3 10M28 8l-3 10M14 30l-3 8" stroke="#E4EEF1" stroke-width="1.2" stroke-linecap="round" opacity=".6"/>
+    </pattern>
+  </defs>
+  <rect width="300" height="400" fill="#6C7E88" opacity=".12"/>
+  <rect class="kapky" x="0" y="0" width="300" height="440" fill="url(#kapka)"/>
+</svg>

@@ -1,0 +1,9 @@
+id;nazev;druh;ikona;adresa;popis
+vymer;Daňový výměr;dopis;📜;Starosta, obecní úřad Spáčov;Z kraje. Obec dluží daně za deset let. Splatné ihned.
+kroupy;Hlášení o krupobití;dopis;🧊;Sedlák, statek pod Blaníkem;Z okresu. Kroupy velké jako vejce potloukly všechna pole kolem Blaníku.
+zruseni;Dopis od ženicha;dopis;💔;Nevěsta, Spáčov č. 3;Psáno roztřeseně. Ženich se bojí, svatba se ruší.
+pohled;Pohled z lázní;dopis;🏞️;Hostinský, hostinec Pod Blaníkem;Od švagra. Píše, že voda je teplá a jídlo studené.
+prosba;Prosba dětí;dopis;🖍️;Rytíři, hora Blaník;Pastelkami: Milí rytíři, vzbuďte se, je nejhůř. Vaše děti ze Spáčova.
+listina_dan;Listina o zaplacení;dopis;📃;Starosta, obecní úřad Spáčov;S pečetí svatého Václava. Daně zaplaceny z pokladu Blaníku.
+listina_uroda;Listina o pomoci;dopis;📃;Sedlák, statek pod Blaníkem;Rytíři zorají a zasejí. Koně mají, pluhy si půjčí.
+listina_svatba;Listina pro nevěstu;dopis;📃;Nevěsta, Spáčov č. 3;Ženich se našel. Rytíři ho přivedou k oltáři. Osobně.

@@ -1,0 +1,73 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Skákalov: pes běží po každém podání oves, louka, les a myslivec je pořád o krok za ním (počítadla pes a m).
+# Buřt nastražený tam, kam pes doběhne, ho zastaví (navnada1 až 3). Buřt u psa nebo u myslivce je ztracený.
+karta;cil;podminka;vyraz;text;efekt
+?;pes1;chycen !pero_vzato;🐕;Alík žere buřt u ovsa a ani nezvedne hlavu. Péro leží vedle něj. Sebereš ho.;+pero pero_vzato
+?;pes1;chycen;🐕;Alík u ovsa dojídá buřt a vrtí ocasem. Utíkat už nechce.;
+?;pes1;;🐕;Alík skáče u ovsa s pérem v tlamě. Za chvíli bude na louce.;
+?;mys1;pero_doruceno;🤠;Myslivec si upravuje péro na klobouku a hladí Alíka.;
+?;mys1;;🤠;Myslivec funí u ovsa. „Alíku! Vrať mi péro! Zas jsem o krok pozadu.“;
+burt;sedlak;pes=1;🐕;Položíš buřt u ovsa. Alík je zrovna tady, chňapne po něm a uteče s ním dál. Buřt je pryč.;-burt
+burt;sedlak;m=1;🤠;Položíš buřt u ovsa, kde zrovna stojí myslivec. Myslivec ho sní. „Díky, z toho běhání mám hlad.“;-burt
+burt;sedlak;navnada1;🌭;Buřt u ovsa už leží.;
+burt;sedlak;;🌭;Nastražíš buřt u ovsa do trávy. Voní na tři louky. Teď jen počkat, až sem pes doběhne.;-burt navnada1
+obojek;pes1;chycen;🦮;Zapneš Alíkovi obojek se jmenovkou. Alík se prohlíží a vrtí ocasem. ALÍK. Už se neztratí.;-obojek obojek_doruceno ikona:pes1:🦮 razitko
+obojek;pes1;;🐕;Alík proskočí kolem dřív, než mu obojek zapneš. Musel by se zastavit.;
+pero;mys1;;🤠;Myslivec si zastrčí péro za klobouk a hned je z něj ten myslivec z písničky. „Šel za ním myslivec, péro na klobouku!“ zazpívá falešně.;-pero pero_doruceno ikona:mys1:🎩 razitko
+obojek;mys1;;🤠;„Obojek je pro Alíka. Ale musíš ho chytit, mně utíká.“;
+burt;mys1;;🤠;Myslivec buřt sní. „Ten byl pro psa? Jé.“;-burt
+pero;pes1;;🐕;Alík po péru chňapne. Rychle ho schováš. Patří na klobouk.;
+?;pes2;chycen !pero_vzato;🐕;Alík žere buřt na louce a ani nezvedne hlavu. Péro leží vedle něj. Sebereš ho.;+pero pero_vzato
+?;pes2;chycen;🐕;Alík na louce dojídá buřt a vrtí ocasem. Utíkat už nechce.;
+?;pes2;;🐕;Alík skáče na louce s pérem v tlamě. Za chvíli bude v lese.;
+?;mys2;pero_doruceno;🤠;Myslivec si upravuje péro na klobouku a hladí Alíka.;
+?;mys2;;🤠;Myslivec funí na louce. „Alíku! Vrať mi péro! Zas jsem o krok pozadu.“;
+burt;pasacek;pes=2;🐕;Položíš buřt na louce. Alík je zrovna tady, chňapne po něm a uteče s ním dál. Buřt je pryč.;-burt
+burt;pasacek;m=2;🤠;Položíš buřt na louce, kde zrovna stojí myslivec. Myslivec ho sní. „Díky, z toho běhání mám hlad.“;-burt
+burt;pasacek;navnada2;🌭;Buřt na louce už leží.;
+burt;pasacek;;🌭;Nastražíš buřt na louce do trávy. Voní na tři louky. Teď jen počkat, až sem pes doběhne.;-burt navnada2
+obojek;pes2;chycen;🦮;Zapneš Alíkovi obojek se jmenovkou. Alík se prohlíží a vrtí ocasem. ALÍK. Už se neztratí.;-obojek obojek_doruceno ikona:pes2:🦮 razitko
+obojek;pes2;;🐕;Alík proskočí kolem dřív, než mu obojek zapneš. Musel by se zastavit.;
+pero;mys2;;🤠;Myslivec si zastrčí péro za klobouk a hned je z něj ten myslivec z písničky. „Šel za ním myslivec, péro na klobouku!“ zazpívá falešně.;-pero pero_doruceno ikona:mys2:🎩 razitko
+obojek;mys2;;🤠;„Obojek je pro Alíka. Ale musíš ho chytit, mně utíká.“;
+burt;mys2;;🤠;Myslivec buřt sní. „Ten byl pro psa? Jé.“;-burt
+pero;pes2;;🐕;Alík po péru chňapne. Rychle ho schováš. Patří na klobouk.;
+?;pes3;chycen !pero_vzato;🐕;Alík žere buřt v lese a ani nezvedne hlavu. Péro leží vedle něj. Sebereš ho.;+pero pero_vzato
+?;pes3;chycen;🐕;Alík v lese dojídá buřt a vrtí ocasem. Utíkat už nechce.;
+?;pes3;;🐕;Alík skáče v lese s pérem v tlamě. Za chvíli bude u ovsa.;
+?;mys3;pero_doruceno;🤠;Myslivec si upravuje péro na klobouku a hladí Alíka.;
+?;mys3;;🤠;Myslivec funí v lese. „Alíku! Vrať mi péro! Zas jsem o krok pozadu.“;
+burt;hajny;pes=3;🐕;Položíš buřt v lese. Alík je zrovna tady, chňapne po něm a uteče s ním dál. Buřt je pryč.;-burt
+burt;hajny;m=3;🤠;Položíš buřt v lese, kde zrovna stojí myslivec. Myslivec ho sní. „Díky, z toho běhání mám hlad.“;-burt
+burt;hajny;navnada3;🌭;Buřt v lese už leží.;
+burt;hajny;;🌭;Nastražíš buřt v lese do trávy. Voní na tři louky. Teď jen počkat, až sem pes doběhne.;-burt navnada3
+obojek;pes3;chycen;🦮;Zapneš Alíkovi obojek se jmenovkou. Alík se prohlíží a vrtí ocasem. ALÍK. Už se neztratí.;-obojek obojek_doruceno ikona:pes3:🦮 razitko
+obojek;pes3;;🐕;Alík proskočí kolem dřív, než mu obojek zapneš. Musel by se zastavit.;
+pero;mys3;;🤠;Myslivec si zastrčí péro za klobouk a hned je z něj ten myslivec z písničky. „Šel za ním myslivec, péro na klobouku!“ zazpívá falešně.;-pero pero_doruceno ikona:mys3:🎩 razitko
+obojek;mys3;;🤠;„Obojek je pro Alíka. Ale musíš ho chytit, mně utíká.“;
+burt;mys3;;🤠;Myslivec buřt sní. „Ten byl pro psa? Jé.“;-burt
+pero;pes3;;🐕;Alík po péru chňapne. Rychle ho schováš. Patří na klobouk.;
+?;sedlak;;👨‍🌾;Sedlák hrozí holí. „Ten pes mi skáče přes oves! Přes oves, přes louku a do lesa. Pořád dokola.“;
+?;pasacek;!@burt;🧒;Pasáček zpívá: „Skákal pes přes oves, přes zelenou louku…“ Pak ti podá buřt ze svačiny. „Na Alíka platí jedině buřt. Ale musíš být rychlejší než on.“;+burt
+?;pasacek;;🧒;Pasáček zpívá: „…šel za ním myslivec, péro na klobouku.“ Pak se zasměje. „Jenže péro nemá.“;
+?;hajny;;🧔;Hajný se opírá o strom. „Alík vždycky proběhne lesem a pak zase skočí do ovsa. Kdo ho chce chytit, musí na něj čekat tam, kam běží.“;
+napoveda;*;!chycen !@burt;💡;Pes zastaví jen kvůli něčemu, co voní víc než péro. Pasáček má svačinu.;
+napoveda;*;!chycen;💡;Nastraž buřt tam, kam pes doběhne po dalším podání. Oves, louka, les a zase oves. Ne tam, kde je pes, ani tam, kde stojí myslivec.;
+napoveda;*;!pero_vzato;💡;Pes žere a péro pustil. Klepni na něj.;
+napoveda;*;;💡;Péro patří myslivci, obojek psovi. A doruč dopisy sedlákovi, pasáčkovi a hajnému.;
+dopis_sedlak;sedlak;;👨‍🌾;Sedlák čte, že jeho oves pojede na výstavu. Podívá se na pole. „Jen ať přes něj ten pes neskáče.“;-dopis_sedlak sedlak_doruceno razitko
+dopis_pasacek;pasacek;;🧒;Pasáček si prohlíží ovečku s mašlí a zpívá jí.;-dopis_pasacek pasacek_doruceno razitko
+dopis_hajny;hajny;;🧔;Hajný si přečte varování před psy. „Pozor na psy, kteří honí srny? Alík honí jen myslivce.“;-dopis_hajny hajny_doruceno razitko
+obojek;sedlak;;👨‍🌾;„Obojek? Pro toho psa? Ať ho má, a nakrátko.“;
+pero;pasacek;;🧒;„Péro patří myslivci na klobouk. Jinak to není ta písnička.“;
+dopis_sedlak;pasacek;;🧒;„Pro sedláka. Ten je u ovsa a hrozí holí.“;
+dopis_hajny;sedlak;;👨‍🌾;„Pro hajného, ten je v lese.“;
+dopis_pasacek;hajny;;🧔;„Pohled pro pasáčka? Ten je na louce a zpívá.“;
+*;*;;🤷;Nic se nestane. Ale pes poskočil dál.;

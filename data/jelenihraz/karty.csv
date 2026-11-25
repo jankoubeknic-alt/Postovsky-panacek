@@ -1,0 +1,7 @@
+id;nazev;druh;ikona;adresa;popis
+avizo_pila;Avízo pro pilaře;dopis;📨;Pilař, pila pod hrází;Oznámení: kanálem vám plave zásilka. Čekejte na břehu.
+avizo_hajovna;Avízo pro hajnou;dopis;📨;Hajná, hájovna u kanálu;Oznámení: kanálem vám plave zásilka. Čekejte na břehu.
+avizo_ves;Avízo pro hospodského;dopis;📨;Hospodský, hospoda ve vsi;Oznámení: kanálem vám plave zásilka. Čekejte na břehu.
+list;Pilový list;balik;🪚;Pilař, pila pod hrází;Dlouhý jako dva chlapi. Zabalený v plátně, aby nikoho neuřízl.
+truhla;Truhla s výbavou;balik;🧳;Hajná, hájovna u kanálu;Peřiny a ubrusy pro hajné dceru. Truhla je zalitá smolou, aby nenatekla.
+sud;Sud piva;balik;🛢️;Hospodský, hospoda ve vsi;Z pivovaru. Plave líp než dřevo.

@@ -1,0 +1,16 @@
+klic;hodnota
+datum;9. IX.
+start;dopis_ogar dopis_baca dopis_jura pytel kosik frgal
+cil;ogar_doruceno baca_doruceno jura_doruceno pytel_doruceno kosik_doruceno frgal_doruceno
+uvod;Na nádraží v Třířečí se potkává Haná, Valašsko a Ostravsko. Vlak má zpoždění a v nádražní restauraci čekají lidé ze všech tří krajů. Každý mluví po svém a všichni čekají na poštu.|Adresy psali taky po svém. A co kdo chce, říká tak, jak se u nich doma říká.
+navod;Klepnutím se lidí zeptáš, co chtějí. Pozor, stejné slovo neznamená všude totéž.
+konec_nadpis;Všichni si rozumějí
+konec_text;Hanák má jablóška, holčička jablíčka, ogar frgál od baby a bača dopis z družstva. Vlak konečně přijel a v restauraci se zpívá, každý trochu jinak, ale všichni spolu.|Brašna je prázdná. Bača ti dal hrudku sýra a Hanák pár jablóšek. Teď už víš, že to jsou brambory.
+pozadi;data/trirec/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

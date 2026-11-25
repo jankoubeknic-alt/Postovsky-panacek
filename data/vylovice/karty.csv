@@ -1,0 +1,7 @@
+id;nazev;druh;ikona;adresa;popis
+sit;Síť;vec;🥅;;Velká rybářská síť. Patří porybnému, rybáři s ní umí.
+dopis_kupec;Dopis pro kupce;dopis;✉️;Kupec z města, na hrázi;Objednávka z rybárny. Kapry na Vánoce.
+dopis_farar;Dopis pro pana faráře;dopis;✉️;Farní úřad Výlovice;Z biskupství. Pátek je postní den, ryby vítány.
+kapr;Kapr;vec;🐟;Kupec z města;Šupináč z dolního rybníka.
+stika;Štika;vec;🐊;Hospodský, na štiku na másle;Dravá štika z prostředního rybníka.
+lin;Lín;vec;🐠;Pan farář, na pátek;Zlatavý lín z horního rybníka.

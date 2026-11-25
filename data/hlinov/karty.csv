@@ -1,0 +1,8 @@
+id;nazev;druh;ikona;adresa;popis
+dopis_rabi;Dopis pro rabiho;dopis;📜;Rabi Löw, Hlínov;Od pražské obce. Prosí, ať Golem pomůže lazebníkovi a pekaři, než přijde sobota.
+pohled_lazebnik;Pohled z Karlových Varů;dopis;🏞️;Lazebník, lázně Hlínov;Od kolegy lazebníka. Na obrázku je pramen, který stříká až ke střeše.
+noviny_pekar;Pekařské listy;dopis;📰;Pekař, pekárna Hlínov;Odborný časopis. Titulek: Kolik dříví do pece? Méně, než si myslíte.
+sem;Šém;vec;📜;;Lísteček se svatým jménem. Kdo ho vloží Golemovi do úst, ten ho probudí.
+nos_vodu;Lísteček NOS VODU;vec;🗒️;;Rabiho rukou: NOS VODU. Golem nosí vědro po vědru, dokud se mu neřekne dost.
+nos_drevo;Lísteček NOS DŘÍVÍ;vec;🗒️;;Rabiho rukou: NOS DŘÍVÍ. Golem nosí otýpku po otýpce.
+dost;Lísteček DOST;vec;🗒️;;Rabiho rukou: DOST. Golem přestane, ať dělá cokoli.

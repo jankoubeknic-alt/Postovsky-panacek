@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Jánského Brodu: široká rozvodněná řeka přes střed obrazu, nahoře a dole břehy s trávou, vpravo kamenný pilíř strženého mostu se sochou a pěti zlatými hvězdami. -->
+  <rect width="300" height="400" fill="#A8C89A"/>
+  <path d="M0 110C80 100 220 120 300 105V295C220 310 80 285 0 300Z" fill="#7F9FB8"/>
+  <g stroke="#B9D0E0" stroke-width="2" fill="none"><path d="M20 160q20-8 40 0M120 210q20-8 40 0M60 250q20-8 40 0M180 170q20-8 40 0"/></g>
+  <rect x="236" y="150" width="34" height="110" fill="#9A9488"/>
+  <g fill="#F5D04A"><circle cx="240" cy="132" r="4"/><circle cx="248" cy="122" r="4"/><circle cx="256" cy="118" r="4"/><circle cx="264" cy="122" r="4"/><circle cx="272" cy="132" r="4"/></g>
+</svg>

@@ -1,0 +1,16 @@
+klic;hodnota
+datum;15. IX.
+start;dopis_radnice dopis_hospoda dopis_skola dopis_fara patrona
+cil;radnice_doruceno hospoda_doruceno skola_doruceno fara_doruceno zadost_doruceno pozvanka_doruceno
+uvod;Pokrokový starosta zavedl v Trubkovicích potrubní poštu, jako mají v Praze. Z pošty vede trubka pod zemí a dělí se na radnici, školu, hospodu a faru. Pěšky se od té doby doručovat nesmí.|Jenže výhybky v potrubí se po každé patroně samy přehodí. Kam poletí příští patrona, ukazují šipky na výhybkách. Do jedné patrony se vejde jen jedna zásilka.
+navod;Šipky ukazují, kam poletí patrona. Po průletu se výhybka přehodí.
+konec_nadpis;Potrubí funguje
+konec_text;Radnice schválila opravu věže, hospoda chystá besídku, škola učí a farář má novou věž v rozpočtu. Strojník Vzduchal namazal výhybky a starosta prohlásil, že příští rok bude potrubí i do mlýna.|Brašna je prázdná. Prázdnou patronu sis nechal na památku. Když do ní fouknete, zahouká jako sova.
+pozadi;data/trubkovice/pozadi.svg
+barvy;
+pocitadla;
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

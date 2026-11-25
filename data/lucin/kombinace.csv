@@ -1,0 +1,56 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Lucín: Luciin stoleček z přesně třinácti druhů dřeva (počítadlo druhy, začíná na 2). Svazky se v některých druzích překrývají, počítají se jen nové. Hromádka dřeva vrátí všechny svazky.
+karta;cil;podminka;vyraz;text;efekt
+dopis_truhlar;truhlar;;🪚;Truhlář čte zakázku. „Luciin stoleček? Ze třinácti druhů dřeva. Buk a dub mám, chybí jedenáct. Seženeš svazky? Ale počítej. Co už mám, se nepočítá.“;-dopis_truhlar truhlar_doruceno razitko
+svazek_hajny;truhlar;truhlar_doruceno  druhy<11;🪵;Truhlář rozváže svazek. „Smrk, jedle, borovice. Buk už mám, ten se nepočítá. Tři nové.“;-svazek_hajny h_dal druhy+3
+svazek_hajny;truhlar;truhlar_doruceno;🙅;Truhlář přepočítá dřevo na ponku a zavrtí hlavou. „S tímhle by to bylo přes třináct. Luciin stoleček má mít přesně třináct druhů.“;
+svazek_sadar;truhlar;truhlar_doruceno  druhy<10;🪵;Truhlář rozváže svazek. „Třešeň, švestka, hruška, jabloň. Čtyři nové.“;-svazek_sadar s_dal druhy+4
+svazek_sadar;truhlar;truhlar_doruceno;🙅;Truhlář přepočítá dřevo na ponku a zavrtí hlavou. „S tímhle by to bylo přes třináct. Luciin stoleček má mít přesně třináct druhů.“;
+svazek_kosikar;truhlar;truhlar_doruceno  druhy<12;🪵;Truhlář rozváže svazek. „Vrba a líska. Dva nové.“;-svazek_kosikar ko_dal druhy+2
+svazek_kosikar;truhlar;truhlar_doruceno;🙅;Truhlář přepočítá dřevo na ponku a zavrtí hlavou. „S tímhle by to bylo přes třináct. Luciin stoleček má mít přesně třináct druhů.“;
+svazek_kolar;truhlar;truhlar_doruceno m_dal druhy<13;🪵;Truhlář rozváže svazek. „Jasan je nový. Dub mám a javor přinesl už mlynář. Jen jeden.“;-svazek_kolar kl_dal druhy+1
+svazek_kolar;truhlar;truhlar_doruceno !m_dal druhy<12;🪵;Truhlář rozváže svazek. „Jasan a javor. Dub už mám. Dva nové.“;-svazek_kolar kl_dal druhy+2
+svazek_mlynar;truhlar;truhlar_doruceno kl_dal druhy<11;🪵;Truhlář rozváže svazek. „Olše, lípa, bříza. Javor už mám od koláře. Tři nové.“;-svazek_mlynar m_dal druhy+3
+svazek_mlynar;truhlar;truhlar_doruceno kl_dal;🙅;Truhlář přepočítá dřevo na ponku a zavrtí hlavou. „S tímhle by to bylo přes třináct. Luciin stoleček má mít přesně třináct druhů.“;
+svazek_mlynar;truhlar;truhlar_doruceno !kl_dal druhy<10;🪵;Truhlář rozváže svazek. „Olše, lípa, javor, bříza. Čtyři nové.“;-svazek_mlynar m_dal druhy+4
+svazek_mlynar;truhlar;truhlar_doruceno !kl_dal;🙅;Truhlář přepočítá dřevo na ponku a zavrtí hlavou. „S tímhle by to bylo přes třináct. Luciin stoleček má mít přesně třináct druhů.“;
+svazek_hajny;truhlar;;🪚;„Nejdřív mi dej zakázku. Pro koho to dělám?“;
+svazek_sadar;truhlar;;🪚;„Nejdřív mi dej zakázku. Pro koho to dělám?“;
+svazek_kosikar;truhlar;;🪚;„Nejdřív mi dej zakázku. Pro koho to dělám?“;
+svazek_kolar;truhlar;;🪚;„Nejdřív mi dej zakázku. Pro koho to dělám?“;
+svazek_mlynar;truhlar;;🪚;„Nejdřív mi dej zakázku. Pro koho to dělám?“;
+?;truhlar;stolecek;🪑;Truhlář leští stoleček. Třináct druhů dřeva, každý jinak barevný.;
+?;truhlar;truhlar_doruceno;🪚;Truhlář počítá na prstech. „Buk, dub… a co mi přineseš dál. Přesně třináct. Co mám dvakrát, se nepočítá.“;
+?;truhlar;;🪚;Truhlář hobluje. „Prý pro mě něco máš?“;
+?;hromada;;🪵;Truhlář rozloží všechno přinesené dřevo zpátky do svazků a vrátí ti je. Začne se počítat znovu.;rozloz cekej
+?;lucky;;👻;Dvě bílé lucky se zobáky a husím křídlem nakukují do oken. „Kdo přede na Lucii, tomu zamotáme přeslici.“ Pak se podívají na tebe. „Stoleček ze třinácti dřev? Ani o jedno víc, jinak nefunguje.“;
+?;hajny;!@svazek_hajny !h_dal;🪵;Hajný ti dá svazek. „Smrk, jedle, borovice a kousek buku. Co roste v lese.“;+svazek_hajny
+?;hajny;;🙂;Hajný už ti svazek dal.;
+?;sadar;!@svazek_sadar !s_dal;🪵;Sadař ti dá svazek. „Třešeň, švestka, hruška a jabloň. Ze sadu.“;+svazek_sadar
+?;sadar;;🙂;Sadař už ti svazek dal.;
+?;kosikar;!@svazek_kosikar !ko_dal;🪵;Košíkář ti dá svazek. „Vrba a líska. Z toho pletu.“;+svazek_kosikar
+?;kosikar;;🙂;Košíkář už ti svazek dal.;
+dopis_kolar;kolar;;✉️;Kolář čte objednávku. „Čtyři kola! Tak to je práce do Vánoc.“;-dopis_kolar kolar_doruceno razitko
+?;kolar;kolar_doruceno !@svazek_kolar !kl_dal;🪵;Kolář ti dá svazek odřezků. „Jasan, dub a javor. Z toho dělám kola.“;+svazek_kolar
+?;kolar;kolar_doruceno;🙂;Kolář pracuje.;
+?;kolar;;🙂;„Dřevo? Nejdřív mi řekni, jestli přišla ta objednávka.“;
+dopis_mlynar;mlynar;;✉️;Mlynář čte z cechu. „Nový kámen! Konečně.“;-dopis_mlynar mlynar_doruceno razitko
+?;mlynar;mlynar_doruceno !@svazek_mlynar !m_dal;🪵;Mlynář ti dá svazek. „Olše, lípa, javor a bříza. Co roste u náhonu.“;+svazek_mlynar
+?;mlynar;mlynar_doruceno;🙂;Mlynář pracuje.;
+?;mlynar;;🙂;„Dřevo dám, ale nejdřív, co mi píše cech?“;
+dopis_mlynar;kolar;;🛞;„To je pro mlynáře.“;
+dopis_kolar;mlynar;;⚙️;„To je pro koláře.“;
+svazek_hajny;lucky;;👻;Lucky si svazek prohlédnou. „Buk? Ten už truhlář má.“;
+svazek_mlynar;lucky;;👻;Lucky ťuknou zobákem do javoru. „Javor je i u koláře. Dvakrát se nepočítá.“;
+svazek_kolar;lucky;;👻;Lucky ťuknou zobákem do dubu. „Dub už truhlář má.“;
+dopis_truhlar;lucky;;👻;„To je pro truhláře. My poštu nečteme. My jen kontrolujeme.“;
+napoveda;*;!truhlar_doruceno;💡;Truhlář nejdřív potřebuje zakázku.;
+napoveda;*;;💡;Truhlář má buk a dub. Počítej jen druhy, které ještě nemá. Javor je ve dvou svazcích. Třináct se dá složit víc způsoby.;
+*;*;;🤷;Nic se nestane.;

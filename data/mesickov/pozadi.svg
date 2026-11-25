@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Měsíčkova: nahoře hora s ohněm, kolem ní sedí měsíčkové. Pod horou starostův dům, Maruščina chaloupka,
+       louka, les, rybník a sad. Dole ledárna a hospoda. Období kreslí vrstvy. -->
+  <rect width="300" height="400" fill="#C9D6E2"/>
+  <path d="M20 120L150 20L280 120Z" fill="#8A9AA8"/>
+  <path d="M0 120H300V400H0Z" fill="#9FB386"/>
+  <!-- oheň -->
+  <path d="M140 74C142 60 150 54 150 44C156 56 162 62 160 74Z" fill="#E0763A"/>
+  <path d="M146 74C147 66 150 62 151 56C154 64 156 68 155 74Z" fill="#F2C24A"/>
+  <path d="M132 76h36" stroke="#6B4A2E" stroke-width="3"/>
+  <!-- starostův dům -->
+  <rect x="6" y="140" width="84" height="56" fill="#E9D3A8"/>
+  <path d="M0 144L48 116L96 144Z" fill="#8A3A3A"/>
+  <rect x="36" y="164" width="22" height="32" fill="#6B4A3A"/>
+  <!-- chaloupka Marušky -->
+  <rect x="126" y="140" width="50" height="40" fill="#C9A77A"/>
+  <path d="M120 142L151 122L182 142Z" fill="#7A5A3A"/>
+  <!-- les -->
+  <g fill="#3F6A44"><path d="M10 250L28 200L46 250Z"/><path d="M40 254L58 196L76 254Z"/><path d="M70 250L84 210L98 250Z"/></g>
+  <!-- rybník -->
+  <ellipse cx="150" cy="262" rx="46" ry="20" fill="#6F9DC0"/>
+  <!-- sad -->
+  <g><rect x="230" y="226" width="6" height="30" fill="#6B4A2E"/><circle cx="233" cy="222" r="16" fill="#5E8A4A"/><rect x="266" y="230" width="6" height="26" fill="#6B4A2E"/><circle cx="269" cy="226" r="14" fill="#5E8A4A"/></g>
+  <!-- ledárna -->
+  <path d="M60 370L90 320L120 370Z" fill="#8A7A6A"/>
+  <rect x="82" y="350" width="16" height="20" fill="#4A3A2E"/>
+  <!-- hospoda -->
+  <rect x="176" y="326" width="96" height="54" fill="#E3CDA6"/>
+  <path d="M170 330L224 302L278 330Z" fill="#6B4A3A"/>
+</svg>

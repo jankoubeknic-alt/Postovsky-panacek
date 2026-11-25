@@ -1,0 +1,7 @@
+# Obrázky přes pozadí scény. Vidět je každý, jehož podmínka platí (prázdná = pořád). Kreslí se v tomto pořadí.
+obrazek;podminka
+data/brodek/voda1.svg;voda>=5
+data/brodek/voda2.svg;voda>=7
+data/brodek/voda3.svg;voda>=10
+data/brodek/dest.svg;!vodnik_stastny
+data/brodek/slunce.svg;vodnik_stastny

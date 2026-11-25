@@ -1,0 +1,69 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO | cekej nechá uběhnout tah
+# počítadla: v efektu x=1, x+1, x-1 | v podmínce x=1, x>0, !x=1
+# Neumětely: venku a uvnitř hradu (vlajka uvnitr) jsou vidět jiní lidé. Šemík poslechne heslo od Horymírové, až se nají ovsa.
+# Přes hradbu skočí dovnitř. Horymírovo poslední přání je projížďka na Šemíkovi a skok do řeky. Ven se odchází bránou s propustkou.
+karta;cil;podminka;vyraz;text;efekt
+?;horymirova;horymirova_doruceno;👩;Horymírová sedí s Horymírem na zápraží a hladí Šemíka.;
+?;horymirova;heslo;👩;„Zavolej na Šemíka, jak jsem ti říkala: Šemíku, hop! Jen tak tě ponese.“;
+?;horymirova;;👩;Horymírová pláče u vrat. „Šemík poslouchá jen Horymíra. Když na něj Horymír zavolá Šemíku, hop!, skočí třeba přes Vltavu. Zkus to ty.“;heslo
+?;semik;heslo krmen;🐎;„Šemíku, hop!“ Šemík zastříhá ušima, skloní hlavu a nechá tě nasednout. Pak ti potichu, aby to nikdo neslyšel, zašeptá: „Vím, kam jedeme.“;+semik
+?;semik;heslo;🐎;„Šemíku, hop!“ Šemík zvedne hlavu, ale pak ji zase skloní ke žlabu. Žlab je prázdný. Napřed by se rád najedl.;
+?;semik;;🐎;Ve stáji stojí bílý kůň s černou hřívou. Na cizího se ani nepodívá.;
+?;horymir_doma;;🏇;Horymír doma suší Šemíka. „Takový skok! A kníže mi odpustil, protože se smál.“;
+?;vratny;;💂;Vrátný stojí u zavřené brány. „Bez knížecí propustky ani myš. A propustky vydává kníže. Který je uvnitř.“;
+?;hradba;;🧱;Hradba je vyšší než stodola. Přes ni by skočil leda kůň z pověsti.;
+?;sedlaci;;👨‍🌾;Sedláci stojí s čepicemi v rukou. „Horymír nás bránil. Havíři nám šlapali pole a on se jich zastal.“;
+?;havir;;⛏️;Havíř si utírá čelo. „My hledáme zlato, a Horymír nám vyčítá pole. Kdo neorá, ten nejí, říká. A kdo nekope, nemá zlato, říkám já.“;
+?;knize;prosba_dorucena;🤴;Kníže se drbe na bradě. „Horymír má právo na poslední přání. Ať si přeje.“;
+?;knize;;🤴;Kníže sedí na trůnu na nádvoří. „Kdo jsi? Jak ses sem dostal? Přes hradbu? To se ještě nikomu nepovedlo.“;
+?;horymir;prosba_dorucena;🧔;Horymír se usměje. „Mé poslední přání? Projet se na Šemíkovi po nádvoří. Třikrát dokola.“;
+?;horymir;;🧔;Horymír stojí v okovech. „Pošťák? Na hradě? Jak jsi prošel? Ah, Šemík! Ten věrný kůň.“;
+?;kat;;🪓;Kat si brousí sekeru a zívá. „Ráno. Až kníže řekne.“;
+?;brana;;🚪;Brána zevnitř. Vrátný na druhé straně chce propustku.;
+napoveda;*;!heslo;💡;Šemík poslouchá jen Horymíra. Kdo ví, jak na něj volá?;
+napoveda;*;!krmen;💡;Šemík má prázdný žlab.;
+napoveda;*;!uvnitr !prosba_dorucena;💡;Brána je zavřená. Šemík přeskočí cokoli.;
+napoveda;*;!prosba_dorucena;💡;Prosba sedláků patří knížeti.;
+napoveda;*;!horymir_doruceno;💡;Dopis od ženy dej Horymírovi, dokud je na hradě.;
+napoveda;*;!svoboda;💡;Horymír má poslední přání. Kdo mu ho splní?;
+napoveda;*;;💡;Ven se dostaneš bránou, s propustkou. Horymírová čeká vzkaz.;
+oves;semik;;🐎;Šemík ze žlabu chroupe oves. Spokojeně zafrká a poprvé se na tebe podívá.;-oves krmen
+semik;hradba;;🐎;Šemík se rozběhne, odrazí se a přeletí hradbu, jako by byla plotem. Jsi na nádvoří. Kníže upustí pohár.;uvnitr
+prosba;knize;;🤴;Kníže čte prosbu sedláků a mračí se. Pak se zasměje. „Třicet křížků! Horymír má ve vsi přátele. Ať si tedy řekne poslední přání. A tobě dám propustku, ať nemusíš skákat.“;-prosba +propustka prosba_dorucena razitko
+dopis_horymir;horymir;;🧔;Horymír čte dopis od ženy a usmívá se. Pak ti rychle napíše vzkaz domů. „Šemík ví, co dělat.“;-dopis_horymir +dopis_domu horymir_doruceno razitko
+semik;horymir;prosba_dorucena;🐎;Horymír vyskočí na Šemíka. Objede nádvoří jednou, podruhé, potřetí. Pak zakřičí „Šemíku, hop!“ a Šemík přeletí hradbu i skálu a dopadne do řeky. Kníže se směje: „Takový skok si zaslouží milost!“;-semik svoboda ikona:kat:😮 razitko
+semik;horymir;;🧔;„Šemíku!“ Horymír pohladí koně. „Teď ne. Kníže mi musí povolit poslední přání.“;
+semik;knize;;🤴;„Krásný kůň,“ obdivuje kníže. „To je ten, co skáče? Ukaž mi to někdy.“;
+propustka;brana;;🚪;Vrátný zkontroluje pečeť a otevře. Jsi zase venku.;!uvnitr
+propustka;vratny;;💂;„Propustku ukaž zevnitř, odsud se pouští ven,“ zasměje se vrátný.;
+dopis_domu;horymirova;;👩;Horymírová čte vzkaz a vtom zaslechne dusot. Na dvůr vjíždí Horymír na mokrém Šemíkovi. Horymírová pustí vzkaz a běží mu naproti.;-dopis_domu horymirova_doruceno razitko
+dopis_horymir;horymirova;;👩;„To jsem psala já. Dones to Horymírovi na hrad.“;
+prosba;sedlaci;;👨‍🌾;„Naše prosba! Dones ji knížeti. Je na hradě.“;
+prosba;vratny;;💂;„Prosba pro knížete? Bez propustky dovnitř nesmí ani prosba.“;
+prosba;havir;;⛏️;„Prosba za Horymíra? Já ji nepodepíšu. Ale nesu ji? Ne.“;
+dopis_horymir;kat;;🪓;„Dopisy pro odsouzené čtu já,“ zabručí kat. „Ale tenhle je od ženy. Dej mu ho.“;
+oves;horymirova;;👩;„Oves je pro Šemíka. Má prázdný žlab od včerejška.“;
+oves;vratny;;💂;„Oves? Nemám koně. Mám bránu.“;
+semik;vratny;;💂;„Kůň? Bez propustky ani kůň.“ Šemík se na vrátného podívá a odfrkne si.;
+semik;sedlaci;;👨‍🌾;„Šemík! Ten skočí přes cokoli. Přes hradbu by skočil taky.“;
+propustka;knize;;🤴;„Propustku jsem ti dal. Odejít můžeš bránou.“;
+dopis_domu;horymir;;🧔;„Ten vzkaz je pro mou ženu. Dones jí ho, ať ví.“;
+prosba;kat;;🪓;Kat prosbu prolistuje. „Třicet křížků? Dej to knížeti.“;
+oves;havir;;⛏️;„Oves? My v dole jíme chleba. Koně nemáme.“;
+dopis_horymir;horymir_doma;;🏇;Horymír si dopis od ženy přečte doma, nahlas, a Horymírová se červená. „Psala jsem ho do vězení,“ směje se. „A on je zatím doma.“;-dopis_horymir horymir_doruceno horymirova_doruceno razitko
+dopis_domu;horymir_doma;;🏇;„Ten vzkaz už nepotřebuju, jsem doma. Ale dej ho ženě, ať si ho schová.“;
+propustka;horymir_doma;;🏇;„Propustka? Já mám Šemíka. Ten propustky nepotřebuje.“;
+prosba;horymirova;;👩;„Prosba sedláků? Dones ji knížeti. Na hrad se ale nedostaneš, brána je zavřená.“;
+dopis_horymir;vratny;;💂;„Dopis pro vězně? Bez propustky ho nepustím. Ani dopis.“;
+dopis_horymir;sedlaci;;👨‍🌾;„To je pro Horymíra. Je zavřený na hradě.“;
+dopis_domu;knize;;🤴;„Vzkaz domů? Pošta z hradu se nečte. Dones ho.“;
+oves;sedlaci;;👨‍🌾;„Oves? Šemík ho potřebuje víc než my.“;
+*;hradba;;🧱;Přes hradbu nic nepřehodíš. Leda kůň.;
+*;brana;;🚪;Brána se otvírá jen na propustku.;
+*;*;;🤷;Nic se nestane.;

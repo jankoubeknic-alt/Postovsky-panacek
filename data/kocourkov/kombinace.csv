@@ -1,0 +1,72 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# vyraz: emoji, nebo cesta k obrázku. Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji změní ikonu cíle | razitko ukáže razítko DORUČENO
+# Kocourkov: adresy jsou rčení a v Kocourkově je každý dělá doslova. Hospodský nalije čistého vína, až Pavlína zametá a nemůže drbat.
+# Teprve pak je jasné, kdo má máslo na hlavě.
+karta;cil;podminka;vyraz;text;efekt
+?;starosta;ucet_doruceno;🧈;Starosta chodí bez klobouku a hlava se mu leskne. „Aspoň je na radnici trochu světla,“ říká.;
+?;starosta;pravda;🧈;Všichni se dívají na starostu. Starosta si pomalu sundá klobouk. Na pleši mu sedí kostka másla a pomalu taje. „Hm,“ řekne starosta.;ikona:starosta:🧈
+?;starosta;;🎩;Starosta Mudrlant nosí na radnici světlo v pytli, protože radnice nemá okna. Klobouk nesundá ani v hospodě. Zpod klobouku mu po čele stéká něco žlutého a voní to jako snídaně.;
+?;bozka;kos_doruceno;👩;Božka si oddechla. Vendelín odešel s košem na houby a zpívá si. „Konečně mě nechal,“ usmívá se Božka. „A je šťastnej. Takhle to v Kocourkově chodí.“;
+?;bozka;;👩;Vedle Božky klečí Vendelín a žádá ji o ruku. Už podesáté. Božka by ho ráda odmítla, jenže v Kocourkově se odmítá jen pořádně, s košem v ruce. A koše už rozdala devíti nápadníkům před ním.;
+?;drbna;drbna_zameta;🧹;Pavlína zametá před vlastním prahem. Smetí je tolik, že na drby nemá čas. Jen občas zvedne hlavu, jestli něco neuslyší.;
+?;drbna;;👵;Pavlína ví všechno o všech. Kdo má jaké smetí na dvoře, kdo s kým, kdo co. Před jejími vlastními dveřmi je ale hromada smetí až ke klice. Té si nevšimla.;
+?;hospodsky;vino_doruceno;🍷;Hospodský Kalný od té doby nalévá jen čisté víno. Bez vody. Ves to nemůže pochopit.;
+?;hospodsky;;🍷;Hospodský Kalný ředí víno vodou. „Já bych vám rád nalil čistého vína,“ šeptá, „mám na srdci, kdo vybral spíž. Ale čisté víno nemám. A Pavlína by to hned roznesla.“;
+?;myslivec;flinta_doruceno;🧔;Myslivec zase chodí po lese s flintou. Netrefil zatím nic, ale je spokojený.;
+?;myslivec;;🧔;Myslivec Střelený sedí na pařezu a kouká do prázdna. Ráno minul zajíce o tři sáhy a ze vzteku hodil flintu do žita. Od té doby nic nechce a nic ho nebaví.;
+?;pole;!flinta_nalezena;🌾;Žito se vlní. Mezi klasy se něco zablýskne. Flinta! Někdo ji sem hodil a nechal ji tu.;+flinta flinta_nalezena
+?;pole;;🌾;Žitné pole. V jednom místě jsou klasy polámané do tvaru flinty.;
+?;sedlak;zajic_doruceno;👨‍🌾;Matouš má zajíce v kotci a zajíc má Matouše rád. Kocour se odstěhoval na radnici chytat myši.;
+?;sedlak;;👨‍🌾;Sedlák Matouš koupil na trhu zajíce. V pytli, aby mu cestou neutekl. Doma pytel otevřel a vyskočil kocour. „Tak proto se tu říká Kocourkov,“ povzdechne si.;
+?;kosikarka;;🧺;Košíkářka plete koše na prodej. „Já koše dávám jen za peníze,“ říká. „Košem dává někdo jiný. Já bych to nedokázala, mám ráda zákazníky.“;
+napoveda;*;!flinta_nalezena;💡;V Kocourkově se všechno bere doslova. I adresy. Zeptej se každého, co dělá. A podívej se do žita.;
+napoveda;*;!kos_doruceno;💡;Kdo by rád někoho odmítl, ale nemá čím?;
+napoveda;*;!koste_doruceno;💡;Kdo ví všechno o smetí ostatních a nevidí to svoje?;
+napoveda;*;!zajic_doruceno;💡;Kdo koupil zajíce v pytli? Někdo, kdo doma vyndal kocoura.;
+napoveda;*;!flinta_doruceno;💡;Kdo hodil flintu do žita? Ten, koho nic nebaví.;
+napoveda;*;!vino_doruceno;💡;Hospodský by rád nalil čistého vína, ale ne před Pavlínou. Co by ji zaměstnalo?;
+napoveda;*;;💡;Hospodský nalil čistého vína. Kdo má máslo na hlavě? Podívej se pořádně.;
+kos;bozka;;👩;Božka vezme koš, vstane a podá ho Vendelínovi. „Vendelíne, dávám ti košem.“ Vendelín koš převezme a rozzáří se. „Koš! Krásný koš! Půjdu na houby!“ A šel.;-kos kos_doruceno ikona:bozka:😌 razitko
+kos;kosikarka;;🧺;„Koš? Já koše dělám, ne dostávám. Košem dává jiná, ta, co má nápadníka.“;
+kos;drbna;;👵;„Já košem nedávám, mě nikdo nežádá,“ odsekne Pavlína. „Ale vím, kdo by potřeboval. Božka.“;
+kos;sedlak;;👨‍🌾;„Koš? Já potřebuju zajíce, ne koš. A pytel už nikdy.“;
+kos;hospodsky;;🍷;„Koš? Já dávám jen na sekyru,“ zasměje se hospodský.;
+koste;drbna;;🧹;Pavlína koště převezme a podívá se před vlastní práh. Poprvé za čtyřicet let. „Jéžiš, to je smetí!“ Začne zametat. Kdo zametá před vlastním prahem, nemá čas drbat.;-koste koste_doruceno drbna_zameta ikona:drbna:🧹 razitko
+koste;hospodsky;;🍷;„Před mým prahem je čisto. Já zametám každý den, jen víno ředím.“;
+koste;starosta;;🎩;„Koště? Na radnici se nezametá, je tam tma, smetí nikdo nevidí.“;
+koste;bozka;;👩;„Já mám zameteno. Před prahem mi klečí Vendelín, tam se smetí nevejde.“;
+koste;kosikarka;;🧺;„Koště? To já neprodávám, to se nedá plést. Komu je?“ Přečte adresu a mrkne směrem k Pavlíně.;
+zajic;sedlak;;👨‍🌾;Matouš bedýnku obejde, nakoukne dovnitř a ještě jednou nakoukne. „Opravdu zajíc! Bez pytle!“ Kocour mu skočí z ramene a odkráčí k radnici chytat myši.;-zajic zajic_doruceno ikona:sedlak:🐇 razitko
+zajic;myslivec;;🧔;Myslivec se po zajíci podívá a hned zase sklopí hlavu. „Zajíc? Stejně bych ho netrefil. Flinta mi leží v žitě.“;
+zajic;hospodsky;;🍷;„Zajíc na pekáč? Ne, ne, ten je živej. A podle adresy patří Matoušovi.“;
+zajic;kosikarka;;🧺;„Zajíc v bedýnce? Aspoň je vidět, co kupuješ. Ne jako Matouš.“;
+flinta;myslivec;;🧔;Myslivec flintu očistí od klasů a pohladí ji. „Kdo hodí flintu do žita, ten ji musí zase najít. Děkuju, pošťáku.“ Vstane z pařezu a jde do lesa.;-flinta flinta_doruceno ikona:myslivec:🤠 razitko
+flinta;starosta;;🎩;„Zbraně na radnici nesmí. Komu patří? Myslivci, kdo jiný by ji hodil do žita.“;
+flinta;sedlak;;👨‍🌾;„Flinta? Kdybych ji měl na trhu, žádnej trhovec by mi kocoura neprodal.“;
+flinta;pole;;🌾;Flintu do žita podruhé házet nebudeš. Ta už jednou ležela tam, kde neměla.;
+vino;hospodsky;drbna_zameta;🍷;Hospodský zkontroluje, že Pavlína zametá, a nalije všem čistého vína. „Tak, a teď pravdu. To máslo z obecní spíže vzal starosta. Nosí ho pod kloboukem, protože na radnici je tma a nikdo ho tam neuvidí.“;-vino vino_doruceno pravda razitko
+vino;hospodsky;;🤫;Hospodský víno pohladí, ale nenalije. Kývne hlavou k Pavlíně. „Dokud kouká, čistého vína nenaliju. Hned by to roznesla po celé vsi.“;
+vino;starosta;;🎩;„Víno? Na radnici? Ve tmě by se rozlilo,“ zamítne starosta a pevněji si narazí klobouk.;
+vino;drbna;;👵;„Čisté víno? Já pravdu ráda poslouchám, ne naléváme. Komu nese?“ Natahuje ucho.;
+vino;myslivec;;🧔;„Víno? Na zapití žalu? Ne. Já nechci nic.“;
+ucet;starosta;pravda;🧈;Starosta sundá klobouk. Na hlavě mu taje kostka másla. „Přiznávám, měl jsem máslo na hlavě,“ řekne a zaplatí dvanáct krejcarů. Celá ves tleská. V Kocourkově se tleská i přiznání.;-ucet ucet_doruceno ikona:starosta:🧈 razitko
+ucet;starosta;;🎩;„Já? Máslo na hlavě? Podívejte, mám klobouk.“ Starosta si ho narazí ještě hlouběji. Po čele mu steče žlutá kapka.;
+ucet;hospodsky;;🍷;„Máslo? Já mám na svědomí nanejvýš vodu ve víně,“ zašeptá hospodský.;
+ucet;drbna;;👵;„Já? Já mám máslo jen na chlebu. Ale vím, kdo by to mohl mít na hlavě…“ Pavlína se odmlčí. Ví, ale tobě neřekne. Řekne to celé vsi.;
+ucet;myslivec;;🧔;„Máslo? Já mám na hlavě jen klobouk se štětkou.“;
+ucet;bozka;;👩;„Máslo na hlavě? Vendelín má na hlavě pomádu, ale ten nic neukradl.“;
+kos;myslivec;;🧔;„Koš? Na co? Já nic neulovím, tak nemám co nosit.“;
+koste;myslivec;;🧔;„Zametat? Já nechci nic. Ani zametat.“;
+koste;sedlak;;👨‍🌾;„Před mým prahem leží jen pytel. A ten už nikdy neotevřu.“;
+zajic;bozka;;👩;„Zajíc? Ten je hezčí než Vendelín. Ale není pro mě, je pro Matouše.“;
+vino;sedlak;;👨‍🌾;„Čisté víno? To bych si radši koupil zajíce. Ale bez pytle.“;
+ucet;sedlak;;👨‍🌾;„Máslo? Já mám na hlavě jen starosti. A kocoura na rameni.“;
+flinta;hospodsky;;🍷;„Flinta v hospodě? To ne. Myslivec ji hodil do žita, tak mu ji vrať.“;
+*;pole;;🌾;Do žita se v Kocourkově hází jen flinty.;
+*;kosikarka;;🧺;„To není pro mě. Já mám jen koše.“;
+*;*;;🤷;Doslova nic se nestane.;

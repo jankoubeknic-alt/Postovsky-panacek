@@ -1,0 +1,16 @@
+klic;hodnota
+datum;31. X.
+start;dopis_urad belidlo dopis_teta retezy hracka
+cil;urad_doruceno belidlo_doruceno teta_doruceno retezy_doruceno hracka_doruceno straseni
+uvod;Kastelán pan Klíčník se nastěhoval na hrad Strachov s kocourem Šmouhou a sovou Hůhů. Na hradě straší a strašidla odebírají poštu. Jenže se stydí a před turisty se schovávají.|Prohlídka obchází hrad dokola a s každým podáním se posune o místnost dál. Strašidlu nic nepředáš, když je v jeho místnosti prohlídka. A turisté odcházejí zklamaní, že tu nic neviděli.
+navod;Prohlídka se po každém podání posune. Strašidla se před ní schovávají.
+konec_nadpis;Strašidelný večer
+konec_text;Prohlídka vešla do rytířského sálu a zhasla světla. Bílá paní zazářila, rytíř si sundal hlavu a zamával s ní a kostlivec zachrastil novými řetězy. Turisté utíkali až do vsi a druhý den přijeli s celými rodinami. Hrad Strachov je nejnavštěvovanější hrad v kraji.|Brašna je prázdná. Kastelán ti dal čestnou vstupenku na doživotí. Sova Hůhů ti za branou zahoukala na rozloučenou. Šmouha se s tebou loučit nešel, honí hračku.
+pozadi;data/strachov/pozadi.svg
+barvy;
+pocitadla;pokoj=1
+kazdy_tah;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

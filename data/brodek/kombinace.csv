@@ -1,0 +1,67 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO
+# počítadla (pro obce s časem, hladinou apod.): v efektu voda+1, voda-1, voda=0 | v podmínce voda>=3, voda<2, voda=0
+karta;cil;podminka;vyraz;text;efekt
+?;ucitelka;dopis_doruceno;👩‍🏫;Škola je prázdná. Učitelka zavírá okenice a mává ti přes vodu.;
+?;ucitelka;;👩‍🏫;Učitelka za lávkou učí děti psát písmeno V. Za okny hučí voda a děti se dívají víc ven než do sešitů.;
+?;rybar;holinky_doruceno;🧔;Rybář sedí v loďce v nových holínkách a spokojeně bafá z dýmky. Převeze tě, kam budeš chtít.;
+?;rybar;;🧔;Rybář Matěj sedí v loďce a vylévá vodu z bot. Do jedné by se vešel kapr.;
+?;vodnik;vodnik_stastny;🐸;Vodník sedí na kameni, počtvrté si čte psaní a usmívá se. Lučina pod ním je klidná jako rybník.;
+?;vodnik;voda>=8;😭;Vodník na kameni hlasitě vzlyká. Čím víc pláče, tím víc voda stoupá.;
+?;vodnik;;🐸;Na kameni u lávky se mračí něco zeleného. Vodník! Ze šosu mu kape a z očí taky.;
+?;mlynar;stavidlo;👨‍🌾;Mlynář Kubát se opírá o otevřené stavidlo a pyšně se dívá, jak voda odtéká.;
+?;mlynar;;😤;Mlynář Kubát lomcuje klikou stavidla. Klika se ani nehne a Kubát nadává jako špaček.;
+?;hostinska;;👩‍🦰;Hostinská skládá pytle s pískem před hospodu U Brodu. Z kuchyně voní škvařené sádlo.;
+?;kachna;voda>=7;🦆;Kachna Běta pluje po návsi. Konečně je voda všude, kde má podle ní být.;
+?;kachna;;🦆;Kachna Běta má z deště jako jediná v Brodku radost.;
+napoveda;*;voda>=8 !stavidlo !sadlo_dala;💡;Voda je nebezpečně vysoko. Mlynář by mohl otevřít stavidlo, kdyby mu povolila klika. Čím se maže, ví každá kuchařka. Ukaž v hospodě telegram.;
+napoveda;*;voda>=8 !stavidlo @sadlo;💡;Sádlo rozhýbe mlynářovo stavidlo a hladina klesne.;
+napoveda;*;!dopis_doruceno voda<7;💡;Učitelka je za lávkou. Dopis jí doruč, dokud lávka není pod vodou.;
+napoveda;*;!dopis_doruceno !prevoz;💡;Lávka je pod vodou. Kdo v Brodku má loďku? A co by za svezení chtěl?;
+napoveda;*;!psani_doruceno;💡;Mokré psaní má rozmazanou adresu: Pan V…, Lučina, na dně. Kdo bydlí na dně řeky?;
+napoveda;*;!holinky_doruceno;💡;Balík ve tvaru dvou nohou patří rybáři.;
+napoveda;*;!telegram_doruceno;💡;Telegram je pro mlynáře.;
+napoveda;*;!dopis_doruceno;💡;Dopis pro učitelku ještě čeká. Rybář tě převeze.;
+napoveda;*;;💡;Všechno je doručeno.;
+telegram;mlynar;voda>=8;😱;Mlynář čte telegram po kotníky ve vodě. „Voda z hor přijde v noci? Vždyť už je tady!“ Rve se s klikou stavidla, ale ta je zarezlá na kámen. „Kdyby tak bylo čím ji namazat!“;-telegram telegram_doruceno razitko
+telegram;mlynar;;😨;Mlynář telegram přečte a zbledne. „Voda z hor přijde v noci! Musím otevřít stavidlo.“ Opře se do kliky, ale ta je zarezlá na kámen. „Kdyby tak bylo čím ji namazat…“;-telegram telegram_doruceno razitko
+telegram;hostinska;!sadlo_dala;👩‍🦰;Hostinská si telegram přečte přes tvé rameno. „Stavidlo? Kubát má tu kliku zarezlou deset let.“ Podá ti hrnek sádla. „Na. Na chleba je ho škoda, na stavidlo akorát.“;+sadlo sadlo_dala
+telegram;hostinska;;👩‍🦰;„Ten patří Kubátovi. Běž, než mu uplave mlýn.“;
+telegram;rybar;;🧔;„Telegram? Já čtu jen v rybách.“ Rybář ti ho vrátí mokrý.;
+telegram;vodnik;;🐸;Vodník telegram očichá a odfrkne si. „Vodní správa? Tady jsem vodní správa já!“;
+telegram;ucitelka;;👩‍🏫;Učitelka telegram přelétne očima. „To je pro mlýn. Děti, kdo mi řekne, co je to stavidlo?“;
+telegram;kachna;;🦆;Kachna Běta telegram okusuje, dokud jí ho nevytrhneš.;
+dopis;ucitelka;voda>=7;👩‍🏫;Učitelka otevře úřední dopis. „Škola se zavírá kvůli povodni.“ Rybář pak převáží děti po třech domů a ony celou cestu zpívají.;-dopis dopis_doruceno razitko
+dopis;ucitelka;;👩‍🏫;Učitelka otevře úřední dopis. „Škola se zavírá kvůli povodni.“ Děti zajásají a s aktovkami nad hlavou utíkají přes lávku domů.;-dopis dopis_doruceno razitko
+dopis;rybar;;🧔;„Pro učitelku? Ta bydlí za lávkou. Já bydlím v loďce.“;
+dopis;mlynar;;👨‍🌾;„Úřední? To radši nečtu. Vždycky v tom po mně chtějí peníze.“;
+dopis;hostinska;voda>=7;👩‍🦰;„Pro paní učitelku? Přes lávku už nepřejdeš. Leda by tě vzal Matěj v loďce.“;
+dopis;hostinska;;👩‍🦰;„Školní rada? To bude pro paní učitelku. Pospěš si, lávka je skoro pod vodou.“;
+dopis;vodnik;;🐸;Vodník si dopis přidrží u očí. „Škola? Já chodil do tůně. Tam se učí jen plavat.“;
+dopis;kachna;;🦆;Kachna Běta na dopis kvákne tak úředně, že by mohla sedět ve školní radě.;
+holinky;rybar;;🥳;Rybář balík roztrhne. Holínky! Hned si je obuje. „Pošťáku, za tohle tě budu vozit zadarmo až do smrti.“;-holinky holinky_doruceno prevoz razitko
+holinky;mlynar;;👨‍🌾;„Holínky by se hodily, ale nejsou moje. Matěj má na nich napsané jméno, i když umí jen tři písmena.“;
+holinky;hostinska;;👩‍🦰;„Ty jsou pro Matěje. Konečně mi nebude nosit bláto až k pultu.“;
+holinky;vodnik;;🐸;Vodník zkusí do holínky schovat dušičku. Nevejde se tam, a tak ti holínky smutně vrátí.;
+holinky;ucitelka;;👩‍🏫;„Děkuji, ale do školy chodím v botách. Tohle bude pro rybáře.“;
+holinky;kachna;;🦆;Kachna Běta si sedne do holínky jako do loďky. Vytáhneš ji odtamtud jen s námahou.;
+psani;vodnik;;🥰;Vodník pozná písmo a zezelená ještě víc. „Od vodnice z Hlubokého! Ona mi odepsala!“ Přestane plakat a Lučina se hned začne uklidňovat.;-psani psani_doruceno vodnik_stastny voda-3 razitko
+psani;rybar;;🧔;Rybář si přečte rozmazanou adresu. „Na dně? To bude pro vodníka. K tomu já nelezu, bere mi háčky.“;
+psani;mlynar;;👨‍🌾;„Na dně? Tam mi letos spadly brýle. A klobouk. A trakař.“;
+psani;hostinska;;👩‍🦰;Hostinská k obálce přičichne. „Tůň a rákosí. Tohle není pro nikoho z hospody.“;
+psani;ucitelka;;👩‍🏫;Učitelka si prohlédne písmo. „Pan V… Velké V jako voda. Nebo jako vodník.“;
+psani;kachna;;🦆;Kachna Běta se s obálkou ponoří pod hladinu a za chvíli ji vrátí. Vypadá to, že ví, kam patří.;
+sadlo;mlynar;;💪;Mlynář kliku pořádně namaže. Zaskřípe to, pak to povolí a stavidlo se otevře. Voda se valí kolem mlýna a hladina klesá.;-sadlo stavidlo voda-4
+sadlo;hostinska;;👩‍🦰;„To sádlo je pro Kubáta. Ať to stavidlo konečně rozhýbe.“;
+sadlo;rybar;;🧔;Rybář přičichne. „Na sádlo kapři neberou. Leda na škvarky.“;
+sadlo;vodnik;;🐸;„Sádlo? Vodník jí jen to, co spadne do vody. A ty sem nepadej.“;
+sadlo;ucitelka;;👩‍🏫;„Sádlo s chlebem na svačinu? Děti by měly radost. Ale tohle je pro mlýn, ne?“;
+sadlo;kachna;;🦆;Kachna Běta po hrnku chňapne. Uhneš jen tak tak.;
+*;*;;🤷;Nic se nestane. Voda ale stoupá dál.;

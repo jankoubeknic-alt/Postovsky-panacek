@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zástupné pozadí Sněžné, údolí: nahoře pošta s okénkem poštmistra, před ní pult se zásilkami,
+       vlevo dole začátek stezky na hřeben, uprostřed zastávka, vpravo dole dolní stanice lanovky. -->
+  <rect width="300" height="400" fill="#C9D6DF"/>
+  <path d="M-10 150L60 40L110 100L170 20L240 90L310 50V200H-10Z" fill="#E9EFF3"/>
+  <path d="M60 40L80 72L70 70L62 90L50 66Z" fill="#B9C9D6"/>
+  <path d="M170 20L196 60L182 58L176 80L160 52Z" fill="#B9C9D6"/>
+  <rect x="150" y="36" width="8" height="6" fill="#6B4A36"/>
+  <path d="M-10 180C60 150 120 170 170 160S260 150 310 168V400H-10Z" fill="#F4F6F8"/>
+  <!-- smrky -->
+  <g fill="#3F5E52">
+    <path d="M14 196L30 150L46 196Z"/><path d="M262 186L278 138L294 186Z"/><path d="M40 200L52 166L64 200Z"/>
+  </g>
+  <g fill="#FFFFFF"><path d="M24 168l6-18 6 18-6-4z"/><path d="M272 156l6-18 6 18-6-4z"/></g>
+
+  <!-- pošta -->
+  <rect x="78" y="70" width="144" height="108" fill="#B8865A"/>
+  <rect x="78" y="140" width="144" height="38" fill="#9A9690"/>
+  <path d="M66 76L150 24L234 76Z" fill="#6B4A36"/>
+  <path d="M66 76L150 24L234 76L226 76L150 32L74 76Z" fill="#FFFFFF"/>
+  <path d="M70 74Q150 64 230 74L234 80H66Z" fill="#FFFFFF"/>
+  <rect x="196" y="34" width="12" height="26" fill="#7A6A5A"/>
+  <g fill="#E8ECEF" opacity=".85"><circle cx="204" cy="26" r="7"/><circle cx="212" cy="14" r="8"/><circle cx="222" cy="4" r="7"/></g>
+  <rect x="118" y="66" width="64" height="48" fill="#F2C86A" stroke="#5A3E2B" stroke-width="3"/>
+  <rect x="104" y="118" width="92" height="13" fill="#E2B23A"/>
+  <text x="150" y="128" font-family="Georgia, serif" font-size="9" letter-spacing="3" fill="#3B2A1E" text-anchor="middle">POŠTA</text>
+  <g fill="#8FB3C6" stroke="#5A3E2B" stroke-width="2"><rect x="88" y="86" width="20" height="24"/><rect x="192" y="86" width="20" height="24"/></g>
+
+  <!-- pult se zásilkami -->
+  <rect x="14" y="214" width="272" height="10" fill="#8A6A4A"/>
+  <path d="M14 214h272" stroke="#FFFFFF" stroke-width="3"/>
+  <g fill="#6B4A36"><rect x="22" y="224" width="6" height="24"/><rect x="272" y="224" width="6" height="24"/><rect x="146" y="224" width="6" height="24"/></g>
+
+  <!-- stezka na hřeben -->
+  <path d="M30 400C50 360 20 330 54 300S20 240 40 210" fill="none" stroke="#D9E1E8" stroke-width="14" stroke-linecap="round"/>
+  <g fill="#B9C9D6"><circle cx="40" cy="380" r="2"/><circle cx="50" cy="350" r="2"/><circle cx="36" cy="320" r="2"/></g>
+  <path d="M82 344V300" stroke="#6B4A36" stroke-width="3"/>
+  <path d="M82 302h26l6 6-6 6H82z" fill="#E2B23A"/>
+
+  <!-- zastávka -->
+  <rect x="112" y="300" width="76" height="6" fill="#5E6E76"/>
+  <path d="M110 300h80l-6-10h-68z" fill="#FFFFFF"/>
+  <g fill="#5E6E76"><rect x="116" y="306" width="4" height="40"/><rect x="180" y="306" width="4" height="40"/></g>
+  <path d="M200 350V296" stroke="#5E6E76" stroke-width="2"/>
+  <circle cx="200" cy="292" r="7" fill="#E2B23A" stroke="#5E6E76" stroke-width="1.5"/>
+
+  <!-- dolní stanice lanovky -->
+  <path d="M262 300L320 120" stroke="#4A4542" stroke-width="1.5"/>
+  <path d="M248 300L306 120" stroke="#4A4542" stroke-width="1.5"/>
+  <rect x="222" y="300" width="70" height="46" fill="#9A9690"/>
+  <path d="M216 302L257 280L298 302Z" fill="#FFFFFF" stroke="#7A6A5A" stroke-width="1.5"/>
+  <circle cx="257" cy="300" r="9" fill="none" stroke="#4A4542" stroke-width="2.5"/>
+
+  <!-- závěje -->
+  <path d="M-10 372C40 360 80 380 130 368S230 360 310 374V400H-10Z" fill="#FFFFFF"/>
+</svg>
