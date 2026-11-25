@@ -15,7 +15,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;lucifer;duchod_l_doruceno;😈;Lucifer starší hraje mariáš sám se sebou a prohrává. „Aspoň že ten důchod chodí včas.“;
 ?;lucifer;;😈;Lucifer starší sedí před chalupou a hraje mariáš sám se sebou. „Kde je ten důchod? V pekle to dřív chodilo včas!“;
 ?;bertka;duchod_b_doruceno;👵;Bertička plete svetr na kotel a tiše si zpívá. Na okně jí voní levandule.;
-?;bertka;;👵;Čertice Bertička plete u okna, kde jí kvete levandule. „Síru už nemůžu cítit, chlapče. Všechno si navoním.“;
+?;bertka;;👵;Čertice Bertička plete u okna, kde jí kvete levandule. „Síru už nemůžu cítit. Všechno si navoním.“;
 ?;bonifac;vcelar;🐝;Bonifác staví úl a včely mu sedají na rohy jako na květiny.;
 ?;bonifac;prihlaska_doruceno;👹;Bonifác přešlapuje. „Andělé nechodí do Čertoviny. Prý tu smrdí síra. A bez doporučení mě do spolku nevezmou.“;
 ?;bonifac;;👹;Čert Bonifác si za kovárnou staví úl z prken. „Chci chovat včely. Ostatní čerti se mi smějí, že med není dost pekelný.“;
@@ -62,7 +62,7 @@ uhli1;kotel;;🔥;Hodíš uhlí do kotle. Zasyčí to, vyšlehne plamen a čert�
 uhli2;kotel;;🔥;Hodíš uhlí i s ubrouskem do kotle. Kotel se rozhoří a voní krajkou.;-uhli2 kotel+4
 uhli3;kotel;;🔥;Hodíš Bonifácovo uhlí do kotle. Kotel spokojeně zabublá.;-uhli3 kotel+4
 uhli1;lucifer;;😈;„Spropitné se nevrací! To by bylo neslušné i v pekle.“;
-uhli2;bertka;;👵;„To je pro kotel, chlapče, ne pro mě.“;
+uhli2;bertka;;👵;„To je pro kotel, ne pro mě.“;
 uhli3;bonifac;;👹;„To je pro kotel. Já už si za kovárnou topím úlem. Ne, to ne!“;
 uhli1;andel;;👼;Anděl couvne. „Uhlí? Tím se v pekle topí pod kotlem. Odnes to.“;
 uhli2;andel;;👼;Anděl couvne. „Uhlí? Odnes to.“;

@@ -2,7 +2,7 @@ klic;hodnota
 datum;13. II.
 start;povoleni dopis_kovar dopis_mlynar dopis_pekar dopis_ucitel
 cil;povoleni_doruceno kovar_doruceno mlynar_doruceno pekar_doruceno ucitel_doruceno
-uvod;Je masopustní úterý a celá Maškarovice chodí v průvodu. Medvěd, kobyla, kominík a Turek tančí od stavení ke stavení a vpředu práská bičem strakáč. Masku si nikdo nesmí sundat, dokud se o půlnoci nepochová basa.|Pošťák má dopisy pro kováře, mlynáře, pekaře a pana učitele. Všichni jsou v průvodu a nikdo neřekne, kdo je kdo. To by byl konec legrace. Když dáš dopis špatné masce, přečte ho nahlas celé vsi.
+uvod;Je masopustní úterý a celá Maškarovice chodí v průvodu. Medvěd, kobyla, kominík a Turek tančí od stavení ke stavení a vpředu práská bičem strakáč. Masku si nikdo nesmí sundat, dokud se o půlnoci nepochová basa.|Máš dopisy pro kováře, mlynáře, pekaře a pana učitele. Všichni jsou v průvodu a nikdo neřekne, kdo je kdo. To by byl konec legrace. Když dáš dopis špatné masce, přečte ho nahlas celé vsi.
 navod;Klepnutím na masku zjistíš, jak se chová. Kdo je kdo, prozradí i lidé u cesty.
 konec_nadpis;Pochování basy
 konec_text;O půlnoci se basa pochovává a masky padají. Pod medvědem je mlynář, pod kobylou kovář, pod kominíkem pekař a Turek je pan učitel. Všichni už mají svou poštu a nikdo se nemusel stydět.|Brašna je prázdná. Hospodská ti dala koblihu s povidly. Masopust je až do rána.
@@ -13,4 +13,4 @@ kazdy_tah;
 kazdy_tah_kdyz;
 ukazatele;ostuda:Ostuda:3
 prohra;ostuda>=3
-prohra_text;Tři dopisy přečtené nahlas celé vsi. Kovář se dozvěděl o dluhu, pekař o tchyni a celá Maškarovice o všem. Pošťák se smál nejmíň.|Zkus to znovu. Masky se dají poznat podle toho, co dělají, a lidé u cesty toho vědí víc, než řeknou napoprvé.
+prohra_text;Tři dopisy přečtené nahlas celé vsi. Kovář se dozvěděl o dluhu, pekař o tchyni a celá Maškarovice o všem. Nejmíň se smála pošta.|Zkus to znovu. Masky se dají poznat podle toho, co dělají, a lidé u cesty toho vědí víc, než řeknou napoprvé.

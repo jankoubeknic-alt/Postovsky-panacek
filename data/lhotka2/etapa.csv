@@ -1,0 +1,16 @@
+klic;hodnota
+datum;14. VIII.
+start;paska balik_kolebka pohled_pepik vrbuv_dopis
+cil;paska_doruceno kolebka_doruceno pohled_doruceno vrba_doruceno
+uvod;Je zase 14. srpna a zítra je v Lhotce pouť. Přesně před rokem tu začala tvoje první pochůzka, s cizí brašnou a s dopisem bez adresy.|V brašně máš pásku pro starostu, balík od truhláře a pohlednici od Pepíka. A na dně, jako celý rok, Vrbův dopis. Dnes ho konečně doručíš. Jen musíš vědět komu.
+navod;Poslední pochůzka roku. Vrbův dopis doruč tomu, komu patří.
+konec_nadpis;Doručeno
+konec_text;Večer sedí babka Kořenářka u kašny a drží dopis v klíně. Čte ho potřetí a pořád se usmívá. Na lípách visí lampiony a u kašny poletují světlušky. Tentokrát to nejsou bludičky.|Ráno starosta přestřihne novou pásku, kovář s pekařkou povezou Vojtíška v nové kolébce a Pepík přiveze kraba.|Na okresní poště ti poštmistrová Kosová nalije kávu. „Tak co, {osloveni}? Druhý rok?“ Vrbova brašna je lehčí o jeden dopis. A tvoje taky.
+pozadi;
+barvy;
+kazdy_tah;
+pocitadla;
+kazdy_tah_kdyz;
+ukazatele;
+prohra;
+prohra_text;

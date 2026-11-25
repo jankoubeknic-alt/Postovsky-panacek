@@ -45,7 +45,7 @@ zajic;sedlak;;👨‍🌾;Matouš bedýnku obejde, nakoukne dovnitř a ještě j
 zajic;myslivec;;🧔;Myslivec se po zajíci podívá a hned zase sklopí hlavu. „Zajíc? Stejně bych ho netrefil. Flinta mi leží v žitě.“;
 zajic;hospodsky;;🍷;„Zajíc na pekáč? Ne, ne, ten je živej. A podle adresy patří Matoušovi.“;
 zajic;kosikarka;;🧺;„Zajíc v bedýnce? Aspoň je vidět, co kupuješ. Ne jako Matouš.“;
-flinta;myslivec;;🧔;Myslivec flintu očistí od klasů a pohladí ji. „Kdo hodí flintu do žita, ten ji musí zase najít. Děkuju, pošťáku.“ Vstane z pařezu a jde do lesa.;-flinta flinta_doruceno ikona:myslivec:🤠 razitko
+flinta;myslivec;;🧔;Myslivec flintu očistí od klasů a pohladí ji. „Kdo hodí flintu do žita, ten ji musí zase najít. Děkuju, {osloveni}.“ Vstane z pařezu a jde do lesa.;-flinta flinta_doruceno ikona:myslivec:🤠 razitko
 flinta;starosta;;🎩;„Zbraně na radnici nesmí. Komu patří? Myslivci, kdo jiný by ji hodil do žita.“;
 flinta;sedlak;;👨‍🌾;„Flinta? Kdybych ji měl na trhu, žádnej trhovec by mi kocoura neprodal.“;
 flinta;pole;;🌾;Flintu do žita podruhé házet nebudeš. Ta už jednou ležela tam, kde neměla.;

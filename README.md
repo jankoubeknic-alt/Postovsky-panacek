@@ -15,6 +15,10 @@ Přímé otevření `index.html` ze souboru nefunguje, protože prohlížeč pak
 
 Když na konec adresy přidáš `#debug`, ukážou se vlajky, počítadla a obsah brašny a odemknou se všechny hratelné obce.
 
+## Uložený postup
+
+Postup se ukládá v prohlížeči (`localStorage`, klíče `postak:v1:*`) a mezi zařízeními se sám nepřenáší. Na trase je tlačítko **Přenést postup**: ukáže kód, který si hráč zkopíruje, a na druhém zařízení ho vloží. Kód začíná `POSTAK1.` (zkomprimovaný JSON se všemi klíči `postak:*`, base64url) nebo `POSTAK0.` (bez komprese, pro prohlížeče bez `CompressionStream`). Nahrání kódu přepíše celý postup v daném prohlížeči a před tím se hra zeptá.
+
 ## Nasazení na VPS
 
 Celou složku nahraj na server, například `rsync -av --delete ./ uzivatel@server:/var/www/postak/`, a nech ji obsluhovat libovolný webový server jako statické soubory. Pro Caddy stačí:
@@ -41,7 +45,7 @@ Všechno, co hráč vidí, je v tabulkách ve složce `data/`. Dají se upravova
 | Soubor | Co obsahuje |
 | --- | --- |
 | `data/hra.csv` | název a úvodní text celé hry |
-| `data/etapy.csv` | obce na trase v pořadí odemykání, `pripraveno=ano` je hratelná |
+| `data/etapy.csv` | obce na trase v pořadí odemykání, `pripraveno=ano` je hratelná. Trasa jde podle kalendáře: Lhotka 14. srpna a pak rok dokola, zhruba pět obcí na měsíc. Datum obce je klíč `datum` v jejím `etapa.csv`. |
 | `data/<obec>/etapa.csv` | nastavení obce: startovní karty, cíl, texty úvodu a konce, pozadí, barvy, počítadla, prohra |
 | `data/<obec>/cile.csv` | postavy a předměty ve scéně a jejich pozice v procentech (`x`, `y`) |
 | `data/<obec>/karty.csv` | zásilky a věci v brašně |
@@ -51,6 +55,26 @@ Všechno, co hráč vidí, je v tabulkách ve složce `data/`. Dají se upravova
 | `data/<obec>.json` | jen ve sbalené verzi: všechny tabulky a obrázky obce v jednom souboru. Vyrobí ho `nastroje/sbal.py` a hra ho použije, jen když složka obce chybí. Upravuj vždy tabulky, ne balík. |
 
 Popis sloupců a zápisu podmínek a efektů je přímo v hlavičce `kombinace.csv` a `etapa.csv`.
+
+### Příběh přes celou hru
+
+Nad obcemi běží příběh „Rok na poště“ (podklad je v `pribeh.md`). Engine na něj má obecné prvky:
+
+| Soubor nebo prvek | Co dělá |
+| --- | --- |
+| `data/kapitoly.csv` | kapitoly trasy (`id`, `nazev`, `obdobi`) a mezihra z okresní pošty, která se ukáže před první obcí kapitoly |
+| sloupec `kapitola` v `data/etapy.csv` | do které kapitoly obec patří. Na trase se nad první obcí kapitoly ukáže její název. |
+| `data/pribeh.csv` | zápisy do deníku. Zápis `id` se ukáže, když platí vlajka světa `svet:<id>`. |
+| `data/spolecne.csv` | pravidla platná ve všech obcích (stejné sloupce jako `kombinace.csv`). Použijí se až po pravidlech obce. |
+| vlajky světa `svet:x` | platí napříč obcemi. Fungují v podmínkách (`svet:x`, `!svet:x`) i v efektech (`svet:x` nastaví, `!svet:x` zruší). Nezruší je ani „Začít znovu“. |
+| `druh=pribeh` v `karty.csv` | příběhová karta, třeba Vrbův dopis. Neuplyne po ní tah, nechytá se na zástupnou `*`, nepočítá se do `karet` ani do míst v brašně a reakce s ní nejsou v albu. |
+| `{jmeno}`, `{osloveni}` v textech | jméno hráče a jeho 5. pád (Pospíšil, Pospíšile). Hráč je zadá v prologu nebo tlačítkem Jméno na trase. Hra pátý pád odhadne a hráč ho může opravit. |
+
+Texty se píšou tak, aby neurčovaly pohlaví hráče. Vyprávění je ve 2. osobě přítomného nebo budoucího času („Neseš starostovi dopis“), bez minulého času („přišel jsi“), bez oslovení „chlapče“ nebo „pošťáku“ a bez slov jako „sám“ nebo „rád“ o hráči. Kdo má hráče oslovit, použije `{osloveni}`. Podezřelá místa vypíše `python3 nastroje/rod.py`.
+
+Vrbův dopis je v brašně jen v obcích, kde Vrbu někdo zná. Obec ho přidá do `start`, nadefinuje kartu `vrbuv_dopis` v `karty.csv` a přidá své řádky do `kombinace.csv`. Na ostatní postavy odpoví řádek ze `spolecne.csv`. Úvod obce nebo rozhlédnutí prozradí, kdo Vrbu znal, aby hráč nemusel dopis ukazovat všem.
+
+Deník (tlačítko na trase) ukazuje mezihry a získané zápisy po kapitolách. Vlajky světa a viděné mezihry jsou v `localStorage` pod klíčem `postak:v1:svet` a přenášejí se s kódem postupu.
 
 Obce se můžou lišit i pravidly. Brodek používá počítadlo `voda`: každé podání zásilky zvedne hladinu (`kazdy_tah`), hladina se ukazuje v liště (`ukazatele`), při 12 hráč prohraje (`prohra`) a podle hladiny se mění scéna (`vrstvy.csv`) i to, kdo je dosažitelný (`skryt_kdyz` v `cile.csv`).
 
@@ -120,23 +144,25 @@ Po každém podání zásilky se provedou všechny řádky `kazdy_tah.csv`, jeji
 | Prokopov | Čert v pluhu táhne rovně, dokud nenarazí na kraj, kámen nebo zoranou brázdu (poloha `r`, `c`, vlajky `o00` až `o23`). Pole se musí zorat celé. |
 | Štírovice | Pexeso z kamenů: první odvalený kámen drží `a`, stejná zvířátka pod druhým kamenem uvolní pár a věc pod ním. |
 | Jánský Brod | Převážení loďkou jako vlk, koza a zelí (`pv`, `dv`, `kv`, `lv`). Dopis nesmí zůstat s drbnou ani s kozou. |
+| Lhotka po roce | Finále příběhu. Komu patří Vrbův dopis, prozradí zápisy v deníku (podmínky `svet:`), nebo v obci přičichne k obálce pekařka či poštmistrová (vlajka `adresa`). Krakonoš stojí ve scéně, jen když platí `svet:vrba_krakonos` (`skryt_kdyz`). |
 
 ### Nástroje pro kontrolu obcí
 
 Ve složce `nastroje/` jsou pomocné skripty (potřebují Node.js, Python 3, a pro hraní v prohlížeči Google Chrome a ImageMagick):
 
-- `node nastroje/over.mjs data/<obec>/` projde všechny stavy obce a vypíše chyby, zaseknuté stavy, nedosažitelné řádky a počet objevů do alba.
+- `node nastroje/over.mjs data/<obec>/` projde všechny stavy obce a vypíše chyby, zaseknuté stavy, nedosažitelné řádky a počet objevů do alba. Vlajky světa začínají prázdné. Druhý argument (`vrba_lhotka,vrba_hluchov`) je nastaví předem, třeba pro finále.
 - `node nastroje/cesta.mjs data/<obec>/` vypíše nejkratší výherní cestu.
 - `python3 nastroje/hraj_obce.py nastroje "<obec>=<Název>"` obec odehraje v headless Chromu a uloží snímky (potřebuje běžící `python3 -m http.server 8765 --bind 127.0.0.1` v kořeni projektu).
 - `python3 nastroje/rozlozeni.py` hledá cíle, které jsou ve scéně moc blízko sebe.
 - `nastroje/kontrola_vse.sh` projede všechny hratelné obce validátorem i Chromem.
 - `nastroje/obec.py` je pomocník pro psaní tabulek obce v Pythonu.
+- `python3 nastroje/rod.py` vypíše místa v textech, která můžou určovat pohlaví hráče.
 - `python3 nastroje/sbal.py <složka>` vyrobí sbalenou verzi webu.
 - `hraj_obce.py` hraje proti `http://127.0.0.1:8765/`, jinou adresu nastavíš proměnnou `POSTAK_URL`.
 
 ### Nová obec
 
-1. Přidej řádek do `data/etapy.csv`.
+1. Přidej řádek do `data/etapy.csv` na místo podle data obce a vyplň mu `kapitola`.
 2. Zkopíruj složku `data/lhotka` pod novým id a přepiš tabulky.
 3. Až bude hratelná, nastav `pripraveno` na `ano`.
 

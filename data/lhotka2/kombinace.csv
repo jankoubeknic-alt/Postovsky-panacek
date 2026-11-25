@@ -1,0 +1,52 @@
+# Co se stane, když hráč použije kartu na cíl.
+# Řádky se čtou shora dolů a platí PRVNÍ, který sedí. Konkrétní řádky patří nad obecné.
+# karta: id karty | ? = klepnutí na cíl bez karty | napoveda = tlačítko nápovědy | * = jakákoli karta
+# cil: id cíle | * = jakýkoli cíl
+# podminka: slova oddělená mezerou, musí platit všechna. vlajka = je nastavená | !vlajka = není | @karta = hráč ji má v brašně
+# podminka s „nebo“: noc nebo denni_smena = stačí, aby platila jedna z možností
+# karet = počet věcí v brašně: karet<3 = je v ní místo, karet=0 = je prázdná
+# vyraz: emoji, nebo cesta k obrázku (např. img/kovar_zrudly.png). Ukáže se u postavy a v okénku s textem.
+# efekt: +karta přidá kartu | -karta odebere | vlajka nastaví | !vlajka zruší | ikona:cil:emoji natrvalo změní ikonu cíle | razitko ukáže razítko DORUČENO
+# počítadla (pro obce s časem, hladinou apod.): v efektu voda+1, voda-1, voda=0 | v podmínce voda>=3, voda<2, voda=0
+karta;cil;podminka;vyraz;text;efekt
+?;babka;vrba_doruceno;🥲;Babka drží dopis v klíně a dívá se na kašnu.;
+?;babka;;👵;Babka Kořenářka sedí u kašny v brýlích, které jí loni přišly poštou spravené. „Zase pouť,“ usměje se. „A zase ty.“;
+?;pekarka;!kolebka_doruceno;👩‍🍳;Pekařka houpe v náručí miminko. „Loni mi pošta nesla dopis od Vojty. Letos máme Vojtíška. Jen spát nemá kde, kolébka od strýce pořád nejde.“;
+?;pekarka;;👩‍🍳;Vojtíšek spí v nové kolébce a pekařka peče koláče na pouť.;
+?;kovar;!kolebka_doruceno;👨‍🏭;Kovář kuje podkovy na pouťový kolotoč. „Strýc truhlář posílá balík poštou. Prý něco pro malého.“;
+?;kovar;;👨‍🏭;Kovář houpe kolébku nohou a kuje u toho podkovy.;
+?;starosta;!paska_doruceno;🤵;Starosta drží loňské nůžky. „Nůžky mám, pásku ne. Loňskou jsem přestřihl, jak se patří.“;
+?;starosta;;🤵;Starosta zkouší nůžky naprázdno. Cvak, cvak. „Zítra!“;
+?;pes;;🐕;Punťa tě pozná a vrtí ocasem. Letos tě k radnici pustí i bez koláče.;
+?;kasna;;⛲;U kašny to loni začalo. Voda zurčí pořád stejně.;
+?;kosova;!vrba_doruceno;📮;Poštmistrová Kosová přijela na pouť. „Neboj, nekontroluju tě. Jen jsem chtěla vidět, jak to dopadne.“ Kývne k tvé brašně.;
+?;kosova;;📮;Poštmistrová si utírá oči kapesníkem. „To je ten pyl,“ tvrdí.;
+?;krakonos;!svet:krakonos_splatil;🚶;U cesty stojí poutník s mokrým šosem a dívá se na nebe. Nad Lhotkou visí mraky.;
+?;krakonos;;🚶;Poutník s mokrým šosem se usmívá. Nad Lhotkou je modro.;
+paska;starosta;;🤵;Starosta pásku natáhne mezi lípy a zaváže na mašli. „Zítra se stříhá!“;-paska paska_doruceno razitko
+paska;pes;;🐕;Punťa chytí konec pásky a utíká s ní dvakrát kolem kašny. Pak ji položí ke tvým nohám, jako by to byl jeho nápad.;
+paska;kovar;;👨‍🏭;„Pásku? Tu bych rovnou překoval na řetěz, ať ji starosta nepřestřihne.“;
+paska;*;;🙂;„Páska? To patří starostovi.“;
+balik_kolebka;kovar;;👨‍🏭;Kovář balík rozbalí. Vyřezávaná kolébka s koníčky! Pekařka do ní hned uloží Vojtíška a ten usne, sotva se zhoupne.;-balik_kolebka kolebka_doruceno razitko
+balik_kolebka;pekarka;;👩‍🍳;„To je pro Vojtu, ten to čeká,“ řekne pekařka. „Ale já vím, co v tom je.“;
+balik_kolebka;pes;;🐕;Punťa balík očichá a lehne si vedle něj. Hlídá. Kdo ví, co v něm je.;
+balik_kolebka;*;;🙂;„Od truhláře? To bude pro kováře.“;
+pohled_pepik;babka;;😄;Babka čte nahlas: „Milá babičko, zítra přijedu na pouť a přivezu ti kraba. Je hodný.“ Babka se směje, až jí poskakují brýle.;-pohled_pepik pohled_doruceno razitko
+pohled_pepik;kosova;;📮;Poštmistrová si přečte razítko. „Z moře do Lhotky za čtyři dny. Rychleji než loni. To se mi líbí.“;
+pohled_pepik;pekarka;;👩‍🍳;„Od Pepíka? Ten mi loni slíbil kraba. Babka ho dostane dřív.“;
+pohled_pepik;*;;🙂;„Pohlednice od Pepíka? Ta patří babce Kořenářce.“;
+vrbuv_dopis;kosova;!adresa;📮;Poštmistrová přivoní k obálce a ztichne. „Heřmánek a meduňka. Takhle voní jen jedna zahrádka v okrese.“ Kývne k lavičce u kašny.;adresa
+vrbuv_dopis;kosova;;📮;„Tak už jdi,“ šeptá poštmistrová.;
+vrbuv_dopis;pekarka;!adresa;👩‍🍳;Pekařka si obálku přidrží u nosu. „Heřmánek a meduňka? Takovou zahrádku má v Lhotce jen jedna.“ Podívá se ke kašně.;adresa
+vrbuv_dopis;krakonos;!svet:krakonos_splatil;⛈️;Poutník s mokrým šosem se narovná, až je vysoký jako smrk. Krakonoš! „Vrbův dopis. Tak přece.“ Mávne rukou a mraky nad Lhotkou se rozestoupí. „Dluh je splacen. Na pouť bude svítit.“;svet:krakonos_splatil
+vrbuv_dopis;krakonos;;⛈️;„Doruč ho,“ zahučí Krakonoš. „Já už jsem svoje udělal.“;
+vrbuv_dopis;babka;svet:vrba_ozvenov svet:vrba_dusicka;🥲;„Pro vás, paní Kořenářko,“ řekneš. „Od Josefa Vrby.“ Babka si sundá brýle, otře je a zase nasadí. Pečeť povolí tiše jako povzdech. Čte dlouho.|„Pepíček,“ zašeptá nakonec. „Třicet let jsem nevěděla, kdo mi každé Vánoce nechává na plotě barborku.“ Přitiskne dopis k sobě. „Kdyby mi to tenkrát řekl… Ale on nedošel, viď?“ Podívá se na tebe. „Ale dopis došel.“;-vrbuv_dopis vrba_doruceno razitko svet:vrba_doruceno
+vrbuv_dopis;babka;svet:vrba_ozvenov nebo svet:vrba_holubnik nebo svet:vrba_stolov nebo adresa;🥲;„Pro vás, paní Kořenářko,“ řekneš. Babka obálku pozná. Sundá brýle, otře je a zase nasadí. Pečeť povolí tiše jako povzdech. Čte dlouho a pak se usměje, jako by jí bylo dvacet. „Tak to byl on,“ řekne. „Celou tu dobu.“;-vrbuv_dopis vrba_doruceno razitko svet:vrba_doruceno
+vrbuv_dopis;babka;;👵;Babka obálku pozná. „Tu už jsem loni viděla. Pořád bez adresy.“ Podívá se na tebe přes brýle. „Komu ji neseš? Dokud to nevíš, nedávej ji nikomu.“;
+napoveda;*;!paska_doruceno;💡;Starosta má nůžky, ale nemá pásku.;
+napoveda;*;!kolebka_doruceno;💡;Balík od truhláře čeká kovář.;
+napoveda;*;!vrba_doruceno !adresa !svet:vrba_ozvenov !svet:vrba_holubnik !svet:vrba_stolov;💡;Komu Vrbův dopis patří? Přičichni k němu s někým, kdo zná všechny zahrádky ve vsi.;
+napoveda;*;!vrba_doruceno;💡;Vrbův dopis patří babce Kořenářce.;
+napoveda;*;!pohled_doruceno;💡;Pohlednice od Pepíka čeká babka.;
+napoveda;*;;💡;Všechno je doručeno.;
+*;*;;🙂;„To nepatří mně.“;

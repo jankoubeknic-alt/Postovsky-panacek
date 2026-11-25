@@ -46,3 +46,6 @@ napoveda;*;;💡;Teď už jen čekat. Barborka kvete po čtyřech pochůzkách v
 *;kamna;;🔥;Kamna si nic nevezmou.;
 *;kostel;;⛪;V kostelíku je ticho. Pošta sem nejde.;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;hajny;!svet:vrba_barborov;🪓;Hajný se na pečeť podívá a sundá klobouk. „Vrba. Ten si u mě v sadu každý rok na Barboru uřízl větvičku. Nechal ji rozkvést na poště u kamen.“ Odmlčí se. „O Štědrém dni ji nesl až k vrátkům jedné chalupy. Dál nikdy nedošel. Větvička uvadla na plotě.“;svet:vrba_barborov
+vrbuv_dopis;hajny;;🪓;„Kvete jen to, co se donese,“ zabručí hajný.;

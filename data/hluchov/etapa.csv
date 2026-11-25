@@ -1,11 +1,11 @@
 klic;hodnota
-datum;14. VIII.
-start;telegram noviny niti vabnicka svicky
+datum;17. VIII.
+start;telegram noviny niti vabnicka svicky vrbuv_dopis
 cil;telegram_doruceno noviny_doruceno niti_doruceno vabnicka_doruceno svicky_doruceno
-uvod;V Hluchově nikdo pořádně neslyší. Zprávy se tu odjakživa šíří přes ploty a každý soused k nim něco přidá. Telegrafistka paní Ťuková přijala po telefonu telegram pro babičku Slyšelovou a na tabuli před poštou napsala, co slyšela: PŘIJEDE HEJTMAN V BOTU S KOZOU.|Každý v Hluchově slyší, co chce slyšet. Komu telegram podáš, ten ti ho přečte po svém a ty tabuli přepíšeš. Na pořadí záleží: poslední slovo má ten, kdo četl poslední.
+uvod;V Hluchově nikdo pořádně neslyší. Zprávy se tu odjakživa šíří přes ploty a každý soused k nim něco přidá. Telegrafistka paní Ťuková přijala po telefonu telegram pro babičku Slyšelovou a na tabuli před poštou napsala, co slyšela: PŘIJEDE HEJTMAN V BOTU S KOZOU.|Každý v Hluchově slyší, co chce slyšet. Komu telegram podáš, ten ti ho přečte po svém a ty tabuli přepíšeš. Na pořadí záleží: poslední slovo má ten, kdo četl poslední.|Paní Ťuková sedí na hluchovské poště čtyřicet let. Ta pamatuje i starého Vrbu.
 navod;Komu podáš telegram, ten ho přečte po svém. Na pořadí záleží.
 konec_nadpis;Přijede Jenda!
-konec_text;V sobotu vystoupil z vlaku vnuk Jenda s nevěstou Lucií. Na nádraží je čekal celý Hluchov a každý slyšel něco jiného: hostinský kapelu, myslivec medvěda a kostelník neděli. Babička slyšela přesně to, co chtěla.|Brašna je prázdná. Paní Ťuková ti na rozloučenou zavolala „Šťastnou cestu!“. Slyšel jsi „Šťastnou nevěstu!“ a vůbec ti to nepřišlo divné.
+konec_text;V sobotu vystoupil z vlaku vnuk Jenda s nevěstou Lucií. Na nádraží je čekal celý Hluchov a každý slyšel něco jiného: hostinský kapelu, myslivec medvěda a kostelník neděli. Babička slyšela přesně to, co chtěla.|Brašna je prázdná. Paní Ťuková ti na rozloučenou zavolala „Šťastnou cestu!“. Do uší ti dolehlo „Šťastnou nevěstu!“ a vůbec ti to nepřišlo divné.
 pozadi;data/hluchov/pozadi.svg
 barvy;
 pocitadla;kdo=0 kdy=0 s=0

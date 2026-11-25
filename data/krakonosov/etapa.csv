@@ -1,11 +1,11 @@
 klic;hodnota
 datum;20. VIII.
-start;stiznost balik_houbar dopis_uhlir pohled_poutnik
+start;stiznost balik_houbar dopis_uhlir pohled_poutnik vrbuv_dopis
 cil;stiznost_doruceno odpoved_doruceno houbar_doruceno uhlir_doruceno poutnik_doruceno
-uvod;Krakonošov leží pod horami a počasí tu dělá Krakonoš, pán hor. Kdo je k lidem hodný, tomu svítí slunce. Lakomý statkář Šrajtofle si napsal stížnost, že mu pořád prší, a pošťák ji má doručit. Adresa: Pán hor.|Krakonoš ale chodí mezi lidmi v převleku. Jednou je z něj houbař, jindy uhlíř nebo poutník na cestě. A pokaždé, když se otočíš, je z něj někdo jiný. Kdo je opravdu kdo?
+uvod;Krakonošov leží pod horami a počasí tu dělá Krakonoš, pán hor. Kdo je k lidem hodný, tomu svítí slunce. Lakomý statkář Šrajtofle si napsal stížnost, že mu pořád prší, a ty ji máš doručit. Adresa: Pán hor.|Krakonoš ale chodí mezi lidmi v převleku. Jednou je z něj houbař, jindy uhlíř nebo poutník na cestě. A pokaždé, když se otočíš, je z něj někdo jiný. Kdo je opravdu kdo?|Staří lidé tu říkají, že pán hor znával starého pošťáka Vrbu. Ale ukáže se jen tomu, kdo ho pozná.
 navod;Krakonoš se po každém podání převleče za někoho jiného. Poznáš ho podle šosu.
 konec_nadpis;Pán hor odpověděl
-konec_text;Nad Krakonošovem svítí slunce. Jen nad polem statkáře Šrajtofle visí malý mráček a prší mu přesně na řepu. Statkář si koupil deštník a od té doby pouští na dvůr každého poutníka. Prý pro jistotu.|Brašna je prázdná. Na cestě dolů tě dohonil houbař s mokrým šosem a podal ti hřib. Když ses otočil, byl pryč. Hřib je největší, jaký jsi kdy viděl.
+konec_text;Nad Krakonošovem svítí slunce. Jen nad polem statkáře Šrajtofle visí malý mráček a prší mu přesně na řepu. Statkář si koupil deštník a od té doby pouští na dvůr každého poutníka. Prý pro jistotu.|Brašna je prázdná. Na cestě dolů tě dohonil houbař s mokrým šosem a podal ti hřib. Stačilo se otočit a byl pryč. Takový hřib ještě nikdo neviděl.
 pozadi;data/krakonosov/pozadi.svg
 barvy;
 pocitadla;k=1 bourka=0

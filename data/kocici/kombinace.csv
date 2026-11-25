@@ -16,9 +16,9 @@ karta;cil;podminka;vyraz;text;efekt
 ?;dort;patro=0;🥣;Mísa s těstem. „Dort se dělá tak, že se do něj dá všechno, co má člověk nejradši,“ vysvětluje pejsek. „Odspodu nahoru,“ dodá kočička.;
 ?;dort;patro=1;🥣;Dort má zatím jen spodní patro. Pejsek ho hlídá a olizuje se.;
 ?;dort;;🥣;Dort má spodek a prostředek. Ještě vršek a bude hotový.;
-?;pejsek;!pece;🐶;„Zítra máme svátek,“ vrtí ocasem pejsek. „Upečeme dort, ale nemáme mouku. Pošťáku, nevezeš nám ji?“;
+?;pejsek;!pece;🐶;„Zítra máme svátek,“ vrtí ocasem pejsek. „Upečeme dort, ale nemáme mouku. Nevezeš nám ji náhodou?“;
 ?;pejsek;;🐶;Pejsek čmuchá kolem mísy. „Já jím dort vždycky odspodu, jako když hrabu díru. A ze všeho nejradši mám buřty.“;
-?;kocicka;!pece;🐱;„Mňau, mouka ještě nepřišla,“ povzdychne kočička. „A bez mouky dort neupečeš, i kdyby ses rozkrájel.“;
+?;kocicka;!pece;🐱;„Mňau, mouka ještě nepřišla,“ povzdychne kočička. „A bez mouky dort neupečeš, ani za nic na světě.“;
 ?;kocicka;;🐱;Kočička si olizuje packu. „Já z dortu olizuju jen vršek. Spodek je pro pejska. A nejradši mám šlehačku.“;
 ?;zlypes;pozvan;🐕;„Přijdu,“ zamručí zlý pes. „Ale mě po všem bolí bříško. Pan doktor mi dovolil jen suchý rohlík. Tak mi dejte prostředek.“;
 ?;zlypes;;🐺;Zlý pes kouká přes plot a slintá. „Grrr. Mě nikdo nikdy nikam nepozve. Tak si vždycky něco vezmu sám.“;
@@ -79,7 +79,7 @@ rohlik;zlypes;;🐺;Zlý pes rohlík očichá a zamručí. „Proč mi to dává
 rohlik;pejsek;;🐶;„Suchý rohlík? To je jídlo pro psy s bolavým bříškem,“ řekne pejsek. „Já mám bříško zdravé.“;
 okurka;kocicka;;🐱;Kočička se na okurku zatváří, jako by spolkla citron. „Okurku do dortu? To by vymyslel jen zahradník.“;
 okurka;zahradnik;;👨‍🌾;„Nevracej ji, dej ji do dortu!“ rozčiluje se zahradník. „Okurka patří do všeho.“;
-syr;myska;;🐭;„Nechci ho zpátky, chci, abys mě nedal do dortu!“ pípne myška a zaleze.;
+syr;myska;;🐭;„Nechci ho zpátky, chci, ať nejsem v dortu!“ pípne myška a zaleze.;
 syr;kocicka;;🐱;„Sýr? Já bych radši tu myšku,“ zavrní kočička. Z díry se ozve vyděšené pípnutí.;
 *;zlypes;;🐺;Zlý pes očichá zásilku a zavrčí. Tohle nechce.;
 *;myska;;🐭;Myška zmizí v díře, jen se za ní zaprášilo.;

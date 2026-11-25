@@ -26,7 +26,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;okno;;😴;Za zavřenými okenicemi někdo chrápe. Na dveřích visí cedulka: JSEM Z NOČNÍ. NEBUDIT!;
 ?;franta_den;;🙂;Franta stojí před domkem v nedělním saku a mžourá do slunce. „Máš ten prsten? Dneska to Marii řeknu. Za světla!“;
 ?;kocka;noc;👀;Ze tmy na tebe svítí dvě zelené oči. Uhlíčka v noci hlídá ulici líp než noční hlídač.;
-?;kocka;;🐈‍⬛;Černá kočka Uhlíčka se vyhřívá na jediném slunném kameni v Kamenici. V noci by sis jí ani nevšiml.;
+?;kocka;;🐈‍⬛;Černá kočka Uhlíčka se vyhřívá na jediném slunném kameni v Kamenici. V noci by o ní nikdo ani nevěděl.;
 napoveda;*;!byl_v_noci !uredni_doruceno;💡;Úřední dopis patří řediteli dolu. V kanceláři sedí jen ve dne.;
 napoveda;*;!byl_v_noci;💡;Někteří lidé v Kamenici jsou vzhůru jen v noci. Klepni na věžní hodiny a počkej, až se setmí.;
 napoveda;*;!noc !uredni_doruceno;💡;Úřední dopis patří řediteli dolu. V kanceláři sedí jen ve dne.;
@@ -47,7 +47,7 @@ uredni;hostinsky;;🧔;„Úřady v noci spí. Ředitel taky. Aspoň to všem tv
 uredni;marie;;👩;„Pro pana ředitele? Sedí naproti v kanceláři. Nevyspalý jako vždycky.“;
 uredni;okno;;😠;Zaklepeš. Okenice se rozletí a vykoukne rozcuchaný horník. „Úřední? To je pro ředitele, ne pro mě! Jsem z noční!“ Okenice zase bouchne.;
 uredni;kocka;;🐈‍⬛;Uhlíčka si na úřední obálku lehne. Asi chce taky razítko.;
-kometa;hvezdar;;🤩;Muž s dalekohledem roztrhne obálku a vyskočí radostí, až mu spadne čepice. Je to ředitel Hronek v županu! „Kometa ponese moje jméno! Kometa Hronek!“ Pak si všimne, že tu nejsi sám. „O tom ani muk. Ve dne jsem ředitel.“;-kometa kometa_doruceno ikona:reditel:😊 razitko
+kometa;hvezdar;;🤩;Muž s dalekohledem roztrhne obálku a vyskočí radostí, až mu spadne čepice. Je to ředitel Hronek v županu! „Kometa ponese moje jméno! Kometa Hronek!“ Pak si všimne tebe. „O tom ani muk. Ve dne jsem ředitel.“;-kometa kometa_doruceno ikona:reditel:😊 razitko
 kometa;reditel;;😳;Ředitel se na obálku podívá a zčervená až po pleš. „Kometa? Já? Já v noci spím, jako každý slušný člověk!“ Zívne a dopis ti rychle vrátí.;
 kometa;franta;;👷;„Na nebe? Když jdu na šichtu, vidím na střeše ředitelství chlapa s dalekohledem. Každou noc. Zkus to tam.“;
 kometa;hostinsky;;🧔;„Na nebe tady koukají jen horníci, když vyfárají. A pak ten podivín na střeše ředitelství.“;
@@ -79,7 +79,7 @@ prsten;hostinsky;;🧔;„Pro Marii, co? Celá Kamenice ví, že se ti dva mají
 prsten;kocka;;😼;Uhlíčka sleduje, jak se prsten blyští. Radši ho schováš, než si ho odnese.;
 zadost;reditel;kometa_doruceno uredni_doruceno;😊;Ředitel si žádost přečte a usměje se. „Bárta na denní? Proč ne! Báňský úřad to dovolil a já mám dneska tak dobrou náladu, že bych podepsal i kometě občanku.“ Razítko, podpis, hotovo.;-zadost denni_smena
 zadost;reditel;uredni_doruceno;🥱;„Báňský úřad mi dovolil jednoho přeložit, to ano. Ale já jsem nevyspalý a nevyspalý nic nepodepisuju.“ Zívne a žádost ti vrátí.;
-zadost;reditel;kometa_doruceno;😊;„Rád bych, chlapče. Ale bez svolení báňského úřadu nesmím nikoho přeložit. Nepřišlo mi náhodou něco úředního?“;
+zadost;reditel;kometa_doruceno;😊;„Rád bych. Ale bez svolení báňského úřadu nesmím nikoho přeložit. Nepřišlo mi náhodou něco úředního?“;
 zadost;reditel;;😠;„Na denní? Není místo, není svolení a já nemám náladu!“ Zívne tak, že mu cvaknou zuby.;
 zadost;hvezdar;;🔭;„Žádosti vyřizuje ředitel. Ve dne. V kanceláři. Teď jsou hvězdy.“;
 zadost;franta;;👷;„Nes ji řediteli. Ve dne sedí v kanceláři. Podepsal jsem ji třikrát, pro jistotu.“;

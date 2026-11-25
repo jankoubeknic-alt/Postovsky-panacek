@@ -1,8 +1,8 @@
 klic;hodnota
 datum;11. III.
-start;dopis_rubac dopis_stajger dopis_permonik
+start;dopis_rubac dopis_stajger dopis_permonik vrbuv_dopis
 cil;rubac_doruceno svacina_doruceno stajger_doruceno permonik_doruceno varovani_doruceno
-uvod;Ve Štolově se fárá do hloubky tří pater. Dolů se jezdí klecí a strojník nahoře ji pouští podle zvonku: kolikrát zazvoníš, na to patro klec sjede. Čtyřikrát znamená nahoru.|V nejhlubším patře prý žije permoník. Ukáže se jen potmě a s prázdnou nikdo nechodí. Pošťák má dopis i pro něj. Přišel od permoníků z jiného dolu.
+uvod;Ve Štolově se fárá do hloubky tří pater. Dolů se jezdí klecí a strojník nahoře ji pouští podle zvonku: kolikrát zazvoníš, na to patro klec sjede. Čtyřikrát znamená nahoru.|V nejhlubším patře prý žije permoník. Ukáže se jen potmě a s prázdnou nikdo nechodí. Máš dopis i pro něj. Přišel od permoníků z jiného dolu.|Permoník prý kdysi měnil valouny se starým pošťákem za tabák.
 navod;Klepni na zvonek tolikrát, na které patro chceš, a pak na Jet. Klec jede i po každém podání.
 konec_nadpis;Šťastný fárt
 konec_text;Rubač má dopis, Jarda svačinu a štajger zprávy z báňského úřadu. Na dvojce se přestalo kopat včas a za hodinu se tam sesypal strop. Nikomu se nic nestalo. Permoník prý potmě poklepal třikrát, a to znamená díky.|Brašna je prázdná. Na dně ti zůstal lesklý valoun. Nikdo neví, kde se tam vzal.

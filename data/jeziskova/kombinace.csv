@@ -57,8 +57,8 @@ pohadky;pernikar;;🧑‍🍳;„O perníkové chaloupce? Tu mám rád. Ale je p
 darek_pepik;strom_pepik;;🛷;Sáňky šoupneš pod stromeček u Pepíků. Ani jehlička nespadla.;-darek_pepik darek_pepik_doruceno ikona:strom_pepik:🎁 razitko
 darek_anca;strom_anca;;🖍️;Pastelky položíš pod stromeček u Anči, hned vedle zapomenuté baterky.;-darek_anca darek_anca_doruceno ikona:strom_anca:🎁 razitko
 darek_tonik;strom_tonik;@zvonecek;🐴;Postavíš koníka pod stromeček. Toník se ve spánku otočí a zamlaská.;-darek_tonik darek_tonik_doruceno ikona:strom_tonik:🎁 razitko
-darek_tonik;strom_tonik;;🔔;Pod stromkem je natažený provázek se zvonečkem. Kdybys ho zavadil, cinkne to. Nejdřív ho odstraň.;
-darek_pepik;pepik;;🙈;Sáňky rychle schováš za záda. Pepík nesmí vidět, že Ježíšek je pošťák!;
+darek_tonik;strom_tonik;;🔔;Pod stromkem je natažený provázek se zvonečkem. Stačí o něj zavadit a cinkne to. Nejdřív ho odstraň.;
+darek_pepik;pepik;;🙈;Sáňky rychle schováš za záda. Pepík nesmí vidět, že Ježíška dělá pošta!;
 darek_anca;anca;;🙈;Pastelky rychle strčíš do brašny. Anča zamžourá do baterky: „Co to bylo? Ježíšek?“;
 darek_tonik;tonik;;🙈;Koníka schováš za záda. Klapne kolečkem. „Co to klaplo?“ zívne Toník.;
 darek_pepik;strom_anca;;🎄;Tohle je stromeček u Anči. Sáňky jsou pro Pepíka.;
@@ -77,7 +77,7 @@ zvonecek;strom;darek_pepik_doruceno darek_anca_doruceno darek_tonik_doruceno;�
 zvonecek;strom;;🤫;Ještě ne! Kdyby teď zazvonil, děti by doběhly k prázdným stromkům.;
 zvonecek;*;;🔔;Zvoneček patří ke stromu na návsi. Zvoní se, až bude všechno pod stromky.;
 *;strom;;🌲;Pod strom na návsi se nic nedává. Tady se jen zvoní.;
-*;babicka;;👵;„To mi nedávej, chlapče. Mám plné ruce cukroví.“;
+*;babicka;;👵;„To mi nedávej. Mám plné ruce cukroví.“;
 *;pernikar;;🧑‍🍳;„To není pro pekárnu.“;
 *;strom_pepik;;🎄;Pod stromeček u Pepíků patří sáňky.;
 *;strom_anca;;🎄;Pod stromeček u Anči patří pastelky.;

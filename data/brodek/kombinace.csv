@@ -46,7 +46,7 @@ dopis;hostinska;voda>=7;👩‍🦰;„Pro paní učitelku? Přes lávku už nep
 dopis;hostinska;;👩‍🦰;„Školní rada? To bude pro paní učitelku. Pospěš si, lávka je skoro pod vodou.“;
 dopis;vodnik;;🐸;Vodník si dopis přidrží u očí. „Škola? Já chodil do tůně. Tam se učí jen plavat.“;
 dopis;kachna;;🦆;Kachna Běta na dopis kvákne tak úředně, že by mohla sedět ve školní radě.;
-holinky;rybar;;🥳;Rybář balík roztrhne. Holínky! Hned si je obuje. „Pošťáku, za tohle tě budu vozit zadarmo až do smrti.“;-holinky holinky_doruceno prevoz razitko
+holinky;rybar;;🥳;Rybář balík roztrhne. Holínky! Hned si je obuje. „{osloveni}, za tohle tě budu vozit zadarmo až do smrti.“;-holinky holinky_doruceno prevoz razitko
 holinky;mlynar;;👨‍🌾;„Holínky by se hodily, ale nejsou moje. Matěj má na nich napsané jméno, i když umí jen tři písmena.“;
 holinky;hostinska;;👩‍🦰;„Ty jsou pro Matěje. Konečně mi nebude nosit bláto až k pultu.“;
 holinky;vodnik;;🐸;Vodník zkusí do holínky schovat dušičku. Nevejde se tam, a tak ti holínky smutně vrátí.;

@@ -21,7 +21,7 @@ plast_a;zebrak;zebrak_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zi
 plast_a;zebrak;;🧣;Žebrák se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_a zebrak_ok razitko
 plast_b;zebrak;zebrak_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima.“;
 plast_b;zebrak;;🧣;Žebrák se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_b zebrak_ok razitko
-plast;zebrak;;🧥;„Celý plášť? To je moc, pošťáku. Ty bys pak zmrzl a já bych se styděl. Půlka by stačila.“;
+plast;zebrak;;🧥;„Celý plášť? To je moc. Tobě by pak byla zima a já bych se styděl. Půlka by stačila.“;
 pecen_a;zebrak;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
 pecen_b;zebrak;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
 pecen;zebrak;;😊;„Celý pecen? Ten je pro chudé, rozdělte. Mně je hlavně zima.“;
@@ -30,7 +30,7 @@ plast_a;babka;babka_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima
 plast_a;babka;;🧣;Babka se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_a babka_ok razitko
 plast_b;babka;babka_ok;🧣;„Půlku už mám. Dej druhou někomu, komu je zima.“;
 plast_b;babka;;🧣;Babka se zabalí do půlky pláště a přestane se třást. „Bůh zaplať. Půlka stačí.“;-plast_b babka_ok razitko
-plast;babka;;🧥;„Celý plášť? To je moc, pošťáku. Ty bys pak zmrzl a já bych se styděl. Půlka by stačila.“;
+plast;babka;;🧥;„Celý plášť? To je moc. Tobě by pak byla zima a já bych se styděl. Půlka by stačila.“;
 pecen_a;babka;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
 pecen_b;babka;;😊;„Chleba je pro děti. Mně je hlavně zima.“;
 pecen;babka;;😊;„Celý pecen? Ten je pro chudé, rozdělte. Mně je hlavně zima.“;
@@ -51,7 +51,7 @@ pecen;anicka;;🍞;Anička se podívá na celý pecen a pak na Honzíka. „Cel�
 plast_a;anicka;;🧒;„Mně není zima, já mám hlad.“;
 plast_b;anicka;;🧒;„Mně není zima, já mám hlad.“;
 ?;anicka;anicka_ok;😊;Anička je spokojená.;
-?;zebrak;;🧎;Žebrák se třese u brány. „Zima, pane. Jen kdybych měl něco přes ramena.“;
+?;zebrak;;🧎;Žebrák se třese u brány. „Zima, zima. Jen kdybych měl něco přes ramena.“;
 ?;babka;;👵;Babka Kmochová fouká do dlaní. „Dříví došlo a kabát mi sežraly moli.“;
 ?;honzik;;👦;Honzík drží Aničku za ruku. „Máme hlad. Oba.“;
 ?;anicka;;👧;Anička se dívá na pecen v tvé brašně. „Ten voní…“;

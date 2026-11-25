@@ -68,3 +68,7 @@ dopis_teta;rytir;hlava_vracena;⚔️;Rytíř si dopis přečte a nadšeně si s
 dopis_teta;rytir;;🛡️;Rytíř dopis nahmatá, ale nepřečte. „Nemám čím. Hlava se mi někam zakutálela.“;
 retezy;kostlivec;;💀;Kostlivec si řetězy navlékne a zachrastí. Klenba se otřese a sudy poskočí. „To je ono!“ zaraduje se. Zuby mu cvakají radostí.;-retezy retezy_doruceno ikona:kostlivec:☠️ razitko
 hracka;bilapani;;👻;„Myška!“ vyjekne Bílá paní a vyletí ke stropu. Hračka je pro kocoura.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;bilapani;!belidlo_doruceno;👻;Bílá paní se schová za závěs. „Takhle šedivá ti nic vyprávět nebudu. Až budu zase bílá.“;
+vrbuv_dopis;bilapani;!svet:vrba_strachov;👻;Bílá paní obálku vezme dvěma průsvitnými prsty. „Pepíček Vrba! Hrávali jsme mariáš, kdykoli nesl poštu na hrad. Pokaždé prohrál, protože koukal z okna někam do kraje.“ Vrátí ti ji. „Říkala jsem mu: kdo nosí dopis tolik let, je taky trochu strašidlo.“;svet:vrba_strachov
+vrbuv_dopis;bilapani;;👻;„Doruč ho,“ šeptá Bílá paní. „Strašidel je tu dost.“;

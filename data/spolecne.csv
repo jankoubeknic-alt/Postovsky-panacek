@@ -1,0 +1,4 @@
+# Společná pravidla pro všechny obce. Stejné sloupce jako kombinace.csv.
+# Platí až po pravidlech obce, takže obec je může přebít vlastním řádkem.
+karta;cil;podminka;vyraz;text;efekt
+vrbuv_dopis;*;;✉️;Obálka bez adresy tady nikomu nepatří. Schováš Vrbův dopis zpátky do podšívky.;

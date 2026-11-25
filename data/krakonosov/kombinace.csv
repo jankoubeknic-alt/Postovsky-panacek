@@ -11,30 +11,30 @@ karta;cil;podminka;vyraz;text;efekt
 ?;houbar;k=1;💧;S košíkem u lesa stojí houbař. Šos kabátu má mokrý a kape z něj, i když neprší. V dýmce mu blýská jako v bouřkovém mraku. Když se na něj podíváš, mrkne.;
 ?;houbar;;🧺;S košíkem u lesa stojí houbař. V košíku má hřiby a kabát suchý jako troud.;
 chleba;houbar;k=1 laskavost;💧;„Už jsem dostal,“ usměje se houbař s mokrým šosem. „Jednou stačí. Laskavost se nepočítá na bochníky.“;
-chleba;houbar;k=1;🌤️;Houbař s mokrým šosem si chleba vezme a ulomí si. „Dobrý chleba. Dobrý pošťák,“ zahřmí potichu. Nad horami se protrhnou mraky.;-chleba laskavost
-chleba;houbar;;🧺;Houbař Hřibal si chleba vděčně vezme. „Díky, pošťáku. Zrovna mi kručí v břiše.“ Chleba je pryč.;-chleba
+chleba;houbar;k=1;🌤️;Houbař s mokrým šosem si chleba vezme a ulomí si. „Dobrý chleba. Dobrá pošta,“ zahřmí potichu. Nad horami se protrhnou mraky.;-chleba laskavost
+chleba;houbar;;🧺;Houbař Hřibal si chleba vděčně vezme. „Díky. Zrovna mi kručí v břiše.“ Chleba je pryč.;-chleba
 stiznost;houbar;k=1 laskavost;⛈️;Houbař s mokrým šosem si stížnost přečte a narovná se. Najednou je vysoký jako smrk a vousy mu vlají. Krakonoš! „Šrajtofle si stěžuje? Ten, co nepustí na dvůr ani žebráka? Dobře. Ať má, co chtěl.“ Napíše odpověď a podá ti ji.;-stiznost +odpoved stiznost_doruceno ikona:statkar:😰 razitko
-stiznost;houbar;k=1;⛈️;Houbař s mokrým šosem si přečte adresu a zahřmí: „Cizí pošťák a hned mi strká stížnosti? Ani kůrku chleba nepřinese!“ Nad horami se zatáhne a spustí se liják.;bourka=2
+stiznost;houbar;k=1;⛈️;Houbař s mokrým šosem si přečte adresu a zahřmí: „Cizí pošta a hned mi strká stížnosti? Ani kůrku chleba nepřinese!“ Nad horami se zatáhne a spustí se liják.;bourka=2
 stiznost;houbar;;🧺;„Pán hor?“ diví se houbař. „To nejsem já. Já jsem houbař Hřibal. Pána hor poznáš po mokrém šosu, povídá babka.“;
 balik_houbar;houbar;k=1;💧;Houbař s mokrým šosem se na zásilku podívá a zasměje se hromovým smíchem. „To není pro mě, já nejsem houbař. Pravý houbař sedí v hospodě.“;
 balik_houbar;houbar;;🧺;Hřibal si prolistuje atlas a zbledne. „Tak tohle, co jsem jedl včera, byla muchomůrka? Proto jsem viděl trpaslíky!“;-balik_houbar houbar_doruceno razitko
 ?;uhlir;k=2;💧;U milíře stojí uhlíř. Šos kabátu má mokrý a kape z něj, i když neprší. V dýmce mu blýská jako v bouřkovém mraku. Když se na něj podíváš, mrkne.;
 ?;uhlir;;🧑‍🏭;U milíře stojí uhlíř. Je černý od sazí a kabát má suchý, až se z něj práší.;
 chleba;uhlir;k=2 laskavost;💧;„Už jsem dostal,“ usměje se uhlíř s mokrým šosem. „Jednou stačí. Laskavost se nepočítá na bochníky.“;
-chleba;uhlir;k=2;🌤️;Uhlíř s mokrým šosem si chleba vezme a ulomí si. „Dobrý chleba. Dobrý pošťák,“ zahřmí potichu. Nad horami se protrhnou mraky.;-chleba laskavost
-chleba;uhlir;;🧑‍🏭;Uhlíř Saze si chleba vděčně vezme. „Díky, pošťáku. Zrovna mi kručí v břiše.“ Chleba je pryč.;-chleba
+chleba;uhlir;k=2;🌤️;Uhlíř s mokrým šosem si chleba vezme a ulomí si. „Dobrý chleba. Dobrá pošta,“ zahřmí potichu. Nad horami se protrhnou mraky.;-chleba laskavost
+chleba;uhlir;;🧑‍🏭;Uhlíř Saze si chleba vděčně vezme. „Díky. Zrovna mi kručí v břiše.“ Chleba je pryč.;-chleba
 stiznost;uhlir;k=2 laskavost;⛈️;Uhlíř s mokrým šosem si stížnost přečte a narovná se. Najednou je vysoký jako smrk a vousy mu vlají. Krakonoš! „Šrajtofle si stěžuje? Ten, co nepustí na dvůr ani žebráka? Dobře. Ať má, co chtěl.“ Napíše odpověď a podá ti ji.;-stiznost +odpoved stiznost_doruceno ikona:statkar:😰 razitko
-stiznost;uhlir;k=2;⛈️;Uhlíř s mokrým šosem si přečte adresu a zahřmí: „Cizí pošťák a hned mi strká stížnosti? Ani kůrku chleba nepřinese!“ Nad horami se zatáhne a spustí se liják.;bourka=2
+stiznost;uhlir;k=2;⛈️;Uhlíř s mokrým šosem si přečte adresu a zahřmí: „Cizí pošta a hned mi strká stížnosti? Ani kůrku chleba nepřinese!“ Nad horami se zatáhne a spustí se liják.;bourka=2
 stiznost;uhlir;;🧑‍🏭;„Pán hor?“ diví se uhlíř. „To nejsem já. Já jsem uhlíř Saze. Pána hor poznáš po mokrém šosu, povídá babka.“;
 dopis_uhlir;uhlir;k=2;💧;Uhlíř s mokrým šosem se na zásilku podívá a zasměje se hromovým smíchem. „To není pro mě, já nejsem uhlíř. Pravý uhlíř sedí v hospodě.“;
 dopis_uhlir;uhlir;;🧑‍🏭;Saze si přičichne k obálce. „Koláč! Žena píše, že mi peče na neděli.“ Utře si oko a udělá si na tváři světlou šmouhu.;-dopis_uhlir uhlir_doruceno razitko
 ?;poutnik;k=3;💧;Na cestě odpočívá poutník. Šos kabátu má mokrý a kape z něj, i když neprší. V dýmce mu blýská jako v bouřkovém mraku. Když se na něj podíváš, mrkne.;
 ?;poutnik;;🚶;Na cestě odpočívá poutník. Boty má prošlapané a kabát suchý, jen trochu zaprášený.;
 chleba;poutnik;k=3 laskavost;💧;„Už jsem dostal,“ usměje se poutník s mokrým šosem. „Jednou stačí. Laskavost se nepočítá na bochníky.“;
-chleba;poutnik;k=3;🌤️;Poutník s mokrým šosem si chleba vezme a ulomí si. „Dobrý chleba. Dobrý pošťák,“ zahřmí potichu. Nad horami se protrhnou mraky.;-chleba laskavost
-chleba;poutnik;;🚶;Poutník Vandrák si chleba vděčně vezme. „Díky, pošťáku. Zrovna mi kručí v břiše.“ Chleba je pryč.;-chleba
+chleba;poutnik;k=3;🌤️;Poutník s mokrým šosem si chleba vezme a ulomí si. „Dobrý chleba. Dobrá pošta,“ zahřmí potichu. Nad horami se protrhnou mraky.;-chleba laskavost
+chleba;poutnik;;🚶;Poutník Vandrák si chleba vděčně vezme. „Díky. Zrovna mi kručí v břiše.“ Chleba je pryč.;-chleba
 stiznost;poutnik;k=3 laskavost;⛈️;Poutník s mokrým šosem si stížnost přečte a narovná se. Najednou je vysoký jako smrk a vousy mu vlají. Krakonoš! „Šrajtofle si stěžuje? Ten, co nepustí na dvůr ani žebráka? Dobře. Ať má, co chtěl.“ Napíše odpověď a podá ti ji.;-stiznost +odpoved stiznost_doruceno ikona:statkar:😰 razitko
-stiznost;poutnik;k=3;⛈️;Poutník s mokrým šosem si přečte adresu a zahřmí: „Cizí pošťák a hned mi strká stížnosti? Ani kůrku chleba nepřinese!“ Nad horami se zatáhne a spustí se liják.;bourka=2
+stiznost;poutnik;k=3;⛈️;Poutník s mokrým šosem si přečte adresu a zahřmí: „Cizí pošta a hned mi strká stížnosti? Ani kůrku chleba nepřinese!“ Nad horami se zatáhne a spustí se liják.;bourka=2
 stiznost;poutnik;;🚶;„Pán hor?“ diví se poutník. „To nejsem já. Já jsem poutník Vandrák. Pána hor poznáš po mokrém šosu, povídá babka.“;
 pohled_poutnik;poutnik;k=3;💧;Poutník s mokrým šosem se na zásilku podívá a zasměje se hromovým smíchem. „To není pro mě, já nejsem poutník. Pravý poutník sedí v hospodě.“;
 pohled_poutnik;poutnik;;🚶;Vandrák si pohled přečte a usměje se. „Maminka píše, ať se vrátím na posvícení. Vrátím. Ale až obejdu hory.“;-pohled_poutnik poutnik_doruceno razitko
@@ -51,7 +51,7 @@ odpoved;*;;🌩️;„Odpověď pána hor? Ta je pro statkáře, ten si stěžov
 stiznost;statkar;;🤑;„To je moje stížnost! Proč ji neseš zpátky? Dones ji pánovi hor!“;
 stiznost;babka;;👵;„Stížnost pro pána hor? Hledej mokrý šos. A nejdřív se s ním rozděl o chleba.“;
 stiznost;hospoda;;🍺;Hostinský stížnost odmítne. „Krakonoš sem chodí, ale nikdy jako Krakonoš.“;
-chleba;statkar;;🤑;„Chleba? Mám vlastní. A žebrákům nedávám, tak proč bych bral od pošťáka.“;
+chleba;statkar;;🤑;„Chleba? Mám vlastní. A žebrákům nedávám, tak proč bych bral od pošty.“;
 chleba;babka;;👵;„Chleba si nech,“ usměje se babka. „Rozděl se s někým, kdo ho potřebuje víc. Nebo kdo není tím, kým se zdá.“;
 chleba;pekar;;🥖;„Vracet nemusíš. Rozdej ho.“;
 chleba;hospoda;;🍺;„Chleba do hospody? Tady máme jen tlačenku,“ směje se hostinský.;
@@ -64,5 +64,12 @@ napoveda;*;!stiznost_doruceno;💡;Pán hor ti je nakloněn. Najdi mokrý šos a
 napoveda;*;!odpoved_doruceno;💡;Odpověď pána hor je pro statkáře.;
 napoveda;*;;💡;Pravý houbař, uhlíř a poutník čekají poštu. Když je na jejich místě Krakonoš, jsou v hospodě. Počkej, až se převleče jinam.;
 *;hospoda;;🍺;V hospodě se pošta nepřebírá. Hostinský ukáže ke dveřím.;
-*;babka;;👵;„To není pro mě, chlapče. Já dostávám poštu jen od bylinek.“;
+*;babka;;👵;„To není pro mě. Já dostávám poštu jen od bylinek.“;
 *;*;;🤷;Nic se nestane. Jen nad horami zahřmí.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;houbar;k=1 stiznost_doruceno !svet:vrba_krakonos;⛈️;Krakonoš vezme obálku do obrovské dlaně a zahřmí, až se zatřesou šindele. „Vrbova pečeť! Ten mi v nejhorší bouřce donesl psaní až na hřeben, když se nikdo jiný neodvážil.“ Vrátí ti ji opatrně jako vajíčko. „Pán hor mu dluží službu. A splatí ji tomu, kdo ten dopis doručí.“;svet:vrba_krakonos
+vrbuv_dopis;houbar;k=1 stiznost_doruceno;⛈️;„Doruč ho,“ zahučí Krakonoš. „Pak se uvidíme.“;
+vrbuv_dopis;uhlir;k=2 stiznost_doruceno !svet:vrba_krakonos;⛈️;Krakonoš vezme obálku do obrovské dlaně a zahřmí, až se zatřesou šindele. „Vrbova pečeť! Ten mi v nejhorší bouřce donesl psaní až na hřeben, když se nikdo jiný neodvážil.“ Vrátí ti ji opatrně jako vajíčko. „Pán hor mu dluží službu. A splatí ji tomu, kdo ten dopis doručí.“;svet:vrba_krakonos
+vrbuv_dopis;uhlir;k=2 stiznost_doruceno;⛈️;„Doruč ho,“ zahučí Krakonoš. „Pak se uvidíme.“;
+vrbuv_dopis;poutnik;k=3 stiznost_doruceno !svet:vrba_krakonos;⛈️;Krakonoš vezme obálku do obrovské dlaně a zahřmí, až se zatřesou šindele. „Vrbova pečeť! Ten mi v nejhorší bouřce donesl psaní až na hřeben, když se nikdo jiný neodvážil.“ Vrátí ti ji opatrně jako vajíčko. „Pán hor mu dluží službu. A splatí ji tomu, kdo ten dopis doručí.“;svet:vrba_krakonos
+vrbuv_dopis;poutnik;k=3 stiznost_doruceno;⛈️;„Doruč ho,“ zahučí Krakonoš. „Pak se uvidíme.“;

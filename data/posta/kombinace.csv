@@ -11,7 +11,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;posta;noc;🌅;Svítá. Skřítkové zalezou do schránek, do razítek a pod pult. Odemkneš poštu a jdeš roznášet.;!noc
 ?;posta;!prednosta_doruceno;🏤;Pošta se zamyká v šest. Bez svolení pana přednosty tu přes noc nikdo nezůstane. Pan přednosta čeká dopis z ředitelství.;
 ?;posta;;🌙;Schováš se na poště za pult a čekáš. Odbije půlnoc. Ze schránek, z razítek a ze škvíry pod pultem vylezou poštovní skřítkové. Sednou si ke stolu a rozdají si dopisy jako karty.;noc
-?;pecetitko;!dopis_nalezen;🧙;Skřítek Pečetítko vytáhne z balíčku obálku a hned ji pustí. „Au, pálí! Tenhle nemá adresu ani známku. A hřeje jako kamna. Vezmi si ho, pošťáku, ať se nespálíme. Kdyby sis nevěděl rady, dej nám ho osahat.“;+dopis_bez_adresy dopis_nalezen
+?;pecetitko;!dopis_nalezen;🧙;Skřítek Pečetítko vytáhne z balíčku obálku a hned ji pustí. „Au, pálí! Tenhle nemá adresu ani známku. A hřeje jako kamna. Vezmi si ho, ať se nespálíme. A až nebudeš vědět kudy kam, dej nám ho osahat.“;+dopis_bez_adresy dopis_nalezen
 ?;pecetitko;karty_doruceno;🧙;Pečetítko vynese trumfa. „Mariáš je mariáš,“ zachichotá se. „Dopisy už nechceme ani vidět. Jen přičichnout.“;
 ?;pecetitko;;🧙;Pečetítko míchá dopisy. „Dopis po dopisu, karta po kartě. Nemáme mariášky, tak hrajeme s tím, co je.“;
 ?;obalka;karty_doruceno;🧝;Obálka bere štych za štychem. „Mariášky jsou lepší než dopisy. Neztrácejí se.“;
@@ -25,7 +25,7 @@ karty_mariasove;pecetitko;;🃏;Skřítkové rozbalí mariášky a zajásají. �
 karty_mariasove;obalka;;🃏;Skřítkové rozbalí mariášky a zajásají. „Konečně pořádné karty!“ Dopisy uklidí do přihrádek, každý na své místo. Odteď se na poště v Poštovicích nic neztratí.;-karty_mariasove karty_doruceno razitko
 karty_mariasove;znamka;;🃏;Skřítkové rozbalí mariášky a zajásají. „Konečně pořádné karty!“ Dopisy uklidí do přihrádek, každý na své místo. Odteď se na poště v Poštovicích nic neztratí.;-karty_mariasove karty_doruceno razitko
 pohled_pasacka;znamka;;🧚;Známka si pohled přiloží k uchu. „Zní z něj trubka, to je z vojny. Pro pasačku.“;
-?;prednosta;prednosta_doruceno;👨‍💼;„Tak co, pošťáku, kdo nám v noci krade dopisy?“ ptá se přednosta. „Zůstaň tu přes noc, klíče máš.“;
+?;prednosta;prednosta_doruceno;👨‍💼;„Tak co, {osloveni}, kdo nám v noci krade dopisy?“ ptá se přednosta. „Zůstaň tu přes noc, klíče máš.“;
 ?;prednosta;;👨‍💼;Pan přednosta si utírá pot. „Ředitelství mi píše a já se bojím otevřít. Prý se nám v noci ztrácejí dopisy.“;
 ?;pekarova;;👩‍🍳;Maruška Pekařova vytahuje chleba z pece a zpívá si. Oči má hnědé jako kůrka. Okno pekárny vede přímo na silnici.;
 ?;mlynska;;👩;Maruška od mlýna má oči modré jako řeka. Nezpívá, protože mlýn klape tak, že by ji nikdo neslyšel. Okno má k řece.;
@@ -48,7 +48,7 @@ dopis_bez_adresy;pasacka;;👧;„Já? Já bydlím za vsí, kam autobus nejezdí
 dopis_bez_adresy;prednosta;;👨‍💼;„Dopis bez adresy a bez známky?“ zděsí se přednosta. „To se doručit nedá! Leda by věděl, co v něm stojí.“;
 dopis_bez_adresy;posta;;🏤;Dopis bez adresy do schránky hodit nejde. Ten se musí doručit. Jen komu?;
 *;posta;;🏤;Do schránky? Poštu přece doručuješ, ne podáváš.;
-dopis_prednosta;prednosta;;👨‍💼;Přednosta dopis otevře a čte. „Ztrácejí se dopisy v nočních hodinách… Hm. Pošťáku, máš ode mě svolení. Zůstaň tu přes noc a zjisti, kdo to dělá.“;-dopis_prednosta prednosta_doruceno razitko
+dopis_prednosta;prednosta;;👨‍💼;Přednosta dopis otevře a čte. „Ztrácejí se dopisy v nočních hodinách… Hm. {osloveni}, máš ode mě svolení. Zůstaň tu přes noc a zjisti, kdo to dělá.“;-dopis_prednosta prednosta_doruceno razitko
 dopis_prednosta;hospodska;;👱‍♀️;„Z ředitelství? To dej přednostovi. Já dostávám jen účty za pivo.“;
 dopis_prednosta;mlynska;;👩;„Ředitelství pošt? Snad nám nezavřou poštu. Dones to panu přednostovi.“;
 dopis_prednosta;pasacka;;👧;„Úřední psaní? Tomu nerozumím. Pan přednosta jo.“;
@@ -67,3 +67,8 @@ karty_mariasove;pekarova;;👩‍🍳;„Karty? Já peču, nehraju.“;
 karty_mariasove;kantorova;;👩‍🏫;„Karty do školy nesmí,“ řekne Maruška Kantorova přísně. „Na adrese stojí skřítci. O půlnoci.“;
 karty_mariasove;pasacka;;👧;„Mariášky? S husami se hrát nedá.“;
 karty_mariasove;mlynska;;👩;„Na poště? O půlnoci? Tatínek říkal, že na poště v noci straší.“;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;pecetitko;!svet:vrba_posta;🧙;Skřítek Pečetítko položí na pečeť obě dlaně a zavře oči. „Hřeje,“ zašeptá. „Je zamilovaný. Třicet let starý. A voní heřmánkem a meduňkou.“ Otevře oči. „Takový dopis se nesmí nosit věčně. Ztratí teplo.“;svet:vrba_posta
+vrbuv_dopis;pecetitko;;🧙;„Pořád hřeje,“ ujistí tě Pečetítko. „Ale pospěš si.“;
+vrbuv_dopis;obalka;;🧝;„Pečeť? Na to je odborník Pečetítko,“ ukáže skřítek Obálka.;
+vrbuv_dopis;znamka;;🧚;„Bez známky a bez adresy?“ zakroutí hlavou skřítek Známka. „Ukaž to Pečetítkovi.“;

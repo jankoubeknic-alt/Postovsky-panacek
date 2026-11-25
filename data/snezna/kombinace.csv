@@ -12,7 +12,7 @@
 # Cesta nahoru po stezce přidá 3 sníh (se sněžnicemi v brašně 1), dolů 1. Lanovka jezdí, až meteorolog dostane baterie, a stojí 1.
 # Babička se přidá jen s prázdnou brašnou a jen když jezdí lanovka. Zabere celou brašnu (babička, peřina, kocour).
 karta;cil;podminka;vyraz;text;efekt
-?;stezka;nahore @babicka;👵;„Po zledovatělé stezce? To ani náhodou, hochu. Jedině lanovkou.“;
+?;stezka;nahore @babicka;👵;„Po zledovatělé stezce? To ani náhodou. Jedině lanovkou.“;
 ?;stezka;nahore;🛷;Sjedeš po zadku dolů ke vsi. Je to rychlé, ale sníh mezitím padá dál.;!nahore snih+1
 ?;stezka;@sneznice;🥾;Nazuješ sněžnice a vyšlapeš na hřeben skoro jako po chodníku.;nahore byl_nahore snih+1
 ?;stezka;;🥶;Brodíš se sněhem po kolena. Než vylezeš na hřeben, napadne další vrstva.;nahore byl_nahore snih+3
@@ -22,7 +22,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;lanovka;;🚡;Nasedneš do kabinky a vyjedeš na hřeben. Pod tebou se ztrácí ves ve sněhu.;nahore byl_nahore snih+1
 ?;posta;@babicka;🎩;Poštmistr smekne. „Paní Horáčková! Pepík na vás čeká na zastávce.“;
 ?;posta;snih>=5;👨‍🦳;Poštmistr kouká z okna. „Sněží čím dál víc. Jestli máš ještě něco nahoru, pospěš si.“;
-?;posta;;👨‍🦳;Poštmistr Sedlák přikládá do kamen. „Poslední pošta před zimou, hochu. Do brašny se ti vejdou tři věci, víc ne. Co nepobereš, nech na pultu.“;
+?;posta;;👨‍🦳;Poštmistr Sedlák přikládá do kamen. „Poslední pošta před zimou, {osloveni}. Do brašny se ti vejdou tři věci, víc ne. Co nepobereš, nech na pultu.“;
 ?;t_dopis;karet<3;✉️;Vezmeš z pultu dopis pro babičku Horáčkovou.;+dopis vzato_dopis
 ?;t_baterie;karet<3;🔋;Vezmeš z pultu baterie pro meteorologa. Jsou těžké jako cihla.;+baterie vzato_baterie
 ?;t_noviny;karet<3;📰;Vezmeš z pultu balík novin pro chatu.;+noviny vzato_noviny
@@ -70,7 +70,7 @@ dopis;chatar;;👨‍🍳;„Pro babku Horáčkovou? Ta bydlí na samotě. Dopis
 dopis;meteorolog;;🧑‍🔬;„Pro babku ze samoty? Vidím ji dalekohledem, jak štípe dříví.“;
 dopis;posta;;👨‍🦳;Poštmistr vrátí dopis na pult.;-dopis !vzato_dopis
 dopis;vnuk;;👦;„To jsem psal já! Nes to babičce, prosím.“;
-sneznice;posta;;👨‍🦳;Poštmistr postaví sněžnice ke kamnům. „Kdybys je zase potřeboval, víš, kde jsou.“;-sneznice !vzato_sneznice
+sneznice;posta;;👨‍🦳;Poštmistr postaví sněžnice ke kamnům. „Až je zase budeš potřebovat, víš, kde jsou.“;-sneznice !vzato_sneznice
 sneznice;babka;;👵;„Sněžnice? V nich jsem chodila na tancovačky. Teď už jen lanovkou.“;
 sneznice;chatar;;👨‍🍳;„Pěkné, služební. Ale nech si je, dolů je budeš potřebovat víc než já.“;
 sneznice;meteorolog;;🧑‍🔬;„Na vrchol jsem vylezl v nich. Dolů už nepůjdu až do jara.“;

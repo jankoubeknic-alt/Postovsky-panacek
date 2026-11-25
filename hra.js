@@ -6,6 +6,9 @@
     data/etapy.csv        obce na trase (pořadí = pořadí odemykání)
     data/<obec>/          tabulky jedné obce: etapa.csv, cile.csv, karty.csv, kombinace.csv
     data/<obec>.json      totéž sbalené do jednoho souboru (nastroje/sbal.py), použije se, když složka chybí
+    data/kapitoly.csv     kapitoly trasy a mezihry (nepovinné)
+    data/pribeh.csv       zápisy do deníku podle vlajek světa (nepovinné)
+    data/spolecne.csv     pravidla platná ve všech obcích, po pravidlech obce (nepovinné)
 
   Tento soubor tabulky čte, kreslí scénu, řeší tahání karet a ukládá postup.
 */
@@ -16,6 +19,8 @@
   const klicStavu = (id) => `postak:${VERZE}:stav:${id}`;
   const klicAlba = (id) => `postak:${VERZE}:album:${id}`;
   const KLIC_TRASY = `postak:${VERZE}:trasa`;
+  // Svět = co platí napříč obcemi: vlajky světa (svet:x v podmínkách a efektech) a viděné mezihry.
+  const KLIC_SVETA = `postak:${VERZE}:svet`;
   const ZVLASTNI_KARTY = new Set(['?', 'napoveda']);
   const POROVNANI = /^([a-z_][a-z0-9_]*)(>=|<=|>|<|=)(-?\d+)$/i;
   const ZMENA = /^([a-z_][a-z0-9_]*)([+\-=])(\d+)$/i;
@@ -26,11 +31,16 @@
   const slova = (text) => (text || '').split(/\s+/).filter(Boolean);
   const vibruj = (vzor) => { try { navigator.vibrate?.(vzor); } catch { /* telefon to neumí */ } };
   const ladeni = () => location.hash === '#debug';
+  // Příběhová karta (druh=pribeh): neuplyne po ní tah, nechytá se na *, nepočítá se do brašny ani do alba.
+  const jePribeh = (id) => karty[id]?.druh === 'pribeh';
 
   // Celá hra
   let hra = {};
   let etapy = [];
   let trasa = { hotovo: [] };
+  let svet = { vlajky: [], videno: [] };
+  let kapitoly = [], pribeh = [], spolecna = [];
+  let noveZapisy = [];
   // Právě hraná obec
   let etapa = null;
   let cile = [], cilePodleId = {}, karty = {}, pravidla = [], objevitelna = [], vrstvy = [], tahy = [];
@@ -49,8 +59,87 @@
   function prvek(tag, trida, text) {
     const el = document.createElement(tag);
     if (trida) el.className = trida;
-    if (text != null) el.textContent = text;
+    if (text != null) el.textContent = dosad(text);
     return el;
+  }
+
+  // ---------- Jméno pošťáka ----------
+  // V textech tabulek: {jmeno} = jméno pošťáka (Pospíšil), {osloveni} = jak ho oslovují (Pospíšile).
+  const VYCHOZI_JMENO = 'Pospíšil';
+  const jmenoHrace = () => svet.hrac?.jmeno || VYCHOZI_JMENO;
+  const osloveniHrace = () => svet.hrac?.osloveni || osloveniZe(jmenoHrace());
+  function dosad(text) {
+    const s = String(text);
+    if (!s.includes('{')) return s;
+    return s.replace(/\{jmeno\}/g, jmenoHrace()).replace(/\{osloveni\}/g, osloveniHrace());
+  }
+
+  // Odhad 5. pádu pro předvyplnění. Hráč ho může opravit.
+  function osloveniZe(jmeno) {
+    const j = (jmeno || '').trim();
+    if (!j) return '';
+    const mala = j.toLowerCase();
+    const konci = (...k) => k.some((x) => mala.endsWith(x));
+    if (konci('ová', 'á', 'ý', 'í', 'é', 'o', 'u', 'e', 'i', 'y')) return j;
+    if (konci('a')) return `${j.slice(0, -1)}o`;
+    if (konci('ěk')) {
+      const zaklad = j.slice(0, -2);
+      const mekke = { d: 'ď', t: 'ť', n: 'ň' }[zaklad.slice(-1)];
+      return mekke ? `${zaklad.slice(0, -1)}${mekke}ku` : `${zaklad}ku`;
+    }
+    if (konci('ek')) return `${j.slice(0, -2)}ku`;
+    if (konci('ec')) return `${j.slice(0, -2)}če`;
+    if (konci('el') && j.length > 3 && !/[aeiouyáéíóúůýě]/i.test(j.slice(-3, -2))) return `${j.slice(0, -2)}le`;
+    if (konci('k', 'h', 'g', 'ch')) return `${j}u`;
+    if (konci('r') && !/[aeiouyáéíóúůýě]/i.test(j.slice(-2, -1))) return `${j.slice(0, -1)}ře`;
+    if (konci('s', 'z', 'š', 'ž', 'č', 'ř', 'j', 'ď', 'ť', 'ň', 'x', 'c')) return `${j}i`;
+    return `${j}e`;
+  }
+
+  const ocisti = (s, max = 40) => (s || '').replace(/[{}<>|;]/g, '').replace(/\s+/g, ' ').trim().slice(0, max);
+
+  // Formulář se jménem do archu. Vrátí funkci, která jméno uloží (nebo false, když chybí).
+  function formularJmena(arch) {
+    const obal = prvek('div', 'jmeno');
+    const pole = (popis, hodnota) => {
+      const l = prvek('label', 'jmeno__pole');
+      const i = prvek('input', 'jmeno__vstup');
+      i.type = 'text';
+      i.value = hodnota;
+      i.maxLength = 40;
+      i.autocomplete = 'off';
+      i.spellcheck = false;
+      l.append(prvek('span', 'jmeno__popis', popis), i);
+      obal.append(l);
+      return i;
+    };
+    const jmeno = pole('Tvoje jméno', jmenoHrace());
+    const osloveni = pole('Jak tě oslovují (5. pád)', osloveniHrace());
+    let rucne = !!svet.hrac?.osloveni && svet.hrac.osloveni !== osloveniZe(svet.hrac.jmeno);
+    jmeno.addEventListener('input', () => { if (!rucne) osloveni.value = osloveniZe(ocisti(jmeno.value)); });
+    osloveni.addEventListener('input', () => { rucne = true; });
+    const ukazka = prvek('p', 'arch__statistika jmeno__ukazka');
+    const obnovUkazku = () => { ukazka.textContent = `„Tak co, ${ocisti(osloveni.value) || '…'}?“ zeptá se poštmistrová.`; };
+    jmeno.addEventListener('input', obnovUkazku);
+    osloveni.addEventListener('input', obnovUkazku);
+    obnovUkazku();
+    obal.append(ukazka);
+    arch.append(obal);
+    return () => {
+      const j = ocisti(jmeno.value);
+      if (!j) { jmeno.focus(); return false; }
+      svet.hrac = { jmeno: j, osloveni: ocisti(osloveni.value) || osloveniZe(j) };
+      uloz();
+      return true;
+    };
+  }
+
+  function ukazJmeno() {
+    zavriReakci(true);
+    const arch = otevriArch('arch--jmeno', { zavritKlepnutim: true });
+    arch.append(prvek('h2', '', 'Tvoje jméno'), prvek('p', '', 'Jak se jmenuješ? Postavy tě tak budou oslovovat.'));
+    const ulozJmeno = formularJmena(arch);
+    arch.append(radaTlacitek(tlacitko('Uložit', () => { if (ulozJmeno()) ukazTrasu(); }), tlacitko('Zpět na trasu', ukazTrasu, true)));
   }
 
   const segmenter = typeof Intl !== 'undefined' && Intl.Segmenter ? new Intl.Segmenter('cs', { granularity: 'grapheme' }) : null;
@@ -179,6 +268,95 @@
     try { localStorage.setItem(klic, JSON.stringify(hodnota)); } catch { /* soukromé okno apod. */ }
   }
 
+  // ---------- Přenos postupu mezi zařízeními ----------
+  // Kód obsahuje všechny klíče postak:* z localStorage jako JSON, zabalený do base64url.
+  // POSTAK1. = zkomprimovaný (deflate-raw), POSTAK0. = nezkomprimovaný (prohlížeč bez CompressionStream).
+
+  const PREDPONA_KLICU = 'postak:';
+  const KLIC_PLATNY = /^postak:[\w:.-]+$/;
+
+  function ulozeneKlice() {
+    const data = {};
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith(PREDPONA_KLICU)) data[k] = localStorage.getItem(k);
+      }
+    } catch { /* úložiště nedostupné */ }
+    return data;
+  }
+
+  const doBase64 = (bajty) => {
+    let s = '';
+    for (let i = 0; i < bajty.length; i += 0x8000) s += String.fromCharCode(...bajty.subarray(i, i + 0x8000));
+    return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  };
+  const zBase64 = (text) => {
+    const s = atob(text.replace(/-/g, '+').replace(/_/g, '/'));
+    return Uint8Array.from(s, (z) => z.charCodeAt(0));
+  };
+  const prozen = async (bajty, proud) => new Uint8Array(await new Response(new Blob([bajty]).stream().pipeThrough(proud)).arrayBuffer());
+
+  async function kodPostupu() {
+    const bajty = new TextEncoder().encode(JSON.stringify({ v: 1, d: ulozeneKlice() }));
+    if (typeof CompressionStream === 'function') {
+      try { return `POSTAK1.${doBase64(await prozen(bajty, new CompressionStream('deflate-raw')))}`; } catch { /* zkusíme bez komprese */ }
+    }
+    return `POSTAK0.${doBase64(bajty)}`;
+  }
+
+  // Vrátí { klice, hotovo } nebo vyhodí chybu se srozumitelnou zprávou.
+  async function prectiKod(text) {
+    const kod = (text || '').replace(/\s+/g, '');
+    const shoda = /^POSTAK([01])\.([A-Za-z0-9_-]+)$/.exec(kod);
+    if (!shoda) throw new Error('Tohle nevypadá jako kód postupu. Má začínat POSTAK.');
+    let bajty;
+    try { bajty = zBase64(shoda[2]); } catch { throw new Error('Kód je poškozený. Zkopíruj ho celý.'); }
+    if (shoda[1] === '1') {
+      if (typeof DecompressionStream !== 'function') throw new Error('Tenhle prohlížeč kód neumí rozbalit.');
+      try { bajty = await prozen(bajty, new DecompressionStream('deflate-raw')); } catch { throw new Error('Kód je poškozený. Zkopíruj ho celý.'); }
+    }
+    let obsah;
+    try { obsah = JSON.parse(new TextDecoder().decode(bajty)); } catch { throw new Error('Kód je poškozený. Zkopíruj ho celý.'); }
+    if (!obsah || obsah.v !== 1 || typeof obsah.d !== 'object' || !obsah.d) throw new Error('Kód je z jiné verze hry.');
+    const klice = {};
+    for (const [k, v] of Object.entries(obsah.d)) {
+      if (!KLIC_PLATNY.test(k) || typeof v !== 'string') continue;
+      try { JSON.parse(v); } catch { continue; }
+      klice[k] = v;
+    }
+    let hotovo = 0;
+    try { hotovo = (JSON.parse(klice[KLIC_TRASY] || 'null')?.hotovo || []).length; } catch { /* bez trasy */ }
+    return { klice, hotovo };
+  }
+
+  function prepisPostup(klice) {
+    try {
+      for (const k of Object.keys(ulozeneKlice())) localStorage.removeItem(k);
+      for (const [k, v] of Object.entries(klice)) localStorage.setItem(k, v);
+    } catch {
+      throw new Error('Postup se nepodařilo uložit. Prohlížeč nepovoluje úložiště (soukromé okno?).');
+    }
+    const t = precti(KLIC_TRASY);
+    trasa = t && Array.isArray(t.hotovo) ? t : { hotovo: [] };
+    svet = nactiSvet();
+    etapa = null;
+    stav = null;
+    vybrana = null;
+  }
+
+  function nactiSvet() {
+    const s = precti(KLIC_SVETA);
+    const hrac = s?.hrac && typeof s.hrac.jmeno === 'string' && s.hrac.jmeno
+      ? { jmeno: ocisti(s.hrac.jmeno), osloveni: ocisti(typeof s.hrac.osloveni === 'string' ? s.hrac.osloveni : '') }
+      : null;
+    return {
+      vlajky: Array.isArray(s?.vlajky) ? s.vlajky.filter((v) => typeof v === 'string') : [],
+      videno: Array.isArray(s?.videno) ? s.videno.filter((v) => typeof v === 'string') : [],
+      ...(hrac ? { hrac } : {}),
+    };
+  }
+
   function novyStav() {
     const pocitadla = {};
     for (const t of slova(etapa.pocitadla)) {
@@ -200,6 +378,7 @@
       zapis(klicAlba(etapa.id), [...album]);
     }
     zapis(KLIC_TRASY, trasa);
+    zapis(KLIC_SVETA, svet);
   }
 
   function jeRozehrana(id) {
@@ -227,11 +406,13 @@
       const m = vyraz.match(POROVNANI);
       if (m) {
         // karet = kolik věcí je právě v brašně (pro obce s malou brašnou)
-        const h = m[1] === 'karet' ? stav.ruka.length : stav.pocitadla[m[1]] || 0;
+        const h = m[1] === 'karet' ? stav.ruka.filter((k) => !jePribeh(k)).length : stav.pocitadla[m[1]] || 0;
         const n = Number(m[3]);
         ano = { '>=': h >= n, '<=': h <= n, '>': h > n, '<': h < n, '=': h === n }[m[2]];
       } else if (vyraz.startsWith('@')) {
         ano = stav.ruka.includes(vyraz.slice(1));
+      } else if (vyraz.startsWith('svet:')) {
+        ano = svet.vlajky.includes(vyraz.slice(5));
       } else {
         ano = stav.vlajky.includes(vyraz);
       }
@@ -241,12 +422,12 @@
 
   function najdiPravidlo(karta, cil) {
     return pravidla.find((p) =>
-      (p.karta === karta || (p.karta === '*' && !ZVLASTNI_KARTY.has(karta))) &&
+      (p.karta === karta || (p.karta === '*' && !ZVLASTNI_KARTY.has(karta) && !jePribeh(karta))) &&
       (p.cil === cil || p.cil === '*') &&
       plati(p.podminka));
   }
 
-  const jeObjevitelne = (p) => p.karta !== '*' && p.cil !== '*' && !ZVLASTNI_KARTY.has(p.karta);
+  const jeObjevitelne = (p) => !p.spolecne && p.karta !== '*' && p.cil !== '*' && !ZVLASTNI_KARTY.has(p.karta) && !jePribeh(p.karta);
   const klicPravidla = (p) => `${p.karta}>${p.cil}>${p.podminka}`;
   const pocetObjevu = () => objevitelna.filter((p) => album.has(klicPravidla(p))).length;
 
@@ -266,6 +447,14 @@
         const [, cil, ...hodnota] = t.split(':');
         if (hodnota.join(':')) stav.ikony[cil] = hodnota.join(':');
         else delete stav.ikony[cil];
+      } else if (t.startsWith('svet:')) {
+        const v = t.slice(5);
+        if (v && !svet.vlajky.includes(v)) {
+          svet.vlajky.push(v);
+          if (pribeh.some((z) => z.id === v)) noveZapisy.push(v);
+        }
+      } else if (t.startsWith('!svet:')) {
+        svet.vlajky = svet.vlajky.filter((v) => v !== t.slice(6));
       } else if (t.startsWith('!')) {
         stav.vlajky = stav.vlajky.filter((v) => v !== t.slice(1));
       } else if (ZMENA.test(t)) {
@@ -439,12 +628,15 @@
   function vykresliRuku(nove = []) {
     const ruka = $('.ruka');
     ruka.replaceChildren();
-    const obsah = stav.ruka.filter((id) => karty[id]);
+    const obsah = stav.ruka.filter((id) => karty[id] && !jePribeh(id));
+    const pribehove = stav.ruka.filter((id) => karty[id] && jePribeh(id));
     const kapacita = Number(etapa?.brasna) || 0;
-    if (!obsah.length && !kapacita) ruka.append(prvek('p', 'ruka__prazdna', 'Brašna je prázdná.'));
+    if (!obsah.length && !kapacita && !pribehove.length) ruka.append(prvek('p', 'ruka__prazdna', 'Brašna je prázdná.'));
     for (const id of obsah) ruka.append(vytvorKartu(id, nove.includes(id)));
     // Malá brašna: volná místa jsou vidět jako čárkované rámečky.
     for (let i = obsah.length; i < kapacita; i++) ruka.append(prvek('span', 'ruka__misto'));
+    // Příběhové karty leží v podšívce, na konci a mimo počet míst.
+    for (const id of pribehove) ruka.append(vytvorKartu(id, nove.includes(id)));
     $('.brasna__pocet').textContent = kapacita
       ? `${obsah.length} z ${kapacita} míst`
       : obsah.length ? `${obsah.length} ${sklonuj(obsah.length, 'věc', 'věci', 'věcí')}` : '';
@@ -452,7 +644,7 @@
 
   function vytvorKartu(id, nova) {
     const k = karty[id];
-    const druh = ['dopis', 'balik', 'pohled', 'vec'].includes(k.druh) ? k.druh : 'vec';
+    const druh = ['dopis', 'balik', 'pohled', 'vec', 'pribeh'].includes(k.druh) ? k.druh : 'vec';
     const el = prvek('button', `zasilka zasilka--${druh}`);
     el.type = 'button';
     el.dataset.id = id;
@@ -462,7 +654,8 @@
     el.setAttribute('aria-pressed', String(id === vybrana));
     const hore = prvek('span', 'zasilka__hore');
     hore.append(vytvorIkonu(k.ikona, k.nazev));
-    if (druh !== 'vec') hore.append(prvek('span', 'znamka'));
+    if (druh === 'pribeh') hore.append(prvek('span', 'pecet'));
+    else if (druh !== 'vec') hore.append(prvek('span', 'znamka'));
     el.append(hore, prvek('span', 'zasilka__nazev', k.nazev));
     if (k.adresa) el.append(prvek('span', 'zasilka__adresa', k.adresa));
     napojTah(el, id);
@@ -472,13 +665,13 @@
   function vykresliPopisek(text) {
     const p = $('.popisek');
     p.replaceChildren();
-    if (text) { p.textContent = text; return; }
+    if (text) { p.textContent = dosad(text); return; }
     const k = vybrana && karty[vybrana];
-    if (!k) { p.textContent = etapa?.navod || 'Přetáhni zásilku na adresáta.'; return; }
+    if (!k) { p.textContent = dosad(etapa?.navod || 'Přetáhni zásilku na adresáta.'); return; }
     const obsah = prvek('span');
     obsah.append(prvek('b', '', k.nazev));
     if (k.adresa) obsah.append(' ', prvek('span', 'popisek__adresa', k.adresa));
-    if (k.popis) obsah.append(document.createElement('br'), k.popis);
+    if (k.popis) obsah.append(document.createElement('br'), dosad(k.popis));
     obsah.append(' ', prvek('em', '', 'Klepni na adresáta.'));
     p.append(obsah);
   }
@@ -611,7 +804,7 @@
       }
     }
     let mezitim = [];
-    if (!ZVLASTNI_KARTY.has(karta) || vysledek.cekej) {
+    if ((!ZVLASTNI_KARTY.has(karta) && !jePribeh(karta)) || vysledek.cekej) {
       const t = uplynTah();
       for (const id of t.nove) if (!vysledek.nove.includes(id)) vysledek.nove.push(id);
       mezitim = t.texty;
@@ -630,6 +823,7 @@
       objev,
       zmeny,
       mezitim,
+      zapisy: noveZapisy.splice(0),
     });
   }
 
@@ -662,7 +856,7 @@
     return r;
   }
 
-  function ukazReakci({ cil, kdo, vyraz, text, nove, razitko, objev, zmeny = [], mezitim = [] }) {
+  function ukazReakci({ cil, kdo, vyraz, text, nove, razitko, objev, zmeny = [], mezitim = [], zapisy = [] }) {
     zavriReakci(true);
     if (cil) {
       const tl = $(`.cil[data-id="${CSS.escape(cil.id)}"]`);
@@ -704,6 +898,13 @@
         if (z.max && z.hodnota >= z.max * 0.75) c.classList.add('panel__zmena--varovani');
         radek.append(c);
       }
+      panel.append(radek);
+    }
+
+    for (const id of zapisy) {
+      const z = pribeh.find((x) => x.id === id);
+      const radek = prvek('p', 'panel__denik');
+      radek.append(prvek('span', 'panel__stitek', 'Do deníku'), ` ${z?.nadpis || ''}`);
       panel.append(radek);
     }
 
@@ -816,8 +1017,27 @@
     zavriReakci(true);
     const arch = otevriArch('arch--trasa', { zavritKlepnutim: !!etapa && !stav?.konec });
     arch.append(prvek('h1', '', hra.nazev), prvek('p', 'podtitul', hra.podtitul), ...odstavce(hra.uvod));
+    const prenos = tlacitko('Přenést postup', ukazPrenos, true);
+    prenos.classList.add('tlacitko--male');
+    const jmeno = tlacitko(`Jméno: ${jmenoHrace()}`, ukazJmeno, true);
+    jmeno.classList.add('tlacitko--male');
+    const male = [jmeno, prenos];
+    if (kapitoly.length || pribeh.length) {
+      const denik = tlacitko('Deník', ukazDenik, true);
+      denik.classList.add('tlacitko--male');
+      male.unshift(denik);
+    }
+    arch.append(radaTlacitek(...male));
     const seznam = prvek('ol', 'trasa');
     etapy.forEach((e, i) => {
+      if (e.kapitola && e.kapitola !== etapy[i - 1]?.kapitola) {
+        const k = kapitoly.find((x) => x.id === e.kapitola);
+        if (k) {
+          const hlava = prvek('li', 'trasa__kapitola');
+          hlava.append(prvek('b', '', k.nazev), prvek('span', '', k.obdobi || ''));
+          seznam.append(hlava);
+        }
+      }
       const s = stavZastavky(e, i);
       const polozka = prvek('li', `zastavka zastavka--${s}`);
       const b = prvek('button', 'zastavka__tlacitko');
@@ -833,6 +1053,119 @@
     });
     arch.append(seznam);
     if (etapa && !stav.konec) arch.append(radaTlacitek(tlacitko(`Zpět do obce ${etapa.nazev}`, zavriArch, true)));
+  }
+
+  function ukazPrenos() {
+    zavriReakci(true);
+    const arch = otevriArch('arch--prenos', { zavritKlepnutim: true });
+    arch.append(
+      prvek('h2', '', 'Přenést postup'),
+      prvek('p', '', 'Postup se ukládá jen v tomhle prohlížeči. Chceš hrát jinde? Zkopíruj si kód a na druhém zařízení ho vlož.'),
+    );
+
+    const vystup = prvek('textarea', 'prenos__kod');
+    vystup.readOnly = true;
+    vystup.rows = 3;
+    vystup.setAttribute('aria-label', 'Kód tvého postupu');
+    vystup.value = 'Chvilku…';
+    const zprava = prvek('p', 'arch__statistika prenos__zprava');
+    const kopirovat = tlacitko('Zkopírovat kód', async () => {
+      vystup.focus();
+      vystup.select();
+      try {
+        await navigator.clipboard.writeText(vystup.value);
+        zprava.textContent = 'Kód je ve schránce.';
+      } catch {
+        zprava.textContent = 'Kód je označený. Zkopíruj ho ručně.';
+      }
+    });
+    kopirovat.disabled = true;
+    kodPostupu().then((kod) => { vystup.value = kod; kopirovat.disabled = false; })
+      .catch(() => { vystup.value = ''; zprava.textContent = 'Kód se nepodařilo vytvořit.'; });
+    arch.append(prvek('h3', 'prenos__nadpis', 'Tvůj kód'), vystup, radaTlacitek(kopirovat), zprava);
+
+    const vstup = prvek('textarea', 'prenos__kod');
+    vstup.rows = 3;
+    vstup.placeholder = 'Sem vlož kód POSTAK…';
+    vstup.setAttribute('aria-label', 'Vložit kód postupu');
+    vstup.spellcheck = false;
+    vstup.autocapitalize = 'off';
+    const zpravaVstupu = prvek('p', 'arch__statistika prenos__zprava');
+    const potvrzeni = prvek('div', 'prenos__potvrzeni');
+    const nacist = tlacitko('Nahrát postup', async () => {
+      potvrzeni.replaceChildren();
+      try {
+        const { klice, hotovo } = await prectiKod(vstup.value);
+        zpravaVstupu.textContent = `V kódu ${sklonuj(hotovo, 'je doručená %d obec', 'jsou doručené %d obce', 'je doručeno %d obcí').replace('%d', hotovo)}. Současný postup v tomhle prohlížeči se tím přepíše.`;
+        potvrzeni.append(radaTlacitek(
+          tlacitko('Přepsat postup', () => {
+            try {
+              prepisPostup(klice);
+              postavKostru();
+              vykresliListu();
+              ukazTrasu();
+            } catch (chyba) {
+              zpravaVstupu.textContent = chyba.message;
+            }
+          }),
+          tlacitko('Nechat, jak je', () => { potvrzeni.replaceChildren(); zpravaVstupu.textContent = ''; }, true),
+        ));
+      } catch (chyba) {
+        zpravaVstupu.textContent = chyba.message;
+      }
+    }, true);
+    arch.append(prvek('h3', 'prenos__nadpis', 'Nahrát kód z jiného zařízení'), vstup, radaTlacitek(nacist), zpravaVstupu, potvrzeni);
+    arch.append(radaTlacitek(tlacitko('Zpět na trasu', ukazTrasu, true)));
+  }
+
+  function ukazMezihru(kapitola, dal) {
+    zavriReakci(true);
+    const arch = otevriArch('arch--mezihra');
+    arch.append(prvek('p', 'arch__nadtitul', 'Z okresní pošty'), prvek('h1', '', kapitola.nazev), prvek('p', 'podtitul', kapitola.obdobi || ''), ...odstavce(kapitola.mezihra));
+    // Před první mezihrou se pošťák představí.
+    const ulozJmeno = svet.hrac ? null : formularJmena(arch);
+    arch.append(radaTlacitek(tlacitko('Pokračovat', () => {
+      if (ulozJmeno && !ulozJmeno()) return;
+      if (!svet.videno.includes(kapitola.id)) svet.videno.push(kapitola.id);
+      uloz();
+      dal();
+    })));
+  }
+
+  function ukazDenik() {
+    zavriReakci(true);
+    const arch = otevriArch('arch--denik', { zavritKlepnutim: true });
+    const ziskane = pribeh.filter((z) => svet.vlajky.includes(z.id));
+    arch.append(prvek('h2', '', 'Deník'), prvek('p', 'podtitul', jmenoHrace()), prvek('p', 'arch__statistika', `Zápisů o Vrbovi: ${ziskane.length} z ${pribeh.length}`));
+    let nic = true;
+    for (const k of kapitoly) {
+      const zapisy = ziskane.filter((z) => z.kapitola === k.id);
+      const videl = svet.videno.includes(k.id);
+      if (!videl && !zapisy.length) continue;
+      nic = false;
+      const skupina = prvek('section', 'denik__kapitola');
+      skupina.append(prvek('h3', 'denik__nadpis', k.nazev));
+      if (videl && k.mezihra) {
+        const posta = prvek('details', 'denik__mezihra');
+        posta.append(prvek('summary', '', 'Z okresní pošty'), ...odstavce(k.mezihra));
+        skupina.append(posta);
+      }
+      for (const z of zapisy) {
+        const polozka = prvek('div', 'denik__zapis');
+        polozka.append(prvek('b', '', z.nadpis), prvek('span', 'denik__obec', z.obec || ''), prvek('p', '', z.text));
+        skupina.append(polozka);
+      }
+      arch.append(skupina);
+    }
+    const bezKapitoly = ziskane.filter((z) => !kapitoly.some((k) => k.id === z.kapitola));
+    for (const z of bezKapitoly) {
+      nic = false;
+      const polozka = prvek('div', 'denik__zapis');
+      polozka.append(prvek('b', '', z.nadpis), prvek('span', 'denik__obec', z.obec || ''), prvek('p', '', z.text));
+      arch.append(polozka);
+    }
+    if (nic) arch.append(prvek('p', '', 'Deník je zatím prázdný.'));
+    arch.append(radaTlacitek(tlacitko('Zpět na trasu', ukazTrasu, true)));
   }
 
   function ukazUvod() {
@@ -942,7 +1275,7 @@
     cile = data.cile;
     cilePodleId = Object.fromEntries(cile.map((c) => [c.id, c]));
     karty = Object.fromEntries(data.karty.map((k) => [k.id, k]));
-    pravidla = data.pravidla.filter((p) => p.karta && p.cil);
+    pravidla = [...data.pravidla, ...spolecna].filter((p) => p.karta && p.cil);
     objevitelna = pravidla.filter(jeObjevitelne);
     vrstvy = data.vrstvy;
     tahy = data.tahy || [];
@@ -952,7 +1285,9 @@
     uloz();
     postavNaves();
     aktualizuj();
-    ukazUvod();
+    const kapitola = kapitoly.find((k) => k.id === radek.kapitola);
+    if (kapitola?.mezihra && !svet.videno.includes(kapitola.id)) ukazMezihru(kapitola, ukazUvod);
+    else ukazUvod();
   }
 
   document.addEventListener('keydown', (e) => {
@@ -972,15 +1307,22 @@
   async function start() {
     postavKostru();
     try {
-      const [hraRadky, etapyRadky] = await Promise.all([nactiTabulku('hra.csv'), nactiTabulku('etapy.csv')]);
+      const volitelna = (cesta) => nactiTabulku(cesta).catch(() => []);
+      const [hraRadky, etapyRadky, k, p, s] = await Promise.all([
+        nactiTabulku('hra.csv'), nactiTabulku('etapy.csv'), volitelna('kapitoly.csv'), volitelna('pribeh.csv'), volitelna('spolecne.csv'),
+      ]);
       hra = Object.fromEntries(hraRadky.map((r) => [r.klic, r.hodnota]));
       etapy = etapyRadky.filter((e) => e.id);
+      kapitoly = k.filter((x) => x.id);
+      pribeh = p.filter((x) => x.id);
+      spolecna = s.filter((x) => x.karta && x.cil).map((x) => ({ ...x, spolecne: true }));
     } catch (e) {
       ukazChybu(e);
       return;
     }
     const ulozenaTrasa = precti(KLIC_TRASY);
     if (ulozenaTrasa && Array.isArray(ulozenaTrasa.hotovo)) trasa = ulozenaTrasa;
+    svet = nactiSvet();
     vykresliListu();
     ukazTrasu();
   }

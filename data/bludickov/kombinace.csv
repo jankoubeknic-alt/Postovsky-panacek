@@ -33,7 +33,7 @@ tabak;zpet;;🏮;Listí je pro hastrmana. Ten je na druhé straně slatí.;
 tabak;hastrman;;🐸;Hastrman čichne k listí a rozzáří se. Nacpe si dýmku, vyleze na vrbu a kouří. Na hrnky teď chvíli nekouká.;-tabak kouri=3
 dopis_hastrman;hastrman;;🐸;Hastrman otevře mokrou obálku. „Od bratrance z Vltavy! Pod jezem prý mají nový mlýn a kapry jako prasata.“ Má radost, až mu kape ze šosu.;-dopis_hastrman hastrman_doruceno razitko
 ?;vrba;;🌳;Stará vrba nad tůní. Kořeny má v bahně a na větvi visí hastrmanova dýmka.;
-?;hrnek_dusicka;kouri>0;🫧;Zvedneš pokličku. Z hrnku vyletí bublinka, zatřpytí se a vznese se nad slatě. Dušička starého pošťáka je volná!;dusicka_volna razitko
+?;hrnek_dusicka;kouri>0;🫧;Zvedneš pokličku. Z hrnku vyletí bublinka a zatřpytí se. Nad tvou brašnou se zastaví, jako by ji poznala, a zašeptá: „Doruč to. Já nedošel.“ Pak se vznese nad slatě. Dušička starého pošťáka je volná!;dusicka_volna razitko svet:vrba_dusicka
 ?;hrnek_dusicka;;🐸;Sáhneš po pokličce a hastrman tě plácne mokrou rukou přes prsty. „Co je v hrnku, je hastrmanovo!“;
 ?;hrnek_hajna;kouri>0;🫖;Zvedneš pokličku a vytáhneš svůj dopis pro hajnou. Je trochu vlhký, ale čitelný.;+dopis_hajna !hrnek_hajna
 ?;hrnek_hajna;;🐸;Hastrman tě plácne mokrou rukou přes prsty. „Co je v hrnku, je hastrmanovo!“;

@@ -5,7 +5,7 @@ cil;lov1 lov2 lov3 kapr_doruceno stika_doruceno lin_doruceno kupec_doruceno fara
 uvod;Ve Výlovicích je výlov a tři rybníky leží nad sebou. Co se vypustí z horního, steče do prostředního, a co z prostředního, to do dolního. Dolní teče do řeky. Rybníky jsou plné až po hráz.|Rybáři mají jednu síť a lovit se dá, jen když je vody akorát na loviště. Když rybník vyteče úplně, ryby zůstanou v bahně. A když se do plného rybníka pustí další voda, hráz to nevydrží.
 navod;Klepnutím na rybník otevřeš nebo zavřeš stavidlo. Voda teče po každém podání. Lov sítí jde, jen když je voda na jedné.
 konec_nadpis;Výlov se vydařil
-konec_text;Kapři jedou do města, štika do hospody a lín na faru. Rybníky jsou prázdné a za týden se začnou zase napouštět. Rybáři zpívají a porybný počítá úlovek.|Síť vracíš porybnému. Dostal jsi kapra v novinách a pozvání na rybí polévku.
+konec_text;Kapři jedou do města, štika do hospody a lín na faru. Rybníky jsou prázdné a za týden se začnou zase napouštět. Rybáři zpívají a porybný počítá úlovek.|Síť vracíš porybnému. Dostáváš kapra v novinách a pozvání na rybí polévku.
 pozadi;data/vylovice/pozadi.svg
 barvy;
 pocitadla;h1=3 h2=3 h3=3

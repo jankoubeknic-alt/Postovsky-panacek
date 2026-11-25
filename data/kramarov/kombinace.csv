@@ -51,3 +51,6 @@ napoveda;*;!drat_ma;💡;Dráteníkovi došel drát. Kramářka ho má, ale chce
 napoveda;*;!najedeny;💡;Dráteník má hlad. Perníkář prodává perník za krejcar. Druhý krejcar ti dá flašinetář, až bude mít nové válce.;
 napoveda;*;;💡;Teď dráteník sešije hrnec. Pak patří babičce.;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;kramarka;!svet:vrba_kramarov;🎀;Kramářka se na obálku podívá a ztichne. „Vrbova pečeť. Ten si tu každý rok kupoval perníkové srdce, to největší, s nápisem. A nikdy ho nikomu nedal.“ Pohladí stužky. „Nosil ho v brašně, dokud neztvrdlo jako kámen. Smutný chlap to byl, a hodný.“;svet:vrba_kramarov
+vrbuv_dopis;kramarka;;🎀;„Srdce, co se nedá, ztvrdne,“ povzdechne si kramářka. „Tak ať ten dopis neztvrdne taky.“;

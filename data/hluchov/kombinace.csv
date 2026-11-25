@@ -12,7 +12,7 @@
 # Kdo telegram přečte, přepíše jen svá slova. Správně: hostinský, pak Pepík, pak švadlena.
 karta;cil;podminka;vyraz;text;efekt
 ?;tabule;telegram_doruceno;🧾;Na tabuli zůstal přepis telegramu. Pod něj někdo dopsal křídou: AŤ ŽIJOU NOVOMANŽELÉ. Kostelník pod to připsal: V NEDĚLI.;
-?;tabule;;🧾;Tabule před poštou. Telegrafistka na ni napsala, co slyšela z telefonu. Kdo ti telegram přečte, toho slova sem přepíšeš. Sám nic měnit nesmíš, to by bylo porušení listovního tajemství.;
+?;tabule;;🧾;Tabule před poštou. Telegrafistka na ni napsala, co slyšela z telefonu. Kdo ti telegram přečte, toho slova sem přepíšeš. Nic měnit nesmíš, to by bylo porušení listovního tajemství.;
 ?;telegrafistka;kdo=0 kdy=0 s=0;👵;Paní Ťuková sedí u telefonu s vatou v uších. „Telegram pro Slyšelovou! Napsala jsem ho přesně, jak to šumělo: přijede hejtman v botu s kozou. Divné, ale já jen zapisuju.“;
 ?;telegrafistka;;👵;Paní Ťuková kouká na tabuli a mračí se. „Někdo mi to přepsal! Já tam měla hejtmana, botu a kozu. Kdyby se ti to nelíbilo, přinesu ti to zpátky, jak to bylo.“;
 ?;hostinsky;noviny_doruceno;🍺;Hostinský předčítá noviny prázdnému sálu a chystá parket. „V sobotu přijede kapela! Teda doufám. Čekám ji každou sobotu od roku osmdesát.“;
@@ -24,7 +24,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;myslivec;vabnicka_doruceno;🦆;Myslivec piská na vábničku a z rybníka mu odpovídá celé hejno kachen. „Slyšíš? Medvěd!“;
 ?;myslivec;;🧔;Myslivec Ucháč sedí na posedu uprostřed návsi. „Psst! Medvěd. Chodí v noci. Ještě jsem ho neviděl, ale slyším ho pořád.“;
 ?;babicka;telegram_doruceno;🥰;Babička peče třetí plech koláčů a zpívá. V sobotu přijede Jenda s nevěstou!;
-?;babicka;;👵;Babička Slyšelová sedí u okna. „Jenda z Prahy psal, že přijede, až bude mít volno. A že mi někoho představí.“ Telegramům nevěří: „Přečti mi ho nahlas, chlapče.“;
+?;babicka;;👵;Babička Slyšelová sedí u okna. „Jenda z Prahy psal, že přijede, až bude mít volno. A že mi někoho představí.“ Telegramům nevěří: „Přečti mi ho nahlas.“;
 napoveda;*;!telegram_doruceno kdo=2 kdy=1 s=2;💡;Na tabuli stojí přesně to, co babička čeká. Dones jí telegram.;
 napoveda;*;!telegram_doruceno kdo=2 kdy=1;💡;Jenda a sobota sedí. Zbývá, s kým přijede. Kdo slyší všude nevěsty? Nech ho číst jako posledního.;
 napoveda;*;!telegram_doruceno kdo=2;💡;Jenda sedí. Ale den přepisuje víc lidí a každý jinak. Kdo slyší sobotu? A přepíše ti tím ještě něco?;
@@ -41,7 +41,7 @@ telegram;kostelnik;;⛪;Kostelník přečte: „…v neděli. No samozřejmě, v
 telegram;myslivec;;😱;Myslivec si telegram přečte a sáhne po pušce. „Medvěd! A v noci! Já to věděl!“ Přepíšeš tabuli, i když se ti nechce.;kdo=3 kdy=3
 telegram;telegrafistka;kdo=0 kdy=0 s=0;👵;„Na tabuli je to správně,“ trvá na svém paní Ťuková. „Hejtman v botu s kozou. Proč by ne?“;
 telegram;telegrafistka;;👵;Paní Ťuková nahlédne do bločku a tabuli přepíše zpátky, jak to slyšela z telefonu: hejtman, v botu, s kozou. „Tak. Přesně, jak to bylo.“;kdo=0 kdy=0 s=0
-telegram;tabule;;🧾;Sám telegram přepsat nesmíš. V Hluchově platí jen to, co někdo přečte nahlas. Ty to jen zapíšeš.;
+telegram;tabule;;🧾;Telegram přepsat nesmíš. V Hluchově platí jen to, co někdo přečte nahlas. Ty to jen zapíšeš.;
 telegram;babicka;kdo=2 kdy=1 s=2;🥰;Přečteš babičce z tabule: „Přijede Jenda v sobotu s nevěstou.“ Babička vyskočí z křesla. „S nevěstou! Musím péct!“ Za hodinu voní koláči celý Hluchov.;-telegram telegram_doruceno ikona:babicka:🥰 razitko
 telegram;babicka;kdo=3;😱;„Medvěd?!“ Babička zabouchne okenice a telegram ti vrátí škvírou. „Až to bude dávat smysl, přijď znova.“;
 telegram;babicka;kdo=0;🤨;„Hejtman? K nám? Ten tu byl naposled za císaře pána.“ Babička zavrtí hlavou. „To bude zase Ťuková. Nech to přečíst někomu, kdo slyší líp.“;
@@ -51,7 +51,7 @@ telegram;babicka;kdy=0;👢;„Jenda v botu? Snad v sobotu, ne? Tohle si přečt
 telegram;babicka;kdy=2;⛪;„V neděli? V neděli Jenda pracuje, to by volno neměl. Tady něco nesedí.“;
 telegram;babicka;kdy=3;🌙;„V noci? V noci k nám vlak nejezdí. Leda by šel pěšky.“ Babička ti telegram vrátí.;
 noviny;hostinsky;;🍺;Hostinský noviny rozloží na pult. „Novinky! Teda noviny. Večer je přečtu nahlas. Stejně mě nikdo neuslyší.“;-noviny noviny_doruceno razitko
-noviny;babicka;;👵;„Noviny? Ty si nech, chlapče. Já čekám zprávu od Jendy.“;
+noviny;babicka;;👵;„Noviny? Ty si nech. Já čekám zprávu od Jendy.“;
 noviny;myslivec;;🧔;„Sloviny? Já slovíčka neluštím. Psst, plašíš medvěda.“;
 noviny;kostelnik;;⛪;„Noviny v kostele? Leda kázání. Ty patří do hospody.“;
 noviny;pepik;;👦;Pepík z novin složí čepici, nasadí si ji a zase ti ji vrátí. „To je pro hospodu.“;
@@ -79,3 +79,6 @@ svicky;svadlena;;🧵;„Ty patří kostelníkovi. Já šiju při denním světl
 *;svadlena;;🧵;„To se do šatů nehodí.“;
 *;tabule;;🧾;Na tabuli se jen píše.;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;telegrafistka;!svet:vrba_hluchov;👵;Paní Ťuková vytáhne vatu z jednoho ucha. „Vrba? Josef Vrba! Ten rukopis bych poznala i potmě.“ Ztiší hlas, i když tu nikdo pořádně neslyší. „Jednou mi diktoval telegram. Tři slova a podpis. Pak ho roztrhal, že to radši donese osobně. Co v něm stálo? Telegrafní tajemství.“;svet:vrba_hluchov
+vrbuv_dopis;telegrafistka;;👵;„Tři slova a podpis,“ opakuje paní Ťuková. „Víc ti neřeknu, ani kdyby se tu křičelo.“;

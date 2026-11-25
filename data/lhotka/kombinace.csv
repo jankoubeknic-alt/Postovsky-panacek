@@ -16,6 +16,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;pekarka;;👩‍🍳;Pekařka Anča peče na zítřejší pouť. Každou chvíli se zasněně podívá ke kovárně.;
 ?;kovar;kovar_klid;💪;Kovář buší do kovadliny a pohvizduje si.;
 ?;kovar;;😔;Kovář Vojta místo kování jen vzdychá a kouká k pekárně.;
+?;babka;brile_doruceno @vrbuv_dopis !svet:vrba_lhotka;🤓;Babka si v brýlích prohlíží celou ves. Pak se zarazí u tvé brašny a dlouho se na ni dívá. „Tu brašnu znám,“ řekne. „Co v ní nosíš?“;
 ?;babka;brile_doruceno;🤓;Babka si v brýlích prohlíží celou ves. Teď jí neunikne vůbec nic.;
 ?;babka;;👵;Babka Kořenářka zná každou bylinku a každou drbnu. Bez brýlí ale nepřečte ani vlastní jméno.;
 ?;kasna;;⛲;Kašna na návsi. Na dně se blýská pár drobných a jeden starý zub.;
@@ -32,7 +33,7 @@ napoveda;*;;💡;Všechno je doručeno. V albu ale ještě čekají neobjevené 
 dopis;pekarka;;🥰;Pekařka otevře dopis a zčervená až po uši. „Já věděla, že se jednou osmělí!“ Na poděkování ti dá ještě teplý koláč. Z kovárny se ozve radostné bušení.;-dopis +kolac dopis_doruceno kovar_klid razitko
 dopis;kovar;;😳;Kovář zrudne jako rozžhavená podkova. „To není PRO mě, to je ODE mě! Dej to… no, víš komu. Té, co voní chlebem.“;
 dopis;babka;!babka_bylinky;☺️;Babka si dopis podrží daleko od očí. „Přečíst to nepřečtu, ale tohle znám. Kdo to psal, ten se strachy klepe.“ Strčí ti svazek bylinek. „Pro něj. Na nervy.“;+bylinky babka_bylinky
-dopis;babka;;☺️;„Pro mě to není, chlapče. Mně už píše jen vnuk.“;
+dopis;babka;;☺️;„Pro mě to není. Mně už píše jen vnuk.“;
 dopis;starosta;;🤔;„Té nejkrásnější ve vsi? To bude moje koza Bělka!“ Pak si vzpomene, že Bělka neumí číst, a dopis ti vrátí.;
 dopis;pes;;🐕;Punťa dopis očichá a kýchne. Voní kouřem a železem.;
 dopis;kasna;;⛲;Hodit milostný dopis do kašny? Tak romantické to zase není.;
@@ -53,14 +54,14 @@ pohled;starosta;;🤵;„Moře? My máme rybník. A větší kapry.“;
 pohled;pes;;🐕;Punťa olízne známku. Teď drží líp než předtím.;
 pohled;kasna;;⛲;Moře z pohlednice by se v kašně cítilo jako doma. Babka by ale plakala, a ne štěstím.;
 brile;kovar;kovar_klid;🔨;Kovář nožičku narovná, přinýtuje a skla vyleští o zástěru. „Hotovo. Nes je babce.“;-brile +spravene_brile
-brile;kovar;;😔;„Brýle? Teď ne, pošťáku. Ruce se mi klepou a hlavu mám jinde.“ Kouká přitom k pekárně.;
+brile;kovar;;😔;„Brýle? Teď ne. Ruce se mi klepou a hlavu mám jinde.“ Kouká přitom k pekárně.;
 brile;babka;!babka_bylinky;👵;„Ty jsou moje, ale patří kováři na opravu. Pořádek musí být.“ Pak si tě změří. „Vypadáš uštvaně. Na, bylinky.“;+bylinky babka_bylinky
-brile;babka;;👵;„Ty patří kováři, chlapče. Já počkám.“;
+brile;babka;;👵;„Ty patří kováři. Já počkám.“;
 brile;pekarka;;🤓;Pekařka si brýle zkusí. „Vidím rozmazaně. Jako vždycky, když se podívám na kováře.“;
 brile;starosta;;🤵;„Nejsou moje. Já vidím výborně!“ prohlásí starosta a narazí do sloupu.;
 brile;pes;;🐕;Punťa v brýlích vypadá jako pan učitel. Brýle si raději vezmeš zpátky.;
 brile;kasna;;⛲;Brýle na dně kašny by našel jen kapr. A ten žádné nepotřebuje.;
-spravene_brile;babka;;🤓;Babka si nasadí brýle a zamrká. „Konečně zase vidím! A ty bys měl, chlapče, zajít k holiči.“;-spravene_brile brile_doruceno razitko
+spravene_brile;babka;;🤓;Babka si nasadí brýle a zamrká. „Konečně zase vidím! A tobě by neuškodil holič.“;-spravene_brile brile_doruceno razitko
 spravene_brile;kovar;;💪;„Už jsou hotové. Nes je babce, ať mi neposílá další dopis.“;
 spravene_brile;pekarka;;👩‍🍳;„Babčiny brýle? Kovář má šikovné ruce, viď?“ Pekařka se usměje.;
 spravene_brile;starosta;;🤵;„Opravené! To je ta naše řemeslná zručnost.“ Starosta si brýle nasadí, zamrká a vrátí ti je.;
@@ -68,12 +69,12 @@ spravene_brile;pes;;🐕;Punťa v brýlích vypadá jako pan farář. Raději mu
 spravene_brile;kasna;;⛲;Po tolika práci? Do kašny ne.;
 kolac;pes;pes_spi;🐕;Vůně koláče Punťu probudí. Zhltne ho, zavrtí ocasem a odklusá k pekárně pro další.;-kolac !pes_spi pes_pryc
 kolac;pes;;🐕;Punťa koláč zhltne na jedno polknutí, zavrtí ocasem a odklusá k pekárně pro další. Cesta k radnici je volná!;-kolac pes_pryc
-kolac;pekarka;;👩‍🍳;„To je pro tebe, ty pošťáku vyhublá. Nevracej.“;
+kolac;pekarka;;👩‍🍳;„To je pro tebe, ať tě vítr neodnese. Nevracej.“;
 kolac;kovar;;😋;Kovář k němu přičichne a zasní se. „Peče nejlíp v kraji. Ale tenhle je tvůj.“;
 kolac;babka;;👵;„Na koláče mám zuby jen v neděli.“;
 kolac;starosta;;🤵;„Úplatky nepřijímám!“ prohlásí starosta. Pak koláč dlouze očichá a smutně ti ho vrátí.;
 kolac;kasna;;⛲;Kachny by měly radost. Jenže v kašně žádné nejsou.;
-bylinky;kovar;!kovar_klid;😌;Kovář si z bylinek uvaří čaj a vypije ho naráz. Ruce se mu přestanou klepat. „Tak co pro mě máš, pošťáku?“;-bylinky kovar_klid
+bylinky;kovar;!kovar_klid;😌;Kovář si z bylinek uvaří čaj a vypije ho naráz. Ruce se mu přestanou klepat. „Tak co pro mě máš?“;-bylinky kovar_klid
 bylinky;kovar;;🙂;„Díky, už jsem klidný jako beránek.“;
 bylinky;pes;!pes_spi;💤;Punťa bylinky očichá, slastně zívne a svalí se do trávy. Za chvíli chrápe. K radnici se dá projít po špičkách.;-bylinky pes_spi ikona:pes:🐕💤
 bylinky;babka;;👵;„Ty jsem ti dala já. Co se daruje, to se nevrací.“;
@@ -82,3 +83,7 @@ bylinky;starosta;;🤵;Starosta k bylinkám přičichne. „Heřmánek? Nervy m�
 bylinky;kasna;;⛲;Bylinkový čaj ze studené kašny by nikdo nepil.;
 *;kasna;;⛲;Pošta do kašny nepatří.;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;babka;!brile_doruceno;👵;Babka drží obálku daleko od očí a mžourá. „Bez brýlí ti nepřečtu ani adresu.“;
+vrbuv_dopis;babka;!svet:vrba_lhotka;😶;Babka si obálku prohlédne v nových brýlích. Obrátí ji, pohladí pečeť palcem a zbledne. „Adresa tu není,“ řekne tiše a vrátí ti ji. „Takové psaní se nedoručuje, dokud se neví komu.“;svet:vrba_lhotka
+vrbuv_dopis;babka;;👵;„Schovej to,“ řekne babka a dívá se jinam. „Na to je ještě čas.“;

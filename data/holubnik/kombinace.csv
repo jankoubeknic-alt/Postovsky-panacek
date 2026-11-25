@@ -11,7 +11,7 @@
 karta;cil;podminka;vyraz;text;efekt
 dopis_balonar;holubar;!holub_balon_volny;🧓;„Do balónu? Tam doletí jen Toulavka. Ta ale sedí na vejcích.“;
 ?;holubar;!holub_balon_volny;🧓;Hrdlička ukáže do holubníku. „Toulavka teď sedí na vejcích. Dokud jí je někdo nezahřeje, nehne se. A bez ní se do balónu nedostaneš.“;
-?;holubar;;🧓;Holubář Hrdlička krmí holuby. „Holub letí jen domů, pošťáku. Kdo chce na hájovnu, potřebuje holuba z hájovny. Na salaš holuba ze salaše. A do balónu Toulavku, ta se tam odstěhovala. Dej mi holuba a dopis přivážu.“;
+?;holubar;;🧓;Holubář Hrdlička krmí holuby. „Holub letí jen domů, {osloveni}. Kdo chce na hájovnu, potřebuje holuba z hájovny. Na salaš holuba ze salaše. A do balónu Toulavku, ta se tam odstěhovala. Dej mi holuba a dopis přivážu.“;
 ?;kostel;!kocour_odesel;⛪;Na kostelní střeše sedí šedý holub s jehličím v peří a třese se. Dole na něj číhá kocour Mourek. Dokud tam kocour je, holub neslétne.;
 ?;kostel;!@holub_hajovna !hajny_doruceno;🕊️;Kocour je pryč. Šedý holub slétne ze střechy a sedne ti na rameno. V peří má jehličí. To bude holub z hájovny.;+holub_hajovna
 ?;kostel;;⛪;Na kostelní střeše se vyhřívají vrabci.;
@@ -58,10 +58,13 @@ holub_balon;mlekarka;;🥛;„Toulavka? Ta má hnízdo v balónu. Pořád ho obl
 holub_balon;hostinsky;;🍲;„Holubice? Tu ne, ta je pana Hrdličky. Do hrnce dávám jen cizí holuby.“;
 dopis_hajny;mlekarka;;🥛;„Od Aničky pro tátu? Hajný je na Kopci, tam teď pěšky nedojdeš.“;
 dopis_baca;reznik;;🧔;„Objednávka sýra? Bača je pod hřebenem. Holubem, jinak to nejde.“;
-dopis_balonar;babka;;👵;„Do balónu? To bys musel mít křídla. Nebo holuba.“;
+dopis_balonar;babka;;👵;„Do balónu? Na to jsou potřeba křídla. Nebo holub.“;
 klobasy;babka;;👵;„Klobásy? Na ty mám zuby málo. Hostinský je chtěl na polévku.“;
 kvocna;babka;;👵;„Kvočna patří na vejce. Kde nějaká jsou, tam ji dej.“;
 mleko;mlekarka;;🥛;„Mléko vracet nemusíš. Dej ho kocourovi.“;
 *;kostel;;⛪;Na střechu nic nevyhodíš. Jen by se to zkutálelo.;
 *;kocour;;🐈;Mourek to očichá a dál číhá na holuba.;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;holubar;!svet:vrba_holubnik;🧓;Pan Hrdlička obálku pozná hned. „Vrba! Mám tu ještě jeho holuby.“ Ukáže na starého šedého holuba. „Tohohle si vycvičil, aby létal k jedné chalupě v Lhotce. Holub letí jen domů, tak ho naučil, že doma je tam.“ Pohladí ho. „S psaním ho tam nikdy neposlal.“;svet:vrba_holubnik
+vrbuv_dopis;holubar;;🧓;„Do Lhotky,“ kývne pan Hrdlička. „Pořád jen do Lhotky.“;

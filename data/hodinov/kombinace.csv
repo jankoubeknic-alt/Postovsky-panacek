@@ -40,3 +40,6 @@ napoveda;*;;💡;Pekař vstává ve dvě.;
 *;lavicka;;🪑;Na lavičku se nic neodkládá.;
 *;ponocny;;📯;„Já pošty nedostávám. Já jen troubím.“;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;ponocny;!svet:vrba_hodinov;📯;Ponocný si obálku podrží proti lucerně. „Vrba. Ten tudy chodil vždycky v jedenáct. Sedl si pod lípu a četl pořád jeden a ten samý dopis.“ Pokrčí rameny. „Do schránky ho nikdy nehodil. Já mu vytroubil dvanáct a on šel.“;svet:vrba_hodinov
+vrbuv_dopis;ponocny;;📯;„Pořád jeden a ten samý dopis,“ zabručí ponocný. „Tenhle, řekl bych.“;

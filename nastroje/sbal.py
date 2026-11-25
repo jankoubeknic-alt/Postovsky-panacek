@@ -1,5 +1,5 @@
 # Sbalí každou obec (všechny CSV a SVG ze složky data/<obec>/) do jednoho souboru data/<obec>.json.
-# Výsledek je celý web ve složce, kterou zadáš: index.html, hra.js, hra.css, data/hra.csv, data/etapy.csv a balíky obcí.
+# Výsledek je celý web ve složce, kterou zadáš: index.html, hra.js, hra.css, tabulky data/*.csv a balíky obcí.
 # Engine si balík načte, když složka obce chybí. Hodí se pro hostingy s limitem počtu souborů (artefakt).
 #
 #   python3 nastroje/sbal.py /cesta/k/vystupu
@@ -14,8 +14,10 @@ os.makedirs(os.path.join(vystup, 'data'))
 for soubor in ('index.html', 'hra.js', 'hra.css'):
     if os.path.exists(os.path.join(KOREN, soubor)):
         shutil.copy(os.path.join(KOREN, soubor), vystup)
-for soubor in ('hra.csv', 'etapy.csv'):
-    shutil.copy(os.path.join(KOREN, 'data', soubor), os.path.join(vystup, 'data'))
+# Tabulky celé hry (hra.csv, etapy.csv, kapitoly.csv, pribeh.csv, spolecne.csv…) jdou beze změny.
+for soubor in sorted(os.listdir(os.path.join(KOREN, 'data'))):
+    if soubor.endswith('.csv'):
+        shutil.copy(os.path.join(KOREN, 'data', soubor), os.path.join(vystup, 'data'))
 pocet = 0
 for obec in sorted(os.listdir(os.path.join(KOREN, 'data'))):
     slozka = os.path.join(KOREN, 'data', obec)

@@ -1,0 +1,18 @@
+# Zápisy do deníku. Zápis se ukáže, když je nastavená vlajka světa svet:<id> (efekt v kombinace.csv nebo kazdy_tah.csv).
+# kapitola: id z kapitoly.csv, pod kterou zápis v deníku patří.
+id;kapitola;obec;nadpis;text
+vrba_lhotka;leto;Lhotka;Babka zbledla;Babka Kořenářka si Vrbovu obálku prohlížela v nových brýlích dlouho. Pak řekla, že adresa tu není, a vrátila ji. Proč se jí třásla ruka?
+vrba_hluchov;leto;Hluchov;Telegram, který neodešel;Telegrafistka Ťuková si pamatuje, jak jí Vrba kdysi diktoval telegram. Tři slova a podpis. Pak ho roztrhal a řekl, že to radši donese osobně. Nikdy prý nedonesl.
+vrba_krakonos;leto;Krakonošov;Dluh pána hor;Krakonoš Vrbu znal. V nejhorší bouřce mu Vrba donesl psaní až na hřeben, a tak mu pán hor dluží službu. Prý ji splatí tomu, kdo Vrbův dopis doručí.
+vrba_kramarov;podzim;Kramářov;Perníkové srdce;Kramářka si pamatuje, jak si Vrba každý rok na jarmarku kupoval perníkové srdce. Nikdy ho nikomu nedal. Nosil ho v brašně, dokud neztvrdlo jako kámen, a příští rok koupil nové.
+vrba_mlhov;podzim;Mlhov;Zkratka přes slatě;Pastýř Matěj Vrbu varoval, že přes slatě u Bludičkova se nechodí, ani když člověk spěchá. Vrba se smál, že on se neztratí. Za slatěmi prý svítí okno, ke kterému stojí za to dojít.
+vrba_strachov;podzim;Hrad Strachov;Mariáš s Bílou paní;Bílá paní hrávala s Vrbou mariáš, kdykoli nesl poštu na hrad. Vrba vždycky prohrál, protože pořád koukal z okna někam do kraje. Říkala mu, že kdo nosí dopis tolik let, je taky trochu strašidlo.
+vrba_dusicka;podzim;Bludičkov;Dušička starého pošťáka;Dušička z hastrmanova hrnku byl Josef Vrba. Před třiceti lety šel přes slatě za světýlkem, protože myslel, že svítí její okno. Byla to bludička. Nad tvou brašnou zašeptal: Doruč to. Já nedošel.
+vrba_hodinov;podzim;Hodinov;Dopis pod lípou;Ponocný si pamatuje, že Vrba tudy chodil vždycky v jedenáct. Pod lípou si sedl a četl pořád jeden a ten samý dopis. Do schránky ho nikdy nehodil.
+vrba_barborov;zima;Barborov;Barborka u vrátek;Hajný si pamatuje, že si Vrba každý rok na svatou Barboru uřízl třešňovou větvičku. Nechal ji rozkvést v teple na poště a o Štědrém dni ji nesl až k vrátkům jedné chalupy. Dál nikdy nedošel.
+vrba_posta;zima;Pošta o půlnoci;Dopis, který hřeje;Skřítek Pečetítko pozná dopis, když na něj sáhne. Vrbův dopis hřeje. Je zamilovaný, třicet let starý a voní heřmánkem a meduňkou.
+vrba_stolov;jaro;Štolov;Valoun na prstýnek;Permoník dával Vrbovi valouny za tabák. Ten nejhezčí si Vrba schoval, že z něj nechá udělat prstýnek. Pro jednu, co zná každou bylinku.
+vrba_holubnik;jaro;Holubník;Nejstarší holub;Pan Hrdlička chová i holuby po Vrbovi. Nejstaršího si Vrba vycvičil, aby létal k jedné chalupě v Lhotce. Nikdy ho tam s psaním neposlal.
+vrba_ozvenov;leto2;Ozvěnov;Ozvěna po třiceti letech;Ozvěna v Ozvěnově vrací i staré věty. Po třiceti letech se z údolí vrátilo, co tu Vrba kdysi zakřičel, když myslel, že ho nikdo neslyší: Kořenářko z Lhotky, mám tě rád!
+krakonos_splatil;leto2;Lhotka po roce;Dluh splacen;Krakonoš v Lhotce poznal Vrbův dopis a splatil starý dluh. Na pouť svítilo slunce.
+vrba_doruceno;leto2;Lhotka po roce;Doručeno;Vrbův dopis patřil babce Kořenářce z Lhotky. Po třiceti letech ho přečetla u kašny, den před poutí.

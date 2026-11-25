@@ -26,7 +26,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;poustevnik;poustevnik_doruceno;🧙‍♂️;Poustevník čte o tichu a je tiše.;
 ?;poustevnik;;🧙‍♂️;Po bahnitém dně rybníka dojdeš k ostrůvku. Poustevník vykoukne z chýše. „Návštěva? Po čtyřiceti letech?“;
 ?;kamen;;🪨;Přes cestu k mlýnu leží balvan velký jako vůz. Neodvalí ho deset koní.;
-napoveda;*;!@dlouhy;💡;Sám to nezvládneš. V lese, u rybníka a na kopci čekají pomocníci.;
+napoveda;*;!@dlouhy;💡;Bez pomoci to nezvládneš. V lese, u rybníka a na kopci čekají pomocníci.;
 napoveda;*;!@siroky;💡;U rybníka se válí někdo široký.;
 napoveda;*;!@bystrozraky;💡;Na kopci sedí někdo se zavázanýma očima.;
 napoveda;*;!zvonik_doruceno;💡;Zvoník je moc vysoko. Kdo dosáhne nahoru?;
@@ -68,7 +68,7 @@ bystrozraky;les;;🥽;Bystrozraký pohlédne do lesa. Prásk, prásk! Praskne p�
 *;studna;;🪣;Do studny se nic nehází. Už tam leží prsten.;
 prsten;nevesta;;👰;Liduška si prsten umyje v potoce a navlékne. Svítí jako sluníčko. „Svatba bude! A vy tři jste pozvaní,“ řekne pomocníkům. Široký se olízne.;-prsten prsten_doruceno ikona:nevesta:💍 razitko
 prsten;*;;💍;„Prsten? Ten patří nevěstě Lidušce, té, co pláče u studny.“;
-balik_poustevnik;poustevnik;;🧙‍♂️;Poustevník převezme knihy o tichu. „Krásné. Čtyřicet let jsem čekal, až někdo připluje. Nikdo nepřiplul. Vy jste přišel pěšky po dně.“;-balik_poustevnik poustevnik_doruceno razitko
+balik_poustevnik;poustevnik;;🧙‍♂️;Poustevník převezme knihy o tichu. „Krásné. Čtyřicet let jsem čekal, až někdo připluje. Nikdo nepřiplul. A teď někdo přišel pěšky po dně.“;-balik_poustevnik poustevnik_doruceno razitko
 balik_poustevnik;rybnik;;🌊;Balík hodit na ostrůvek nejde. Spadl by do vody a knihy o tichu by zbublaly.;
 balik_poustevnik;*;;📦;„Knihy o tichu? To je pro poustevníka na ostrůvku. Jak se tam dostaneš, nevím.“;
 dopis_zvonik;vez;;🔔;Dopis hodíš k oknu věže. Nedoletí. Zvoník smutně mává.;

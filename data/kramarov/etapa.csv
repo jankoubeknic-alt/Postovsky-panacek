@@ -1,8 +1,8 @@
 klic;hodnota
 datum;8. IX.
-start;hrnec krejcar dopis_flasinetar dopis_pernikar
+start;hrnec krejcar dopis_flasinetar dopis_pernikar vrbuv_dopis
 cil;hrnec_doruceno flasinetar_doruceno pernikar_doruceno
-uvod;V Kramářově je jarmark. Stánky s perníkem, střelnice, kramářka se stužkami, flašinetář a pod lípou sedí dráteník. Pošťák veze babičce hrnec, který si koupila loni na jarmarku. Jenže hrnec cestou praskl.|Babička rozbitý hrnec nechce. Dráteník by ho sešil drátem, jenže drát mu došel a má hlad. A pošťák má v kapse jediný krejcar.
+uvod;V Kramářově je jarmark. Stánky s perníkem, střelnice, kramářka se stužkami, flašinetář a pod lípou sedí dráteník. Vezeš babičce hrnec, který si koupila loni na jarmarku. Jenže hrnec cestou praskl.|Babička rozbitý hrnec nechce. Dráteník by ho sešil drátem, jenže drát mu došel a má hlad. A ty máš v kapse jediný krejcar.|Kramářka tu prodává stužky čtyřicet let a pamatuje si každého, kdo kdy přišel na jarmark.
 navod;Na jarmarku se mění a kupuje. Zjisti, kdo co chce, a co za co dostaneš.
 konec_nadpis;Hrnec jako nový
 konec_text;Babička má hrnec ovinutý drátem jako košíček a tvrdí, že je teď pevnější než nový. Flašinetář hraje nové písničky z Vídně a perníkář peče srdce na objednávku.|Brašna je prázdná. Dráteník ti z posledního kousku drátu udělal malého koníčka.

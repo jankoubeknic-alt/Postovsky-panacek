@@ -37,12 +37,12 @@ dopis_klara;rozarka;;👧;„To je pro mámu. Já ještě neumím číst.“;
 dopis_klara;pastyr;;👴;„Klára Novotná, Mlhov čtyři. Děda o ní vyprávěl. Čekala na muže až do konce.“;
 dopis_klara;kovar;;🧔;„Klářin muž psal? Dones jí to, chodí ke cestě každý den.“;
 dopis_klara;vavrinec;;👻;„Tenhle jsem měl doručit jako první. Je pro Kláru.“;
-pohled;rozarka;!klara_odpocinula;🥰;Rozárka vykoukne zpoza mámy. Klára jí řekne: „To je pan pošťák, neboj.“ Rozárka si vezme pohled se štěňátkem, chichotá se a spolu s ním se rozplyne do oparu jako mýdlová bublina.;-pohled rozarka_odpocinula razitko
+pohled;rozarka;!klara_odpocinula;🥰;Rozárka vykoukne zpoza mámy. Klára jí řekne: „To je pošta, neboj.“ Rozárka si vezme pohled se štěňátkem, chichotá se a spolu s ním se rozplyne do oparu jako mýdlová bublina.;-pohled rozarka_odpocinula razitko
 pohled;rozarka;;😟;Rozárka se schová. Bez mámy si od cizích nic nevezme.;
 pohled;pastyr;mlha=1 klara_odpocinula;📖;Matěj si nasadí brýle a čte pohled nahlas do oparu: „Milá Rozárko, posílám ti pejska…“ Odněkud se ozve dětský smích a pak ticho.;-pohled rozarka_odpocinula razitko
-pohled;pastyr;mlha=1;👴;„Rozárka je tady s mámou. Dej jí to sám, mámy se nebojí.“;
+pohled;pastyr;mlha=1;👴;„Rozárka je tady s mámou. Dej jí to rovnou, mámy se nebojí.“;
 pohled;pastyr;;👴;„Komu to mám číst? Na louce nikdo není. Leda v oparu.“;
-pohled;klara;;👩‍🦳;„To je pro Rozárku. Dej jí to, já jí řeknu, že jsi hodný.“;
+pohled;klara;;👩‍🦳;„To je pro Rozárku. Dej jí to, já jí řeknu, že se nemusí bát.“;
 pohled;kovar;;🧔;„Štěňátko! To je pro Rozárku.“;
 pohled;vavrinec;;👻;„Pohled pro malou Rozárku. Ten jsem nesl v pytli nahoře.“;
 sirky;kovar;;🔥;Škrtneš sirkou a podržíš ji u výhně. Oheň z dnešní doby se chytí i ve stoleté mlze. Kovář zajásá a vezme kladivo.;-sirky kovar_ohen ikona:kovar:😄
@@ -58,3 +58,7 @@ dopis_vnuk;pastyr;;😢;Matěj otevře dopis a zbledne. „Od dědy Vavřince! M
 dopis_vnuk;vavrinec;;👻;„Ne, ten není pro mě. Pro vnuka. Žije prý v dnešní době, za mlhou.“;
 *;lucerna;;🏮;Lucerna nic nepotřebuje. Klepni na ni a změň mlhu.;
 *;*;;🤷;Nic se nestane. Mlha mlčí.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;pastyr;!svet:vrba_mlhov;👴;Pastýř Matěj obálku pozná dřív, než ji dopodáváš. „Vrba! Chodil tudy přes louku a dál zkratkou přes slatě k Bludičkovu. Říkal jsem mu, že tam se nechodí, ani když člověk spěchá.“ Zabafá z dýmky. „Smál se, že on se neztratí. Že za slatěmi svítí okno, ke kterému stojí za to dojít.“;svet:vrba_mlhov
+vrbuv_dopis;pastyr;;👴;„Za slatěmi svítí okno,“ opakuje Matěj. „Tak to říkal. Víc nevím.“;
+vrbuv_dopis;vavrinec;;👻;Pošťák Vavřinec si obálku prohlédne a uctivě smekne promáčenou čepici. „Kolega. Toho jsem v mlze jednou potkal. Šel na druhou stranu než já, k Bludičkovu.“;

@@ -1,11 +1,11 @@
 klic;hodnota
 datum;24. II.
-start;dopis_prednosta karty_mariasove pohled_pasacka
+start;dopis_prednosta karty_mariasove pohled_pasacka vrbuv_dopis
 cil;prednosta_doruceno karty_doruceno pasacka_doruceno laska_doruceno
-uvod;Pošťák v Poštovicích si myslel, že pošta je nuda. Jenže na každé poště v noci hrají poštovní skřítkové karty. Nemají ale mariášky, a tak hrají s dopisy. Kdo dopis vezme do ruky, pozná, co v něm stojí. Ten veselý hřeje, ten smutný studí.|Ředitelství pošt se diví, proč se na poštovické poště v noci ztrácejí dopisy. Zůstaň na poště přes noc a uvidíš. Možná tam najdeš i dopis, který nemá adresu ani známku.
+uvod;V Poštovicích to vypadá, že pošta je nuda. Jenže na každé poště v noci hrají poštovní skřítkové karty. Nemají ale mariášky, a tak hrají s dopisy. Kdo dopis vezme do ruky, pozná, co v něm stojí. Ten veselý hřeje, ten smutný studí.|Ředitelství pošt se diví, proč se na poštovické poště v noci ztrácejí dopisy. Zůstaň na poště přes noc a uvidíš. Možná tam najdeš i dopis, který nemá adresu ani známku.|Skřítek Pečetítko prý pozná každou pečeť, kterou kdy kdo přitiskl.
 navod;Klepni na poštu a nastane noc nebo den. Skřítci jsou vidět jen v noci.
 konec_nadpis;Pošťácká pohádka
-konec_text;Maruška z hospody si dopis přečetla v okně u silnice a večer, když jel kolem autobus, zamávala. Šofér Franta zastavil uprostřed vsi a celý autobus tleskal. Svatba byla na jaře a pošťák šel za svědka. Skřítkové hrají mariáš a dopisy nechávají na pokoji. Jen občas si nějaký přičichnou, jestli hřeje.|Brašna je prázdná. Pošta už ti nepřijde nudná ani trochu. Odcházíš od ní a zdá se ti, že za tebou skřípou dvířka schránky.
+konec_text;Maruška z hospody si dopis přečetla v okně u silnice a večer, když jel kolem autobus, zamávala. Šofér Franta zastavil uprostřed vsi a celý autobus tleskal. Svatba byla na jaře a pošta byla za svědka. Skřítkové hrají mariáš a dopisy nechávají na pokoji. Jen občas si nějaký přičichnou, jestli hřeje.|Brašna je prázdná. Pošta už ti nepřijde nudná ani trochu. Odcházíš od ní a zdá se ti, že za tebou skřípou dvířka schránky.
 pozadi;data/posta/pozadi.svg
 barvy;
 pocitadla;

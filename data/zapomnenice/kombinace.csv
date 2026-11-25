@@ -20,7 +20,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;nevesta;nevesta_vi;👰;Bára se točí v závoji před výlohou. „Dneska se vdávám!“;
 ?;nevesta;zavoj_doruceno;👰;Dívka v závoji věší prádlo a diví se, proč má na hlavě záclonu.;
 ?;nevesta;;👩;Bára věší prádlo a pobrukuje si svatební pochod. Neví proč.;
-?;babka;dopis_doruceno;👵;Babka si čte dopis od sestry a upíjí slivovici. „Já nezapomínám, chlapče. Vodu z naší studny jsem nepila čtyřicet let.“;
+?;babka;dopis_doruceno;👵;Babka si čte dopis od sestry a upíjí slivovici. „Já nezapomínám. Vodu z naší studny jsem nepila čtyřicet let.“;
 ?;babka;;👵;Babka Kořenářka sedí u studny a nalévá lidem vodu. Sama ji nepije. „Já si pamatuju všechno. Třeba že mi dneska neseš dopis.“;
 napoveda;*;!dopis_doruceno;💡;Babka u studny jako jediná nezapomíná. Dones jí dopis, má pro tebe něco užitečného.;
 napoveda;*;!zavoj_doruceno;💡;Závoj patří nevěstě Báře. Možná si vzpomene, proč ho má nosit.;
@@ -62,7 +62,7 @@ kapesnik;farar;;😇;Muž od mouky si kapesník zastrčí za opasek a najednou v
 kapesnik;mlynar;;🧔;Mlynář kapesník odmítne. „Já zapomínám rád. Aspoň nevím, kolik mi kdo dluží.“;
 kapesnik;babka;;👵;„Ten není pro mě, já nezapomínám. Dej ho někomu, kdo musí ve tři něco slíbit.“;
 *;zvon;;🔔;Zvon nic nepotřebuje, jen čas. Chvíli pod ním počkáš.;
-*;babka;;👵;„To není pro mě, chlapče. Já si pamatuju, co je moje.“;
+*;babka;;👵;„To není pro mě. Já si pamatuju, co je moje.“;
 *;zenich;;🤵;„Tohle je moje? Nepamatuju si. Asi ne.“;
 *;nevesta;;👩;„Pro mě? Nevím. Dneska nevím vůbec nic.“;
 *;farar;;👴;Muž od mouky to posype moukou a vrátí ti to.;

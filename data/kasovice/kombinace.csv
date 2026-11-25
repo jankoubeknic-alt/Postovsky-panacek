@@ -40,7 +40,7 @@ hrnicku;hrnec;;😤;„Hrníčku?“ Hrnec se načepýří. „Já nejsem hrní�
 hrnci;hrnec;;😡;„HRNCI?!“ Hrnec se urazí a začne vařit dvakrát rychleji. Kaše vyšplouchne až ke škole.;!osloven kase=3
 var;hrnec;;🥳;„Vař?“ Hrnec radostně zabublá a vyvalí takovou várku, že kaše dosáhne až ke školnímu plotu.;!osloven kase=3
 staci;hrnec;osloven;😏;„Stačí?“ Hrnec se zachichotá. „Kaše nikdy nestačí. Babička říká jiné slovo. Krátké, to, co se říká v hospodě.“ A vaří dál.;!osloven
-staci;hrnec;;🍲;„Stačí!“ Hrnec ani nenadzvedne pokličku. Neoslovil jsi ho.;
+staci;hrnec;;🍲;„Stačí!“ Hrnec ani nenadzvedne pokličku. Hrnec se musí oslovit.;
 prestan;hrnec;osloven;😒;„Přestaň?“ Hrnec uraženě bublá. „Tak se mluví na zlobivé děti, ne na hrnce. Babička mi říká jiné slovo.“;!osloven
 prestan;hrnec;;🍲;„Přestaň!“ Hrnec bublá dál. Kdo by to byl, kdo na něj volá?;
 hrnicku;ucitel;pravidla_doruceno;👨‍🏫;Pan řídící nalistuje Pravidla. „Hrníček je od hrnku. Od hrnce je hrneček. A pátý pád? Hrnečku! Výborně, jednička.“ Opraví ti lístek.;-hrnicku +hrnecku

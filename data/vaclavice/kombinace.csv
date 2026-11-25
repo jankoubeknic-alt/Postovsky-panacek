@@ -20,7 +20,7 @@ dopis_strazny;strazny;;💂;Na dálku to nejde. Musíš k nim dojít. A Václav 
 ?;strazny;f1>0;👣;Šlapeš do Václavových šlépějí. Jsou teplé, jako by v nich hořela kamínka.;p=1 cekej
 ?;strazny;;❄️;Mezi tebou a tím místem je hluboký sníh bez šlépějí. Tam se neodvážíš. Počkej, až tudy Václav projde.;
 ?;slepeje1;;👣;Velké šlépěje ve sněhu. Sníh kolem nich taje.;
-?;vaclav1;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí, pošťáku. Pak ti nebude zima.“;
+?;vaclav1;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí. Pak ti nebude zima.“;
 ?;postak1;;📮;Tady stojíš ty.;
 dopis_kovar;kovar;p=2;🔨;Kovář čte objednávku u vyhaslé výhně. „Podkovy s ozuby. Na tuhle zimu jako stvořené.“;-dopis_kovar kovar_doruceno razitko
 dopis_kovar;kovar;;🔨;Na dálku to nejde. Musíš k nim dojít. A Václav mezitím popošel.;
@@ -28,7 +28,7 @@ dopis_kovar;kovar;;🔨;Na dálku to nejde. Musíš k nim dojít. A Václav mezi
 ?;kovar;f2>0;👣;Šlapeš do Václavových šlépějí. Jsou teplé, jako by v nich hořela kamínka.;p=2 cekej
 ?;kovar;;❄️;Mezi tebou a tím místem je hluboký sníh bez šlépějí. Tam se neodvážíš. Počkej, až tudy Václav projde.;
 ?;slepeje2;;👣;Velké šlépěje ve sněhu. Sníh kolem nich taje.;
-?;vaclav2;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí, pošťáku. Pak ti nebude zima.“;
+?;vaclav2;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí. Pak ti nebude zima.“;
 ?;postak2;;📮;Tady stojíš ty.;
 dopis_vdova;vdova;p=3;👵;Vdova Dorota čte dopis od syna a pláče radostí. U dveří jí leží dříví a ona neví od koho.;-dopis_vdova vdova_doruceno razitko
 dopis_vdova;vdova;;👵;Na dálku to nejde. Musíš k nim dojít. A Václav mezitím popošel.;
@@ -36,7 +36,7 @@ dopis_vdova;vdova;;👵;Na dálku to nejde. Musíš k nim dojít. A Václav mezi
 ?;vdova;f3>0;👣;Šlapeš do Václavových šlépějí. Jsou teplé, jako by v nich hořela kamínka.;p=3 cekej
 ?;vdova;;❄️;Mezi tebou a tím místem je hluboký sníh bez šlépějí. Tam se neodvážíš. Počkej, až tudy Václav projde.;
 ?;slepeje3;;👣;Velké šlépěje ve sněhu. Sníh kolem nich taje.;
-?;vaclav3;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí, pošťáku. Pak ti nebude zima.“;
+?;vaclav3;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí. Pak ti nebude zima.“;
 ?;postak3;;📮;Tady stojíš ty.;
 dopis_uhlir;uhlir;p=4;🧑‍🏭;Uhlíř čte dopis z hradu u kouřícího milíře. „Výkup uhlí! Tak to bude chleba i na jaro.“;-dopis_uhlir uhlir_doruceno razitko
 dopis_uhlir;uhlir;;🧑‍🏭;Na dálku to nejde. Musíš k nim dojít. A Václav mezitím popošel.;
@@ -44,13 +44,13 @@ dopis_uhlir;uhlir;;🧑‍🏭;Na dálku to nejde. Musíš k nim dojít. A Václ
 ?;uhlir;f4>0;👣;Šlapeš do Václavových šlépějí. Jsou teplé, jako by v nich hořela kamínka.;p=4 cekej
 ?;uhlir;;❄️;Mezi tebou a tím místem je hluboký sníh bez šlépějí. Tam se neodvážíš. Počkej, až tudy Václav projde.;
 ?;slepeje4;;👣;Velké šlépěje ve sněhu. Sníh kolem nich taje.;
-?;vaclav4;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí, pošťáku. Pak ti nebude zima.“;
+?;vaclav4;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí. Pak ti nebude zima.“;
 ?;postak4;;📮;Tady stojíš ty.;
 ?;kaple;f5>0 strazny_doruceno kovar_doruceno vdova_doruceno uhlir_doruceno;👣;Šlapeš do Václavových šlépějí. Jsou teplé, jako by v nich hořela kamínka.;p=5 cekej
 ?;kaple;f5>0;⛪;Ke kapli půjdeš, až rozneseš poštu. Zpátky už by to nešlo.;
 ?;kaple;;❄️;Mezi tebou a tím místem je hluboký sníh bez šlépějí. Tam se neodvážíš. Počkej, až tudy Václav projde.;
 ?;slepeje5;;👣;Velké šlépěje ve sněhu. Sníh kolem nich taje.;
-?;vaclav5;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí, pošťáku. Pak ti nebude zima.“;
+?;vaclav5;;🤴;Kníže Václav se otočí. „Šlapej do mých šlépějí. Pak ti nebude zima.“;
 napoveda;*;!strazny_doruceno;💡;Strážný stojí u brány, kde začínáš. Dopis mu dej hned, než Václav odejde daleko.;
 napoveda;*;;💡;Jdi vždycky tam, kde jsou šlépěje, a doruč, než je vítr zafouká. Šlépěje vydrží čtyři tahy.;
 *;slepeje1;;❄️;Tohle patří lidem na cestě.;

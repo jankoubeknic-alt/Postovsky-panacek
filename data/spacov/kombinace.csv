@@ -9,13 +9,13 @@
 # Spáčov pod Blaníkem: skála se otevře v nejhorší chvíli, když jsou doručené všechny tři špatné zprávy (počítadlo bida=3).
 # Prosba dětí pak vzbudí rytíře a ti dají listiny, které špatné zprávy napraví.
 karta;cil;podminka;vyraz;text;efekt
-?;strazce;otevreno;⚔️;Strážce stojí u otevřené skály a smeká. „Teď je nejhůř. Teď se smí. Jdi dovnitř, pošťáku.“;
+?;strazce;otevreno;⚔️;Strážce stojí u otevřené skály a smeká. „Teď je nejhůř. Teď se smí. Jdi dovnitř, {osloveni}.“;
 ?;strazce;bida=2;🛡️;Strážce se podívá na ves. „Už je to zlé. Ale nejhorší chvíle to ještě není. Rytíři by se na mě zlobili.“;
 ?;strazce;bida=1;🛡️;Strážce pokrčí rameny. „Trochu zlé. Ale nejhorší chvíle? To vypadá jinak.“;
-?;strazce;;🛡️;Starý strážce opřený o halapartnu. „Rytíře smím pustit k probuzení jen v nejhorší chvíli. A dneska je, chlapče, docela obyčejné úterý.“;
+?;strazce;;🛡️;Starý strážce opřený o halapartnu. „Rytíře smím pustit k probuzení jen v nejhorší chvíli. A dneska je docela obyčejné úterý.“;
 ?;rytiri;rytiri_vzhuru;🐴;Rytíři sedlají koně. Svatý Václav si prohlíží ves z výšky. „Opravdu nejhorší chvíle?“ diví se.;
 ?;rytiri;;😴;V hoře spí rytíři s hlavami na sedlech. Koně spí vestoje. Uprostřed spí svatý Václav a v ruce drží kopí s praporcem.;
-?;deti;;🧒;Děti stojí u skály. „Napsaly jsme rytířům, ať přijedou. Ale strážce prý pustí poštu, jen když bude nejhůř. Kdy bude nejhůř, pošťáku?“;
+?;deti;;🧒;Děti stojí u skály. „Napsaly jsme rytířům, ať přijedou. Ale strážce prý pustí poštu, jen když bude nejhůř. Kdy bude nejhůř?“;
 ?;starosta;dan_vyresena;🎩;Starosta počítá pokladnu. Je plná a ještě přetéká.;
 ?;starosta;vymer_doruceno;😱;Starosta běhá po návsi s výměrem v ruce. „Deset let daní! Ves je na mizině!“;
 ?;starosta;;🎩;Starosta si spokojeně hoví na lavičce. „U nás je klid. Nic se neděje. Jen ať to tak zůstane.“;
@@ -28,7 +28,7 @@ karta;cil;podminka;vyraz;text;efekt
 ?;hostinsky;;🍺;Hostinský točí pivo. „Ve Spáčově se nic neděje. Rytíři spí, my taky.“;
 napoveda;*;!otevreno;💡;Strážce pustí poštu do hory jen v nejhorší chvíli. Ve Spáčově je ale dobře. Špatné zprávy se nosí nerady, ale v brašně jich máš hned několik.;
 napoveda;*;!rytiri_vzhuru;💡;Skála je otevřená. Dones rytířům prosbu dětí.;
-napoveda;*;;💡;Rytíři ti dali listiny. Rozdej je těm, komu jsi nosil špatné zprávy.;
+napoveda;*;;💡;Rytíři ti dali listiny. Rozdej je těm, kdo od tebe dostali špatné zprávy.;
 vymer;starosta;;😱;Starosta si výměr přečte a sesype se na lavičku. „Deset let daní! Pokladna je prázdná!“ Ve vsi začíná být zle.;-vymer vymer_doruceno bida+1 ikona:starosta:😱 razitko
 kroupy;sedlak;;😭;Sedlák si hlášení přečte a podívá se na pole. Celé je zbité. „Kroupy… všechno je pryč.“ Ves je čím dál smutnější.;-kroupy kroupy_doruceno bida+1 ikona:sedlak:😭 razitko
 zruseni;nevesta;;😭;Nevěsta dopis přečte a rozpláče se. „Bojí se! Svatba se ruší!“ Celý Spáčov smutní s ní.;-zruseni zruseni_doruceno bida+1 ikona:nevesta:😭 razitko

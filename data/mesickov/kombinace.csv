@@ -30,9 +30,9 @@ hul;cerven;obdobi=3;☀️;„Vždyť vládnu,“ diví se Červen. „Komu jin�
 hul;cerven;;☀️;Podáš hůl. Červen se zvedne, mávne holí a celá ves se promění. Slunce pálí, obilí zraje a v lese se červenají jahody.;-hul obdobi=3
 hul;zari;obdobi=4;🍂;„Vždyť vládnu,“ diví se Září. „Komu jinému ji dáš?“;
 hul;zari;;🍂;Podáš hůl. Září se zvedne, mávne holí a celá ves se promění. Listí zrzaví a v sadu dozrávají jablka.;-hul obdobi=4
-dopis_mesickum;leden;;😠;Leden si dopis přečte a vousy se mu naježí. „Fialky v lednu? Jahody? Jablka? Ta holka neví, co je pořádek.“ Pak se zasměje. „Ale ty za to nemůžeš, pošťáku. Tumáš hůl. Komu ji dáš, ten bude vládnout. Jen ji pak vrať.“;-dopis_mesickum +hul hul_dana razitko
+dopis_mesickum;leden;;😠;Leden si dopis přečte a vousy se mu naježí. „Fialky v lednu? Jahody? Jablka? Ta holka neví, co je pořádek.“ Pak se zasměje. „Ale ty za to nemůžeš, {osloveni}. Tumáš hůl. Komu ji dáš, ten bude vládnout. Jen ji pak vrať.“;-dopis_mesickum +hul hul_dana razitko
 dopis_mesickum;holena;;👸;„Můj dopis? Ten patří na horu bratřím. Co tu s ním děláš?“;
-dopis_mesickum;maruska;;👧;„Holena psala bratřím? Ach jo. Dones jim ho, ale buď zdvořilý. Leden je přísný.“;
+dopis_mesickum;maruska;;👧;„Holena psala bratřím? Ach jo. Dones jim ho, ale mluv s nimi zdvořile. Leden je přísný.“;
 dopis_mesickum;*;;✉️;Dopis je pro bratry měsíčky. Předat se musí tomu, kdo právě vládne. Teď je leden.;
 fialky;leden;;❄️;„Fialky? U mě by zmrzly,“ zabručí Leden. „Ty patří Holeně, ať si je užije, dokud kvetou.“;
 jahody;cerven;;☀️;„Moje jahody,“ usměje se Červen. „Dones je, komu patří, než se zkazí.“;
@@ -84,7 +84,7 @@ fialky;maruska;;👧;„Fialky jsou pro Holenu,“ usměje se Maruška. „Ale d
 jahody;maruska;;👧;Maruška si vezme jednu jahodu a zbytek vrátí. „Ostatní jsou pro Holenu. Jinak bude křičet.“;
 jablka;hostinsky;;🍺;„Jablka? Z těch bych udělal mošt. Ale objednala je Holena.“;
 jahody;hostinsky;;🍺;„Jahody k pivu? To ne. Holena je chtěla.“;
-led;hostinsky;obdobi=3;😎;Hostinský hodí led do sudu a za chvíli točí pivo studené jako studánka. „Pošťáku, ty jsi poklad!“;-led led_doruceno ikona:hostinsky:😎 razitko
+led;hostinsky;obdobi=3;😎;Hostinský hodí led do sudu a za chvíli točí pivo studené jako studánka. „{osloveni}, ty jsi poklad!“;-led led_doruceno ikona:hostinsky:😎 razitko
 led;hostinsky;;🍺;„Led?“ hostinský mávne rukou. „Teď ho nepotřebuju. Až v létě, až bude pivo teplé jako polívka.“;
 led;ledarna;obdobi=1;🧊;Uložíš led do ledárny a zasypeš ho pilinami. Tady vydrží až do léta.;-led led_ulozen ikona:ledarna:🧊
 led;ledarna;;🏚️;Led vrátíš do ledárny. Až budeš chtít, zase si ho vezmi.;-led

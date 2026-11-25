@@ -9,7 +9,7 @@
 # Pomlázkov: počítadlo den (1 čtvrtek, 2 pátek, 3 sobota, 4 pondělí) posouvá klepnutí na postel. Po pondělí je zase čtvrtek.
 # Každý den dovoluje něco jiného: pohled ze Říma jen v pátek a sobotu, vajíčka jen v sobotu, v pátek se nic nedává, koleda v pondělí.
 karta;cil;podminka;vyraz;text;efekt
-pomlazka;devcata;!den=4;👧;Děvčata utečou až za stodolu. „Ještě není pondělí! A šlehat má kluk, ne pošťák.“;
+pomlazka;devcata;!den=4;👧;Děvčata utečou až za stodolu. „Ještě není pondělí! A šlehat mají kluci, ne pošta.“;
 kraslice;kluci;;👦;„Kraslice se nedávají, ty se vykoledují! Dej je děvčatům.“;
 vajicka;hospodyne;;👩‍🌾;„Vajíček mám dost. Ty patří babičce na barvení.“;
 pohled_rim;deda;;👴;Děda si prohlédne kopuli. „Zvony píšou? To za mých časů nedělaly.“;

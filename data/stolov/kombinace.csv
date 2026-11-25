@@ -16,7 +16,7 @@ dopis_rubac;havirka;;👩;„Franta? Ten rube na jedničce. Jednou zazvoň a je�
 varovani;stajger;;🧓;Štajger čte lísteček a zbledne. „Na dvojce? Utíkej za Jardou, honem!“;
 dopis_stajger;strojnik;;👷;„Štajger je až na trojce. Třikrát zazvoň.“;
 ?;zvonec;zvon<4;🔔;Cink! Zatáhneš za provaz zvonku. Nahoře u strojníka cinkne taky.;zvon+1
-?;zvonec;;🔔;Už jsi zazvonil čtyřikrát, a to znamená nahoru na povrch. Pátý cink by strojníka jen zmátl.;
+?;zvonec;;🔔;Zvonek už zazvonil čtyřikrát, a to znamená nahoru na povrch. Pátý cink by strojníka jen zmátl.;
 ?;jet;zvon>0;🛗;Zabouchneš dvířka klece a čekáš na strojníka.;cekej
 ?;jet;;🛗;Klec nikam nejede. Nejdřív zazvoň, kam chceš.;
 ?;strojnik;;👷;Strojník drží páku. „Jednou zazvoníš, jedu na jedničku. Dvakrát na dvojku, třikrát na trojku. Čtyřikrát nahoru. Víc ne, to pak nevím, co chceš.“;
@@ -32,11 +32,11 @@ dopis_stajger;stajger;;🧓;Štajger čte hlášení. „Zkoušky stropů… na 
 ?;stajger;;🧓;„Permoník je hodný na toho, kdo je hodný na něj. A v dole se nepíská.“;
 ?;kahan;tma;🪔;Rozsvítíš kahan. Chodba je zase vidět a permoník zmizel.;!tma
 ?;kahan;;🌑;Sfoukneš kahan. Je tma jako v pytli. V hloubi chodby se rozsvítí dvě zelená očka.;tma
-chleba;permonik;;🧙;Položíš chleba na kámen. Drobná ruka ho vezme. „Hodný pošťák,“ zaskřípe to ze tmy.;-chleba chleba_dan
+chleba;permonik;;🧙;Položíš chleba na kámen. Drobná ruka ho vezme. „Hodná pošta,“ zaskřípe to ze tmy.;-chleba chleba_dan
 dopis_permonik;permonik;chleba_dan;🧙;Permoník čte potmě, jako by svítilo slunce. Pak naškrábe lísteček a podá ti ho. „Pro Jardu na dvojce. Ať to přečte hned.“;-dopis_permonik permonik_doruceno +varovani razitko
 dopis_permonik;permonik;;🧙;Zelená očka se přimhouří. „S prázdnou? To se nedělá.“ Permoník couvne do tmy.;
 ?;permonik;permonik_doruceno;🧙;Permoník potmě třikrát poklepe na skálu.;
-?;permonik;;🧙;Ze tmy se ozve tenký hlásek. „Kdo to sfoukl kahan? Aha, pošťák.“;
+?;permonik;;🧙;Ze tmy se ozve tenký hlásek. „Kdo to sfoukl kahan? Aha, pošta.“;
 dopis_rubac;vozac;;🛒;„Pro Frantu? Ten rube na jedničce.“;
 dopis_stajger;rubac;;⛏️;„Štajger je dole na trojce.“;
 svacina;rubac;;⛏️;„Svačina od Jardovy ženy? Jarda je na dvojce. Já mám svoji.“;
@@ -53,3 +53,6 @@ napoveda;*;;💡;Lísteček od permoníka patří Jardovi na dvojku. Rychle.;
 *;jet;;🛗;Klec veze lidi, ne poštu.;
 *;kahan;;🪔;Kahan svítí, nic víc.;
 *;*;;🤷;Nic se nestane.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;permonik;!svet:vrba_stolov;🧙;Permoník si obálku očichá. „Vrbův tabák! Ten mi ho nosil a já jemu valouny.“ Zachichotá se do vousů. „Ten nejhezčí si schoval. Že z něj nechá udělat prstýnek. Pro jednu, co zná každou bylinku.“;svet:vrba_stolov
+vrbuv_dopis;permonik;;🧙;„Prstýnek pro bylinkářku,“ zamumlá permoník. „Víc nevím, nech mě kutat.“;

@@ -1,8 +1,8 @@
 klic;hodnota
 datum;15. XI.
-start;dopis_hospodsky dopis_marka dopis_pani dopis_pekar
+start;dopis_hospodsky dopis_marka dopis_pani dopis_pekar vrbuv_dopis
 cil;hospodsky_doruceno marka_doruceno pani_doruceno pekar_doruceno zasnuby
-uvod;V Hodinově nemají věžní hodiny. Čas tu dělá ponocný: obchází ves s halapartnou a s rohem a po každé chvíli vytroubí hodinu. Co ponocný zatroubí, to platí. Hospoda zavírá po desáté, Mařka chodí pod lípu v jedenáct, Bílá paní se ukazuje o půlnoci a pekař vstává ve dvě.|Pošťák má noční poštu. Do rána zbývá osm troubení.
+uvod;V Hodinově nemají věžní hodiny. Čas tu dělá ponocný: obchází ves s halapartnou a s rohem a po každé chvíli vytroubí hodinu. Co ponocný zatroubí, to platí. Hospoda zavírá po desáté, Mařka chodí pod lípu v jedenáct, Bílá paní se ukazuje o půlnoci a pekař vstává ve dvě.|Máš noční poštu. Do rána zbývá osm troubení.|Ponocný chodí po vsi s rohem čtyřicet let a pamatuje každého, kdo tu kdy šel v noci.
 navod;Po každém podání ponocný vytroubí další hodinu. Kdo kdy je venku, se dozvíš od lidí.
 konec_nadpis;Ráno
 konec_text;Hospodský má poštu, Bílá paní dopis z hradu a Mařka prsten. Pekař peče rohlíky a ponocný troubí čtvrtou, trochu falešně. Prý je to tím mrazem.|Brašna je prázdná. Pekař ti dal teplý rohlík a Mařka pozvánku na svatbu.

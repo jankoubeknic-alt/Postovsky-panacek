@@ -44,7 +44,7 @@ krmeni;hromada;;👴;„Krmení? Já nemám slepici. Hromádka mi ji ukrad. Nebo
 krmeni;ozvena;;🗣️;„…krmení…“ zopakuje Paní Ozvěna a z lomu se ozve nadšené kokodák. Ozvěna zčervená.;slepice_stopa
 krmeni;hostinsky;;🧔;„Pro Hromádku. Kupuje krmení třicet let, i když slepici nemá. Smutná věc.“;
 krmeni;deti;;🧒;Děti si nasypou zrní do kapes. Radši jim pytlík vezmeš.;
-noviny;hostinsky;;🧔;Hostinský noviny rozloží a pak ti podá prázdný pohled. „Napiš ho Paní Ozvěně, pošťáku. Máš krásné písmo a jí třicet let nikdo nenapsal.“;-noviny noviny_doruceno +prani razitko
+noviny;hostinsky;;🧔;Hostinský noviny rozloží a pak ti podá prázdný pohled. „Napiš ho Paní Ozvěně, {osloveni}. Máš krásné písmo a jí třicet let nikdo nenapsal.“;-noviny noviny_doruceno +prani razitko
 noviny;hromada;;👴;„Noviny? Ty patří do hospody. Hostinský je předčítá nahlas.“;
 noviny;hromadka;;🧓;„Noviny čtu v hospodě. Ale tam chodí Hromada, tak už nečtu.“;
 noviny;ozvena;;🗣️;„…noviny… noviny…“;
@@ -62,3 +62,6 @@ slepice;ozvena;;🗣️;„…kokodák…“ zopakuje Ozvěna smutně. Slepici z
 slepice;hostinsky;;🧔;„Kropenatá! Celý Ozvěnov ji třicet let hledal. Patří Hromadům.“;
 slepice;deti;;🧒;Děti slepici obstoupí a hladí ji. Kropenatá se tváří, že je to pod její úroveň.;
 *;*;;🤷;Nic se nestane. Skály mlčí.;
+# Vrbův dopis (příběh, viz pribeh.md). Ukázat ho je zadarmo a do alba se nepočítá.
+vrbuv_dopis;ozvena;!svet:vrba_ozvenov;🗣️;Paní Ozvěna se nadechne a údolí ztichne. Ze skal se vrátí hlas, starý třicet let, tichý a roztřesený: „Kořenářko… z Lhotky… mám tě rád…“ Pak už jen šumí les. „To tu kdysi zakřičel jeden pošťák,“ řekne paní Ozvěna. „Myslel, že ho nikdo neslyší.“;svet:vrba_ozvenov
+vrbuv_dopis;ozvena;;🗣️;„…mám tě rád…“ dozní ještě jednou ze skal.;

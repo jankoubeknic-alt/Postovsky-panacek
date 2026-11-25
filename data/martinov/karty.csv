@@ -1,7 +1,7 @@
 id;nazev;druh;ikona;adresa;popis
 plast;Pošťácký plášť;vec;🧥;;Tvůj vlastní plášť. Teplý, s mosaznými knoflíky.
-plast_a;Půlka pláště;vec;🧣;;Levá půlka pošťáckého pláště. S knoflíky.
-plast_b;Půlka pláště;vec;🧣;;Pravá půlka pošťáckého pláště. S kapsou.
+plast_a;Půlka pláště;vec;🧣;;Levá půlka poštovního pláště. S knoflíky.
+plast_b;Půlka pláště;vec;🧣;;Pravá půlka poštovního pláště. S kapsou.
 pecen;Pecen chleba;balik;🍞;Pro chudé, rozdělte;Od pekaře. Velký a ještě teplý.
 pecen_a;Půlka pecnu;vec;🍞;;Půlka pecnu. Pořád voní.
 pecen_b;Půlka pecnu;vec;🍞;;Druhá půlka pecnu. S kůrkou.

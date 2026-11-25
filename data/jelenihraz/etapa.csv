@@ -2,10 +2,10 @@ klic;hodnota
 datum;12. V.
 start;avizo_pila avizo_hajovna avizo_ves list truhla sud
 cil;list_doruceno truhla_doruceno sud_doruceno avizo_pila_doruceno avizo_hajovna_doruceno avizo_ves_doruceno
-uvod;Na Šumavě se dříví plaví kanálem od jezera až dolů k řece. Pošťák vyjel nahoru k hrázi s balíky, které by kopcem nikdo neunesl: pilový list, truhlu s výbavou a sud piva. Pošle je dolů kanálem i s dřívím.|Kdo dostane avízo, že mu něco plave, postaví se na břeh s bidlem. A vyloví všechno, co jde kolem. I to, co není jeho.
+uvod;Na Šumavě se dříví plaví kanálem od jezera až dolů k řece. Nahoru k hrázi vezeš balíky, které by kopcem nikdo neunesl: pilový list, truhlu s výbavou a sud piva. Pošle je dolů kanálem i s dřívím.|Kdo dostane avízo, že mu něco plave, postaví se na břeh s bidlem. A vyloví všechno, co jde kolem. I to, co není jeho.
 navod;Balík dej do kanálu u hráze. Po každém podání popluje o kus níž. Avízo pošli adresátovi včas, ale ne moc brzo.
 konec_nadpis;Všechno doplulo
-konec_text;Pilař má nový list a pila zase zpívá. Hajná vybalila výbavu a hospodský narazil sud. Dříví plave dál dolů k Vltavě a vorař Toník u jezu má po dlouhé době klid.|Brašna je prázdná. Hospodský ti natočil první pivo z nového sudu. Prý ho pošťák poslal nejlíp.
+konec_text;Pilař má nový list a pila zase zpívá. Hajná vybalila výbavu a hospodský narazil sud. Dříví plave dál dolů k Vltavě a vorař Toník u jezu má po dlouhé době klid.|Brašna je prázdná. Hospodský ti natočil první pivo z nového sudu. Prý ještě žádný sud nedoplul tak hladce.
 pozadi;data/jelenihraz/pozadi.svg
 barvy;
 pocitadla;

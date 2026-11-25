@@ -18,7 +18,11 @@ for (let i = 0; i < 100 && !(await js(`[...document.querySelectorAll('.zastavka_
 await js(`[...document.querySelectorAll('.zastavka__tlacitko')].find(b => b.textContent.includes(${JSON.stringify(obec)})).click()`); await cekej(700);
 for (let i = 0; i < 50 && !(await js(`[...document.querySelectorAll('.arch button')].some(b => /Vyrazit|Pokračovat/.test(b.textContent))`)); i++) await cekej(200);
 await snimek('0-uvod');
-await js(`[...document.querySelectorAll('.arch button')].find(b => /Vyrazit|Pokračovat/.test(b.textContent)).click()`); await cekej(900);
+// Před první obcí kapitoly může být mezihra (taky s tlačítkem Pokračovat), pak teprve úvod obce.
+for (let i = 0; i < 4 && (await js(`!!document.querySelector('.arch')`)); i++) {
+  await js(`[...document.querySelectorAll('.arch button')].find(b => /Vyrazit|Pokračovat/.test(b.textContent))?.click()`); await cekej(700);
+}
+await cekej(200);
 await snimek('1-start');
 let n = 2;
 for (const [karta, cil, foto] of kroky) {

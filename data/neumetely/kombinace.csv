@@ -21,9 +21,9 @@ karta;cil;podminka;vyraz;text;efekt
 ?;sedlaci;;👨‍🌾;Sedláci stojí s čepicemi v rukou. „Horymír nás bránil. Havíři nám šlapali pole a on se jich zastal.“;
 ?;havir;;⛏️;Havíř si utírá čelo. „My hledáme zlato, a Horymír nám vyčítá pole. Kdo neorá, ten nejí, říká. A kdo nekope, nemá zlato, říkám já.“;
 ?;knize;prosba_dorucena;🤴;Kníže se drbe na bradě. „Horymír má právo na poslední přání. Ať si přeje.“;
-?;knize;;🤴;Kníže sedí na trůnu na nádvoří. „Kdo jsi? Jak ses sem dostal? Přes hradbu? To se ještě nikomu nepovedlo.“;
+?;knize;;🤴;Kníže sedí na trůnu na nádvoří. „Kdo jsi? A kudy sem? Přes hradbu? To se ještě nikomu nepovedlo.“;
 ?;horymir;prosba_dorucena;🧔;Horymír se usměje. „Mé poslední přání? Projet se na Šemíkovi po nádvoří. Třikrát dokola.“;
-?;horymir;;🧔;Horymír stojí v okovech. „Pošťák? Na hradě? Jak jsi prošel? Ah, Šemík! Ten věrný kůň.“;
+?;horymir;;🧔;Horymír stojí v okovech. „Pošta? Na hradě? Kudy? Ah, Šemík! Ten věrný kůň.“;
 ?;kat;;🪓;Kat si brousí sekeru a zívá. „Ráno. Až kníže řekne.“;
 ?;brana;;🚪;Brána zevnitř. Vrátný na druhé straně chce propustku.;
 napoveda;*;!heslo;💡;Šemík poslouchá jen Horymíra. Kdo ví, jak na něj volá?;

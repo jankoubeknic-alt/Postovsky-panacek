@@ -55,8 +55,8 @@ mydlo;klobouk;;🐇;„Čáry máry, z mýdla křídlo!“ Mýdlo zmizí a z klo
 hulka;klobouk;;🐇;„Čáry máry, z hůlky půlka!“ Z klobouku vypadne přesně půlka hůlky. Druhá půlka zůstala v rýmu.;-hulka +pulka
 pulka;klobouk;;🐇;„Čáry máry, z půlky hůlka!“ Půlka hůlky si v klobouku dorostla. Je zase celá.;-pulka +hulka
 hulka;kouzelnik;;🧙;Pokustón rozbalí novou hůlku a mávne. Nic se nestane. „Bez cylindru, Čáryho a Máryho je to jen klacík. Ale je nádherná!“;-hulka hulka_doruceno ikona:kouzelnik:🪄 razitko
-pulka;kouzelnik;;🧙;„Půlka hůlky? S tou zvládnu tak půl kouzla,“ zděsí se Pokustón. „Kde je zbytek? Nedal jsi ji náhodou do cylindru?“;
-host;kouzelnik;hulka_doruceno;🧙;Host vystoupí na pódium. „Dobrovolník z publika!“ zajásá Pokustón. „Výborně. Pane, stoupněte si sem a nic nedělejte. Jen se tvařte překvapeně.“;-host dobrovolnik razitko
+pulka;kouzelnik;;🧙;„Půlka hůlky? S tou zvládnu tak půl kouzla,“ zděsí se Pokustón. „Kde je zbytek? Není náhodou v cylindru?“;
+host;kouzelnik;hulka_doruceno;🧙;Host vystoupí na pódium. „Dobrovolník z publika!“ zajásá Pokustón. „Výborně. Vy, ano vy, stoupněte si sem a nic nedělejte. Jen se tvařte překvapeně.“;-host dobrovolnik razitko
 host;kouzelnik;;🧙;„Dobrovolník? Krásný,“ řekne Pokustón. „Ale bez hůlky ho nemám čím začarovat. Ať počká.“;
 host;farar;;⛪;Host se farářovi ukloní. „Představení je u vozu, pane,“ ukáže mu farář.;
 host;potok;;🌊;Host se podívá na rozvodněný potok. „Přes to? Bez mostu ne.“;

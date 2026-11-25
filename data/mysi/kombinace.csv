@@ -10,7 +10,7 @@
 # Myší Lhota: dokud hráč nemá vlajku navleky, každé podání přidá škodu (kazdy_tah v etapa.csv). Velké věci na myších místech škodí navíc.
 karta;cil;podminka;vyraz;text;efekt
 ?;starosta;syr_doruceno;🐭;Starosta Pištík obchází sýr a nemůže se ho nabažit. „Pouť bude, jen co zmizí ten kocour!“;
-?;starosta;;🐭;Starosta Pištík ti piští k botě: „Pane obře, pouť visí na vlásku! Nemáme povolení, sýr je ve studni a za plotem číhá kocour.“;
+?;starosta;;🐭;Starosta Pištík ti piští k botě: „Vaše Obrovitosti, pouť visí na vlásku! Nemáme povolení, sýr je ve studni a za plotem číhá kocour.“;
 ?;krejcova;navleky;🐁;Švadlenka Myška se koupe v náprstku a zpívá si.;
 ?;krejcova;;🐁;Švadlenka Myška šije na šicím stroji z krabičky od sirek. „Kdybych měla pořádnou vanu, ušila bych ti cokoli.“;
 ?;studna;syr_venku;🪣;Studna je prázdná. Sýr už máš v brašně.;
@@ -26,7 +26,7 @@ napoveda;*;!kocour_odesel;💡;Kocour je velký jako ty pro myši, takže tvůj 
 napoveda;*;@syr;💡;Sýr patří na pouť. Dones ho starostovi.;
 napoveda;*;;💡;Všechno je doručeno.;
 balik;krejcova;;🛁;Rozbalíš náprstek a postavíš ho před Myšku. „Vana! Konečně!“ Než se vykoupe, ušije ti z plsti návleky na boty. Teď chodíš tiše jako myš.;-balik balik_doruceno navleky ikona:krejcova:🛁 razitko
-balik;starosta;;😱;Položíš balík před radnici a ta se skoro celá schová v jeho stínu. „To je pro švadlenku!“ piští starosta. Při couvání jsi šlápl na plot.;skody+1
+balik;starosta;;😱;Položíš balík před radnici a ta se skoro celá schová v jeho stínu. „To je pro švadlenku!“ piští starosta. Při couvání ti pod botou křupne plot.;skody+1
 balik;deti;;🐀;Myšata se na balík vyšplhají jako na horu. Opatrně je setřeseš.;
 balik;kocour;;🐈;Kocour balík očichá. Náprstek? Ten nežere.;
 dopis;krejcova;;✂️;Švadlenka Myška obálku rozstříhá, přešije a přeloží. Za chvíli z ní je dopis velký jako poštovní známka.;-dopis +dopisek

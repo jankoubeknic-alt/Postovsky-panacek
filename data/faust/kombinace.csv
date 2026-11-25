@@ -18,7 +18,7 @@ dopis_domovnice;kos;;👵;Vdova Kukaňová upomínku zastaví a přečte. „Kdo
 ?;student;;😴;Student Mladecký spí s hlavou na stole. Spí už třetí den. Koš jede kolem něj a on nic.;
 ?;kos;;🧺;Koš na provaze visí v díře. Co do něj dáš, vytáhne kominík nahoru. Cestou jede kolem prvního a druhého patra.;
 ?;domovnice;vdova_doruceno cte=0 !stetky_doruceno;👩‍🦳;Domovnice zavolá do díry: „Paní Kukaňová, víte, co jsem slyšela o paní z prvního patra?“ Vdova se celá rozzáří a zaleze k oknu poslouchat. Chvíli bude zaměstnaná.;cte=2 ikona:vdova:👂
-?;domovnice;;👩‍🦳;Domovnice zametá přízemí. „Schody jsme zazdili kvůli čertovi. Teď se všechno nosí košem. Do patra nesmíš, i kdybys chtěl.“;
+?;domovnice;;👩‍🦳;Domovnice zametá přízemí. „Schody jsme zazdili kvůli čertovi. Teď se všechno nosí košem. Do patra nesmíš, ať chceš, nebo ne.“;
 ?;zednik;;👷;Zedník míchá maltu. „Díru zazdím každý večer. Ráno je zase pryč. Čert si ji asi hlídá.“;
 napoveda;*;!vdova_doruceno;💡;Vdova Kukaňová si prohlédne všechno, co jede kolem. Kdyby měla co číst, nevyhlížela by.;
 napoveda;*;!stetky_doruceno;💡;Kominík je až nahoře. Pošli mu štětky, dokud vdova čte.;
@@ -38,7 +38,7 @@ stetky;kos;;👵;Koš jede nahoru. Ve druhém patře z něj vdova Kukaňová vyt
 ucebnice;kos;student_vzhuru;🧑‍🎓;Koš zastaví v prvním patře. Student chytí učebnici a otevře ji. Z ní vypadne stříbrný tolar. „Na nájem,“ zasměje se student, přiváže k němu lísteček a hodí ho dírou dolů.;-ucebnice +tolar ucebnice_doruceno razitko
 ucebnice;kos;cte>0;🧑‍🏭;Koš projede kolem spícího studenta i čtoucí vdovy až ke kominíkovi. „Latina? To není pro mě,“ zasměje se a pošle koš zpátky dolů.;
 ucebnice;kos;;👵;Koš projede kolem spícího studenta. Ve druhém patře si učebnici vytáhne vdova. „Latina! Hrůza.“ Pošle ji dolů.;
-tolar;kos;;👵;Tolar zacinká v koši. Vdova ho vylovila dřív, než jsi mrkl. „Faustův tolar? Krásný.“ A hodí ho dolů. Tolar patří domovnici.;
+tolar;kos;;👵;Tolar zacinká v koši. Vdova ho vylovila dřív, než stihneš mrknout. „Faustův tolar? Krásný.“ A hodí ho dolů. Tolar patří domovnici.;
 dopis_domovnice;domovnice;;👩‍🦳;Domovnice čte upomínku a vzdychne. „Nájem. Kdo ho má platit, když nikdo nemůže po schodech?“;-dopis_domovnice domovnice_doruceno razitko
 tolar;domovnice;;👩‍🦳;Domovnice tolar potěžká. „Faustův tolar a lísteček Na nájem. Hodný student.“ Zaplatí zedníka, aby díru zase zazdil. Do rána.;-tolar tolar_doruceno ikona:zednik:🧱 razitko
 tolar;zednik;;👷;„Tolar? Ten patří domovnici, ta platí. Já jen zdím.“;

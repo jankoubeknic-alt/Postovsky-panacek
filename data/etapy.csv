@@ -1,64 +1,66 @@
 # Obce na trase v pořadí, v jakém se odemykají. Složka s tabulkami obce se jmenuje stejně jako id.
 # pripraveno: ano = hratelné, ne = na mapě jen jako upoutávka
-id;nazev;podtitul;pripraveno;upoutavka
-lhotka;Lhotka;Den před poutí;ano;Zamilovaný kovář, babka bez brýlí a pes, který nikoho nepustí k radnici.
-brodek;Brodek;Velká voda;ano;Řeka stoupá s každou pochůzkou. Doruč poštu dřív, než voda zaplaví lávku a mlýn.
-kamenice;Kamenice;Noční směna;ano;Hornické město, kde ve dne potkáš jiné lidi než v noci. Kdy komu zaklepat?
-lazne;Lázně Bílá;Anonymy;ano;Někdo lázeňským hostům posílá jedovaté dopisy. Kdo to je? Špatné doručení roznese drby.
-snezna;Sněžná;Poslední pošta před zimou;ano;Na horách mrzne a do brašny se vejdou jen tři věci. Vybírej, co poneseš.
-zapomnenice;Dolní Zapomněnice;Kdo jsem a proč mám dopis?;ano;Nikdo si tu nic nepamatuje déle než pár minut. Ženich zapomněl, koho si bere, a farář mele mouku.
-kozi;Kozí Hřbítek;Volby;ano;Starostkou je osm let koza Róza. Letos kandiduje kozel Bořek a volební lístky jsou z papíru. Kozy papír žerou.
-ozvenov;Ozvěnov;Co do lesa volá;ano;Ozvěna tu opakuje všechno, co kdo řekne, a nejraději tajemství. V brašně máš milostný dopis.
-certovina;Čertovina pod Kotlem;Čerti v penzi;ano;Ves vysloužilých čertů. Důchody chodí v sirných obálkách a čert Bonifác chce chovat včely.
-bezvetri;Bezvětří;Vítr v krabici;ano;Mlýny stojí a prádlo neschne. Obec si objednala vítr poštou. Balík hučí a stojí na něm NEOTVÍRAT UVNITŘ.
-mlhov;Mlhov;Ves, která tu není;ano;Ves se objevuje jen v mlze. Když se mlha zvedne, je tu jen louka a pošťák s dopisy pro lidi, kteří tu možná nejsou.
-novaves;Nová Ves u Staré Vsi;Hraniční spor;ano;Ulicí vede bílá čára od roku 1921. Dva starostové, dvě hospody a dopis přes čáru potřebuje dvě razítka.
-snekov;Šnekov;Pomalé město;ano;Starosta podepisuje jeden dopis od pondělí a zítra jsou závody šneků. Jsi tu jediný, kdo spěchá.
-mysi;Myší Lhota;Pošťák obrem;ano;Domy velké jako krabice od bot a starosta je myš. Každý tvůj krok může rozšlápnout plot.
-straky;Straky nad Blýskavou;Kdo krade lžičky;ano;Ve vsi mizí všechno, co se blýská. Sousedé se podezírají a z kostelní věže se ozývá smích. Nebo krákání?
-hluchov;Hluchov;Tichá pošta;ano;Každý tu slyší, co chce slyšet. Telegram pro babičku zní: přijede hejtman v botu s kozou.
-pozpatkov;Pozpátkov;Odpovědi chodí dřív;ano;Čas tu běží obráceně. V brašně máš tři odpovědi a nikdo se ještě nezeptal.
-lharov;Lhářov;Vítejte v Pravdíně;ano;Všichni tu lžou, i cedule a adresy. Pravdu mluví jen činy. A možná jedna paní učitelka.
-razitkov;Razítkov;Bez razítka ani ránu;ano;Okénko jedna chce papír z okénka dvě a okénko dvě papír z okénka jedna. Kdy chodí úředníci na oběd?
-jeziskova;Ježíškova Lhota;Štědrý den;ano;Tři děti se rozhodly, že letos Ježíška chytí. Ty jsi ten, kdo nosí dárky.
-kocici;Kočičí Lhota;Dort k svátku;ano;Pejsek a kočička pečou dort ze všeho, co mají nejradši. Za plotem se olizuje zlý pes.
-kasovice;Kašovice;Hrnečku, vař!;ano;Kaše teče z okna po návsi a nikdo si nepamatuje, jak se hrnec zastavuje.
-mnoukov;Mňoukov;Kocour v brašně;ano;Zvířata tu mluví, jen jim lidi nerozumějí. Kocour Fousek utekl z domu kvůli pečínce, kterou nesnědl.
-kocourkov;Kocourkov;Doslova;ano;Radnice bez oken, světlo v pytlích a adresy psané rčeními. Tady se všechno bere doslova.
-cylindrov;Cylindrov;Čáry máry;ano;Kouzelníkovi vypadl cylindr a králíci v něm čarují sami. Co spadne dovnitř, vyleze jako rým.
-loutkov;Loutkov nad Nití;Kdo za co tahá;ano;Loutkář usnul a nitě se zamotaly. Když se pohne pekař, zazvoní zvon. Tati, a proč?
-dlouha;Dlouhá Široká;Tři pomocníci;ano;Zvoník zamčený na věži, poustevník na ostrůvku a prsten na dně studny. Sám to pošťák nezvládne.
-mesickov;Měsíčkov;Dvanáct měsíčků;ano;Je leden a Holena chce fialky, jahody a jablka. Komu z bratrů dáš hůl, ten vládne.
-strachov;Hrad Strachov;Strašidelná pošta;ano;Strašidla odebírají poštu, ale před turisty se schovávají. Kastelán potřebuje návštěvnost.
-krakonosov;Krakonošov;Stížnost na počasí;ano;Statkář si stěžuje, že mu prší. Adresát pán hor chodí v převleku a pokaždé je někdo jiný.
-posta;Pošta o půlnoci;Pošťácká pohádka;ano;O půlnoci hrají na poště skřítkové karty s dopisy. Jeden z nich nemá adresu ani známku.
-konikov;Koníkov;Dostavník jede v pět;ano;Postilion onemocněl a ty ho zastupuješ. Dostavník jede dokola a na každé zastávce stojí jen chvilku.
-holubnik;Holubník;Holub letí jen domů;ano;Voda vzala mosty a zbývá holubí pošta. Jenže holub z hájovny doletí jen na hájovnu.
-tukov;Ťukov;Telegraf neumí háčky;ano;Šest balíků z Prahy a na každém jen slovo z telegramu. ROZE, KURE, KOS. Komu který patří?
-trubkovice;Trubkovice;Potrubní pošta;ano;Pěšky se doručovat nesmí, všechno potrubím. Jen ty výhybky se po každé patroně přehodí.
-spacov;Spáčov pod Blaníkem;Nejhorší chvíle;ano;V hoře spí rytíři a probudí se jen v nejhorší chvíli. Jenže ve Spáčově je zrovna docela dobře.
-hlinov;Hlínov;Golem nosí;ano;Golem z hlíny dělá přesně, co mu napíšeš. A nepřestane, dokud mu nenapíšeš dost.
-neumetely;Neumětely;Šemíkův skok;ano;Horymír je zavřený na hradě a brána je zamčená. Ve stáji stojí kůň, který přeskočí cokoli.
-faust;Faustův dům;Díra ve stropě;ano;Čert odnesl Fausta stropem a díra se nedá zalepit. Schody jsou zazděné, všechno se posílá košem.
-pecnov;Pecnov;Pec nám spadla;ano;Pec nám spadla a kdopak nám ji postaví? Mladý pecař by chtěl, ale každý mu radí jinak.
-skakalov;Skákalov;Skákal pes přes oves;ano;Pes Alík ukradl myslivci péro z klobouku a utíká s ním dokola. Myslivec je pořád o krok pozadu.
-masopust;Maškarovice;Kdo je pod maskou;ano;Celá ves chodí v masopustním průvodu a masku si nikdo nesundá. Pošťák má dopisy pro čtyři z nich.
-pomlazkov;Pomlázkov;Čtyři dny Velikonoc;ano;Na Zelený čtvrtek odletí zvony, na Velký pátek se nic nedává a v pondělí se koleduje. Kdo nestihne, čeká rok.
-hejrupov;Hejrupov;Máj a čarodějnice;ano;Máj se staví, jen když tlačí všichni naráz. Jenže každý vydrží čekat jinak dlouho.
-mikulasov;Mikulášov;Nůše se plní odspodu;ano;Anděl vytahuje dárky z nůše shora. Co se dá dovnitř poslední, dostane první dům.
-kolacov;Koláčov;Kdo sedí vedle koho;ano;Na posvícení se sjela rodina a pošťák má hosty rozesadit. Tak, aby se nepohádali.
-trirec;Třířečí;Tři kraje, tři řeči;ano;Na nádraží se potká Haná, Valašsko a Ostrava. Každý mluví po svém a stejné slovo neznamená všude totéž.
-jelenihraz;Jelení Hráz;Plavení dřeva;ano;Těžké balíky plavou kanálem s dřívím. Kdo dostane avízo, vyloví všechno, co jde kolem.
-vylovice;Výlovice;Výlov rybníka;ano;Tři rybníky nad sebou a jedna síť. Co se vypustí nahoře, steče dolů.
-stolov;Štolov;Permoník v dole;ano;Klec jede tam, kolikrát zazvoníš. A v nejhlubším patře se potmě ukáže permoník.
-bludickov;Bludičkov;Světla na slatích;ano;Přes slatě vede jediná pevná stezka. Bludičky přeskakujou, lucerna hajné stojí.
-kramarov;Kramářov;Jarmark;ano;Babiččin hrnec cestou praskl a dráteníkovi došel drát. Na jarmarku se dá všechno vyměnit, když víš za co.
-hodinov;Hodinov;Co ponocný zatroubí;ano;V Hodinově nemají hodiny, čas dělá ponocný. A když se splete, ves mu věří.
-martinov;Martinov;Plášť napůl;ano;Martin přijede na bílém koni, až budou všichni zahřátí a nasycení. Plášť i pecen se dají rozpůlit mečem.
-barborov;Barborov;Barborky do Vánoc;ano;Třešňové větvičky musí do Štědrého dne rozkvést. Jenže každá dívka má jinou potíž.
-vaclavice;Václavice;Šlépěje ve sněhu;ano;Kníže Václav nese v noci dříví chudým. Kdo šlape do jeho šlépějí, tomu nemrznou nohy.
-florianov;Floriánov;Svatý Floriáne, chraň náš dům;ano;Hasiči slaví v hospodě a kovárna hoří. Vítr nese jiskry k chalupě, kde spí babička.
-lucin;Lucín;Stoleček ze třinácti dřev;ano;Luciin stoleček musí být z přesně třinácti druhů dřeva. Ve svazcích od lidí se ale druhy opakují.
-prokopov;Prokopov;Čert v pluhu;ano;Svatý Prokop zapřáhl čerta do pluhu. Čert táhne rovně, dokud nenarazí, a pole se musí zorat celé.
-stirovice;Štírovice;Hadi a štíři;ano;Na svatého Jiří vylézají hadi a štíři, ale jen když najdou parťáka. Pod kameny zapadlo, co ves přes zimu ztratila.
-janskybrod;Jánský Brod;Listovní tajemství;ano;Velká voda vzala most. Loďka uveze jen jednoho a drbna přečte každý dopis, se kterým zůstane sama.
+# kapitola: id z kapitoly.csv. Na trase se nad první obcí kapitoly ukáže její název a před první obcí mezihra.
+id;nazev;podtitul;pripraveno;upoutavka;kapitola
+lhotka;Lhotka;Den před poutí;ano;Zamilovaný kovář, babka bez brýlí a pes, který nikoho nepustí k radnici.;leto
+hluchov;Hluchov;Tichá pošta;ano;Každý tu slyší, co chce slyšet. Telegram pro babičku zní: přijede hejtman v botu s kozou.;leto
+krakonosov;Krakonošov;Stížnost na počasí;ano;Statkář si stěžuje, že mu prší. Adresát pán hor chodí v převleku a pokaždé je někdo jiný.;leto
+skakalov;Skákalov;Skákal pes přes oves;ano;Pes Alík ukradl myslivci péro z klobouku a utíká s ním dokola. Myslivec je pořád o krok pozadu.;leto
+mysi;Myší Lhota;Obrem mezi myšmi;ano;Domy velké jako krabice od bot a starosta je myš. Každý tvůj krok může rozšlápnout plot.;podzim
+kramarov;Kramářov;Jarmark;ano;Babiččin hrnec cestou praskl a dráteníkovi došel drát. Na jarmarku se dá všechno vyměnit, když víš za co.;podzim
+trirec;Třířečí;Tři kraje, tři řeči;ano;Na nádraží se potká Haná, Valašsko a Ostrava. Každý mluví po svém a stejné slovo neznamená všude totéž.;podzim
+cylindrov;Cylindrov;Čáry máry;ano;Kouzelníkovi vypadl cylindr a králíci v něm čarují sami. Co spadne dovnitř, vyleze jako rým.;podzim
+spacov;Spáčov pod Blaníkem;Nejhorší chvíle;ano;V hoře spí rytíři a probudí se jen v nejhorší chvíli. Jenže ve Spáčově je zrovna docela dobře.;podzim
+bezvetri;Bezvětří;Vítr v krabici;ano;Mlýny stojí a prádlo neschne. Obec si objednala vítr poštou. Balík hučí a stojí na něm NEOTVÍRAT UVNITŘ.;podzim
+kolacov;Koláčov;Kdo sedí vedle koho;ano;Na posvícení se sjela rodina a ty máš hosty rozesadit. Tak, aby se nepohádali.;podzim
+mlhov;Mlhov;Ves, která tu není;ano;Ves se objevuje jen v mlze. Když se mlha zvedne, je tu jen louka a ty s dopisy pro lidi, kteří tu možná nejsou.;podzim
+vylovice;Výlovice;Výlov rybníka;ano;Tři rybníky nad sebou a jedna síť. Co se vypustí nahoře, steče dolů.;podzim
+strachov;Hrad Strachov;Strašidelná pošta;ano;Strašidla odebírají poštu, ale před turisty se schovávají. Kastelán potřebuje návštěvnost.;podzim
+bludickov;Bludičkov;Světla na slatích;ano;Přes slatě vede jediná pevná stezka. Bludičky přeskakujou, lucerna hajné stojí.;podzim
+martinov;Martinov;Plášť napůl;ano;Martin přijede na bílém koni, až budou všichni zahřátí a nasycení. Plášť i pecen se dají rozpůlit mečem.;podzim
+faust;Faustův dům;Díra ve stropě;ano;Čert odnesl Fausta stropem a díra se nedá zalepit. Schody jsou zazděné, všechno se posílá košem.;podzim
+hodinov;Hodinov;Co ponocný zatroubí;ano;V Hodinově nemají hodiny, čas dělá ponocný. A když se splete, ves mu věří.;podzim
+snezna;Sněžná;Poslední pošta před zimou;ano;Na horách mrzne a do brašny se vejdou jen tři věci. Vybírej, co poneseš.;podzim
+barborov;Barborov;Barborky do Vánoc;ano;Třešňové větvičky musí do Štědrého dne rozkvést. Jenže každá dívka má jinou potíž.;zima
+mikulasov;Mikulášov;Nůše se plní odspodu;ano;Anděl vytahuje dárky z nůše shora. Co se dá dovnitř poslední, dostane první dům.;zima
+lucin;Lucín;Stoleček ze třinácti dřev;ano;Luciin stoleček musí být z přesně třinácti druhů dřeva. Ve svazcích od lidí se ale druhy opakují.;zima
+jeziskova;Ježíškova Lhota;Štědrý den;ano;Tři děti se rozhodly, že letos Ježíška chytí. Dárky nosíš ty.;zima
+vaclavice;Václavice;Šlépěje ve sněhu;ano;Kníže Václav nese v noci dříví chudým. Kdo šlape do jeho šlépějí, tomu nemrznou nohy.;zima
+pozpatkov;Pozpátkov;Odpovědi chodí dřív;ano;Čas tu běží obráceně. V brašně máš tři odpovědi a nikdo se ještě nezeptal.;zima
+mesickov;Měsíčkov;Dvanáct měsíčků;ano;Je leden a Holena chce fialky, jahody a jablka. Komu z bratrů dáš hůl, ten vládne.;zima
+kozi;Kozí Hřbítek;Volby;ano;Starostkou je osm let koza Róza. Letos kandiduje kozel Bořek a volební lístky jsou z papíru. Kozy papír žerou.;zima
+trubkovice;Trubkovice;Potrubní pošta;ano;Pěšky se doručovat nesmí, všechno potrubím. Jen ty výhybky se po každé patroně přehodí.;zima
+kamenice;Kamenice;Noční směna;ano;Hornické město, kde ve dne potkáš jiné lidi než v noci. Kdy komu zaklepat?;zima
+certovina;Čertovina pod Kotlem;Čerti v penzi;ano;Ves vysloužilých čertů. Důchody chodí v sirných obálkách a čert Bonifác chce chovat včely.;zima
+kasovice;Kašovice;Hrnečku, vař!;ano;Kaše teče z okna po návsi a nikdo si nepamatuje, jak se hrnec zastavuje.;zima
+hlinov;Hlínov;Golem nosí;ano;Golem z hlíny dělá přesně, co mu napíšeš. A nepřestane, dokud mu nenapíšeš dost.;zima
+masopust;Maškarovice;Kdo je pod maskou;ano;Celá ves chodí v masopustním průvodu a masku si nikdo nesundá. V brašně máš dopisy pro čtyři z nich.;zima
+pecnov;Pecnov;Pec nám spadla;ano;Pec nám spadla a kdopak nám ji postaví? Mladý pecař by chtěl, ale každý mu radí jinak.;zima
+posta;Pošta o půlnoci;Pošťácká pohádka;ano;O půlnoci hrají na poště skřítkové karty s dopisy. Jeden z nich nemá adresu ani známku.;zima
+razitkov;Razítkov;Bez razítka ani ránu;ano;Okénko jedna chce papír z okénka dvě a okénko dvě papír z okénka jedna. Kdy chodí úředníci na oběd?;jaro
+holubnik;Holubník;Holub letí jen domů;ano;Voda vzala mosty a zbývá holubí pošta. Jenže holub z hájovny doletí jen na hájovnu.;jaro
+stolov;Štolov;Permoník v dole;ano;Klec jede tam, kolikrát zazvoníš. A v nejhlubším patře se potmě ukáže permoník.;jaro
+loutkov;Loutkov nad Nití;Kdo za co tahá;ano;Loutkář usnul a nitě se zamotaly. Když se pohne pekař, zazvoní zvon. Tati, a proč?;jaro
+straky;Straky nad Blýskavou;Kdo krade lžičky;ano;Ve vsi mizí všechno, co se blýská. Sousedé se podezírají a z kostelní věže se ozývá smích. Nebo krákání?;jaro
+lharov;Lhářov;Vítejte v Pravdíně;ano;Všichni tu lžou, i cedule a adresy. Pravdu mluví jen činy. A možná jedna paní učitelka.;jaro
+pomlazkov;Pomlázkov;Čtyři dny Velikonoc;ano;Na Zelený čtvrtek odletí zvony, na Velký pátek se nic nedává a v pondělí se koleduje. Kdo nestihne, čeká rok.;jaro
+brodek;Brodek;Velká voda;ano;Řeka stoupá s každou pochůzkou. Doruč poštu dřív, než voda zaplaví lávku a mlýn.;jaro
+stirovice;Štírovice;Hadi a štíři;ano;Na svatého Jiří vylézají hadi a štíři, ale jen když najdou parťáka. Pod kameny zapadlo, co ves přes zimu ztratila.;jaro
+hejrupov;Hejrupov;Máj a čarodějnice;ano;Máj se staví, jen když tlačí všichni naráz. Jenže každý vydrží čekat jinak dlouho.;jaro
+snekov;Šnekov;Pomalé město;ano;Starosta podepisuje jeden dopis od pondělí a zítra jsou závody šneků. Jsi tu jediný, kdo spěchá.;jaro
+florianov;Floriánov;Svatý Floriáne, chraň náš dům;ano;Hasiči slaví v hospodě a kovárna hoří. Vítr nese jiskry k chalupě, kde spí babička.;jaro
+zapomnenice;Dolní Zapomněnice;Kdo jsem a proč mám dopis?;ano;Nikdo si tu nic nepamatuje déle než pár minut. Ženich zapomněl, koho si bere, a farář mele mouku.;jaro
+jelenihraz;Jelení Hráz;Plavení dřeva;ano;Těžké balíky plavou kanálem s dřívím. Kdo dostane avízo, vyloví všechno, co jde kolem.;jaro
+janskybrod;Jánský Brod;Listovní tajemství;ano;Velká voda vzala most. Loďka uveze jen jednoho a drbna přečte každý dopis, se kterým zůstane sama.;jaro
+tukov;Ťukov;Telegraf neumí háčky;ano;Šest balíků z Prahy a na každém jen slovo z telegramu. ROZE, KURE, KOS. Komu který patří?;leto2
+kocici;Kočičí Lhota;Dort k svátku;ano;Pejsek a kočička pečou dort ze všeho, co mají nejradši. Za plotem se olizuje zlý pes.;leto2
+lazne;Lázně Bílá;Anonymy;ano;Někdo lázeňským hostům posílá jedovaté dopisy. Kdo to je? Špatné doručení roznese drby.;leto2
+novaves;Nová Ves u Staré Vsi;Hraniční spor;ano;Ulicí vede bílá čára od roku 1921. Dva starostové, dvě hospody a dopis přes čáru potřebuje dvě razítka.;leto2
+konikov;Koníkov;Dostavník jede v pět;ano;Postilion onemocněl a ty ho zastupuješ. Dostavník jede dokola a na každé zastávce stojí jen chvilku.;leto2
+ozvenov;Ozvěnov;Co do lesa volá;ano;Ozvěna tu opakuje všechno, co kdo řekne, a nejraději tajemství. V brašně máš milostný dopis.;leto2
+prokopov;Prokopov;Čert v pluhu;ano;Svatý Prokop zapřáhl čerta do pluhu. Čert táhne rovně, dokud nenarazí, a pole se musí zorat celé.;leto2
+neumetely;Neumětely;Šemíkův skok;ano;Horymír je zavřený na hradě a brána je zamčená. Ve stáji stojí kůň, který přeskočí cokoli.;leto2
+dlouha;Dlouhá Široká;Tři pomocníci;ano;Zvoník zamčený na věži, poustevník na ostrůvku a prsten na dně studny. Bez pomoci to nezvládneš.;leto2
+mnoukov;Mňoukov;Kocour v brašně;ano;Zvířata tu mluví, jen jim lidi nerozumějí. Kocour Fousek utekl z domu kvůli pečínce, kterou nesnědl.;leto2
+kocourkov;Kocourkov;Doslova;ano;Radnice bez oken, světlo v pytlích a adresy psané rčeními. Tady se všechno bere doslova.;leto2
+lhotka2;Lhotka po roce;Den před poutí;ano;Zase 14. srpna, zase pouť. A v brašně dopis, který čekal třicet let.;leto2

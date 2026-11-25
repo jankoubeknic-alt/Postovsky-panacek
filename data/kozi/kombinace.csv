@@ -42,7 +42,7 @@ faktura;urna;;🗳️;Faktura do urny nepatří. To by byl hlas pro družstvo.;
 listek_s;sedlak;sedlak_vi;✍️;Sedlák lístek popadne a zakroužkuje Rózu, až propíchne papír. „Tumáš. Ať ví, že poctivá koza je lepší než zlodějský kozel.“;-listek_s +hlas_s
 listek_s;sedlak;;👨‍🌾;Sedlák lístek obrací v ruce. „Bořek mi slíbil jetel. Ale počkej, ještě si to rozmyslím.“ Vrátí ti ho nevyplněný.;
 listek_b;babka;babka_vi;✍️;Babka zakroužkuje Rózu a namaluje k tomu kytičku. „Záclony mi snědla, ale za to se aspoň omluvila.“;-listek_b +hlas_b
-listek_b;babka;;👵;„Cože? Koho mám volit? Kozu? Nebo kozla? Nikoho z nich neznám, chlapče.“;
+listek_b;babka;;👵;„Cože? Koho mám volit? Kozu? Nebo kozla? Nikoho z nich neznám.“;
 plakat;babka;;🤓;Babka si leták přidrží u nosu. „Róza: Nic se nezmění. Bořek: Jetel pro všechny. No, já mám ráda, když se nic nemění.“;-plakat plakat_doruceno babka_vi razitko
 plakat;sedlak;;👨‍🌾;„Jetel pro všechny! Hm. A odkud ho asi vezme?“;
 plakat;borek;;🐏;Bořek si leták prohlédne, snědne roh s Rózou a zbytek ti vrátí.;

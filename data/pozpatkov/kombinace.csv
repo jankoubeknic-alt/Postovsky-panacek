@@ -39,7 +39,7 @@ odpoved_marie;ucitel;;😳;Učitel si přečte: „Ano, vezmu si tě. Ale jen kd
 odpoved_marie;kovar;;😳;Kovář se začervená až po kovadlinu. „Ano? Mně?“ Pak dočte: „…přestaneš troubit.“ Smutně ti dopis vrátí. „Já netroubím. Já buším.“;
 odpoved_marie;marie;;👩;Marie si přečte vlastní odpověď. „To jsem psala já? Ale komu? Nikdo se mě ještě nezeptal.“ Vrátí ti ji.;
 odpoved_marie;starosta;;🎩;„Odpověď od Marie? Ženich bude ten, kdo jí troubí pod oknem. Říkám to jen tak.“;
-odpoved_marie;farar;;👴;„Ano, vezmu si tě? Já jsem farář, chlapče. Já oddávám, nežením se.“;
+odpoved_marie;farar;;👴;„Ano, vezmu si tě? Já jsem farář. Já oddávám, nežením se.“;
 odpoved_marie;vrana;;👨‍🌾;„Mě si nikdo nevezme. Mám kozu.“;
 odpoved_marie;kominik;;🧑‍🏭;„Ano? Na co ano? Já se nikoho na nic neptal.“;
 odpoved_marie;schranka;;📮;Odpověď do schránky nepatří. Tu už Marie jednou odeslala.;
@@ -67,13 +67,13 @@ stiznost;vrana;;😅;Vrána si přečte stížnost a plácne se do čela. „Tak
 stiznost;farar;;😠;„To jsem psal já. Pro Vránu. Ať ví, za co se omlouval.“;
 stiznost;schranka;;📮;Vrána bydlí hned za plotem. Stížnost mu dones rovnou.;
 stiznost;*;;🤷;„Stížnost na kozu? Ta je pro sedláka Vránu.“;
-objednavka;schranka;;📮;Hodíš objednávku do schránky. Brašna ti ve stejné chvíli ztěžkne: přibyl balík se žebříkem. Železářství ho odeslalo dřív, než sis ho objednal.;-objednavka objednavka_odeslana +zebrik
+objednavka;schranka;;📮;Hodíš objednávku do schránky. Brašna ti ve stejné chvíli ztěžkne: přibyl balík se žebříkem. Železářství ho odeslalo dřív, než ho kdo objednal.;-objednavka objednavka_odeslana +zebrik
 objednavka;kominik;;😰;„Hoď ji do schránky! Žebřík už přece jede. Jen si ho musím objednat.“;
 objednavka;*;;🤷;„Objednávka pro železářství? Ta patří do schránky.“;
 zebrik;kominik;;🧑‍🏭;Opřeš nový žebřík o střechu a kominík sleze dolů. „Díky! Teď už vím, proč jsem si ho objednal.“;-zebrik zebrik_doruceno !kominik_nahore ikona:kominik:🧑‍🏭 razitko
 zebrik;*;;🤷;„Žebřík? Ten je pro kominíka. Pořád sedí na střeše.“;
-podekovani;starosta;zadost_doruceno stiznost_doruceno zebrik_doruceno;😊;Starosta si přečte poděkování, které ti napsal ráno. „Díky, pošťáku, žes nám dal všechno do pořádku.“ Rozhlédne se po vsi. „Konečně vím, za co!“;-podekovani podekovani_doruceno ikona:starosta:😊 razitko
+podekovani;starosta;zadost_doruceno stiznost_doruceno zebrik_doruceno;😊;Starosta si přečte poděkování, které ti napsal ráno. „Díky za poštu, všechno je v pořádku.“ Rozhlédne se po vsi. „Konečně vím, za co!“;-podekovani podekovani_doruceno ikona:starosta:😊 razitko
 podekovani;starosta;;🎩;Starosta si poděkování přečte a škrábe se na hlavě. „Ještě není za co. Přines mi ho, až to bude pravda.“;
-podekovani;schranka;;📮;Poděkování je tvoje. Do schránky nepatří, leda bys ho chtěl poslat sám sobě. Včera.;
+podekovani;schranka;;📮;Poděkování je tvoje. Do schránky nepatří, leda jako dopis sobě. Včera.;
 podekovani;*;;🤷;„Od starosty? Ten ti poděkoval předem. Jako my všichni.“;
 *;*;;🤷;Nic se nestane.;

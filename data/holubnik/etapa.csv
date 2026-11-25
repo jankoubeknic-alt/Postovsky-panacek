@@ -1,11 +1,11 @@
 klic;hodnota
 datum;9. III.
-start;dopis_hajny dopis_baca dopis_balonar koreni
+start;dopis_hajny dopis_baca dopis_balonar koreni vrbuv_dopis
 cil;hajny_doruceno baca_doruceno balonar_doruceno koreni_doruceno
-uvod;Holubník leží v údolí a jarní voda vzala oba mosty. Na hájovnu na kopci, na salaš pod hřebenem ani do balónu, který visí nad vsí, se teď nedá dojít. Zbývá holubí pošta pana Hrdličky.|Jenže holub letí jen domů. Kdo chce poslat dopis na hájovnu, potřebuje holuba z hájovny. A ti jsou rozlétaní po celé vsi.
+uvod;Holubník leží v údolí a jarní voda vzala oba mosty. Na hájovnu na kopci, na salaš pod hřebenem ani do balónu, který visí nad vsí, se teď nedá dojít. Zbývá holubí pošta pana Hrdličky.|Jenže holub letí jen domů. Kdo chce poslat dopis na hájovnu, potřebuje holuba z hájovny. A ti jsou rozlétaní po celé vsi.|Pan Hrdlička chová i holuby po starém pošťákovi Vrbovi.
 navod;Holub letí jen domů. Pro každé místo potřebuješ holuba odtamtud.
 konec_nadpis;Holubi doletěli
-konec_text;Jehličák doletěl na hájovnu, Bryndza na salaš a Toulavka do koše balónu. Hajný, bača i balonář si dopisy přečetli a zamávali dolů do údolí. Kvočna sedí na holubích vejcích a tváří se, že jsou její.|Brašna je prázdná. Pan Hrdlička ti daroval holuba z Holubníku. Prý kdybys někdy potřeboval poslat zprávu sem. Jinam stejně nepoletí.
+konec_text;Jehličák doletěl na hájovnu, Bryndza na salaš a Toulavka do koše balónu. Hajný, bača i balonář si dopisy přečetli a zamávali dolů do údolí. Kvočna sedí na holubích vejcích a tváří se, že jsou její.|Brašna je prázdná. Pan Hrdlička ti daroval holuba z Holubníku. Prý až budeš potřebovat poslat zprávu sem. Jinam stejně nepoletí.
 pozadi;data/holubnik/pozadi.svg
 barvy;
 pocitadla;
