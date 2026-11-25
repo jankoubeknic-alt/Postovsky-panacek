@@ -1,17 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-  <!-- Zástupné pozadí Hluchova: nahoře tabule s přepisem telegramu, vlevo pošta s telefonním drátem, vpravo hospoda,
+  <!-- Zástupné pozadí Hluchova (tabule s přepisem telegramu je zvlášť v tabule.svg): vlevo pošta s telefonním drátem, vpravo hospoda,
        uprostřed ulice s ploty, vlevo dílna švadleny, vpravo kostelík, dole posed a babiččina chalupa. -->
   <rect width="300" height="400" fill="#DCE7E4"/>
   <path d="M0 110C50 92 100 100 150 94S250 86 300 100V180H0Z" fill="#A9C1A2"/>
   <path d="M0 130C70 118 130 124 190 118S270 114 300 122V180H0Z" fill="#94B08C"/>
   <path d="M0 160H300V400H0Z" fill="#B9CC9C"/>
-  <!-- tabule na dvou sloupcích -->
-  <g fill="#7A5A3A"><rect x="72" y="80" width="6" height="34"/><rect x="222" y="80" width="6" height="34"/></g>
-  <rect x="56" y="12" width="188" height="74" rx="3" fill="#8A6440"/>
-  <rect x="61" y="17" width="178" height="64" fill="#2F4A3E"/>
-  <text x="150" y="28" font-family="Georgia, serif" font-size="6.5" letter-spacing="1.5" fill="#BFD0C6" text-anchor="middle">TELEGRAM PRO SLYŠELOVOU – PŘEPIS</text>
-  <path d="M70 31H230" stroke="#4E6A5D" stroke-width="1"/>
-  <rect x="200" y="80" width="18" height="3" fill="#EDE8D8"/>
   <!-- pošta s telefonním sloupem -->
   <rect x="0" y="122" width="78" height="50" fill="#F1E6CC"/>
   <path d="M-6 126L39 98L84 126Z" fill="#9A4B36"/>

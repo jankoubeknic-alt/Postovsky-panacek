@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Tabule na dvou sloupcích, na ni se píše přepis telegramu (vrstvy kdo, kdy, s). Je zvlášť, aby byla i nad kreslenou scénou. -->
+  <g fill="#7A5A3A"><rect x="72" y="80" width="6" height="34"/><rect x="222" y="80" width="6" height="34"/></g>
+  <rect x="56" y="12" width="188" height="74" rx="3" fill="#8A6440"/>
+  <rect x="61" y="17" width="178" height="64" fill="#2F4A3E"/>
+  <text x="150" y="28" font-family="Georgia, serif" font-size="6.5" letter-spacing="1.5" fill="#BFD0C6" text-anchor="middle">TELEGRAM PRO SLYŠELOVOU – PŘEPIS</text>
+  <path d="M70 31H230" stroke="#4E6A5D" stroke-width="1"/>
+  <rect x="200" y="80" width="18" height="3" fill="#EDE8D8"/>
+</svg>

@@ -21,6 +21,20 @@ Prompty jsou anglicky, protože ChatGPT podle nich drží styl přesněji. Každ
 - Lhotka: hotovo, všech 16 obrázků.
 - Lhotka po roce: hotovo. Vlastní má babku s brýlemi, poštmistrovou, poutníka a pásku, zbytek si půjčuje ze Lhotky.
 
+## Další obce
+
+Prompty pro další obce jsou přímo ve složkách `obrazky_vstup/<obec>/prompty.md`, obrázky se ukládají vedle nich. Git ignoruje jen obrázky, prompty se commitují.
+
+| Obec | Složka | Obrázků | Stav |
+| --- | --- | --- | --- |
+| Hluchov | `obrazky_vstup/hluchov/` | 15 | prompty připravené |
+| Krakonošov | `obrazky_vstup/krakonosov/` | 15 | prompty připravené |
+| Skákalov | `obrazky_vstup/skakalov/` | 12 | prompty připravené |
+| Myší Lhota | `obrazky_vstup/mysi/` | 12 | prompty připravené |
+| Kramářov | `obrazky_vstup/kramarov/` | 15 | prompty připravené |
+
+Obyčejnou obálku (`dopis_uhlir.png` v Krakonošově) a Vrbův dopis (Lhotka) si ostatní obce půjčují, stejně jako poutníka (Krakonoš z finále Lhotky).
+
 ## Pravidla pro další obce
 
 - Styl je vždy stejný (blok „Style“ v každém promptu).

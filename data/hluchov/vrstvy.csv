@@ -1,5 +1,6 @@
-# Přepis telegramu na tabuli: tři řádky podle počítadel kdo, kdy a s.
+# Tabule (vždy vidět) a přepis telegramu na ní: tři řádky podle počítadel kdo, kdy a s.
 obrazek;podminka
+data/hluchov/tabule.svg;
 data/hluchov/kdo0.svg;kdo=0
 data/hluchov/kdo1.svg;kdo=1
 data/hluchov/kdo2.svg;kdo=2
