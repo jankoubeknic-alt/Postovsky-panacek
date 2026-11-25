@@ -19,7 +19,7 @@ Prompty jsou anglicky, protože ChatGPT podle nich drží styl přesněji. Každ
 ## Stav
 
 - Lhotka: hotovo, všech 16 obrázků.
-- Lhotka po roce: hotovo. Vlastní má babku s brýlemi, poštmistrovou, poutníka a pásku, zbytek si půjčuje ze Lhotky.
+- Lhotka po roce: hotovo. Nové jsou babka s brýlemi, poštmistrová, poutník a páska, zbytek jsou kopie obrázků ze Lhotky.
 
 ## Další obce
 
@@ -33,7 +33,7 @@ Prompty pro další obce jsou přímo ve složkách `obrazky_vstup/<obec>/prompt
 | Myší Lhota | `obrazky_vstup/mysi/` | 12 | prompty připravené |
 | Kramářov | `obrazky_vstup/kramarov/` | 15 | prompty připravené |
 
-Obyčejnou obálku (`dopis_uhlir.png` v Krakonošově) a Vrbův dopis (Lhotka) si ostatní obce půjčují, stejně jako poutníka (Krakonoš z finále Lhotky).
+Obrázek, který se hodí i jinde, se nekreslí znovu. Zkopíruje se do složky další obce pod jménem podle jejích dat a prompt pro něj tam není. Tak je to s Vrbovým dopisem, poutníkem (Krakonoš z finále Lhotky), obyčejnou obálkou (`dopis_uhlir.png` z Krakonošova) a se psem a myslivcem ve třech řadách Skákalova. Co se zkopírovat dá až po vygenerování předlohy, je v `prompty.md` obce vypsané zvlášť.
 
 ## Pravidla pro další obce
 

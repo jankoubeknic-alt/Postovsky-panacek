@@ -5,16 +5,20 @@ Obec je na trase 17. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 1. Založ v ChatGPT nový chat. Do první zprávy nahraj ze Lhotky `obrazky_vstup/lhotka/pozadi.png` a `obrazky_vstup/lhotka/starosta.png` a napiš: `These are style references for all following images. Match their style exactly.`
 2. Pak zadávej prompty níže jeden po druhém: napřed scénu, pak postavy, pak věci.
 3. Každý obrázek ulož do téhle složky pod jménem z nadpisu.
+   Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
 ## Poznámky k obci
 
-- Na tabuli nahoře uprostřed píše hra přepis telegramu sama. Proto má scéna nahoře jen oblohu, tabuli tam hra dokreslí.
-- Vrbův dopis si Hluchov půjčí ze Lhotky, negeneruj ho.
+- Hra si tabuli s přepisem telegramu nahoře uprostřed kreslí sama. Proto má scéna nahoře jen oblohu.
 
-## Soubory (15)
+## Soubory
 
-`pozadi.png`, `tabule.png`, `telegrafistka.png`, `hostinsky.png`, `pepik.png`, `svadlena.png`, `kostelnik.png`, `myslivec.png`, `babicka.png`, `babicka_stastna.png`, `telegram.png`, `noviny.png`, `niti.png`, `vabnicka.png`, `svicky.png`
+Vygeneruj (15): `pozadi.png`, `tabule.png`, `telegrafistka.png`, `hostinsky.png`, `pepik.png`, `svadlena.png`, `kostelnik.png`, `myslivec.png`, `babicka.png`, `babicka_stastna.png`, `telegram.png`, `noviny.png`, `niti.png`, `vabnicka.png`, `svicky.png`
+
+Už jsou ve složce, zkopírované z jiných obcí (1): `vrbuv_dopis.png`
+
+Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
 

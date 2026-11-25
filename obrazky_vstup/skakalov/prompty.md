@@ -5,16 +5,21 @@ Obec je na trase 27. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 1. Založ v ChatGPT nový chat. Do první zprávy nahraj ze Lhotky `obrazky_vstup/lhotka/pozadi.png` a `obrazky_vstup/lhotka/starosta.png` a napiš: `These are style references for all following images. Match their style exactly.`
 2. Pak zadávej prompty níže jeden po druhém: napřed scénu, pak postavy, pak věci.
 3. Každý obrázek ulož do téhle složky pod jménem z nadpisu.
+   Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
 ## Poznámky k obci
 
-- Pes Alík a myslivec běhají po třech řadách (oves, louka, les). Každý má jeden obrázek pro všechny tři řady a jeden pro změněný stav.
-- Obyčejné dopisy si Skákalov půjčí z Krakonošova (`dopis_uhlir.png`), negeneruj je.
+- Pes Alík a myslivec běhají po třech řadách (oves, louka, les). Generuješ jen obrázky pro první řadu (`pes1`, `mys1` a jejich změněný stav), kopie pro druhou a třetí řadu udělám sám.
+- Obyčejné dopisy dostanou obálku z Krakonošova (`dopis_uhlir.png`).
 
-## Soubory (12)
+## Soubory
 
-`pozadi.png`, `sedlak.png`, `pes1.png`, `pes1_obojek.png`, `mys1.png`, `mys1_pero.png`, `pasacek.png`, `hajny.png`, `dopis_pasacek.png`, `obojek.png`, `burt.png`, `pero.png`
+Vygeneruj (12): `pozadi.png`, `sedlak.png`, `pes1.png`, `pes1_obojek.png`, `mys1.png`, `mys1_pero.png`, `pasacek.png`, `hajny.png`, `dopis_pasacek.png`, `obojek.png`, `burt.png`, `pero.png`
+
+Doplním sám kopií, až budou hotové jejich předlohy (10): `pes2.png`, `pes3.png`, `pes2_obojek.png`, `pes3_obojek.png`, `mys2.png`, `mys3.png`, `mys2_pero.png`, `mys3_pero.png`, `dopis_sedlak.png`, `dopis_hajny.png`
+
+Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
 

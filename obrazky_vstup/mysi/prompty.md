@@ -5,17 +5,22 @@ Obec je na trase 6. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 1. Založ v ChatGPT nový chat. Do první zprávy nahraj ze Lhotky `obrazky_vstup/lhotka/pozadi.png` a `obrazky_vstup/lhotka/starosta.png` a napiš: `These are style references for all following images. Match their style exactly.`
 2. Pak zadávej prompty níže jeden po druhém: napřed scénu, pak postavy, pak věci.
 3. Každý obrázek ulož do téhle složky pod jménem z nadpisu.
+   Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
 ## Poznámky k obci
 
 - Myší Lhota je pro hráče malinká, scéna je proto jako zahradní kout, kde všechno měří pár centimetrů.
 - Kocour Mikeš je zrzavý mourek. Nesmí vypadat jako žádný známý kreslený kocour.
-- Obyčejný dopis si Myší Lhota půjčí z Krakonošova (`dopis_uhlir.png`), negeneruj ho.
+- Obyčejný dopis dostane obálku z Krakonošova (`dopis_uhlir.png`).
 
-## Soubory (12)
+## Soubory
 
-`pozadi.png`, `starosta.png`, `starosta_slavi.png`, `krejcova.png`, `krejcova_vana.png`, `studna.png`, `deti.png`, `kocour.png`, `balik.png`, `dopis_kocour.png`, `dopisek.png`, `syr.png`
+Vygeneruj (12): `pozadi.png`, `starosta.png`, `starosta_slavi.png`, `krejcova.png`, `krejcova_vana.png`, `studna.png`, `deti.png`, `kocour.png`, `balik.png`, `dopis_kocour.png`, `dopisek.png`, `syr.png`
+
+Doplním sám kopií, až budou hotové jejich předlohy (1): `dopis.png`
+
+Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
 

@@ -5,15 +5,22 @@ Obec je na trase 8. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 1. Založ v ChatGPT nový chat. Do první zprávy nahraj ze Lhotky `obrazky_vstup/lhotka/pozadi.png` a `obrazky_vstup/lhotka/starosta.png` a napiš: `These are style references for all following images. Match their style exactly.`
 2. Pak zadávej prompty níže jeden po druhém: napřed scénu, pak postavy, pak věci.
 3. Každý obrázek ulož do téhle složky pod jménem z nadpisu.
+   Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
 ## Poznámky k obci
 
-- Obyčejné dopisy si Kramářov půjčí z Krakonošova (`dopis_uhlir.png`) a Vrbův dopis ze Lhotky. Druhý krejcar použije obrázek prvního. Negeneruj je.
+- Obyčejné dopisy dostanou obálku z Krakonošova (`dopis_uhlir.png`) a druhý krejcar obrázek prvního.
 
-## Soubory (15)
+## Soubory
 
-`pozadi.png`, `babicka.png`, `dratenik.png`, `flasinetar.png`, `pernikar.png`, `strelnice.png`, `kramarka.png`, `kolotoc.png`, `hrncir.png`, `hrnec.png`, `krejcar.png`, `pernik.png`, `ruze.png`, `drat.png`, `hrnec_drat.png`
+Vygeneruj (15): `pozadi.png`, `babicka.png`, `dratenik.png`, `flasinetar.png`, `pernikar.png`, `strelnice.png`, `kramarka.png`, `kolotoc.png`, `hrncir.png`, `hrnec.png`, `krejcar.png`, `pernik.png`, `ruze.png`, `drat.png`, `hrnec_drat.png`
+
+Už jsou ve složce, zkopírované z jiných obcí (1): `vrbuv_dopis.png`
+
+Doplním sám kopií, až budou hotové jejich předlohy (3): `dopis_flasinetar.png`, `dopis_pernikar.png`, `krejcar2.png`
+
+Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
 

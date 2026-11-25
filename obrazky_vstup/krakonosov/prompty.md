@@ -5,17 +5,22 @@ Obec je na trase 20. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 1. Založ v ChatGPT nový chat. Do první zprávy nahraj ze Lhotky `obrazky_vstup/lhotka/pozadi.png` a `obrazky_vstup/lhotka/starosta.png` a napiš: `These are style references for all following images. Match their style exactly.`
 2. Pak zadávej prompty níže jeden po druhém: napřed scénu, pak postavy, pak věci.
 3. Každý obrázek ulož do téhle složky pod jménem z nadpisu.
+   Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
 ## Poznámky k obci
 
-- Poutníka si Krakonošov půjčí z finále Lhotky (poutník je tam taky převlečený Krakonoš) a Vrbův dopis ze Lhotky. Negeneruj je.
-- Obálka `dopis_uhlir.png` je obyčejná obálka. Půjčí si ji i další obce, proto je bez ozdob.
+- Poutník je převlečený Krakonoš, stejně jako ve finále Lhotky. Proto je v `poutnik.png` stejný obrázek.
+- Obálka `dopis_uhlir.png` je obyčejná obálka bez ozdob. Až bude hotová, zkopíruju ji do dalších obcí jako obrázek pro jejich obyčejné dopisy.
 - Statkář má tři obrázky: výchozí, ustaraný po doručení stížnosti a pod deštníkem po odpovědi pána hor.
 
-## Soubory (15)
+## Soubory
 
-`pozadi.png`, `babka.png`, `statkar.png`, `statkar_strach.png`, `statkar_destnik.png`, `houbar.png`, `uhlir.png`, `pekar.png`, `hospoda.png`, `stiznost.png`, `odpoved.png`, `balik_houbar.png`, `dopis_uhlir.png`, `pohled_poutnik.png`, `chleba.png`
+Vygeneruj (15): `pozadi.png`, `babka.png`, `statkar.png`, `statkar_strach.png`, `statkar_destnik.png`, `houbar.png`, `uhlir.png`, `pekar.png`, `hospoda.png`, `stiznost.png`, `odpoved.png`, `balik_houbar.png`, `dopis_uhlir.png`, `pohled_poutnik.png`, `chleba.png`
+
+Už jsou ve složce, zkopírované z jiných obcí (2): `poutnik.png`, `vrbuv_dopis.png`
+
+Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
 
