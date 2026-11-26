@@ -12,9 +12,7 @@ Obec je na trase 21. X. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (9): `pozadi.png`, `vavrinec.png`, `klara.png`, `kovar.png`, `rozarka.png`, `pastyr.png`, `lucerna.png`, `sirky.png`, `dopis_vnuk.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_klara.png`, `pohled.png`, `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `zakazka.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_klara.png`, `zakazka.png`, `pohled.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

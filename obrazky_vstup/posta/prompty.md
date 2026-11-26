@@ -16,9 +16,7 @@ Obec je na trase 24. II. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (12): `pozadi.png`, `posta.png`, `pekarova.png`, `mlynska.png`, `prednosta.png`, `kantorova.png`, `hospodska.png`, `pasacka.png`, `pecetitko.png`, `obalka.png`, `znamka.png`, `karty_mariasove.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (3): `pohled_pasacka.png`, `dopis_bez_adresy.png`, `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_prednosta.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_prednosta.png`, `pohled_pasacka.png`, `dopis_bez_adresy.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

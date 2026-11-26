@@ -12,9 +12,7 @@ Obec je na trase 9. II. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (9): `pozadi.png`, `rabi.png`, `golem.png`, `lazebnik.png`, `pekar.png`, `studna.png`, `drevnik.png`, `sem.png`, `nos_vodu.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (2): `pohled_lazebnik.png`, `noviny_pekar.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_rabi.png`
+Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_rabi.png`, `pohled_lazebnik.png`, `noviny_pekar.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

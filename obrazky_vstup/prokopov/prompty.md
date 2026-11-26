@@ -18,9 +18,7 @@ Obec je na trase 4. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (8): `pozadi.png`, `prokop.png`, `cert.png`, `sedlak.png`, `pole.png`, `pole_zorane.png`, `pole_cert.png`, `kamen03.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (1): `dopis_sedlak.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_prokop.png`
+Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_prokop.png`, `dopis_sedlak.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

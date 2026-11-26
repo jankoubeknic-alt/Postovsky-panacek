@@ -16,9 +16,7 @@ Obec je na trase 21. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (10): `pozadi.png`, `strojnik.png`, `vhoz.png`, `radnice.png`, `skola.png`, `hospoda.png`, `fara.png`, `dopis_skola.png`, `pozvanka.png`, `patrona.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_radnice.png`, `dopis_hospoda.png`, `dopis_fara.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `zadost.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_radnice.png`, `dopis_hospoda.png`, `dopis_fara.png`, `zadost.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

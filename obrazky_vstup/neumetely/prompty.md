@@ -12,9 +12,7 @@ Obec je na trase 6. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (14): `pozadi.png`, `horymirova.png`, `semik.png`, `vratny.png`, `hradba.png`, `sedlaci.png`, `havir.png`, `knize.png`, `horymir.png`, `kat.png`, `brana.png`, `horymir_doma.png`, `oves.png`, `propustka.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_horymir.png`, `dopis_domu.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `prosba.png`
+Už jsou ve složce, zkopírované z jiných obcí (3): `prosba.png`, `dopis_horymir.png`, `dopis_domu.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

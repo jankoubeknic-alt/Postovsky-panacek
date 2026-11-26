@@ -16,9 +16,7 @@ Obec je na trase 11. III. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 Vygeneruj (12): `pozadi.png`, `zvonec.png`, `jet.png`, `strojnik.png`, `havirka.png`, `rubac.png`, `vozac.png`, `stajger.png`, `kahan.png`, `permonik.png`, `svacina.png`, `varovani.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_rubac.png`, `dopis_stajger.png`, `chleba.png`, `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_permonik.png`
+Už jsou ve složce, zkopírované z jiných obcí (5): `dopis_rubac.png`, `dopis_stajger.png`, `dopis_permonik.png`, `chleba.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

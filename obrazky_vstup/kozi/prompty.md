@@ -12,7 +12,9 @@ Obec je na trase 17. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (11): `pozadi.png`, `ucitel.png`, `roza.png`, `urna.png`, `borek.png`, `sedlak.png`, `babka.png`, `listek_s.png`, `plakat.png`, `zeli.png`, `hlas_s.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (2): `faktura.png`, `zapis.png`
+Už jsou ve složce, zkopírované z jiných obcí (1): `zapis.png`
+
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `faktura.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

@@ -12,9 +12,7 @@ Obec je na trase 1. IV. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (11): `pozadi.png`, `starosta.png`, `kostelnik.png`, `hospoda.png`, `hostinska.png`, `reznik.png`, `ucitelka.png`, `babka.png`, `pes.png`, `pohar.png`, `cedule.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_mlada.png`, `balik_hubeny.png`, `pohled_ticha.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_lhar.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_mlada.png`, `balik_hubeny.png`, `pohled_ticha.png`, `dopis_lhar.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

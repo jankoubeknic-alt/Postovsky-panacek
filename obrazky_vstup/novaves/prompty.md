@@ -12,7 +12,7 @@ Obec je na trase 14. VI. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (9): `pozadi.png`, `hruska.png`, `novy.png`, `stary.png`, `celnik.png`, `maruska.png`, `tonda.png`, `pozvanka_n.png`, `barva.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `katastr.png`
+Už jsou ve složce, zkopírované z jiných obcí (1): `katastr.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

@@ -12,9 +12,7 @@ Obec je na trase 31. X. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (12): `pozadi.png`, `bilapani.png`, `rytir.png`, `kastelan.png`, `kocour.png`, `sova.png`, `kostlivec.png`, `belidlo.png`, `dopis_teta.png`, `retezy.png`, `hracka.png`, `hlava.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (1): `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_urad.png`
+Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_urad.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

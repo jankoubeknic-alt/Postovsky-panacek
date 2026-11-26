@@ -12,9 +12,7 @@ Obec je na trase 13. II. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (8): `pozadi.png`, `medved.png`, `kobyla.png`, `kominik.png`, `turek.png`, `strakac.png`, `hospodska.png`, `babicka.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_kovar.png`, `dopis_mlynar.png`, `dopis_pekar.png`, `dopis_ucitel.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `povoleni.png`
+Už jsou ve složce, zkopírované z jiných obcí (5): `povoleni.png`, `dopis_kovar.png`, `dopis_mlynar.png`, `dopis_pekar.png`, `dopis_ucitel.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

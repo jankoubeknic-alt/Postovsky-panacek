@@ -12,9 +12,7 @@ Obec je na trase 3. III. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (11): `pozadi.png`, `okenko1.png`, `okenko2.png`, `maminka.png`, `starosta.png`, `lavicka.png`, `babka.png`, `pes.png`, `znamka.png`, `rizky.png`, `povoleni.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (2): `duchod.png`, `zadost.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (2): `ministerstvo.png`, `potvrzeni.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `duchod.png`, `ministerstvo.png`, `zadost.png`, `potvrzeni.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

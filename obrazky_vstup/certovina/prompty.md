@@ -12,7 +12,7 @@ Obec je na trase 29. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (11): `pozadi.png`, `andel.png`, `lucifer.png`, `kotel.png`, `bertka.png`, `bonifac.png`, `duchod_l.png`, `prihlaska.png`, `uhli1.png`, `zadost_v.png`, `doporuceni.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `zadost.png`
+Už jsou ve složce, zkopírované z jiných obcí (1): `zadost.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

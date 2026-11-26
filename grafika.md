@@ -39,8 +39,8 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 | Kramářov | Podzim | 15 | hotovo |
 | Třířečí | Podzim | 12 | prompty připravené |
 | Cylindrov | Podzim | 20 | prompty připravené |
-| Spáčov pod Blaníkem | Podzim | 10 | prompty připravené |
-| Bezvětří | Podzim | 9 | prompty připravené |
+| Spáčov pod Blaníkem | Podzim | 10 | hotovo |
+| Bezvětří | Podzim | 9 | hotovo |
 | Koláčov | Podzim | 8 | prompty připravené |
 | Mlhov | Podzim | 9 | prompty připravené |
 | Výlovice | Podzim | 13 | prompty připravené |
