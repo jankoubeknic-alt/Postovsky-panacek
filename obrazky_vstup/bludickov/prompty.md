@@ -12,11 +12,11 @@ Obec je na trase 2. XI. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 - Kořenářka je stejná bylinkářka jako v Krakonošově, obrázek je zkopírovaný.
 - Čtyři světýlka a čtyři hrnky mají vždy jeden společný obrázek.
-- Světnice na samotě je ve hře zvláštní vrstva, ve scéně ji nekresli.
+- Světnice na samotě je ve hře zvláštní vrstva, ve scéně ji nekresli. Má vlastní obrázek `samota.png`, je to druhá scéna stejného formátu.
 
 ## Soubory
 
-Vygeneruj (9): `pozadi.png`, `svetlo1.png`, `hastrman.png`, `vrba.png`, `hrnek_dusicka.png`, `hajna.png`, `zpet.png`, `dopis_hastrman.png`, `tabak.png`
+Vygeneruj (10): `pozadi.png`, `samota.png`, `svetlo1.png`, `hastrman.png`, `vrba.png`, `hrnek_dusicka.png`, `hajna.png`, `zpet.png`, `dopis_hastrman.png`, `tabak.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `korenarka.png`, `dopis_hajna.png`, `dopis_korenarka.png`
 
@@ -30,6 +30,15 @@ Prompty jsou jen pro obrázky ke generování.
 Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: the marshes behind Bludičkov on an autumn evening, seen from slightly above. Dark pools, tufts of grass, peat and mist, a few birches. In the middle (about 57 %) an old pollard willow over a pool. Far away on the horizon at the top, the warm light of a lonely cottage window. Moody blue-violet evening, but still gentle and picture-book.
+No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+### samota.png
+
+```
+Create an image in portrait orientation, aspect ratio 2:3.
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
+Scene: inside the warm lonely cottage of the gamekeeper's wife behind the marshes, an autumn evening, seen from the front like a stage set. Wooden walls and a plank floor. Layout: bundles of drying herbs hanging from a ceiling beam across the top; a green tiled stove with a bench on the left; a small window with a lit lantern on the sill on the right at about 30 %; a simple table between them at about 45 %; at the bottom centre (about 78 %) an open door with a glimpse of the misty blue marsh and a plank path outside.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
 ```
 

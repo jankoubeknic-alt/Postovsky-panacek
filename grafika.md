@@ -29,6 +29,8 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 
 Čistá změna výrazu (😊, 🥰) se negeneruje. Hra nechá portrét a výraz ukáže jako odznak.
 
+Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoří v Neumětelích, hřeben ve Sněžné, důl ve Štolově), má vlastní obrázek ve formátu scény, pojmenovaný jako soubor vrstvy (`samota.png`). Vrstvy, které jen něco přikreslí nebo scénu ztmaví (bouřka, mlha, noc), zůstávají jako SVG.
+
 | Obec | Kapitola | Ke generování | Stav |
 | --- | --- | --- | --- |
 | Lhotka | Léto | 16 | hotovo (prompty v této stránce) |
@@ -45,11 +47,11 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 | Mlhov | Podzim | 9 | prompty připravené |
 | Výlovice | Podzim | 13 | prompty připravené |
 | Hrad Strachov | Podzim | 12 | prompty připravené |
-| Bludičkov | Podzim | 9 | prompty připravené |
+| Bludičkov | Podzim | 10 | hotovo, chybí světnice `samota.png` |
 | Martinov | Podzim | 13 | prompty připravené |
 | Faustův dům | Podzim | 10 | prompty připravené |
 | Hodinov | Podzim | 8 | prompty připravené |
-| Sněžná | Podzim | 13 | prompty připravené |
+| Sněžná | Podzim | 14 | prompty připravené |
 | Barborov | Zima | 11 | hotovo |
 | Mikulášov | Zima | 14 | prompty připravené |
 | Lucín | Zima | 10 | prompty připravené |
@@ -68,12 +70,12 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 | Pošta o půlnoci | Zima | 12 | prompty připravené |
 | Razítkov | Jaro | 11 | prompty připravené |
 | Holubník | Jaro | 14 | prompty připravené |
-| Štolov | Jaro | 12 | prompty připravené |
+| Štolov | Jaro | 13 | prompty připravené |
 | Loutkov nad Nití | Jaro | 12 | prompty připravené |
 | Straky nad Blýskavou | Jaro | 8 | prompty připravené |
 | Lhářov | Jaro | 11 | prompty připravené |
 | Pomlázkov | Jaro | 16 | prompty připravené |
-| Brodek | Jaro | 10 | prompty připravené |
+| Brodek | Jaro | 10 | hotovo |
 | Štírovice | Jaro | 12 | prompty připravené |
 | Hejrupov | Jaro | 11 | prompty připravené |
 | Šnekov | Jaro | 12 | prompty připravené |
@@ -88,7 +90,7 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 | Koníkov | Zase léto | 9 | prompty připravené |
 | Ozvěnov | Zase léto | 7 | prompty připravené |
 | Prokopov | Zase léto | 8 | prompty připravené |
-| Neumětely | Zase léto | 14 | prompty připravené |
+| Neumětely | Zase léto | 15 | prompty připravené |
 | Dlouhá Široká | Zase léto | 13 | prompty připravené |
 | Mňoukov | Zase léto | 10 | prompty připravené |
 | Kocourkov | Zase léto | 14 | prompty připravené |

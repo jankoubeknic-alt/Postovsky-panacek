@@ -86,6 +86,11 @@
   const obrazekKarty = (id) => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'karta' && r.id === id)?.cesta) || '';
   const obrazekPozadi = () => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'pozadi')?.cesta) || '';
   const ikonaKarty = (id) => obrazekKarty(id) || karty[id]?.ikona || '';
+  // Kreslená náhrada vrstvy, která zakrývá celou scénu (světnice, důl). id je jméno souboru vrstvy bez přípony.
+  const obrazekVrstvy = (soubor) => {
+    const id = String(soubor).split('/').pop().replace(/\.[^.]+$/, '');
+    return (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'vrstva' && r.id === id)?.cesta) || '';
+  };
 
   // Ikona cíle: obrázek, když ho obec má, jinak emoji (při reakci emoji výrazu).
   const ikonaCile = (c, ikona, vyraz) => vytvorIkonu(obrazekCile(c, ikona) || vyraz || ikona, c?.jmeno);
@@ -639,7 +644,7 @@
     for (const v of vrstvy) {
       if (!v.obrazek) continue;
       const img = prvek('img', 'vrstva');
-      img.src = cestaObrazku(v.obrazek);
+      img.src = cestaObrazku(obrazekVrstvy(v.obrazek) || v.obrazek);
       img.alt = '';
       img.draggable = false;
       img.dataset.podminka = v.podminka || '';

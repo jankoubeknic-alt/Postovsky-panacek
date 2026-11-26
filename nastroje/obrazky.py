@@ -6,6 +6,8 @@
 # Jména souborů určují, kam obrázek patří:
 #   pozadi.png        scéna obce (ořízne se na 3:4, 900 × 1200)
 #   <id cíle>.png     portrét cíle z cile.csv (ořízne se na čtverec, 320 × 320)
+#   <vrstva>.png      kreslená náhrada vrstvy z vrstvy.csv, která zakrývá celou scénu (samota.png za samota.svg).
+#                     Ořízne se jako scéna na 3:4, 900 × 1200.
 #   <id karty>.png    obrázek karty z karty.csv (čtverec, 320 × 320). Jednobarevné pozadí kolem věci
 #                     se zprůhlední (stín zůstane jako poloprůhledný), aby na barevné kartě nebyl vidět čtverec.
 #   <id cíle>_<cokoli>.png   portrét pro změněnou ikonu cíle. Když má cíl v kombinace.csv jen jednu změnu
@@ -99,6 +101,7 @@ def main():
         sys.exit(f'Obec {obec} neexistuje (chybí data/{obec}/etapa.csv).')
     cile = {r['id'] for r in tabulka(os.path.join(slozka, 'cile.csv'))}
     karty = {r['id'] for r in tabulka(os.path.join(slozka, 'karty.csv'))}
+    vrstvy = {os.path.splitext(os.path.basename(r['obrazek']))[0].lower() for r in tabulka(os.path.join(slozka, 'vrstvy.csv')) if r.get('obrazek')}
     zmeny = {}
     for tab in ('kombinace.csv', 'kazdy_tah.csv'):
         for r in tabulka(os.path.join(slozka, tab)):
@@ -149,6 +152,9 @@ def main():
             nove.append({'druh': 'cil', 'id': jmeno, 'ikona': ''})
         elif jmeno in karty:
             nove.append({'druh': 'karta', 'id': jmeno, 'ikona': ''})
+        elif jmeno in vrstvy:
+            nove.append({'druh': 'vrstva', 'id': jmeno, 'ikona': ''})
+            rozmer = (900, 1200)
         elif not nove:
             cil = next((c for c in sorted(cile, key=len, reverse=True) if jmeno.startswith(c + '_')), None)
             if cil and len(zmeny.get(cil, ())) == 1:
@@ -164,9 +170,9 @@ def main():
             radek['soubor'] = soubor
             zname[klic(radek)] = radek
 
-    poradi = {'pozadi': 0, 'cil': 1, 'karta': 2}
+    poradi = {'pozadi': 0, 'vrstva': 1, 'cil': 2, 'karta': 3}
     with open(cesta_csv, 'w', encoding='utf-8', newline='') as f:
-        f.write('# Kreslené obrázky obce. druh: pozadi, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.\n')
+        f.write('# Kreslené obrázky obce. druh: pozadi, vrstva, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.\n')
         f.write('# soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp).\n')
         zapis = csv.DictWriter(f, HLAVICKA, delimiter=';', lineterminator='\n', extrasaction='ignore')
         zapis.writeheader()

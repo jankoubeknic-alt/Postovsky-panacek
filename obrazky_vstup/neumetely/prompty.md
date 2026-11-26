@@ -8,9 +8,13 @@ Obec je na trase 6. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
    Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
+## Poznámky k obci
+
+- Nádvoří hradu zevnitř je ve hře zvláštní vrstva, ve scéně ho nekresli. Má vlastní obrázek `nadvori.png`, je to druhá scéna stejného formátu.
+
 ## Soubory
 
-Vygeneruj (14): `pozadi.png`, `horymirova.png`, `semik.png`, `vratny.png`, `hradba.png`, `sedlaci.png`, `havir.png`, `knize.png`, `horymir.png`, `kat.png`, `brana.png`, `horymir_doma.png`, `oves.png`, `propustka.png`
+Vygeneruj (15): `pozadi.png`, `nadvori.png`, `horymirova.png`, `semik.png`, `vratny.png`, `hradba.png`, `sedlaci.png`, `havir.png`, `knize.png`, `horymir.png`, `kat.png`, `brana.png`, `horymir_doma.png`, `oves.png`, `propustka.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `prosba.png`, `dopis_horymir.png`, `dopis_domu.png`
 
@@ -24,6 +28,15 @@ Prompty jsou jen pro obrázky ke generování.
 Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Neumětely in early medieval Bohemia on a July day, seen from slightly above like a stage set. Layout: at about 27 % on the left a wooden farmstead of a nobleman; at about 33 % in the centre a stable; at about 27 % on the right a castle gate with a wooden drawbridge; at about 60 % across the middle a high stone castle wall; at the bottom (about 75 %) a wheat field on the left and a small mine with a windlass on the right.
+No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+### nadvori.png
+
+```
+Create an image in portrait orientation, aspect ratio 2:3.
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
+Scene: the courtyard of the prince's castle in early medieval Bohemia, seen from inside on a July day, like a stage set. Stone walls, wooden buildings, cobbles and straw. Layout: at about 24 % on the left the prince's wooden palace with a carved balcony; at about 24 % on the right a stone prison tower with a barred door; at about 62 % on the left an executioner's wooden block on a small platform; at about 64 % on the right the big wooden castle gate seen from inside, closed with a beam; the bottom part is an open cobbled courtyard.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
 ```
 

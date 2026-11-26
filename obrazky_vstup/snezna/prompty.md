@@ -11,11 +11,11 @@ Obec je na trase 30. XI. Postup je stejný jako u Lhotky a podrobně je popsaný
 ## Poznámky k obci
 
 - Zásilky na pultu mají stejné obrázky jako v brašně. Babička jako „věc v brašně“ má svůj portrét.
-- Hřeben nahoře je ve hře zvláštní vrstva, ve scéně je jen údolí.
+- Hřeben nahoře je ve hře zvláštní vrstva, ve scéně je jen údolí. Hřeben má vlastní obrázek `hreben.png`, je to druhá scéna stejného formátu.
 
 ## Soubory
 
-Vygeneruj (13): `pozadi.png`, `posta.png`, `vnuk.png`, `babka.png`, `meteorolog.png`, `chatar.png`, `stezka.png`, `lanovka.png`, `baterie.png`, `sneznice.png`, `pohledy.png`, `perina.png`, `mourek.png`
+Vygeneruj (14): `pozadi.png`, `hreben.png`, `posta.png`, `vnuk.png`, `babka.png`, `meteorolog.png`, `chatar.png`, `stezka.png`, `lanovka.png`, `baterie.png`, `sneznice.png`, `pohledy.png`, `perina.png`, `mourek.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis.png`, `noviny.png`
 
@@ -29,6 +29,15 @@ Prompty jsou jen pro obrázky ke generování.
 Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: the valley village of Sněžná on the last day of November, heavy snow clouds over the mountains, seen from slightly above like a stage set. Layout: at about 25 % in the centre a small post office with a counter window; in front of it at about 50 % a long wooden counter in the open; at about 77 % on the left the start of a steep snowy mountain trail with a wooden marker pole; a bus stop in the middle; at about 75 % on the right the lower station of a small cable car going up into the clouds.
+No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+### hreben.png
+
+```
+Create an image in portrait orientation, aspect ratio 2:3.
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
+Scene: the snowy mountain ridge above Sněžná on the last day of November, heavy grey snow clouds, seen from slightly above like a stage set. Layout: at about 30 % on the left a small wooden mountain cottage half buried in snow; at about 18 % on the right a little meteorological station with a weather vane and instrument hut on the summit; at about 56 % in the centre a wooden mountain chalet with a smoking chimney; at about 82 % on the left the end of a trail with a marker pole; at about 80 % on the right the upper station of a small cable car.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
 ```
 

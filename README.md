@@ -180,11 +180,11 @@ Obrázky jsou ve složce `data/<obec>/obrazky/` a seznam v `data/<obec>/obrazky.
 
 | sloupec | význam |
 | --- | --- |
-| `druh` | `pozadi` (scéna), `cil` (portrét v medailonu) nebo `karta` (obrázek zásilky) |
-| `id` | id cíle nebo karty, u pozadí prázdné |
+| `druh` | `pozadi` (scéna), `vrstva` (kreslená náhrada vrstvy přes celou scénu), `cil` (portrét v medailonu) nebo `karta` (obrázek zásilky) |
+| `id` | id cíle nebo karty, u vrstvy jméno jejího souboru bez přípony (`samota` za `samota.svg`), u pozadí prázdné |
 | `ikona` | jen u cíle: obrázek pro změněnou ikonu (`ikona:pes:🐕💤`). Prázdné = výchozí ikona. |
 | `soubor` | cesta od složky obce, i do jiné obce (`../lhotka/obrazky/pes.webp`) |
 
-Kde obrázek chybí, zůstane emoji. Když cíl změní ikonu a pro novou ikonu obrázek nemá, portrét zůstane a nová ikona se ukáže jako malý odznak u medailonu, aby změna nezapadla. Výraz při reakci (`vyraz` v `kombinace.csv`) se u portrétu ukáže jako malý odznak vedle medailonu. Sbalená verze má obrázky v balíku obce.
+Kde obrázek chybí, zůstane emoji. Když cíl změní ikonu a pro novou ikonu obrázek nemá, portrét zůstane a nová ikona se ukáže jako malý odznak u medailonu, aby změna nezapadla. Výraz při reakci (`vyraz` v `kombinace.csv`) se u portrétu ukáže jako malý odznak vedle medailonu. Vrstva z `vrstvy.csv`, která zakrývá celou scénu (světnice, důl, nádvoří), může mít kreslenou náhradu ve stejném formátu jako scéna. Vrstvy, které jen něco přikreslí nebo scénu ztmaví, zůstávají jako SVG. Sbalená verze má obrázky v balíku obce.
 
-Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`. Ve vstupní složce může být `kopie.csv` (obrázky převzaté z jiných obcí, nástroj je zkopíruje, jakmile existují) a `mapa.csv` (jeden obrázek pro víc cílů, karet nebo stavů). Nástroj scénu ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, u zásilek zprůhlední jednobarevné pozadí, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.
+Obrázky z ChatGPT převede `python3 nastroje/obrazky.py <obec> <složka>`. Ve vstupní složce může být `kopie.csv` (obrázky převzaté z jiných obcí, nástroj je zkopíruje, jakmile existují) a `mapa.csv` (jeden obrázek pro víc cílů, karet nebo stavů). Nástroj scénu a obrázek pojmenovaný jako vrstva (`samota.png`) ořízne na 3:4 (900 × 1200), ostatní na čtverec 320 × 320, u zásilek zprůhlední jednobarevné pozadí, uloží WebP a doplní `obrazky.csv`. Prompty, styl a postup jsou v `grafika.md`.

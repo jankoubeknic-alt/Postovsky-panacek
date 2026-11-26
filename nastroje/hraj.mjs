@@ -40,6 +40,8 @@ const kontrolaJmenovek = `(() => {
   }
   return vysledek.join('\\n');
 })()`;
+// Jmenovky se srovnají znovu, když se dotáhne písmo. Kontrola počká, až je písmo načtené a scéna dvakrát vykreslená.
+await js('document.fonts.ready.then(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))))');
 const jmenovky = await js(kontrolaJmenovek);
 if (jmenovky) console.log(jmenovky);
 let n = 2;
