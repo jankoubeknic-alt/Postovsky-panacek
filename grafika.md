@@ -62,7 +62,7 @@ Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoř�
 | Kozí Hřbítek | Zima | 11 | prompty připravené |
 | Trubkovice | Zima | 10 | prompty připravené |
 | Kamenice | Zima | 12 | prompty připravené |
-| Čertovina pod Kotlem | Zima | 11 | prompty připravené |
+| Čertovina pod Kotlem | Zima | 11 | hotovo |
 | Kašovice | Zima | 9 | prompty připravené |
 | Hlínov | Zima | 9 | prompty připravené |
 | Maškarovice | Zima | 8 | prompty připravené |
