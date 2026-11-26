@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kovárna hoří: plameny nad střechou. -->
+  <path d="M17 72C15 56 25 52 25 40C31 50 35 44 37 32C43 46 51 50 47 60C53 58 55 66 53 72Z" fill="#E0662A"/>
+  <path d="M25 72C25 62 31 58 33 50C37 58 41 56 43 48C47 58 47 66 45 72Z" fill="#F7C64A"/>
+  <g fill="#8A8580" opacity=".55"><circle cx="39" cy="24" r="7"/><circle cx="47" cy="14" r="9"/></g>
+</svg>

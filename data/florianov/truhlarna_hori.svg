@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Truhlárna hoří: plameny nad střechou. -->
+  <path d="M92 72C90 56 100 52 100 40C106 50 110 44 112 32C118 46 126 50 122 60C128 58 130 66 128 72Z" fill="#E0662A"/>
+  <path d="M100 72C100 62 106 58 108 50C112 58 116 56 118 48C122 58 122 66 120 72Z" fill="#F7C64A"/>
+  <g fill="#8A8580" opacity=".55"><circle cx="114" cy="24" r="7"/><circle cx="122" cy="14" r="9"/></g>
+</svg>

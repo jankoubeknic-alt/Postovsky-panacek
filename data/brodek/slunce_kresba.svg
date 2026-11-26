@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kreslená scéna: po dešti vysvitne slunce. Měkká záře v pravém horním rohu a teplé světlo přes scénu. -->
+  <defs>
+    <radialGradient id="zare" cx="254" cy="24" r="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF4C8" stop-opacity=".95"/>
+      <stop offset=".12" stop-color="#FBE08A" stop-opacity=".6"/>
+      <stop offset=".5" stop-color="#F6D86B" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#F6D86B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="svetlo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6D86B" stop-opacity=".25"/>
+      <stop offset=".6" stop-color="#F6D86B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#svetlo)"/>
+  <rect width="300" height="400" fill="url(#zare)"/>
+  <g stroke="#FBE7A0" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M254 2v-8M276 10l6-6M282 32h8M232 10l-6-6M226 32h-8M276 46l6 6M232 46l-6 6"/></g>
+  <circle cx="254" cy="26" r="13" fill="#FCE79A" stroke="#E9B949" stroke-width="1.2"/>
+</svg>

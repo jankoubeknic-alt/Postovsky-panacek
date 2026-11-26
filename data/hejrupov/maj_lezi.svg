@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Máj leží na zemi s věncem a stužkami. -->
+  <path d="M40 150L260 140" stroke="#9A7650" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#3F7A4A"><path d="M240 120l30 20-30 20z"/></g>
+  <g stroke-width="2"><path d="M200 142l-6 20" stroke="#D9534F"/><path d="M210 141l-4 22" stroke="#5BC0DE"/><path d="M220 141l-2 20" stroke="#F0AD4E"/></g>
+  <circle cx="200" cy="142" r="8" fill="none" stroke="#3F7A4A" stroke-width="3"/>
+</svg>

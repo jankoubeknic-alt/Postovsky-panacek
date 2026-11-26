@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Máj stojí uprostřed návsi, nahoře smrkový vršek, věnec a stužky. -->
+  <path d="M150 236V58" stroke="#9A7650" stroke-width="6" stroke-linecap="round"/>
+  <path d="M150 18l16 26h-8l12 20h-40l12-20h-8z" fill="#3F7A4A"/>
+  <circle cx="150" cy="76" r="9" fill="none" stroke="#3F7A4A" stroke-width="3"/>
+  <g stroke-width="2" fill="none"><path d="M144 82q-6 14 -2 30" stroke="#D9534F"/><path d="M150 85q0 16 4 30" stroke="#5BC0DE"/><path d="M156 82q8 12 6 28" stroke="#F0AD4E"/></g>
+</svg>

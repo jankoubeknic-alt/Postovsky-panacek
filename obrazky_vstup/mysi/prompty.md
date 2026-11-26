@@ -20,6 +20,8 @@ Vygeneruj (12): `pozadi.png`, `starosta.png`, `starosta_slavi.png`, `krejcova.pn
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
 
+Navíc vygeneruj (1): `slapoty.png`, postup je v sekci „Upravená scéna“.
+
 Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
@@ -37,6 +39,17 @@ Scene: Myší Lhota, the tiniest village in the district, a mouse village built 
 - at about 73 % on the left, a playground for mouse children with a matchbox see-saw;
 - at about 75 % on the right, a wooden garden fence with a gap and tall weeds behind it.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### slapoty.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: a giant human shoe print is pressed deep into the cobbled square in the middle of the mouse village, and a little wooden fence next to it lies crushed flat. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

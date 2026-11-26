@@ -10,11 +10,13 @@ Obec je na trase 4. V. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 ## Poznámky k obci
 
-- Požár a voda u budov se ukážou jako odznak u medailonu, varianty se negenerují.
+- Hořící budovy jsou upravené scény (požár přeskakuje z domu na dům). Mokrý dům se ukáže jako odznak u medailonu.
 
 ## Soubory
 
-Vygeneruj (11): `pozadi.png`, `kovarna.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
+Vygeneruj (6): `kovarna_hori.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png`, `zbrojnice_otevrena.png`, `kovarna_uhasena.png`
+
+Už máš vygenerované (11): `pozadi.png`, `kovarna.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_starosta.png`, `klic.png`
 
@@ -31,6 +33,45 @@ Scene: Floriánov on St Florian's day in May, blue sky, seen from slightly above
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
 ```
 
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### kovarna_hori.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the smithy at the top left is on fire: bright orange flames burst from its roof and thick grey smoke rises into the sky. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### truhlarna_hori.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the carpenter's workshop at the top, second from the left, is on fire: bright orange flames burst from its roof and thick grey smoke rises into the sky. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### chalupa_hori.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the cottage at the top, second from the right, is on fire: bright orange flames burst from its roof and thick grey smoke rises into the sky. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### fara_hori.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the parish house at the top right is on fire: bright orange flames burst from its roof and thick grey smoke rises into the sky. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### zbrojnice_otevrena.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the fire station at the bottom right is unlocked: its big wooden doors stand wide open and the open padlock hangs on one of them, the station inside is dark and empty because the fire engine has left. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
 ## Postavy a místa
 
 ### kovarna.png
@@ -40,6 +81,15 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 One object or place, centred, the whole object inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
 Object: a village smithy with smoke and a few small flames coming from the roof.
+```
+
+### kovarna_uhasena.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
+One object or place, centred, the whole object inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
+Object: a village smithy just after a fire was put out: wet blackened roof beams, a little white steam and smoke rising, no flames.
 ```
 
 ### truhlarna.png

@@ -1,0 +1,5 @@
+# Máj leží, dokud ho všichni nepostaví. Hranice hoří, když na ni posadíš čarodějnici.
+obrazek;podminka
+data/hejrupov/maj_lezi.svg;!maj
+data/hejrupov/maj_stoji.svg;maj
+data/hejrupov/hori.svg;hori

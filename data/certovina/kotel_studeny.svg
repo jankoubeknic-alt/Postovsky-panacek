@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kotel 2 a míň: oheň pod kotlem vyhasl, zbyl šedý popel a kotel pokryla jinovatka. -->
+  <path d="M120 252q30-14 60 0z" fill="#8F8A84"/>
+  <g fill="#B5B0AA"><circle cx="138" cy="247" r="2"/><circle cx="152" cy="244" r="2.4"/><circle cx="165" cy="248" r="1.8"/></g>
+  <path d="M122 188h56" stroke="#EAF2F8" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+</svg>

@@ -154,6 +154,7 @@ Ve složce `nastroje/` jsou pomocné skripty (potřebují Node.js, Python 3, a p
 - `node nastroje/over.mjs data/<obec>/` projde všechny stavy obce a vypíše chyby, zaseknuté stavy, nedosažitelné řádky a počet objevů do alba. Vlajky světa začínají prázdné. Druhý argument (`vrba_lhotka,vrba_hluchov`) je nastaví předem, třeba pro finále.
 - `node nastroje/cesta.mjs data/<obec>/` vypíše nejkratší výherní cestu.
 - `python3 nastroje/hraj_obce.py nastroje "<obec>=<Název>"` obec odehraje v headless Chromu a uloží snímky (potřebuje běžící `python3 -m http.server 8765 --bind 127.0.0.1` v kořeni projektu). Na začátku obce zkontroluje jmenovky: vypíše `JMENOVKA PŘETÉKÁ` (přes okraj scény), `JMENOVKA PŘEKRÝVÁ` (dvě jmenovky přes sebe) a `JMENOVKA PŘES MEDAILON` (jmenovka zakrývá jinou postavu). Engine jmenovky u kraje sám posouvá dovnitř scény, takže přetékání by se objevit nemělo.
+- `node nastroje/stavy.mjs <obec> [<obec> ...]` najde všechny stavy obce, ve kterých scéna vypadá jinak (vrstvy, cíle, které se objeví nebo zmizí, změněné ikony a portréty), každý vyfotí ve hře a uloží do `nahledy_stavu/<obec>/`. Galerie všech vyfocených obcí je v `nahledy_stavu/index.html`, u každého obrázku je, co se změnilo, a tah, který k tomu vedl. S `--pocet` jen vypíše počet vzhledů. Potřebuje běžící server jako `hraj_obce.py`.
 - `python3 nastroje/rozlozeni.py` hledá cíle, které jsou ve scéně moc blízko sebe.
 - `nastroje/kontrola_vse.sh` projede všechny hratelné obce validátorem i Chromem.
 - `nastroje/obec.py` je pomocník pro psaní tabulek obce v Pythonu.

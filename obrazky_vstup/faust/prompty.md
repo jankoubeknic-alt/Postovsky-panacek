@@ -10,7 +10,9 @@ Obec je na trase 13. XI. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (10): `pozadi.png`, `kominik.png`, `vdova.png`, `student.png`, `kos.png`, `domovnice.png`, `zednik.png`, `dopis_vdova.png`, `stetky.png`, `ucebnice.png`
+Vygeneruj (1): `student_vzhuru.png`
+
+Už máš vygenerované (10): `pozadi.png`, `kominik.png`, `vdova.png`, `student.png`, `kos.png`, `domovnice.png`, `zednik.png`, `dopis_vdova.png`, `stetky.png`, `ucebnice.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_domovnice.png`, `tolar.png`
 
@@ -54,6 +56,15 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
 Character: Mladecký, a sleepy student with messy hair and a nightcap, yawning, a book under his cheek.
+```
+
+### student_vzhuru.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
+Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
+Character: Mladecký, the same student, now wide awake: his face and nightcap sprinkled with black soot, sneezing, an open thick red book in his hands.
 ```
 
 ### kos.png

@@ -2,6 +2,7 @@
 # soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp). U vrstvy „-“: kreslená scéna ji skryje.
 druh;id;ikona;soubor
 pozadi;;;obrazky/pozadi.webp
+vrstva;maj_lezi;;-
 cil;dedove;;obrazky/dedove.webp
 cil;hasici;;obrazky/hasici.webp
 cil;hospodska;;obrazky/hospodska.webp

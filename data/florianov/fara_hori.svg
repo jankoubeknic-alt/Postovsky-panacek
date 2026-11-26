@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Fara hoří: plameny nad střechou. -->
+  <path d="M242 60C240 44 250 40 250 28C256 38 260 32 262 20C268 34 276 38 272 48C278 46 280 54 278 60Z" fill="#E0662A"/>
+  <path d="M250 60C250 50 256 46 258 38C262 46 266 44 268 36C272 46 272 54 270 60Z" fill="#F7C64A"/>
+  <g fill="#8A8580" opacity=".55"><circle cx="264" cy="12" r="7"/><circle cx="272" cy="2" r="9"/></g>
+</svg>

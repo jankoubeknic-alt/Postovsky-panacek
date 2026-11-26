@@ -10,7 +10,9 @@ Obec je na trase 9. II. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `ohen.png`, `rabi.png`, `golem.png`, `lazebnik.png`, `pekar.png`, `studna.png`, `drevnik.png`, `sem.png`, `nos_vodu.png`, `nos_drevo.png`, `dost.png`
+Vygeneruj (0): nic, všechno je hotové
+
+Už máš vygenerované (12): `pozadi.png`, `ohen.png`, `rabi.png`, `golem.png`, `lazebnik.png`, `pekar.png`, `studna.png`, `drevnik.png`, `sem.png`, `nos_vodu.png`, `nos_drevo.png`, `dost.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_rabi.png`, `pohled_lazebnik.png`, `noviny_pekar.png`
 

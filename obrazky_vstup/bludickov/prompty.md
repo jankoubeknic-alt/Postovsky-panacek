@@ -16,7 +16,9 @@ Obec je na trase 2. XI. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (10): `pozadi.png`, `samota.png`, `svetlo1.png`, `hastrman.png`, `vrba.png`, `hrnek_dusicka.png`, `hajna.png`, `zpet.png`, `dopis_hastrman.png`, `tabak.png`
+Vygeneruj (0): nic, všechno je hotové
+
+Už máš vygenerované (10): `pozadi.png`, `samota.png`, `svetlo1.png`, `hastrman.png`, `vrba.png`, `hrnek_dusicka.png`, `hajna.png`, `zpet.png`, `dopis_hastrman.png`, `tabak.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `korenarka.png`, `dopis_hajna.png`, `dopis_korenarka.png`
 

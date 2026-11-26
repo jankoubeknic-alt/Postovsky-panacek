@@ -3,6 +3,7 @@
 druh;id;ikona;soubor
 pozadi;;;obrazky/pozadi.webp
 vrstva;ohen;;obrazky/ohen.webp
+vrstva;voda;;voda_kresba.svg
 cil;drevnik;;obrazky/drevnik.webp
 cil;golem;;obrazky/golem.webp
 cil;lazebnik;;obrazky/lazebnik.webp

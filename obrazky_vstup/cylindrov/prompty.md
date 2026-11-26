@@ -14,7 +14,9 @@ Obec je na trase 19. IX. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (20): `pozadi.png`, `kouzelnik.png`, `farar.png`, `kominik.png`, `klobouk.png`, `babicka.png`, `tonda.png`, `potok.png`, `hulka.png`, `pulka.png`, `lzice.png`, `kytka.png`, `nitka.png`, `kridlo.png`, `mydlo.png`, `klic.png`, `mic.png`, `kost.png`, `host.png`, `most.png`
+Vygeneruj (1): `most_stoji.png`
+
+Už máš vygenerované (20): `pozadi.png`, `kouzelnik.png`, `farar.png`, `kominik.png`, `klobouk.png`, `babicka.png`, `tonda.png`, `potok.png`, `hulka.png`, `pulka.png`, `lzice.png`, `kytka.png`, `nitka.png`, `kridlo.png`, `mydlo.png`, `klic.png`, `mic.png`, `kost.png`, `host.png`, `most.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `pes.png`, `svice.png`
 
@@ -29,6 +31,17 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Cylindrov, a village on an autumn evening before a magic show, seen from slightly above like a stage set. Layout: - at about 23 % in the centre, a colourful magician's wagon with a small wooden stage and a curtain; - at about 30 % on the left, a small church; at about 30 % on the right, a house with a tall chimney; - in the middle (about 47 %), an empty village green with trampled grass; - at about 52 % on the left, a grandmother's cottage with flowers in the windows; at about 52 % on the right, a stone well; - at about 75 % on the left, a dog kennel; at about 75 % on the right, a brook running across the corner with no footbridge.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### most_stoji.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: a small arched stone bridge now crosses the brook at the bottom right, built of the same warm stones as the rocks around, so people can walk over it. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

@@ -27,9 +27,26 @@ Každá obec má složku `obrazky_vstup/<obec>/` (id obce je v `data/etapy.csv`)
 
 Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbův dopis, úřední listina, noviny, telegram, pohlednice, balík, prsten nebo klíč se generují jednou a ostatní obce je dostanou kopií. Seznam kopií je v `kopie.csv` ve složce obce a převodní nástroj chybějící kopie doplní sám, jakmile předloha existuje. Sdílený obrázek generuje ta obec, jejíž složka je v abecedě první, protože obce se kreslí v pořadí složek. Kopie tak čeká na předlohu jen výjimečně. Jeden obrázek pro víc postav nebo stavů ve stejné obci (čtyři židle, políčka, světýlka) zapisuje `mapa.csv`.
 
-Čistá změna výrazu (😊, 🥰) se negeneruje. Hra nechá portrét a výraz ukáže jako odznak.
+Čistá změna výrazu (😊, 🥰) se negeneruje. Hra nechá portrét a výraz ukáže jako odznak. Vlastní portrét dostane změna jen tehdy, když by starý portrét stavu odporoval (spící student, který se probudil, hořící kovárna po uhašení, ležící máj po postavení).
 
-Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoří v Neumětelích, hřeben ve Sněžné, důl ve Štolově), má vlastní obrázek ve formátu scény, pojmenovaný jako soubor vrstvy (`samota.png`). Vrstvy, které jen něco přikreslí nebo scénu ztmaví (bouřka, mlha, noc), zůstávají jako SVG. Když se má změnit něco, co je v kresbě namalované (vypitý rybník, rozbitý balvan v Dlouhé Široké), nahraješ do ChatGPT svůj `pozadi.png` a necháš ho upravit jen na tom místě. Z upraveného obrázku se použije jen výřez kolem změny. Prompty pro to jsou v `prompty.md` pod nadpisem „Upravená scéna“.
+Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoří v Neumětelích, hřeben ve Sněžné, důl ve Štolově), má vlastní obrázek ve formátu scény, pojmenovaný jako soubor vrstvy (`samota.png`). Vrstvy, které jen něco přikreslí nebo scénu ztmaví (bouřka, mlha, noc), zůstávají jako SVG. Když se má změnit něco, co je v kresbě namalované (vypitý rybník, rozbitý balvan v Dlouhé Široké), nahraješ do ChatGPT svůj `pozadi.png` a necháš ho upravit jen na tom místě. Z upraveného obrázku se použije jen výřez kolem změny. Prompty pro to jsou v `prompty.md` pod nadpisem „Upravená scéna“. Upravená scéna může vycházet i z jiné upravené scény (hořící hranice z obrázku s postaveným májem), pak to u promptu stojí. Když je chyba přímo ve scéně (déšť namalovaný napevno), opraví se úpravou `pozadi.png` podle sekce „Oprava scény“ a upravené scény se dělají až z opravené scény.
+
+Galerii všech vzhledů kreslených obcí vyrobí `node nastroje/stavy.mjs <obec> ...` do `nahledy_stavu/index.html`: každý stav, ve kterém scéna vypadá jinak, je tam jako snímek ze hry s popisem změny a tahu, který k ní vedl.
+
+### Doplnit do hotových obcí
+
+Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Prompty jsou v `prompty.md` jednotlivých obcí, do té doby hra ukazuje náhradní kresbu nebo odznak.
+
+- Bezvětří: `lopatky.png` (mlýn s novými lopatkami).
+- Brodek: napřed oprava `pozadi.png` (scéna bez namalovaného deště), pak z opravené scény `voda1.png`, `voda2.png`, `voda3.png` (stoupající povodeň).
+- Čertovina pod Kotlem: `plamen.png` (rozpálený kotel), `kotel_studeny.png` (vyhaslý kotel s jinovatkou).
+- Cylindrov: `most_stoji.png` (postavený kamenný most).
+- Faustův dům: `student_vzhuru.png` (probuzený student od sazí).
+- Floriánov: `kovarna_hori.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png` (požár přeskakuje), `zbrojnice_otevrena.png`, `kovarna_uhasena.png` (portrét po uhašení).
+- Hejrupov: `maj_stoji.png`, pak z něj `hori.png` (hořící hranice), portréty `maj_vztycen.png` a `hranice_hori.png`.
+- Krakonošov: `bourka.png` (celá scéna v bouřce).
+- Myší Lhota: `slapoty.png` (obří šlápota a rozšlápnutý plot).
+- Spáčov pod Blaníkem: `otevreno.png` (otevřená skála).
 
 | Obec | Kapitola | Ke generování | Stav |
 | --- | --- | --- | --- |

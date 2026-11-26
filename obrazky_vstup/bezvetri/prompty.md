@@ -10,7 +10,9 @@ Obec je na trase 4. X. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 ## Soubory
 
-Vygeneruj (9): `pozadi.png`, `kohout.png`, `mlynar.png`, `starosta.png`, `pradlena.png`, `deti.png`, `vitr.png`, `plachta.png`, `drak.png`
+Vygeneruj (1): `lopatky.png`
+
+Už máš vygenerované (9): `pozadi.png`, `kohout.png`, `mlynar.png`, `starosta.png`, `pradlena.png`, `deti.png`, `vitr.png`, `plachta.png`, `drak.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
 
@@ -25,6 +27,17 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Bezvětří, a village where the wind has not blown for half a year, on a still autumn day, seen from slightly above like a stage set. Smoke rises straight up from the chimneys, nothing moves. Layout: at about 18 % slightly left of centre a church spire with a weathercock; at about 35 % on the right a windmill on a hill with torn, holey sails; at about 42 % on the left the municipal office; at about 58 % in the middle a washing line with wet, hanging laundry; at about 75 % on the left a grassy hill for flying kites.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### lopatky.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the windmill on the hill on the right has new sails: four whole sails covered with fresh cream canvas, neatly stretched on their wooden frames, no holes and no torn pieces. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

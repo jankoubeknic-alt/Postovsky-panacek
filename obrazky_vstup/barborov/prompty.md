@@ -10,7 +10,9 @@ Obec je na trase 4. XII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (11): `pozadi.png`, `anca.png`, `bara.png`, `kaca.png`, `hrncir.png`, `hajny.png`, `kamna.png`, `kostel.png`, `vetev_anca.png`, `vaza.png`, `drivi.png`
+Vygeneruj (0): nic, všechno je hotové
+
+Už máš vygenerované (11): `pozadi.png`, `anca.png`, `bara.png`, `kaca.png`, `hrncir.png`, `hajny.png`, `kamna.png`, `kostel.png`, `vetev_anca.png`, `vaza.png`, `drivi.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_hrncir.png`, `vrbuv_dopis.png`
 

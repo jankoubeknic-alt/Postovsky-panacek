@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Zbrojnice je odemčená a dokořán, stříkačka vyjela. -->
+  <rect x="226" y="300" width="56" height="62" fill="#3A2E26"/>
+  <path d="M226 300l-16 6v62l16-6zM282 300l16 6v62l-16-6z" fill="#8A4A2E" stroke="#5A2E1E" stroke-width="1"/>
+</svg>

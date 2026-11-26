@@ -20,6 +20,8 @@ Vygeneruj (15): `pozadi.png`, `babka.png`, `statkar.png`, `statkar_strach.png`, 
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `poutnik.png`, `vrbuv_dopis.png`
 
+Navíc vygeneruj (1): `bourka.png`, je to celá scéna v bouřce, postup je v sekci „Upravená scéna“.
+
 Prompty jsou jen pro obrázky ke generování.
 
 ## Scéna
@@ -39,6 +41,17 @@ Scene: Krakonošov, a mountain village under high hills on a summer day, seen fr
 - at about 78 % on the left, a small bakery with a pretzel sign;
 - at about 78 % on the right, a wooden mountain inn with a blank sign.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### bourka.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: a heavy thunderstorm over the whole valley: the sky is dark grey-blue with heavy storm clouds hiding the mountain tops, a bright lightning bolt over the mountains, heavy rain falling everywhere and everything darker and wet. Keep every building, path, tree and the small rain cloud over the farm exactly where they are.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-  <!-- Varianta vrstvy most.svg pro kreslenou scénu (obrazky.csv) -->
+  <!-- Varianta vrstvy most_stoji.svg pro kreslenou scénu (obrazky.csv) -->
   <!-- Kamenný most přes potok -->
   <g transform="translate(0 8)">
   <g stroke="#6E5E4A" stroke-width="1.2" stroke-linejoin="round">

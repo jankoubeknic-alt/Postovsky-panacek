@@ -10,7 +10,9 @@ Obec je na trase 28. IX. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (10): `pozadi.png`, `strazce.png`, `rytiri.png`, `deti.png`, `starosta.png`, `sedlak.png`, `nevesta.png`, `hostinsky.png`, `vymer.png`, `prosba.png`
+Vygeneruj (1): `otevreno.png`
+
+Už máš vygenerované (10): `pozadi.png`, `strazce.png`, `rytiri.png`, `deti.png`, `starosta.png`, `sedlak.png`, `nevesta.png`, `hostinsky.png`, `vymer.png`, `prosba.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `kroupy.png`, `zruseni.png`, `pohled.png`
 
@@ -25,6 +27,17 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Spáčov under the Blaník mountain on an autumn day, seen from slightly above like a stage set. Layout: - the top half: the forested Blaník hill; at about 20 % in the centre an old guard's stone seat by a huge grey rock face, and at about 40 % in the centre the rock face itself, closed and mossy (it will open later in the game); - at about 57 % on the left, the municipal office; at about 57 % on the right, a farmyard with flattened fields; - at about 78 % on the left, the bride's cottage with a wreath on the door; at about 78 % on the right, a village inn.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### otevreno.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the huge grey rock face behind the old guard's stone seat opens: a tall arched dark gate appears in the rock, with a warm golden glow and the tips of knights' banners inside. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

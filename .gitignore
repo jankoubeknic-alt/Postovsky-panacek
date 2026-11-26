@@ -4,6 +4,8 @@ nastroje/souhrn_*.png
 nastroje/prehled*.png
 nastroje/kontrola_*.log
 nastroje/*.log
+# Galerie vzhledů obcí (nastroje/stavy.mjs)
+nahledy_stavu/
 __pycache__/
 # Sbalená verze webu (nastroje/sbal.py)
 sbaleno/

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kreslená scéna: vichr odnesl papírového draka na kopec vlevo nahoře. -->
+  <g transform="translate(44 70) scale(.8) translate(-44 -70)">
+  <g stroke="#6B3A22" stroke-width="1" stroke-linejoin="round">
+    <path d="M44 56l11 14-11 16-11-16z" fill="#D9603A"/>
+    <path d="M44 56v30M33 70h22" fill="none" stroke-width=".7"/>
+  </g>
+  <path d="M44 86q-5 6 0 12t1 12q-4 5 2 10" fill="none" stroke="#6B3A22" stroke-width=".8"/>
+  <g fill="#F2C24A" stroke="#6B3A22" stroke-width=".5"><path d="M41 95l3 1.5-3 1.5zM47 95l-3 1.5 3 1.5z"/><path d="M42 106l3 1.5-3 1.5zM48 106l-3 1.5 3 1.5z"/></g>
+  </g>
+</svg>

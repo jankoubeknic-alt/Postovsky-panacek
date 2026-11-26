@@ -14,7 +14,9 @@ Obec je na trase 7. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (16): `pozadi.png`, `vez.png`, `les.png`, `kopec.png`, `studna.png`, `nevesta.png`, `mlyn.png`, `rybnik.png`, `poustevnik.png`, `kamen.png`, `dlouhy.png`, `siroky.png`, `bystrozraky.png`, `prsten.png`, `ostruvek_suchy.png`, `balvan_rozbity.png`
+Vygeneruj (0): nic, všechno je hotové
+
+Už máš vygenerované (16): `pozadi.png`, `vez.png`, `les.png`, `kopec.png`, `studna.png`, `nevesta.png`, `mlyn.png`, `rybnik.png`, `poustevnik.png`, `kamen.png`, `dlouhy.png`, `siroky.png`, `bystrozraky.png`, `prsten.png`, `ostruvek_suchy.png`, `balvan_rozbity.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_zvonik.png`, `balik_poustevnik.png`, `dopis_mlynar.png`
 

@@ -10,7 +10,9 @@ Obec je na trase 29. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (11): `pozadi.png`, `andel.png`, `lucifer.png`, `kotel.png`, `bertka.png`, `bonifac.png`, `duchod_l.png`, `prihlaska.png`, `uhli1.png`, `zadost_v.png`, `doporuceni.png`
+Vygeneruj (2): `plamen.png`, `kotel_studeny.png`
+
+Už máš vygenerované (11): `pozadi.png`, `andel.png`, `lucifer.png`, `kotel.png`, `bertka.png`, `bonifac.png`, `duchod_l.png`, `prihlaska.png`, `uhli1.png`, `zadost_v.png`, `doporuceni.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `zadost.png`
 
@@ -25,6 +27,24 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Čertovina pod Kotlem, a village of retired devils among volcanic hills, in winter, seen from slightly above like a stage set. Warm reddish rocks, little puffs of steam, cosy rather than scary. Layout: at about 22 % on the right a white fence and a green meadow of the neighbouring parish; at about 37 % on the left an old devil's cottage with a crooked chimney; at about 50 % in the centre a big iron cauldron on a stone hearth in the middle of the village green; at about 50 % on the right a tidy cottage with lavender in pots; at about 70 % on the left a beehive and a little garden.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### plamen.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the fire under the big iron cauldron in the centre blazes up: tall bright orange flames lick around the cauldron, it bubbles and thick white steam rises from it. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### kotel_studeny.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the fire under the big iron cauldron in the centre has gone out: only cold grey ashes lie on the stone hearth, no glow and no steam, and the cauldron is covered with white frost and a few small icicles. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kreslená scéna: po bouřce svítí slunce nad horami. Měkká záře na obloze vlevo nahoře a teplé světlo přes scénu. -->
+  <defs>
+    <radialGradient id="zare" cx="96" cy="14" r="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF4C8" stop-opacity=".95"/>
+      <stop offset=".12" stop-color="#FBE08A" stop-opacity=".55"/>
+      <stop offset=".5" stop-color="#F6D86B" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#F6D86B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#zare)"/>
+  <g stroke="#FBE7A0" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M118 6h8M114 26l6 5M74 6h-8M78 26l-6 5M96 34v6"/></g>
+  <circle cx="96" cy="14" r="11" fill="#FCE79A" stroke="#E9B949" stroke-width="1.2"/>
+</svg>

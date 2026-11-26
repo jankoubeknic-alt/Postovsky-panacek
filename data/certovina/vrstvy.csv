@@ -1,3 +1,5 @@
+# Kotel 5 a víc: plameny. Kotel 2 a míň: vyhaslý kotel a mráz s rampouchy.
 obrazek;podminka
 data/certovina/plamen.svg;kotel>=5
+data/certovina/kotel_studeny.svg;kotel<=2
 data/certovina/mraz.svg;kotel<=2
