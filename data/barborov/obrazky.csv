@@ -1,0 +1,18 @@
+# Kreslené obrázky obce. druh: pozadi, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.
+# soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp).
+druh;id;ikona;soubor
+pozadi;;;obrazky/pozadi.webp
+cil;anca;;obrazky/anca.webp
+cil;bara;;obrazky/bara.webp
+cil;hajny;;obrazky/hajny.webp
+cil;hrncir;;obrazky/hrncir.webp
+cil;kaca;;obrazky/kaca.webp
+cil;kamna;;obrazky/kamna.webp
+cil;kostel;;obrazky/kostel.webp
+karta;dopis_hrncir;;obrazky/dopis_hrncir.webp
+karta;drivi;;obrazky/drivi.webp
+karta;vaza;;obrazky/vaza.webp
+karta;vetev_anca;;obrazky/vetev_anca.webp
+karta;vetev_bara;;obrazky/vetev_anca.webp
+karta;vetev_kaca;;obrazky/vetev_anca.webp
+karta;vrbuv_dopis;;obrazky/vrbuv_dopis.webp

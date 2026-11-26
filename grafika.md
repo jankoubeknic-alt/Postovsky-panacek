@@ -50,7 +50,7 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 | Faustův dům | Podzim | 10 | prompty připravené |
 | Hodinov | Podzim | 8 | prompty připravené |
 | Sněžná | Podzim | 13 | prompty připravené |
-| Barborov | Zima | 11 | prompty připravené |
+| Barborov | Zima | 11 | hotovo |
 | Mikulášov | Zima | 14 | prompty připravené |
 | Lucín | Zima | 10 | prompty připravené |
 | Ježíškova Lhota | Zima | 13 | prompty připravené |
