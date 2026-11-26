@@ -47,7 +47,7 @@ Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoř�
 | Mlhov | Podzim | 9 | prompty připravené |
 | Výlovice | Podzim | 13 | prompty připravené |
 | Hrad Strachov | Podzim | 12 | prompty připravené |
-| Bludičkov | Podzim | 10 | hotovo, chybí světnice `samota.png` |
+| Bludičkov | Podzim | 10 | hotovo |
 | Martinov | Podzim | 13 | prompty připravené |
 | Faustův dům | Podzim | 10 | prompty připravené |
 | Hodinov | Podzim | 8 | prompty připravené |

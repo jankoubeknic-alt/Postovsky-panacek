@@ -1,7 +1,8 @@
-# Kreslené obrázky obce. druh: pozadi, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.
+# Kreslené obrázky obce. druh: pozadi, vrstva, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.
 # soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp).
 druh;id;ikona;soubor
 pozadi;;;obrazky/pozadi.webp
+vrstva;samota;;obrazky/samota.webp
 cil;hajna;;obrazky/hajna.webp
 cil;hastrman;;obrazky/hastrman.webp
 cil;hrnek_dusicka;;obrazky/hrnek_dusicka.webp
