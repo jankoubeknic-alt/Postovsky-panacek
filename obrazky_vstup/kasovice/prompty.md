@@ -16,9 +16,7 @@ Obec je na trase 5. II. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (9): `pozadi.png`, `hrnec.png`, `maminka.png`, `honza.png`, `brucoun.png`, `ucitel.png`, `hospodska.png`, `lzice.png`, `var.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (2): `pohled.png`, `noviny.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `pravidla.png`
+Už jsou ve složce, zkopírované z jiných obcí (3): `pohled.png`, `noviny.png`, `pravidla.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-  <!-- Saze padají dírou -->
-  <g fill="#3A3A3A" opacity=".7"><circle cx="104" cy="120" r="3"/><circle cx="112" cy="150" r="2"/><circle cx="106" cy="210" r="3"/><circle cx="110" cy="240" r="2"/><circle cx="104" cy="300" r="3"/></g>
+  <!-- Saze padají dírou podél provazu (díra je kolem 23 % šířky). Rozmazaný světlý opar je vidět i v tmavé díře na kresbě. -->
+  <defs><filter id="saze-rozmaz" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5"/></filter></defs>
+  <g fill="#A39A8C" opacity=".72" filter="url(#saze-rozmaz)">
+    <circle cx="66" cy="64" r="8"/><circle cx="76" cy="70" r="7"/><circle cx="70" cy="80" r="6"/>
+    <circle cx="62" cy="142" r="8"/><circle cx="73" cy="150" r="9"/><circle cx="66" cy="162" r="6"/>
+    <circle cx="74" cy="226" r="8"/><circle cx="64" cy="236" r="7"/><circle cx="72" cy="246" r="6"/>
+    <circle cx="64" cy="308" r="9"/><circle cx="76" cy="316" r="8"/><circle cx="68" cy="326" r="6"/>
+  </g>
+  <g fill="#262422" opacity=".8"><circle cx="64" cy="62" r="2"/><circle cx="76" cy="72" r="1.5"/><circle cx="70" cy="96" r="1.5"/><circle cx="62" cy="122" r="2"/><circle cx="75" cy="140" r="2"/><circle cx="60" cy="156" r="1.5"/><circle cx="72" cy="178" r="2"/><circle cx="64" cy="210" r="2"/><circle cx="78" cy="228" r="1.5"/><circle cx="68" cy="246" r="2"/><circle cx="61" cy="270" r="1.5"/><circle cx="74" cy="296" r="2"/><circle cx="63" cy="318" r="2"/><circle cx="76" cy="326" r="1.5"/></g>
 </svg>

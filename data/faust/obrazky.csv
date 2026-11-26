@@ -1,0 +1,15 @@
+# Kreslené obrázky obce. druh: pozadi, vrstva, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.
+# soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp). U vrstvy „-“: kreslená scéna ji skryje.
+druh;id;ikona;soubor
+pozadi;;;obrazky/pozadi.webp
+cil;domovnice;;obrazky/domovnice.webp
+cil;kominik;;obrazky/kominik.webp
+cil;kos;;obrazky/kos.webp
+cil;student;;obrazky/student.webp
+cil;vdova;;obrazky/vdova.webp
+cil;zednik;;obrazky/zednik.webp
+karta;dopis_domovnice;;obrazky/dopis_domovnice.webp
+karta;dopis_vdova;;obrazky/dopis_vdova.webp
+karta;stetky;;obrazky/stetky.webp
+karta;tolar;;obrazky/tolar.webp
+karta;ucebnice;;obrazky/ucebnice.webp

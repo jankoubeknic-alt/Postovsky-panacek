@@ -12,7 +12,7 @@ Obec je na trase 24. XII. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 Vygeneruj (15): `pozadi.png`, `pepik.png`, `strom_pepik.png`, `anca.png`, `pernikar.png`, `tonik.png`, `babicka.png`, `strom.png`, `darek_anca.png`, `staniol.png`, `kridla.png`, `prasatko.png`, `zvonecek.png`, `darek_pepik.png`, `darek_tonik.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `pohadky.png`
+Už jsou ve složce, zkopírované z jiných obcí (1): `pohadky.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
