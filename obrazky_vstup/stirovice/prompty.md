@@ -16,9 +16,9 @@ Obec je na trase 24. IV. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (12): `pozadi.png`, `babicka.png`, `kostelnik.png`, `jirik.png`, `hajny.png`, `k1.png`, `stir.png`, `uzovka.png`, `ropucha.png`, `jesterka.png`, `provazek.png`, `dymka.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (1): `dopis_babicka.png`
+Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_babicka.png`, `klic.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (2): `prsten.png`, `klic.png`
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `prsten.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

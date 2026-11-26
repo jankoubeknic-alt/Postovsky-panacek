@@ -10,11 +10,9 @@ Obec je na trase 12. VI. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (9): `pozadi.png`, `lekarka.png`, `radova.png`, `kapelnik.png`, `pramen.png`, `plukovnik.png`, `pokojska.png`, `anonym.png`, `medaile.png`
+Vygeneruj (10): `pozadi.png`, `lekarka.png`, `radova.png`, `kapelnik.png`, `pramen.png`, `plukovnik.png`, `pokojska.png`, `anonym.png`, `medaile.png`, `noty.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `pohled.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `noty.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -103,4 +101,13 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a small parcel with a red ministry seal and a medal ribbon peeking out.
+```
+
+### noty.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a few sheets of sheet music tied with a ribbon, with notes but no letters.
 ```

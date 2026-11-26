@@ -10,15 +10,15 @@ Obec je na trase 15. XI. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Poznámky k obci
 
-- Bílá paní je stejná jako na hradě Strachově, obrázek se zkopíruje, až tam bude hotový.
+- Bílá paní se zkopíruje i na hrad Strachov.
 
 ## Soubory
 
-Vygeneruj (8): `pozadi.png`, `hospodsky.png`, `ponocny.png`, `marka.png`, `pekar.png`, `lavicka.png`, `koralka.png`, `prsten.png`
+Vygeneruj (8): `pozadi.png`, `hospodsky.png`, `ponocny.png`, `marka.png`, `pekar.png`, `lavicka.png`, `koralka.png`, `pani.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (5): `dopis_hospodsky.png`, `dopis_marka.png`, `dopis_pani.png`, `dopis_pekar.png`, `vrbuv_dopis.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `pani.png`
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `prsten.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -80,6 +80,15 @@ One object or place, centred, the whole object inside the central circle of the 
 Object: a wooden bench under a street lantern at night.
 ```
 
+### pani.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
+Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
+Character: the White Lady, a shy translucent ghost of a young noblewoman in a flowing white gown and veil, hiding half her face behind her hand.
+```
+
 ## Zásilky a věci
 
 ### koralka.png
@@ -89,13 +98,4 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a small flat glass flask of plum brandy with a cork.
-```
-
-### prsten.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
-One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a small gold ring with a little blue stone.
 ```

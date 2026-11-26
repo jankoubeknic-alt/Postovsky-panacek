@@ -10,11 +10,9 @@ Obec je na trase 9. III. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (14): `pozadi.png`, `holubar.png`, `kostel.png`, `kocour.png`, `hostinsky.png`, `reznik.png`, `babka.png`, `mlekarka.png`, `koreni.png`, `mleko.png`, `kvocna.png`, `holub_hajovna.png`, `holub_salas.png`, `holub_balon.png`
+Vygeneruj (15): `pozadi.png`, `holubar.png`, `kostel.png`, `kocour.png`, `hostinsky.png`, `reznik.png`, `babka.png`, `mlekarka.png`, `koreni.png`, `mleko.png`, `kvocna.png`, `holub_hajovna.png`, `holub_salas.png`, `holub_balon.png`, `dopis_baca.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_hajny.png`, `dopis_balonar.png`, `klobasy.png`, `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `dopis_baca.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -148,4 +146,13 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a pretty light brown dove with a small ribbon on its leg.
+```
+
+### dopis_baca.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a small paper delivery slip with a round shop stamp and scribbles, no readable text.
 ```

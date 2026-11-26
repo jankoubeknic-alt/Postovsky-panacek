@@ -14,11 +14,9 @@ Obec je na trase 7. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (13): `pozadi.png`, `vez.png`, `les.png`, `kopec.png`, `studna.png`, `nevesta.png`, `mlyn.png`, `rybnik.png`, `poustevnik.png`, `kamen.png`, `dlouhy.png`, `siroky.png`, `bystrozraky.png`
+Vygeneruj (14): `pozadi.png`, `vez.png`, `les.png`, `kopec.png`, `studna.png`, `nevesta.png`, `mlyn.png`, `rybnik.png`, `poustevnik.png`, `kamen.png`, `dlouhy.png`, `siroky.png`, `bystrozraky.png`, `prsten.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_zvonik.png`, `balik_poustevnik.png`, `dopis_mlynar.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `prsten.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -141,4 +139,15 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Centred composition, the whole figure or group inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
 Character: Sharp-Eyes, a slim man with a blindfold over his eyes, his eyes so sharp that they crack stones.
+```
+
+## Zásilky a věci
+
+### prsten.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a small gold ring with a little blue stone.
 ```

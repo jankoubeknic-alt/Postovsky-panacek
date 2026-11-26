@@ -12,9 +12,9 @@ Obec je na trase 20. VII. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 Vygeneruj (10): `pozadi.png`, `babicka.png`, `senik.png`, `kozel.png`, `prase.png`, `pes.png`, `reznik.png`, `strom.png`, `kocour.png`, `psani.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (3): `noviny.png`, `dopis_babicka.png`, `balicek.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `noviny.png`, `dopis_babicka.png`, `balicek.png`, `kost.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (2): `slepice.png`, `kost.png`
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `slepice.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

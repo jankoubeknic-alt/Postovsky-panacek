@@ -10,9 +10,11 @@ Obec je na trase 31. XII. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `starosta.png`, `kominik.png`, `schranka.png`, `marie.png`, `ucitel.png`, `kovar.png`, `vrana.png`, `farar.png`, `odpoved_zelezarstvi.png`, `zadost.png`, `zebrik.png`
+Vygeneruj (11): `pozadi.png`, `starosta.png`, `kominik.png`, `schranka.png`, `marie.png`, `ucitel.png`, `kovar.png`, `vrana.png`, `farar.png`, `zadost.png`, `zebrik.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (4): `odpoved_marie.png`, `odpoved_vrana.png`, `podekovani.png`, `stiznost.png`
+
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `odpoved_zelezarstvi.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -102,15 +104,6 @@ Character: Pšenička the priest, an old man in a black cassock holding a gnawed
 ```
 
 ## Zásilky a věci
-
-### odpoved_zelezarstvi.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
-One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a small paper delivery slip with a round shop stamp and scribbles, no readable text.
-```
 
 ### zadost.png
 

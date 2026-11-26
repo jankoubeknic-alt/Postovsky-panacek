@@ -10,9 +10,11 @@ Obec je na trase 9. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `hanak.png`, `holcicka.png`, `hostinska.png`, `ogar.png`, `havir.png`, `baca.png`, `valach.png`, `vypravci.png`, `pytel.png`, `kosik.png`, `frgal.png`
+Vygeneruj (11): `pozadi.png`, `hanak.png`, `holcicka.png`, `hostinska.png`, `ogar.png`, `havir.png`, `baca.png`, `valach.png`, `vypravci.png`, `pytel.png`, `frgal.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_ogar.png`, `dopis_baca.png`, `dopis_jura.png`
+
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `kosik.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -110,15 +112,6 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a heavy jute sack full of potatoes, a little soil falling out at the bottom.
-```
-
-### kosik.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
-One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a wicker basket of shiny red apples.
 ```
 
 ### frgal.png

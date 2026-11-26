@@ -16,9 +16,7 @@ Obec je na trase 4. V. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 Vygeneruj (11): `pozadi.png`, `kovarna.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (1): `dopis_starosta.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `klic.png`
+Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_starosta.png`, `klic.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

@@ -10,9 +10,11 @@ Obec je na trase 31. X. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `bilapani.png`, `rytir.png`, `kastelan.png`, `kocour.png`, `sova.png`, `kostlivec.png`, `belidlo.png`, `dopis_teta.png`, `retezy.png`, `hracka.png`, `hlava.png`
+Vygeneruj (10): `pozadi.png`, `rytir.png`, `kastelan.png`, `sova.png`, `kostlivec.png`, `belidlo.png`, `dopis_teta.png`, `retezy.png`, `hracka.png`, `hlava.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_urad.png`, `vrbuv_dopis.png`
+
+Doplní se kopií z jiných obcí, až tam budou hotové (2): `bilapani.png`, `kocour.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -28,15 +30,6 @@ No people and no animals anywhere. Keep the top and bottom edges calm, they will
 ```
 
 ## Postavy a místa
-
-### bilapani.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
-Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
-Character: the White Lady, a shy translucent ghost of a young noblewoman in a flowing white gown and veil, hiding half her face behind her hand.
-```
 
 ### rytir.png
 
@@ -54,15 +47,6 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
 Character: Klíčník the castellan, a bearded man in a green velvet jacket with a huge ring of keys, kind and nervous.
-```
-
-### kocour.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
-Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
-Character: Šmouha, a sleek black cat with yellow eyes and one white whisker.
 ```
 
 ### sova.png

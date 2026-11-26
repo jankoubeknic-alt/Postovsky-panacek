@@ -14,9 +14,11 @@ Obec je na trase 16. III. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `loutkar.png`, `hoblik.png`, `spalicek.png`, `kostelnik.png`, `hasic.png`, `pekar.png`, `babka.png`, `kvasek.png`, `budik.png`, `noty.png`, `hadice.png`
+Vygeneruj (11): `pozadi.png`, `loutkar.png`, `hoblik.png`, `spalicek.png`, `kostelnik.png`, `hasic.png`, `pekar.png`, `babka.png`, `kvasek.png`, `budik.png`, `hadice.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `bryle.png`, `doporuceny.png`
+
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `noty.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -114,15 +116,6 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a big tin alarm clock with two bells.
-```
-
-### noty.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
-One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a few sheets of sheet music tied with a ribbon, with notes but no letters.
 ```
 
 ### hadice.png

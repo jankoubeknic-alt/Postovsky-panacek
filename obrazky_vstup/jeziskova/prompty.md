@@ -10,9 +10,9 @@ Obec je na trase 24. XII. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 ## Soubory
 
-Vygeneruj (13): `pozadi.png`, `pepik.png`, `strom_pepik.png`, `anca.png`, `pernikar.png`, `tonik.png`, `babicka.png`, `strom.png`, `darek_anca.png`, `staniol.png`, `kridla.png`, `prasatko.png`, `zvonecek.png`
+Vygeneruj (15): `pozadi.png`, `pepik.png`, `strom_pepik.png`, `anca.png`, `pernikar.png`, `tonik.png`, `babicka.png`, `strom.png`, `darek_anca.png`, `staniol.png`, `kridla.png`, `prasatko.png`, `zvonecek.png`, `darek_pepik.png`, `darek_tonik.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (3): `darek_pepik.png`, `darek_tonik.png`, `pohadky.png`
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `pohadky.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -137,4 +137,22 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a small brass Christmas bell with a red ribbon.
+```
+
+### darek_pepik.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a small wooden sledge, half unwrapped from brown paper.
+```
+
+### darek_tonik.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a small wooden rocking horse, half unwrapped from brown paper.
 ```

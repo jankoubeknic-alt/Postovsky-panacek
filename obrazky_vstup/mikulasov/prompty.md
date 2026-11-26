@@ -10,9 +10,11 @@ Obec je na trase 5. XII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (14): `pozadi.png`, `farar.png`, `mikulas.png`, `andel.png`, `druzina1.png`, `franta.png`, `mama_franta.png`, `anicka.png`, `mama_anicka.png`, `pepik.png`, `mama_pepik.png`, `balik_franta.png`, `balik_anicka.png`, `balik_pepik.png`
+Vygeneruj (12): `pozadi.png`, `farar.png`, `mikulas.png`, `andel.png`, `druzina1.png`, `franta.png`, `mama_franta.png`, `anicka.png`, `mama_anicka.png`, `pepik.png`, `mama_pepik.png`, `balik_anicka.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_franta.png`, `dopis_anicka.png`, `dopis_pepik.png`
+
+Doplní se kopií z jiných obcí, až tam budou hotové (2): `balik_franta.png`, `balik_pepik.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -121,15 +123,6 @@ Character: Pepík's mum, a plump woman with curly hair and a flowered apron.
 
 ## Zásilky a věci
 
-### balik_franta.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
-One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a small wooden rocking horse, half unwrapped from brown paper.
-```
-
 ### balik_anicka.png
 
 ```
@@ -137,13 +130,4 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a rag doll in a red dress, half unwrapped from brown paper.
-```
-
-### balik_pepik.png
-
-```
-Create a square image (1:1).
-Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
-One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a small wooden sledge, half unwrapped from brown paper.
 ```

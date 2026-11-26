@@ -10,11 +10,9 @@ Obec je na trase 10. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (18): `pozadi.png`, `leden.png`, `brezen.png`, `cerven.png`, `zari.png`, `holena.png`, `maruska.png`, `louka.png`, `les.png`, `rybnik.png`, `sad.png`, `ledarna.png`, `hostinsky.png`, `satek.png`, `hul.png`, `fialky.png`, `jahody.png`, `led.png`
+Vygeneruj (19): `pozadi.png`, `leden.png`, `brezen.png`, `cerven.png`, `zari.png`, `holena.png`, `maruska.png`, `louka.png`, `les.png`, `rybnik.png`, `sad.png`, `ledarna.png`, `hostinsky.png`, `satek.png`, `hul.png`, `fialky.png`, `jahody.png`, `led.png`, `jablka.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis_mesickum.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `jablka.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -184,4 +182,13 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a clear block of ice with frost on the edges.
+```
+
+### jablka.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a wicker basket of shiny red apples.
 ```
