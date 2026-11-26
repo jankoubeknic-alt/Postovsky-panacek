@@ -73,7 +73,7 @@ Character: St Nicholas with his mitre and staff, a shaggy black devil with horns
 Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
-Character: Franta, a chubby toddler in a knitted hat, peeking from behind a door.
+Character: Franta, a chubby little boy, a toddler in a knitted hat, peeking from behind a door.
 ```
 
 ### mama_franta.png

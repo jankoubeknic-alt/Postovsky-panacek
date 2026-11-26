@@ -77,7 +77,7 @@ Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoř�
 | Pomlázkov | Jaro | 16 | prompty připravené |
 | Brodek | Jaro | 10 | hotovo |
 | Štírovice | Jaro | 12 | prompty připravené |
-| Hejrupov | Jaro | 11 | prompty připravené |
+| Hejrupov | Jaro | 11 | hotovo |
 | Šnekov | Jaro | 12 | prompty připravené |
 | Floriánov | Jaro | 11 | hotovo |
 | Dolní Zapomněnice | Jaro | 11 | prompty připravené |

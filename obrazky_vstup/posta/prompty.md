@@ -120,7 +120,7 @@ Character: Obálka, a tiny post goblin wearing a folded envelope as a coat, chee
 Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Centred composition, the whole figure or group inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
-Character: Známka, a tiny post fairy with wings made of postage stamps with perforated edges.
+Character: Známka, a tiny post fairy girl with wings made of postage stamps with perforated edges.
 ```
 
 ## Zásilky a věci
