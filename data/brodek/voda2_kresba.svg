@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Varianta vrstvy voda2.svg pro kreslenou scénu (obrazky.csv) -->
+  <!-- Hladina 7+: lávka je pod vodou, z vody trčí jen zábradlí -->
+  <path d="M0 92C60 84 120 96 180 88S260 84 300 90V282C240 288 170 276 110 284S30 280 0 286Z" fill="#4A7686" opacity=".42"/>
+  <path d="M137 150V138M163 150V138M137 200V188M163 200V188M137 244V232M163 244V232" stroke="#5A4230" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="none" stroke="#9BC0CA" stroke-width="2" stroke-linecap="round" opacity=".8">
+    <path d="M128 152q11-5 22 0t22 0"/><path d="M128 202q11-5 22 0t22 0"/><path d="M128 246q11-5 22 0t22 0"/>
+    <path d="M20 120q10-5 20 0t20 0"/><path d="M226 266q10-5 20 0t20 0"/><path d="M40 262q10-5 20 0t20 0"/>
+  </g>
+</svg>

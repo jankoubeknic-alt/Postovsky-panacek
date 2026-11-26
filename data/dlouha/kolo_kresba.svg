@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Varianta vrstvy kolo.svg pro kreslenou scénu (obrazky.csv): voda teče přes nakreslené mlýnské kolo -->
+  <path d="M236 146C228 158 226 174 232 190" stroke="#7FB2D6" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85"/>
+  <path d="M236 146C230 158 229 172 234 186" stroke="#E6F2FA" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".9"/>
+  <g fill="#E6F2FA" opacity=".9"><ellipse cx="240" cy="196" rx="16" ry="4"/><circle cx="224" cy="190" r="2"/><circle cx="256" cy="191" r="1.8"/><circle cx="230" cy="184" r="1.5"/></g>
+  <g stroke="#E6F2FA" stroke-width="1.2" fill="none" opacity=".8"><path d="M258 150c4 3 4 7 0 10M222 160c-4 3-4 7 0 10"/></g>
+</svg>

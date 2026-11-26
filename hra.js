@@ -86,7 +86,8 @@
   const obrazekKarty = (id) => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'karta' && r.id === id)?.cesta) || '';
   const obrazekPozadi = () => (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'pozadi')?.cesta) || '';
   const ikonaKarty = (id) => obrazekKarty(id) || karty[id]?.ikona || '';
-  // Kreslená náhrada vrstvy, která zakrývá celou scénu (světnice, důl). id je jméno souboru vrstvy bez přípony.
+  // Kreslená náhrada vrstvy (celá světnice nebo výřez scény, třeba vypitý rybník). id je jméno souboru vrstvy bez přípony.
+  // Soubor „-“ znamená, že kreslená scéna vrstvu nepotřebuje, protože ji má nakreslenou (rybník, balvan).
   const obrazekVrstvy = (soubor) => {
     const id = String(soubor).split('/').pop().replace(/\.[^.]+$/, '');
     return (obrazkyZapnute() && obrazkyObce.find((r) => r.druh === 'vrstva' && r.id === id)?.cesta) || '';
@@ -316,7 +317,7 @@
         tabulka('etapa.csv', true), tabulka('cile.csv', true), tabulka('karty.csv', true), tabulka('kombinace.csv', true),
         tabulka('vrstvy.csv', false), tabulka('kazdy_tah.csv', false), tabulka('obrazky.csv', false),
       ]);
-      const o = obr.filter((r) => r.druh && r.soubor).map((r) => ({ ...r, cesta: spojCestu(DATA, id, r.soubor) }));
+      const o = obr.filter((r) => r.druh && r.soubor).map((r) => ({ ...r, cesta: r.soubor === '-' ? '-' : spojCestu(DATA, id, r.soubor) }));
       mezipamet[id] = { nastaveni: Object.fromEntries(nastaveni.map((r) => [r.klic, r.hodnota])), cile: c, karty: k, pravidla: p, vrstvy: v, tahy: t, obrazky: o };
     }
     return mezipamet[id];
@@ -643,8 +644,10 @@
     }
     for (const v of vrstvy) {
       if (!v.obrazek) continue;
+      const nahrada = obrazekVrstvy(v.obrazek);
+      if (nahrada === '-') continue;
       const img = prvek('img', 'vrstva');
-      img.src = cestaObrazku(obrazekVrstvy(v.obrazek) || v.obrazek);
+      img.src = cestaObrazku(nahrada || v.obrazek);
       img.alt = '';
       img.draggable = false;
       img.dataset.podminka = v.podminka || '';

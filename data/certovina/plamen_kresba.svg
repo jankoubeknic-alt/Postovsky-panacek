@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Varianta vrstvy plamen.svg pro kreslenou scénu (obrazky.csv) -->
+  <!-- Kotel 5+: plameny šlehají a kotel bublá -->
+  <style>.p { animation: sleh .6s ease-in-out infinite alternate; transform-origin: 150px 218px; } @keyframes sleh { to { transform: scaleY(1.25); } } @media (prefers-reduced-motion: reduce) { .p { animation: none; } }</style>
+  <g class="p"><g fill="#E0662A" opacity=".85"><path d="M122 218q2-14 8-26q6 12 8 26z"/><path d="M141 220q2-18 9-34q7 16 9 34z"/><path d="M162 218q2-14 8-26q6 12 8 26z"/></g><g fill="#F7C64A" opacity=".9"><path d="M126 218q4-10 4-16q3 8 4 16z"/><path d="M145 220q5-14 5-22q4 12 5 22z"/><path d="M166 218q4-10 4-16q3 8 4 16z"/></g></g>
+  <g fill="#F4EEE0" opacity=".6"><circle cx="140" cy="172" r="6"/><circle cx="158" cy="164" r="7"/><circle cx="150" cy="150" r="8"/></g>
+</svg>

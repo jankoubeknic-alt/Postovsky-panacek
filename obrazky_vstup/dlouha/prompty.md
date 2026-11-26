@@ -14,7 +14,7 @@ Obec je na trase 7. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (14): `pozadi.png`, `vez.png`, `les.png`, `kopec.png`, `studna.png`, `nevesta.png`, `mlyn.png`, `rybnik.png`, `poustevnik.png`, `kamen.png`, `dlouhy.png`, `siroky.png`, `bystrozraky.png`, `prsten.png`
+Vygeneruj (16): `pozadi.png`, `vez.png`, `les.png`, `kopec.png`, `studna.png`, `nevesta.png`, `mlyn.png`, `rybnik.png`, `poustevnik.png`, `kamen.png`, `dlouhy.png`, `siroky.png`, `bystrozraky.png`, `prsten.png`, `ostruvek_suchy.png`, `balvan_rozbity.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_zvonik.png`, `balik_poustevnik.png`, `dopis_mlynar.png`
 
@@ -29,6 +29,24 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Dlouhá Široká on a July day, a village where everything is too high, too far or too hidden, seen from slightly above like a stage set. Layout: at about 20 % on the right a very tall narrow bell tower; at about 25 % on the left a dark forest; at about 28 % in the centre a steep hill; at about 48 % on the left a deep stone well; at about 52 % left of centre a bride's cottage; at about 46 % on the right a watermill with a dry millrace; at about 70 % right of centre a pond with a tiny island; at about 75 % on the left a road blocked by a huge boulder.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### ostruvek_suchy.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the pond is drunk dry. Where the water was, show a muddy brown pond bottom with a few small shallow puddles and stranded water lilies. The little island with its tree now stands on the dry muddy bottom. The reeds, the fence and the banks stay as they are.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### balvan_rozbity.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the huge boulder on the dirt road at the bottom left is gone. It is smashed into a small pile of broken stones at the roadside and the road is free. Everything around it stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa

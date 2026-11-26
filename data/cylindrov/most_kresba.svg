@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Varianta vrstvy most.svg pro kreslenou scénu (obrazky.csv) -->
+  <!-- Kamenný most přes potok -->
+  <g transform="translate(0 8)">
+  <g stroke="#6E5E4A" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M196 352Q246 312 296 332L296 350L284 350Q256 320 226 356L210 366L196 366Z" fill="#C6B394"/>
+    <path d="M284 350Q256 320 226 356Z" fill="#3E4A52" opacity=".45" stroke="none"/>
+    <path d="M198 346Q246 306 294 326" fill="none" stroke="#DDCFB2" stroke-width="3.5"/>
+    <path d="M198 346Q246 306 294 326" fill="none"/>
+    <rect x="194" y="336" width="7" height="14" rx="1.5" fill="#D3C3A4"/>
+    <rect x="290" y="318" width="7" height="14" rx="1.5" fill="#D3C3A4"/>
+    <circle cx="197.5" cy="334" r="3.5" fill="#D3C3A4"/>
+    <circle cx="293.5" cy="316" r="3.5" fill="#D3C3A4"/>
+  </g>
+  <path d="M206 352l6-4M222 342l7-3M240 334l8-1M262 332l8 1M280 336l7 2M212 360l5-3M244 340l-2 6M268 338l2 6" stroke="#9C8C74" stroke-width="1" fill="none"/>
+  </g>
+</svg>

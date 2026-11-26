@@ -6,20 +6,25 @@
 # Jména souborů určují, kam obrázek patří:
 #   pozadi.png        scéna obce (ořízne se na 3:4, 900 × 1200)
 #   <id cíle>.png     portrét cíle z cile.csv (ořízne se na čtverec, 320 × 320)
-#   <vrstva>.png      kreslená náhrada vrstvy z vrstvy.csv, která zakrývá celou scénu (samota.png za samota.svg).
-#                     Ořízne se jako scéna na 3:4, 900 × 1200.
+#   <vrstva>.png      kreslená náhrada vrstvy z vrstvy.csv (samota.png za samota.svg). Ořízne se jako scéna
+#                     na 3:4, 900 × 1200. Bez řádku ve vyrez.csv zakryje celou scénu (světnice). S řádkem
+#                     z ní zůstane jen výřez s měkkým okrajem, třeba upravená scéna s vypitým rybníkem.
 #   <id karty>.png    obrázek karty z karty.csv (čtverec, 320 × 320). Jednobarevné pozadí kolem věci
 #                     se zprůhlední (stín zůstane jako poloprůhledný), aby na barevné kartě nebyl vidět čtverec.
+#                     Postava nakreslená v barevném kruhu zůstane celá jako kulatý medailon.
 #   <id cíle>_<cokoli>.png   portrét pro změněnou ikonu cíle. Když má cíl v kombinace.csv jen jednu změnu
 #                     ikony (ikona:pes:🐕💤), přiřadí se sám. Jinak nástroj vypíše řádek k ručnímu doplnění.
-# Ve vstupní složce můžou být ještě dva seznamy (oba nepovinné, oddělené středníkem):
+# Ve vstupní složce můžou být ještě tři seznamy (všechny nepovinné, oddělené středníkem):
 #   kopie.csv  soubor;zdroj   obrázek z jiné obce (zdroj je cesta od obrazky_vstup, např. lhotka/vrbuv_dopis.png).
 #                             Nástroj ho zkopíruje, jakmile zdroj existuje.
 #   mapa.csv   soubor;druh;id;ikona   jeden obrázek pro další cíl, kartu nebo změněnou ikonu cíle.
+#   vyrez.csv  soubor;x1;y1;x2;y2     z obrázku vrstvy zůstane jen obdélník (procenta scény), zbytek je průhledný.
+# Vrstvu, kterou kreslená scéna už má nakreslenou, skryje ruční řádek v obrazky.csv se souborem „-“
+# (vrstva;voda;;-).
 # Ručně doplněné řádky v obrazky.csv zůstanou. Potřebuje Pillow (python3 -m pip install pillow).
-import csv, os, re, shutil, sys
+import csv, math, os, re, shutil, sys
 
-from PIL import Image, ImageDraw, ImageOps
+from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 KOREN = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PRIPONY = ('.png', '.jpg', '.jpeg', '.webp')
@@ -81,13 +86,63 @@ def zpruhledni(obr, prah=80, cisto=3):
     return vysledek
 
 
-def preved(zdroj, cil, rozmer, pruhledne=False):
+def kruh(obr):
+    # Postava nakreslená v barevném kruhu na světlém pozadí (prompt pro medailon použitý u karty).
+    # Vrátí obrázek s průhledným okolím kruhu, nebo None, když v obrázku žádný kruh není.
+    obr = obr.convert('RGB')
+    s, v = obr.size
+    px = obr.load()
+    roh = tuple(sorted(c[i] for c in (px[2, 2], px[s - 3, 2], px[2, v - 3], px[s - 3, v - 3]))[1] for i in range(3))
+    rozdil = lambda p, q: max(abs(p[i] - q[i]) for i in range(3))
+    cx, cy, m = s / 2, v / 2, min(s, v)
+    prsten = [px[int(cx + 0.47 * m * math.cos(a / 90 * math.pi)), int(cy + 0.47 * m * math.sin(a / 90 * math.pi))] for a in range(180)]
+    stred = tuple(sorted(p[i] for p in prsten)[90] for i in range(3))
+    if rozdil(stred, roh) < 8 or sum(rozdil(p, stred) <= 10 for p in prsten) < 0.6 * len(prsten):
+        return None
+    polomery = []
+    for a in range(0, 360, 10):
+        for r in range(int(0.3 * m), int(0.52 * m)):
+            x, y = int(cx + r * math.cos(math.radians(a))), int(cy + r * math.sin(math.radians(a)))
+            if not (0 <= x < s and 0 <= y < v):
+                break
+            if rozdil(px[x, y], roh) <= 6:
+                polomery.append(r)
+                break
+    if len(polomery) < 18:
+        return None
+    r = sorted(polomery)[len(polomery) // 2] - 1
+    maska = Image.new('L', (s * 4, v * 4))
+    ImageDraw.Draw(maska).ellipse(((cx - r) * 4, (cy - r) * 4, (cx + r) * 4, (cy + r) * 4), fill=255)
+    vysledek = obr.convert('RGBA')
+    vysledek.putalpha(maska.resize((s, v), Image.LANCZOS))
+    return vysledek
+
+
+def vyrizni(obr, ramecek):
+    # Z obrázku zůstane jen obdélník (x1, y1, x2, y2 v procentech) s měkkým okrajem. Strana u kraje obrázku zůstane ostrá.
+    s, v = obr.size
+    mekce = round(s * 0.03)
+    x1, y1, x2, y2 = (float(c) for c in ramecek)
+    ven = 3 * mekce
+    box = (-ven if x1 <= 0 else x1 / 100 * s, -ven if y1 <= 0 else y1 / 100 * v,
+           s + ven if x2 >= 100 else x2 / 100 * s, v + ven if y2 >= 100 else y2 / 100 * v)
+    maska = Image.new('L', (s, v))
+    ImageDraw.Draw(maska).rectangle(box, fill=255)
+    maska = maska.filter(ImageFilter.GaussianBlur(mekce))
+    vysledek = obr.convert('RGBA')
+    vysledek.putalpha(maska)
+    return vysledek
+
+
+def preved(zdroj, cil, rozmer, pruhledne=False, ramecek=None):
     obr = ImageOps.exif_transpose(Image.open(zdroj))
     obr = obr.convert('RGBA' if 'A' in obr.getbands() else 'RGB')
     obr = orizni(obr, rozmer[0] / rozmer[1]).resize(rozmer, Image.LANCZOS)
+    if ramecek:
+        obr = vyrizni(obr, ramecek)
     # Obrázek, který už průhlednost má (třeba z ChatGPT s „transparent background“), zůstane, jak je.
     if pruhledne and not (obr.mode == 'RGBA' and obr.getchannel('A').getextrema()[0] < 250):
-        obr = zpruhledni(obr)
+        obr = kruh(obr) or zpruhledni(obr)
     obr.save(cil, 'WEBP', quality=82, method=6)
     return os.path.getsize(cil)
 
@@ -130,6 +185,9 @@ def main():
             ikona = presna[0]
         mapa.setdefault(os.path.splitext(r['soubor'])[0].lower(), []).append({'druh': r['druh'], 'id': r['id'], 'ikona': ikona})
 
+    # vyrez.csv: z obrázku vrstvy zůstane jen obdélník (soubor;x1;y1;x2;y2 v procentech scény).
+    vyrezy = {os.path.splitext(r['soubor'])[0].lower(): (r['x1'], r['y1'], r['x2'], r['y2']) for r in tabulka(os.path.join(vstup, 'vyrez.csv'))}
+
     os.makedirs(os.path.join(slozka, 'obrazky'), exist_ok=True)
     cesta_csv = os.path.join(slozka, 'obrazky.csv')
     radky = tabulka(cesta_csv)
@@ -164,7 +222,8 @@ def main():
                 rucne.append(f'  {nazev}: doplň do mapa.csv řádek {nazev};cil;{cil or "<id cíle>"};{navrh or "<ikona>"}')
         # Věci na kartě mají průhledné pozadí, portréty a scéna ne.
         pruhledne = bool(nove) and all(r['druh'] == 'karta' for r in nove)
-        velikost = preved(os.path.join(vstup, nazev), os.path.join(slozka, soubor), rozmer, pruhledne)
+        ramecek = vyrezy.get(jmeno) if jmeno in vrstvy else None
+        velikost = preved(os.path.join(vstup, nazev), os.path.join(slozka, soubor), rozmer, pruhledne, ramecek)
         print(f'{nazev} -> data/{obec}/{soubor} ({velikost // 1024} kB)')
         for radek in nove:
             radek['soubor'] = soubor
@@ -173,7 +232,7 @@ def main():
     poradi = {'pozadi': 0, 'vrstva': 1, 'cil': 2, 'karta': 3}
     with open(cesta_csv, 'w', encoding='utf-8', newline='') as f:
         f.write('# Kreslené obrázky obce. druh: pozadi, vrstva, cil, karta. ikona: jen u cíle, obrázek pro změněnou ikonu.\n')
-        f.write('# soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp).\n')
+        f.write('# soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp). U vrstvy „-“: kreslená scéna ji skryje.\n')
         zapis = csv.DictWriter(f, HLAVICKA, delimiter=';', lineterminator='\n', extrasaction='ignore')
         zapis.writeheader()
         for r in sorted(zname.values(), key=lambda r: (poradi.get(r['druh'], 9), r['id'], r.get('ikona') or '')):

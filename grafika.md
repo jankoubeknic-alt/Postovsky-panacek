@@ -29,7 +29,7 @@ Obrázek, který se hodí i jinde, se nekreslí znovu. Obyčejná obálka, Vrbů
 
 Čistá změna výrazu (😊, 🥰) se negeneruje. Hra nechá portrét a výraz ukáže jako odznak.
 
-Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoří v Neumětelích, hřeben ve Sněžné, důl ve Štolově), má vlastní obrázek ve formátu scény, pojmenovaný jako soubor vrstvy (`samota.png`). Vrstvy, které jen něco přikreslí nebo scénu ztmaví (bouřka, mlha, noc), zůstávají jako SVG.
+Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoří v Neumětelích, hřeben ve Sněžné, důl ve Štolově), má vlastní obrázek ve formátu scény, pojmenovaný jako soubor vrstvy (`samota.png`). Vrstvy, které jen něco přikreslí nebo scénu ztmaví (bouřka, mlha, noc), zůstávají jako SVG. Když se má změnit něco, co je v kresbě namalované (vypitý rybník, rozbitý balvan v Dlouhé Široké), nahraješ do ChatGPT svůj `pozadi.png` a necháš ho upravit jen na tom místě. Z upraveného obrázku se použije jen výřez kolem změny. Prompty pro to jsou v `prompty.md` pod nadpisem „Upravená scéna“.
 
 | Obec | Kapitola | Ke generování | Stav |
 | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ Vrstva, která ve hře zakryje celou scénu (světnice v Bludičkově, nádvoř�
 | Ozvěnov | Zase léto | 7 | prompty připravené |
 | Prokopov | Zase léto | 8 | prompty připravené |
 | Neumětely | Zase léto | 15 | prompty připravené |
-| Dlouhá Široká | Zase léto | 14 | prompty připravené |
+| Dlouhá Široká | Zase léto | 16 | hotovo |
 | Mňoukov | Zase léto | 10 | prompty připravené |
 | Kocourkov | Zase léto | 14 | prompty připravené |
 | Lhotka po roce | Zase léto | 4 | hotovo (prompty v této stránce) |

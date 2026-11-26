@@ -1,6 +1,7 @@
-# Rybník a mlýn podle toho, kde je voda. Balvan, dokud ho Bystrozraký nerozbije.
+# Rybník a mlýn podle toho, kde je voda. Balvan, dokud ho Bystrozraký nerozbije, potom hromádka kamínků.
 obrazek;podminka
 data/dlouha/voda.svg;!rybnik_vypity
 data/dlouha/ostruvek_suchy.svg;rybnik_vypity
 data/dlouha/balvan.svg;!balvan_pryc
+data/dlouha/balvan_rozbity.svg;balvan_pryc
 data/dlouha/kolo.svg;mlyn_bezi

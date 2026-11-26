@@ -12,9 +12,7 @@ Obec je na trase 9. V. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 Vygeneruj (11): `pozadi.png`, `zvon.png`, `mlynar.png`, `farar.png`, `zenich.png`, `nevesta.png`, `babka.png`, `zavoj.png`, `oznameni.png`, `cedulka_farar.png`, `kapesnik.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `prsteny.png`
+Už jsou ve složce, zkopírované z jiných obcí (2): `prsteny.png`, `dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

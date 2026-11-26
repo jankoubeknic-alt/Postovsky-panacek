@@ -16,9 +16,7 @@ Obec je na trase 15. XI. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (8): `pozadi.png`, `hospodsky.png`, `ponocny.png`, `marka.png`, `pekar.png`, `lavicka.png`, `koralka.png`, `pani.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (5): `dopis_hospodsky.png`, `dopis_marka.png`, `dopis_pani.png`, `dopis_pekar.png`, `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `prsten.png`
+Už jsou ve složce, zkopírované z jiných obcí (6): `prsten.png`, `dopis_hospodsky.png`, `dopis_marka.png`, `dopis_pani.png`, `dopis_pekar.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

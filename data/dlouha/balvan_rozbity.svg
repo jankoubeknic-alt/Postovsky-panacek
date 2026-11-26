@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Balvan rozbitý Bystrozrakým: u cesty zbyla hromádka kamínků -->
+  <g fill="#8A847A" stroke="#5A554C" stroke-width="1.2">
+    <path d="M14 362l6-9 10 1 4 8-8 5z"/><path d="M32 366l5-7 9 2 2 7-9 3z"/><path d="M22 354l4-6 7 1 2 6-7 2z"/>
+    <path d="M84 360l5-6 8 2 1 6-8 2z"/>
+  </g>
+</svg>

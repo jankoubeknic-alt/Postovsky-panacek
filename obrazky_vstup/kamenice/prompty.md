@@ -16,9 +16,7 @@ Obec je na trase 24. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 Vygeneruj (13): `pozadi.png`, `hodiny.png`, `reditel.png`, `hvezdar.png`, `franta.png`, `hostinsky.png`, `marie.png`, `okno.png`, `franta_den.png`, `kometa.png`, `harmonika.png`, `balicek.png`, `kocka.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (2): `uredni.png`, `zadost.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `prsten.png`
+Už jsou ve složce, zkopírované z jiných obcí (3): `uredni.png`, `prsten.png`, `zadost.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

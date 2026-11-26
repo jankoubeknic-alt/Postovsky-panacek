@@ -7,11 +7,12 @@ const cekej = (ms) => new Promise((r) => setTimeout(r, ms));
 let ws, cislo = 0; const cekajici = new Map(); const logy = [];
 for (let i = 0; i < 50; i++) { try { const r = await fetch('http://127.0.0.1:9333/json/list'); const t = (await r.json()).find((x) => x.type === 'page'); if (t) { ws = new WebSocket(t.webSocketDebuggerUrl); break; } } catch {} await cekej(200); }
 await new Promise((r) => ws.addEventListener('open', r));
-ws.addEventListener('message', (e) => { const m = JSON.parse(e.data); if (m.id && cekajici.has(m.id)) { cekajici.get(m.id)(m); cekajici.delete(m.id); } if (m.method === 'Runtime.exceptionThrown') logy.push('VÝJIMKA ' + JSON.stringify(m.params.exceptionDetails.exception?.description || m.params.exceptionDetails.text)); if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') logy.push('console.error ' + JSON.stringify(m.params.args.map((a) => a.value))); });
+ws.addEventListener('message', (e) => { const m = JSON.parse(e.data); if (m.id && cekajici.has(m.id)) { cekajici.get(m.id)(m); cekajici.delete(m.id); } if (m.method === 'Runtime.exceptionThrown') logy.push('VÝJIMKA ' + JSON.stringify(m.params.exceptionDetails.exception?.description || m.params.exceptionDetails.text)); if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') logy.push('console.error ' + JSON.stringify(m.params.args.map((a) => a.value))); // Nenačtený obrázek nebo skript. Chybějící nepovinné tabulky (.csv) a favicon jsou v pořádku.
+  if (m.method === 'Log.entryAdded' && m.params.entry.source === 'network' && m.params.entry.level === 'error' && !/\.csv$|favicon\.ico$/.test(m.params.entry.url || '')) logy.push('NENAČTENO ' + (m.params.entry.url || m.params.entry.text)); });
 const cdp = (method, params = {}) => new Promise((r) => { const id = ++cislo; cekajici.set(id, r); ws.send(JSON.stringify({ id, method, params })); });
 const js = async (expr) => (await cdp('Runtime.evaluate', { expression: expr, awaitPromise: true, returnByValue: true })).result?.result?.value;
 const snimek = async (jmeno) => { const r = await cdp('Page.captureScreenshot', { format: 'png' }); (await import('node:fs')).writeFileSync(`${vystup}/${jmeno}.png`, Buffer.from(r.result.data, 'base64')); };
-await cdp('Runtime.enable'); await cdp('Page.enable');
+await cdp('Runtime.enable'); await cdp('Page.enable'); await cdp('Log.enable');
 await cdp('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
 await cdp('Page.navigate', { url: (process.env.POSTAK_URL || 'http://127.0.0.1:8765/') + '#debug' });
 for (let i = 0; i < 100 && !(await js(`[...document.querySelectorAll('.zastavka__tlacitko')].some(b => b.textContent.includes(${JSON.stringify(obec)}))`)); i++) await cekej(200);
@@ -57,5 +58,5 @@ for (const [karta, cil, foto] of kroky) {
 }
 await cekej(800); await snimek(`${n}-konec`);
 console.log('stav:', await js(`document.querySelector('.ladeni')?.textContent`));
-console.log(logy.length ? logy.join('\n') : 'bez chyb v konzoli');
+console.log(logy.length ? logy.join(' | ') : 'bez chyb v konzoli');
 ws.close(); chrome.kill();
