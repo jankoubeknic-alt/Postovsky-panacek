@@ -12,9 +12,7 @@ Obec je na trase 2. VII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (7): `pozadi.png`, `ozvena.png`, `hromada.png`, `hromadka.png`, `hostinsky.png`, `deti.png`, `krmeni.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (4): `pohled.png`, `noviny.png`, `prani.png`, `vrbuv_dopis.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `slepice.png`
+Už jsou ve složce, zkopírované z jiných obcí (5): `pohled.png`, `noviny.png`, `prani.png`, `slepice.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

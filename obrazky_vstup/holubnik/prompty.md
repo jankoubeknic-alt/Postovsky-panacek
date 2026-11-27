@@ -8,11 +8,17 @@ Obec je na trase 9. III. Postup je stejný jako u Lhotky a podrobně je popsaný
    Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
+## Poznámky k obci
+
+- Klobásy nejsou kopie buřtu ze Skákalova: řezník dává věnec čerstvých klobás. Do té doby karta ukazuje buřt ze Skákalova.
+
 ## Soubory
 
-Vygeneruj (15): `pozadi.png`, `holubar.png`, `kostel.png`, `kocour.png`, `hostinsky.png`, `reznik.png`, `babka.png`, `mlekarka.png`, `koreni.png`, `mleko.png`, `kvocna.png`, `holub_hajovna.png`, `holub_salas.png`, `holub_balon.png`, `dopis_baca.png`
+Vygeneruj (1): `klobasy.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_hajny.png`, `dopis_balonar.png`, `klobasy.png`, `vrbuv_dopis.png`
+Už máš vygenerované (15): `pozadi.png`, `holubar.png`, `kostel.png`, `kocour.png`, `hostinsky.png`, `reznik.png`, `babka.png`, `mlekarka.png`, `koreni.png`, `mleko.png`, `kvocna.png`, `holub_hajovna.png`, `holub_salas.png`, `holub_balon.png`, `dopis_baca.png`
+
+Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_hajny.png`, `dopis_balonar.png`, `vrbuv_dopis.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -155,4 +161,13 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a small paper delivery slip with a round shop stamp and scribbles, no readable text.
+```
+
+### klobasy.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: a ring of fresh smoked Czech sausages tied together with a string, straight from the village butcher, a sprig of marjoram beside it.
 ```

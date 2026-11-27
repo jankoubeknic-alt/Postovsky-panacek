@@ -12,9 +12,7 @@ Obec je na trase 31. XII. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 Vygeneruj (11): `pozadi.png`, `starosta.png`, `kominik.png`, `schranka.png`, `marie.png`, `ucitel.png`, `kovar.png`, `vrana.png`, `farar.png`, `zadost.png`, `zebrik.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (4): `odpoved_marie.png`, `odpoved_vrana.png`, `podekovani.png`, `stiznost.png`
-
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `odpoved_zelezarstvi.png`
+Už jsou ve složce, zkopírované z jiných obcí (5): `odpoved_marie.png`, `odpoved_vrana.png`, `podekovani.png`, `stiznost.png`, `odpoved_zelezarstvi.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

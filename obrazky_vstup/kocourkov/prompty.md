@@ -12,7 +12,7 @@ Obec je na trase 6. VIII. Postup je stejný jako u Lhotky a podrobně je popsan�
 
 Vygeneruj (14): `pozadi.png`, `starosta.png`, `bozka.png`, `drbna.png`, `hospodsky.png`, `myslivec.png`, `pole.png`, `sedlak.png`, `kosikarka.png`, `kos.png`, `koste.png`, `zajic.png`, `vino.png`, `flinta.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (1): `ucet.png`
+Už jsou ve složce, zkopírované z jiných obcí (1): `ucet.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

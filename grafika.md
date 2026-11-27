@@ -75,7 +75,7 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Pecnov | Zima | 12 | prompty připravené |
 | Pošta o půlnoci | Zima | 12 | prompty připravené |
 | Razítkov | Jaro | 11 | prompty připravené |
-| Holubník | Jaro | 15 | prompty připravené |
+| Holubník | Jaro | 16 | hotovo, chybí jen `klobasy.png` (věnec klobás, do té doby karta ukazuje buřt ze Skákalova) |
 | Štolov | Jaro | 13 | prompty připravené |
 | Loutkov nad Nití | Jaro | 11 | prompty připravené |
 | Straky nad Blýskavou | Jaro | 8 | prompty připravené |
