@@ -35,10 +35,9 @@ Galerii všech vzhledů kreslených obcí vyrobí `node nastroje/stavy.mjs <obec
 
 ### Doplnit do hotových obcí
 
-Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Prompty jsou v `prompty.md` jednotlivých obcí, do té doby hra ukazuje náhradní kresbu nebo odznak. Bezvětří, Brodek, Čertovina, Cylindrov, Faustův dům a Floriánov už jsou doplněné. Zbývá:
+Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Prompty jsou v `prompty.md` jednotlivých obcí, do té doby hra ukazuje náhradní kresbu nebo odznak. Bezvětří, Brodek, Čertovina, Cylindrov, Faustův dům, Floriánov (až na ohořelou kovárnu) a Hejrupov už jsou doplněné. Zbývá:
 
-- Floriánov: `kovarna_ohorela.png` (ohořelá střecha kovárny po uhašení, aby scéna seděla na portrét `kovarna_uhasena.png`).
-- Hejrupov: `maj_stoji.png`, pak z něj `hori.png` (hořící hranice), portréty `maj_vztycen.png` a `hranice_hori.png`.
+- Floriánov: `kovarna_ohorela.png` (ohořelá střecha kovárny po uhašení, aby scéna seděla na portrét `kovarna_uhasena.png`). Dělá se z `pozadi.png`, ne z hořící kovárny.
 - Krakonošov: `bourka.png` (celá scéna v bouřce).
 - Myší Lhota: `slapoty.png` (obří šlápota a rozšlápnutý plot).
 - Spáčov pod Blaníkem: `otevreno.png` (otevřená skála).

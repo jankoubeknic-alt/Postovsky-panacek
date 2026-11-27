@@ -47,7 +47,7 @@ Keep the same portrait size and aspect ratio. No people and no animals. No text,
 ### kovarna_ohorela.png
 
 ```
-Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the fire at the smithy at the top left has just been put out: its roof is scorched black with some tiles missing and charred rafters showing, the walls under the roof are sooty and wet, a thin wisp of grey smoke still rises. Everything else stays as it is.
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the fire at the smithy at the top left has just been put out: its roof is scorched black with some tiles missing and charred rafters showing, the walls under the roof are sooty and wet, a thin wisp of grey smoke still rises. There is no fire and there are no flames anywhere in the picture. Everything else stays as it is.
 Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 

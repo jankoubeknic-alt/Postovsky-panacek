@@ -10,9 +10,9 @@ Obec je na trase 30. IV. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (4): `maj_stoji.png`, `hori.png`, `maj_vztycen.png`, `hranice_hori.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (11): `pozadi.png`, `dedove.png`, `hasici.png`, `kovar.png`, `kluci.png`, `maj.png`, `hranice.png`, `sedlak.png`, `hospodska.png`, `slama.png`, `carodejnice.png`
+Už máš vygenerované (15): `pozadi.png`, `maj_stoji.png`, `hori.png`, `dedove.png`, `hasici.png`, `kovar.png`, `kluci.png`, `maj.png`, `hranice.png`, `maj_vztycen.png`, `hranice_hori.png`, `sedlak.png`, `hospodska.png`, `slama.png`, `carodejnice.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_dedove.png`, `dopis_hasici.png`, `dopis_kovar.png`, `dopis_kluci.png`
 
