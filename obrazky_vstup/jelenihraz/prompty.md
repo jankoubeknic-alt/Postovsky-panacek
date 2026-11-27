@@ -14,7 +14,9 @@ Obec je na trase 12. V. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (10): `pozadi.png`, `hraz.png`, `kanal.png`, `pilar.png`, `hajna.png`, `hospodsky.png`, `vorar.png`, `list.png`, `truhla.png`, `sud.png`
+Vygeneruj (0): nic, všechno je hotové
+
+Už máš vygenerované (10): `pozadi.png`, `hraz.png`, `kanal.png`, `pilar.png`, `hajna.png`, `hospodsky.png`, `vorar.png`, `list.png`, `truhla.png`, `sud.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `avizo_pila.png`, `avizo_hajovna.png`, `avizo_ves.png`
 

@@ -15,9 +15,9 @@ Obec je na trase 16. V. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (2): `prevoznik.png`, `dopis_dcera.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (9): `pozadi.png`, `drbna.png`, `koza.png`, `pecet.png`, `lod.png`, `socha.png`, `farar.png`, `sedlak.png`, `dcera.png`
+Už máš vygenerované (11): `pozadi.png`, `drbna.png`, `koza.png`, `pecet.png`, `prevoznik.png`, `lod.png`, `socha.png`, `farar.png`, `sedlak.png`, `dcera.png`, `dopis_dcera.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis_prevoznik.png`
 

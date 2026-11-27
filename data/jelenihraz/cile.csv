@@ -1,17 +1,17 @@
 # x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
 id;jmeno;ikona;x;y;skryt_kdyz
-hraz;Hráz u jezera;🌊;16;12;
-kanal;Koukat na dříví;🪵;50;12;
-pilar;Pilař;🪚;16;31;
-hajna;Hajná;👩‍🌾;16;50;
-hospodsky;Hospodský;🍺;16;69;
-vorar;Vorař u jezu;🧔;16;88;
-pl_list2;Pilový list;🪚;44;31;!l=2
-pl_list3;Pilový list;🪚;44;50;!l=3
-pl_list4;Pilový list;🪚;44;69;!l=4
-pl_truhla2;Truhla s výbavou;🧳;64;31;!t=2
-pl_truhla3;Truhla s výbavou;🧳;64;50;!t=3
-pl_truhla4;Truhla s výbavou;🧳;64;69;!t=4
-pl_sud2;Sud piva;🛢️;84;31;!s=2
-pl_sud3;Sud piva;🛢️;84;50;!s=3
-pl_sud4;Sud piva;🛢️;84;69;!s=4
+hraz;Hráz u jezera;🌊;40;8;
+kanal;Koukat na dříví;🪵;62;86;
+pilar;Pilař;🪚;16;27;
+hajna;Hajná;👩‍🌾;16;46;
+hospodsky;Hospodský;🍺;16;65;
+vorar;Vorař u jezu;🧔;16;86;
+pl_list2;Pilový list;🪚;44;27;!l=2
+pl_list3;Pilový list;🪚;44;46;!l=3
+pl_list4;Pilový list;🪚;44;65;!l=4
+pl_truhla2;Truhla s výbavou;🧳;64;27;!t=2
+pl_truhla3;Truhla s výbavou;🧳;64;46;!t=3
+pl_truhla4;Truhla s výbavou;🧳;64;65;!t=4
+pl_sud2;Sud piva;🛢️;84;27;!s=2
+pl_sud3;Sud piva;🛢️;84;46;!s=3
+pl_sud4;Sud piva;🛢️;84;65;!s=4

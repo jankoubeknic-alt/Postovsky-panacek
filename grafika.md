@@ -87,8 +87,8 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Šnekov | Jaro | 12 | prompty připravené |
 | Floriánov | Jaro | 11 | hotovo |
 | Dolní Zapomněnice | Jaro | 11 | prompty připravené |
-| Jelení Hráz | Jaro | 10 | prompty připravené |
-| Jánský Brod | Jaro | 11 | rozpracováno, chybí přegenerovaný `prevoznik.png` (sedí na břehu s obvazem, ne v loďce) a vlastní `dopis_dcera.png` (pohled s Karlovým mostem) |
+| Jelení Hráz | Jaro | 10 | hotovo |
+| Jánský Brod | Jaro | 11 | hotovo |
 | Ťukov | Zase léto | 7 | prompty připravené |
 | Kočičí Lhota | Zase léto | 14 | prompty připravené |
 | Lázně Bílá | Zase léto | 10 | prompty připravené |
