@@ -5,6 +5,7 @@ pozadi;;;obrazky/pozadi.webp
 vrstva;chalupa_hori;;obrazky/chalupa_hori.webp
 vrstva;fara_hori;;obrazky/fara_hori.webp
 vrstva;kovarna_hori;;obrazky/kovarna_hori.webp
+vrstva;kovarna_ohorela;;obrazky/kovarna_ohorela.webp
 vrstva;truhlarna_hori;;obrazky/truhlarna_hori.webp
 vrstva;zbrojnice_otevrena;;obrazky/zbrojnice_otevrena.webp
 cil;chalupa;;obrazky/chalupa.webp
@@ -20,4 +21,3 @@ cil;zvonice;;obrazky/zvonice.webp
 karta;dopis_starosta;;obrazky/dopis_starosta.webp
 karta;klic;;obrazky/klic.webp
 karta;vedro;;obrazky/vedro.webp
-vrstva;kovarna_ohorela;;-

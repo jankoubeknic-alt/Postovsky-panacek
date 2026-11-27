@@ -20,7 +20,7 @@ Už máš vygenerované (15): `pozadi.png`, `babka.png`, `statkar.png`, `statkar
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `poutnik.png`, `vrbuv_dopis.png`
 
-Navíc vygeneruj (1): `bourka.png`, je to celá scéna v bouřce, postup je v sekci „Upravená scéna“.
+Navíc vygenerováno (1): `bourka.png`, celá scéna v bouřce.
 
 Prompty jsou jen pro obrázky ke generování.
 

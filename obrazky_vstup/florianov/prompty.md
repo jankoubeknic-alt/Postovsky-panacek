@@ -14,9 +14,9 @@ Obec je na trase 4. V. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 ## Soubory
 
-Vygeneruj (1): `kovarna_ohorela.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (17): `pozadi.png`, `kovarna_hori.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png`, `zbrojnice_otevrena.png`, `kovarna.png`, `kovarna_uhasena.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
+Už máš vygenerované (18): `pozadi.png`, `kovarna_hori.png`, `kovarna_ohorela.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png`, `zbrojnice_otevrena.png`, `kovarna.png`, `kovarna_uhasena.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_starosta.png`, `klic.png`
 
