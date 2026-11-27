@@ -14,9 +14,9 @@ Obec je na trase 4. V. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 ## Soubory
 
-Vygeneruj (6): `kovarna_hori.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png`, `zbrojnice_otevrena.png`, `kovarna_uhasena.png`
+Vygeneruj (1): `kovarna_ohorela.png`
 
-Už máš vygenerované (11): `pozadi.png`, `kovarna.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
+Už máš vygenerované (17): `pozadi.png`, `kovarna_hori.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png`, `zbrojnice_otevrena.png`, `kovarna.png`, `kovarna_uhasena.png`, `truhlarna.png`, `chalupa.png`, `fara.png`, `studna.png`, `zvonice.png`, `florian.png`, `starosta.png`, `velitel.png`, `vedro.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_starosta.png`, `klic.png`
 
@@ -41,6 +41,13 @@ Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. C
 
 ```
 Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the smithy at the top left is on fire: bright orange flames burst from its roof and thick grey smoke rises into the sky. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
+```
+
+### kovarna_ohorela.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the fire at the smithy at the top left has just been put out: its roof is scorched black with some tiles missing and charred rafters showing, the walls under the roof are sooty and wet, a thin wisp of grey smoke still rises. Everything else stays as it is.
 Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 

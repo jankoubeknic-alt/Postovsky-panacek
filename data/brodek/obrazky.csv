@@ -3,8 +3,9 @@
 druh;id;ikona;soubor
 pozadi;;;obrazky/pozadi.webp
 vrstva;slunce;;slunce_kresba.svg
-vrstva;voda2;;voda2_kresba.svg
-vrstva;voda3;;voda3_kresba.svg
+vrstva;voda1;;obrazky/voda1.webp
+vrstva;voda2;;obrazky/voda2.webp
+vrstva;voda3;;obrazky/voda3.webp
 cil;hostinska;;obrazky/hostinska.webp
 cil;kachna;;obrazky/kachna.webp
 cil;mlynar;;obrazky/mlynar.webp

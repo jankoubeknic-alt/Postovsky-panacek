@@ -10,9 +10,9 @@ Obec je na trase 4. X. Postup je stejný jako u Lhotky a podrobně je popsaný v
 
 ## Soubory
 
-Vygeneruj (1): `lopatky.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (9): `pozadi.png`, `kohout.png`, `mlynar.png`, `starosta.png`, `pradlena.png`, `deti.png`, `vitr.png`, `plachta.png`, `drak.png`
+Už máš vygenerované (10): `pozadi.png`, `lopatky.png`, `kohout.png`, `mlynar.png`, `starosta.png`, `pradlena.png`, `deti.png`, `vitr.png`, `plachta.png`, `drak.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
 

@@ -10,9 +10,9 @@ Obec je na trase 12. IV. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (3): `voda1.png`, `voda2.png`, `voda3.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (10): `pozadi.png`, `ucitelka.png`, `rybar.png`, `vodnik.png`, `mlynar.png`, `hostinska.png`, `kachna.png`, `holinky.png`, `psani.png`, `sadlo.png`
+Už máš vygenerované (13): `pozadi.png`, `voda1.png`, `voda2.png`, `voda3.png`, `ucitelka.png`, `rybar.png`, `vodnik.png`, `mlynar.png`, `hostinska.png`, `kachna.png`, `holinky.png`, `psani.png`, `sadlo.png`
 
 Oprav úpravou (1): `pozadi.png`, postup je v sekci „Oprava scény“.
 

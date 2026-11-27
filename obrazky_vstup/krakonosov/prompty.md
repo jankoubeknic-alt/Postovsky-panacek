@@ -16,7 +16,7 @@ Obec je na trase 20. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 
 ## Soubory
 
-Vygeneruj (15): `pozadi.png`, `babka.png`, `statkar.png`, `statkar_strach.png`, `statkar_destnik.png`, `houbar.png`, `uhlir.png`, `pekar.png`, `hospoda.png`, `stiznost.png`, `odpoved.png`, `balik_houbar.png`, `dopis_uhlir.png`, `pohled_poutnik.png`, `chleba.png`
+Už máš vygenerované (15): `pozadi.png`, `babka.png`, `statkar.png`, `statkar_strach.png`, `statkar_destnik.png`, `houbar.png`, `uhlir.png`, `pekar.png`, `hospoda.png`, `stiznost.png`, `odpoved.png`, `balik_houbar.png`, `dopis_uhlir.png`, `pohled_poutnik.png`, `chleba.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `poutnik.png`, `vrbuv_dopis.png`
 

@@ -16,7 +16,7 @@ Obec je na trase 6. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `starosta.png`, `starosta_slavi.png`, `krejcova.png`, `krejcova_vana.png`, `studna.png`, `deti.png`, `kocour.png`, `balik.png`, `dopis_kocour.png`, `dopisek.png`, `syr.png`
+Už máš vygenerované (12): `pozadi.png`, `starosta.png`, `starosta_slavi.png`, `krejcova.png`, `krejcova_vana.png`, `studna.png`, `deti.png`, `kocour.png`, `balik.png`, `dopis_kocour.png`, `dopisek.png`, `syr.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
 

@@ -14,9 +14,9 @@ Obec je na trase 19. IX. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (1): `most_stoji.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (20): `pozadi.png`, `kouzelnik.png`, `farar.png`, `kominik.png`, `klobouk.png`, `babicka.png`, `tonda.png`, `potok.png`, `hulka.png`, `pulka.png`, `lzice.png`, `kytka.png`, `nitka.png`, `kridlo.png`, `mydlo.png`, `klic.png`, `mic.png`, `kost.png`, `host.png`, `most.png`
+Už máš vygenerované (21): `pozadi.png`, `kouzelnik.png`, `farar.png`, `kominik.png`, `klobouk.png`, `babicka.png`, `tonda.png`, `potok.png`, `hulka.png`, `pulka.png`, `lzice.png`, `kytka.png`, `nitka.png`, `kridlo.png`, `mydlo.png`, `klic.png`, `mic.png`, `kost.png`, `host.png`, `most.png`, `most_stoji.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `pes.png`, `svice.png`
 

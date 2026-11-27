@@ -35,14 +35,9 @@ Galerii všech vzhledů kreslených obcí vyrobí `node nastroje/stavy.mjs <obec
 
 ### Doplnit do hotových obcí
 
-Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Prompty jsou v `prompty.md` jednotlivých obcí, do té doby hra ukazuje náhradní kresbu nebo odznak.
+Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Prompty jsou v `prompty.md` jednotlivých obcí, do té doby hra ukazuje náhradní kresbu nebo odznak. Bezvětří, Brodek, Čertovina, Cylindrov, Faustův dům a Floriánov už jsou doplněné. Zbývá:
 
-- Bezvětří: `lopatky.png` (mlýn s novými lopatkami).
-- Brodek: napřed oprava `pozadi.png` (scéna bez namalovaného deště), pak z opravené scény `voda1.png`, `voda2.png`, `voda3.png` (stoupající povodeň).
-- Čertovina pod Kotlem: `plamen.png` (rozpálený kotel), `kotel_studeny.png` (vyhaslý kotel s jinovatkou).
-- Cylindrov: `most_stoji.png` (postavený kamenný most).
-- Faustův dům: `student_vzhuru.png` (probuzený student od sazí).
-- Floriánov: `kovarna_hori.png`, `truhlarna_hori.png`, `chalupa_hori.png`, `fara_hori.png` (požár přeskakuje), `zbrojnice_otevrena.png`, `kovarna_uhasena.png` (portrét po uhašení).
+- Floriánov: `kovarna_ohorela.png` (ohořelá střecha kovárny po uhašení, aby scéna seděla na portrét `kovarna_uhasena.png`).
 - Hejrupov: `maj_stoji.png`, pak z něj `hori.png` (hořící hranice), portréty `maj_vztycen.png` a `hranice_hori.png`.
 - Krakonošov: `bourka.png` (celá scéna v bouřce).
 - Myší Lhota: `slapoty.png` (obří šlápota a rozšlápnutý plot).

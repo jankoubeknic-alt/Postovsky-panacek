@@ -3,7 +3,7 @@
 druh;id;ikona;soubor
 pozadi;;;obrazky/pozadi.webp
 vrstva;drak;;drak_kresba.svg
-vrstva;lopatky;;lopatky_kresba.svg
+vrstva;lopatky;;obrazky/lopatky.webp
 vrstva;papir;;papir_kresba.svg
 cil;deti;;obrazky/deti.webp
 cil;kohout;;obrazky/kohout.webp

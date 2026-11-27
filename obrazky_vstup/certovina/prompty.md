@@ -10,9 +10,9 @@ Obec je na trase 29. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (2): `plamen.png`, `kotel_studeny.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (11): `pozadi.png`, `andel.png`, `lucifer.png`, `kotel.png`, `bertka.png`, `bonifac.png`, `duchod_l.png`, `prihlaska.png`, `uhli1.png`, `zadost_v.png`, `doporuceni.png`
+Už máš vygenerované (13): `pozadi.png`, `plamen.png`, `kotel_studeny.png`, `andel.png`, `lucifer.png`, `kotel.png`, `bertka.png`, `bonifac.png`, `duchod_l.png`, `prihlaska.png`, `uhli1.png`, `zadost_v.png`, `doporuceni.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `zadost.png`
 

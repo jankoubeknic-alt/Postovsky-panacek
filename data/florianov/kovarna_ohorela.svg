@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Po uhašení: ohořelá střecha kovárny a tenký pramínek kouře. -->
+  <g fill="#2B2420" opacity=".75"><path d="M20 72C22 64 28 62 32 58C36 62 42 62 48 66L50 72Z"/><circle cx="30" cy="66" r="4"/></g>
+  <g fill="#8A8580" opacity=".4"><circle cx="34" cy="50" r="4"/><circle cx="38" cy="40" r="5"/></g>
+</svg>

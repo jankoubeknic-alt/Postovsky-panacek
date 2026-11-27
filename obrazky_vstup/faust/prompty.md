@@ -10,9 +10,9 @@ Obec je na trase 13. XI. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (1): `student_vzhuru.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (10): `pozadi.png`, `kominik.png`, `vdova.png`, `student.png`, `kos.png`, `domovnice.png`, `zednik.png`, `dopis_vdova.png`, `stetky.png`, `ucebnice.png`
+Už máš vygenerované (11): `pozadi.png`, `kominik.png`, `vdova.png`, `student.png`, `student_vzhuru.png`, `kos.png`, `domovnice.png`, `zednik.png`, `dopis_vdova.png`, `stetky.png`, `ucebnice.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_domovnice.png`, `tolar.png`
 

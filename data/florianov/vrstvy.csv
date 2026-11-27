@@ -1,7 +1,8 @@
-# Zbrojnice je otevřená, když hasiči vyjedou.
+# Zbrojnice je otevřená, když hasiči vyjedou. Po uhašení zůstane kovárně ohořelá střecha.
 # Požár: hoří dům s počítadlem o1 až o4 (kovárna, truhlárna, chalupa Vávrových, fara). Po uhašení jsou všechna 0.
 obrazek;podminka
 data/florianov/kovarna_hori.svg;o1=1
+data/florianov/kovarna_ohorela.svg;uhaseno
 data/florianov/truhlarna_hori.svg;o2=1
 data/florianov/chalupa_hori.svg;o3=1
 data/florianov/fara_hori.svg;o4=1
