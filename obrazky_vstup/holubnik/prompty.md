@@ -14,9 +14,9 @@ Obec je na trase 9. III. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (1): `klobasy.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (15): `pozadi.png`, `holubar.png`, `kostel.png`, `kocour.png`, `hostinsky.png`, `reznik.png`, `babka.png`, `mlekarka.png`, `koreni.png`, `mleko.png`, `kvocna.png`, `holub_hajovna.png`, `holub_salas.png`, `holub_balon.png`, `dopis_baca.png`
+Už máš vygenerované (16): `pozadi.png`, `holubar.png`, `kostel.png`, `kocour.png`, `hostinsky.png`, `reznik.png`, `babka.png`, `mlekarka.png`, `koreni.png`, `mleko.png`, `kvocna.png`, `holub_hajovna.png`, `holub_salas.png`, `holub_balon.png`, `dopis_baca.png`, `klobasy.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_hajny.png`, `dopis_balonar.png`, `vrbuv_dopis.png`
 

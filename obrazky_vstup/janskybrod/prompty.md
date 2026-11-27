@@ -11,12 +11,15 @@ Obec je na trase 16. V. Postup je stejný jako u Lhotky a podrobně je popsaný 
 ## Poznámky k obci
 
 - Drbna, koza, dopis s pečetí a loďka jsou na obou březích, každý má jeden obrázek.
+- Převozník si v příběhu ovazuje nohu a loďku půjčuje tobě, proto sedí na břehu, ne v loďce. Pohled pro dceru ukazuje Karlův most se svatým Janem, o tom mluví text.
 
 ## Soubory
 
-Vygeneruj (10): `pozadi.png`, `drbna.png`, `koza.png`, `pecet.png`, `prevoznik.png`, `lod.png`, `socha.png`, `farar.png`, `sedlak.png`, `dcera.png`
+Vygeneruj (2): `prevoznik.png`, `dopis_dcera.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_prevoznik.png`, `dopis_dcera.png`
+Už máš vygenerované (9): `pozadi.png`, `drbna.png`, `koza.png`, `pecet.png`, `lod.png`, `socha.png`, `farar.png`, `sedlak.png`, `dcera.png`
+
+Už jsou ve složce, zkopírované z jiných obcí (1): `dopis_prevoznik.png`
 
 Prompty jsou jen pro obrázky ke generování.
 
@@ -57,7 +60,7 @@ Character: a white goat chewing a piece of paper.
 Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Head-and-shoulders portrait facing the viewer, centred, the whole head inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
-Character: the ferryman, an old man with a long pole and a straw hat, sitting in his boat.
+Character: the old ferryman with a straw hat sitting on the river bank (not in a boat), holding a roll of white bandage for his sore leg, his long ferry pole leaning against his shoulder, a rueful but friendly smile.
 ```
 
 ### lod.png
@@ -114,4 +117,13 @@ Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
 Object: a folded letter sealed with a big red wax seal.
+```
+
+### dopis_dcera.png
+
+```
+Create a square image (1:1).
+Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
+One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
+Object: an old picture postcard showing the stone Charles Bridge in Prague with its row of baroque statues, in front the statue of St John of Nepomuk with a halo of five golden stars, Prague Castle on the hill behind. No readable text.
 ```

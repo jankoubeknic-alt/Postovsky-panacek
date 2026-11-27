@@ -75,7 +75,7 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Pecnov | Zima | 12 | prompty připravené |
 | Pošta o půlnoci | Zima | 12 | prompty připravené |
 | Razítkov | Jaro | 11 | prompty připravené |
-| Holubník | Jaro | 16 | hotovo, chybí jen `klobasy.png` (věnec klobás, do té doby karta ukazuje buřt ze Skákalova) |
+| Holubník | Jaro | 16 | hotovo |
 | Štolov | Jaro | 13 | prompty připravené |
 | Loutkov nad Nití | Jaro | 11 | prompty připravené |
 | Straky nad Blýskavou | Jaro | 8 | prompty připravené |
@@ -88,7 +88,7 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Floriánov | Jaro | 11 | hotovo |
 | Dolní Zapomněnice | Jaro | 11 | prompty připravené |
 | Jelení Hráz | Jaro | 10 | prompty připravené |
-| Jánský Brod | Jaro | 10 | prompty připravené |
+| Jánský Brod | Jaro | 11 | rozpracováno, chybí přegenerovaný `prevoznik.png` (sedí na břehu s obvazem, ne v loďce) a vlastní `dopis_dcera.png` (pohled s Karlovým mostem) |
 | Ťukov | Zase léto | 7 | prompty připravené |
 | Kočičí Lhota | Zase léto | 14 | prompty připravené |
 | Lázně Bílá | Zase léto | 10 | prompty připravené |

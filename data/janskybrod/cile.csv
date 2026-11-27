@@ -1,15 +1,16 @@
 # x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
+# Tento břeh (_L) je dole u louky, druhý břeh (_P) nahoře u vsi s kostelem, kde bydlí farář, sedlák a dcera drbny.
 id;jmeno;ikona;x;y;skryt_kdyz
-drbna_L;Drbna Hyková;👵;14;16;dv
-drbna_P;Drbna Hyková;👵;14;86;!dv
-koza_L;Koza;🐐;38;16;kv
-koza_P;Koza;🐐;38;86;!kv
-pecet_L;Dopis s pečetí;📜;62;16;lv
-pecet_P;Dopis s pečetí;📜;62;86;!lv
-prevoznik;Převozník;🧑‍🦯;86;16;
-lod_L;Loďka;🛶;50;41;pv
-lod_P;Loďka;🛶;50;66;!pv
+drbna_L;Drbna Hyková;👵;12;87;dv
+drbna_P;Drbna Hyková;👵;14;31;!dv
+koza_L;Koza;🐐;37;87;kv
+koza_P;Koza;🐐;34;31;!kv
+pecet_L;Dopis s pečetí;📜;63;87;lv
+pecet_P;Dopis s pečetí;📜;66;31;!lv
+prevoznik;Převozník;🧑‍🦯;88;87;
+lod_L;Loďka;🛶;50;64;pv
+lod_P;Loďka;🛶;50;50;!pv
 socha;Svatý Jan Nepomucký;🗿;84;50;
-farar;Pan farář;⛪;86;86;
-sedlak;Sedlák;👨‍🌾;16;62;
-dcera;Dcera drbny;👩;16;40;!dv
+farar;Pan farář;⛪;84;12;
+sedlak;Sedlák;👨‍🌾;16;12;
+dcera;Dcera drbny;👩;50;12;!dv
