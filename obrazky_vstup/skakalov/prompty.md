@@ -15,7 +15,7 @@ Obec je na trase 27. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 
 ## Soubory
 
-Vygeneruj (12): `pozadi.png`, `sedlak.png`, `pes1.png`, `pes1_obojek.png`, `mys1.png`, `mys1_pero.png`, `pasacek.png`, `hajny.png`, `dopis_pasacek.png`, `obojek.png`, `burt.png`, `pero.png`
+Už máš vygenerované (12): `pozadi.png`, `sedlak.png`, `pes1.png`, `pes1_obojek.png`, `mys1.png`, `mys1_pero.png`, `pasacek.png`, `hajny.png`, `dopis_pasacek.png`, `obojek.png`, `burt.png`, `pero.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (2): `dopis_sedlak.png`, `dopis_hajny.png`
 

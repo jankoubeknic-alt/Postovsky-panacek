@@ -14,7 +14,7 @@ Obec je na trase 17. VIII. Postup je stejný jako u Lhotky a podrobně je popsan
 
 ## Soubory
 
-Vygeneruj (15): `pozadi.png`, `tabule.png`, `telegrafistka.png`, `hostinsky.png`, `pepik.png`, `svadlena.png`, `kostelnik.png`, `myslivec.png`, `babicka.png`, `babicka_stastna.png`, `telegram.png`, `noviny.png`, `niti.png`, `vabnicka.png`, `svicky.png`
+Už máš vygenerované (15): `pozadi.png`, `tabule.png`, `telegrafistka.png`, `hostinsky.png`, `pepik.png`, `svadlena.png`, `kostelnik.png`, `myslivec.png`, `babicka.png`, `babicka_stastna.png`, `telegram.png`, `noviny.png`, `niti.png`, `vabnicka.png`, `svicky.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `vrbuv_dopis.png`
 

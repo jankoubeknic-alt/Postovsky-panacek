@@ -14,7 +14,7 @@ Obec je na trase 8. IX. Postup je stejný jako u Lhotky a podrobně je popsaný 
 
 ## Soubory
 
-Vygeneruj (15): `pozadi.png`, `babicka.png`, `dratenik.png`, `flasinetar.png`, `pernikar.png`, `strelnice.png`, `kramarka.png`, `kolotoc.png`, `hrncir.png`, `hrnec.png`, `krejcar.png`, `pernik.png`, `ruze.png`, `drat.png`, `hrnec_drat.png`
+Už máš vygenerované (15): `pozadi.png`, `babicka.png`, `dratenik.png`, `flasinetar.png`, `pernikar.png`, `strelnice.png`, `kramarka.png`, `kolotoc.png`, `hrncir.png`, `hrnec.png`, `krejcar.png`, `pernik.png`, `ruze.png`, `drat.png`, `hrnec_drat.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (4): `vrbuv_dopis.png`, `dopis_flasinetar.png`, `dopis_pernikar.png`, `krejcar2.png`
 
