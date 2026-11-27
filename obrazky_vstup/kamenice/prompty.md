@@ -11,10 +11,13 @@ Obec je na trase 24. I. Postup je stejný jako u Lhotky a podrobně je popsaný 
 ## Poznámky k obci
 
 - Kočka Uhlíčka se zkopíruje i na hrad Strachov jako kocour Šmouha.
+- Noc je celá scéna v noci (upravená scéna bez výřezu), přepíná se klepnutím na hodiny. Frantovo okno má přes den zavřené okenice, Franta spí po noční.
 
 ## Soubory
 
-Vygeneruj (13): `pozadi.png`, `hodiny.png`, `reditel.png`, `hvezdar.png`, `franta.png`, `hostinsky.png`, `marie.png`, `okno.png`, `franta_den.png`, `kometa.png`, `harmonika.png`, `balicek.png`, `kocka.png`
+Vygeneruj (2): `okno.png`, `noc.png`
+
+Už máš vygenerované (12): `pozadi.png`, `hodiny.png`, `reditel.png`, `hvezdar.png`, `franta.png`, `hostinsky.png`, `marie.png`, `franta_den.png`, `kometa.png`, `harmonika.png`, `balicek.png`, `kocka.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `uredni.png`, `prsten.png`, `zadost.png`
 
@@ -29,6 +32,17 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Kamenice, a small mining town in winter daylight, seen from slightly above like a stage set. Layout: at about 19 % in the centre a clock tower; at about 25–40 % on the left the mine director's office with a small observatory dome and telescope on the roof; at about 40 % on the right a tall wooden mine headframe with a wheel; at about 52 % in the centre an inn with a miner's lamp sign; at about 66 % on the left a tobacco kiosk; at about 62 % on the right a little miner's cottage with one window; at the bottom (about 80 %) a cobbled square.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### noc.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the whole town at night: a deep blue night sky full of stars with a thin crescent moon and a small bright comet with a long tail above the observatory dome; the director's office is dark, only the observatory dome on its roof glows faintly; warm golden light shines from all the windows of the inn and from its miner's lamp sign; a lamp glows at the top of the mine headframe; the tobacco kiosk is shut and dark; the little miner's cottage on the right is dark. Snow glows softly in the moonlight. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa
@@ -93,7 +107,7 @@ Character: Marie, a young woman, a tobacconist with dark curls, smiling from a k
 Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 One object or place, centred, the whole object inside the central circle of the picture (it will be cut into a circle). Plain flat off-white background (#F2F3EC), no scenery.
-Object: a small cottage window with drawn curtains and a flower pot, quiet as if someone is sleeping inside.
+Object: a small cottage window with its wooden shutters closed tight, a small blank wooden sign hanging on the shutters and a flower pot on the sill, quiet as if someone is sleeping inside.
 ```
 
 ### franta_den.png

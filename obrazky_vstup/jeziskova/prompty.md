@@ -8,9 +8,15 @@ Obec je na trase 24. XII. Postup je stejný jako u Lhotky a podrobně je popsan�
    Pokud tu soubor s tímhle jménem už leží, nepřepisuj ho. Je to obrázek zkopírovaný z jiné obce.
 4. Napiš mi. Převedu je, otestuju a pushnu. Nemusí být všechny najednou, chybějící zůstanou jako emoji.
 
+## Poznámky k obci
+
+- Koník je na kolečkách, v textu klape. Když jsou všechny dárky pod stromky, rozsvítí se strom na návsi (upravená scéna sviceni).
+
 ## Soubory
 
-Vygeneruj (15): `pozadi.png`, `pepik.png`, `strom_pepik.png`, `anca.png`, `pernikar.png`, `tonik.png`, `babicka.png`, `strom.png`, `darek_anca.png`, `staniol.png`, `kridla.png`, `prasatko.png`, `zvonecek.png`, `darek_pepik.png`, `darek_tonik.png`
+Vygeneruj (2): `darek_tonik.png`, `sviceni.png`
+
+Už máš vygenerované (14): `pozadi.png`, `pepik.png`, `strom_pepik.png`, `anca.png`, `pernikar.png`, `tonik.png`, `babicka.png`, `strom.png`, `darek_anca.png`, `staniol.png`, `kridla.png`, `prasatko.png`, `zvonecek.png`, `darek_pepik.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `pohadky.png`
 
@@ -25,6 +31,17 @@ Create an image in portrait orientation, aspect ratio 2:3.
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour, a small Czech village around 1930. Not photorealistic, not 3D, not anime. No text, no letters, no numbers, no signature, no frame.
 Scene: Ježíškova Lhota on Christmas Eve at dusk, snow, warm lit windows, seen from slightly above like a stage set. Layout: at about 33 % on the left Pepík's house with a big window; at about 33 % on the right Anča's house with a big window; a small church in the upper middle; at about 56 % on the left Toník's cottage with a big window; at about 55 % on the right a bakery with gingerbread in the window; at about 63 % in the centre a bench; at the bottom (about 80 %) a big spruce tree on the village green, not lit yet.
 No people and no animals anywhere. Keep the top and bottom edges calm, they will be cropped.
+```
+
+## Upravená scéna
+
+Ke každému z těchhle promptů přilož svůj `pozadi.png` z téhle složky. ChatGPT má změnit jen popsané místo. Ze scény se použije jen výřez kolem něj, a ten musí navázat na původní obrázek.
+
+### sviceni.png
+
+```
+Edit the attached picture. Keep everything exactly the same: the composition, the style, the colours, the light and the position and size of every object. Change only this: the big spruce on the village green at the bottom is now lit: many small warm candle flames glow all over its branches and the straw star on its top shines brightly. Everything else stays as it is.
+Keep the same portrait size and aspect ratio. No people and no animals. No text, no letters, no numbers, no signature, no frame.
 ```
 
 ## Postavy a místa
@@ -154,5 +171,5 @@ Object: a small wooden sledge, half unwrapped from brown paper.
 Create a square image (1:1).
 Style: hand-painted picture-book illustration for a cozy mobile card game, gouache and watercolour on textured paper, soft dark-brown ink outlines, warm summer palette (ochre, brick red, sage green, cream, sky blue), rounded friendly shapes, gentle humour. Not photorealistic, not 3D. No text, no letters, no numbers, no signature, no frame.
 One single object, centred, seen slightly from above, filling about 70 % of the picture, plain flat off-white background (#F2F3EC), a small soft shadow under it, nothing else.
-Object: a small wooden rocking horse, half unwrapped from brown paper.
+Object: a small wooden toy horse standing on four little wooden wheels, with a pull string, half unwrapped from brown paper. Not a rocking horse.
 ```

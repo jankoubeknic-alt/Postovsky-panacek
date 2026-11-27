@@ -12,9 +12,9 @@ Obec je na trase 5. XII. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 Vygeneruj (12): `pozadi.png`, `farar.png`, `mikulas.png`, `andel.png`, `druzina1.png`, `franta.png`, `mama_franta.png`, `anicka.png`, `mama_anicka.png`, `pepik.png`, `mama_pepik.png`, `balik_anicka.png`
 
-Už jsou ve složce, zkopírované z jiných obcí (3): `dopis_franta.png`, `dopis_anicka.png`, `dopis_pepik.png`
+Už jsou ve složce, zkopírované z jiných obcí (4): `dopis_franta.png`, `dopis_anicka.png`, `dopis_pepik.png`, `balik_pepik.png`
 
-Doplní se kopií z jiných obcí, až tam budou hotové (2): `balik_franta.png`, `balik_pepik.png`
+Doplní se kopií z jiných obcí, až tam budou hotové (1): `balik_franta.png`
 
 Prompty jsou jen pro obrázky ke generování.
 

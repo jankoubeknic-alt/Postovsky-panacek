@@ -61,13 +61,13 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Barborov | Zima | 11 | hotovo |
 | Mikulášov | Zima | 12 | prompty připravené |
 | Lucín | Zima | 10 | prompty připravené |
-| Ježíškova Lhota | Zima | 15 | prompty připravené |
+| Ježíškova Lhota | Zima | 16 | rozpracováno, chybí `darek_tonik.png` (koník na kolečkách, ne houpací) a upravená scéna `sviceni.png` (rozsvícený strom na návsi) |
 | Václavice | Zima | 9 | prompty připravené |
 | Pozpátkov | Zima | 11 | prompty připravené |
 | Měsíčkov | Zima | 19 | prompty připravené |
 | Kozí Hřbítek | Zima | 11 | prompty připravené |
 | Trubkovice | Zima | 10 | prompty připravené |
-| Kamenice | Zima | 13 | prompty připravené |
+| Kamenice | Zima | 14 | rozpracováno, chybí `okno.png` (zavřené okenice) a `noc.png` (celá scéna v noci) |
 | Čertovina pod Kotlem | Zima | 11 | hotovo |
 | Kašovice | Zima | 9 | prompty připravené |
 | Hlínov | Zima | 12 | hotovo |

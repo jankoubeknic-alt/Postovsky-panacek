@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kreslená scéna, než přijde noc.png: ztmavení, hvězdy, měsíc a kometa z noc.svg, světla podle kresby (okna hospody, lampa U Kahanu, lampa na těžní věži, kopule hvězdárny). -->
+  <defs>
+    <radialGradient id="kam-zar">
+      <stop offset="0" stop-color="#FFD98A" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#FFD98A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="kam-ohon" cx="1" cy="1" r="1">
+      <stop offset="0" stop-color="#F6F1DC" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#F6F1DC" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="kam-srpek">
+      <circle cx="191" cy="24" r="10" fill="#fff"/>
+      <circle cx="196" cy="20" r="9" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="300" height="400" fill="#0E1730" opacity=".66"/>
+
+  <g fill="#F6F1DC">
+    <circle cx="10" cy="10" r="1"/><circle cx="26" cy="46" r="1.2"/><circle cx="52" cy="10" r=".9"/><circle cx="14" cy="72" r=".9"/>
+    <circle cx="108" cy="16" r="1.1"/><circle cx="120" cy="60" r=".8"/><circle cx="186" cy="54" r="1"/><circle cx="200" cy="80" r=".8"/>
+    <circle cx="272" cy="8" r="1.1"/><circle cx="270" cy="62" r=".9"/><circle cx="214" cy="8" r=".8"/><circle cx="62" cy="66" r=".8"/>
+    <circle cx="96" cy="62" r=".9"/><circle cx="36" cy="26" r=".7"/>
+  </g>
+  <rect width="300" height="400" fill="#F4ECD0" mask="url(#kam-srpek)"/>
+
+  <!-- kometa, na kterou míří dalekohled -->
+  <path d="M84 40L38 12L42 22Z" fill="url(#kam-ohon)"/>
+  <circle cx="84" cy="40" r="6" fill="url(#kam-zar)"/>
+  <circle cx="84" cy="40" r="2.4" fill="#FFFBEA"/>
+
+  <defs><filter id="kam-rozmaz" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2"/></filter></defs>
+  <g fill="#F4C866" opacity=".62" filter="url(#kam-rozmaz)">
+    <rect x="94" y="201" width="14" height="26" rx="1"/><rect x="127" y="201" width="14" height="26" rx="1"/><rect x="190" y="201" width="14" height="26" rx="1"/>
+    <rect x="91" y="249" width="22" height="30" rx="2"/><rect x="181" y="249" width="22" height="30" rx="2"/>
+  </g>
+  <circle cx="101" cy="214" r="16" fill="url(#kam-zar)" opacity=".55"/><circle cx="134" cy="214" r="16" fill="url(#kam-zar)" opacity=".55"/><circle cx="197" cy="214" r="16" fill="url(#kam-zar)" opacity=".55"/>
+  <circle cx="102" cy="264" r="24" fill="url(#kam-zar)" opacity=".6"/><circle cx="192" cy="264" r="24" fill="url(#kam-zar)" opacity=".6"/>
+  <circle cx="168" cy="216" r="14" fill="url(#kam-zar)"/><circle cx="168" cy="216" r="2.6" fill="#FFF3C8"/>
+  <circle cx="258" cy="56" r="22" fill="url(#kam-zar)" opacity=".7"/><circle cx="258" cy="56" r="2.4" fill="#FFF3C8"/>
+  <circle cx="52" cy="70" r="14" fill="url(#kam-zar)" opacity=".45"/>
+</svg>

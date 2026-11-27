@@ -10,7 +10,7 @@
 # Ježíškova Lhota: dárek jde pod stromek (strom_*), jen když dítě nekouká. Pepíka odláká zlaté prasátko, Anču betlém, Toník usne u pohádky.
 karta;cil;podminka;vyraz;text;efekt
 ?;pepik;;👦;Pepík se od rána postí, aby viděl zlaté prasátko. Sedí u okna a nespouští oči ze stromečku. „Letos Ježíška chytím! A k večeři uvidím prasátko.“ Kručí mu v břiše.;
-?;strom_pepik;darek_pepik_doruceno;🎄;Pod stromečkem u Pepíků leží sáňky v hvězdičkovém papíře.;
+?;strom_pepik;darek_pepik_doruceno;🎄;Pod stromečkem u Pepíků leží sáňky v hnědém papíře.;
 ?;strom_pepik;;🎄;Stromeček u Pepíků. Pepík běhá po vsi a všem vypráví, že viděl zlaté prasátko.;
 ?;anca;;👧;Anča sedí pod stromkem s baterkou. „Ježíšek mi letos neuteče. Mám baterku a dvě koblihy na čekání.“ Večer má v kostele hrát anděla, ale nemá křídla.;
 ?;strom_anca;darek_anca_doruceno;🎄;Pod stromečkem u Anči leží pastelky. Na balíčku je přimrzlá vločka.;
