@@ -10,9 +10,9 @@ Obec je na trase 28. IX. Postup je stejný jako u Lhotky a podrobně je popsaný
 
 ## Soubory
 
-Vygeneruj (1): `otevreno.png`
+Vygeneruj (0): nic, všechno je hotové
 
-Už máš vygenerované (10): `pozadi.png`, `strazce.png`, `rytiri.png`, `deti.png`, `starosta.png`, `sedlak.png`, `nevesta.png`, `hostinsky.png`, `vymer.png`, `prosba.png`
+Už máš vygenerované (11): `pozadi.png`, `otevreno.png`, `strazce.png`, `rytiri.png`, `deti.png`, `starosta.png`, `sedlak.png`, `nevesta.png`, `hostinsky.png`, `vymer.png`, `prosba.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (3): `kroupy.png`, `zruseni.png`, `pohled.png`
 

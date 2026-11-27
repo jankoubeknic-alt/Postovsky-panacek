@@ -35,10 +35,7 @@ Galerii všech vzhledů kreslených obcí vyrobí `node nastroje/stavy.mjs <obec
 
 ### Doplnit do hotových obcí
 
-Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Prompty jsou v `prompty.md` jednotlivých obcí, do té doby hra ukazuje náhradní kresbu nebo odznak. Bezvětří, Brodek, Čertovina, Cylindrov, Faustův dům, Floriánov, Hejrupov a Krakonošov už jsou doplněné. Zbývá:
-
-- Myší Lhota: `slapoty.png` (obří šlápota a rozšlápnutý plot).
-- Spáčov pod Blaníkem: `otevreno.png` (otevřená skála).
+Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovídá příběhu. Všechny chybějící obrázky jsou doplněné (Bezvětří, Brodek, Čertovina, Cylindrov, Faustův dům, Floriánov, Hejrupov, Krakonošov, Myší Lhota, Spáčov pod Blaníkem). Nové obce se kontrolují stejně, viz galerie níže.
 
 | Obec | Kapitola | Ke generování | Stav |
 | --- | --- | --- | --- |
@@ -59,7 +56,7 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Bludičkov | Podzim | 10 | hotovo |
 | Martinov | Podzim | 13 | prompty připravené |
 | Faustův dům | Podzim | 10 | hotovo |
-| Hodinov | Podzim | 10 | rozpracováno, hotová scéna a hospodský, chybí ponocny.png (přegenerovat s kravským rohem), marka, pekar, lavicka, koralka, pani, hospoda_tma, pekarna_tma |
+| Hodinov | Podzim | 10 | hotovo |
 | Sněžná | Podzim | 14 | prompty připravené |
 | Barborov | Zima | 11 | hotovo |
 | Mikulášov | Zima | 12 | prompty připravené |

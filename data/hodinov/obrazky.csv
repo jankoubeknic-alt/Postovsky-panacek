@@ -2,12 +2,18 @@
 # soubor: cesta od složky obce (může vést i do jiné obce, ../lhotka/obrazky/pes.webp). U vrstvy „-“: kreslená scéna ji skryje.
 druh;id;ikona;soubor
 pozadi;;;obrazky/pozadi.webp
-vrstva;hospoda_tma;;hospoda_tma_kresba.svg
-vrstva;pekarna_tma;;pekarna_tma_kresba.svg
+vrstva;hospoda_tma;;obrazky/hospoda_tma.webp
+vrstva;pekarna_tma;;obrazky/pekarna_tma.webp
 cil;hospodsky;;obrazky/hospodsky.webp
+cil;lavicka;;obrazky/lavicka.webp
+cil;marka;;obrazky/marka.webp
+cil;pani;;obrazky/pani.webp
+cil;pekar;;obrazky/pekar.webp
+cil;ponocny;;obrazky/ponocny.webp
 karta;dopis_hospodsky;;obrazky/dopis_hospodsky.webp
 karta;dopis_marka;;obrazky/dopis_marka.webp
 karta;dopis_pani;;obrazky/dopis_pani.webp
 karta;dopis_pekar;;obrazky/dopis_pekar.webp
+karta;koralka;;obrazky/koralka.webp
 karta;prsten;;obrazky/prsten.webp
 karta;vrbuv_dopis;;obrazky/vrbuv_dopis.webp

@@ -1,6 +1,6 @@
 # x, y: pozice ve scéně v procentech šířky a výšky. skryt_kdyz: podmínka, kdy cíl ve scéně není (může obsahovat „nebo“).
 id;jmeno;ikona;x;y;skryt_kdyz
-strazce;Strážce u skály;🛡️;50;16;
+strazce;Strážce u skály;🛡️;26;16;
 rytiri;Rytíři v hoře;🐴;50;40;!otevreno
 deti;Děti;🧒;50;40;otevreno
 starosta;Starosta;🎩;16;58;

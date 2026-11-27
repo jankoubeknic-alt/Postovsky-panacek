@@ -20,7 +20,7 @@ Už máš vygenerované (12): `pozadi.png`, `starosta.png`, `starosta_slavi.png`
 
 Už jsou ve složce, zkopírované z jiných obcí (1): `dopis.png`
 
-Navíc vygeneruj (1): `slapoty.png`, postup je v sekci „Upravená scéna“.
+Navíc vygenerováno (1): `slapoty.png`, obří šlápota a rozšlápnutý plot.
 
 Prompty jsou jen pro obrázky ke generování.
 
