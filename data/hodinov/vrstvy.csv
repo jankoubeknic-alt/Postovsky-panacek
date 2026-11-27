@@ -1,0 +1,4 @@
+# Hospoda po desáté zavře a zhasne (h>1). Pekárna je tmavá, dokud pekař ve dvě nevstane (h<5).
+obrazek;podminka
+data/hodinov/hospoda_tma.svg;h>1
+data/hodinov/pekarna_tma.svg;h<5

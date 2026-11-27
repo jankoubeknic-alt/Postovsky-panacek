@@ -67,7 +67,7 @@ Kontrola všech vzhledů (listopad 2026) ukázala místa, kde scéna neodpovíd�
 | Bludičkov | Podzim | 10 | hotovo |
 | Martinov | Podzim | 13 | prompty připravené |
 | Faustův dům | Podzim | 10 | hotovo |
-| Hodinov | Podzim | 8 | prompty připravené |
+| Hodinov | Podzim | 10 | rozpracováno, hotová scéna a hospodský, chybí ponocny.png (přegenerovat s kravským rohem), marka, pekar, lavicka, koralka, pani, hospoda_tma, pekarna_tma |
 | Sněžná | Podzim | 14 | prompty připravené |
 | Barborov | Zima | 11 | hotovo |
 | Mikulášov | Zima | 12 | prompty připravené |

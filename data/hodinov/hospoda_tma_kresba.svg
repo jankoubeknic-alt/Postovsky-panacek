@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Kreslená scéna: hospoda po desáté zavřela. Okna ztmavnou a lampa u dveří zhasne. Zatímco chybí hospoda_tma.png. -->
+  <defs>
+    <radialGradient id="hodinov-lampa-tma" cx="41" cy="152" r="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E2640" stop-opacity=".55"/>
+      <stop offset=".6" stop-color="#1E2640" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#1E2640" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hodinov-hospoda-rozmaz" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation=".5"/></filter>
+  </defs>
+  <circle cx="41" cy="152" r="22" fill="url(#hodinov-lampa-tma)"/>
+  <g fill="#232B44" opacity=".86" filter="url(#hodinov-hospoda-rozmaz)">
+    <rect x="41.6" y="111" width="10" height="13" rx=".6"/>
+    <rect x="65.5" y="114" width="8" height="10.5" rx=".6"/>
+    <rect x="81.8" y="116" width="6.4" height="9.5" rx=".6"/>
+    <rect x="61" y="157.6" width="10.2" height="16.4" rx=".6"/>
+    <rect x="81" y="157.6" width="9" height="16.4" rx=".6"/>
+    <rect x="39.4" y="142" width="5.4" height="8.6" rx="1"/>
+  </g>
+</svg>
